@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "190360",
+    "original_img_id": "190360",
+    "turn_index": 1,
+    "instruction": "let the cat have its eyes closed",
+    "official_split": "dev",
+    "shard_path": "data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+    "row_group": 3,
+    "row_in_group": 5,
+    "row_in_shard": 101,
+    "selection_rank_sha256": "06173679b9f6f8b6e069c1477ce5218b09ae6261ac09f6bccd461dc95b542d27"
+  },
+  "image": "inputs/val16/190360/source.original",
+  "original_mask": "inputs/val16/190360/mask.original",
+  "source_sha256": "4c426c159b837a39181bd2e6de50d9b62c9292565bd9692d61bc3cc61641cff8",
+  "mask_sha256": "04da5548abd91d35f1c0a2dcf4884fe4f702965c7b15c9eb802e2d4974a24ba2",
+  "source_bytes": 322247,
+  "mask_bytes": 1122230,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+  "source_url_sha256": "5fab15f436714d22fa54a2311e641ac757c913af1bf128fae5c2a44580efe465"
+}

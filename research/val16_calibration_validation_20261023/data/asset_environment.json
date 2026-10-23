@@ -1,0 +1,16 @@
+{
+  "time": "2026-10-23T08:12:07.960871+00:00",
+  "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+  "executable": "/workspace/venvs/qwen-edit-pilot/bin/python",
+  "host": "qstest-llm-uupd-staging-c495v",
+  "packages": {
+    "numpy": "2.5.2",
+    "Pillow": "12.2.0",
+    "pyarrow": "25.0.1",
+    "fsspec": "2026.6.0",
+    "huggingface_hub": "1.32.0"
+  },
+  "https_proxy_configured": true,
+  "gpu_used": false,
+  "model_imported": false
+}

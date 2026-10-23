@@ -1,0 +1,730 @@
+{
+  "01_实验协议.md": {
+    "bytes": 11191,
+    "sha256": "d7b0f449a816e0342478e4da9bac0883fc548cee5b5a8c611be89437d891f834"
+  },
+  "02_轮转实验数据摘要.md": {
+    "bytes": 4936,
+    "sha256": "bc59f73cb8c308679515070e79968adecad757371b225e283b5308f2ffd0ab74"
+  },
+  "03_优化数据摘要.md": {
+    "bytes": 3952,
+    "sha256": "ab889382bf87546207906508e7e736d95c34d871025d53cb25fcfa505d5548d1"
+  },
+  "04_Value时间校正算法与执行协议.md": {
+    "bytes": 5870,
+    "sha256": "111a7f75b02b4dbc25611f1390d595869fc86ecdc566f754127b227f3e256e71"
+  },
+  "05_实测结论与算法优化记录.md": {
+    "bytes": 13517,
+    "sha256": "219abc0bd865ccd94cabb8372587c916af8cfcc8aecf314ce7349e0e23610fc6"
+  },
+  "06_小样本校准算法与采集计划.md": {
+    "bytes": 10113,
+    "sha256": "ccb8d3e5a50144edea016101578e14bb7a91b152d51fbc020f8e3c3c564a109f"
+  },
+  "analysis_optimization.log": {
+    "bytes": 5456,
+    "sha256": "e35d16144b85667d58371554a5c73be538d54fda298494e3ac0d35ce883d9dfa"
+  },
+  "analysis_primary.log": {
+    "bytes": 17022,
+    "sha256": "8c44e31c069c7288b50272ccab73daef407c82d6e6e334a0634541af82ff07a8"
+  },
+  "attempts/value_time_test_v1/check_value_time.log": {
+    "bytes": 566,
+    "sha256": "30960c93fae3162161d14c29ab948ac3a4eb91a7daf3075bdb5a50118b277b66"
+  },
+  "attempts/value_time_test_v1/check_value_time.py.txt": {
+    "bytes": 14119,
+    "sha256": "ef807b4585331f5ad02f138c6f017e11bb3057d0f6f80c14533ace51dc8eb055"
+  },
+  "check_rotation.log": {
+    "bytes": 952,
+    "sha256": "e7f3f884048731542617a8658edfc16d83d040ad3a4858f075c2ebe3cf76952d"
+  },
+  "check_value_time.log": {
+    "bytes": 6907,
+    "sha256": "2814070d1c8a73af19310d54445f9fd48a27bc0dc923c5db5a9a53a277ad391b"
+  },
+  "data/environment_optimization.json": {
+    "bytes": 5785,
+    "sha256": "e1d92b1908b7e58f4c4e5686245ae4e9f02bf885a1c212a756f69064a559763b"
+  },
+  "data/environment_primary.json": {
+    "bytes": 1720,
+    "sha256": "9c85eb648d8b4aa8c11cfa533ec93ff5ce762b67ff5d5cfad2b401eca01f9986"
+  },
+  "data/final_machine_state.json": {
+    "bytes": 484,
+    "sha256": "6e962306c1cfceadad30ceb1896381c8d461d4fa10f286663c780d29ec237998"
+  },
+  "data/final_validation_summary.json": {
+    "bytes": 1361,
+    "sha256": "404056eb11aee8f7bd7e7d6d22a6e8ef5cd6051a96c90c3b102b1eb71fab5874"
+  },
+  "data/metrics_environment_optimization.json": {
+    "bytes": 937,
+    "sha256": "eb219baf6f5f95756bcfbdd1ccace026de1bd88a9923bf36ee0d8798696d7d1a"
+  },
+  "data/metrics_environment_primary.json": {
+    "bytes": 932,
+    "sha256": "6ef3fd9a942bfedcfdc1bd88f18689a6157408855701bef6f165fe7d4966bfc6"
+  },
+  "data/preregistration_optimization.json": {
+    "bytes": 1670,
+    "sha256": "c32080465bda5cf9b24bc23a1bab5476fe70451e13d65ebb4ad02666aaa6dadd"
+  },
+  "data/preregistration_primary.json": {
+    "bytes": 951,
+    "sha256": "1d14bd61857bbf0f9faed26fb146be265d1ee3bd61c05ff243772f0ec9ef1450"
+  },
+  "data/quality_optimization.csv": {
+    "bytes": 10855,
+    "sha256": "7ab12c6ce9ce3363cc34edb964212c42a9e9d1712d7a4d7660cde9a17002d59e"
+  },
+  "data/quality_primary.csv": {
+    "bytes": 16022,
+    "sha256": "d0ecbc2750d32abeda7358650b788ed50e33424eab65974b781d472d332c9555"
+  },
+  "data/rotation_correctness.json": {
+    "bytes": 28986,
+    "sha256": "9cbf7f3886625cdc8d770dbd20540f25fe73acc31d042f1a4a550270aea415d9"
+  },
+  "data/runs_optimization.jsonl": {
+    "bytes": 340542,
+    "sha256": "a928e83fe098a9a7140bef7dcfebcc9e9387edb31a2f32f4ddab1d88e0e3733f"
+  },
+  "data/runs_primary.jsonl": {
+    "bytes": 546496,
+    "sha256": "79bc29ee89b34004438604af79a590244a08cb42a782d7aab4d786435d404aed"
+  },
+  "data/summary_optimization.json": {
+    "bytes": 480809,
+    "sha256": "fd07f98ec7c7e55d59360d1babec4ccf722e451e61b3215c335864fe891a85ef"
+  },
+  "data/summary_primary.json": {
+    "bytes": 799020,
+    "sha256": "ddfef6d6117ae512668c2fe45377681a509e5713e357888ee2c95cb82766d1cf"
+  },
+  "data/timings_optimization.csv": {
+    "bytes": 19510,
+    "sha256": "592226028f9960f4a3a6d9fa9be5105bc0ccf56459e2ad06cd2fd82f06ee0f99"
+  },
+  "data/timings_primary.csv": {
+    "bytes": 28661,
+    "sha256": "70ff1f56c7a9702f9d09da8fa615072c51fa1d997f5457d545135984bb00e4ab"
+  },
+  "data/value_time_tiny_correctness.json": {
+    "bytes": 153233,
+    "sha256": "e3ceadd0a8532b693331949da6609b9e30eab4cdda88409e1e7c909f73c7be66"
+  },
+  "figures/optimization/blocks_text_comparison.png": {
+    "bytes": 978282,
+    "sha256": "7c5720031df851dbfcb094a06f75c61590c5ec4be2dec97e9dde4483a80c5ffd"
+  },
+  "figures/optimization/blocks_text_core_crop.png": {
+    "bytes": 1188567,
+    "sha256": "24259c10b90a02ca9317bbb0235c4a87f63ffd0edc452fe44595d84e0d16a2ae"
+  },
+  "figures/optimization/latency.png": {
+    "bytes": 56132,
+    "sha256": "73a33bbf6560ae86049722a0be5eab5fc473f286876cc0c31b03363371a49f47"
+  },
+  "figures/optimization/remove_hair_comparison.png": {
+    "bytes": 1840000,
+    "sha256": "4f02130b5dd22f54a94d5ac1634b420d08ea272d3e2bbb2afc22c76ce74d9190"
+  },
+  "figures/optimization/remove_hair_core_crop.png": {
+    "bytes": 435185,
+    "sha256": "33d31e5f709a07505aa19583bac5fbc4a45c0afb8093d719df6e5e7c857e7127"
+  },
+  "figures/optimization/shirt_color_comparison.png": {
+    "bytes": 1183576,
+    "sha256": "ae026bf4befdd42d46102115c5c86e3a3295af826b79c6ecb2ff953bad667948"
+  },
+  "figures/optimization/shirt_color_core_crop.png": {
+    "bytes": 1762733,
+    "sha256": "d4aa7a906b56b9819cebee0730cecf793eb8dc28352ae18dd667b6ae5dcbcb72"
+  },
+  "figures/primary/blocks_text_F_R2_ROT.png": {
+    "bytes": 718589,
+    "sha256": "2d26e9566b4d3d2b6fb22c0f29f7034c728283fe1e0c144cbd0b7ffc04419d50"
+  },
+  "figures/primary/blocks_text_comparison.png": {
+    "bytes": 1368912,
+    "sha256": "5fcdbc95033ca5df43989e577aa3c61fc5a80aba522226d708867f906b8e434d"
+  },
+  "figures/primary/blocks_text_core_crop.png": {
+    "bytes": 1643676,
+    "sha256": "c983f28c542c0fa73910045e564de49b4f98233f2497f97bfa1b7d81918cbbd9"
+  },
+  "figures/primary/latency.png": {
+    "bytes": 60991,
+    "sha256": "dc7a73f0a9a34961a94e0e845c01f94da7b00d88fbba445d92bf7d5d7b98f0e0"
+  },
+  "figures/primary/remove_hair_comparison.png": {
+    "bytes": 2563768,
+    "sha256": "6fd9b77ff3148abdfee4fab367602699c11b7324fc67ad13daccf8ab5c415f0a"
+  },
+  "figures/primary/remove_hair_core_crop.png": {
+    "bytes": 593056,
+    "sha256": "815f9bd22cc92b3402e48adcbca4f8a75d431a13cffe8e437d26c09a31a5986c"
+  },
+  "figures/primary/shirt_color_comparison.png": {
+    "bytes": 1648014,
+    "sha256": "662397917f78183a8c51482222d970aa3ac0bb4e7b567564bec47c290940f4fd"
+  },
+  "figures/primary/shirt_color_core_crop.png": {
+    "bytes": 2437732,
+    "sha256": "a2714863195c463050e22c99a05af1ee118fe19a0da09adeb988bc6740a7b436"
+  },
+  "masks/previews/blocks_text_rotation_groups.png": {
+    "bytes": 355943,
+    "sha256": "5017f73dc64be116a74a778e25429714798de486ef3c0a8a58c1682712eba06e"
+  },
+  "masks/previews/remove_hair_rotation_groups.png": {
+    "bytes": 722868,
+    "sha256": "f4f267c11cd76dac171ab4631b4dcb1c3b0e7862789a233eaed2b93c7668f824"
+  },
+  "masks/previews/shirt_color_rotation_groups.png": {
+    "bytes": 431896,
+    "sha256": "6541e038ebe5c2eaa9a77a034d2ceef9c03cafd64a101ef115024a15ce4283eb"
+  },
+  "masks/rotation_groups_preview.png": {
+    "bytes": 1510520,
+    "sha256": "88183c57513b83a74ab7bcfc210dc2ec81061469e4ff2c982fffa2f994dd909d"
+  },
+  "masks/rotation_plan.json": {
+    "bytes": 8666886,
+    "sha256": "944c26ec413e095486b64821c46ff7ee77f66483deb80cbcd80cb2d5a65fdfcc"
+  },
+  "outputs/optimization__AFFINE__blocks_text__measurement_0.png": {
+    "bytes": 944545,
+    "sha256": "c70f1e527c05f1a11c8798ed1effddfef771c7429fa38f0c1f24bcd80cdeae3c"
+  },
+  "outputs/optimization__AFFINE__blocks_text__measurement_1.png": {
+    "bytes": 944545,
+    "sha256": "c70f1e527c05f1a11c8798ed1effddfef771c7429fa38f0c1f24bcd80cdeae3c"
+  },
+  "outputs/optimization__AFFINE__blocks_text__measurement_2.png": {
+    "bytes": 944545,
+    "sha256": "c70f1e527c05f1a11c8798ed1effddfef771c7429fa38f0c1f24bcd80cdeae3c"
+  },
+  "outputs/optimization__AFFINE__blocks_text__warmup_0.png": {
+    "bytes": 944545,
+    "sha256": "c70f1e527c05f1a11c8798ed1effddfef771c7429fa38f0c1f24bcd80cdeae3c"
+  },
+  "outputs/optimization__AFFINE__remove_hair__measurement_0.png": {
+    "bytes": 1238387,
+    "sha256": "c3cfebe8d49c250f835a246fcbb18c77176374f0f01336a977e337eba7aca137"
+  },
+  "outputs/optimization__AFFINE__remove_hair__measurement_1.png": {
+    "bytes": 1238387,
+    "sha256": "c3cfebe8d49c250f835a246fcbb18c77176374f0f01336a977e337eba7aca137"
+  },
+  "outputs/optimization__AFFINE__remove_hair__measurement_2.png": {
+    "bytes": 1238387,
+    "sha256": "c3cfebe8d49c250f835a246fcbb18c77176374f0f01336a977e337eba7aca137"
+  },
+  "outputs/optimization__AFFINE__remove_hair__warmup_0.png": {
+    "bytes": 1238387,
+    "sha256": "c3cfebe8d49c250f835a246fcbb18c77176374f0f01336a977e337eba7aca137"
+  },
+  "outputs/optimization__AFFINE__shirt_color__measurement_0.png": {
+    "bytes": 1099031,
+    "sha256": "c3f3eb88e4985b35ed4ed4f2b1cc7d60bb26a224fb1b654c87dd1309f645dd88"
+  },
+  "outputs/optimization__AFFINE__shirt_color__measurement_1.png": {
+    "bytes": 1099031,
+    "sha256": "c3f3eb88e4985b35ed4ed4f2b1cc7d60bb26a224fb1b654c87dd1309f645dd88"
+  },
+  "outputs/optimization__AFFINE__shirt_color__measurement_2.png": {
+    "bytes": 1099031,
+    "sha256": "c3f3eb88e4985b35ed4ed4f2b1cc7d60bb26a224fb1b654c87dd1309f645dd88"
+  },
+  "outputs/optimization__AFFINE__shirt_color__warmup_0.png": {
+    "bytes": 1099031,
+    "sha256": "c3f3eb88e4985b35ed4ed4f2b1cc7d60bb26a224fb1b654c87dd1309f645dd88"
+  },
+  "outputs/optimization__F__blocks_text__measurement_0.png": {
+    "bytes": 955668,
+    "sha256": "4b3c57eda61e49a8fe7679d08b5ae1cd731cfc3262ada8d40619efaf626b3d8d"
+  },
+  "outputs/optimization__F__blocks_text__measurement_1.png": {
+    "bytes": 955668,
+    "sha256": "4b3c57eda61e49a8fe7679d08b5ae1cd731cfc3262ada8d40619efaf626b3d8d"
+  },
+  "outputs/optimization__F__blocks_text__measurement_2.png": {
+    "bytes": 955668,
+    "sha256": "4b3c57eda61e49a8fe7679d08b5ae1cd731cfc3262ada8d40619efaf626b3d8d"
+  },
+  "outputs/optimization__F__blocks_text__warmup_0.png": {
+    "bytes": 955668,
+    "sha256": "4b3c57eda61e49a8fe7679d08b5ae1cd731cfc3262ada8d40619efaf626b3d8d"
+  },
+  "outputs/optimization__F__remove_hair__measurement_0.png": {
+    "bytes": 1210808,
+    "sha256": "96167bb945b58ca0c5bc83de4b00776a011e29fbada765ab74db6ca64417c758"
+  },
+  "outputs/optimization__F__remove_hair__measurement_1.png": {
+    "bytes": 1210808,
+    "sha256": "96167bb945b58ca0c5bc83de4b00776a011e29fbada765ab74db6ca64417c758"
+  },
+  "outputs/optimization__F__remove_hair__measurement_2.png": {
+    "bytes": 1210808,
+    "sha256": "96167bb945b58ca0c5bc83de4b00776a011e29fbada765ab74db6ca64417c758"
+  },
+  "outputs/optimization__F__remove_hair__warmup_0.png": {
+    "bytes": 1210808,
+    "sha256": "96167bb945b58ca0c5bc83de4b00776a011e29fbada765ab74db6ca64417c758"
+  },
+  "outputs/optimization__F__shirt_color__measurement_0.png": {
+    "bytes": 1090716,
+    "sha256": "79ee3cea15f202ba713ae320c3ca22a8ebd62336ce8c9f8c54dd673a9a97c3f3"
+  },
+  "outputs/optimization__F__shirt_color__measurement_1.png": {
+    "bytes": 1090716,
+    "sha256": "79ee3cea15f202ba713ae320c3ca22a8ebd62336ce8c9f8c54dd673a9a97c3f3"
+  },
+  "outputs/optimization__F__shirt_color__measurement_2.png": {
+    "bytes": 1090716,
+    "sha256": "79ee3cea15f202ba713ae320c3ca22a8ebd62336ce8c9f8c54dd673a9a97c3f3"
+  },
+  "outputs/optimization__F__shirt_color__warmup_0.png": {
+    "bytes": 1090716,
+    "sha256": "79ee3cea15f202ba713ae320c3ca22a8ebd62336ce8c9f8c54dd673a9a97c3f3"
+  },
+  "outputs/optimization__R2__blocks_text__measurement_0.png": {
+    "bytes": 933907,
+    "sha256": "615b3db8b859ae49c27bb5c0460533fe624a84adcaec6a9eba9e898a7cb94d56"
+  },
+  "outputs/optimization__R2__blocks_text__measurement_1.png": {
+    "bytes": 933907,
+    "sha256": "615b3db8b859ae49c27bb5c0460533fe624a84adcaec6a9eba9e898a7cb94d56"
+  },
+  "outputs/optimization__R2__blocks_text__measurement_2.png": {
+    "bytes": 933907,
+    "sha256": "615b3db8b859ae49c27bb5c0460533fe624a84adcaec6a9eba9e898a7cb94d56"
+  },
+  "outputs/optimization__R2__blocks_text__warmup_0.png": {
+    "bytes": 933907,
+    "sha256": "615b3db8b859ae49c27bb5c0460533fe624a84adcaec6a9eba9e898a7cb94d56"
+  },
+  "outputs/optimization__R2__remove_hair__measurement_0.png": {
+    "bytes": 1241068,
+    "sha256": "80b36879b6ee4e611fac9f7eab4e0adbfd1fd1fd452c309d5ca5b7c476c8cc56"
+  },
+  "outputs/optimization__R2__remove_hair__measurement_1.png": {
+    "bytes": 1241068,
+    "sha256": "80b36879b6ee4e611fac9f7eab4e0adbfd1fd1fd452c309d5ca5b7c476c8cc56"
+  },
+  "outputs/optimization__R2__remove_hair__measurement_2.png": {
+    "bytes": 1241068,
+    "sha256": "80b36879b6ee4e611fac9f7eab4e0adbfd1fd1fd452c309d5ca5b7c476c8cc56"
+  },
+  "outputs/optimization__R2__remove_hair__warmup_0.png": {
+    "bytes": 1241068,
+    "sha256": "80b36879b6ee4e611fac9f7eab4e0adbfd1fd1fd452c309d5ca5b7c476c8cc56"
+  },
+  "outputs/optimization__R2__shirt_color__measurement_0.png": {
+    "bytes": 1112326,
+    "sha256": "74119748f90c7b06fd6e04878ac83126534d1ee5eb381bd9b0918f52890d7c17"
+  },
+  "outputs/optimization__R2__shirt_color__measurement_1.png": {
+    "bytes": 1112326,
+    "sha256": "74119748f90c7b06fd6e04878ac83126534d1ee5eb381bd9b0918f52890d7c17"
+  },
+  "outputs/optimization__R2__shirt_color__measurement_2.png": {
+    "bytes": 1112326,
+    "sha256": "74119748f90c7b06fd6e04878ac83126534d1ee5eb381bd9b0918f52890d7c17"
+  },
+  "outputs/optimization__R2__shirt_color__warmup_0.png": {
+    "bytes": 1112326,
+    "sha256": "74119748f90c7b06fd6e04878ac83126534d1ee5eb381bd9b0918f52890d7c17"
+  },
+  "outputs/optimization__SHIFT__blocks_text__measurement_0.png": {
+    "bytes": 938610,
+    "sha256": "bff8559d6d589468b62508dad8b14c014a96c1b75c6fc1361beeec7ee1fc3f2a"
+  },
+  "outputs/optimization__SHIFT__blocks_text__measurement_1.png": {
+    "bytes": 938610,
+    "sha256": "bff8559d6d589468b62508dad8b14c014a96c1b75c6fc1361beeec7ee1fc3f2a"
+  },
+  "outputs/optimization__SHIFT__blocks_text__measurement_2.png": {
+    "bytes": 938610,
+    "sha256": "bff8559d6d589468b62508dad8b14c014a96c1b75c6fc1361beeec7ee1fc3f2a"
+  },
+  "outputs/optimization__SHIFT__blocks_text__warmup_0.png": {
+    "bytes": 938610,
+    "sha256": "bff8559d6d589468b62508dad8b14c014a96c1b75c6fc1361beeec7ee1fc3f2a"
+  },
+  "outputs/optimization__SHIFT__remove_hair__measurement_0.png": {
+    "bytes": 1238047,
+    "sha256": "07544ceb398db2fb887da7e856217df18623337783df552da435e0093dc2ce7c"
+  },
+  "outputs/optimization__SHIFT__remove_hair__measurement_1.png": {
+    "bytes": 1238047,
+    "sha256": "07544ceb398db2fb887da7e856217df18623337783df552da435e0093dc2ce7c"
+  },
+  "outputs/optimization__SHIFT__remove_hair__measurement_2.png": {
+    "bytes": 1238047,
+    "sha256": "07544ceb398db2fb887da7e856217df18623337783df552da435e0093dc2ce7c"
+  },
+  "outputs/optimization__SHIFT__remove_hair__warmup_0.png": {
+    "bytes": 1238047,
+    "sha256": "07544ceb398db2fb887da7e856217df18623337783df552da435e0093dc2ce7c"
+  },
+  "outputs/optimization__SHIFT__shirt_color__measurement_0.png": {
+    "bytes": 1107829,
+    "sha256": "49d4a9afedbf5f2dc470e5cb9dc75e8d434b5b99da30f123df6c33d8699c7710"
+  },
+  "outputs/optimization__SHIFT__shirt_color__measurement_1.png": {
+    "bytes": 1107829,
+    "sha256": "49d4a9afedbf5f2dc470e5cb9dc75e8d434b5b99da30f123df6c33d8699c7710"
+  },
+  "outputs/optimization__SHIFT__shirt_color__measurement_2.png": {
+    "bytes": 1107829,
+    "sha256": "49d4a9afedbf5f2dc470e5cb9dc75e8d434b5b99da30f123df6c33d8699c7710"
+  },
+  "outputs/optimization__SHIFT__shirt_color__warmup_0.png": {
+    "bytes": 1107829,
+    "sha256": "49d4a9afedbf5f2dc470e5cb9dc75e8d434b5b99da30f123df6c33d8699c7710"
+  },
+  "outputs/primary__FIX0__blocks_text__measurement_0.png": {
+    "bytes": 954305,
+    "sha256": "eb577b3abc92d0eedaacdbd15f729b798b9501b20582a82fb08e6f6752382c47"
+  },
+  "outputs/primary__FIX0__blocks_text__measurement_1.png": {
+    "bytes": 954305,
+    "sha256": "eb577b3abc92d0eedaacdbd15f729b798b9501b20582a82fb08e6f6752382c47"
+  },
+  "outputs/primary__FIX0__blocks_text__measurement_2.png": {
+    "bytes": 954305,
+    "sha256": "eb577b3abc92d0eedaacdbd15f729b798b9501b20582a82fb08e6f6752382c47"
+  },
+  "outputs/primary__FIX0__blocks_text__warmup_0.png": {
+    "bytes": 954305,
+    "sha256": "eb577b3abc92d0eedaacdbd15f729b798b9501b20582a82fb08e6f6752382c47"
+  },
+  "outputs/primary__FIX0__remove_hair__measurement_0.png": {
+    "bytes": 1244415,
+    "sha256": "7f3538f5d2ca39ce58f96ecd4cfffb0d12d38ab45c790f48e932cee39fd1cd84"
+  },
+  "outputs/primary__FIX0__remove_hair__measurement_1.png": {
+    "bytes": 1244415,
+    "sha256": "7f3538f5d2ca39ce58f96ecd4cfffb0d12d38ab45c790f48e932cee39fd1cd84"
+  },
+  "outputs/primary__FIX0__remove_hair__measurement_2.png": {
+    "bytes": 1244415,
+    "sha256": "7f3538f5d2ca39ce58f96ecd4cfffb0d12d38ab45c790f48e932cee39fd1cd84"
+  },
+  "outputs/primary__FIX0__remove_hair__warmup_0.png": {
+    "bytes": 1244415,
+    "sha256": "7f3538f5d2ca39ce58f96ecd4cfffb0d12d38ab45c790f48e932cee39fd1cd84"
+  },
+  "outputs/primary__FIX0__shirt_color__measurement_0.png": {
+    "bytes": 1114452,
+    "sha256": "fa40a351b5aff1a7b8cf5dd5c2f41399ffa43188f79a304d362fdee814513da1"
+  },
+  "outputs/primary__FIX0__shirt_color__measurement_1.png": {
+    "bytes": 1114452,
+    "sha256": "fa40a351b5aff1a7b8cf5dd5c2f41399ffa43188f79a304d362fdee814513da1"
+  },
+  "outputs/primary__FIX0__shirt_color__measurement_2.png": {
+    "bytes": 1114452,
+    "sha256": "fa40a351b5aff1a7b8cf5dd5c2f41399ffa43188f79a304d362fdee814513da1"
+  },
+  "outputs/primary__FIX0__shirt_color__warmup_0.png": {
+    "bytes": 1114452,
+    "sha256": "fa40a351b5aff1a7b8cf5dd5c2f41399ffa43188f79a304d362fdee814513da1"
+  },
+  "outputs/primary__FIX1__blocks_text__measurement_0.png": {
+    "bytes": 945472,
+    "sha256": "8fb7b4297db820ed7854a6031dd94e710fa67e294d5e46460e60b658a601f2e2"
+  },
+  "outputs/primary__FIX1__blocks_text__measurement_1.png": {
+    "bytes": 945472,
+    "sha256": "8fb7b4297db820ed7854a6031dd94e710fa67e294d5e46460e60b658a601f2e2"
+  },
+  "outputs/primary__FIX1__blocks_text__measurement_2.png": {
+    "bytes": 945472,
+    "sha256": "8fb7b4297db820ed7854a6031dd94e710fa67e294d5e46460e60b658a601f2e2"
+  },
+  "outputs/primary__FIX1__blocks_text__warmup_0.png": {
+    "bytes": 945472,
+    "sha256": "8fb7b4297db820ed7854a6031dd94e710fa67e294d5e46460e60b658a601f2e2"
+  },
+  "outputs/primary__FIX1__remove_hair__measurement_0.png": {
+    "bytes": 1247912,
+    "sha256": "a0d6e640baa762be35876f4ba6f8199549014a7553c039fc4e57bfcaeaac32c4"
+  },
+  "outputs/primary__FIX1__remove_hair__measurement_1.png": {
+    "bytes": 1247912,
+    "sha256": "a0d6e640baa762be35876f4ba6f8199549014a7553c039fc4e57bfcaeaac32c4"
+  },
+  "outputs/primary__FIX1__remove_hair__measurement_2.png": {
+    "bytes": 1247912,
+    "sha256": "a0d6e640baa762be35876f4ba6f8199549014a7553c039fc4e57bfcaeaac32c4"
+  },
+  "outputs/primary__FIX1__remove_hair__warmup_0.png": {
+    "bytes": 1247912,
+    "sha256": "a0d6e640baa762be35876f4ba6f8199549014a7553c039fc4e57bfcaeaac32c4"
+  },
+  "outputs/primary__FIX1__shirt_color__measurement_0.png": {
+    "bytes": 1111531,
+    "sha256": "a73fe872e1f697e478d15bebe5df3876f413f2594af7ea7ea599cd0c415724db"
+  },
+  "outputs/primary__FIX1__shirt_color__measurement_1.png": {
+    "bytes": 1111531,
+    "sha256": "a73fe872e1f697e478d15bebe5df3876f413f2594af7ea7ea599cd0c415724db"
+  },
+  "outputs/primary__FIX1__shirt_color__measurement_2.png": {
+    "bytes": 1111531,
+    "sha256": "a73fe872e1f697e478d15bebe5df3876f413f2594af7ea7ea599cd0c415724db"
+  },
+  "outputs/primary__FIX1__shirt_color__warmup_0.png": {
+    "bytes": 1111531,
+    "sha256": "a73fe872e1f697e478d15bebe5df3876f413f2594af7ea7ea599cd0c415724db"
+  },
+  "outputs/primary__FIX2__blocks_text__measurement_0.png": {
+    "bytes": 947218,
+    "sha256": "046493c7cadf78dcab7f767252719de0abd3b65db84f297914e27142611faf68"
+  },
+  "outputs/primary__FIX2__blocks_text__measurement_1.png": {
+    "bytes": 947218,
+    "sha256": "046493c7cadf78dcab7f767252719de0abd3b65db84f297914e27142611faf68"
+  },
+  "outputs/primary__FIX2__blocks_text__measurement_2.png": {
+    "bytes": 947218,
+    "sha256": "046493c7cadf78dcab7f767252719de0abd3b65db84f297914e27142611faf68"
+  },
+  "outputs/primary__FIX2__blocks_text__warmup_0.png": {
+    "bytes": 947218,
+    "sha256": "046493c7cadf78dcab7f767252719de0abd3b65db84f297914e27142611faf68"
+  },
+  "outputs/primary__FIX2__remove_hair__measurement_0.png": {
+    "bytes": 1250801,
+    "sha256": "be6677afe263cd1e38e660b69d5f10f1c372f8f5c8f0d7206c6c9952601034d5"
+  },
+  "outputs/primary__FIX2__remove_hair__measurement_1.png": {
+    "bytes": 1250801,
+    "sha256": "be6677afe263cd1e38e660b69d5f10f1c372f8f5c8f0d7206c6c9952601034d5"
+  },
+  "outputs/primary__FIX2__remove_hair__measurement_2.png": {
+    "bytes": 1250801,
+    "sha256": "be6677afe263cd1e38e660b69d5f10f1c372f8f5c8f0d7206c6c9952601034d5"
+  },
+  "outputs/primary__FIX2__remove_hair__warmup_0.png": {
+    "bytes": 1250801,
+    "sha256": "be6677afe263cd1e38e660b69d5f10f1c372f8f5c8f0d7206c6c9952601034d5"
+  },
+  "outputs/primary__FIX2__shirt_color__measurement_0.png": {
+    "bytes": 1114003,
+    "sha256": "654bc1ea7701a9343fc6371f42930ca99bedeaa77fedfc3d799aabcd1a703f49"
+  },
+  "outputs/primary__FIX2__shirt_color__measurement_1.png": {
+    "bytes": 1114003,
+    "sha256": "654bc1ea7701a9343fc6371f42930ca99bedeaa77fedfc3d799aabcd1a703f49"
+  },
+  "outputs/primary__FIX2__shirt_color__measurement_2.png": {
+    "bytes": 1114003,
+    "sha256": "654bc1ea7701a9343fc6371f42930ca99bedeaa77fedfc3d799aabcd1a703f49"
+  },
+  "outputs/primary__FIX2__shirt_color__warmup_0.png": {
+    "bytes": 1114003,
+    "sha256": "654bc1ea7701a9343fc6371f42930ca99bedeaa77fedfc3d799aabcd1a703f49"
+  },
+  "outputs/primary__F__blocks_text__measurement_0.png": {
+    "bytes": 955668,
+    "sha256": "4b3c57eda61e49a8fe7679d08b5ae1cd731cfc3262ada8d40619efaf626b3d8d"
+  },
+  "outputs/primary__F__blocks_text__measurement_1.png": {
+    "bytes": 955668,
+    "sha256": "4b3c57eda61e49a8fe7679d08b5ae1cd731cfc3262ada8d40619efaf626b3d8d"
+  },
+  "outputs/primary__F__blocks_text__measurement_2.png": {
+    "bytes": 955668,
+    "sha256": "4b3c57eda61e49a8fe7679d08b5ae1cd731cfc3262ada8d40619efaf626b3d8d"
+  },
+  "outputs/primary__F__blocks_text__warmup_0.png": {
+    "bytes": 955668,
+    "sha256": "4b3c57eda61e49a8fe7679d08b5ae1cd731cfc3262ada8d40619efaf626b3d8d"
+  },
+  "outputs/primary__F__remove_hair__measurement_0.png": {
+    "bytes": 1210808,
+    "sha256": "96167bb945b58ca0c5bc83de4b00776a011e29fbada765ab74db6ca64417c758"
+  },
+  "outputs/primary__F__remove_hair__measurement_1.png": {
+    "bytes": 1210808,
+    "sha256": "96167bb945b58ca0c5bc83de4b00776a011e29fbada765ab74db6ca64417c758"
+  },
+  "outputs/primary__F__remove_hair__measurement_2.png": {
+    "bytes": 1210808,
+    "sha256": "96167bb945b58ca0c5bc83de4b00776a011e29fbada765ab74db6ca64417c758"
+  },
+  "outputs/primary__F__remove_hair__warmup_0.png": {
+    "bytes": 1210808,
+    "sha256": "96167bb945b58ca0c5bc83de4b00776a011e29fbada765ab74db6ca64417c758"
+  },
+  "outputs/primary__F__shirt_color__measurement_0.png": {
+    "bytes": 1090716,
+    "sha256": "79ee3cea15f202ba713ae320c3ca22a8ebd62336ce8c9f8c54dd673a9a97c3f3"
+  },
+  "outputs/primary__F__shirt_color__measurement_1.png": {
+    "bytes": 1090716,
+    "sha256": "79ee3cea15f202ba713ae320c3ca22a8ebd62336ce8c9f8c54dd673a9a97c3f3"
+  },
+  "outputs/primary__F__shirt_color__measurement_2.png": {
+    "bytes": 1090716,
+    "sha256": "79ee3cea15f202ba713ae320c3ca22a8ebd62336ce8c9f8c54dd673a9a97c3f3"
+  },
+  "outputs/primary__F__shirt_color__warmup_0.png": {
+    "bytes": 1090716,
+    "sha256": "79ee3cea15f202ba713ae320c3ca22a8ebd62336ce8c9f8c54dd673a9a97c3f3"
+  },
+  "outputs/primary__R2__blocks_text__measurement_0.png": {
+    "bytes": 933907,
+    "sha256": "615b3db8b859ae49c27bb5c0460533fe624a84adcaec6a9eba9e898a7cb94d56"
+  },
+  "outputs/primary__R2__blocks_text__measurement_1.png": {
+    "bytes": 933907,
+    "sha256": "615b3db8b859ae49c27bb5c0460533fe624a84adcaec6a9eba9e898a7cb94d56"
+  },
+  "outputs/primary__R2__blocks_text__measurement_2.png": {
+    "bytes": 933907,
+    "sha256": "615b3db8b859ae49c27bb5c0460533fe624a84adcaec6a9eba9e898a7cb94d56"
+  },
+  "outputs/primary__R2__blocks_text__warmup_0.png": {
+    "bytes": 933907,
+    "sha256": "615b3db8b859ae49c27bb5c0460533fe624a84adcaec6a9eba9e898a7cb94d56"
+  },
+  "outputs/primary__R2__remove_hair__measurement_0.png": {
+    "bytes": 1241068,
+    "sha256": "80b36879b6ee4e611fac9f7eab4e0adbfd1fd1fd452c309d5ca5b7c476c8cc56"
+  },
+  "outputs/primary__R2__remove_hair__measurement_1.png": {
+    "bytes": 1241068,
+    "sha256": "80b36879b6ee4e611fac9f7eab4e0adbfd1fd1fd452c309d5ca5b7c476c8cc56"
+  },
+  "outputs/primary__R2__remove_hair__measurement_2.png": {
+    "bytes": 1241068,
+    "sha256": "80b36879b6ee4e611fac9f7eab4e0adbfd1fd1fd452c309d5ca5b7c476c8cc56"
+  },
+  "outputs/primary__R2__remove_hair__warmup_0.png": {
+    "bytes": 1241068,
+    "sha256": "80b36879b6ee4e611fac9f7eab4e0adbfd1fd1fd452c309d5ca5b7c476c8cc56"
+  },
+  "outputs/primary__R2__shirt_color__measurement_0.png": {
+    "bytes": 1112326,
+    "sha256": "74119748f90c7b06fd6e04878ac83126534d1ee5eb381bd9b0918f52890d7c17"
+  },
+  "outputs/primary__R2__shirt_color__measurement_1.png": {
+    "bytes": 1112326,
+    "sha256": "74119748f90c7b06fd6e04878ac83126534d1ee5eb381bd9b0918f52890d7c17"
+  },
+  "outputs/primary__R2__shirt_color__measurement_2.png": {
+    "bytes": 1112326,
+    "sha256": "74119748f90c7b06fd6e04878ac83126534d1ee5eb381bd9b0918f52890d7c17"
+  },
+  "outputs/primary__R2__shirt_color__warmup_0.png": {
+    "bytes": 1112326,
+    "sha256": "74119748f90c7b06fd6e04878ac83126534d1ee5eb381bd9b0918f52890d7c17"
+  },
+  "outputs/primary__ROT__blocks_text__measurement_0.png": {
+    "bytes": 951873,
+    "sha256": "ca39bca3512007d70bfc3dad3ca19a065077c022957cb530fb6f9cd68092be76"
+  },
+  "outputs/primary__ROT__blocks_text__measurement_1.png": {
+    "bytes": 951873,
+    "sha256": "ca39bca3512007d70bfc3dad3ca19a065077c022957cb530fb6f9cd68092be76"
+  },
+  "outputs/primary__ROT__blocks_text__measurement_2.png": {
+    "bytes": 951873,
+    "sha256": "ca39bca3512007d70bfc3dad3ca19a065077c022957cb530fb6f9cd68092be76"
+  },
+  "outputs/primary__ROT__blocks_text__warmup_0.png": {
+    "bytes": 951873,
+    "sha256": "ca39bca3512007d70bfc3dad3ca19a065077c022957cb530fb6f9cd68092be76"
+  },
+  "outputs/primary__ROT__remove_hair__measurement_0.png": {
+    "bytes": 1229734,
+    "sha256": "b5d283ce849a48daab9314f9a21fa23fe7356a7d39b6c0d8b13f01b478d90e0a"
+  },
+  "outputs/primary__ROT__remove_hair__measurement_1.png": {
+    "bytes": 1229734,
+    "sha256": "b5d283ce849a48daab9314f9a21fa23fe7356a7d39b6c0d8b13f01b478d90e0a"
+  },
+  "outputs/primary__ROT__remove_hair__measurement_2.png": {
+    "bytes": 1229734,
+    "sha256": "b5d283ce849a48daab9314f9a21fa23fe7356a7d39b6c0d8b13f01b478d90e0a"
+  },
+  "outputs/primary__ROT__remove_hair__warmup_0.png": {
+    "bytes": 1229734,
+    "sha256": "b5d283ce849a48daab9314f9a21fa23fe7356a7d39b6c0d8b13f01b478d90e0a"
+  },
+  "outputs/primary__ROT__shirt_color__measurement_0.png": {
+    "bytes": 1105206,
+    "sha256": "9cf8ef3355cf7198a9afe50ba2b36eca99e37291922987814a393c111681a1e5"
+  },
+  "outputs/primary__ROT__shirt_color__measurement_1.png": {
+    "bytes": 1105206,
+    "sha256": "9cf8ef3355cf7198a9afe50ba2b36eca99e37291922987814a393c111681a1e5"
+  },
+  "outputs/primary__ROT__shirt_color__measurement_2.png": {
+    "bytes": 1105206,
+    "sha256": "9cf8ef3355cf7198a9afe50ba2b36eca99e37291922987814a393c111681a1e5"
+  },
+  "outputs/primary__ROT__shirt_color__warmup_0.png": {
+    "bytes": 1105206,
+    "sha256": "9cf8ef3355cf7198a9afe50ba2b36eca99e37291922987814a393c111681a1e5"
+  },
+  "run_optimization.log": {
+    "bytes": 22734,
+    "sha256": "2f157fdd32a290d99dae2c26fc9752079da7a4385655d94781426616335c2cb1"
+  },
+  "run_primary.log": {
+    "bytes": 32470,
+    "sha256": "198c38fdc5f4a10ea792d85863fdc968c3d1d0cd785e7c69a68fb0019ea80acd"
+  },
+  "scripts/analyze_rotation.py": {
+    "bytes": 28077,
+    "sha256": "783edcd0a1d38daaf0c65593cc6de182190ca662f3de656de3118bf119e2e5f2"
+  },
+  "scripts/check_rotation.py": {
+    "bytes": 18012,
+    "sha256": "29117693db5e42db530032cffccf5dbc51e173d9b7012e49678a5753f9fbb775"
+  },
+  "scripts/check_value_time.py": {
+    "bytes": 16310,
+    "sha256": "63ddbf9ed9a3c9edd838416571571cf8daf1ef645a7e831c992840a8491be618"
+  },
+  "scripts/local_executor.py": {
+    "bytes": 10401,
+    "sha256": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1"
+  },
+  "scripts/prepare_rotation.py": {
+    "bytes": 14975,
+    "sha256": "51e76779df8b9e7778424d855bafc0899e62602724dda9da09f78319e6c60196"
+  },
+  "scripts/run_experiment.py": {
+    "bytes": 11140,
+    "sha256": "0b2fceeddef06e5745307eacca2a764131636ff66a3e3fd7744ac3ebe517457d"
+  },
+  "scripts/run_optimization.py": {
+    "bytes": 12000,
+    "sha256": "8cfa1a73856e37c3f80c7c1be7fbbb0436efd29aaa5094e0332e32940c99cfd2"
+  },
+  "scripts/validate_results.py": {
+    "bytes": 4903,
+    "sha256": "4d64e32fb46989689624823a8602f936bdc4e3d403e3c4815b7e2a047349a13a"
+  },
+  "scripts/value_time_correction.py": {
+    "bytes": 8614,
+    "sha256": "fb1203fa955e71392c2e73ea2c47d0d9ed9e7d358f01e605a31e54097255ac2e"
+  },
+  "status.json": {
+    "bytes": 147,
+    "sha256": "5d26b1a966968f0debdf0c502f0edc592cb04dd24e21956f1aff870b5f49c394"
+  }
+}

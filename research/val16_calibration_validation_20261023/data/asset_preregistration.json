@@ -1,0 +1,371 @@
+{
+  "scope": "frozen official-dev Val16 source/mask asset extraction and isolation QC only",
+  "repo_id": "osunlp/MagicBrush",
+  "revision": "6c254560879df7851233ea0fd2ae2a62764d0ef2",
+  "selection_seed": 2026102303,
+  "parent_frozen_selection_sha256": "577ff3a6f7bcbfc94ff150c055e335db63adc9f76247f00135138482185ba01a",
+  "parent_selection_payload_sha256": "2c898eff5d4d9b31925443157e9c4e3b07c9c95e4670aafd53a3c4a9b391b6ca",
+  "parent_inventory_sha256": "ec20347b29ccc8dc27068da5d58f58e6b230f29ff632037417fb1959f4751532",
+  "parent_inventory_files_sha256": "970a6453ee9bb4c6cf8489a42c60980ee92b7818854f52428dcf5683e7d19794",
+  "parent_train8_assets_sha256": "1ffe1b620416f7d725562e7fd2d19c56bba3199e330cc6c22e53580b2ae92190",
+  "selections": [
+    {
+      "img_id": "308192",
+      "original_img_id": "308192",
+      "turn_index": 1,
+      "instruction": "put a tennis racket next to the bat",
+      "official_split": "dev",
+      "shard_path": "data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+      "row_group": 0,
+      "row_in_group": 8,
+      "row_in_shard": 8,
+      "selection_rank_sha256": "033a4c07998049314cca57c712b2c372d7a05d5437f89d64a046959257444555"
+    },
+    {
+      "img_id": "565269",
+      "original_img_id": "565269",
+      "turn_index": 1,
+      "instruction": "add a bus station",
+      "official_split": "dev",
+      "shard_path": "data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+      "row_group": 0,
+      "row_in_group": 9,
+      "row_in_shard": 9,
+      "selection_rank_sha256": "0399fc9bd3c638e406f4635e077b263eed539a8875a131721498769287ceb76c"
+    },
+    {
+      "img_id": "392687",
+      "original_img_id": "392687",
+      "turn_index": 1,
+      "instruction": "change the scooter into a skateboard",
+      "official_split": "dev",
+      "shard_path": "data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+      "row_group": 3,
+      "row_in_group": 1,
+      "row_in_shard": 97,
+      "selection_rank_sha256": "040ab0a4d5671b057fcf6e00f7f8498ae45b7e0c354efb3170367d36257f77c8"
+    },
+    {
+      "img_id": "175584",
+      "original_img_id": "175584",
+      "turn_index": 1,
+      "instruction": "Put a pond next to the cows.",
+      "official_split": "dev",
+      "shard_path": "data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+      "row_group": 3,
+      "row_in_group": 11,
+      "row_in_shard": 107,
+      "selection_rank_sha256": "04d14a52a9523bb6204f7862b039fe067909cc18de4f6b019078cf7050d05827"
+    },
+    {
+      "img_id": "190360",
+      "original_img_id": "190360",
+      "turn_index": 1,
+      "instruction": "let the cat have its eyes closed",
+      "official_split": "dev",
+      "shard_path": "data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+      "row_group": 3,
+      "row_in_group": 5,
+      "row_in_shard": 101,
+      "selection_rank_sha256": "06173679b9f6f8b6e069c1477ce5218b09ae6261ac09f6bccd461dc95b542d27"
+    },
+    {
+      "img_id": "178572",
+      "original_img_id": "178572",
+      "turn_index": 1,
+      "instruction": "Let the player wear a red hat.",
+      "official_split": "dev",
+      "shard_path": "data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+      "row_group": 0,
+      "row_in_group": 14,
+      "row_in_shard": 14,
+      "selection_rank_sha256": "062f2ae7622dde481adbc6c216dd73efdaa9d20fe022713247b0c53cd7d3eb33"
+    },
+    {
+      "img_id": "211860",
+      "original_img_id": "211860",
+      "turn_index": 1,
+      "instruction": "Have the woman be wearing a blue tank top",
+      "official_split": "dev",
+      "shard_path": "data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+      "row_group": 3,
+      "row_in_group": 22,
+      "row_in_shard": 118,
+      "selection_rank_sha256": "07158b6f4d16f5fe867fbb837542174953393ccf4b9be72f5b4032618fabb212"
+    },
+    {
+      "img_id": "415314",
+      "original_img_id": "415314",
+      "turn_index": 1,
+      "instruction": "replace the baseball bat for a laser sword",
+      "official_split": "dev",
+      "shard_path": "data/dev-00000-of-00004-f147d414270a90e1.parquet",
+      "row_group": 0,
+      "row_in_group": 7,
+      "row_in_shard": 7,
+      "selection_rank_sha256": "08a74989ff74c6d48b190c63487dc1ff85d9c3d0f0f488370f4672534d615b82"
+    },
+    {
+      "img_id": "50151",
+      "original_img_id": "50151",
+      "turn_index": 1,
+      "instruction": "Can we put a hand on the door?",
+      "official_split": "dev",
+      "shard_path": "data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+      "row_group": 3,
+      "row_in_group": 19,
+      "row_in_shard": 115,
+      "selection_rank_sha256": "0a2fd9770c4f11a4ade660368346f9f916ebdbf09f70202ef62ef1ad049aa843"
+    },
+    {
+      "img_id": "215135",
+      "original_img_id": "215135",
+      "turn_index": 1,
+      "instruction": "Put a wooden floor on the kitchen.",
+      "official_split": "dev",
+      "shard_path": "data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+      "row_group": 1,
+      "row_in_group": 29,
+      "row_in_shard": 61,
+      "selection_rank_sha256": "0a50a3852e3a6926376dc73aa840877912fb1511bdedd5a06f34b540fd76671b"
+    },
+    {
+      "img_id": "354126",
+      "original_img_id": "354126",
+      "turn_index": 1,
+      "instruction": "change the stuffed toys into rubber duckies",
+      "official_split": "dev",
+      "shard_path": "data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+      "row_group": 1,
+      "row_in_group": 25,
+      "row_in_shard": 57,
+      "selection_rank_sha256": "0aa8c65aa3113cb19045bc88ea0de08ffc84e6d9944361ecf27af78c853b6064"
+    },
+    {
+      "img_id": "25139",
+      "original_img_id": "25139",
+      "turn_index": 1,
+      "instruction": "Let the zebra put its face up close to a tree.",
+      "official_split": "dev",
+      "shard_path": "data/dev-00000-of-00004-f147d414270a90e1.parquet",
+      "row_group": 2,
+      "row_in_group": 19,
+      "row_in_shard": 83,
+      "selection_rank_sha256": "0afc686c9b775b5d65302797363f97aadad629b613abfb0b49fd94748ddec121"
+    },
+    {
+      "img_id": "282572",
+      "original_img_id": "282572",
+      "turn_index": 1,
+      "instruction": "let there be pigs in the pen",
+      "official_split": "dev",
+      "shard_path": "data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+      "row_group": 1,
+      "row_in_group": 13,
+      "row_in_shard": 45,
+      "selection_rank_sha256": "0b7d8298483f2e1114a8276ef2f7986e9e20d24aa0f8512a106cab7b2f4b5827"
+    },
+    {
+      "img_id": "466845",
+      "original_img_id": "466845",
+      "turn_index": 1,
+      "instruction": "Let the fence be made of wood.",
+      "official_split": "dev",
+      "shard_path": "data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+      "row_group": 2,
+      "row_in_group": 13,
+      "row_in_shard": 77,
+      "selection_rank_sha256": "0be1f5cd00b5eed96ee94d36714377a876f2bc3104a2ed0c5e4b13100ed08fb6"
+    },
+    {
+      "img_id": "55458",
+      "original_img_id": "55458",
+      "turn_index": 1,
+      "instruction": "remove the apple",
+      "official_split": "dev",
+      "shard_path": "data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+      "row_group": 3,
+      "row_in_group": 31,
+      "row_in_shard": 127,
+      "selection_rank_sha256": "0e8cd84ef11dfd2d6029d5d4a2486dc293a3af35fbc6e68c20544556fb021cf1"
+    },
+    {
+      "img_id": "155790",
+      "original_img_id": "155790",
+      "turn_index": 1,
+      "instruction": "it should be a tennis ball on the glove.",
+      "official_split": "dev",
+      "shard_path": "data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+      "row_group": 3,
+      "row_in_group": 26,
+      "row_in_shard": 122,
+      "selection_rank_sha256": "0ed7d98f52224fbce2c9e5f477362a04a98212cdcbdc2ab6974e665a13067975"
+    }
+  ],
+  "decoder_path": "/workspace/diffusers-fix/research/fewshot_calibration_start_20261023/scripts/prepare_magicbrush_v2.py",
+  "decoder_sha256": "7076833073b202d7ac0feeab5e6708d33fa645674b743e385d972ffc243d7af8",
+  "preserved_prepare_v1_sha256": "2b684f31a3ad77a0901db4376cc2d1e01cad10321e6b3c27bf436a2f4f752e14",
+  "extraction_script_sha256": "a2e894294760bfd18a15bc60d5a140e9443de581d8bfe9ae305120a01547c09b",
+  "geometry_contract": {
+    "target_area": 1048576,
+    "dimension_rounding": "Python round to nearest multiple of 32, same as Qwen calculate_dimensions",
+    "image_token_pixels": 16,
+    "roi": "bbox of alpha<255 for RGBA, otherwise positive opaque grayscale; expanded by 2 image tokens",
+    "halo_tokens": 2,
+    "aspect_log_distance_max": 0.01,
+    "mask_resampling": "NEAREST to generated target canvas, only if source and mask aspect agree",
+    "alpha": "RGBA alpha==0 explicitly editable; alpha<255 conservative ROI includes antialias edges; opaque grayscale white>0 compatible",
+    "semantic_boundary_learned": false,
+    "decoder_version": "alpha_v2",
+    "conservative_alpha_edge_rule_is_research_protocol": true
+  },
+  "duplicate_contract": {
+    "exact": "raw bytes SHA256 or dimensions plus decoded RGB SHA256",
+    "hash_bits": 64,
+    "reject_both_hash_distance_max": 6,
+    "reject_aspect_log_distance_max": 0.02,
+    "gray_either_hash_distance_max": 10,
+    "image_only": true
+  },
+  "old_demo_reference": {
+    "cases_path": "/workspace/diffusers-fix/research/lightning8_preflight_20261022/cases.json",
+    "cases_sha256": "7a6e93f907dc0c3c92de848c7ae8c9bf6a015d10808ab4426d192f85a6f3a3d1",
+    "signatures": {
+      "blocks_text": {
+        "signature": {
+          "raw_sha256": "f7471140b2d350c899ae16d07b284478b93bc6eaf211906764eeb39adeb75a46",
+          "rgb_sha256": "1768f11a18fdedb8309bc76f8daa12faf41e58696d6692b5d2d698761c427ae8",
+          "width": 684,
+          "height": 456,
+          "average_hash": "09383f4fefffff7f",
+          "difference_hash": "5b59dabe557723e3"
+        },
+        "path": "/workspace/diffusers-fix/research/lightning8_preflight_20261022/inputs/blocks_text.png",
+        "source_url": "https://raw.githubusercontent.com/ModelTC/LightX2V-Qwen-Image-Lightning/115d41afa959f0bc858d25d3b3fddd44054767ad/examples/qwen_image_edit/qwen_edit2.webp"
+      },
+      "shirt_color": {
+        "signature": {
+          "raw_sha256": "684481101aeb48535f34f56339b3816beb9d3483da1d4e0a1ff0632e500ac70a",
+          "rgb_sha256": "ec1a0ce791f76c44cf63c7f0610350078d4204ed494144c1b913535251d22cec",
+          "width": 650,
+          "height": 434,
+          "average_hash": "e0dcdcc0c0c0a480",
+          "difference_hash": "8dbd311115194d33"
+        },
+        "path": "/workspace/diffusers-fix/research/lightning8_preflight_20261022/inputs/shirt_color.png",
+        "source_url": "https://raw.githubusercontent.com/ModelTC/LightX2V-Qwen-Image-Lightning/115d41afa959f0bc858d25d3b3fddd44054767ad/examples/qwen_image_edit/qwen_edit3.png"
+      },
+      "remove_hair": {
+        "signature": {
+          "raw_sha256": "e88e811c82a5a03176e0644fcbc08e2d2228f9558e66e35974bfaa838fe1190c",
+          "rgb_sha256": "e1d857ed4a76e246474f3b0aa2579d1178736e72a2b1c5c9144b449a3583bf65",
+          "width": 836,
+          "height": 834,
+          "average_hash": "033f7cf8fcf7f0f8",
+          "difference_hash": "bfd8d0b2d9cc6340"
+        },
+        "path": "/workspace/diffusers-fix/research/lightning8_preflight_20261022/inputs/remove_hair.png",
+        "source_url": "https://raw.githubusercontent.com/ModelTC/LightX2V-Qwen-Image-Lightning/115d41afa959f0bc858d25d3b3fddd44054767ad/examples/qwen_image_edit/qwen_edit6.webp"
+      }
+    }
+  },
+  "reference_signatures": {
+    "old_demo/blocks_text": {
+      "raw_sha256": "f7471140b2d350c899ae16d07b284478b93bc6eaf211906764eeb39adeb75a46",
+      "rgb_sha256": "1768f11a18fdedb8309bc76f8daa12faf41e58696d6692b5d2d698761c427ae8",
+      "width": 684,
+      "height": 456,
+      "average_hash": "09383f4fefffff7f",
+      "difference_hash": "5b59dabe557723e3"
+    },
+    "old_demo/shirt_color": {
+      "raw_sha256": "684481101aeb48535f34f56339b3816beb9d3483da1d4e0a1ff0632e500ac70a",
+      "rgb_sha256": "ec1a0ce791f76c44cf63c7f0610350078d4204ed494144c1b913535251d22cec",
+      "width": 650,
+      "height": 434,
+      "average_hash": "e0dcdcc0c0c0a480",
+      "difference_hash": "8dbd311115194d33"
+    },
+    "old_demo/remove_hair": {
+      "raw_sha256": "e88e811c82a5a03176e0644fcbc08e2d2228f9558e66e35974bfaa838fe1190c",
+      "rgb_sha256": "e1d857ed4a76e246474f3b0aa2579d1178736e72a2b1c5c9144b449a3583bf65",
+      "width": 836,
+      "height": 834,
+      "average_hash": "033f7cf8fcf7f0f8",
+      "difference_hash": "bfd8d0b2d9cc6340"
+    },
+    "train8/405994": {
+      "raw_sha256": "4c60f196094540a1ffc75eb31196476304456470eb1202a510d5c7e14a16f9a4",
+      "rgb_sha256": "3351364cfee4aef3f647555adb2da0a6d129cb8134a90578d6a4c8cb6d0da9b0",
+      "width": 500,
+      "height": 500,
+      "average_hash": "10704074717e7e7a",
+      "difference_hash": "a4e18ce4c1c4f4e4"
+    },
+    "train8/301232": {
+      "raw_sha256": "3ce1ed189bb485f6f5476f0a3901ec0571a1e7fef79af9d4dbbbeaf00f808bd0",
+      "rgb_sha256": "89572fdc9fcfac8fdbf74f2239c0ba8bcc635a5456afdb70c90979786265079c",
+      "width": 500,
+      "height": 500,
+      "average_hash": "40cfdfdf00c6c6c0",
+      "difference_hash": "9a9eb4381a2c1c1a"
+    },
+    "train8/544811": {
+      "raw_sha256": "edbf58458213de8d9e4d774805290cb7ec163e7e45b54f171abbf6664f8bf264",
+      "rgb_sha256": "f7120204f1066893ac371a44a6c8289fd40ea76862dc63c41da458ced0b5fa2c",
+      "width": 500,
+      "height": 500,
+      "average_hash": "00ffffffffff0000",
+      "difference_hash": "00b4f8f6d9f9fc00"
+    },
+    "train8/253960": {
+      "raw_sha256": "41ea0ffe4daba3ee4eab97fb605bf6dbb558258db596415fa62af3a6ae88f351",
+      "rgb_sha256": "ac9be4ba5b82c5b3f89a2b3730f8dbc2db87cb5d24a7df44a0170132833179e4",
+      "width": 500,
+      "height": 500,
+      "average_hash": "c4c5c7110030f8ff",
+      "difference_hash": "84ad2d37b4e0f0ec"
+    },
+    "train8/315467": {
+      "raw_sha256": "c8bf9380668e6c1f07ac085ad3e08b11afa3ec5bcfd99ab3bb66d2393b2e13fa",
+      "rgb_sha256": "89ec01a7f4fe0753809feec9d35e5ad71c9a0246d4961166b73d7a2d150f0cd2",
+      "width": 500,
+      "height": 500,
+      "average_hash": "7757573000160707",
+      "difference_hash": "a4a4a4e4c4a4a4b6"
+    },
+    "train8/355272": {
+      "raw_sha256": "e8678a719fa636c237ed20f4fdb96fc73d5bc6cd1d7945d5108893833055a515",
+      "rgb_sha256": "6160a9a6af93ea75a8115ad235da1107e824c13fe60e96073c4cf8dbcd905461",
+      "width": 500,
+      "height": 500,
+      "average_hash": "0000181a1c3edc8f",
+      "difference_hash": "9b8bb2b2f868b138"
+    },
+    "train8/257102": {
+      "raw_sha256": "70f904910835bc9e2490ca2bb56815977d2df1f262418a60d238e917a981b357",
+      "rgb_sha256": "73ad5fc49283f81453667765572b396216ef25d6d84067114147ad37598274d6",
+      "width": 500,
+      "height": 500,
+      "average_hash": "fff8d8dcc2800107",
+      "difference_hash": "e5a339b9340c0f4f"
+    },
+    "train8/271359": {
+      "raw_sha256": "6df00fd9ed8b09739f6ca4836f080fc40b8954efc5631d1be515295a5a2cdd9b",
+      "rgb_sha256": "2b3538e1c7fe7c5f0f6dd1e82918d134354e5fab4f8371bfb3d91cdc5a88a689",
+      "width": 500,
+      "height": 500,
+      "average_hash": "7e7c721642401018",
+      "difference_hash": "f0e8a6f49693b3f0"
+    }
+  },
+  "reference_count": 11,
+  "dev_source_mask_read": true,
+  "train8_assets_modified": false,
+  "test_media_read": false,
+  "target_columns_read": false,
+  "replacement_performed": false,
+  "model_calls": 0,
+  "dit_forwards": 0,
+  "training_steps": 0
+}

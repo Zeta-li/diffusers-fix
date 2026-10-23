@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "211860",
+    "original_img_id": "211860",
+    "turn_index": 1,
+    "instruction": "Have the woman be wearing a blue tank top",
+    "official_split": "dev",
+    "shard_path": "data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+    "row_group": 3,
+    "row_in_group": 22,
+    "row_in_shard": 118,
+    "selection_rank_sha256": "07158b6f4d16f5fe867fbb837542174953393ccf4b9be72f5b4032618fabb212"
+  },
+  "image": "inputs/val16/211860/source.original",
+  "original_mask": "inputs/val16/211860/mask.original",
+  "source_sha256": "1ab36958751f5f8674679892ff9be9c18537cd93fe5d0b76bff095b0f6be02dc",
+  "mask_sha256": "7c6a06b40669fe7fd6f6ea9a5d54f3f79317e5b1c6de1ce4f2efce17dc9e7664",
+  "source_bytes": 371776,
+  "mask_bytes": 1242805,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+  "source_url_sha256": "5fab15f436714d22fa54a2311e641ac757c913af1bf128fae5c2a44580efe465"
+}

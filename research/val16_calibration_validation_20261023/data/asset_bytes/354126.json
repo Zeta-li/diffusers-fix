@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "354126",
+    "original_img_id": "354126",
+    "turn_index": 1,
+    "instruction": "change the stuffed toys into rubber duckies",
+    "official_split": "dev",
+    "shard_path": "data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+    "row_group": 1,
+    "row_in_group": 25,
+    "row_in_shard": 57,
+    "selection_rank_sha256": "0aa8c65aa3113cb19045bc88ea0de08ffc84e6d9944361ecf27af78c853b6064"
+  },
+  "image": "inputs/val16/354126/source.original",
+  "original_mask": "inputs/val16/354126/mask.original",
+  "source_sha256": "307e200928271e15eb49b52e0a587e1d98e37c19ea35632215b8386d30271e7d",
+  "mask_sha256": "e015cd482cf5d8c422a7dd10439019923677e20302c13d7c342e7dd8a3f97821",
+  "source_bytes": 319420,
+  "mask_bytes": 952882,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+  "source_url_sha256": "d84cba0911688514a197edfb35accfa03855f3241310cc06c8ca5b1aff4df8bc"
+}

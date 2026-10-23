@@ -1,0 +1,25 @@
+{
+  "phase": "channel_weight_prior",
+  "frozen_at": "2026-10-22T22:53:45.510796+08:00",
+  "configs": [
+    "F",
+    "R2",
+    "CHANNEL"
+  ],
+  "requests": 36,
+  "dit_forwards": 288,
+  "oracle_forwards": 0,
+  "warmups_per_case_config": 1,
+  "measurements_per_case_config": 3,
+  "training_images_used": 0,
+  "statistics_mode": "mean_zero_unit_variance_prior",
+  "previous_scalar_summary_sha256": "fd07f98ec7c7e55d59360d1babec4ccf722e451e61b3215c335864fe891a85ef",
+  "protocol_sha256": "9831fa0394626ce1fdcda0ba4b4c587493d0f780ba624034e9eaebc80f7471c7",
+  "scripts": {
+    "run_channel.py": "771ab908d60df668eeb682f165945bbf6d81deff72dcb7252e7432168a89e7bf",
+    "local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "value_time_correction.py": "fb1203fa955e71392c2e73ea2c47d0d9ed9e7d358f01e605a31e54097255ac2e",
+    "value_channel_correction.py": "f3e088226bea615a1f703806226ebf4b8f121d7853d79aeadab7cb29d82a0151",
+    "check_channel_correction.py": "5a6870f217b6aa8599d4d6867020b663a5cf4d6f2c85c80e74a3717db8af8098"
+  }
+}

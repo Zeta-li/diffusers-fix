@@ -1,0 +1,37 @@
+{
+  "frozen_at": "2026-10-22T21:59:19.271069+08:00",
+  "status": "frozen_before_model_execution",
+  "case_ids": [
+    "blocks_text",
+    "shirt_color",
+    "remove_hair"
+  ],
+  "modes": [
+    "D",
+    "B",
+    "V",
+    "K"
+  ],
+  "main_same_state_attribution": "B",
+  "region": "R2",
+  "full_steps_1based": [
+    1,
+    8
+  ],
+  "seed": 2026102201,
+  "planned_requests": 12,
+  "planned_local_calls": 72,
+  "planned_oracle_calls": 72,
+  "planned_native_calls": 24,
+  "planned_total_model_forwards": 168,
+  "repeats_per_case_mode": 1,
+  "deployment_speed_claim": false,
+  "protocol_sha256": "dae13c9634cc1e1591f869535efbf22ed3b428c3f0df5df2fe7ee6810b398bf5",
+  "prior_regions_sha256": "d26835e95d595a2804ebae2bdf2cbfbeaee032d35a4e0f3a6d04229c3b88db2c",
+  "prior_runs_sha256": "5ec7b4c411f52d1b0f4017a605830a1e0b8ae18ac7263da90236cde745c0f337",
+  "source_hashes": {
+    "attribution_executor.py": "6f39974119e2f092cb2716120ffcf7f1ec4ab71e1232017dac4582193546732e",
+    "local_executor.py": "8f8688bf35625dbd31b2c23f6152a1484f18eb52cff778a9748b4c7d9cce1732",
+    "run_attribution.py": "1a2965af14e64582b8b7b419987d58dd6ea5b82ca30f94dfffc162e25e008b74"
+  }
+}

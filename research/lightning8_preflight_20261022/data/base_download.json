@@ -1,0 +1,10 @@
+{
+  "repo": "Qwen/Qwen-Image-Edit",
+  "revision": "ac7f9318f633fc4b5778c59367c8128225f1e3de",
+  "target": "/workspace/model-weights/Qwen-Image-Edit",
+  "phase": "complete",
+  "updated_at": "2026-10-22T19:22:37.453514+08:00",
+  "verified_files": 39,
+  "verified_bytes": 57720467613,
+  "safetensors_files": 14
+}

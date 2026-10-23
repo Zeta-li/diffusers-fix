@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "565269",
+    "original_img_id": "565269",
+    "turn_index": 1,
+    "instruction": "add a bus station",
+    "official_split": "dev",
+    "shard_path": "data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+    "row_group": 0,
+    "row_in_group": 9,
+    "row_in_shard": 9,
+    "selection_rank_sha256": "0399fc9bd3c638e406f4635e077b263eed539a8875a131721498769287ceb76c"
+  },
+  "image": "inputs/val16/565269/source.original",
+  "original_mask": "inputs/val16/565269/mask.original",
+  "source_sha256": "8c0abb03bbdd4f075a8fca39bd8db63843d699dc8a4e6b5821f235428a9ab2c9",
+  "mask_sha256": "730dcc08b58a31540f1e12713f94fc3e967965a4456f21d7ae2e2cedf1137000",
+  "source_bytes": 218163,
+  "mask_bytes": 497073,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+  "source_url_sha256": "d84cba0911688514a197edfb35accfa03855f3241310cc06c8ca5b1aff4df8bc"
+}

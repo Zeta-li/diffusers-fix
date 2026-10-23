@@ -1,0 +1,48 @@
+{
+  "phase": "primary",
+  "attempt": "20261022T222949",
+  "previous_root": "/workspace/diffusers-fix/research/local_executor_boundary_20261022",
+  "baseline_root": "/workspace/diffusers-fix/research/lightning8_preflight_20261022",
+  "source": "/workspace/diffusers-fix/src/diffusers/__init__.py",
+  "source_version": "0.42.0.dev0",
+  "git_commit": "73faca368c0da77645ea58836aa8780d2d8c5353",
+  "packages": {
+    "torch": "2.9.1+cu129",
+    "transformers": "5.3.0",
+    "peft": "0.21.2",
+    "huggingface_hub": "1.32.0",
+    "torchao": "0.16.0"
+  },
+  "gpu_driver_name": "NVIDIA L20Y",
+  "physical_gpu_user_confirmed": "H800",
+  "capability": [
+    9,
+    0
+  ],
+  "configs": [
+    "F",
+    "R2",
+    "FIX0",
+    "FIX1",
+    "FIX2",
+    "ROT"
+  ],
+  "repeats": 3,
+  "planned_requests": 72,
+  "dtype": "bfloat16",
+  "steps": 8,
+  "cfg": 1,
+  "seed": 2026102201,
+  "vae_tiling": true,
+  "backend": "native SDPA",
+  "region_plan_sha256": "944c26ec413e095486b64821c46ff7ee77f66483deb80cbcd80cb2d5a65fdfcc",
+  "scripts": {
+    "prepare_rotation.py": "51e76779df8b9e7778424d855bafc0899e62602724dda9da09f78319e6c60196",
+    "run_experiment.py": "0b2fceeddef06e5745307eacca2a764131636ff66a3e3fd7744ac3ebe517457d",
+    "local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "check_rotation.py": "29117693db5e42db530032cffccf5dbc51e173d9b7012e49678a5753f9fbb775"
+  },
+  "timing_scope": "memory source image and supplied ROI to PIL; includes cache setup, correction, cleanup, encode, all DiT, scheduler, decode; excludes model load, static table preparation, PNG, metrics, precomputed region plan",
+  "extra_dense_oracles_in_performance": 0,
+  "model_load_and_fuse_seconds": 14.94242887198925
+}

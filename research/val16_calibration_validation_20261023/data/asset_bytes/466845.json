@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "466845",
+    "original_img_id": "466845",
+    "turn_index": 1,
+    "instruction": "Let the fence be made of wood.",
+    "official_split": "dev",
+    "shard_path": "data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+    "row_group": 2,
+    "row_in_group": 13,
+    "row_in_shard": 77,
+    "selection_rank_sha256": "0be1f5cd00b5eed96ee94d36714377a876f2bc3104a2ed0c5e4b13100ed08fb6"
+  },
+  "image": "inputs/val16/466845/source.original",
+  "original_mask": "inputs/val16/466845/mask.original",
+  "source_sha256": "d4c74a4960c1c95df0fd9124aebee279deba617dc8a91198a95b75e0daa792e8",
+  "mask_sha256": "a6d714a8aa69813ebc1f1c3d08d87e2c6d5ba2eba56d7c5499188e2fcb2be12d",
+  "source_bytes": 432627,
+  "mask_bytes": 1362695,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+  "source_url_sha256": "d84cba0911688514a197edfb35accfa03855f3241310cc06c8ca5b1aff4df8bc"
+}

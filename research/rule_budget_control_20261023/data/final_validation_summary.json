@@ -1,0 +1,101 @@
+{
+  "status": "pass",
+  "scope": "Integrity, numerical contracts and execution accounting; not semantic or algorithm-quality acceptance",
+  "validated_at": "2026-10-23T12:32:08.525409+08:00",
+  "total_requests": 72,
+  "measured_requests": 54,
+  "warmup_requests": 18,
+  "total_real_dit_forwards": 576,
+  "extra_dense_oracles_in_performance": 0,
+  "training_images_used": 0,
+  "value_correction": false,
+  "policy_cpu_checks": 48,
+  "policy_cpu_model_calls": 0,
+  "policy_cpu_dit_forwards": 0,
+  "independent_block_reconstructions": 3,
+  "independent_whole_tile_greedy_schedules": 18,
+  "producer_policy_equals_frozen_checks": 72,
+  "candidate_in_request_policy_rebuilds": 48,
+  "static_F_R2_policy_requests": 24,
+  "F_R2_old_PNG_exact_controls": 24,
+  "model_timestep_contract_checks": 72,
+  "independent_request_age_shape_checks": 72,
+  "native_F_empty_cache_checks": 12,
+  "local_requests_with_8_step_checks": 60,
+  "whole_execution_order_matches": true,
+  "all_output_hashes_verified": true,
+  "all_warmup_measurement_group_hashes_identical": true,
+  "failed_real_model_requests": 0,
+  "tiny_model_forwards": 0,
+  "peak_allocated_GiB": 57.6513934135437,
+  "request_seconds_sum": 448.60452486015856,
+  "candidate_selection_seconds_sum": 0.3255769843235612,
+  "model_load_and_fuse_seconds": 15.97085041180253,
+  "candidate_numeric_quality_pass_all_cases": {
+    "B125": false,
+    "B250": false,
+    "B333": false,
+    "B500": false
+  },
+  "deployment_joint_target_inferred": false,
+  "budget_is_not_latency_or_quality_guarantee": true,
+  "preregistration_sources": [
+    {
+      "path": "/workspace/diffusers-fix/research/rule_budget_control_20261023/scripts/run_budget.py",
+      "sha256": "ee2743843f85fc9eac299881ff1207a242f6adffd284b713a29d9abf254d02c7"
+    },
+    {
+      "path": "/workspace/diffusers-fix/research/rule_budget_control_20261023/scripts/local_executor.py",
+      "sha256": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1"
+    },
+    {
+      "path": "/workspace/diffusers-fix/research/rule_budget_control_20261023/scripts/budget_policy.py",
+      "sha256": "03298c1d3a5383951d5c286cd56582788bea8543dcf1fd7116f3cd364b2fd0bb"
+    },
+    {
+      "path": "/workspace/diffusers-fix/research/rule_budget_control_20261023/scripts/prepare_budget.py",
+      "sha256": "03b366803d20b2beecdd3be7eec422c565fd88480e96043081d807f19028fc47"
+    },
+    {
+      "path": "/workspace/diffusers-fix/research/rule_budget_control_20261023/scripts/check_budget_policy.py",
+      "sha256": "a0433564f482047762b17a5e3f17c0d2e4e94393d8cdb53d7f01ff65531b274e"
+    }
+  ],
+  "environment_sources": [
+    {
+      "path": "/workspace/diffusers-fix/research/rule_budget_control_20261023/scripts/prepare_budget.py",
+      "sha256": "03b366803d20b2beecdd3be7eec422c565fd88480e96043081d807f19028fc47"
+    },
+    {
+      "path": "/workspace/diffusers-fix/research/rule_budget_control_20261023/attempts/analysis_text_v1/analyze_budget.py.txt",
+      "sha256": "f4583a0f2aa9401d03778da04e966b78339e184334adde90d98ea2b258c67102",
+      "scope": "Runtime-start historical analysis source",
+      "current_path": "/workspace/diffusers-fix/research/rule_budget_control_20261023/scripts/analyze_budget.py",
+      "current_sha256": "f4affe01471e558bae707ced8125651ba3a9c8d05da8189c828a8176d1d61f14",
+      "explanatory_strings_only": true
+    },
+    {
+      "path": "/workspace/diffusers-fix/research/rule_budget_control_20261023/scripts/local_executor.py",
+      "sha256": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1"
+    },
+    {
+      "path": "/workspace/diffusers-fix/research/rule_budget_control_20261023/scripts/run_budget.py",
+      "sha256": "ee2743843f85fc9eac299881ff1207a242f6adffd284b713a29d9abf254d02c7"
+    },
+    {
+      "path": "/workspace/diffusers-fix/research/rule_budget_control_20261023/scripts/check_budget_policy.py",
+      "sha256": "a0433564f482047762b17a5e3f17c0d2e4e94393d8cdb53d7f01ff65531b274e"
+    },
+    {
+      "path": "/workspace/diffusers-fix/research/rule_budget_control_20261023/scripts/budget_policy.py",
+      "sha256": "03298c1d3a5383951d5c286cd56582788bea8543dcf1fd7116f3cd364b2fd0bb"
+    }
+  ],
+  "runs_sha256": "a151cf45135e32ec95519c7078b49e3eaa50264f88e57355df5830e70fdfc8b9",
+  "plan_sha256": "e2c9e1a18b44bcd0d4d762c643d2acb897155c275629471340c7486e562b6910",
+  "preregistration_sha256": "ace5f295230d058b923c788363f16b9ad3119497e32775f19be93eb5c54e2266",
+  "cpu_checks_sha256": "11ce4311d43525fad4095800e469033dc6817f67b7b4c6432897a943680fe56f",
+  "summary_sha256": "044ecdffc789faa0bbbdf3c99bbe231962bed1010c60ababdc0ed7367b048751",
+  "validator_sha256": "859811c611a99046d0ec53daad83ee1485e216a301ff86d7c74118268335ef51",
+  "provenance_scope": "Producer asserts full rebuilt-policy equality after timed requests; metadata/count/age/shape checks and independently reconstructed frozen policies are verified here; full per-request rebuilt index lists were not separately exported"
+}

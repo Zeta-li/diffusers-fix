@@ -1,0 +1,43 @@
+{
+  "status": "COMPLETE_FROZEN",
+  "time": "2026-10-23T07:31:12.514929+00:00",
+  "frozen_selection_sha256": "577ff3a6f7bcbfc94ff150c055e335db63adc9f76247f00135138482185ba01a",
+  "row_counts": {
+    "train": 8807,
+    "dev": 528,
+    "test": 1053
+  },
+  "shard_counts": {
+    "train": 51,
+    "dev": 4,
+    "test": 6
+  },
+  "selected_counts": {
+    "train32": 32,
+    "val16": 16,
+    "test64": 64,
+    "train8": 8,
+    "train16": 16
+  },
+  "model_calls": 0,
+  "dit_forwards": 0,
+  "training_steps": 0,
+  "target_columns_read": false,
+  "media_extracted": 0,
+  "test_media_read": false,
+  "network": {
+    "audit_file": "data/network_ranges.jsonl",
+    "audit_file_sha256": "0c7f0a0583f2a88ed8ea658471e1a3815ba9cc241e66ed5645240f019bf6eaa9",
+    "complete_range_requests": 1208,
+    "failed_range_requests": 0,
+    "blocked_range_requests": 0,
+    "received_bytes": 904958,
+    "by_phase": {
+      "metadata_scan": {
+        "requests": 1208,
+        "received_bytes": 904958
+      }
+    },
+    "scope": "actual successful Parquet range bodies; excludes Hub JSON/tree requests and failed-body bytes"
+  }
+}

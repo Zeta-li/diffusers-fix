@@ -1,0 +1,27 @@
+{
+  "device": "cuda",
+  "network": "alex",
+  "spatial": true,
+  "normalize": true,
+  "rgb_range": [
+    0,
+    1
+  ],
+  "packages": {
+    "lpips": "0.1.4",
+    "torch": "2.9.1+cu129",
+    "torchvision": "0.24.1+cu129",
+    "numpy": "2.5.2",
+    "scikit-image": "0.25.2",
+    "matplotlib": "3.10.7",
+    "Pillow": "12.2.0"
+  },
+  "weights": {
+    "/root/.cache/torch/hub/checkpoints/alexnet-owt-7be5be79.pth": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+    "/workspace/venvs/qwen-edit-pilot/lib/python3.12/site-packages/lpips/weights/v0.1/alex.pth": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0"
+  },
+  "script_sha256": "45dc88e19ab1c6e921352c182621c369fb6d71c62ac24192c0e0040ff5d6c8c3",
+  "regions_sha256": "d26835e95d595a2804ebae2bdf2cbfbeaee032d35a4e0f3a6d04229c3b88db2c",
+  "phase": "optimization",
+  "raw_runs_sha256": "1c337747a0f89294140fe1a4273036e3e46219e89367864c795683bd38f9f2d8"
+}

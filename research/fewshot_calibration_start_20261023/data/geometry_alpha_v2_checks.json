@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "scope": "synthetic CPU PNG/geometry and contract checks only; no network or model",
+  "script_sha256": "e0fddd83f04f01d9c0ff1c21cbce023445a2e0cb4b988f4365e80822c6732bce",
+  "wrapper_sha256": "7076833073b202d7ac0feeab5e6708d33fa645674b743e385d972ffc243d7af8",
+  "model_calls": 0,
+  "dit_forwards": 0,
+  "training_steps": 0,
+  "network_requests": 0,
+  "checks": [
+    {
+      "name": "alpha_zero_and_alpha254_edge_included_with_exact_bbox",
+      "status": "PASS",
+      "evidence": {
+        "alpha_zero_official_edit_pixels": 100,
+        "alpha_antialias_edge_pixels": 1,
+        "alpha_lt255_conservative_roi_pixels": 101,
+        "core_token_bbox_xyxy_exclusive": [
+          18,
+          7,
+          32,
+          22
+        ]
+      }
+    },
+    {
+      "name": "RGBA_RGB_canvas_never_used_as_grayscale_mask",
+      "status": "PASS",
+      "evidence": {
+        "binary_equal": true,
+        "indices_equal": true,
+        "arbitrary_non_grayscale_rgb_canvas_supported": true
+      }
+    },
+    {
+      "name": "opaque_grayscale_and_existing_coordinate_mapping_compatible",
+      "status": "PASS",
+      "evidence": {
+        "opaque_grayscale_compatible": true,
+        "coordinate_bbox_and_indices_unchanged": true
+      }
+    },
+    {
+      "name": "empty_grayscale_rejected",
+      "status": "PASS",
+      "evidence": {
+        "rejected": true,
+        "reason": "Empty or all-positive mask is ineligible for fixed local ROI"
+      }
+    },
+    {
+      "name": "all_positive_grayscale_rejected",
+      "status": "PASS",
+      "evidence": {
+        "rejected": true,
+        "reason": "Empty or all-positive mask is ineligible for fixed local ROI"
+      }
+    },
+    {
+      "name": "all_transparent_full_ROI_rejected",
+      "status": "PASS",
+      "evidence": {
+        "rejected": true,
+        "reason": "Empty or all-positive mask is ineligible for fixed local ROI"
+      }
+    },
+    {
+      "name": "opaque_color_source_canvas_rejected_as_ambiguous_mask",
+      "status": "PASS",
+      "evidence": {
+        "rejected": true,
+        "reason": "Mask is not grayscale; refusing to guess which colors indicate edits"
+      }
+    },
+    {
+      "name": "partial_alpha_without_alpha0_rejected_as_ambiguous",
+      "status": "PASS",
+      "evidence": {
+        "rejected": true,
+        "reason": "A nonopaque alpha mask without a fully transparent edit region is ambiguous"
+      }
+    },
+    {
+      "name": "source_mask_aspect_mismatch_rejected",
+      "status": "PASS",
+      "evidence": {
+        "rejected": true,
+        "reason": "Source/mask aspect mismatch 0.6931471805599453; unverified crop/padding cannot be inferred"
+      }
+    },
+    {
+      "name": "effective_contract_keeps_ID_policy_and_mapping",
+      "status": "PASS",
+      "evidence": {
+        "parent_unchanged": true,
+        "only_geometry_contract_changes": true
+      }
+    },
+    {
+      "name": "multiple_shard_IO_order_restored_without_ID_changes",
+      "status": "PASS",
+      "evidence": {
+        "multiple_shard_IO_order_restored_to_frozen_rank": true,
+        "original_input_not_mutated": true,
+        "missing_and_duplicate_IDs_rejected": true,
+        "frozen_ids": [
+          "405994",
+          "301232",
+          "544811",
+          "253960",
+          "315467",
+          "355272",
+          "257102",
+          "271359"
+        ]
+      }
+    }
+  ],
+  "checks_passed": 11,
+  "checks_total": 11
+}

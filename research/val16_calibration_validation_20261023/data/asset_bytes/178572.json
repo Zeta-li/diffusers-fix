@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "178572",
+    "original_img_id": "178572",
+    "turn_index": 1,
+    "instruction": "Let the player wear a red hat.",
+    "official_split": "dev",
+    "shard_path": "data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+    "row_group": 0,
+    "row_in_group": 14,
+    "row_in_shard": 14,
+    "selection_rank_sha256": "062f2ae7622dde481adbc6c216dd73efdaa9d20fe022713247b0c53cd7d3eb33"
+  },
+  "image": "inputs/val16/178572/source.original",
+  "original_mask": "inputs/val16/178572/mask.original",
+  "source_sha256": "5780caad2c24018fa130239d76be4a7014cc82d25b6d7983b1d9292e5ff54df4",
+  "mask_sha256": "029c8c5626a16a8ee2a59071cd2fd30ef97ec6d06e79e5fd9084d79249900a94",
+  "source_bytes": 519332,
+  "mask_bytes": 1733733,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+  "source_url_sha256": "d84cba0911688514a197edfb35accfa03855f3241310cc06c8ca5b1aff4df8bc"
+}

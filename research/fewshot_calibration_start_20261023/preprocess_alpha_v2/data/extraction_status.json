@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "time": "2026-10-23T07:46:06.824372+00:00",
+  "ready_for_calibration": true,
+  "extracted_sources": 8,
+  "model_calls": 0,
+  "dit_forwards": 0,
+  "training_steps": 0,
+  "test_generated": false,
+  "target_columns_read": false,
+  "network": {
+    "audit_file": "data/network_ranges.jsonl",
+    "audit_file_sha256": "89b8d85ee1db534edeabe1854a853e98bf25e48c1d62a24c4f8160c5e97e26b5",
+    "complete_range_requests": 63,
+    "failed_range_requests": 0,
+    "blocked_range_requests": 0,
+    "received_bytes": 407052843,
+    "by_phase": {
+      "train8_source_mask_extraction": {
+        "requests": 63,
+        "received_bytes": 407052843
+      }
+    },
+    "scope": "actual successful Parquet range bodies; excludes Hub JSON/tree requests and failed-body bytes"
+  }
+}

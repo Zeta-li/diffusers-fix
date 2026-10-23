@@ -1,0 +1,627 @@
+{
+  "repo_id": "osunlp/MagicBrush",
+  "revision": "6c254560879df7851233ea0fd2ae2a62764d0ef2",
+  "created_at": "2026-10-23T07:22:01.917634+00:00",
+  "hub_tree_api": "https://huggingface.co/api/datasets/osunlp/MagicBrush/tree/6c254560879df7851233ea0fd2ae2a62764d0ef2/data?recursive=true&expand=false",
+  "api_response_semantics": "RepoFile metadata, not image or target bytes; library may paginate",
+  "files": [
+    {
+      "path": "data/dev-00000-of-00004-f147d414270a90e1.parquet",
+      "split": "dev",
+      "size_bytes": 386604794,
+      "git_blob_id": "d84c5f7dee00e1733f934022ddde56d1a8b02f18",
+      "lfs_sha256": "db6789cd858412dec664f9834a6309e9f998bcc827ac70d3f78252da10be4f97",
+      "xet_hash": "ded45229d3be55d71575f31409dd51e422728ce7bc662b597b38dda3243fc25b",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00000-of-00004-f147d414270a90e1.parquet",
+      "source_url_sha256": "466a17c5098e06b264e11f478a9a2fe9a3044978d50af7e78e86e49be877cd2b"
+    },
+    {
+      "path": "data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+      "split": "dev",
+      "size_bytes": 380080721,
+      "git_blob_id": "fed51a8b4e77a7ca895bf413ff049591543ff700",
+      "lfs_sha256": "b24b742434693a74e9d850e43e09898ce82287cbb85fb363eb64433f4a90bff5",
+      "xet_hash": "17b73eedc834e0448ebc25445fc3625afc371660709bd2511e599fdd0df02804",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+      "source_url_sha256": "5fab15f436714d22fa54a2311e641ac757c913af1bf128fae5c2a44580efe465"
+    },
+    {
+      "path": "data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+      "split": "dev",
+      "size_bytes": 374144282,
+      "git_blob_id": "aab623303bf2b4abd881bf6c05e848479b4917b9",
+      "lfs_sha256": "1cd48ed4cedcf31f66b891ea3fa16ae843b611a7d11655c2a3ca98bdee6687fc",
+      "xet_hash": "2e1ad565b24102e6b8fe47e3fabeda516e86960a1a9b6cc09208a69019fc5259",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+      "source_url_sha256": "d84cba0911688514a197edfb35accfa03855f3241310cc06c8ca5b1aff4df8bc"
+    },
+    {
+      "path": "data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+      "split": "dev",
+      "size_bytes": 380369696,
+      "git_blob_id": "60deb78a1302f2f74171faa5f5a725e230ce51fb",
+      "lfs_sha256": "87c6316cf2ef36b157954d4a3df1efcb8f3b6f7e8872101a769919d8ad088bbf",
+      "xet_hash": "fa0f721b9a3acf14fe15c36c20faedbf5d106c156410bd3fcf8cf3bf183bd404",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+      "source_url_sha256": "cf2671aad08c1f2b2ee93832b2069f6524205905bacaa412307e949e63f924b9"
+    },
+    {
+      "path": "data/test-00000-of-00006.parquet",
+      "split": "test",
+      "size_bytes": 522089065,
+      "git_blob_id": "32dd9336599b0b219eb9a5ff594b691b388da935",
+      "lfs_sha256": "4577b86a01317a20f11131a8c0367df868bcae88d95ed65281aa0054afeda556",
+      "xet_hash": "9e5869d60f52e4e3f5f09797b2007db4563f8cff50ffcee2ef45a4d66c01a3e1",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/test-00000-of-00006.parquet",
+      "source_url_sha256": "7705d1dd4d6820371b3ffca3c32f66e0637fbf36a877760c9d28faa113f6bdc3"
+    },
+    {
+      "path": "data/test-00001-of-00006.parquet",
+      "split": "test",
+      "size_bytes": 521861327,
+      "git_blob_id": "2805959ab9a9db46d77624d35db256eaa7544ead",
+      "lfs_sha256": "cf933c752394100e66b98a11bd74658c262f7b1efad6caa19bfc66217abb9b38",
+      "xet_hash": "d93f6d79ad70c1e8a0aa5f010659bfb94d60bbaf696fa1d9f5c61c0de6282118",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/test-00001-of-00006.parquet",
+      "source_url_sha256": "9ee098b515a228ea0a6419be2e3a9a40ac8cf908047c2e7b5273f5332b5fcb54"
+    },
+    {
+      "path": "data/test-00002-of-00006.parquet",
+      "split": "test",
+      "size_bytes": 514796023,
+      "git_blob_id": "087fb32e437ce8fd1df7e86fc125c4d0207b0f71",
+      "lfs_sha256": "bd5ac8d1bbd3d6a36853d063040c63b2b476e4a4b6dd4a9f0b04dd6dce60e99a",
+      "xet_hash": "906a9b3b64084ce8b47ebe9a46232d507a3df55d33de56f48506a96af2b9bed7",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/test-00002-of-00006.parquet",
+      "source_url_sha256": "2cb7917f1f1b112d3c16bc22ac0bffbeb91290d864597d7c1b5bfe9ad01fb94f"
+    },
+    {
+      "path": "data/test-00003-of-00006.parquet",
+      "split": "test",
+      "size_bytes": 514556677,
+      "git_blob_id": "2204c127a63290dea2c8edee549475bdb4f384fc",
+      "lfs_sha256": "f34c21b85d842ae6b3f5fbe83b06fcfb1165423528b86c3999ff2ce25458c4c4",
+      "xet_hash": "5707963f322a9bbbd51bbc9d251a6beb08bc84b2b3a333aa74daf52a2531e45b",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/test-00003-of-00006.parquet",
+      "source_url_sha256": "5fe1737e76e06bf832764977512343b230c70837fedb902ff1e234c281eb3ae2"
+    },
+    {
+      "path": "data/test-00004-of-00006.parquet",
+      "split": "test",
+      "size_bytes": 508121604,
+      "git_blob_id": "5910cf3c9137abdc2c108f22195d0af49f8e3b70",
+      "lfs_sha256": "d7183c4dfdb28108f6896e342b3da8405f1867d6eae3ce45df6e4edbd88a17ad",
+      "xet_hash": "8e6c6ae13c44cf2798f540b02ac8a736e7340aa8dca07dbfbcd7f5fca03eb97c",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/test-00004-of-00006.parquet",
+      "source_url_sha256": "d0f7e62370b1b01d6762ecbad51688c1b7ae07759b1f6e85a085ea0def4dafde"
+    },
+    {
+      "path": "data/test-00005-of-00006.parquet",
+      "split": "test",
+      "size_bytes": 488914754,
+      "git_blob_id": "8a556f7a3e780429635539149134194dd1db1954",
+      "lfs_sha256": "43dd716ac10c5884e8a301457ff86a62180d77d76427b26fdd6b55815730aeb1",
+      "xet_hash": "894e1f4d87c98730fafcabaa1839b947f71490eeb22213f0d9f37d67cfe1bedf",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/test-00005-of-00006.parquet",
+      "source_url_sha256": "4b1680fd5b8a1ae62ad8a7d6188aa72a0e045782c2712b17a2e89d5a3f7d27cc"
+    },
+    {
+      "path": "data/train-00000-of-00051-9fd9f23e2b1cb397.parquet",
+      "split": "train",
+      "size_bytes": 506325698,
+      "git_blob_id": "37f0d0bba0153e48f9f312fc91f682c26308cd00",
+      "lfs_sha256": "ed417a2c264d464e07fb7c25f707cb2fdfab71391499628df81d5a613c1b21cf",
+      "xet_hash": "c027ad4e2fe385ede85d876d7a9712e468345119f8c892f44adf7978fcc93b8e",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00000-of-00051-9fd9f23e2b1cb397.parquet",
+      "source_url_sha256": "94c6eaafa55e71f151f63559674cc2f08403e0d798890e73c5fa1b9fc967f709"
+    },
+    {
+      "path": "data/train-00001-of-00051-7fc041c6c75c7a1b.parquet",
+      "split": "train",
+      "size_bytes": 492637680,
+      "git_blob_id": "686bce118065fd756ed838733cc0f9a7cabc9dae",
+      "lfs_sha256": "73031cc623a6c342dc5120b455729f3d48071a0062daac77a6d9f967b1f0f8ab",
+      "xet_hash": "a43a27fc867d91cc6b4e4f80693e45d1bec09bde43300bcc6a38bf545f53fbe8",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00001-of-00051-7fc041c6c75c7a1b.parquet",
+      "source_url_sha256": "f3329c7271f1b02a70417518242e91623ea638b115a9db1b763fbd40a40e0656"
+    },
+    {
+      "path": "data/train-00002-of-00051-4683be833ed06f1c.parquet",
+      "split": "train",
+      "size_bytes": 479910801,
+      "git_blob_id": "e690fe5fd54dbc7bf790e4d373b3961755ede6de",
+      "lfs_sha256": "c6e08d3e628fbd4641612033721a2e3535e02c5ff7833ff255e9a03b26b5f667",
+      "xet_hash": "387ce594f2f2f373806f4cf5785fd20682f337a0d7c8c4b51cc8e60e25f566f8",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00002-of-00051-4683be833ed06f1c.parquet",
+      "source_url_sha256": "db1454a6a6be3806ae06bc87def53c3a36e1d069e7181cf90cd320cb4deb0748"
+    },
+    {
+      "path": "data/train-00003-of-00051-dbbf01b8d4790783.parquet",
+      "split": "train",
+      "size_bytes": 533312047,
+      "git_blob_id": "6a4440cf946cae3c836baaa7c7bab4824a68e34b",
+      "lfs_sha256": "39baaa23486ec828a0c34db4561dce69b015117d2834d97d3c238de034b06308",
+      "xet_hash": "1fbbe9914a60922ee05a2d59f61b2f48c08d656388408a56635cb080b080876a",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00003-of-00051-dbbf01b8d4790783.parquet",
+      "source_url_sha256": "eab525a8483127a009ea7cebc79387ff1b80ab35f3e293fc38832bf13001ce3d"
+    },
+    {
+      "path": "data/train-00004-of-00051-d373bd832c322236.parquet",
+      "split": "train",
+      "size_bytes": 491360878,
+      "git_blob_id": "e937f6e60ed496893bf86cd032c4aec018b9f9d6",
+      "lfs_sha256": "42009099a2dc139be790299828cd5bbe5e427e1d6e9534a6fe10c18fd014fda5",
+      "xet_hash": "52650b833d2b1c09b46c37e34d88f6a84bd36a45d138bd3085d58c381d33c7ce",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00004-of-00051-d373bd832c322236.parquet",
+      "source_url_sha256": "d88fd0d91c9520e1ecf85e725077c36a1efcf317e44060779f40dffd28d17eb2"
+    },
+    {
+      "path": "data/train-00005-of-00051-261c379dee1873a0.parquet",
+      "split": "train",
+      "size_bytes": 498195149,
+      "git_blob_id": "ad8aba93ce05448a80982972025a4004cf166c83",
+      "lfs_sha256": "ebbcf15ffdcccd7f77fcf2b59232cad3e9f50ce28f69131625893cf9dad649d3",
+      "xet_hash": "fbcab2a9f98e8d23a8185ad7fc0cb38a0305f4d6a41f4c025c72d036b1de4df4",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00005-of-00051-261c379dee1873a0.parquet",
+      "source_url_sha256": "2f99a2e6b126e37d354cc6b015fd2fae0e410a1735dd957ca8f7bf4896029fec"
+    },
+    {
+      "path": "data/train-00006-of-00051-1601e4998b870515.parquet",
+      "split": "train",
+      "size_bytes": 494442447,
+      "git_blob_id": "decf29592dec1443c7a4c4207c88f97f3a629f30",
+      "lfs_sha256": "761a423a1ee0be66885e33e6592232cfe86b6ce91783505b9616f9fbef507501",
+      "xet_hash": "985f87c9cde790314022872b57e801d78b9e63d264f45b92eb3b69cf91ed4c89",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00006-of-00051-1601e4998b870515.parquet",
+      "source_url_sha256": "92d95ec9f998ac5227418c40a165407819283caa5bc405592d8b357785a435d4"
+    },
+    {
+      "path": "data/train-00007-of-00051-097905247104899b.parquet",
+      "split": "train",
+      "size_bytes": 505494373,
+      "git_blob_id": "c401917075876c07a9caaab9fc2118a102cbf3ea",
+      "lfs_sha256": "0b6688584b806b0b459281bb9c68792a8aa14d15ab17ec58074e272e46677709",
+      "xet_hash": "2536109cbc82cf66a14081ea9cb39bdbd60391f34fc2b12762c880316dfc72f8",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00007-of-00051-097905247104899b.parquet",
+      "source_url_sha256": "98c7e207af45ba33253fa10b005ecbe8924ee2e6733ac519e3bd64f1feca74ec"
+    },
+    {
+      "path": "data/train-00008-of-00051-45475d9537033a27.parquet",
+      "split": "train",
+      "size_bytes": 527614659,
+      "git_blob_id": "aad4e76756d2d472d08f4478c2965c665d46075d",
+      "lfs_sha256": "f97af86d8bdf525738ca5442f9e2cde8143e335a6acd6a82ba56becc9710513f",
+      "xet_hash": "f2461d55cc7ec179d3a70950ffc773812c57e5eb048a7aee975d916a37056ea1",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00008-of-00051-45475d9537033a27.parquet",
+      "source_url_sha256": "c508239607bcc85f6832b5cc63ed710c7addcfca7608521c98909f7e2bc09c61"
+    },
+    {
+      "path": "data/train-00009-of-00051-cf6ff6a53b3552a6.parquet",
+      "split": "train",
+      "size_bytes": 511918471,
+      "git_blob_id": "acd1099e9305e40b9f2a7ac966fe12cac7cefb2d",
+      "lfs_sha256": "5c73c156f5d744ae629a39446e693675300f82a36d300ba7e53594956647d696",
+      "xet_hash": "86b7b5a965f9486a1f5dd38149a10302be8e3e9b9a321de5847134764a49b3dd",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00009-of-00051-cf6ff6a53b3552a6.parquet",
+      "source_url_sha256": "8c6f6ada34c9d7e95cb47de5fe6181e024ff165dd98a5532cc60d69585adf3bb"
+    },
+    {
+      "path": "data/train-00010-of-00051-d73c61985d708102.parquet",
+      "split": "train",
+      "size_bytes": 521630061,
+      "git_blob_id": "44c8192af0ae9738f8fc80efac8d52223d6bec2d",
+      "lfs_sha256": "e0a24ad9a8442992af3cdd3b185d28a1044b8b66f7df616f0ad74570bcadd40e",
+      "xet_hash": "e476ab1c08d11614984dfa7540251852761b262e37a3a7f87847fe21b4a2e45a",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00010-of-00051-d73c61985d708102.parquet",
+      "source_url_sha256": "b9e91123aefefae596fb49126b372d88bf01a8296de7cea54744acb4cf827bb7"
+    },
+    {
+      "path": "data/train-00011-of-00051-8b4c59c53a36a8bb.parquet",
+      "split": "train",
+      "size_bytes": 481368527,
+      "git_blob_id": "c36fe8ff075b5688dc36c27848eab52ef50e4f3b",
+      "lfs_sha256": "505f3a476a6edfde373013eb4e85fd3f57e1bc9cbd03b1b19092b77e24de31a4",
+      "xet_hash": "f2ba7577cd8e4607ee849a7d3c1bba7c4c0b62cbbda378d830474de069f99de7",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00011-of-00051-8b4c59c53a36a8bb.parquet",
+      "source_url_sha256": "8844d607f526904d54c4dff95b1ce8a0cbf4c3d17519f2ab7bc5098607d1d62e"
+    },
+    {
+      "path": "data/train-00012-of-00051-7a326334a53d22a3.parquet",
+      "split": "train",
+      "size_bytes": 499881944,
+      "git_blob_id": "bcf34c3ba8eb68a1a5c8d01dc8e50c01b9a6f164",
+      "lfs_sha256": "3b23923f2fa51d246728d34001460d42aaf2d3a61448463adc66ff3f72531018",
+      "xet_hash": "ff3e5ab73a268ff668da6c1d772ad646d7137c2e6ef14c9b276c62b23c9653c4",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00012-of-00051-7a326334a53d22a3.parquet",
+      "source_url_sha256": "6298354b202f4746d0bddb647955451d403d9269207f73002128168055f9f1a6"
+    },
+    {
+      "path": "data/train-00013-of-00051-7a32a843bae55f17.parquet",
+      "split": "train",
+      "size_bytes": 494334733,
+      "git_blob_id": "e88dd0c11a819848aac2c4860f699647e742620a",
+      "lfs_sha256": "785b0aef017fd0a60cf0262ce58b0bc5ab7dd10c6ce6dbdb62ce590ac18471ad",
+      "xet_hash": "ed7d1fff9be90943a9fa99b2d8aba45d575a2c1bf57216fd690a98e71e6a5aa5",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00013-of-00051-7a32a843bae55f17.parquet",
+      "source_url_sha256": "f04798ede13b89b8e491222327f55942f416bff95fb59f27eb68efa194599511"
+    },
+    {
+      "path": "data/train-00014-of-00051-34fbf4e78f18f540.parquet",
+      "split": "train",
+      "size_bytes": 498837171,
+      "git_blob_id": "aaa200fec5569ef754694d75d7e2f4837fb600aa",
+      "lfs_sha256": "ddfacd983aad3f977e9aec26c587bdc961f7a72c7d265879a5e95e044d5f1ed7",
+      "xet_hash": "066412bf343b3ba26fae1e75aae232458654db3f8af5e151a126a79222e5c2a3",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00014-of-00051-34fbf4e78f18f540.parquet",
+      "source_url_sha256": "1199ef452f526c1265a6898d96076f17a520fa941ca0a9e0828b0e6340480461"
+    },
+    {
+      "path": "data/train-00015-of-00051-b0616f1aa69cc303.parquet",
+      "split": "train",
+      "size_bytes": 503313813,
+      "git_blob_id": "d5071ffdf2b339299ed6eb7d89455336e36a9540",
+      "lfs_sha256": "bb892678c11414be1cc0e13e97ab328503b43095174cee1135b1b5e3314589cc",
+      "xet_hash": "694fc57ad96e187b76b8ab87e2824803ef327b19c792c846fefd9b1030deb0eb",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00015-of-00051-b0616f1aa69cc303.parquet",
+      "source_url_sha256": "045d844a4efa02b3941f182b84f2c8c88cf55a54b0db68d012a06c818d08c95e"
+    },
+    {
+      "path": "data/train-00016-of-00051-2ce592a2aa4c0b2d.parquet",
+      "split": "train",
+      "size_bytes": 519003679,
+      "git_blob_id": "932889827c196ce6ec861d2c2bd372ba5c4bb55c",
+      "lfs_sha256": "f143a46f60ebaf4beb76ec4445b89ad329dfe5b54f1f8a52716239013c0dae72",
+      "xet_hash": "1e4d0e03233154c64aeb65b908cf690b009fd7a372495fe52db2904cf3dbb9c0",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00016-of-00051-2ce592a2aa4c0b2d.parquet",
+      "source_url_sha256": "3f3e095e104d92107024cbb74d40e85f4a85eb44886fb91c377113e21a65328e"
+    },
+    {
+      "path": "data/train-00017-of-00051-29b16824f54f172d.parquet",
+      "split": "train",
+      "size_bytes": 504098103,
+      "git_blob_id": "a4dd498cd961212fd152ff67aa39d34ffc43b2af",
+      "lfs_sha256": "e51ce4d12a589b54dc3f63417c2589234f81ecdad98613726dcf25b9062f7b9c",
+      "xet_hash": "7d33f8b9e69f40276679bc8dc405328adc8a0f652fad5b1864900a8eaed8c934",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00017-of-00051-29b16824f54f172d.parquet",
+      "source_url_sha256": "26d5c7f951d42a70da4a677f80e5b1ef08d9e2d74ae92c049d0f9000087435b2"
+    },
+    {
+      "path": "data/train-00018-of-00051-b8a3cc2bebe485c7.parquet",
+      "split": "train",
+      "size_bytes": 491262687,
+      "git_blob_id": "0d95ea768a5fb6d572bae967e679f5f304fa5670",
+      "lfs_sha256": "23858eaed0f81e777f7f92573b7058e418e780b224f7dea9864e401bd48c2a4e",
+      "xet_hash": "c4ec58b9f015bf83483491907109760dd7d72f724002cb2ccd93268cfa6b607c",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00018-of-00051-b8a3cc2bebe485c7.parquet",
+      "source_url_sha256": "02fed3350f81079015792b870e9cd54e7f22622d0b70979b841e4a3b24a54224"
+    },
+    {
+      "path": "data/train-00019-of-00051-7496aa939d5aaf12.parquet",
+      "split": "train",
+      "size_bytes": 530060644,
+      "git_blob_id": "94d0c6d2a39d2b45f11981865a21055eae187bf7",
+      "lfs_sha256": "b8e50d60326837506fc3793829d8be5f54d0fb0e0d5e2653a175a5b7a35137c0",
+      "xet_hash": "cc2db082a66f865592b58c4865a6f34c679d2a64873664b8ed16cfcdc0c972c0",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00019-of-00051-7496aa939d5aaf12.parquet",
+      "source_url_sha256": "8d3cc59c69334e9fb39931a86f713eea8b0d973d52b49291f865af57ff53f783"
+    },
+    {
+      "path": "data/train-00020-of-00051-0e4f76bd7de39d68.parquet",
+      "split": "train",
+      "size_bytes": 519536404,
+      "git_blob_id": "30a74271d7d300c37136b601ea13ae84130bb89d",
+      "lfs_sha256": "662e3acc7b1a8190f0859df90f3c59210720841b9cc72efa97448c9283a5c503",
+      "xet_hash": "c38395430caf96b275cde1eb5620ae68150b35c548473edaf710753c5950a1ed",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00020-of-00051-0e4f76bd7de39d68.parquet",
+      "source_url_sha256": "998a0b467d09a168b15615b184c05dfae4a70e912d6094a6c1caee3f79df90d2"
+    },
+    {
+      "path": "data/train-00021-of-00051-aea46908b3d257d7.parquet",
+      "split": "train",
+      "size_bytes": 491552636,
+      "git_blob_id": "8316a3b2d517f68556c1790ac44024c581a8645b",
+      "lfs_sha256": "6e56d50574464e172089f88fa1c625dbcd762a405d7d4ab6131c343f43ec9fb5",
+      "xet_hash": "766ff7c658bb669c62781478ed1c366225f9dbdfcbbbc493cca705a200276bde",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00021-of-00051-aea46908b3d257d7.parquet",
+      "source_url_sha256": "0b7e6653bc8b3501abd41b3215931634513d13b5dde35ed804d7e2172383a3fe"
+    },
+    {
+      "path": "data/train-00022-of-00051-3a7846cdc795c3a8.parquet",
+      "split": "train",
+      "size_bytes": 511395383,
+      "git_blob_id": "dd8d7406f31b2bdcf3e820df930d98a37cbb2075",
+      "lfs_sha256": "a8151992ae577dd18bcf8aa7620ea77582aff6008a613812fe6b045fbc39cb21",
+      "xet_hash": "effe057f01f5cd9d6b3b66818770a4a923e5f46d14b99481784a6334ee71d746",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00022-of-00051-3a7846cdc795c3a8.parquet",
+      "source_url_sha256": "bc15c36daba57238b82c9bf266a5ee0489d74aaad6aaed2dda4badde5b4e5891"
+    },
+    {
+      "path": "data/train-00023-of-00051-581ce36816474c33.parquet",
+      "split": "train",
+      "size_bytes": 489868971,
+      "git_blob_id": "97285650ff3a153959aa8e81f16d6d981bb9a7cf",
+      "lfs_sha256": "9e02293e53c838c2aa16b4cbfed787d4376f5d82de74a728d375a37e4e8d36ea",
+      "xet_hash": "2b23bff4193806e647b7e34ffa1c9a079131ce6568890b00872c1cbeb765fd86",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00023-of-00051-581ce36816474c33.parquet",
+      "source_url_sha256": "ff077d5061d1991457eb110b4c97e01e8c83a71cb58bed40cb4922f55ba7b31b"
+    },
+    {
+      "path": "data/train-00024-of-00051-63f85f8694db99da.parquet",
+      "split": "train",
+      "size_bytes": 508601154,
+      "git_blob_id": "d2758badcc4aaf40f6dd7b353a4643b0ffe1ca62",
+      "lfs_sha256": "62110e6db5cfa05ee216d60b565441d928835acbd8336cf8af8f8cef04e6d81c",
+      "xet_hash": "79a0c9486ab90ed94e5a6cc68a621bd964bc680bcb3045b3e373e2ee86f8c8f0",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00024-of-00051-63f85f8694db99da.parquet",
+      "source_url_sha256": "cd834eef43b9031c9d86c022c8e868e17d4cee321b7a0355eb870b5b92f7a335"
+    },
+    {
+      "path": "data/train-00025-of-00051-eb6b4b387abb3bf6.parquet",
+      "split": "train",
+      "size_bytes": 500062219,
+      "git_blob_id": "42b6e17968bbc5579ca47f586ec37c432ff38a38",
+      "lfs_sha256": "1effaff62889da87ce1c860f24fca6f1d29db93d0556c252aa97cf86db88abbd",
+      "xet_hash": "0f2d75b3ee59310a45522a4f8b0362c8a10a72d277a4e5435fc9808aa7b58e0b",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00025-of-00051-eb6b4b387abb3bf6.parquet",
+      "source_url_sha256": "f5a5633225f0fd40c9e979f14f1a37a9fd3344ee1ebb66e5eb1ee4b70d42c678"
+    },
+    {
+      "path": "data/train-00026-of-00051-a37258445ad77cdd.parquet",
+      "split": "train",
+      "size_bytes": 503259084,
+      "git_blob_id": "a8c3fd1ff361cc15cb1c814fda3d17d96f016108",
+      "lfs_sha256": "724164ecc098d620b4499a7273249657d10f44e8530baf2843466a0fcd6c9085",
+      "xet_hash": "707b67fa35d1cfbebdc7aaacaf85a25f52a4c06b2e02ca938384f0d599b1a9cd",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00026-of-00051-a37258445ad77cdd.parquet",
+      "source_url_sha256": "c7b29251d85b6584cb566ce701c1bc0179d57d053cd500817dd14fec3cc96f41"
+    },
+    {
+      "path": "data/train-00027-of-00051-0c3caef58833e30b.parquet",
+      "split": "train",
+      "size_bytes": 486542387,
+      "git_blob_id": "39429e513110955d40638d55f6fb388a2c9299e2",
+      "lfs_sha256": "04f8deb818ad56933f3ce9428d80e3d0b3e6b63c3716233aac0d2955bbcab9da",
+      "xet_hash": "ae4b8ce797651041eddbef3ca6c96dadcb1744539d38678ed8a6132c1874df78",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00027-of-00051-0c3caef58833e30b.parquet",
+      "source_url_sha256": "253d2a160fbd7e66fe939321f0a2d525bf18f70c13a4573127ca31ebe958d0e3"
+    },
+    {
+      "path": "data/train-00028-of-00051-a864102cdd7e0dd0.parquet",
+      "split": "train",
+      "size_bytes": 519427435,
+      "git_blob_id": "67895c0128990d81591a27d54a09b092e12a0058",
+      "lfs_sha256": "5e689f235ac55c6aecd90a302ac636df7832b6d227dd91339a87a97f76f31c87",
+      "xet_hash": "f4b36fbb646ebce9350cba0878280de1c273fcfde508a8b283342e4a3a35fafd",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00028-of-00051-a864102cdd7e0dd0.parquet",
+      "source_url_sha256": "65efa68ecfd0a25f9ee6ecbce1ef7202dd8e2fae1fc5aa61260aae2ea7c5647f"
+    },
+    {
+      "path": "data/train-00029-of-00051-d4b5816a0785e257.parquet",
+      "split": "train",
+      "size_bytes": 492981330,
+      "git_blob_id": "2d719e717501eb75770ead3b137d8351aadd2203",
+      "lfs_sha256": "dbfefb63773bd6f194d8ceb7fe9a5445046109309f9af25c24c47f139caa7e25",
+      "xet_hash": "1c07fd881e81b9cdae11c3b841172f784fe563f2001364df9311eeffdfb39ba6",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00029-of-00051-d4b5816a0785e257.parquet",
+      "source_url_sha256": "d7b68ba9c0b282c046a2aa6fd1ce751105e996488286a276af71f5d298b68117"
+    },
+    {
+      "path": "data/train-00030-of-00051-d57316916f4cce1f.parquet",
+      "split": "train",
+      "size_bytes": 510987975,
+      "git_blob_id": "d127630ac85112372b686d0ed14136b76b36ba00",
+      "lfs_sha256": "1d94ea7d315f8f56ba5fccb93fa5f170b7da8112a8f943d3e2cf4af936678d2b",
+      "xet_hash": "510e91150ca427f665de02cc74d4fe4dc42e187fa0b27eb0c72484194dae5cc4",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00030-of-00051-d57316916f4cce1f.parquet",
+      "source_url_sha256": "baa96fd3a5deb42fadd5974fbdee8980a49bec0a1512411f2b17ead9528149e5"
+    },
+    {
+      "path": "data/train-00031-of-00051-baa9fa3e29dfb87c.parquet",
+      "split": "train",
+      "size_bytes": 488757868,
+      "git_blob_id": "a6c111323fbd3d55979f3d73b6075724798d9f6a",
+      "lfs_sha256": "63feb524cd075783438896ee309ad22839a8c34c6418ebbf39f42879baa36c85",
+      "xet_hash": "50bf417a1c1980f67d3896985675ffec2b14c54b14e20268f11d368e5ae857d9",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00031-of-00051-baa9fa3e29dfb87c.parquet",
+      "source_url_sha256": "9bd09cb409fad4280a686a627d714d35009558f6f8e55337897df4e024dfa7c7"
+    },
+    {
+      "path": "data/train-00032-of-00051-cfc5f479ca56251a.parquet",
+      "split": "train",
+      "size_bytes": 515172086,
+      "git_blob_id": "c16a6998b9b180d85cf2ce09659ba6543a7cc9b4",
+      "lfs_sha256": "0af4e1df4d951626b0030f8cc2b1b0c171aedd513f7e637e11e1ad8cb75f22b5",
+      "xet_hash": "a48aaaf14eedf671539b611fb79aaa8342f89225f4bc9b450ea00ecf1947f068",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00032-of-00051-cfc5f479ca56251a.parquet",
+      "source_url_sha256": "d312546ec86eb6ccfa86d6f3a851be1550509243b1012c412c2081af61ee08b8"
+    },
+    {
+      "path": "data/train-00033-of-00051-80e659de48bfed44.parquet",
+      "split": "train",
+      "size_bytes": 515360052,
+      "git_blob_id": "ad4217026dbfd924dc4b948dcf30a4b6d783189c",
+      "lfs_sha256": "e391b992cf3e7a71a53a78acdab5a6562d836e222485f761224901a00d57ad4f",
+      "xet_hash": "a3855bbc8344ad2933afe66415e2ceb7498a5318bf40267b3f42c584b9a0050d",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00033-of-00051-80e659de48bfed44.parquet",
+      "source_url_sha256": "7cc467eb174e319f6f8143094723dd959fdeafd591aa7da540e10597974aaba7"
+    },
+    {
+      "path": "data/train-00034-of-00051-d5a8a32783d7b749.parquet",
+      "split": "train",
+      "size_bytes": 499728065,
+      "git_blob_id": "74a14ee77ab72c76a7dfc96fd7428c99092af130",
+      "lfs_sha256": "a1a2e1a87b09495d3958160bbb115464852405fdebf83559ad355856a31c0383",
+      "xet_hash": "b26ceac4403e99dc25c4e7bfde2af075f497ffacaa204d7b5bfbec64c4b2fc7e",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00034-of-00051-d5a8a32783d7b749.parquet",
+      "source_url_sha256": "7f22ffef30b006e8f2d17e722b3e75be85bd0c3ad485522902560a797230e9e8"
+    },
+    {
+      "path": "data/train-00035-of-00051-6df799054d7c060c.parquet",
+      "split": "train",
+      "size_bytes": 491596426,
+      "git_blob_id": "9b88a2fc15dc828664f5a5cc608a299a448bd7f6",
+      "lfs_sha256": "eb4322e825f0ed2550ab6e794ccead91e123b82902c855aa441805c554dbaec1",
+      "xet_hash": "0efa878dd6f6565b5ccbb83eaf2754650ed203db912b2a1ae30e14317b783c02",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00035-of-00051-6df799054d7c060c.parquet",
+      "source_url_sha256": "73e61297fa0408f721aa9596d288e48f1e0ffa40e358ddbfce30ae196cf97c3e"
+    },
+    {
+      "path": "data/train-00036-of-00051-3c85ce9e4996c78b.parquet",
+      "split": "train",
+      "size_bytes": 489182684,
+      "git_blob_id": "782dbb846bc523e79e7f85a79aa9bc7d850760f6",
+      "lfs_sha256": "4d4822bd54acb05487a7c2661b63d9b28ebc947764aff6ec7f0f6d6cacab96fb",
+      "xet_hash": "8e57f286a7e4c5fe24895209dcd325c064d3c292a50e4e1a5cb9280fc1c9621a",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00036-of-00051-3c85ce9e4996c78b.parquet",
+      "source_url_sha256": "c6298b96536b699b5f66961736d4948c1bf8d4509b6c32900cedeb8b83046dc9"
+    },
+    {
+      "path": "data/train-00037-of-00051-24003f9a1733a271.parquet",
+      "split": "train",
+      "size_bytes": 500864622,
+      "git_blob_id": "8edd7a189f5a32991d7d49b563c9644635e94eb2",
+      "lfs_sha256": "8118080ecc4a0da00aebada2e7800f185ae958bd3125942c61b3850b183d4077",
+      "xet_hash": "d9aa54e603f8860ca2794d83e3ce9f2feee0994aa036ab6dd71ea78e67a47245",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00037-of-00051-24003f9a1733a271.parquet",
+      "source_url_sha256": "fb1055510b6340ab8bdec74f0af25aedbcfc3bdc9cc25ae520f6fb10993a50e3"
+    },
+    {
+      "path": "data/train-00038-of-00051-a035b244c8b6e231.parquet",
+      "split": "train",
+      "size_bytes": 494511120,
+      "git_blob_id": "cfb255eb4f61e3a5db842f5f6ae80ad9bd2875cc",
+      "lfs_sha256": "16df95d972c537749285d4bda1ba6e3d721fa1f25a795d62cd4abb9f6b3aee9b",
+      "xet_hash": "bb6d0a4a8a84db02db82096148177c99b367173683f49c2b14e813e7deff9e99",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00038-of-00051-a035b244c8b6e231.parquet",
+      "source_url_sha256": "50bf5ae009e3e236f168547ca9c0a273328778bfcec41c914aaf9ff395da1335"
+    },
+    {
+      "path": "data/train-00039-of-00051-0a94fb0d0e1e35f8.parquet",
+      "split": "train",
+      "size_bytes": 507599221,
+      "git_blob_id": "2cacc407a8665bce73cc2109514963b2506f4170",
+      "lfs_sha256": "3ca45edf87bbebb686f4bee3571507fe2679cdf91a6879c77607e429884759ff",
+      "xet_hash": "bb54de06e6a29a7efc2269e945a6a157b693dc614c6a2af3eb6bca157d534677",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00039-of-00051-0a94fb0d0e1e35f8.parquet",
+      "source_url_sha256": "2e2ae72f96e5f94316862a32f4205d24f8f496c1a7eee1fc4186b652d30e3942"
+    },
+    {
+      "path": "data/train-00040-of-00051-3770c96bedf6c3fa.parquet",
+      "split": "train",
+      "size_bytes": 498529057,
+      "git_blob_id": "728463338634d99d95a425bf6079441e759f6bb9",
+      "lfs_sha256": "f61030b4b9b3b4e7c5c04504abf8f9e9bd35f3c13258965ce6b2a029bbda97c1",
+      "xet_hash": "f33340b4367553d2f0fd79f5aa784cbc10a289dd2157129cead4d997f43b80ce",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00040-of-00051-3770c96bedf6c3fa.parquet",
+      "source_url_sha256": "a8a8c5e73ae91b829f876ef4b9bcde4aee467601fd1ce03223469d297e53cf2d"
+    },
+    {
+      "path": "data/train-00041-of-00051-45bf2e581124371a.parquet",
+      "split": "train",
+      "size_bytes": 488536160,
+      "git_blob_id": "1b3b86a9309283f14037c7d161ef249cf4081410",
+      "lfs_sha256": "f84dd9153c3e9da74d62a01ede8a318b97e6cbf3900811584d3258fdf765944f",
+      "xet_hash": "3d38c2e92644d8a169863150149c1770b9a80515c2d71dce785cba5f69f03d2a",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00041-of-00051-45bf2e581124371a.parquet",
+      "source_url_sha256": "4933cc02258b539427de113a586cceaf6c2395e19225d3addc58feb46ceeb204"
+    },
+    {
+      "path": "data/train-00042-of-00051-494734a9b0704ee9.parquet",
+      "split": "train",
+      "size_bytes": 506480658,
+      "git_blob_id": "70b112982a773027a0f3df5243f0429a142b1055",
+      "lfs_sha256": "77d5eac9787fe32e364e2f38557d9403e2e6cdc5731ea9ae482692072beba7e6",
+      "xet_hash": "e8555a39e57313f898a2c4216c7df97f5b546f4e38329358c54fbdcf0e05fe0a",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00042-of-00051-494734a9b0704ee9.parquet",
+      "source_url_sha256": "2e95ac04f0d309d973e40a0c6880ba73c87b3ef05b2b90df3f87a15ee2f60d34"
+    },
+    {
+      "path": "data/train-00043-of-00051-340358803f36555c.parquet",
+      "split": "train",
+      "size_bytes": 485253885,
+      "git_blob_id": "0eec658241c7432824bbb4411312dff69b66e313",
+      "lfs_sha256": "c7acc0f2d5c19ed099e6a152b2b23088c6bc7879816e46ce34450a2f81233e65",
+      "xet_hash": "5399207cc6705f7c9da38f0c345d38db056a475755dc98ac2536017a51d1ba0a",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00043-of-00051-340358803f36555c.parquet",
+      "source_url_sha256": "05d6519b7270f31a440106a67023553b21ca1e7533ef67b05dccc4ef2473341a"
+    },
+    {
+      "path": "data/train-00044-of-00051-12cc4bb9cdfcfd54.parquet",
+      "split": "train",
+      "size_bytes": 497756149,
+      "git_blob_id": "abe002c2f3e11a310c3bb8de8b67ea1dc8a8d508",
+      "lfs_sha256": "d91fd2ee976a938779c4b5e36263091410fcae561e98ddb18730efdd3f0c9f2a",
+      "xet_hash": "66d4c0936223b8f099b0608ca606c9fd91de3e85c90fe8c2a97ed70f54e289ac",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00044-of-00051-12cc4bb9cdfcfd54.parquet",
+      "source_url_sha256": "4ccd15adf2a453d705bc42f96c43604f15ecd1c34d313d53c1b2312ab0cb3273"
+    },
+    {
+      "path": "data/train-00045-of-00051-ac7a4fc63484f54c.parquet",
+      "split": "train",
+      "size_bytes": 495371395,
+      "git_blob_id": "167b5d791d84a59a90c1305e2b2d9b7d31895c11",
+      "lfs_sha256": "d2b71a30a9104207fcf16079d6f08210946acb7e9ee93b2fc1fbb0dd5c773f39",
+      "xet_hash": "83431f35cae4168ae2cc5cab785da545a47c6525b0d92b0f1cfbaf572f84b9f7",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00045-of-00051-ac7a4fc63484f54c.parquet",
+      "source_url_sha256": "06fdeac88b697c0482de90ebd5409c5c27b8430d5846b2a77d45df1e205cf6fb"
+    },
+    {
+      "path": "data/train-00046-of-00051-caf11c5fbe9bb110.parquet",
+      "split": "train",
+      "size_bytes": 522747625,
+      "git_blob_id": "ee83714203d9e6f219ae8858210ecfc206635853",
+      "lfs_sha256": "fedb89c9c31a6a0aa1c753bbc4867cbfa93246ad04b311f137479bf452aef6b5",
+      "xet_hash": "fc92dccc63bd76ef7149701f7495c28292f70a8062afd35399cb893eb0ae72d1",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00046-of-00051-caf11c5fbe9bb110.parquet",
+      "source_url_sha256": "8553259eb834b927ec033bc1f9fb65685be70e6eb97513313e38c910941b79a5"
+    },
+    {
+      "path": "data/train-00047-of-00051-a99476a212efcb35.parquet",
+      "split": "train",
+      "size_bytes": 494477154,
+      "git_blob_id": "35d991ff907e2b0c3833a2b2f0b191f9753d87d2",
+      "lfs_sha256": "9e45d41ad57d6a58572d8b1d34e0fd0cc2f9839781abeeb601d22ecc661d72d4",
+      "xet_hash": "912724d2b692b94a0e88f24125982946b9b64f5a89865f0d37a50cfbd6fad38f",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00047-of-00051-a99476a212efcb35.parquet",
+      "source_url_sha256": "92a571919bf2828cbbbd71f4480743ff1f9979676056ade665882eebb14d4f41"
+    },
+    {
+      "path": "data/train-00048-of-00051-9aa83b8e4abb3e92.parquet",
+      "split": "train",
+      "size_bytes": 480895712,
+      "git_blob_id": "88d0f4286ec67b94eb846716da31cbb2b520daa6",
+      "lfs_sha256": "648d040b73495536aada9c1e599fee330bf6e75e1a47120528523d5ba9cb0971",
+      "xet_hash": "f41fbe3e8f64a5c08270bd2270f42cb7181d28f35f9761b53b0b80118b2953fb",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00048-of-00051-9aa83b8e4abb3e92.parquet",
+      "source_url_sha256": "9001d31e9d352d41335253eb8e21abca77396aadfaa3010fabc9941aa0bc85d3"
+    },
+    {
+      "path": "data/train-00049-of-00051-e24aa47c28573c94.parquet",
+      "split": "train",
+      "size_bytes": 514097464,
+      "git_blob_id": "cbb5e66bd69e4d234d4a76792f2f9fd46acfa7a1",
+      "lfs_sha256": "2b175d3fe67b984bf80757764e77f938568627072568b64e07f6b267a91b6d31",
+      "xet_hash": "bcad6adf9cbdb64e21f35b51af50806874fc7497657c84295b77593488b50fea",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00049-of-00051-e24aa47c28573c94.parquet",
+      "source_url_sha256": "7dcecbacf68dca4aaa868d33a560922bfd3d2e25f34cd9006f48aefe72ef9672"
+    },
+    {
+      "path": "data/train-00050-of-00051-7a5506bb37822b16.parquet",
+      "split": "train",
+      "size_bytes": 500051784,
+      "git_blob_id": "abd7c56f8170e235a1d9dd69d1945cd92b67bac1",
+      "lfs_sha256": "20fa91c07850cb5fbcc6604da8f59252b1bd03bdb85efe2d2e9c2e8aed961469",
+      "xet_hash": "fcb28dd821751243801317edce1ec427cc462ae59b48ff3ed2465f95fc952dba",
+      "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/train-00050-of-00051-7a5506bb37822b16.parquet",
+      "source_url_sha256": "b78abe372375b80181dff95d5f50a24d3711ba92337886e94d04190a9106f65c"
+    }
+  ],
+  "files_sha256": "970a6453ee9bb4c6cf8489a42c60980ee92b7818854f52428dcf5683e7d19794",
+  "compressed_parquet_total_bytes": 30197726673,
+  "compressed_parquet_split_bytes": {
+    "train": 25606187730,
+    "dev": 1521199493,
+    "test": 3070339450
+  },
+  "seconds": 0.5414027599617839
+}

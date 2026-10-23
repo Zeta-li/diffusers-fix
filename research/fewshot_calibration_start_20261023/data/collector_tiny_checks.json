@@ -1,0 +1,74 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "dtype": "torch.float32",
+      "status": "pass",
+      "tiny_local_forwards": 16,
+      "tiny_dense_forwards": 6,
+      "tiny_total_forwards": 22,
+      "real_pretrained_forwards": 0,
+      "student_prediction_bitwise_equal": true,
+      "local_steps": 8,
+      "same_state_shadow_steps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "norm1_pre_modulation_checked": true,
+      "moments_a_records": 2,
+      "moments_b_records": 12,
+      "sample_indices": {
+        "0": [
+          0,
+          2,
+          5
+        ],
+        "1": [
+          0,
+          2,
+          5
+        ]
+      }
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "status": "pass",
+      "tiny_local_forwards": 16,
+      "tiny_dense_forwards": 6,
+      "tiny_total_forwards": 22,
+      "real_pretrained_forwards": 0,
+      "student_prediction_bitwise_equal": true,
+      "local_steps": 8,
+      "same_state_shadow_steps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "norm1_pre_modulation_checked": true,
+      "moments_a_records": 2,
+      "moments_b_records": 12,
+      "sample_indices": {
+        "0": [
+          0,
+          2,
+          5
+        ],
+        "1": [
+          0,
+          2,
+          5
+        ]
+      }
+    }
+  ],
+  "tiny_model_forwards": 44,
+  "real_pretrained_forwards": 0,
+  "scope": "Synthetic randomly initialized two-layer Qwen model on CPU; not Train8 or image-quality evidence"
+}

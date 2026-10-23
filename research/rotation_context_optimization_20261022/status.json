@@ -1,0 +1,7 @@
+{
+  "phase": "complete",
+  "time": "2026-10-22T22:45:38.923061+08:00",
+  "group": "optimization",
+  "requests": 48,
+  "total_model_forwards": 384
+}

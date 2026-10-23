@@ -1,0 +1,360 @@
+{
+  "status": "pass",
+  "device": "cpu",
+  "cuda_used": false,
+  "synthetic_only": true,
+  "real_20b_model_forwards": 0,
+  "real_train8_images_used": 0,
+  "training_performed": false,
+  "tests": [
+    {
+      "name": "contract_tables_and_identity_fallback",
+      "result": {
+        "metadata": {
+          "status": "prepared",
+          "route": "B_fitted_raw_value_affine",
+          "prepare_seconds": 0.0007294155657291412,
+          "table_bytes": 32928,
+          "observed_mask_bytes": 128,
+          "table_dtype": "torch.float32",
+          "alpha_shape": [
+            2,
+            8,
+            8,
+            2,
+            16
+          ],
+          "delta_shape": [
+            2,
+            8,
+            8,
+            2,
+            16
+          ],
+          "model_device": "cpu",
+          "model_dtype": "torch.float32",
+          "contract": {
+            "schema_version": 1,
+            "model_identity": "synthetic-tiny-seed1873-not-a-real-calibrated-model",
+            "layers": 2,
+            "heads": 2,
+            "head_dim": 16,
+            "input_width": 32,
+            "model_dtype": "torch.float32",
+            "raw_scheduler_timesteps": [
+              1000.0,
+              954.5454711914062,
+              900.0,
+              833.3333740234375,
+              750.0,
+              642.8570556640625,
+              500.0,
+              300.0
+            ],
+            "model_timesteps": [
+              1.0,
+              0.9545454978942871,
+              0.8999999761581421,
+              0.8333333730697632,
+              0.75,
+              0.6428570747375488,
+              0.5,
+              0.30000001192092896
+            ],
+            "raw_value_projections": [
+              {
+                "weight_shape": [
+                  32,
+                  32
+                ],
+                "bias_shape": [
+                  32
+                ]
+              },
+              {
+                "weight_shape": [
+                  32,
+                  32
+                ],
+                "bias_shape": [
+                  32
+                ]
+              }
+            ],
+            "tensor_layout": "layer,current_step,anchor_step,head,channel",
+            "indexing": "zero_based",
+            "value_semantics": "raw Value before attention; no RoPE",
+            "timestep_conversion": "Cast scheduler timestep to model dtype, then divide by 1000"
+          },
+          "source": "Synthetic CPU correctness fixture, not Train8 calibration",
+          "source_hash": "87690e8c71e1d27e671e6ca821dbe798e111ae3f0fcde72b0a6fd911ea1218e3",
+          "training_image_ids": [
+            "synthetic-0",
+            "synthetic-1",
+            "synthetic-2",
+            "synthetic-3",
+            "synthetic-4",
+            "synthetic-5",
+            "synthetic-6",
+            "synthetic-7"
+          ],
+          "declared_training_image_count": 8,
+          "sample_count_verified": false,
+          "calibration_performed_here": false,
+          "raw_coefficient_sha256": "0040ef538c5e7a1754a7f4fcfba253a1db13dddca52e8502dae9dc78703428ef",
+          "effective_coefficient_sha256": "b7a8ff22576e9611aa79cd49445d8029e87f2b6c0f48b8608eeaa2282f18a6e6",
+          "observed_pairs_per_layer": [
+            27,
+            27
+          ],
+          "unseen_pair_fallback": "identity",
+          "diagonal_alpha": 1.0,
+          "diagonal_delta": 0.0,
+          "alpha_clipped": false,
+          "alpha_min": -0.5,
+          "alpha_max": 1.2000000476837158,
+          "delta_min": -0.08124542236328125,
+          "delta_max": 0.19765567779541016,
+          "cache_write_semantics": "Temporary read only; raw K/V and real anchor timestamps remain unchanged",
+          "model_identity_verification": "Caller-verified frozen weight identity; full weights are not rehashed here",
+          "provenance_responsibility": "Caller verifies source-level split, manifest hash, model identity and fitted label provenance",
+          "runtime_checks": "Parameter object/storage/version signature at begin and exact model timestep on each corrected forward",
+          "interpretation": "Direct fitted per-channel raw Value correction only; not norm-statistics reconstruction and no quality guarantee"
+        },
+        "no_clipping": true,
+        "diagonal_forced_identity": true,
+        "unseen_forced_identity": true,
+        "two_dimensional_mask_broadcast_exact": true,
+        "input_artifact_unchanged": true,
+        "content_digest_checked": true,
+        "tables_persist_after_clear": true
+      }
+    },
+    {
+      "name": "invalid_artifact_and_lifecycle_guards",
+      "result": {
+        "invalid": [
+          {
+            "case": "missing_delta",
+            "error": "Incomplete fitted coefficient artifact"
+          },
+          {
+            "case": "wrong_alpha_shape",
+            "error": "alpha and delta must have shape (2, 8, 8, 2, 16)"
+          },
+          {
+            "case": "wrong_delta_shape",
+            "error": "alpha and delta must have shape (2, 8, 8, 2, 16)"
+          },
+          {
+            "case": "wrong_contract",
+            "error": "Model, geometry, dtype or exact timestep contract mismatch"
+          },
+          {
+            "case": "wrong_dtype",
+            "error": "Model, geometry, dtype or exact timestep contract mismatch"
+          },
+          {
+            "case": "nan_unseen_alpha",
+            "error": "All supplied coefficients must be finite, including unseen pairs"
+          },
+          {
+            "case": "infinite_delta",
+            "error": "All supplied coefficients must be finite, including unseen pairs"
+          },
+          {
+            "case": "float_mask",
+            "error": "observed_pairs must be boolean"
+          },
+          {
+            "case": "wrong_mask_shape",
+            "error": "observed_pairs must have shape [8,8] or [layer,8,8]"
+          },
+          {
+            "case": "future_anchor",
+            "error": "Observed future-anchor pairs are not causal"
+          },
+          {
+            "case": "duplicate_images",
+            "error": "Duplicate training image identities"
+          },
+          {
+            "case": "missing_images",
+            "error": "Nonempty training_image_ids are required"
+          },
+          {
+            "case": "bad_source_hash",
+            "error": "source_hash must be a lowercase SHA256 digest"
+          },
+          {
+            "case": "bad_coefficient_hash",
+            "error": "Coefficient content digest mismatch"
+          },
+          {
+            "case": "statistics_api_is_not_B",
+            "error": "Incomplete fitted coefficient artifact"
+          },
+          {
+            "case": "changed_schedule",
+            "error": "Fitted schedule or model identity mismatch"
+          },
+          {
+            "case": "changed_model_identity",
+            "error": "Fitted schedule or model identity mismatch"
+          },
+          {
+            "case": "parameter_mutation",
+            "error": "Model parameters changed after loading fitted tables"
+          },
+          {
+            "case": "unprepared_begin",
+            "error": "Load fitted tables before enabling correction"
+          }
+        ],
+        "rejected_count": 19,
+        "failed_loads_preserve_previous_tables": true
+      }
+    },
+    {
+      "name": "float32_raw_cache_read",
+      "result": {
+        "dtype": "torch.float32",
+        "per_token_formula_exact": true,
+        "raw_kv_and_age_unchanged": true,
+        "selected_value_exact": true,
+        "unseen_pair_identity_exact": true,
+        "replacing_tables_mid_request_rejected": "Clear request caches before replacing fitted tables",
+        "changing_mode_rejected": "Changing correction mode during a request requires begin"
+      }
+    },
+    {
+      "name": "float32_eight_step_trajectory",
+      "result": {
+        "dtype": "torch.float32",
+        "identity_equals_uncorrected_all_steps": true,
+        "fitted_correction_changes_partial_output": true,
+        "trajectories": [
+          {
+            "label": "none",
+            "dtype": "torch.float32",
+            "full": false,
+            "steps": 8,
+            "layer_read_audits": 16,
+            "cache_and_anchors_unchanged_on_read": true,
+            "full_steps_dense_exact": true,
+            "finite": true
+          },
+          {
+            "label": "identity",
+            "dtype": "torch.float32",
+            "full": false,
+            "steps": 8,
+            "layer_read_audits": 16,
+            "cache_and_anchors_unchanged_on_read": true,
+            "full_steps_dense_exact": true,
+            "finite": true
+          },
+          {
+            "label": "fitted",
+            "dtype": "torch.float32",
+            "full": false,
+            "steps": 8,
+            "layer_read_audits": 16,
+            "cache_and_anchors_unchanged_on_read": true,
+            "full_steps_dense_exact": true,
+            "finite": true
+          },
+          {
+            "label": "fitted",
+            "dtype": "torch.float32",
+            "full": true,
+            "steps": 8,
+            "layer_read_audits": 16,
+            "cache_and_anchors_unchanged_on_read": true,
+            "full_steps_dense_exact": true,
+            "finite": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "bfloat16_raw_cache_read",
+      "result": {
+        "dtype": "torch.bfloat16",
+        "per_token_formula_exact": true,
+        "raw_kv_and_age_unchanged": true,
+        "selected_value_exact": true,
+        "unseen_pair_identity_exact": true,
+        "replacing_tables_mid_request_rejected": "Clear request caches before replacing fitted tables",
+        "changing_mode_rejected": "Changing correction mode during a request requires begin"
+      }
+    },
+    {
+      "name": "bfloat16_eight_step_trajectory",
+      "result": {
+        "dtype": "torch.bfloat16",
+        "identity_equals_uncorrected_all_steps": true,
+        "fitted_correction_changes_partial_output": true,
+        "trajectories": [
+          {
+            "label": "none",
+            "dtype": "torch.bfloat16",
+            "full": false,
+            "steps": 8,
+            "layer_read_audits": 16,
+            "cache_and_anchors_unchanged_on_read": true,
+            "full_steps_dense_exact": true,
+            "finite": true
+          },
+          {
+            "label": "identity",
+            "dtype": "torch.bfloat16",
+            "full": false,
+            "steps": 8,
+            "layer_read_audits": 16,
+            "cache_and_anchors_unchanged_on_read": true,
+            "full_steps_dense_exact": true,
+            "finite": true
+          },
+          {
+            "label": "fitted",
+            "dtype": "torch.bfloat16",
+            "full": false,
+            "steps": 8,
+            "layer_read_audits": 16,
+            "cache_and_anchors_unchanged_on_read": true,
+            "full_steps_dense_exact": true,
+            "finite": true
+          },
+          {
+            "label": "fitted",
+            "dtype": "torch.bfloat16",
+            "full": true,
+            "steps": 8,
+            "layer_read_audits": 16,
+            "cache_and_anchors_unchanged_on_read": true,
+            "full_steps_dense_exact": true,
+            "finite": true
+          }
+        ]
+      }
+    }
+  ],
+  "tiny_model_forward_counts": {
+    "local": 64,
+    "dense_reference": 28
+  },
+  "source_sha256": {
+    "check_moments.py": "886d6fac05bc9b6d86faa6e477365899ccb49c7aec1c57be2b749c8f2eb650b6",
+    "calibration_collector.py": "bf8e998c6bb0e738ad8de605d30e83f5f52e177c2914b0e78a668d2ce9a8694d",
+    "value_time_correction.py": "fb1203fa955e71392c2e73ea2c47d0d9ed9e7d358f01e605a31e54097255ac2e",
+    "moments.py": "64f3d0227e33da55e3b92835abe4c643edaeb0b3a0a4dcfa81d8cd4f29071ae6",
+    "check_collector.py": "935cad05dfe7c5835e606e256f51c523bcb5a0e7b53f5a9f825cde3cac8489b5",
+    "local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "value_fitted_correction.py": "fec2d29eee4be376c6977d0b08042f65a0991df1c706815b9c56694732a2986e",
+    "run_collection.py": "7c8f0fd55dc5e30e5076d75edc928d0f47c5c8b915609387cb32e82c30fc8d5d",
+    "prepare_magicbrush.py": "a06a0da1a7dd0af62028beffa2faa524b766b9cd4a5fc22a03b39346a7e43403",
+    "value_channel_correction.py": "f3e088226bea615a1f703806226ebf4b8f121d7853d79aeadab7cb29d82a0151",
+    "check_fitted_correction.py": "ebf817e49958bb608e7811745066e1eb8354aaef5ccff23f85a80dbbd0bd83a4"
+  }
+}

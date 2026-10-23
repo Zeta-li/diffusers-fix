@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "date": "2026-10-22",
+  "primary_ledger_requests": 138,
+  "closure_ledger_requests": 12,
+  "extra_profiler_requests": 2,
+  "total_real_model_requests": 152,
+  "total_dit_calls": 1216,
+  "failed_generation_requests": 0,
+  "tiny_cpu_checks_passed": 13,
+  "physical_gpu_user_confirmed": "H800",
+  "driver_gpu_name": "NVIDIA L20Y",
+  "new_cache_GiB": 2.8134765625,
+  "max_allocated_GiB": 57.65927696228027,
+  "request_e2e_seconds_sum_excluding_profiler": 935.421733122319,
+  "profiler_e2e_seconds_sum_observer_affected": 15.628106402233243,
+  "source_versions": "primary_source_v1; safe_source_v2; current runner adds closure only",
+  "decision": "Retain correct executor; revise boundary and cross-step approximation; no training/RL/SGLang started",
+  "raw_hashes": {
+    "data/runs.jsonl": "5ec7b4c411f52d1b0f4017a605830a1e0b8ae18ac7263da90236cde745c0f337",
+    "data/closure_runs.jsonl": "7ba3ba651e7cabf97fb7bcad9dfaffe8d7ce6c0a1e21b5e4bcfec2bf2d1226c3",
+    "diagnostics/profiler_requests.jsonl": "c6bc29e493f53454f687c01e946528038051688e9f18692170e5bbb5d51b019d",
+    "masks/regions.json": "d26835e95d595a2804ebae2bdf2cbfbeaee032d35a4e0f3a6d04229c3b88db2c",
+    "masks/closure_probe.json": "158453be1320d10729e2fa23534b0584afb61552465e129742bf8fe08259d852"
+  }
+}

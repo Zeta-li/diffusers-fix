@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "55458",
+    "original_img_id": "55458",
+    "turn_index": 1,
+    "instruction": "remove the apple",
+    "official_split": "dev",
+    "shard_path": "data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+    "row_group": 3,
+    "row_in_group": 31,
+    "row_in_shard": 127,
+    "selection_rank_sha256": "0e8cd84ef11dfd2d6029d5d4a2486dc293a3af35fbc6e68c20544556fb021cf1"
+  },
+  "image": "inputs/val16/55458/source.original",
+  "original_mask": "inputs/val16/55458/mask.original",
+  "source_sha256": "c0ce180718aec3a1aad468ff728bf389981238072fb7993f09aee76b8b04d014",
+  "mask_sha256": "ecb96729648645cc8a5fff48179dbe381352365b6a7183b606155eaff779e624",
+  "source_bytes": 402170,
+  "mask_bytes": 1415065,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+  "source_url_sha256": "cf2671aad08c1f2b2ee93832b2069f6524205905bacaa412307e949e63f924b9"
+}

@@ -1,0 +1,47 @@
+{
+  "source_repo_revision": "115d41afa959f0bc858d25d3b3fddd44054767ad",
+  "cases": [
+    {
+      "case_id": "blocks_text",
+      "image": "inputs/blocks_text.png",
+      "prompt": "Replace the words 'HEALTH INSURANCE' on the letter blocks with 'Tomorrow will be better'.",
+      "category": "文字替换与局部结构",
+      "source_url": "https://raw.githubusercontent.com/ModelTC/LightX2V-Qwen-Image-Lightning/115d41afa959f0bc858d25d3b3fddd44054767ad/examples/qwen_image_edit/qwen_edit2.webp",
+      "source_sha256": "ab85b360916dfd7a769fb70091ba15f8e8db09f3cf038382340bca884b17d2d8",
+      "input_sha256": "f7471140b2d350c899ae16d07b284478b93bc6eaf211906764eeb39adeb75a46",
+      "input_wh": [
+        684,
+        456
+      ],
+      "split": "public_demo_pilot_not_formal_test"
+    },
+    {
+      "case_id": "shirt_color",
+      "image": "inputs/shirt_color.png",
+      "prompt": "Replace the polka-dot shirt with a light blue shirt.",
+      "category": "衣服编辑与人物遮挡",
+      "source_url": "https://raw.githubusercontent.com/ModelTC/LightX2V-Qwen-Image-Lightning/115d41afa959f0bc858d25d3b3fddd44054767ad/examples/qwen_image_edit/qwen_edit3.png",
+      "source_sha256": "2958dc390604303a18972c51be683ec8c6d84cee44b0009a1786134629000599",
+      "input_sha256": "684481101aeb48535f34f56339b3816beb9d3483da1d4e0a1ff0632e500ac70a",
+      "input_wh": [
+        650,
+        434
+      ],
+      "split": "public_demo_pilot_not_formal_test"
+    },
+    {
+      "case_id": "remove_hair",
+      "image": "inputs/remove_hair.png",
+      "prompt": "Remove the hair from the plate.",
+      "category": "细结构删除与邻域保持",
+      "source_url": "https://raw.githubusercontent.com/ModelTC/LightX2V-Qwen-Image-Lightning/115d41afa959f0bc858d25d3b3fddd44054767ad/examples/qwen_image_edit/qwen_edit6.webp",
+      "source_sha256": "387548ed2f515f0936bea7e36a40eeedd575caae4a39624ebc978d211d24df4e",
+      "input_sha256": "e88e811c82a5a03176e0644fcbc08e2d2228f9558e66e35974bfaa838fe1190c",
+      "input_wh": [
+        836,
+        834
+      ],
+      "split": "public_demo_pilot_not_formal_test"
+    }
+  ]
+}

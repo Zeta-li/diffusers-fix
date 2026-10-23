@@ -1,0 +1,114 @@
+{
+  "configs": {
+    "A_base50_cfg4": {
+      "mean_seconds": 49.24504920343558,
+      "paired_geometric_ratio_to_A": 1.0,
+      "mean_lpips_spatial_to_A": 0.0,
+      "max_allocated_GiB": 54.66704273223877,
+      "mean_dit_fraction": 0.9285087808490264
+    },
+    "B_base8_cfg4_shift3": {
+      "mean_seconds": 10.729966570312778,
+      "paired_geometric_ratio_to_A": 0.2178913659283265,
+      "mean_lpips_spatial_to_A": 0.05118850991129875,
+      "max_allocated_GiB": 54.671485900878906,
+      "mean_dit_fraction": 0.6801939947515605
+    },
+    "C_base8_cfg1_shift3": {
+      "mean_seconds": 6.7161394683644176,
+      "paired_geometric_ratio_to_A": 0.1363832947532729,
+      "mean_lpips_spatial_to_A": 0.07482917467132211,
+      "max_allocated_GiB": 54.66538429260254,
+      "mean_dit_fraction": 0.5432756809328538
+    },
+    "D_lightning8_cfg1": {
+      "mean_seconds": 7.507153133861721,
+      "paired_geometric_ratio_to_A": 0.152423638567481,
+      "mean_lpips_spatial_to_A": 0.08479316222170989,
+      "max_allocated_GiB": 55.60780191421509,
+      "mean_dit_fraction": 0.573878112157669
+    },
+    "E_lightning8_fused": {
+      "mean_seconds": 6.7427419706558185,
+      "paired_geometric_ratio_to_A": 0.1369215497067671,
+      "mean_lpips_spatial_to_A": 0.07950451970100403,
+      "max_allocated_GiB": 55.484554290771484,
+      "mean_dit_fraction": 0.5410866517536188
+    }
+  },
+  "anchor": {
+    "A_base50_cfg4": {
+      "n": 3,
+      "seconds": [
+        48.824888908304274,
+        48.951918804086745,
+        48.954506792128086
+      ],
+      "median": 48.951918804086745,
+      "cv": 0.001514996276348039,
+      "distinct_output_hashes": 1
+    },
+    "B_base8_cfg4_shift3": {
+      "n": 1,
+      "seconds": [
+        10.676410562358797
+      ],
+      "median": 10.676410562358797,
+      "cv": null,
+      "distinct_output_hashes": 1
+    },
+    "C_base8_cfg1_shift3": {
+      "n": 1,
+      "seconds": [
+        6.684107322245836
+      ],
+      "median": 6.684107322245836,
+      "cv": null,
+      "distinct_output_hashes": 1
+    },
+    "D_lightning8_cfg1": {
+      "n": 3,
+      "seconds": [
+        7.320050367154181,
+        7.320342903025448,
+        7.316875998862088
+      ],
+      "median": 7.320050367154181,
+      "cv": 0.0002627023094782967,
+      "distinct_output_hashes": 1
+    },
+    "E_lightning8_fused": {
+      "n": 3,
+      "seconds": [
+        6.6895769806578755,
+        6.686218686401844,
+        6.6978937881067395
+      ],
+      "median": 6.6895769806578755,
+      "cv": 0.0008982628062591583,
+      "distinct_output_hashes": 1
+    }
+  },
+  "fusion": [
+    {
+      "case_id": "blocks_text",
+      "mae": 0.013400434516370296,
+      "max_channel_error": 0.9764705896377563,
+      "identical_pixels_fraction": 0.37668153661242604
+    },
+    {
+      "case_id": "shirt_color",
+      "mae": 0.013142901472747326,
+      "max_channel_error": 0.7607843279838562,
+      "identical_pixels_fraction": 0.08853299895216962
+    },
+    {
+      "case_id": "remove_hair",
+      "mae": 0.0012719685910269618,
+      "max_channel_error": 0.11764705926179886,
+      "identical_pixels_fraction": 0.41937828063964844
+    }
+  ],
+  "total_requests": 26,
+  "total_dit_calls": 792
+}

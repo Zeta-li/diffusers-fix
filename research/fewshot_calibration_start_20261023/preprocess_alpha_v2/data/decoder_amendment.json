@@ -1,0 +1,85 @@
+{
+  "version": "alpha_v2",
+  "parent_frozen_selection_sha256": "577ff3a6f7bcbfc94ff150c055e335db63adc9f76247f00135138482185ba01a",
+  "parent_contract_sha256": "e37d9cf062769dd023f84c733caa9f145fcc9d0f17398cb58fdeab2d3c6d1596",
+  "wrapper_script_sha256": "7076833073b202d7ac0feeab5e6708d33fa645674b743e385d972ffc243d7af8",
+  "preserved_v1_script_sha256": "2b684f31a3ad77a0901db4376cc2d1e01cad10321e6b3c27bf436a2f4f752e14",
+  "unchanged": [
+    "revision",
+    "seed",
+    "all IDs",
+    "all metadata",
+    "all ranks",
+    "all locators",
+    "all official group splits"
+  ],
+  "official_edit_region": "alpha == 0",
+  "conservative_roi_region": "alpha < 255 including antialias edges",
+  "extraction_export_order": "explicitly validate unique IDs and restore the original frozen hash-rank order after row-group I/O",
+  "conservative_edge_threshold_is_research_rule": true,
+  "observed_initial_sample": {
+    "img_id": "257102",
+    "source_wh": [
+      500,
+      500
+    ],
+    "mask_wh": [
+      1024,
+      1024
+    ],
+    "mask_mode": "RGBA",
+    "alpha_zero_pixels_reported_by_execution_host": 147106,
+    "observation": "mask RGB contains the source canvas and alpha erases the instructed cabinet region; no target examined"
+  },
+  "sources": [
+    "https://arxiv.org/html/2306.10012v2#S3.SS2",
+    "https://developers.openai.com/cookbook/examples/dalle/how_to_create_dynamic_masks_with_dall-e_and_segment_anything",
+    "https://raw.githubusercontent.com/OSU-NLP-Group/MagicBrush/main/evaluation/export_test_set.py"
+  ],
+  "effective_contract": {
+    "schema_version": 1,
+    "repo_id": "osunlp/MagicBrush",
+    "revision": "6c254560879df7851233ea0fd2ae2a62764d0ef2",
+    "seed": 2026102303,
+    "requested_counts": {
+      "train": 32,
+      "dev": 16,
+      "test": 64
+    },
+    "selection_turn_index": 1,
+    "cross_split_rule": "exclude every img_id occurring in more than one official split; never move groups",
+    "duplicate_first_turn_rule": "exclude img_id with other than one turn_index=1 row within its split",
+    "ranking": "sha256(UTF8(seed|revision|official_split|normalized_coco_img_id)), ascending hexadecimal, then img_id",
+    "train_nested_prefixes": [
+      8,
+      16,
+      32
+    ],
+    "target_columns_read": false,
+    "source_extraction_scope": "only frozen Train8, no Test or dev media; other Train32 sources remain locked locators",
+    "duplicate_check": {
+      "exact": "raw bytes SHA256 or dimensions plus decoded RGB SHA256",
+      "hash_bits": 64,
+      "reject_both_hash_distance_max": 6,
+      "reject_aspect_log_distance_max": 0.02,
+      "gray_either_hash_distance_max": 10,
+      "image_only": true
+    },
+    "geometry": {
+      "target_area": 1048576,
+      "dimension_rounding": "Python round to nearest multiple of 32, same as Qwen calculate_dimensions",
+      "image_token_pixels": 16,
+      "roi": "bbox of alpha<255 for RGBA, otherwise positive opaque grayscale; expanded by 2 image tokens",
+      "halo_tokens": 2,
+      "aspect_log_distance_max": 0.01,
+      "mask_resampling": "NEAREST to generated target canvas, only if source and mask aspect agree",
+      "alpha": "RGBA alpha==0 explicitly editable; alpha<255 conservative ROI includes antialias edges; opaque grayscale white>0 compatible",
+      "semantic_boundary_learned": false,
+      "decoder_version": "alpha_v2",
+      "conservative_alpha_edge_rule_is_research_protocol": true
+    },
+    "post_freeze_rejection": "stop and preserve frozen IDs; no silent replacement or overwriting"
+  },
+  "target_images_read": false,
+  "replacement_performed": false
+}

@@ -1,0 +1,47 @@
+{
+  "status": "complete",
+  "scope": "Exploratory within-Train8 LOO raw-Value prediction proxy; hyperparameter-selection LOO score is not independent Val",
+  "source_image_count": 8,
+  "identity_equal_source_normalized_sse": 0.755238589212255,
+  "selected_B_loo_normalized_sse": 0.6722866685986421,
+  "relative_normalized_sse_reduction": 0.10983538420638062,
+  "selected_eta": 0.01,
+  "identity_per_image": [
+    {
+      "image_id": "mb_train_405994",
+      "identity_normalized_sse": 0.7176652654909621
+    },
+    {
+      "image_id": "mb_train_301232",
+      "identity_normalized_sse": 0.7962104462736388
+    },
+    {
+      "image_id": "mb_train_544811",
+      "identity_normalized_sse": 0.7859463698739957
+    },
+    {
+      "image_id": "mb_train_253960",
+      "identity_normalized_sse": 0.7799708488865709
+    },
+    {
+      "image_id": "mb_train_315467",
+      "identity_normalized_sse": 0.7409888143636123
+    },
+    {
+      "image_id": "mb_train_355272",
+      "identity_normalized_sse": 0.7891047208792046
+    },
+    {
+      "image_id": "mb_train_257102",
+      "identity_normalized_sse": 0.7377295947237557
+    },
+    {
+      "image_id": "mb_train_271359",
+      "identity_normalized_sse": 0.6942926532062997
+    }
+  ],
+  "additional_model_queries": 0,
+  "closed_loop_image_quality_established": false,
+  "net_latency_gain_established": false,
+  "rl_started": false
+}

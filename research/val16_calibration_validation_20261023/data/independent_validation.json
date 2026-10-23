@@ -1,0 +1,629 @@
+{
+  "status": "PASS",
+  "validated_at": "2026-10-23T08:56:57.485580+00:00",
+  "scope": "Independent data/accounting/provenance/determinism audit only; no semantic, speed significance, noninferiority or formal Go claim",
+  "planned_sources": 16,
+  "successful_requests": 320,
+  "warmups": 80,
+  "measurements": 240,
+  "successful_dit_forwards": 2560,
+  "failed_attempts": 0,
+  "failed_completed_dit_forwards": 0,
+  "failed_invoked_dit_forwards": 0,
+  "completed_dit_including_failed_attempts": 2560,
+  "incomplete_failed_invocations": 0,
+  "extra_teacher_or_shadow_calls": 0,
+  "calibration_sha256": "6df60e49ca8d618c5458063a80ce5bf3a5b02b0c28c7e618b04b76733964518f",
+  "cases_sha256": "d66d413ffa385e96def3392faed5156eba3fa55827e204080ef3923bea4eae25",
+  "preregistration_sha256": "3fd384bde721e3446e2620eaf6d487a7beb44d0541430fb6f6d2b0e9ec510f85",
+  "source_audits": [
+    {
+      "case_id": "mb_val_308192",
+      "source_sha256": "1fc30a0d88c88967c93d35d73e4814d0f3f481a03d6606695b2d0f5c12f19f0c",
+      "source_file_verified": true,
+      "source_group": "308192",
+      "core_indices_sha256": "72fab0d6952ca9978caffe7e6d42b11ca9d3ff5edc4f805d9166f95951b66d31"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "source_sha256": "8c0abb03bbdd4f075a8fca39bd8db63843d699dc8a4e6b5821f235428a9ab2c9",
+      "source_file_verified": true,
+      "source_group": "565269",
+      "core_indices_sha256": "1f1c9e6435ed7abb9b2e390c73c620912db7c1e8d025fe0ae619057d41c71214"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "source_sha256": "0d4e3a033013f2b00f0b972b41a3891b2534b031d641aa96cc41a97daf895274",
+      "source_file_verified": true,
+      "source_group": "392687",
+      "core_indices_sha256": "3806d314fee7bfdd6cc80a085d31e739dc1feb4d53afee1f284e5f4cd5478930"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "source_sha256": "08f2929c59bcd22ef86f5b42ffe92198db59d69e6fef4c1013a5114fb80ca609",
+      "source_file_verified": true,
+      "source_group": "175584",
+      "core_indices_sha256": "77ce6be6c37650c6cba75be39dd05c3b59f9b979a4d47c1e5057945358001267"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "source_sha256": "4c426c159b837a39181bd2e6de50d9b62c9292565bd9692d61bc3cc61641cff8",
+      "source_file_verified": true,
+      "source_group": "190360",
+      "core_indices_sha256": "19cfad71f377470eb56df8046ff95bc3f5cce39bee56117a088457c842fca580"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "source_sha256": "5780caad2c24018fa130239d76be4a7014cc82d25b6d7983b1d9292e5ff54df4",
+      "source_file_verified": true,
+      "source_group": "178572",
+      "core_indices_sha256": "fc867cee1617609cd96a2bc9eb5af8e97cfdb645c0b91d1f4c191c3bae7b8b5c"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "source_sha256": "1ab36958751f5f8674679892ff9be9c18537cd93fe5d0b76bff095b0f6be02dc",
+      "source_file_verified": true,
+      "source_group": "211860",
+      "core_indices_sha256": "e4f590921b381973b15338c0e91e6a49555bcf03d2ac7076c7b04709e9b8142b"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "source_sha256": "6d5eb0fc8a4bcd28da352883dd66ad94f478818c310d3a5975d35fef7363bc23",
+      "source_file_verified": true,
+      "source_group": "415314",
+      "core_indices_sha256": "9acb0aee8d22bb6c81e191d90c7e31f23da197e03e445c149557528ef0cb37e0"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "source_sha256": "acda867285f2ae3ff14b97f7a49b628e530bbf7a159d532f4fdebe78c5bd1e5f",
+      "source_file_verified": true,
+      "source_group": "50151",
+      "core_indices_sha256": "cd5a5d9d35446095f1131d3fd7c86f7725e5d9739dd55b0dd19d9ba10e7deba0"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "source_sha256": "017a3f83ff7327d77eb6b7a12640398e46e5017b934486ed0e92706f43fc3fd6",
+      "source_file_verified": true,
+      "source_group": "215135",
+      "core_indices_sha256": "a2ac66f856765f00ab33bc1efb0f15aea22f217b1ca3cf07a302788cd9ed74db"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "source_sha256": "307e200928271e15eb49b52e0a587e1d98e37c19ea35632215b8386d30271e7d",
+      "source_file_verified": true,
+      "source_group": "354126",
+      "core_indices_sha256": "81bf8106bacd18387a16ec5f44665c1adb008e4604c938899c3c7666c4b39c5b"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "source_sha256": "3b41700a5e443a5631000c209ca047897222ff8c8aee75a99c67e5a273bba26b",
+      "source_file_verified": true,
+      "source_group": "25139",
+      "core_indices_sha256": "8988c263176b15db58b97dbd98876fb4e3ea14a6e74f6d7aa2c54a172bb4227f"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "source_sha256": "650959a5ee80432aa58e98ef370240c0d37d3d9714e3ca9c1543a38484f7d362",
+      "source_file_verified": true,
+      "source_group": "282572",
+      "core_indices_sha256": "29b1425e231730ec91e8f1aac21165cff084ae8cdf947f40d04951cbfee99557"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "source_sha256": "d4c74a4960c1c95df0fd9124aebee279deba617dc8a91198a95b75e0daa792e8",
+      "source_file_verified": true,
+      "source_group": "466845",
+      "core_indices_sha256": "50e474ae77b24860d3df55efb3424be3a912ec94b5edf0e762d796e996d8ce15"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "source_sha256": "c0ce180718aec3a1aad468ff728bf389981238072fb7993f09aee76b8b04d014",
+      "source_file_verified": true,
+      "source_group": "55458",
+      "core_indices_sha256": "7dc8fc89e67e06d6dff277a51a45272ed8583e8701e7d61412824d5abb57300e"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "source_sha256": "18cec3807c60cb22f65ce7414101bd53c0aed9bd18d0c84e8d2de709cf1b3613",
+      "source_file_verified": true,
+      "source_group": "155790",
+      "core_indices_sha256": "68da817e647334ad690f59bd3ed72a6067d049d31085a26c0cb87898a01b3322"
+    }
+  ],
+  "table_audits": [
+    {
+      "attempt": "20261023T161546",
+      "environment_sha256": "94ce9600abedc46bccf3181a546d3ec3c5119f2404641c5c0ae87bdf73a26efc",
+      "A_statistics_sha256": "6763f6b842b52ec59165fbcc268e1abe83c7c7af9b4ff451fdfc1ab8d9c7df56",
+      "B_effective_coefficient_sha256": "799a5cfaf15c75b97628d825019e0a12a8c8dbf6d2d60967a52e1bc797a6294b"
+    }
+  ],
+  "repeated_output_audits": [
+    {
+      "case_id": "mb_val_308192",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "F",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "R2",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "PRIOR",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "A",
+      "requests": 4,
+      "identical_png_sha256": true
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "B",
+      "requests": 4,
+      "identical_png_sha256": true
+    }
+  ],
+  "source_group_disjointness": "Frozen Train32/Val16/Test64 metadata checked; no Test media opened by this validator",
+  "decoded_content_scope": "Manifest RGB hashes and declared near-duplicate receipts; independent raw source file digests checked",
+  "formal_Go_established": false,
+  "errors": [],
+  "warnings": [],
+  "validator_sha256": "29fab5166768dccb42ff77be959e9647ea3d3bf057f581421b7551a236927e45"
+}

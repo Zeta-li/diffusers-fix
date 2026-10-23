@@ -1,0 +1,6243 @@
+{
+  "grouping": "profiler.key_averages(group_by_input_shape=True)",
+  "time_unit": "microseconds",
+  "category_aggregation": "Sum operator self times for aten events only; non-aten kernels and observer scopes are excluded to avoid counting the same kernels twice",
+  "aggregation_limit": "CPU and GPU work may overlap; sums are not request wall time. Inclusive operator totals are retained per row and are not summed by category.",
+  "categories": {
+    "matmul_linear": {
+      "count": 1692,
+      "shape_groups": 26,
+      "self_device_time_total_us": 171075.2839999995,
+      "self_cpu_time_total_us": 20137.93200000046,
+      "missing_self_device_groups": 0,
+      "keys": [
+        "aten::addmm",
+        "aten::linear"
+      ]
+    },
+    "other_aten": {
+      "count": 23138,
+      "shape_groups": 175,
+      "self_device_time_total_us": 144254.16499999876,
+      "self_cpu_time_total_us": 48997.10599999859,
+      "missing_self_device_groups": 0,
+      "keys": [
+        "aten::_to_copy",
+        "aten::add",
+        "aten::arange",
+        "aten::as_strided",
+        "aten::chunk",
+        "aten::copy_",
+        "aten::cos",
+        "aten::div",
+        "aten::dropout",
+        "aten::empty",
+        "aten::empty_like",
+        "aten::empty_strided",
+        "aten::exp",
+        "aten::flatten",
+        "aten::gelu",
+        "aten::layer_norm",
+        "aten::mean",
+        "aten::mul",
+        "aten::narrow",
+        "aten::native_layer_norm",
+        "aten::permute",
+        "aten::pow",
+        "aten::reshape",
+        "aten::resize_",
+        "aten::result_type",
+        "aten::rsqrt",
+        "aten::silu",
+        "aten::sin",
+        "aten::slice",
+        "aten::split",
+        "aten::t",
+        "aten::to",
+        "aten::transpose",
+        "aten::type_as",
+        "aten::unflatten",
+        "aten::unsqueeze",
+        "aten::view",
+        "aten::view_as_complex",
+        "aten::view_as_real"
+      ]
+    },
+    "cat": {
+      "count": 183,
+      "shape_groups": 1,
+      "self_device_time_total_us": 13256.19500000019,
+      "self_cpu_time_total_us": 1211.705000000602,
+      "missing_self_device_groups": 0,
+      "keys": [
+        "aten::cat"
+      ]
+    },
+    "attention": {
+      "count": 180,
+      "shape_groups": 3,
+      "self_device_time_total_us": 113410.22700000028,
+      "self_cpu_time_total_us": 3428.713000000448,
+      "missing_self_device_groups": 0,
+      "keys": [
+        "aten::_cudnn_attention_forward",
+        "aten::_scaled_dot_product_cudnn_attention",
+        "aten::scaled_dot_product_attention"
+      ]
+    }
+  },
+  "shape_group_count": 251,
+  "device_timing_available": true,
+  "rows": [
+    {
+      "key": "diagnostic_F_transformer_call_2",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 452004.13300000003,
+      "device_time_total_us": 452004.13300000003,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "Command Buffer Full",
+      "count": 1856,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 230564.05700000038,
+      "device_time_total_us": 230564.05700000038,
+      "self_cpu_time_total_us": 230095.69300000052,
+      "cpu_time_total_us": 230095.69300000052,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::_cudnn_attention_forward",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          24,
+          9575,
+          128
+        ],
+        [
+          1,
+          24,
+          9575,
+          128
+        ],
+        [
+          1,
+          24,
+          9575,
+          128
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "attention",
+      "self_device_time_total_us": 113410.22700000028,
+      "device_time_total_us": 252719.65600000063,
+      "self_cpu_time_total_us": 2546.4290000002275,
+      "cpu_time_total_us": 6211.7279999998445,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "cudnn_generated_fort_native_sdpa_sm90_flash_fprop_wgmma_f16_knob_7_64x128x128_4x1x1_kernel0_0",
+      "count": 60,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 113339.92000000022,
+      "device_time_total_us": 113339.92000000022,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "nvjet_tst_256x128_64x4_1x2_h_bz_coopA_bias_TNT",
+      "count": 300,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 92583.52099999998,
+      "device_time_total_us": 92583.52099999998,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 240,
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          8192,
+          3072
+        ],
+        [
+          3072,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 48940.068999999836,
+      "device_time_total_us": 93578.76099999945,
+      "self_cpu_time_total_us": 5376.950000000125,
+      "cpu_time_total_us": 96797.67100000037,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 60,
+      "input_shapes": [
+        [
+          12288
+        ],
+        [
+          8192,
+          3072
+        ],
+        [
+          3072,
+          12288
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 47995.69999999972,
+      "device_time_total_us": 47995.69999999972,
+      "self_cpu_time_total_us": 1222.236999999931,
+      "cpu_time_total_us": 1777.6309999999366,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "nvjet_tst_192x192_64x4_2x1_v_bz_coopB_bias_TNN",
+      "count": 60,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 47941.2399999998,
+      "device_time_total_us": 47941.2399999998,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 60,
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          8192,
+          12288
+        ],
+        [
+          12288,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 43935.599000000024,
+      "device_time_total_us": 43935.599000000024,
+      "self_cpu_time_total_us": 941.7869999997329,
+      "cpu_time_total_us": 1379.7549999999,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::copy_",
+      "count": 480,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 31853.6950000004,
+      "device_time_total_us": 40268.82300000035,
+      "self_cpu_time_total_us": 1882.1480000003926,
+      "cpu_time_total_us": 46041.825000000026,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::BFloat16, c10::BFloat16, c10::BFloat16, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})",
+      "count": 722,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 29390.088999999178,
+      "device_time_total_us": 29390.088999999178,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "nvjet_tst_256x128_64x4_2x1_v_bz_coopA_bias_TNT",
+      "count": 361,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 24657.094999999834,
+      "device_time_total_us": 24657.094999999834,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+      "count": 482,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 23382.661000000357,
+      "device_time_total_us": 23382.661000000357,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})",
+      "count": 241,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 16543.19399999983,
+      "device_time_total_us": 16543.19399999983,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        [
+          1,
+          8192,
+          24,
+          1
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 14009.182999999897,
+      "device_time_total_us": 19296.3549999999,
+      "self_cpu_time_total_us": 733.2179999999548,
+      "cpu_time_total_us": 35862.31399999993,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<8, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>)",
+      "count": 482,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 13604.729000000349,
+      "device_time_total_us": 13604.729000000349,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::cat",
+      "count": 183,
+      "input_shapes": [
+        [],
+        []
+      ],
+      "category": "cat",
+      "self_device_time_total_us": 13256.19500000019,
+      "device_time_total_us": 16678.167000000096,
+      "self_cpu_time_total_us": 1211.705000000602,
+      "cpu_time_total_us": 3655.8880000004556,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_alignedK_contig<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 4, 128, 1, 8>(at::native::(anonymous namespace)::OpaqueType<2u>*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",
+      "count": 180,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 13249.37900000019,
+      "device_time_total_us": 13249.37900000019,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::complex<float>, c10::complex<float>, c10::complex<float>, at::native::binary_internal::MulFunctor<c10::complex<float> > > >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::complex<float>, c10::complex<float>, c10::complex<float>, at::native::binary_internal::MulFunctor<c10::complex<float> > > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::complex<float>, c10::complex<float>, c10::complex<float>, at::native::binary_internal::MulFunctor<c10::complex<float> > > >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::complex<float>, c10::complex<float>, c10::complex<float>, at::native::binary_internal::MulFunctor<c10::complex<float> > > const&)::{lambda(int)#1})",
+      "count": 240,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 9909.83100000016,
+      "device_time_total_us": 9909.83100000016,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1})",
+      "count": 241,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 9856.026999999996,
+      "device_time_total_us": 9856.026999999996,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<8, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#1}::operator()() const::{lambda()#4}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul> >(int, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#1}::operator()() const::{lambda()#4}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul>)",
+      "count": 120,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 9459.316999999492,
+      "device_time_total_us": 9459.316999999492,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul>)",
+      "count": 241,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 9120.084999999955,
+      "device_time_total_us": 9120.084999999955,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          64
+        ],
+        [
+          8192,
+          1,
+          64
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 8785.810999999805,
+      "device_time_total_us": 12150.081999999871,
+      "self_cpu_time_total_us": 641.5749999998543,
+      "cpu_time_total_us": 8706.511999999862,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 240,
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          1383,
+          3072
+        ],
+        [
+          3072,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 8675.677999999783,
+      "device_time_total_us": 11616.40499999968,
+      "self_cpu_time_total_us": 5342.377000000092,
+      "cpu_time_total_us": 7560.078000000149,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 60,
+      "input_shapes": [
+        [
+          12288
+        ],
+        [
+          1383,
+          3072
+        ],
+        [
+          3072,
+          12288
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 8520.109000000088,
+      "device_time_total_us": 8520.109000000088,
+      "self_cpu_time_total_us": 1014.2550000000638,
+      "cpu_time_total_us": 1435.0390000001662,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::add",
+      "count": 121,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          3072
+        ],
+        [
+          1,
+          1,
+          3072
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 8459.074000000126,
+      "device_time_total_us": 8459.074000000126,
+      "self_cpu_time_total_us": 634.3400000000865,
+      "cpu_time_total_us": 1097.0529999999544,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        [
+          128
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 8445.587999999716,
+      "device_time_total_us": 8445.587999999716,
+      "self_cpu_time_total_us": 639.7219999999811,
+      "cpu_time_total_us": 1103.8809999999003,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 121,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          3072
+        ],
+        [
+          1,
+          1,
+          3072
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 8439.441999999872,
+      "device_time_total_us": 11173.249999999862,
+      "self_cpu_time_total_us": 661.7989999994088,
+      "cpu_time_total_us": 1322.2519999996393,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, float, float, float>, unsigned int, float, 4, 4> >(at::native::ReduceOp<float, at::native::MeanOps<float, float, float, float>, unsigned int, float, 4, 4>)",
+      "count": 241,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 8342.452999999683,
+      "device_time_total_us": 8342.452999999683,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1,
+          3072
+        ],
+        [
+          1,
+          8192,
+          3072
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 8191.964000000025,
+      "device_time_total_us": 11160.115999999998,
+      "self_cpu_time_total_us": 881.9859999997061,
+      "cpu_time_total_us": 2646.3080000000627,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::pow",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 8163.415999999965,
+      "device_time_total_us": 11288.462999999942,
+      "self_cpu_time_total_us": 1069.0039999999776,
+      "cpu_time_total_us": 4125.870999999945,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::gelu",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          12288
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 8052.567999999741,
+      "device_time_total_us": 8052.567999999741,
+      "self_cpu_time_total_us": 414.28899999992336,
+      "cpu_time_total_us": 693.8739999998988,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 60,
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          1383,
+          12288
+        ],
+        [
+          12288,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 7486.042000000016,
+      "device_time_total_us": 7486.042000000016,
+      "self_cpu_time_total_us": 881.7869999998456,
+      "cpu_time_total_us": 1125.9149999998344,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mean",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 7066.080999999834,
+      "device_time_total_us": 9856.307999999819,
+      "self_cpu_time_total_us": 1124.4860000002423,
+      "cpu_time_total_us": 3309.1550000000716,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<8, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char*, 3ul> >(int, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char*, 3ul>)",
+      "count": 240,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 6711.828000000056,
+      "device_time_total_us": 6711.828000000056,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c10::BFloat16, float, false>(int, float, c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16 const*, float*, float*, c10::BFloat16*)",
+      "count": 241,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 6547.64200000014,
+      "device_time_total_us": 6547.64200000014,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::add",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          3072
+        ],
+        [
+          1,
+          8192,
+          3072
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 5903.517999999886,
+      "device_time_total_us": 5903.517999999886,
+      "self_cpu_time_total_us": 685.3600000000397,
+      "cpu_time_total_us": 1151.4310000000105,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 120,
+      "input_shapes": [
+        [
+          18432
+        ],
+        [
+          1,
+          3072
+        ],
+        [
+          3072,
+          18432
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 5397.541999999987,
+      "device_time_total_us": 7074.52299999987,
+      "self_cpu_time_total_us": 1809.7159999999235,
+      "cpu_time_total_us": 3649.9400000000105,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "nvjet_tst_256x8_64x6_4x1_v_bz_bias_TNT",
+      "count": 120,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 5397.541999999987,
+      "device_time_total_us": 5397.541999999987,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::native_layer_norm",
+      "count": 121,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          3072
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 5263.394000000082,
+      "device_time_total_us": 7295.5730000001295,
+      "self_cpu_time_total_us": 1235.5690000003801,
+      "cpu_time_total_us": 3644.134999999936,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::copy_",
+      "count": 480,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 5105.503000000307,
+      "device_time_total_us": 8673.640000000702,
+      "self_cpu_time_total_us": 1452.9439999999754,
+      "cpu_time_total_us": 20619.13699999976,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        [
+          1,
+          1383,
+          24,
+          1
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 2510.36199999993,
+      "device_time_total_us": 3161.5299999999497,
+      "self_cpu_time_total_us": 624.4930000002523,
+      "cpu_time_total_us": 1145.8420000000856,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1,
+          3072
+        ],
+        [
+          1,
+          1383,
+          3072
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1565.1069999999672,
+      "device_time_total_us": 1565.1069999999672,
+      "self_cpu_time_total_us": 628.07100000011,
+      "cpu_time_total_us": 1084.3910000000433,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::gelu",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          12288
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1406.7489999997506,
+      "device_time_total_us": 1406.7489999997506,
+      "self_cpu_time_total_us": 328.4399999999787,
+      "cpu_time_total_us": 561.7379999999675,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::add",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3072
+        ],
+        [
+          1,
+          1,
+          3072
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1396.9529999998704,
+      "device_time_total_us": 1871.1599999997634,
+      "self_cpu_time_total_us": 584.9979999997968,
+      "cpu_time_total_us": 3433.5989999999897,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        [
+          128
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1383.6089999999422,
+      "device_time_total_us": 1383.6089999999422,
+      "self_cpu_time_total_us": 607.8080000001491,
+      "cpu_time_total_us": 1058.0839999999807,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3072
+        ],
+        [
+          1,
+          1,
+          3072
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1351.2269999996552,
+      "device_time_total_us": 1611.513999999579,
+      "self_cpu_time_total_us": 614.415999999947,
+      "cpu_time_total_us": 1533.9199999999355,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::native_layer_norm",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3072
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1284.248000000057,
+      "device_time_total_us": 1284.248000000057,
+      "self_cpu_time_total_us": 964.3770000003374,
+      "cpu_time_total_us": 2605.0849999999514,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mean",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1265.0119999998496,
+      "device_time_total_us": 1753.9369999996634,
+      "self_cpu_time_total_us": 798.6309999996615,
+      "cpu_time_total_us": 6391.952999999634,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          64
+        ],
+        [
+          1383,
+          1,
+          64
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1124.0200000003551,
+      "device_time_total_us": 1979.0190000007296,
+      "self_cpu_time_total_us": 617.1139999997122,
+      "cpu_time_total_us": 4620.08599999983,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::pow",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 947.0369999999921,
+      "device_time_total_us": 1666.555000000003,
+      "self_cpu_time_total_us": 768.4180000001893,
+      "cpu_time_total_us": 3143.433000000044,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::add",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3072
+        ],
+        [
+          1,
+          1383,
+          3072
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 808.3100000001696,
+      "device_time_total_us": 1199.3440000001547,
+      "self_cpu_time_total_us": 581.8439999997545,
+      "cpu_time_total_us": 5142.599999999907,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "Memset (Device)",
+      "count": 481,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 483.1199999998953,
+      "device_time_total_us": 483.1199999998953,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>)",
+      "count": 241,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 408.09899999985237,
+      "device_time_total_us": 408.09899999985237,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<4, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+      "count": 241,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 361.3079999994204,
+      "device_time_total_us": 361.3079999994204,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<8, at::native::CUDAFunctorOnSelf_add<c10::BFloat16>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<c10::BFloat16>, std::array<char*, 2ul>)",
+      "count": 241,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 360.51800000031653,
+      "device_time_total_us": 360.51800000031653,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::add",
+      "count": 240,
+      "input_shapes": [
+        [
+          1,
+          1,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 359.0780000003142,
+      "device_time_total_us": 422.1510000004346,
+      "self_cpu_time_total_us": 1454.710999999767,
+      "cpu_time_total_us": 3307.931999999726,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::silu",
+      "count": 122,
+      "input_shapes": [
+        [
+          1,
+          3072
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 245.0559999999805,
+      "device_time_total_us": 380.44900000002053,
+      "self_cpu_time_total_us": 683.9279999999408,
+      "cpu_time_total_us": 3351.5720000000974,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<8, at::native::(anonymous namespace)::silu_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#6}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::silu_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#6}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul>)",
+      "count": 122,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 245.0559999999805,
+      "device_time_total_us": 245.0559999999805,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::add",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          1
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 229.59699999995746,
+      "device_time_total_us": 318.0750000002513,
+      "self_cpu_time_total_us": 792.293000000087,
+      "cpu_time_total_us": 2587.824000000126,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::rsqrt",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          1
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 182.26599999957398,
+      "device_time_total_us": 252.94699999948352,
+      "self_cpu_time_total_us": 553.1719999999186,
+      "cpu_time_total_us": 3812.5259999999403,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::rsqrt",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          1
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 177.56999999984646,
+      "device_time_total_us": 177.56999999984646,
+      "self_cpu_time_total_us": 667.7080000001733,
+      "cpu_time_total_us": 1165.0770000001394,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::add",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          1
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 176.96599999989485,
+      "device_time_total_us": 271.3379999998251,
+      "self_cpu_time_total_us": 626.4270000001629,
+      "cpu_time_total_us": 3273.1030000001792,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          1383,
+          3584
+        ],
+        [
+          3584,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 40.735999999999876,
+      "device_time_total_us": 40.735999999999876,
+      "self_cpu_time_total_us": 36.934999999999945,
+      "cpu_time_total_us": 43.01499999999987,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "nvjet_tst_64x8_64x16_4x1_v_bz_bias_TNT",
+      "count": 2,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 26.72100000001319,
+      "device_time_total_us": 26.72100000001319,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::copy_",
+      "count": 2,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3584
+        ],
+        [
+          1,
+          1383,
+          3584
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 25.311999999999898,
+      "device_time_total_us": 25.311999999999898,
+      "self_cpu_time_total_us": 18.570999999999913,
+      "cpu_time_total_us": 35.66299999999978,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3584
+        ],
+        [
+          1,
+          1383,
+          1
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 23.648999999999887,
+      "device_time_total_us": 23.648999999999887,
+      "self_cpu_time_total_us": 7.732000000000198,
+      "cpu_time_total_us": 12.294000000000096,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          8192,
+          64
+        ],
+        [
+          64,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 23.231999999999744,
+      "device_time_total_us": 46.46399999999949,
+      "self_cpu_time_total_us": 69.75499999999965,
+      "cpu_time_total_us": 1293.389,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "Activity Buffer Request",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 23.231999999999744,
+      "device_time_total_us": 23.231999999999744,
+      "self_cpu_time_total_us": 1181.7310000000002,
+      "cpu_time_total_us": 1181.7310000000002,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 1,
+      "input_shapes": [
+        [
+          6144
+        ],
+        [
+          1,
+          3072
+        ],
+        [
+          3072,
+          6144
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 22.68900000001304,
+      "device_time_total_us": 22.68900000001304,
+      "self_cpu_time_total_us": 22.67399999999907,
+      "cpu_time_total_us": 28.413000000000466,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "nvjet_tst_192x128_64x5_1x2_h_bz_coopB_bias_TNT",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 22.495999999999867,
+      "device_time_total_us": 22.495999999999867,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 1,
+      "input_shapes": [
+        [
+          64
+        ],
+        [
+          8192,
+          3072
+        ],
+        [
+          3072,
+          64
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 21.024000000033993,
+      "device_time_total_us": 21.024000000033993,
+      "self_cpu_time_total_us": 17.271000000007916,
+      "cpu_time_total_us": 22.917000000015832,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "nvjet_tst_64x64_64x13_1x2_h_bz_bias_TNT",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 21.024000000033993,
+      "device_time_total_us": 21.024000000033993,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3584
+        ],
+        [
+          3584
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 13.152000000000044,
+      "device_time_total_us": 13.152000000000044,
+      "self_cpu_time_total_us": 5.733000000000175,
+      "cpu_time_total_us": 11.604000000000042,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          1,
+          3072
+        ],
+        [
+          3072,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 12.832000000000335,
+      "device_time_total_us": 12.832000000000335,
+      "self_cpu_time_total_us": 24.6899999999996,
+      "cpu_time_total_us": 37.01099999999997,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mean",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3584
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 11.360000000000127,
+      "device_time_total_us": 11.360000000000127,
+      "self_cpu_time_total_us": 13.092999999999847,
+      "cpu_time_total_us": 19.370999999999867,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "nvjet_tst_64x8_64x16_4x1_v_bz_splitK_bias_TNT",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 10.528000000000247,
+      "device_time_total_us": 10.528000000000247,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::pow",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3584
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 9.632000000000062,
+      "device_time_total_us": 9.632000000000062,
+      "self_cpu_time_total_us": 14.873000000000047,
+      "cpu_time_total_us": 23.472999999999956,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_alignedK_contig<at::native::(anonymous namespace)::OpaqueType<8u>, unsigned int, 2, 128, 1, 16>(at::native::(anonymous namespace)::OpaqueType<8u>*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<8u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 4.127999999999702,
+      "device_time_total_us": 4.127999999999702,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::addmm",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          1,
+          256
+        ],
+        [
+          256,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 4.032000000000153,
+      "device_time_total_us": 4.032000000000153,
+      "self_cpu_time_total_us": 26.286000000000058,
+      "cpu_time_total_us": 31.898999999999887,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_alignedK_contig<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 2, 128, 1, 16>(at::native::(anonymous namespace)::OpaqueType<4u>*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",
+      "count": 2,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 2.688000000000102,
+      "device_time_total_us": 2.688000000000102,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::AUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)",
+      "count": 2,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 2.368000000000393,
+      "device_time_total_us": 2.368000000000393,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void cublasLt::splitKreduce_kernel<32, 16, int, float, __nv_bfloat16, float, __nv_bfloat16, false, float, __nv_bfloat16, __nv_bfloat16, true, true, false, false>(cublasLt::cublasSplitKParams<float>, float const*, __nv_bfloat16 const*, float*, __nv_bfloat16*, float const*, float const*, __nv_bfloat16 const*, float const*, __nv_bfloat16*, void*, long, float*, int*, float*, float*, float const*, float const*, float const*, float const*, float const*)",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 2.3040000000000873,
+      "device_time_total_us": 2.3040000000000873,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::cos",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          128
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1.9839999999999236,
+      "device_time_total_us": 1.9839999999999236,
+      "self_cpu_time_total_us": 7.444999999999709,
+      "cpu_time_total_us": 12.05600000000004,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<4, at::native::cos_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::cos_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 1.9839999999999236,
+      "device_time_total_us": 1.9839999999999236,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::sin",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          128
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1.8880000000003747,
+      "device_time_total_us": 1.8880000000003747,
+      "self_cpu_time_total_us": 7.0909999999998945,
+      "cpu_time_total_us": 13.373000000000047,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<4, at::native::sin_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::sin_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 1.8880000000003747,
+      "device_time_total_us": 1.8880000000003747,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::copy_",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1.631999999999607,
+      "device_time_total_us": 1.631999999999607,
+      "self_cpu_time_total_us": 4.016000000000076,
+      "cpu_time_total_us": 8.348000000000411,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::add",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          1
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1.5360000000000582,
+      "device_time_total_us": 1.5360000000000582,
+      "self_cpu_time_total_us": 9.830999999999904,
+      "cpu_time_total_us": 15.34699999999998,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::rsqrt",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          1
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1.47199999999998,
+      "device_time_total_us": 1.47199999999998,
+      "self_cpu_time_total_us": 6.261999999999944,
+      "cpu_time_total_us": 11.183999999999969,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::add",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1.4400000000023283,
+      "device_time_total_us": 1.4400000000023283,
+      "self_cpu_time_total_us": 6.4469999999855645,
+      "cpu_time_total_us": 10.412000000011176,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::exp",
+      "count": 1,
+      "input_shapes": [
+        [
+          128
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1.4399999999995998,
+      "device_time_total_us": 1.4399999999995998,
+      "self_cpu_time_total_us": 7.084999999999582,
+      "cpu_time_total_us": 12.006999999999607,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<4, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 1.4399999999995998,
+      "device_time_total_us": 1.4399999999995998,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          128
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1.4079999999999018,
+      "device_time_total_us": 1.4079999999999018,
+      "self_cpu_time_total_us": 6.123000000000047,
+      "cpu_time_total_us": 15.16399999999976,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 1.4079999999999018,
+      "device_time_total_us": 1.4079999999999018,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::div",
+      "count": 1,
+      "input_shapes": [
+        [
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1.2480000000000473,
+      "device_time_total_us": 1.2480000000000473,
+      "self_cpu_time_total_us": 8.027000000000044,
+      "cpu_time_total_us": 13.028999999999996,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 1.2480000000000473,
+      "device_time_total_us": 1.2480000000000473,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::copy_",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          256
+        ],
+        [
+          1,
+          256
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1.2480000000000473,
+      "device_time_total_us": 1.2480000000000473,
+      "self_cpu_time_total_us": 3.619999999999891,
+      "cpu_time_total_us": 7.467000000000098,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 1,
+      "input_shapes": [
+        [
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1.1840000000001965,
+      "device_time_total_us": 1.1840000000001965,
+      "self_cpu_time_total_us": 7.572999999999865,
+      "cpu_time_total_us": 14.309999999999945,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::mul",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 1.1840000000001965,
+      "device_time_total_us": 1.1840000000001965,
+      "self_cpu_time_total_us": 4.519999999999982,
+      "cpu_time_total_us": 7.960000000000036,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::arange",
+      "count": 1,
+      "input_shapes": [
+        [],
+        [],
+        [],
+        [
+          0
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.9919999999997344,
+      "device_time_total_us": 0.9919999999997344,
+      "self_cpu_time_total_us": 8.413000000000011,
+      "cpu_time_total_us": 19.164000000000215,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "void (anonymous namespace)::elementwise_kernel_with_index<int, at::native::arange_cuda_out(c10::Scalar const&, c10::Scalar const&, c10::Scalar const&, at::Tensor&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(long)#1}>(int, at::native::arange_cuda_out(c10::Scalar const&, c10::Scalar const&, c10::Scalar const&, at::Tensor&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(long)#1}, function_traits<at::native::arange_cuda_out(c10::Scalar const&, c10::Scalar const&, c10::Scalar const&, at::Tensor&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(long)#1}>::result_type*)",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 0.9919999999997344,
+      "device_time_total_us": 0.9919999999997344,
+      "self_cpu_time_total_us": 0.0,
+      "cpu_time_total_us": 0.0,
+      "device_type": "DeviceType.CUDA",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "diagnostic_F_transformer_call_2",
+      "count": 1,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 672583.1599999991,
+      "self_cpu_time_total_us": 41742.767999999516,
+      "cpu_time_total_us": 453565.33499999996,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          64
+        ],
+        [
+          3072,
+          64
+        ],
+        [
+          3072
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 46.46399999999949,
+      "self_cpu_time_total_us": 17.787000000000262,
+      "cpu_time_total_us": 1332.875,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::reshape",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          64
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 4.078000000000031,
+      "cpu_time_total_us": 7.290999999999997,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          64
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 3.2129999999999654,
+      "cpu_time_total_us": 3.2129999999999654,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::t",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072,
+          64
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 4.798999999999978,
+      "cpu_time_total_us": 11.935000000000002,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::transpose",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072,
+          64
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 4.996000000000038,
+      "cpu_time_total_us": 7.136000000000024,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072,
+          64
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 2.1399999999999864,
+      "cpu_time_total_us": 2.1399999999999864,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "cudaMemsetAsync",
+      "count": 481,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 61232.85200000001,
+      "self_cpu_time_total_us": 1987.980000000247,
+      "cpu_time_total_us": 2563.146000000099,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "cuLaunchKernelEx",
+      "count": 846,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 41326.518999999564,
+      "self_cpu_time_total_us": 3881.2640000004494,
+      "cpu_time_total_us": 95350.86900000057,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 301,
+      "input_shapes": [
+        [
+          8192,
+          3072
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 169.9349999998476,
+      "cpu_time_total_us": 169.9349999998476,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::to",
+      "count": 1,
+      "input_shapes": [
+        [
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 0.5220000000001619,
+      "cpu_time_total_us": 0.5220000000001619,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::to",
+      "count": 3,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3584
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 25.311999999999898,
+      "self_cpu_time_total_us": 3.0009999999995216,
+      "cpu_time_total_us": 67.57899999999972,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::_to_copy",
+      "count": 2,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3584
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 25.311999999999898,
+      "self_cpu_time_total_us": 10.614000000000487,
+      "cpu_time_total_us": 64.5780000000002,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::empty_strided",
+      "count": 1024,
+      "input_shapes": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 3257.7310000004386,
+      "cpu_time_total_us": 3257.7310000004386,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "cudaLaunchKernel",
+      "count": 4528,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 41998.228000000614,
+      "self_cpu_time_total_us": 18307.67599999912,
+      "cpu_time_total_us": 154604.15599999973,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::result_type",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3584
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.0050000000001091,
+      "cpu_time_total_us": 1.0050000000001091,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3584
+        ],
+        [
+          3072,
+          3584
+        ],
+        [
+          3072
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 40.735999999999876,
+      "self_cpu_time_total_us": 5.488000000000511,
+      "cpu_time_total_us": 59.5590000000002,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::reshape",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3584
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.3079999999999927,
+      "cpu_time_total_us": 2.29099999999994,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3584
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 0.9829999999999472,
+      "cpu_time_total_us": 0.9829999999999472,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::t",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072,
+          3584
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 3.548999999999978,
+      "cpu_time_total_us": 8.032999999999902,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::transpose",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072,
+          3584
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 2.9199999999998454,
+      "cpu_time_total_us": 4.483999999999924,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072,
+          3584
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.5640000000000782,
+      "cpu_time_total_us": 1.5640000000000782,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 301,
+      "input_shapes": [
+        [
+          1383,
+          3072
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 144.76700000027404,
+      "cpu_time_total_us": 144.76700000027404,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::arange",
+      "count": 1,
+      "input_shapes": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.9919999999997344,
+      "self_cpu_time_total_us": 5.734999999999673,
+      "cpu_time_total_us": 28.173999999999978,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::empty",
+      "count": 844,
+      "input_shapes": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 2545.7989999993215,
+      "cpu_time_total_us": 2545.7989999993215,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::resize_",
+      "count": 1,
+      "input_shapes": [
+        [
+          0
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 4.763000000000375,
+      "cpu_time_total_us": 4.763000000000375,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::unsqueeze",
+      "count": 1,
+      "input_shapes": [
+        [
+          1
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 2.1729999999997744,
+      "cpu_time_total_us": 2.9169999999999163,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 1,
+      "input_shapes": [
+        [
+          1
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 0.7440000000001419,
+      "cpu_time_total_us": 0.7440000000001419,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::to",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 1.631999999999607,
+      "self_cpu_time_total_us": 0.9570000000003347,
+      "cpu_time_total_us": 15.331000000000131,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::_to_copy",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          1
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 1.631999999999607,
+      "self_cpu_time_total_us": 2.4859999999994216,
+      "cpu_time_total_us": 14.373999999999796,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::unsqueeze",
+      "count": 1,
+      "input_shapes": [
+        [
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.2979999999997744,
+      "cpu_time_total_us": 1.6900000000000546,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 1,
+      "input_shapes": [
+        [
+          128
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 0.3920000000002801,
+      "cpu_time_total_us": 0.3920000000002801,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::slice",
+      "count": 2,
+      "input_shapes": [
+        [
+          1,
+          256
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 3.733999999999469,
+      "cpu_time_total_us": 4.871000000000095,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 2,
+      "input_shapes": [
+        [
+          1,
+          256
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.1370000000006257,
+      "cpu_time_total_us": 1.1370000000006257,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::to",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          256
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 1.2480000000000473,
+      "self_cpu_time_total_us": 0.7400000000002365,
+      "cpu_time_total_us": 12.927000000000135,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::_to_copy",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          256
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 1.2480000000000473,
+      "self_cpu_time_total_us": 2.0300000000002,
+      "cpu_time_total_us": 12.186999999999898,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          256
+        ],
+        [
+          3072,
+          256
+        ],
+        [
+          3072
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 4.032000000000153,
+      "self_cpu_time_total_us": 2.4460000000003674,
+      "cpu_time_total_us": 38.583000000000084,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::t",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072,
+          256
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.9559999999996762,
+      "cpu_time_total_us": 4.237999999999829,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::transpose",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072,
+          256
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.69399999999996,
+      "cpu_time_total_us": 2.282000000000153,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 1,
+      "input_shapes": [
+        [
+          3072,
+          256
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 0.5880000000001928,
+      "cpu_time_total_us": 0.5880000000001928,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          3072
+        ],
+        [
+          3072,
+          3072
+        ],
+        [
+          3072
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 12.832000000000335,
+      "self_cpu_time_total_us": 1.7040000000001783,
+      "cpu_time_total_us": 41.728999999999814,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::t",
+      "count": 481,
+      "input_shapes": [
+        [
+          3072,
+          3072
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 763.4329999994939,
+      "cpu_time_total_us": 1691.9519999999047,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::transpose",
+      "count": 481,
+      "input_shapes": [
+        [
+          3072,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 644.5830000000956,
+      "cpu_time_total_us": 928.5190000004109,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 481,
+      "input_shapes": [
+        [
+          3072,
+          3072
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 283.9360000003153,
+      "cpu_time_total_us": 283.9360000003153,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::slice",
+      "count": 1,
+      "input_shapes": [
+        [
+          4096,
+          64
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.7000000000002728,
+      "cpu_time_total_us": 2.231000000000222,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 1,
+      "input_shapes": [
+        [
+          4096,
+          64
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 0.5309999999999491,
+      "cpu_time_total_us": 0.5309999999999491,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          3072
+        ],
+        [
+          18432,
+          3072
+        ],
+        [
+          18432
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 7074.52299999987,
+      "self_cpu_time_total_us": 286.8930000001578,
+      "cpu_time_total_us": 4334.166000000102,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::t",
+      "count": 120,
+      "input_shapes": [
+        [
+          18432,
+          3072
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 158.25699999975268,
+      "cpu_time_total_us": 397.3329999999337,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::transpose",
+      "count": 120,
+      "input_shapes": [
+        [
+          18432,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 168.27400000027365,
+      "cpu_time_total_us": 239.076000000181,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 120,
+      "input_shapes": [
+        [
+          18432,
+          3072
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 70.80199999990737,
+      "cpu_time_total_us": 70.80199999990737,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::chunk",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          18432
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 106.41300000035153,
+      "cpu_time_total_us": 987.4500000000721,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::split",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          18432
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 163.43899999949508,
+      "cpu_time_total_us": 881.0369999997206,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::narrow",
+      "count": 240,
+      "input_shapes": [
+        [
+          1,
+          18432
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 280.5630000005085,
+      "cpu_time_total_us": 717.5980000002255,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::slice",
+      "count": 240,
+      "input_shapes": [
+        [
+          1,
+          18432
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 330.64799999953584,
+      "cpu_time_total_us": 437.034999999717,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 240,
+      "input_shapes": [
+        [
+          1,
+          18432
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 106.38700000018116,
+      "cpu_time_total_us": 106.38700000018116,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::layer_norm",
+      "count": 121,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          3072
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 7295.5730000001295,
+      "self_cpu_time_total_us": 352.87800000022526,
+      "cpu_time_total_us": 3997.0130000001614,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 242,
+      "input_shapes": [
+        [
+          8192
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 141.16999999982318,
+      "cpu_time_total_us": 141.16999999982318,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::chunk",
+      "count": 240,
+      "input_shapes": [
+        [
+          1,
+          9216
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 308.0379999999236,
+      "cpu_time_total_us": 3144.106000000182,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::split",
+      "count": 240,
+      "input_shapes": [
+        [
+          1,
+          9216
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 648.8970000001041,
+      "cpu_time_total_us": 2836.0680000002585,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::narrow",
+      "count": 720,
+      "input_shapes": [
+        [
+          1,
+          9216
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 886.7220000000198,
+      "cpu_time_total_us": 2187.1710000001544,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::slice",
+      "count": 720,
+      "input_shapes": [
+        [
+          1,
+          9216
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 992.8369999997749,
+      "cpu_time_total_us": 1300.4490000001347,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 720,
+      "input_shapes": [
+        [
+          1,
+          9216
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 307.6120000003598,
+      "cpu_time_total_us": 307.6120000003598,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::unsqueeze",
+      "count": 722,
+      "input_shapes": [
+        [
+          1,
+          3072
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 916.4560000007423,
+      "cpu_time_total_us": 1246.287000000094,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 722,
+      "input_shapes": [
+        [
+          1,
+          3072
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 329.83099999935166,
+      "cpu_time_total_us": 329.83099999935166,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::layer_norm",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3072
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 1284.248000000057,
+      "self_cpu_time_total_us": 280.6210000000683,
+      "cpu_time_total_us": 2885.7060000000197,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 240,
+      "input_shapes": [
+        [
+          1383
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 139.22199999945724,
+      "cpu_time_total_us": 139.22199999945724,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 240,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          3072
+        ],
+        [
+          3072,
+          3072
+        ],
+        [
+          3072
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 93578.76099999945,
+      "self_cpu_time_total_us": 1227.7229999997926,
+      "cpu_time_total_us": 99454.55500000024,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::reshape",
+      "count": 301,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          3072
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 289.6510000000899,
+      "cpu_time_total_us": 448.5149999999335,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 481,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          3072
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 262.4599999997263,
+      "cpu_time_total_us": 262.4599999997263,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 240,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3072
+        ],
+        [
+          3072,
+          3072
+        ],
+        [
+          3072
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 11616.40499999968,
+      "self_cpu_time_total_us": 941.4679999999689,
+      "cpu_time_total_us": 9674.713999999769,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::reshape",
+      "count": 300,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3072
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 259.7169999996572,
+      "cpu_time_total_us": 392.9369999995224,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 480,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3072
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 207.6119999998,
+      "cpu_time_total_us": 207.6119999998,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::unflatten",
+      "count": 180,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 355.1540000002533,
+      "cpu_time_total_us": 458.75000000013597,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::unflatten",
+      "count": 180,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 248.33400000024312,
+      "cpu_time_total_us": 322.7260000001779,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::to",
+      "count": 480,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 31884.22400000057,
+      "self_cpu_time_total_us": 466.94100000030267,
+      "cpu_time_total_us": 41878.89600000031,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::_to_copy",
+      "count": 480,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 40268.82300000035,
+      "self_cpu_time_total_us": 1269.1819999999047,
+      "cpu_time_total_us": 48846.37800000006,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::result_type",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 62.03200000002744,
+      "cpu_time_total_us": 62.03200000002744,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::to",
+      "count": 480,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 7499.215000000451,
+      "self_cpu_time_total_us": 334.1550000005418,
+      "cpu_time_total_us": 19224.66100000056,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::_to_copy",
+      "count": 480,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 8673.640000000702,
+      "self_cpu_time_total_us": 1274.200999999864,
+      "cpu_time_total_us": 23376.118999999817,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::result_type",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 35.340999999702035,
+      "cpu_time_total_us": 35.340999999702035,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::reshape",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 126.73499999966725,
+      "cpu_time_total_us": 247.73499999986598,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 121.00000000019872,
+      "cpu_time_total_us": 121.00000000019872,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view_as_complex",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          64,
+          2
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 304.8720000000053,
+      "cpu_time_total_us": 304.8720000000053,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::unsqueeze",
+      "count": 120,
+      "input_shapes": [
+        [
+          8192,
+          64
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 175.75700000022334,
+      "cpu_time_total_us": 253.498000000111,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 120,
+      "input_shapes": [
+        [
+          8192,
+          64
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 77.74099999988766,
+      "cpu_time_total_us": 77.74099999988766,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view_as_real",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          64
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 231.64199999998664,
+      "cpu_time_total_us": 231.64199999998664,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::flatten",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          64,
+          2
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 152.61100000013266,
+      "cpu_time_total_us": 230.15499999989515,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          64,
+          2
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 77.54399999976249,
+      "cpu_time_total_us": 77.54399999976249,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::type_as",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        [
+          1,
+          8192,
+          24,
+          128
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 8384.598999999784,
+      "self_cpu_time_total_us": 170.67100000004393,
+      "cpu_time_total_us": 7766.650999999929,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::to",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          24,
+          128
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 8384.598999999784,
+      "self_cpu_time_total_us": 161.55699999983062,
+      "cpu_time_total_us": 7595.979999999885,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::reshape",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 131.1609999999837,
+      "cpu_time_total_us": 202.282000000062,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 71.12100000007831,
+      "cpu_time_total_us": 71.12100000007831,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view_as_complex",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          64,
+          2
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 182.86000000013792,
+      "cpu_time_total_us": 182.86000000013792,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::unsqueeze",
+      "count": 120,
+      "input_shapes": [
+        [
+          1383,
+          64
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 155.96099999965236,
+      "cpu_time_total_us": 214.53799999981948,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 120,
+      "input_shapes": [
+        [
+          1383,
+          64
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 58.57700000016712,
+      "cpu_time_total_us": 58.57700000016712,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view_as_real",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          64
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 184.19399999986126,
+      "cpu_time_total_us": 184.19399999986126,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::flatten",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          64,
+          2
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 127.4110000002529,
+      "cpu_time_total_us": 187.88999999994348,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          64,
+          2
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 60.478999999690586,
+      "cpu_time_total_us": 60.478999999690586,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::type_as",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        [
+          1,
+          1383,
+          24,
+          128
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 1174.4250000002512,
+      "self_cpu_time_total_us": 101.82800000018233,
+      "cpu_time_total_us": 4706.573000000075,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::to",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          24,
+          128
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 1174.4250000002512,
+      "self_cpu_time_total_us": 119.13200000009465,
+      "cpu_time_total_us": 4604.744999999893,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::permute",
+      "count": 180,
+      "input_shapes": [
+        [
+          1,
+          9575,
+          24,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 307.06999999963864,
+      "cpu_time_total_us": 428.41799999990417,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 180,
+      "input_shapes": [
+        [
+          1,
+          9575,
+          24,
+          128
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 121.34800000026553,
+      "cpu_time_total_us": 121.34800000026553,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::scaled_dot_product_attention",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          24,
+          9575,
+          128
+        ],
+        [
+          1,
+          24,
+          9575,
+          128
+        ],
+        [
+          1,
+          24,
+          9575,
+          128
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "attention",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 252719.65600000063,
+      "self_cpu_time_total_us": 664.6729999999388,
+      "cpu_time_total_us": 7094.012000000065,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::_scaled_dot_product_cudnn_attention",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          24,
+          9575,
+          128
+        ],
+        [
+          1,
+          24,
+          9575,
+          128
+        ],
+        [
+          1,
+          24,
+          9575,
+          128
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "attention",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 252719.65600000063,
+      "self_cpu_time_total_us": 217.61100000028182,
+      "cpu_time_total_us": 6429.339000000126,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "cudaStreamIsCapturing",
+      "count": 60,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 59.12999999996737,
+      "cpu_time_total_us": 59.12999999996737,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::empty_like",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          24,
+          9575,
+          128
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 139.36399999990545,
+      "cpu_time_total_us": 354.41200000002345,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "cuLaunchKernel",
+      "count": 60,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 86006.45800000017,
+      "self_cpu_time_total_us": 355.80499999999574,
+      "cpu_time_total_us": 2110.2469999999184,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::permute",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          24,
+          9575,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 105.18999999994503,
+      "cpu_time_total_us": 139.60199999993847,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          24,
+          9575,
+          128
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 34.41199999999344,
+      "cpu_time_total_us": 34.41199999999344,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::flatten",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          9575,
+          24,
+          128
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 145.78399999986232,
+      "cpu_time_total_us": 187.27999999992153,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          9575,
+          24,
+          128
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 41.49600000005921,
+      "cpu_time_total_us": 41.49600000005921,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::to",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          9575,
+          3072
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 20.228000000045995,
+      "cpu_time_total_us": 20.228000000045995,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::slice",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          9575,
+          3072
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 227.54399999989937,
+      "cpu_time_total_us": 296.5389999999479,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 120,
+      "input_shapes": [
+        [
+          1,
+          9575,
+          3072
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 68.99500000004855,
+      "cpu_time_total_us": 68.99500000004855,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::dropout",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 34.14799999979823,
+      "cpu_time_total_us": 34.14799999979823,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          3072
+        ],
+        [
+          12288,
+          3072
+        ],
+        [
+          12288
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 47995.69999999972,
+      "self_cpu_time_total_us": 248.6710000002222,
+      "cpu_time_total_us": 2372.690000000007,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::t",
+      "count": 120,
+      "input_shapes": [
+        [
+          12288,
+          3072
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 165.04399999988345,
+      "cpu_time_total_us": 473.1769999998087,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::transpose",
+      "count": 120,
+      "input_shapes": [
+        [
+          12288,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 237.1549999999088,
+      "cpu_time_total_us": 308.13299999992523,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 120,
+      "input_shapes": [
+        [
+          12288,
+          3072
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 70.97800000001644,
+      "cpu_time_total_us": 70.97800000001644,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 60,
+      "input_shapes": [
+        [
+          8192,
+          12288
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 32.74900000006437,
+      "cpu_time_total_us": 32.74900000006437,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::dropout",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          12288
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 29.25299999992967,
+      "cpu_time_total_us": 29.25299999992967,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          12288
+        ],
+        [
+          3072,
+          12288
+        ],
+        [
+          3072
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 43935.599000000024,
+      "self_cpu_time_total_us": 209.48600000035003,
+      "cpu_time_total_us": 1884.810000000014,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::reshape",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          12288
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 55.392999999915446,
+      "cpu_time_total_us": 82.9829999999929,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          12288
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 27.590000000077453,
+      "cpu_time_total_us": 27.590000000077453,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::t",
+      "count": 120,
+      "input_shapes": [
+        [
+          3072,
+          12288
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 150.49799999977404,
+      "cpu_time_total_us": 429.6339999998345,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::transpose",
+      "count": 120,
+      "input_shapes": [
+        [
+          3072,
+          12288
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 215.98000000031425,
+      "cpu_time_total_us": 279.13600000006045,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 120,
+      "input_shapes": [
+        [
+          3072,
+          12288
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 63.1559999997462,
+      "cpu_time_total_us": 63.1559999997462,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          3072
+        ],
+        [
+          12288,
+          3072
+        ],
+        [
+          12288
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 8520.109000000088,
+      "self_cpu_time_total_us": 217.261000000085,
+      "cpu_time_total_us": 2018.73200000004,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 60,
+      "input_shapes": [
+        [
+          1383,
+          12288
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 27.8499999999176,
+      "cpu_time_total_us": 27.8499999999176,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::dropout",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          12288
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 23.276000000101703,
+      "cpu_time_total_us": 23.276000000101703,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          12288
+        ],
+        [
+          3072,
+          12288
+        ],
+        [
+          3072
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 7486.042000000016,
+      "self_cpu_time_total_us": 186.93000000018128,
+      "cpu_time_total_us": 1683.815999999957,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::reshape",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          12288
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 70.91799999993145,
+      "cpu_time_total_us": 94.96499999996013,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 60,
+      "input_shapes": [
+        [
+          1,
+          1383,
+          12288
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 24.047000000028675,
+      "cpu_time_total_us": 24.047000000028675,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::to",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          3072
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 0.4170000000158325,
+      "cpu_time_total_us": 0.4170000000158325,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          3072
+        ],
+        [
+          6144,
+          3072
+        ],
+        [
+          6144
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 22.68900000001304,
+      "self_cpu_time_total_us": 1.8130000000237487,
+      "cpu_time_total_us": 33.68700000003446,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::t",
+      "count": 1,
+      "input_shapes": [
+        [
+          6144,
+          3072
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.2540000000153668,
+      "cpu_time_total_us": 3.4610000000102445,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::transpose",
+      "count": 1,
+      "input_shapes": [
+        [
+          6144,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.536000000021886,
+      "cpu_time_total_us": 2.2069999999948777,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 1,
+      "input_shapes": [
+        [
+          6144,
+          3072
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 0.6709999999729916,
+      "cpu_time_total_us": 0.6709999999729916,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::chunk",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          6144
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.8860000000568107,
+      "cpu_time_total_us": 16.07800000003772,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::split",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          6144
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 6.152999999932945,
+      "cpu_time_total_us": 14.191999999980908,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::narrow",
+      "count": 2,
+      "input_shapes": [
+        [
+          1,
+          6144
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 3.5950000000884756,
+      "cpu_time_total_us": 8.039000000047963,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::slice",
+      "count": 2,
+      "input_shapes": [
+        [
+          1,
+          6144
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 3.34699999995064,
+      "cpu_time_total_us": 4.4439999999594875,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 2,
+      "input_shapes": [
+        [
+          1,
+          6144
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.0970000000088476,
+      "cpu_time_total_us": 1.0970000000088476,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::linear",
+      "count": 1,
+      "input_shapes": [
+        [
+          1,
+          8192,
+          3072
+        ],
+        [
+          64,
+          3072
+        ],
+        [
+          64
+        ]
+      ],
+      "category": "matmul_linear",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 21.024000000033993,
+      "self_cpu_time_total_us": 3.541999999957625,
+      "cpu_time_total_us": 31.71999999997206,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::t",
+      "count": 1,
+      "input_shapes": [
+        [
+          64,
+          3072
+        ]
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.4600000000791624,
+      "cpu_time_total_us": 3.2510000000474975,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::transpose",
+      "count": 1,
+      "input_shapes": [
+        [
+          64,
+          3072
+        ],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 1.2429999999585561,
+      "cpu_time_total_us": 1.790999999968335,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::as_strided",
+      "count": 1,
+      "input_shapes": [
+        [
+          64,
+          3072
+        ],
+        [],
+        [],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 0.5480000000097789,
+      "cpu_time_total_us": 0.5480000000097789,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "aten::view",
+      "count": 1,
+      "input_shapes": [
+        [
+          8192,
+          64
+        ],
+        []
+      ],
+      "category": "other_aten",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 0.4539999999688007,
+      "cpu_time_total_us": 0.4539999999688007,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    },
+    {
+      "key": "cudaDeviceSynchronize",
+      "count": 2,
+      "input_shapes": [],
+      "category": "non_aten_observer_or_kernel",
+      "self_device_time_total_us": 0.0,
+      "device_time_total_us": 0.0,
+      "self_cpu_time_total_us": 82183.88600000006,
+      "cpu_time_total_us": 82183.88600000006,
+      "device_type": "DeviceType.CPU",
+      "attribute_sources": {
+        "self_device": "self_device_time_total",
+        "device_total": "device_time_total",
+        "self_cpu": "self_cpu_time_total",
+        "cpu_total": "cpu_time_total"
+      }
+    }
+  ],
+  "config": "F",
+  "case_id": "remove_hair",
+  "profiled_call_1based": 2,
+  "observer_overhead": true,
+  "not_main_performance": true,
+  "record_shapes": true,
+  "profile_memory": false
+}

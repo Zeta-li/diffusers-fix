@@ -1,0 +1,17 @@
+**/*
+!*/
+!*.py
+!*.md
+!*.json
+!*.jsonl
+!*.csv
+!*.txt
+!.gitignore
+**/__pycache__/
+*_chrome_trace.json
+!val16_calibration_validation_20261023/figures/val16/quality_latency_scatter.png
+!val16_calibration_validation_20261023/figures/val16/latency_sources_bootstrap.png
+!val16_calibration_validation_20261023/figures/review_during_run/mb_val_190360_crop.png
+!val16_calibration_validation_20261023/figures/review_during_run/mb_val_175584_full.png
+!val16_calibration_validation_20261023/figures/review_during_run/mb_val_25139_full.png
+!val16_calibration_validation_20261023/figures/review_during_run/mb_val_50151_crop.png

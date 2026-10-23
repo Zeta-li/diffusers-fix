@@ -1,0 +1,45 @@
+{
+  "attempt": "20261022T213428",
+  "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+  "diffusers_version": "0.42.0.dev0",
+  "source": "/workspace/diffusers-fix/src/diffusers/__init__.py",
+  "git_commit": "73faca368c0da77645ea58836aa8780d2d8c5353",
+  "packages": {
+    "torch": "2.9.1+cu129",
+    "transformers": "5.3.0",
+    "peft": "0.21.2",
+    "huggingface_hub": "1.32.0",
+    "torchao": "0.16.0",
+    "safetensors": "0.8.0"
+  },
+  "gpu_driver_name": "NVIDIA L20Y",
+  "physical_gpu_user_confirmed": "H800",
+  "capability": [
+    9,
+    0
+  ],
+  "scripts": {
+    "finish_validation.py": "aa98868705fd11a10b03d7caccfae50ddcdea359cde763b22bc0b5783df75985",
+    "run_local_pilot.py": "4949b87ff57ec9e5c7256f0aa065e9c185c467d6e0c6f4bf33048280ddca7808",
+    "check_tiny_executor.py": "86199fc74951c720d6a2a220ed635e3cd0486a9d1b335e4be2e336286f3ee987",
+    "profile_local_step.py": "bb43fcb1d132641b0eba25f0fc19df1b45bcc5d5df16a06c5419cd348c3734ab",
+    "local_executor.py": "8f8688bf35625dbd31b2c23f6152a1484f18eb52cff778a9748b4c7d9cce1732",
+    "analyze_closure_probe.py": "6e5cf14b6961a0df87ae08df9878492dfa952ea4bbe00e1a87228529d0faa371",
+    "prepare_regions.py": "33f5162f252c4e18e9c18a4df0dc60c6050569329b2200b9c6fcfc45c48b886e",
+    "prepare_closure_probe.py": "321478afc284f55624401e5f08283408ead76aa205925ded7c92036b56a56d31",
+    "analyze_local_pilot.py": "018162a19262a5af9eb62d9f8b43990bfd1b9dae170a8d016e859a3418662cb7"
+  },
+  "region_manifest_sha256": "d26835e95d595a2804ebae2bdf2cbfbeaee032d35a4e0f3a6d04229c3b88db2c",
+  "repeats": 3,
+  "dtype": "bfloat16",
+  "attention": "native PyTorch SDPA",
+  "vae_tiling": true,
+  "cfg": 1,
+  "steps": 8,
+  "fresh_request_cache": true,
+  "automatic_region_locator": false,
+  "region_generation_in_request_timing": false,
+  "request_scope": "memory image and preprovided ROI to PIL, includes cache setup/cleanup, excludes PNG and metrics",
+  "model_load_and_fuse_seconds": 15.016620046459138,
+  "closure_probe_sha256": "158453be1320d10729e2fa23534b0584afb61552465e129742bf8fe08259d852"
+}

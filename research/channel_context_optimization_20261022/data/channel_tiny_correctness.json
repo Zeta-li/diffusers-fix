@@ -1,0 +1,4930 @@
+{
+  "status": "pass",
+  "device": "cpu",
+  "torch_version": "2.9.1+cu129",
+  "started_at": "2026-10-22T22:52:53.422746+08:00",
+  "tiny_model_config": {
+    "patch_size": 2,
+    "in_channels": 8,
+    "out_channels": 2,
+    "num_layers": 2,
+    "attention_head_dim": 16,
+    "num_attention_heads": 2,
+    "joint_attention_dim": 24,
+    "axes_dims_rope": [
+      4,
+      6,
+      6
+    ]
+  },
+  "real_20b_model_forwards": 0,
+  "hypothesis_only": true,
+  "no_train8_statistics_used": true,
+  "actual_tiny_forward_calls": {
+    "by_path": {
+      "channel_local": {
+        "invoked": 96,
+        "completed": 96,
+        "failed": 0
+      },
+      "native_reference": {
+        "invoked": 60,
+        "completed": 60,
+        "failed": 0
+      },
+      "reference_local": {
+        "invoked": 16,
+        "completed": 16,
+        "failed": 0
+      }
+    },
+    "invoked": 172,
+    "completed": 172,
+    "failed": 0
+  },
+  "expected_completed_tiny_forward_calls": 172,
+  "forward_accounting_scope": "Whole tiny Transformer calls; coefficient, theory and precompute submodules excluded",
+  "sources": {
+    "/workspace/diffusers-fix/research/channel_context_optimization_20261022/scripts/check_channel_correction.py": "5a6870f217b6aa8599d4d6867020b663a5cf4d6f2c85c80e74a3717db8af8098",
+    "/workspace/diffusers-fix/research/channel_context_optimization_20261022/scripts/value_channel_correction.py": "f3e088226bea615a1f703806226ebf4b8f121d7853d79aeadab7cb29d82a0151",
+    "/workspace/diffusers-fix/research/rotation_context_optimization_20261022/scripts/local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "/workspace/diffusers-fix/research/rotation_context_optimization_20261022/scripts/value_time_correction.py": "fb1203fa955e71392c2e73ea2c47d0d9ed9e7d358f01e605a31e54097255ac2e"
+  },
+  "tests": [
+    {
+      "name": "closed_form_nonzero_mean_variance_bias_anchor_center",
+      "status": "pass",
+      "result": {
+        "nonzero_mean_variance_bias": true,
+        "anchor_mean_verified": true,
+        "channel_gains_distinct": true,
+        "max_alpha_error": 1.1920928955078125e-07,
+        "max_delta_error": 1.1920928955078125e-07
+      },
+      "seconds": 0.004211533814668655,
+      "actual_tiny_forward_calls": {
+        "by_path": {},
+        "invoked": 0,
+        "completed": 0,
+        "failed": 0
+      }
+    },
+    {
+      "name": "monte_carlo_ridge_optimal_mse",
+      "status": "pass",
+      "result": {
+        "samples": 120000,
+        "empirical_mse": [
+          0.04353854060173035,
+          0.045096900314092636,
+          0.07776343077421188,
+          0.15686210989952087
+        ],
+        "theoretical_mse": [
+          0.043609678745269775,
+          0.045182645320892334,
+          0.07812267541885376,
+          0.1566941738128662
+        ],
+        "max_absolute_mse_gap": 0.0003592446446418762,
+        "ridge_objective_local_optimum": true,
+        "sample_calibration_performed": false
+      },
+      "seconds": 0.012069922871887684,
+      "actual_tiny_forward_calls": {
+        "by_path": {},
+        "invoked": 0,
+        "completed": 0,
+        "failed": 0
+      }
+    },
+    {
+      "name": "collinear_ridge_bias_and_zero_variance",
+      "status": "pass",
+      "result": {
+        "zero_projection_row_finite": true,
+        "zero_variance_finite": true,
+        "max_collinear_prediction_error": 2.1457672119140625e-06,
+        "max_analytic_ridge_error_gap": 1.5220803106785752e-06,
+        "collinear_interpretation": "Matches analytic identity-prior ridge bias; not mathematically zero for nonunit scale"
+      },
+      "seconds": 0.0009033679962158203,
+      "actual_tiny_forward_calls": {
+        "by_path": {},
+        "invoked": 0,
+        "completed": 0,
+        "failed": 0
+      }
+    },
+    {
+      "name": "unsupported_states_and_statistics",
+      "status": "pass",
+      "result": {
+        "missing_variance": "Statistics must supply mean and variance",
+        "wrong_shape": "mean must have shape (2, 32) or (2, 8, 32)",
+        "negative_variance": "Variance statistics must be nonnegative population variances",
+        "nonfinite_mean": "Nonfinite mean statistics",
+        "nonfinite_variance": "Nonfinite variance statistics",
+        "unsupported_shift_mode": "Channel correction mode must be none or affine",
+        "uninitialized_anchor": "Channel correction requires initialized real cache timestamps",
+        "mode_changed_mid_request": "Changing correction mode during a request requires begin",
+        "zero_cond_t": "Channel pilot requires ordinary timestep conditioning",
+        "wrong_schedule_length": "Channel pilot requires eight finite fixed scheduler timesteps",
+        "missing_tables": "prepare_tables must complete before enabling Value correction"
+      },
+      "seconds": 0.01462596282362938,
+      "actual_tiny_forward_calls": {
+        "by_path": {},
+        "invoked": 0,
+        "completed": 0,
+        "failed": 0
+      }
+    },
+    {
+      "name": "fp32_tables_statistics_schedule",
+      "status": "pass",
+      "result": {
+        "default_metadata": {
+          "status": "prepared",
+          "prepare_seconds": 0.0016878629103302956,
+          "table_bytes": 35328,
+          "table_dtype": "torch.float32",
+          "alpha_shape": [
+            2,
+            8,
+            8,
+            2,
+            16
+          ],
+          "delta_shape": [
+            2,
+            8,
+            8,
+            2,
+            16
+          ],
+          "projected_shift_shape": [
+            2,
+            8,
+            2,
+            16
+          ],
+          "rho_shape": [
+            2,
+            8,
+            8
+          ],
+          "model_device": "cpu",
+          "model_dtype": "torch.float32",
+          "raw_scheduler_timesteps": [
+            1000.0,
+            954.5454711914062,
+            900.0,
+            833.3333740234375,
+            750.0,
+            642.8570556640625,
+            500.0,
+            300.0
+          ],
+          "model_timesteps": [
+            1.0,
+            0.9545454978942871,
+            0.8999999761581421,
+            0.8333333730697632,
+            0.75,
+            0.6428570747375488,
+            0.5,
+            0.30000001192092896
+          ],
+          "timestep_conversion": "Cast scheduler timestep to model dtype, then divide by 1000, matching pipeline input",
+          "preparation_batch_size": 1,
+          "preparation_timestep_calls": 8,
+          "shift_projection_includes_linear_bias": true,
+          "feature_mean_projection_has_bias": false,
+          "alpha_clipped": false,
+          "diagonal_alpha": 1.0,
+          "diagonal_delta": 0.0,
+          "ridge_relative": 1e-06,
+          "ridge_floor": 1e-12,
+          "hyperparameter_search_performed": false,
+          "ridge_definition": "lambda_s=1e-6*mean_output_channel(D_s)+1e-12; a=(N+lambda_s)/(D+lambda_s)",
+          "objective": "Diagonal-covariance frozen-centered-feature MSE plus lambda_s*(a-1)^2 for each output channel",
+          "rho_definition": "Square root of summed predicted centered Value residual variance divided by summed target variance; surrogate diagnostic only",
+          "schedule_contract": "Reuse only with identical frozen fused weights, dtype, device, statistics and exact eight model timesteps; caller verifies scheduler",
+          "inference_cost": "No extra token projection; eager per-token channel coefficient gathers add bandwidth and temporary memory",
+          "interpretation": "Per-output-channel attention Value approximation; does not recover hidden drift, stale K or general cross-channel covariance; no quality claim",
+          "stage4_scripts": "/workspace/diffusers-fix/research/rotation_context_optimization_20261022/scripts",
+          "statistics_mode": "no_sample_mean_zero_variance_one",
+          "input_shapes": null,
+          "caller_statistics_source": null,
+          "caller_statistics_source_hash": null,
+          "statistics_float32_content_sha256": "0dbc0e7b5a1b6faa5780446a2588719c772afbdb2b1a1c30faf92ad33d5160a3",
+          "calibration_performed_here": false,
+          "sample_count_verified": false,
+          "provenance_responsibility": "Caller supplies and verifies source hashes, calibration-only data and image-level split",
+          "statistic_semantics": "Target img_norm1 output before modulation; population variance, not post-modulation features",
+          "timestep_statistics_semantics": "For pair (t,s), the same frozen h=mean_s+xi_s is used at both timesteps with diagonal Var(xi_s)=variance_s; anchor mean and variance only",
+          "alpha_min": 0.9599928259849548,
+          "alpha_max": 1.039223313331604,
+          "alpha_causal_min": 0.9599928259849548,
+          "alpha_causal_max": 1.034624457359314,
+          "rho_causal_min": 0.0,
+          "rho_causal_max": 0.06378135085105896,
+          "delta_min": -0.07595113664865494,
+          "delta_max": 0.07510827481746674,
+          "regularizer_min": 3.028274022653932e-07,
+          "regularizer_max": 3.4189125130978937e-07,
+          "finite": true
+        },
+        "shared_and_timestep_statistics_equal": true,
+        "statistics_api_uses_synthetic_data_only": true,
+        "tables_persist_after_clear": true
+      },
+      "seconds": 0.011151861399412155,
+      "actual_tiny_forward_calls": {
+        "by_path": {},
+        "invoked": 0,
+        "completed": 0,
+        "failed": 0
+      }
+    },
+    {
+      "name": "fp32_eight_full_steps_all_modes",
+      "status": "pass",
+      "result": {
+        "full_selection": true,
+        "cases": [
+          {
+            "case": "none",
+            "mode": "none",
+            "steps": [
+              {
+                "step": 1,
+                "full_step": true,
+                "age_after": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 2,
+                "full_step": true,
+                "age_after": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 3,
+                "full_step": true,
+                "age_after": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 4,
+                "full_step": true,
+                "age_after": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 5,
+                "full_step": true,
+                "age_after": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 6,
+                "full_step": true,
+                "age_after": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 7,
+                "full_step": true,
+                "age_after": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 8,
+                "full_step": true,
+                "age_after": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              }
+            ],
+            "cache_audits": [
+              {
+                "step": 1,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 1,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 0,
+                "effective_anchor": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 1,
+                "effective_anchor": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 0,
+                "effective_anchor": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 1,
+                "effective_anchor": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 0,
+                "effective_anchor": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 1,
+                "effective_anchor": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 0,
+                "effective_anchor": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 1,
+                "effective_anchor": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 0,
+                "effective_anchor": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 1,
+                "effective_anchor": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 0,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 1,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              }
+            ],
+            "no_training_or_calibration_in_this_test": true
+          },
+          {
+            "case": "no_sample_affine",
+            "mode": "affine",
+            "steps": [
+              {
+                "step": 1,
+                "full_step": true,
+                "age_after": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 2,
+                "full_step": true,
+                "age_after": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 3,
+                "full_step": true,
+                "age_after": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 4,
+                "full_step": true,
+                "age_after": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 5,
+                "full_step": true,
+                "age_after": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 6,
+                "full_step": true,
+                "age_after": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 7,
+                "full_step": true,
+                "age_after": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 8,
+                "full_step": true,
+                "age_after": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              }
+            ],
+            "cache_audits": [
+              {
+                "step": 1,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 1,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 0,
+                "effective_anchor": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 1,
+                "effective_anchor": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 0,
+                "effective_anchor": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 1,
+                "effective_anchor": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 0,
+                "effective_anchor": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 1,
+                "effective_anchor": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 0,
+                "effective_anchor": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 1,
+                "effective_anchor": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 0,
+                "effective_anchor": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 1,
+                "effective_anchor": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 0,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 1,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              }
+            ],
+            "no_training_or_calibration_in_this_test": true
+          },
+          {
+            "case": "synthetic_statistics_affine",
+            "mode": "affine",
+            "steps": [
+              {
+                "step": 1,
+                "full_step": true,
+                "age_after": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 2,
+                "full_step": true,
+                "age_after": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 3,
+                "full_step": true,
+                "age_after": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 4,
+                "full_step": true,
+                "age_after": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 5,
+                "full_step": true,
+                "age_after": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 6,
+                "full_step": true,
+                "age_after": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 7,
+                "full_step": true,
+                "age_after": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 8,
+                "full_step": true,
+                "age_after": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              }
+            ],
+            "cache_audits": [
+              {
+                "step": 1,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 1,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 0,
+                "effective_anchor": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 1,
+                "effective_anchor": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 0,
+                "effective_anchor": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 1,
+                "effective_anchor": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 0,
+                "effective_anchor": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 1,
+                "effective_anchor": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 0,
+                "effective_anchor": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 1,
+                "effective_anchor": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 0,
+                "effective_anchor": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 1,
+                "effective_anchor": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 0,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 1,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              }
+            ],
+            "no_training_or_calibration_in_this_test": true
+          }
+        ]
+      },
+      "seconds": 0.09156797081232071,
+      "actual_tiny_forward_calls": {
+        "by_path": {
+          "channel_local": {
+            "invoked": 24,
+            "completed": 24,
+            "failed": 0
+          },
+          "native_reference": {
+            "invoked": 24,
+            "completed": 24,
+            "failed": 0
+          }
+        },
+        "invoked": 48,
+        "completed": 48,
+        "failed": 0
+      }
+    },
+    {
+      "name": "fp32_dynamic_real_anchors_no_pollution",
+      "status": "pass",
+      "result": {
+        "full_selection": false,
+        "cases": [
+          {
+            "case": "none",
+            "mode": "none",
+            "steps": [
+              {
+                "step": 1,
+                "full_step": true,
+                "age_after": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 2,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 3,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 4,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 5,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 6,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 7,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 8,
+                "full_step": true,
+                "age_after": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              }
+            ],
+            "cache_audits": [
+              {
+                "step": 1,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 1,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 0,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 1,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              }
+            ],
+            "no_training_or_calibration_in_this_test": true
+          },
+          {
+            "case": "no_sample_affine",
+            "mode": "affine",
+            "steps": [
+              {
+                "step": 1,
+                "full_step": true,
+                "age_after": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 2,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 3,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 4,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 5,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 6,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 7,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 8,
+                "full_step": true,
+                "age_after": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              }
+            ],
+            "cache_audits": [
+              {
+                "step": 1,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 1,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 0,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 1,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              }
+            ],
+            "no_training_or_calibration_in_this_test": true
+          },
+          {
+            "case": "synthetic_statistics_affine",
+            "mode": "affine",
+            "steps": [
+              {
+                "step": 1,
+                "full_step": true,
+                "age_after": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 2,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 3,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 4,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 5,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 6,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 7,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 8,
+                "full_step": true,
+                "age_after": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              }
+            ],
+            "cache_audits": [
+              {
+                "step": 1,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 1,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 0,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 1,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              }
+            ],
+            "no_training_or_calibration_in_this_test": true
+          }
+        ]
+      },
+      "seconds": 0.08451211731880903,
+      "actual_tiny_forward_calls": {
+        "by_path": {
+          "channel_local": {
+            "invoked": 24,
+            "completed": 24,
+            "failed": 0
+          },
+          "native_reference": {
+            "invoked": 6,
+            "completed": 6,
+            "failed": 0
+          },
+          "reference_local": {
+            "invoked": 8,
+            "completed": 8,
+            "failed": 0
+          }
+        },
+        "invoked": 38,
+        "completed": 38,
+        "failed": 0
+      }
+    },
+    {
+      "name": "bf16_tables_statistics_schedule",
+      "status": "pass",
+      "result": {
+        "default_metadata": {
+          "status": "prepared",
+          "prepare_seconds": 0.0032169027253985405,
+          "table_bytes": 35328,
+          "table_dtype": "torch.float32",
+          "alpha_shape": [
+            2,
+            8,
+            8,
+            2,
+            16
+          ],
+          "delta_shape": [
+            2,
+            8,
+            8,
+            2,
+            16
+          ],
+          "projected_shift_shape": [
+            2,
+            8,
+            2,
+            16
+          ],
+          "rho_shape": [
+            2,
+            8,
+            8
+          ],
+          "model_device": "cpu",
+          "model_dtype": "torch.bfloat16",
+          "raw_scheduler_timesteps": [
+            1000.0,
+            954.5454711914062,
+            900.0,
+            833.3333740234375,
+            750.0,
+            642.8570556640625,
+            500.0,
+            300.0
+          ],
+          "model_timesteps": [
+            1.0,
+            0.95703125,
+            0.8984375,
+            0.83203125,
+            0.75390625,
+            0.64453125,
+            0.5,
+            0.30078125
+          ],
+          "timestep_conversion": "Cast scheduler timestep to model dtype, then divide by 1000, matching pipeline input",
+          "preparation_batch_size": 1,
+          "preparation_timestep_calls": 8,
+          "shift_projection_includes_linear_bias": true,
+          "feature_mean_projection_has_bias": false,
+          "alpha_clipped": false,
+          "diagonal_alpha": 1.0,
+          "diagonal_delta": 0.0,
+          "ridge_relative": 1e-06,
+          "ridge_floor": 1e-12,
+          "hyperparameter_search_performed": false,
+          "ridge_definition": "lambda_s=1e-6*mean_output_channel(D_s)+1e-12; a=(N+lambda_s)/(D+lambda_s)",
+          "objective": "Diagonal-covariance frozen-centered-feature MSE plus lambda_s*(a-1)^2 for each output channel",
+          "rho_definition": "Square root of summed predicted centered Value residual variance divided by summed target variance; surrogate diagnostic only",
+          "schedule_contract": "Reuse only with identical frozen fused weights, dtype, device, statistics and exact eight model timesteps; caller verifies scheduler",
+          "inference_cost": "No extra token projection; eager per-token channel coefficient gathers add bandwidth and temporary memory",
+          "interpretation": "Per-output-channel attention Value approximation; does not recover hidden drift, stale K or general cross-channel covariance; no quality claim",
+          "stage4_scripts": "/workspace/diffusers-fix/research/rotation_context_optimization_20261022/scripts",
+          "statistics_mode": "no_sample_mean_zero_variance_one",
+          "input_shapes": null,
+          "caller_statistics_source": null,
+          "caller_statistics_source_hash": null,
+          "statistics_float32_content_sha256": "0dbc0e7b5a1b6faa5780446a2588719c772afbdb2b1a1c30faf92ad33d5160a3",
+          "calibration_performed_here": false,
+          "sample_count_verified": false,
+          "provenance_responsibility": "Caller supplies and verifies source hashes, calibration-only data and image-level split",
+          "statistic_semantics": "Target img_norm1 output before modulation; population variance, not post-modulation features",
+          "timestep_statistics_semantics": "For pair (t,s), the same frozen h=mean_s+xi_s is used at both timesteps with diagonal Var(xi_s)=variance_s; anchor mean and variance only",
+          "alpha_min": 0.9547671675682068,
+          "alpha_max": 1.045326590538025,
+          "alpha_causal_min": 0.9547671675682068,
+          "alpha_causal_max": 1.037337303161621,
+          "rho_causal_min": 0.0,
+          "rho_causal_max": 0.06590856611728668,
+          "delta_min": -0.08403857052326202,
+          "delta_max": 0.08684328198432922,
+          "regularizer_min": 3.0139901241454936e-07,
+          "regularizer_max": 3.4326808417972643e-07,
+          "finite": true
+        },
+        "shared_and_timestep_statistics_equal": true,
+        "statistics_api_uses_synthetic_data_only": true,
+        "tables_persist_after_clear": true
+      },
+      "seconds": 0.015162719413638115,
+      "actual_tiny_forward_calls": {
+        "by_path": {
+          "channel_local": {
+            "invoked": 0,
+            "completed": 0,
+            "failed": 0
+          },
+          "native_reference": {
+            "invoked": 0,
+            "completed": 0,
+            "failed": 0
+          },
+          "reference_local": {
+            "invoked": 0,
+            "completed": 0,
+            "failed": 0
+          }
+        },
+        "invoked": 0,
+        "completed": 0,
+        "failed": 0
+      }
+    },
+    {
+      "name": "bf16_eight_full_steps_all_modes",
+      "status": "pass",
+      "result": {
+        "full_selection": true,
+        "cases": [
+          {
+            "case": "none",
+            "mode": "none",
+            "steps": [
+              {
+                "step": 1,
+                "full_step": true,
+                "age_after": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 2,
+                "full_step": true,
+                "age_after": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 3,
+                "full_step": true,
+                "age_after": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 4,
+                "full_step": true,
+                "age_after": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 5,
+                "full_step": true,
+                "age_after": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 6,
+                "full_step": true,
+                "age_after": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 7,
+                "full_step": true,
+                "age_after": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 8,
+                "full_step": true,
+                "age_after": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              }
+            ],
+            "cache_audits": [
+              {
+                "step": 1,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 1,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 0,
+                "effective_anchor": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 1,
+                "effective_anchor": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 0,
+                "effective_anchor": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 1,
+                "effective_anchor": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 0,
+                "effective_anchor": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 1,
+                "effective_anchor": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 0,
+                "effective_anchor": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 1,
+                "effective_anchor": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 0,
+                "effective_anchor": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 1,
+                "effective_anchor": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 0,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 1,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              }
+            ],
+            "no_training_or_calibration_in_this_test": true
+          },
+          {
+            "case": "no_sample_affine",
+            "mode": "affine",
+            "steps": [
+              {
+                "step": 1,
+                "full_step": true,
+                "age_after": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 2,
+                "full_step": true,
+                "age_after": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 3,
+                "full_step": true,
+                "age_after": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 4,
+                "full_step": true,
+                "age_after": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 5,
+                "full_step": true,
+                "age_after": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 6,
+                "full_step": true,
+                "age_after": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 7,
+                "full_step": true,
+                "age_after": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 8,
+                "full_step": true,
+                "age_after": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              }
+            ],
+            "cache_audits": [
+              {
+                "step": 1,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 1,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 0,
+                "effective_anchor": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 1,
+                "effective_anchor": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 0,
+                "effective_anchor": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 1,
+                "effective_anchor": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 0,
+                "effective_anchor": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 1,
+                "effective_anchor": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 0,
+                "effective_anchor": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 1,
+                "effective_anchor": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 0,
+                "effective_anchor": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 1,
+                "effective_anchor": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 0,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 1,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              }
+            ],
+            "no_training_or_calibration_in_this_test": true
+          },
+          {
+            "case": "synthetic_statistics_affine",
+            "mode": "affine",
+            "steps": [
+              {
+                "step": 1,
+                "full_step": true,
+                "age_after": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 2,
+                "full_step": true,
+                "age_after": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 3,
+                "full_step": true,
+                "age_after": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 4,
+                "full_step": true,
+                "age_after": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 5,
+                "full_step": true,
+                "age_after": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 6,
+                "full_step": true,
+                "age_after": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 7,
+                "full_step": true,
+                "age_after": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 8,
+                "full_step": true,
+                "age_after": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              }
+            ],
+            "cache_audits": [
+              {
+                "step": 1,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 1,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 0,
+                "effective_anchor": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 1,
+                "effective_anchor": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 0,
+                "effective_anchor": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 1,
+                "effective_anchor": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 0,
+                "effective_anchor": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 1,
+                "effective_anchor": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 0,
+                "effective_anchor": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 1,
+                "effective_anchor": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 0,
+                "effective_anchor": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 1,
+                "effective_anchor": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 0,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 1,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              }
+            ],
+            "no_training_or_calibration_in_this_test": true
+          }
+        ]
+      },
+      "seconds": 0.13403489906340837,
+      "actual_tiny_forward_calls": {
+        "by_path": {
+          "channel_local": {
+            "invoked": 24,
+            "completed": 24,
+            "failed": 0
+          },
+          "native_reference": {
+            "invoked": 24,
+            "completed": 24,
+            "failed": 0
+          },
+          "reference_local": {
+            "invoked": 0,
+            "completed": 0,
+            "failed": 0
+          }
+        },
+        "invoked": 48,
+        "completed": 48,
+        "failed": 0
+      }
+    },
+    {
+      "name": "bf16_dynamic_real_anchors_no_pollution",
+      "status": "pass",
+      "result": {
+        "full_selection": false,
+        "cases": [
+          {
+            "case": "none",
+            "mode": "none",
+            "steps": [
+              {
+                "step": 1,
+                "full_step": true,
+                "age_after": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 2,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 3,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 4,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 5,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 6,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 7,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 8,
+                "full_step": true,
+                "age_after": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              }
+            ],
+            "cache_audits": [
+              {
+                "step": 1,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 1,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 0,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 1,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              }
+            ],
+            "no_training_or_calibration_in_this_test": true
+          },
+          {
+            "case": "no_sample_affine",
+            "mode": "affine",
+            "steps": [
+              {
+                "step": 1,
+                "full_step": true,
+                "age_after": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 2,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 3,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 4,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 5,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 6,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 7,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 8,
+                "full_step": true,
+                "age_after": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              }
+            ],
+            "cache_audits": [
+              {
+                "step": 1,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 1,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 0,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 1,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              }
+            ],
+            "no_training_or_calibration_in_this_test": true
+          },
+          {
+            "case": "synthetic_statistics_affine",
+            "mode": "affine",
+            "steps": [
+              {
+                "step": 1,
+                "full_step": true,
+                "age_after": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              },
+              {
+                "step": 2,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 3,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 4,
+                "full_step": false,
+                "age_after": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 5,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 6,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 7,
+                "full_step": false,
+                "age_after": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": true,
+                "dense_reference_exact": false
+              },
+              {
+                "step": 8,
+                "full_step": true,
+                "age_after": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "gathered_image_input_exact": true,
+                "target_projection_reduced": false,
+                "dense_reference_exact": true
+              }
+            ],
+            "cache_audits": [
+              {
+                "step": 1,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 1,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 2,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 3,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 0,
+                "effective_anchor": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 4,
+                "layer": 1,
+                "effective_anchor": [
+                  0,
+                  3,
+                  0,
+                  0,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 5,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  4,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 6,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  0,
+                  5,
+                  3,
+                  0
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 0,
+                "effective_anchor": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 7,
+                "layer": 1,
+                "effective_anchor": [
+                  4,
+                  3,
+                  6,
+                  5,
+                  3,
+                  6
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 0,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              },
+              {
+                "step": 8,
+                "layer": 1,
+                "effective_anchor": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                "real_cache_and_age_unchanged": true,
+                "selected_current_value_exact": true,
+                "per_token_channel_formula_exact": true
+              }
+            ],
+            "no_training_or_calibration_in_this_test": true
+          }
+        ]
+      },
+      "seconds": 0.11981059610843658,
+      "actual_tiny_forward_calls": {
+        "by_path": {
+          "channel_local": {
+            "invoked": 24,
+            "completed": 24,
+            "failed": 0
+          },
+          "native_reference": {
+            "invoked": 6,
+            "completed": 6,
+            "failed": 0
+          },
+          "reference_local": {
+            "invoked": 8,
+            "completed": 8,
+            "failed": 0
+          }
+        },
+        "invoked": 38,
+        "completed": 38,
+        "failed": 0
+      }
+    }
+  ],
+  "failed_tests": [],
+  "elapsed_seconds": 0.5007238360121846,
+  "completed_at": "2026-10-22T22:52:53.923842+08:00"
+}

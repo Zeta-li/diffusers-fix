@@ -1,0 +1,300 @@
+import argparse
+import hashlib
+import importlib.metadata
+import json
+import math
+import os
+import subprocess
+import time
+import traceback
+from collections import Counter, defaultdict
+from datetime import datetime
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+os.environ["HF_HUB_OFFLINE"] = "1"
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+import torch
+from PIL import Image
+
+import diffusers
+from diffusers import FlowMatchEulerDiscreteScheduler, QwenImageEditPipeline
+from diffusers.pipelines.qwenimage.pipeline_qwenimage_edit import calculate_dimensions
+
+
+ROOT = Path(__file__).resolve().parent.parent
+BASE = "/workspace/model-weights/Qwen-Image-Edit"
+LORA = "/workspace/model-weights/Qwen-Image-Lightning"
+LORA_FILE = "Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors"
+SEED = 2026102201
+SHIFT3 = {
+    "base_image_seq_len": 256,
+    "base_shift": math.log(3),
+    "invert_sigmas": False,
+    "max_image_seq_len": 8192,
+    "max_shift": math.log(3),
+    "num_train_timesteps": 1000,
+    "shift": 1.0,
+    "shift_terminal": None,
+    "stochastic_sampling": False,
+    "time_shift_type": "exponential",
+    "use_beta_sigmas": False,
+    "use_dynamic_shifting": True,
+    "use_exponential_sigmas": False,
+    "use_karras_sigmas": False,
+}
+CONFIGS = [
+    dict(id="A_base50_cfg4", steps=50, cfg=4.0, scheduler="base", lora="none"),
+    dict(id="B_base8_cfg4_shift3", steps=8, cfg=4.0, scheduler="shift3", lora="none"),
+    dict(id="C_base8_cfg1_shift3", steps=8, cfg=1.0, scheduler="shift3", lora="none"),
+    dict(id="D_lightning8_cfg1", steps=8, cfg=1.0, scheduler="shift3", lora="unfused"),
+    dict(id="E_lightning8_fused", steps=8, cfg=1.0, scheduler="shift3", lora="fused"),
+]
+
+
+def write_json(path, value):
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2, default=str))
+
+
+def tensor_hash(tensor):
+    return hashlib.sha256(tensor.detach().cpu().contiguous().view(torch.uint8).numpy().tobytes()).hexdigest()
+
+
+def update_status(phase, **fields):
+    value = dict(phase=phase, time=datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(), **fields)
+    write_json(ROOT / "status.json", value)
+    print(json.dumps(value, ensure_ascii=False), flush=True)
+
+
+class Recorder:
+    def __init__(self):
+        self.active = False
+        self.events = []
+        self.shapes = []
+
+    def wrap(self, obj, attribute, label, shapes=False):
+        original = getattr(obj, attribute)
+
+        def measured(*args, **kwargs):
+            if not self.active:
+                return original(*args, **kwargs)
+            start = torch.cuda.Event(enable_timing=True)
+            end = torch.cuda.Event(enable_timing=True)
+            start.record()
+            output = original(*args, **kwargs)
+            end.record()
+            self.events.append((label, start, end))
+            if shapes:
+                self.shapes.append(
+                    {
+                        "hidden_states": list(kwargs["hidden_states"].shape),
+                        "encoder_hidden_states": list(kwargs["encoder_hidden_states"].shape),
+                        "img_shapes": kwargs.get("img_shapes"),
+                    }
+                )
+            return output
+
+        setattr(obj, attribute, measured)
+
+    def reset(self):
+        self.events = []
+        self.shapes = []
+
+    def seconds(self):
+        result = defaultdict(float)
+        for label, start, end in self.events:
+            result[label] += start.elapsed_time(end) / 1000
+        return dict(result)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repeat-anchor", type=int, default=3)
+    parser.add_argument("--resume", action="store_true")
+    args = parser.parse_args()
+    torch.set_num_threads(8)
+    torch.backends.cuda.matmul.allow_tf32 = False
+    for name in ["data", "outputs", "latents"]:
+        (ROOT / name).mkdir(exist_ok=True)
+    cases = json.loads((ROOT / "cases.json").read_text())["cases"]
+    rows_path = ROOT / "data" / "runs.jsonl"
+    previous_rows = [json.loads(line) for line in rows_path.read_text().splitlines()] if rows_path.exists() else []
+    if previous_rows and not args.resume:
+        raise RuntimeError("Existing measurements found; use --resume to preserve them")
+    completed = {row["run_id"] for row in previous_rows if row["status"] == "complete"}
+    attempt_id = datetime.now(ZoneInfo("Asia/Shanghai")).strftime("%Y%m%dT%H%M%S")
+    write_json(ROOT / "configs.json", dict(seed=SEED, configs=CONFIGS, shift3=SHIFT3))
+    environment = {
+        "attempt_id": attempt_id,
+        "resume": args.resume,
+        "preserved_run_ids": sorted(completed),
+        "script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        "source": diffusers.__file__,
+        "diffusers_source_version": diffusers.__version__,
+        "code_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
+        "python": os.sys.version,
+        "packages": {name: importlib.metadata.version(name) for name in ["torch", "transformers", "huggingface_hub", "peft", "accelerate", "safetensors", "torchao"]},
+        "driver_gpu": torch.cuda.get_device_name(),
+        "device_capability": list(torch.cuda.get_device_capability()),
+        "device_total_bytes": torch.cuda.get_device_properties(0).total_memory,
+        "physical_gpu_user_confirmation": "H800",
+        "dtype": "bfloat16",
+        "batch_size": 1,
+        "vae_tiling": True,
+        "cpu_offload": False,
+        "cross_request_condition_cache": False,
+        "attention_backend": "native PyTorch SDPA",
+        "torch_flash_sdp_enabled": torch.backends.cuda.flash_sdp_enabled(),
+        "torch_mem_efficient_sdp_enabled": torch.backends.cuda.mem_efficient_sdp_enabled(),
+        "torch_math_sdp_enabled": torch.backends.cuda.math_sdp_enabled(),
+        "tf32": torch.backends.cuda.matmul.allow_tf32,
+    }
+    environment_path = ROOT / "data" / (f"environment_{attempt_id}.json" if args.resume else "environment.json")
+    write_json(environment_path, environment)
+    update_status("loading_base")
+    load_start = time.perf_counter()
+    pipe = QwenImageEditPipeline.from_pretrained(BASE, torch_dtype=torch.bfloat16, local_files_only=True)
+    pipe.to("cuda")
+    pipe.vae.enable_tiling()
+    pipe.transformer.set_attention_backend("native")
+    pipe.set_progress_bar_config(disable=True)
+    pipe.transformer.eval()
+    pipe.text_encoder.eval()
+    pipe.vae.eval()
+    torch.cuda.synchronize()
+    environment["model_load_seconds"] = time.perf_counter() - load_start
+    environment["attention_processors"] = sorted({type(p).__name__ for p in pipe.transformer.attn_processors.values()})
+    write_json(environment_path, environment)
+    base_scheduler = dict(pipe.scheduler.config)
+    write_json(ROOT / "data" / "base_scheduler.json", base_scheduler)
+    recorder = Recorder()
+    recorder.wrap(pipe, "encode_prompt", "prompt_encode")
+    recorder.wrap(pipe, "_encode_vae_image", "vae_encode")
+    recorder.wrap(pipe.transformer, "forward", "dit", shapes=True)
+    recorder.wrap(pipe.vae, "decode", "vae_decode")
+    prepared = {}
+    for case in cases:
+        image = Image.open(ROOT / case["image"]).convert("RGB")
+        width, height, _ = calculate_dimensions(1024 * 1024, image.width / image.height)
+        multiple = pipe.vae_scale_factor * 2
+        width, height = width // multiple * multiple, height // multiple * multiple
+        sequence = (height // multiple) * (width // multiple)
+        generator = torch.Generator(device="cuda").manual_seed(SEED)
+        latent = torch.randn((1, sequence, pipe.transformer.config.in_channels), generator=generator, device="cuda", dtype=torch.bfloat16)
+        latent_hash = tensor_hash(latent)
+        latent_path = ROOT / "latents" / f"{case['case_id']}.pt"
+        if latent_path.exists():
+            assert tensor_hash(torch.load(latent_path, weights_only=True)) == latent_hash
+        else:
+            torch.save(latent.cpu(), latent_path)
+        prepared[case["case_id"]] = dict(image=image, width=width, height=height, latent=latent, latent_hash=latent_hash)
+    adapter_loaded = False
+    adapter_fused = False
+    for config in CONFIGS:
+        if config["lora"] == "unfused" and not adapter_loaded:
+            update_status("loading_lora")
+            started = time.perf_counter()
+            pipe.load_lora_weights(LORA, weight_name=LORA_FILE, adapter_name="lightning8", local_files_only=True)
+            pipe.set_adapters(["lightning8"], adapter_weights=[1.0])
+            adapter_loaded = True
+            adapter_params = [(name, param) for name, param in pipe.transformer.named_parameters() if "lora_" in name]
+            assert adapter_params
+            assert any(param.detach().abs().max().item() > 0 for _, param in adapter_params[:8])
+            write_json(ROOT / "data" / "adapter.json", {
+                "load_seconds": time.perf_counter() - started,
+                "lora_parameters": sum(param.numel() for _, param in adapter_params),
+                "adapter_tensor_count": len(adapter_params),
+                "adapter_dtypes": dict(Counter(str(param.dtype) for _, param in adapter_params)),
+                "active_adapters": pipe.get_active_adapters(),
+                "peft_config": {name: cfg.to_dict() for name, cfg in pipe.transformer.peft_config.items()},
+            })
+        if config["lora"] == "fused" and not adapter_fused:
+            update_status("fusing_lora")
+            pipe.fuse_lora(adapter_names=["lightning8"], safe_fusing=True)
+            pipe.unload_lora_weights()
+            adapter_fused = True
+        schedule = [(cases[0], "warmup", 0)]
+        schedule += [(case, "measurement", 0) for case in cases]
+        if config["id"].startswith(("A_", "D_", "E_")):
+            schedule += [(cases[0], "timing_repeat", i) for i in range(1, args.repeat_anchor)]
+        for case, kind, repeat in schedule:
+            run_id = f"{config['id']}__{case['case_id']}__{kind}_{repeat}"
+            if run_id in completed:
+                continue
+            update_status("running", run_id=run_id, config=config["id"], case=case["case_id"])
+            sample = prepared[case["case_id"]]
+            scheduler_config = base_scheduler if config["scheduler"] == "base" else SHIFT3
+            pipe.scheduler = FlowMatchEulerDiscreteScheduler.from_config(scheduler_config)
+            recorder.wrap(pipe.scheduler, "step", "scheduler")
+            recorder.reset()
+            initial = sample["latent"].clone()
+            torch.cuda.synchronize()
+            torch.cuda.reset_peak_memory_stats()
+            recorder.active = True
+            started = time.perf_counter()
+            try:
+                with torch.inference_mode():
+                    result = pipe(
+                        image=sample["image"],
+                        prompt=case["prompt"],
+                        negative_prompt=" ",
+                        true_cfg_scale=config["cfg"],
+                        num_inference_steps=config["steps"],
+                        height=sample["height"],
+                        width=sample["width"],
+                        generator=torch.Generator(device="cuda").manual_seed(SEED),
+                        latents=initial,
+                        output_type="pil",
+                    ).images[0]
+                torch.cuda.synchronize()
+                elapsed = time.perf_counter() - started
+                recorder.active = False
+                expected_calls = config["steps"] * (2 if config["cfg"] > 1 else 1)
+                assert len(recorder.shapes) == expected_calls
+                output = ROOT / "outputs" / f"{run_id}.png"
+                result.save(output)
+                record = {
+                    "attempt_id": attempt_id,
+                    "run_id": run_id,
+                    "config": config,
+                    "case_id": case["case_id"],
+                    "kind": kind,
+                    "repeat": repeat,
+                    "seed": SEED,
+                    "initial_latent_sha256": sample["latent_hash"],
+                    "target_hw": [sample["height"], sample["width"]],
+                    "output_wh": list(result.size),
+                    "e2e_seconds": elapsed,
+                    "cuda_event_seconds": recorder.seconds(),
+                    "dit_calls": len(recorder.shapes),
+                    "first_cond_shapes": recorder.shapes[0],
+                    "first_uncond_shapes": recorder.shapes[1] if config["cfg"] > 1 else None,
+                    "peak_allocated_bytes": torch.cuda.max_memory_allocated(),
+                    "peak_reserved_bytes": torch.cuda.max_memory_reserved(),
+                    "scheduler_config": dict(pipe.scheduler.config),
+                    "timesteps": pipe.scheduler.timesteps.detach().cpu().tolist(),
+                    "sigmas": pipe.scheduler.sigmas.detach().cpu().tolist(),
+                    "output": str(output.relative_to(ROOT)),
+                    "output_sha256": hashlib.sha256(output.read_bytes()).hexdigest(),
+                    "status": "complete",
+                }
+                with rows_path.open("a") as stream:
+                    stream.write(json.dumps(record, ensure_ascii=False, default=str) + "\n")
+                print(json.dumps(dict(run_id=run_id, seconds=elapsed, dit_calls=len(recorder.shapes)), ensure_ascii=False), flush=True)
+            except Exception as error:
+                recorder.active = False
+                traceback.print_exc()
+                with rows_path.open("a") as stream:
+                    stream.write(json.dumps(dict(run_id=run_id, status="failed", error=f"{type(error).__name__}: {error}")) + "\n")
+                raise
+    update_status("complete")
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as error:
+        update_status("failed", error=f"{type(error).__name__}: {error}")
+        raise

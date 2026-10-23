@@ -1,0 +1,1145 @@
+{
+  "status": "pass",
+  "started_at": "2026-10-22T22:00:25.948681+08:00",
+  "device": "cuda",
+  "packages": {
+    "torch": "2.9.1+cu129",
+    "diffusers": "0.37.0",
+    "peft": "0.21.2",
+    "transformers": "5.3.0",
+    "huggingface_hub": "1.32.0",
+    "torchao": "0.16.0"
+  },
+  "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+  "diffusers_source": "/workspace/diffusers-fix/src/diffusers/__init__.py",
+  "tiny_model_config": {
+    "patch_size": 2,
+    "in_channels": 8,
+    "out_channels": 2,
+    "num_layers": 2,
+    "attention_head_dim": 16,
+    "num_attention_heads": 2,
+    "joint_attention_dim": 24,
+    "axes_dims_rope": [
+      4,
+      6,
+      6
+    ]
+  },
+  "target_count": 6,
+  "condition_count": 4,
+  "text_mask": [
+    [
+      1,
+      0,
+      1,
+      1,
+      0
+    ]
+  ],
+  "dynamic_noncontiguous_selections": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "1": [
+      4,
+      1
+    ],
+    "2": [
+      1
+    ],
+    "3": [
+      4,
+      1
+    ],
+    "4": [
+      0,
+      3
+    ],
+    "5": [
+      3
+    ],
+    "6": [
+      2,
+      5
+    ],
+    "7": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "source_hashes": {
+    "check_attribution_tiny.py": "31111ecd8f39df4a7ea65ece29bce5445aa1495e5272a6e506a4715e838c87bf",
+    "attribution_executor.py": "6f39974119e2f092cb2716120ffcf7f1ec4ab71e1232017dac4582193546732e",
+    "local_executor.py": "8f8688bf35625dbd31b2c23f6152a1484f18eb52cff778a9748b4c7d9cce1732"
+  },
+  "cpu_synchronization_noop_for_cpu_tensors": false,
+  "planned_actual_tiny_model_forwards": 96,
+  "real_20b_model_forwards": 0,
+  "tests": [
+    {
+      "name": "fp32_mix_no_alias_and_orthogonality",
+      "status": "pass",
+      "result": {
+        "noncontiguous_selected": [
+          4,
+          1
+        ],
+        "residual_energy": {
+          "B": 1588.8828125,
+          "V": 1091.921875,
+          "K": 496.9609375
+        },
+        "cross_term": 0.0,
+        "target_only_decomposition": true,
+        "no_alias_after_mutation": true,
+        "invalid_mode_rejected": true
+      },
+      "seconds": 0.35661760438233614
+    },
+    {
+      "name": "fp32_B_actual_tiny_eight_steps",
+      "status": "pass",
+      "result": {
+        "mode": "B",
+        "device": "cuda",
+        "dtype": "torch.float32",
+        "steps": [
+          {
+            "step": 1,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "full_step": true,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.0,
+              "velocity": 0.0,
+              "kv": 0.0
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "245f05f35c9567c2a4d6a26ff22ba7bd82b31e175a26d5b9ff97be3a9ff89975"
+          },
+          {
+            "step": 2,
+            "selected": [
+              4,
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.046660251915454865,
+              "velocity": 0.04665594920516014,
+              "kv": 4.303718469600426e-06
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "3eeb2ce94e38cba302d1b71f5c23e7522902e96516facdd433ccd8d78521de1f"
+          },
+          {
+            "step": 3,
+            "selected": [
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.13757269084453583,
+              "velocity": 0.13757000863552094,
+              "kv": 2.666780801519053e-06
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "9bc45bc3a212883b28c26c3a04c4e7660e1e09e8e2df7a5a6391f768d9a4a184"
+          },
+          {
+            "step": 4,
+            "selected": [
+              4,
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.16042408347129822,
+              "velocity": 0.16041314601898193,
+              "kv": 1.0933094017673284e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "514875c0cbd2a2ff6ed60f6ff4f3cf1c39d6b16067fd85c0e62b55788adf2fbf"
+          },
+          {
+            "step": 5,
+            "selected": [
+              0,
+              3
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.13708263635635376,
+              "velocity": 0.13706505298614502,
+              "kv": 1.758538928697817e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "add8663bafd97701c54c5e0b3a9e100b576b84564f4e6289fad19a7ae5000d2e"
+          },
+          {
+            "step": 6,
+            "selected": [
+              3
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.3485228717327118,
+              "velocity": 0.3484896719455719,
+              "kv": 3.320017640362494e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "2172dc6f42a3e084ac5cda932d12d6ee8808ee090b167a9eaa1110380d10581f"
+          },
+          {
+            "step": 7,
+            "selected": [
+              2,
+              5
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.23603758215904236,
+              "velocity": 0.23601117730140686,
+              "kv": 2.6398178306408226e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "57dc19371809560aaddb64e0bf8b3777eaf44eb27c583fe535ad2c5547abd030"
+          },
+          {
+            "step": 8,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "full_step": true,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.0,
+              "velocity": 0.0,
+              "kv": 0.0
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "5a722b3bc9e5b0f48812712ae3030a61c84f1a69fb19f2b4a94ba37d56cd185d"
+          }
+        ],
+        "local_calls": 8,
+        "oracle_calls": 8,
+        "native_calls": 0,
+        "actual_tiny_model_forwards": 16,
+        "complete_dense_no_side_effect_audits": 8,
+        "final_latent_sha256": "b7dd9770e397285fef78ac1e0a55ea0f139c63364ee86a5e0b4b6e014d6443fa"
+      },
+      "seconds": 0.2474230509251356
+    },
+    {
+      "name": "fp32_V_actual_tiny_eight_steps",
+      "status": "pass",
+      "result": {
+        "mode": "V",
+        "device": "cuda",
+        "dtype": "torch.float32",
+        "steps": [
+          {
+            "step": 1,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "full_step": true,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.0,
+              "velocity": 0.0,
+              "kv": 0.0
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "245f05f35c9567c2a4d6a26ff22ba7bd82b31e175a26d5b9ff97be3a9ff89975"
+          },
+          {
+            "step": 2,
+            "selected": [
+              4,
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.046660251915454865,
+              "velocity": 0.04665594920516014,
+              "kv": 4.303718469600426e-06
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "0fce3c94bb8af4b5a4b4cb26dc028ea7101e2c408cc5e9051d8014064844b4a5"
+          },
+          {
+            "step": 3,
+            "selected": [
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.13755051791667938,
+              "velocity": 0.13754786550998688,
+              "kv": 2.666592081368435e-06
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": true,
+            "output_sha256": "5e3d557bf47c28128e98beb9c0aefe1762441644f6ac36d105083fb160e5ee45"
+          },
+          {
+            "step": 4,
+            "selected": [
+              4,
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.16042447090148926,
+              "velocity": 0.16041351854801178,
+              "kv": 1.093288665288128e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "b9bf2d6cbb2fdcd1a844a0d78ae16f131f700a8db7a2bd97957f6cb2e4802507"
+          },
+          {
+            "step": 5,
+            "selected": [
+              0,
+              3
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.13685652613639832,
+              "velocity": 0.13683894276618958,
+              "kv": 1.7590633433428593e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "f55a0cb03c557483e491c586e854e2733293e791f0b03420930ac818999d6c68"
+          },
+          {
+            "step": 6,
+            "selected": [
+              3
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.3482401669025421,
+              "velocity": 0.3482069671154022,
+              "kv": 3.321019175928086e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "b9f12397666f44186bdad756a84887e44b40af1149711c58cbaba301fc006c17"
+          },
+          {
+            "step": 7,
+            "selected": [
+              2,
+              5
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.23574361205101013,
+              "velocity": 0.23571723699569702,
+              "kv": 2.6367182726971805e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "6e799b01d4a5e90e70636f0a0279936f14e1f074cfc05ed00bff0d7527309e53"
+          },
+          {
+            "step": 8,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "full_step": true,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.0,
+              "velocity": 0.0,
+              "kv": 0.0
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "8c6983f4e731ed641776e03649dcde18ee718dc128439d551da2e1946adb6a12"
+          }
+        ],
+        "local_calls": 8,
+        "oracle_calls": 8,
+        "native_calls": 0,
+        "actual_tiny_model_forwards": 16,
+        "complete_dense_no_side_effect_audits": 8,
+        "final_latent_sha256": "860a3401088e0a0d58680fb6bc643ce6448d8c738124eec8be79dfa7182f0a64"
+      },
+      "seconds": 0.06660841684788465
+    },
+    {
+      "name": "fp32_K_actual_tiny_eight_steps",
+      "status": "pass",
+      "result": {
+        "mode": "K",
+        "device": "cuda",
+        "dtype": "torch.float32",
+        "steps": [
+          {
+            "step": 1,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "full_step": true,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.0,
+              "velocity": 0.0,
+              "kv": 0.0
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "245f05f35c9567c2a4d6a26ff22ba7bd82b31e175a26d5b9ff97be3a9ff89975"
+          },
+          {
+            "step": 2,
+            "selected": [
+              4,
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.046660251915454865,
+              "velocity": 0.04665594920516014,
+              "kv": 4.303718469600426e-06
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "1be7e880b3c2af9eb1ca469879f5e4988211175b206493406c4715570f2f6c3c"
+          },
+          {
+            "step": 3,
+            "selected": [
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.1331314593553543,
+              "velocity": 0.133128821849823,
+              "kv": 2.6314360184187535e-06
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "d79d08dd5207ebc1cd431001c54d84c5fda601e513824c7062985dbb5971edcf"
+          },
+          {
+            "step": 4,
+            "selected": [
+              4,
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.14709043502807617,
+              "velocity": 0.14707988500595093,
+              "kv": 1.0544854376348667e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "88eb03736ed97411cd0e74c8e8fed092271068d5894a21387143764bfdf01d25"
+          },
+          {
+            "step": 5,
+            "selected": [
+              0,
+              3
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.12749892473220825,
+              "velocity": 0.12748199701309204,
+              "kv": 1.6933232473093085e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "8aeb5527709c4e1674a63d9882b1fd5271c68815fda3b1c8cf30692964b57931"
+          },
+          {
+            "step": 6,
+            "selected": [
+              3
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.31935396790504456,
+              "velocity": 0.31932127475738525,
+              "kv": 3.270344313932583e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "7c3b3bdd3ae83e70047fd6a0486be6a7bec8e58075884dda6e7f57210365886c"
+          },
+          {
+            "step": 7,
+            "selected": [
+              2,
+              5
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.2342502921819687,
+              "velocity": 0.23422151803970337,
+              "kv": 2.87622278847266e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "eb6a90993897d7b7f64620a7916893552f29ce147750f39998a42cf20fe674e5"
+          },
+          {
+            "step": 8,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "full_step": true,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.0,
+              "velocity": 0.0,
+              "kv": 0.0
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "46ef95b6124f8d95912bfbc5c1b1600e26ca3ffee0e762fe1fb7f3edd883382d"
+          }
+        ],
+        "local_calls": 8,
+        "oracle_calls": 8,
+        "native_calls": 0,
+        "actual_tiny_model_forwards": 16,
+        "complete_dense_no_side_effect_audits": 8,
+        "final_latent_sha256": "647a91c47c895487953a941e391ee9bfab2f71b9db337216a3b63722b2642bf0"
+      },
+      "seconds": 0.06228542700409889
+    },
+    {
+      "name": "bf16_mix_no_alias_and_orthogonality",
+      "status": "pass",
+      "result": {
+        "noncontiguous_selected": [
+          4,
+          1
+        ],
+        "residual_energy": {
+          "B": 1588.8828125,
+          "V": 1091.921875,
+          "K": 496.9609375
+        },
+        "cross_term": 0.0,
+        "target_only_decomposition": true,
+        "no_alias_after_mutation": true,
+        "invalid_mode_rejected": true
+      },
+      "seconds": 0.0016525406390428543
+    },
+    {
+      "name": "bf16_B_actual_tiny_eight_steps",
+      "status": "pass",
+      "result": {
+        "mode": "B",
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "steps": [
+          {
+            "step": 1,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "full_step": true,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.0,
+              "velocity": 0.0,
+              "kv": 0.0
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "c6cc7ca34a0d189cce2d4e285ad804f3fb6babee3a979c4e7826b5730e0f5051"
+          },
+          {
+            "step": 2,
+            "selected": [
+              4,
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.02276010252535343,
+              "velocity": 0.022724993526935577,
+              "kv": 3.510899841785431e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "e92123bd4e069bea834fd76f651fb2faaa63495bd1efecd7be2180a90476cc2c"
+          },
+          {
+            "step": 3,
+            "selected": [
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.13080072402954102,
+              "velocity": 0.13076996803283691,
+              "kv": 3.075599670410156e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "672df1e3fa9ba920f04e56a01f21e320ae14a569241139a547909fd18dca038b"
+          },
+          {
+            "step": 4,
+            "selected": [
+              4,
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.17221000790596008,
+              "velocity": 0.17209070920944214,
+              "kv": 0.00011929869651794434
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "437e551e9468e6c541f86b56327386edb273a4d2398bb421d9361fbb8e3d715b"
+          },
+          {
+            "step": 5,
+            "selected": [
+              0,
+              3
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.11103487759828568,
+              "velocity": 0.11094946414232254,
+              "kv": 8.541345596313477e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "1a9b544b0fcae92f9fc06589970c2f118d59a2a1f1d23d676af3eda69ed88f25"
+          },
+          {
+            "step": 6,
+            "selected": [
+              3
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.32217222452163696,
+              "velocity": 0.3220809996128082,
+              "kv": 9.121838957071304e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "7e93cfa69a260d598f5921310125bfa5cc310a140d43a38c986891ab1c7140d4"
+          },
+          {
+            "step": 7,
+            "selected": [
+              2,
+              5
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.22220468521118164,
+              "velocity": 0.22214418649673462,
+              "kv": 6.049784133210778e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "a8ee4ed533f99f79e255a6f733f70937be9a242cab41baebd9e7caaba82b540f"
+          },
+          {
+            "step": 8,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "full_step": true,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.0,
+              "velocity": 0.0,
+              "kv": 0.0
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "af3c1a7113d071f1320b3742689bf3c203c5fef7e4215cc1fd53d50e6dc12089"
+          }
+        ],
+        "local_calls": 8,
+        "oracle_calls": 8,
+        "native_calls": 0,
+        "actual_tiny_model_forwards": 16,
+        "complete_dense_no_side_effect_audits": 8,
+        "final_latent_sha256": "8e6411492c2be6eb0b3f42797ccbbd513e28ccfa83d46367ce270d907b81ee7d"
+      },
+      "seconds": 0.798436077311635
+    },
+    {
+      "name": "bf16_V_actual_tiny_eight_steps",
+      "status": "pass",
+      "result": {
+        "mode": "V",
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "steps": [
+          {
+            "step": 1,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "full_step": true,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.0,
+              "velocity": 0.0,
+              "kv": 0.0
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "c6cc7ca34a0d189cce2d4e285ad804f3fb6babee3a979c4e7826b5730e0f5051"
+          },
+          {
+            "step": 2,
+            "selected": [
+              4,
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.02276010252535343,
+              "velocity": 0.022724993526935577,
+              "kv": 3.510899841785431e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "2c781e5d0b39791115776446b6d6b12e2522b3f54d66f375863ae358440e809d"
+          },
+          {
+            "step": 3,
+            "selected": [
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.13021786510944366,
+              "velocity": 0.13018710911273956,
+              "kv": 3.075599670410156e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": true,
+            "output_sha256": "3f66876afee6b0f05b4ebbb4657dbd40141c7a47a3ce1b5dfd2db27fbff1da5a"
+          },
+          {
+            "step": 4,
+            "selected": [
+              4,
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.1705571711063385,
+              "velocity": 0.17052620649337769,
+              "kv": 3.096833825111389e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "f6135be575b67f7a11191e56cddef856c383371fa27454365962a94db4a5b1e5"
+          },
+          {
+            "step": 5,
+            "selected": [
+              0,
+              3
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.11114667356014252,
+              "velocity": 0.11106126010417938,
+              "kv": 8.541345596313477e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "fbaff0a4306ad4cd2726c020cf91a0141a50deee9616bc89a5f4c12772286109"
+          },
+          {
+            "step": 6,
+            "selected": [
+              3
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.32374975085258484,
+              "velocity": 0.32366079092025757,
+              "kv": 8.893385529518127e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "45661c0a364bc006ea52a8a033ce7c5b5e288966e2ae209183c3cb19700c606d"
+          },
+          {
+            "step": 7,
+            "selected": [
+              2,
+              5
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.22075620293617249,
+              "velocity": 0.2206769585609436,
+              "kv": 7.92355858720839e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "6967d9c0825cfe1a85a64b74a95dd463e306681aaaae17597aed539d4f7e2094"
+          },
+          {
+            "step": 8,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "full_step": true,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.0,
+              "velocity": 0.0,
+              "kv": 0.0
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "a781e472df57c7de255c3889aed1bd37f0afb3375860cc851fdb225376124b67"
+          }
+        ],
+        "local_calls": 8,
+        "oracle_calls": 8,
+        "native_calls": 0,
+        "actual_tiny_model_forwards": 16,
+        "complete_dense_no_side_effect_audits": 8,
+        "final_latent_sha256": "79051fd7a4e413be89ed108646548e0515c6ded9b8a46ccf28a2c18da0acc5d5"
+      },
+      "seconds": 0.07656523026525974
+    },
+    {
+      "name": "bf16_K_actual_tiny_eight_steps",
+      "status": "pass",
+      "result": {
+        "mode": "K",
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "steps": [
+          {
+            "step": 1,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "full_step": true,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.0,
+              "velocity": 0.0,
+              "kv": 0.0
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "c6cc7ca34a0d189cce2d4e285ad804f3fb6babee3a979c4e7826b5730e0f5051"
+          },
+          {
+            "step": 2,
+            "selected": [
+              4,
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.02276010252535343,
+              "velocity": 0.022724993526935577,
+              "kv": 3.510899841785431e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "9e702562053b7bbba8bbba4f96ddda7813c162738ddee65d89f52e1bd3963b1b"
+          },
+          {
+            "step": 3,
+            "selected": [
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.12666131556034088,
+              "velocity": 0.12663939595222473,
+              "kv": 2.1913088858127594e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "b5c1859417398f10d00c04e47a16d48d80abbe0e713631b9575134e434fb6b04"
+          },
+          {
+            "step": 4,
+            "selected": [
+              4,
+              1
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.1621842235326767,
+              "velocity": 0.16204537451267242,
+              "kv": 0.00013884156942367554
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "d7dcb969e7cc56fe315b1d22d5ad7da4b07eccff937f1c151f0b79d3c1d65ccd"
+          },
+          {
+            "step": 5,
+            "selected": [
+              0,
+              3
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.1058809906244278,
+              "velocity": 0.10577823221683502,
+              "kv": 0.00010275840759277344
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "c1a9920cdf522d630dfd85e71dcc1606be982e9604a377029c7301f9fa72ce62"
+          },
+          {
+            "step": 6,
+            "selected": [
+              3
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.29849153757095337,
+              "velocity": 0.29843154549598694,
+              "kv": 5.9977173805236816e-05
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "e0135b812a0a092b0882ac47e1b87f87bb30e6676de8122b33854ebdf99ee0d8"
+          },
+          {
+            "step": 7,
+            "selected": [
+              2,
+              5
+            ],
+            "full_step": false,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.22714735567569733,
+              "velocity": 0.22703970968723297,
+              "kv": 0.00010766088962554932
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "cb2352fedfe933183bc1f82d6c3ae573bc3a4b2a56de315965922c824d5f80c7"
+          },
+          {
+            "step": 8,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "full_step": true,
+            "dense_oracle_checked_all_cache_layers": 2,
+            "orthogonality_cross_term": 0.0,
+            "error_energy": {
+              "combined": 0.0,
+              "velocity": 0.0,
+              "kv": 0.0
+            },
+            "velocity_history_matches_independent_expected": true,
+            "prior_dense_active_reused_after_becoming_inactive": null,
+            "output_sha256": "8ffe598e0d44b532f6413a840295a7caaac8dd9e7714e9aa08ff62b88f83547e"
+          }
+        ],
+        "local_calls": 8,
+        "oracle_calls": 8,
+        "native_calls": 0,
+        "actual_tiny_model_forwards": 16,
+        "complete_dense_no_side_effect_audits": 8,
+        "final_latent_sha256": "c2033383d6511ad57b6b88bfaaf6c69e6c8dab17623f20ddbd81b6bd081bc4e9"
+      },
+      "seconds": 0.07183606270700693
+    }
+  ],
+  "gpu_name": "NVIDIA L20Y",
+  "failed_tests": [],
+  "test_count": 8,
+  "passed_tests": 8,
+  "elapsed_seconds": 1.687798274680972,
+  "completed_at": "2026-10-22T22:00:27.636967+08:00",
+  "completed_actual_tiny_model_forwards": 96
+}

@@ -1,0 +1,65 @@
+{
+  "component_seconds": {
+    "F": {
+      "prompt_encode": 0.35669558715820315,
+      "vae_encode": 1.0127753906249999,
+      "dit": 3.671831420898438,
+      "scheduler": 0.00021041600033640858,
+      "vae_decode": 1.5916246337890625
+    },
+    "R2": {
+      "prompt_encode": 0.35625306701660153,
+      "vae_encode": 1.0133983764648438,
+      "dit": 2.8703395233154296,
+      "scheduler": 0.00020732800010591745,
+      "vae_decode": 1.5906683959960937
+    },
+    "PRIOR": {
+      "prompt_encode": 0.35655249023437496,
+      "vae_encode": 1.0128448181152345,
+      "dit": 2.9364238891601566,
+      "scheduler": 0.00020647999923676253,
+      "vae_decode": 1.59098779296875
+    },
+    "A": {
+      "prompt_encode": 0.35677218627929685,
+      "vae_encode": 1.0121142578125,
+      "dit": 2.9344978027343753,
+      "scheduler": 0.00020652800239622594,
+      "vae_decode": 1.5910057373046875
+    },
+    "B": {
+      "prompt_encode": 0.3560268096923828,
+      "vae_encode": 1.0123470153808594,
+      "dit": 2.936314834594727,
+      "scheduler": 0.00020739200059324505,
+      "vae_decode": 1.5912352905273437
+    }
+  },
+  "component_scope": "Median across48 measured requests/config, CUDA event spans; not additive wall-clock components",
+  "all_requests_timed_e2e_sum_seconds": 1943.3799011521041,
+  "gpu_telemetry_main_phase_rows": 137,
+  "gpu_telemetry_range": {
+    " utilization.gpu [%]": {
+      "min": 0.0,
+      "max": 100.0
+    },
+    " memory.used [MiB]": {
+      "min": 61849.0,
+      "max": 62273.0
+    },
+    " temperature.gpu": {
+      "min": 45.0,
+      "max": 61.0
+    },
+    " power.draw [W]": {
+      "min": 141.21,
+      "max": 699.77
+    },
+    " clocks.current.sm [MHz]": {
+      "min": 1545.0,
+      "max": 1980.0
+    }
+  },
+  "telemetry_scope": "Only samples timestamp<=main complete; sampling began after initial warmups; final idle queried separately"
+}

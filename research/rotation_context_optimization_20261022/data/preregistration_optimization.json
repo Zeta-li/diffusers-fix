@@ -1,0 +1,46 @@
+{
+  "frozen_at": "2026-10-22T22:39:55.256988+08:00",
+  "phase": "optimization",
+  "configs": [
+    "F",
+    "R2",
+    "SHIFT",
+    "AFFINE"
+  ],
+  "requests": 48,
+  "dit_forwards": 384,
+  "oracle_forwards": 0,
+  "warmups_per_case_config": 1,
+  "measurements_per_case_config": 3,
+  "trigger": {
+    "reason": "ROT not all quality gates pass and/or net latency reduction below original 10 percent target",
+    "ROT_cases": [
+      {
+        "case_id": "blocks_text",
+        "lpips_mapmean_to_F": 0.023320214822888374,
+        "predefined_quality_gate_pass": false,
+        "paired_geometric_latency_ratio_to_F": 0.9228452105881857
+      },
+      {
+        "case_id": "shirt_color",
+        "lpips_mapmean_to_F": 0.026795167475938797,
+        "predefined_quality_gate_pass": false,
+        "paired_geometric_latency_ratio_to_F": 0.9282036792297318
+      },
+      {
+        "case_id": "remove_hair",
+        "lpips_mapmean_to_F": 0.0008246870711445808,
+        "predefined_quality_gate_pass": true,
+        "paired_geometric_latency_ratio_to_F": 0.9085602135725206
+      }
+    ],
+    "primary_summary_sha256": "ddfef6d6117ae512668c2fe45377681a509e5713e357888ee2c95cb82766d1cf"
+  },
+  "protocol_sha256": "111a7f75b02b4dbc25611f1390d595869fc86ecdc566f754127b227f3e256e71",
+  "scripts": {
+    "run_optimization.py": "8cfa1a73856e37c3f80c7c1be7fbbb0436efd29aaa5094e0332e32940c99cfd2",
+    "local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "value_time_correction.py": "fb1203fa955e71392c2e73ea2c47d0d9ed9e7d358f01e605a31e54097255ac2e",
+    "check_value_time.py": "63ddbf9ed9a3c9edd838416571571cf8daf1ef645a7e831c992840a8491be618"
+  }
+}

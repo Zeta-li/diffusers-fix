@@ -1,0 +1,61 @@
+{
+  "status": "complete_offline_train8_fit",
+  "source_image_count": 8,
+  "training_image_ids": [
+    "mb_train_253960",
+    "mb_train_257102",
+    "mb_train_271359",
+    "mb_train_301232",
+    "mb_train_315467",
+    "mb_train_355272",
+    "mb_train_405994",
+    "mb_train_544811"
+  ],
+  "geometry": {
+    "layers": 60,
+    "steps": 8,
+    "channels": 3072
+  },
+  "selected_eta": 0.01,
+  "candidate_scores": [
+    {
+      "eta": 0.0001,
+      "score": 0.6724220634048041
+    },
+    {
+      "eta": 0.01,
+      "score": 0.6722866685986421
+    },
+    {
+      "eta": 1.0,
+      "score": 0.6752264355013584
+    }
+  ],
+  "route_a_observed_layer_anchors": 60,
+  "route_b_observed_layer_pairs": 360,
+  "fit_and_save_seconds": 17.89568547811359,
+  "max_rss_kib_linux": 1349268,
+  "fitted_file": "data/calibration_train8.npz",
+  "fitted_sha256": "6df60e49ca8d618c5458063a80ce5bf3a5b02b0c28c7e618b04b76733964518f",
+  "fitted_bytes": 50014843,
+  "new_model_queries": 0,
+  "gradient_steps": 0,
+  "closed_loop_val_performed": false,
+  "quality_or_speed_claim": false,
+  "provenance": {
+    "source_moments_sha256": {
+      "moments/train8__mb_train_405994.npz": "d4f703454afb5a164bc25fe5273b2991beb6d54b6faece514e5770255a9e24b0",
+      "moments/train8__mb_train_301232.npz": "b7e715048a139ca04bf7dbde4592c5442623ad1311178b2cdf91b682d5c6525f",
+      "moments/train8__mb_train_544811.npz": "907b0c31e1bb57686e115ef70a6c9df3478d575ccb97387399b79326a7e91e3a",
+      "moments/train8__mb_train_253960.npz": "96e108df2e2216e0e3d83a3cf7e2ec4fed04bbce9142d6e1712e0d40d9e4ae9f",
+      "moments/train8__mb_train_315467.npz": "68bb39ed5c97a1b24e8a0787fe71914b79a3187812c850a7dec1bd94d4be207e",
+      "moments/train8__mb_train_355272.npz": "de07a93b374880dedf161161c46ab9298b0dc3c325d32bfc287dc94cbac74f10",
+      "moments/train8__mb_train_257102.npz": "8ceb5cf0af0a8d96c408c0115787b172e0f1f9909bf621fbbc415b730b39705d",
+      "moments/train8__mb_train_271359.npz": "08de554f0d91ddd91b11a6462ac75bf5738f1f54c667c7888ca3df7aa6868fd5"
+    },
+    "training_manifest_sha256": "627212a7beaf3dbf28247559387936e210864f9e1636a8dbd57d90023c3f26c9",
+    "ledger_sha256": "3e290f2be9b1cd60cf8e8cb55aa9932d7c9494799583ef17bcd95b1011c89433",
+    "fitter_sha256": "fc866835100f1bd6362f040c0003cd436e7390e4f99a554b818292056b622575",
+    "new_model_queries": 0
+  }
+}

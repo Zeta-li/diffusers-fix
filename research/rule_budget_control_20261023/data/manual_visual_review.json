@@ -1,0 +1,188 @@
+{
+  "reviewed_at": "2026-10-23T12:26:44.745833+08:00",
+  "reviewer": "Codex assisted image inspection",
+  "scope": "Non-blind development inspection; not a human study, OCR score, identity proof, or formal quality acceptance",
+  "views": "Four-column INPUT/F/R2/candidate core and boundary panels for text, shirt and hair; seven-column overviews; tool may resize display while stored crops retain original pixels",
+  "rows": [
+    {
+      "case_id": "blocks_text",
+      "config": "F",
+      "quality_output": "outputs/primary__F__blocks_text__measurement_0.png",
+      "output_sha256": "4b3c57eda61e49a8fe7679d08b5ae1cd731cfc3262ada8d40619efaf626b3d8d",
+      "observation": "同期完整参考；不把与自身数值相同作为加速成功。",
+      "predefined_numeric_gate_pass": true,
+      "preliminary_visual_veto": false,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "blocks_text",
+      "config": "R2",
+      "quality_output": "outputs/primary__R2__blocks_text__measurement_0.png",
+      "output_sha256": "615b3db8b859ae49c27bb5c0460533fe624a84adcaec6a9eba9e898a7cb94d56",
+      "observation": "目标短语仍有缺字/误拼，未复现完整参考的正确文字；语义否决。",
+      "predefined_numeric_gate_pass": false,
+      "preliminary_visual_veto": true,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "blocks_text",
+      "config": "B125",
+      "quality_output": "outputs/primary__B125__blocks_text__measurement_0.png",
+      "output_sha256": "16da0e603f88fd2bdcc62b1aae201f9b2af9a3c16b15fa66e00d308bdc4d912d",
+      "observation": "目标短语仍有缺字/误拼，未复现完整参考的正确文字；语义否决。",
+      "predefined_numeric_gate_pass": false,
+      "preliminary_visual_veto": true,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "blocks_text",
+      "config": "B250",
+      "quality_output": "outputs/primary__B250__blocks_text__measurement_0.png",
+      "output_sha256": "0311c78c689d7bdd7c6257056890a04d23f1f5d6f018b720075bd248b5a05d17",
+      "observation": "目标短语仍有缺字/误拼，未复现完整参考的正确文字；语义否决。",
+      "predefined_numeric_gate_pass": false,
+      "preliminary_visual_veto": true,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "blocks_text",
+      "config": "B333",
+      "quality_output": "outputs/primary__B333__blocks_text__measurement_0.png",
+      "output_sha256": "726ed9d2def3efe9fbb8e2c47cdb080f5fefe7e2b557a9a50012d50daf83014f",
+      "observation": "目标短语仍有缺字/误拼，未复现完整参考的正确文字；语义否决。",
+      "predefined_numeric_gate_pass": false,
+      "preliminary_visual_veto": true,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "blocks_text",
+      "config": "B500",
+      "quality_output": "outputs/primary__B500__blocks_text__measurement_0.png",
+      "output_sha256": "6609f801c902a5967eb826a951a64197fd35979bef5fe66ca518ea491b61bb4d",
+      "observation": "目标短语仍有缺字/误拼，未复现完整参考的正确文字；语义否决。",
+      "predefined_numeric_gate_pass": false,
+      "preliminary_visual_veto": true,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "shirt_color",
+      "config": "F",
+      "quality_output": "outputs/primary__F__shirt_color__measurement_0.png",
+      "output_sha256": "79ee3cea15f202ba713ae320c3ca22a8ebd62336ce8c9f8c54dd673a9a97c3f3",
+      "observation": "同期完整参考；不把与自身数值相同作为加速成功。",
+      "predefined_numeric_gate_pass": true,
+      "preliminary_visual_veto": false,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "shirt_color",
+      "config": "R2",
+      "quality_output": "outputs/primary__R2__shirt_color__measurement_0.png",
+      "output_sha256": "74119748f90c7b06fd6e04878ac83126534d1ee5eb381bd9b0918f52890d7c17",
+      "observation": "整体已呈浅蓝衬衫，口袋、褶皱及手衣接触细节与完整参考仍有差异；未做身份或结构盲评。",
+      "predefined_numeric_gate_pass": false,
+      "preliminary_visual_veto": false,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "shirt_color",
+      "config": "B125",
+      "quality_output": "outputs/primary__B125__shirt_color__measurement_0.png",
+      "output_sha256": "0ea668030fec1732971ae245f065a6344764c1d0ac652f9bc63e6ed0afd78609",
+      "observation": "整体已呈浅蓝衬衫，口袋、褶皱及手衣接触细节与完整参考仍有差异；未做身份或结构盲评。",
+      "predefined_numeric_gate_pass": false,
+      "preliminary_visual_veto": false,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "shirt_color",
+      "config": "B250",
+      "quality_output": "outputs/primary__B250__shirt_color__measurement_0.png",
+      "output_sha256": "2dc4cc8df26670848110653a03fd25d0afaeb5bf794aca0628fb34fe5a330f93",
+      "observation": "整体已呈浅蓝衬衫，口袋、褶皱及手衣接触细节与完整参考仍有差异；未做身份或结构盲评。",
+      "predefined_numeric_gate_pass": false,
+      "preliminary_visual_veto": false,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "shirt_color",
+      "config": "B333",
+      "quality_output": "outputs/primary__B333__shirt_color__measurement_0.png",
+      "output_sha256": "1594e52bddd5c150d627019ad733fd4832b374117173f0d830d7fa347523ef32",
+      "observation": "整体已呈浅蓝衬衫，口袋、褶皱及手衣接触细节与完整参考仍有差异；未做身份或结构盲评。",
+      "predefined_numeric_gate_pass": false,
+      "preliminary_visual_veto": false,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "shirt_color",
+      "config": "B500",
+      "quality_output": "outputs/primary__B500__shirt_color__measurement_0.png",
+      "output_sha256": "0a310b47166fcd49025b71958a790138d334321078482c0eceb6f8ab5b8a77e6",
+      "observation": "整体已呈浅蓝衬衫，口袋、褶皱及手衣接触细节与完整参考仍有差异；未做身份或结构盲评。",
+      "predefined_numeric_gate_pass": true,
+      "preliminary_visual_veto": false,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "remove_hair",
+      "config": "F",
+      "quality_output": "outputs/primary__F__remove_hair__measurement_0.png",
+      "output_sha256": "96167bb945b58ca0c5bc83de4b00776a011e29fbada765ab74db6ca64417c758",
+      "observation": "同期完整参考；不把与自身数值相同作为加速成功。",
+      "predefined_numeric_gate_pass": true,
+      "preliminary_visual_veto": false,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "remove_hair",
+      "config": "R2",
+      "quality_output": "outputs/primary__R2__remove_hair__measurement_0.png",
+      "output_sha256": "80b36879b6ee4e611fac9f7eab4e0adbfd1fd1fd452c309d5ca5b7c476c8cc56",
+      "observation": "毛发移除，但盘面仍可见明显矩形亮度拼块；视觉否决。",
+      "predefined_numeric_gate_pass": true,
+      "preliminary_visual_veto": true,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "remove_hair",
+      "config": "B125",
+      "quality_output": "outputs/primary__B125__remove_hair__measurement_0.png",
+      "output_sha256": "381016c49d29a024c4bfaa95d3b0a91a44c83776751e798270d2149e7f0f8c8f",
+      "observation": "毛发移除，但盘面仍可见明显矩形亮度拼块；视觉否决。",
+      "predefined_numeric_gate_pass": false,
+      "preliminary_visual_veto": true,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "remove_hair",
+      "config": "B250",
+      "quality_output": "outputs/primary__B250__remove_hair__measurement_0.png",
+      "output_sha256": "a3fb2356e5f132161122873f31c9aada193e1c7c0dace7675e0b8ff398f39c93",
+      "observation": "毛发移除，R2的明显矩形拼块减弱；仍有亮度/纹理差别，不等于无损。",
+      "predefined_numeric_gate_pass": true,
+      "preliminary_visual_veto": false,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "remove_hair",
+      "config": "B333",
+      "quality_output": "outputs/primary__B333__remove_hair__measurement_0.png",
+      "output_sha256": "bc0c94e28f0f6e1cc5ecb438aff5acd275ca5b2f01d2d6e6999e369fb31a4ba0",
+      "observation": "毛发移除，R2的明显矩形拼块减弱；仍有亮度/纹理差别，不等于无损。",
+      "predefined_numeric_gate_pass": true,
+      "preliminary_visual_veto": false,
+      "formal_blind_semantic_acceptance_established": false
+    },
+    {
+      "case_id": "remove_hair",
+      "config": "B500",
+      "quality_output": "outputs/primary__B500__remove_hair__measurement_0.png",
+      "output_sha256": "009678e2a15ec2135416736915afb0c33ddbc9ac10f1cfe9d293968fba41941f",
+      "observation": "毛发移除，R2的明显矩形拼块减弱；仍有亮度/纹理差别，不等于无损。",
+      "predefined_numeric_gate_pass": true,
+      "preliminary_visual_veto": false,
+      "formal_blind_semantic_acceptance_established": false
+    }
+  ]
+}

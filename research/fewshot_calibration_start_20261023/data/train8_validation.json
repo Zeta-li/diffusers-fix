@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "validated_at": "2026-10-23T07:57:44.044899+00:00",
+  "scope": "Frozen Train8 acquisition, image-level moments and ridge fit integrity; not independent quality/speed validation",
+  "train8_sources": 8,
+  "train8_successful_requests": 8,
+  "train8_student_forwards": 64,
+  "train8_oracle_forwards": 48,
+  "train8_total_real_dit_forwards": 112,
+  "failed_train8_requests": 0,
+  "new_model_forwards_for_fit": 0,
+  "independent_A_anchor_recomputations": 60,
+  "independent_B_pair_recomputations": 360,
+  "source_level_loo_splits_verified": 24,
+  "unobserved_and_diagonal_identity_verified": true,
+  "val_generated": false,
+  "test_generated": false,
+  "rl_started": false,
+  "cumulative_successful_requests": 428,
+  "cumulative_real_dit_forwards": 4134,
+  "cumulative_oracle_included": 126,
+  "validator_sha256": "b4f08eb1c99fc28a6620cca36142f9c01176775d920bee91c31a93f13cf4cd29"
+}

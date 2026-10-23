@@ -1,0 +1,30 @@
+{
+  "phase": "primary",
+  "frozen_at": "2026-10-22T22:29:40.803590+08:00",
+  "configs": [
+    "F",
+    "R2",
+    "FIX0",
+    "FIX1",
+    "FIX2",
+    "ROT"
+  ],
+  "case_ids": [
+    "blocks_text",
+    "shirt_color",
+    "remove_hair"
+  ],
+  "warmups_per_config_case": 1,
+  "measurements_per_config_case": 3,
+  "requests": 72,
+  "dit_forwards": 576,
+  "oracle_forwards": 0,
+  "rotation_manifest_sha256": "944c26ec413e095486b64821c46ff7ee77f66483deb80cbcd80cb2d5a65fdfcc",
+  "protocol_sha256": "d7b0f449a816e0342478e4da9bac0883fc548cee5b5a8c611be89437d891f834",
+  "scripts": {
+    "run_experiment.py": "0b2fceeddef06e5745307eacca2a764131636ff66a3e3fd7744ac3ebe517457d",
+    "local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "prepare_rotation.py": "51e76779df8b9e7778424d855bafc0899e62602724dda9da09f78319e6c60196",
+    "check_rotation.py": "29117693db5e42db530032cffccf5dbc51e173d9b7012e49678a5753f9fbb775"
+  }
+}

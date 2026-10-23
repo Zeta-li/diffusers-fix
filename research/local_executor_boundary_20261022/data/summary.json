@@ -1,0 +1,709 @@
+{
+  "status": "complete",
+  "counts": {
+    "raw_records": 138,
+    "failed_records": 0,
+    "successful_unique_runs": 138,
+    "primary_measurement_runs": 75,
+    "expected_primary_measurements": 75,
+    "fallback_measurement_runs": 27,
+    "nonmeasurement_successful_runs": 36,
+    "primary_quality_rows": 15,
+    "primary_quality_rows_complete": 15
+  },
+  "failed_runs": [],
+  "duplicate_success_run_ids": [],
+  "warnings": [],
+  "measurement_repeat_order": [
+    {
+      "case_id": "blocks_text",
+      "repeat": 0,
+      "expected_order": [
+        "F",
+        "R0",
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "observed_log_order": [
+        "F",
+        "R0",
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "blocks_text",
+      "repeat": 1,
+      "expected_order": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "F"
+      ],
+      "observed_log_order": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "F"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "blocks_text",
+      "repeat": 2,
+      "expected_order": [
+        "R1",
+        "R2",
+        "R3",
+        "F",
+        "R0"
+      ],
+      "observed_log_order": [
+        "R1",
+        "R2",
+        "R3",
+        "F",
+        "R0"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "blocks_text",
+      "repeat": 3,
+      "expected_order": [
+        "R2",
+        "R3",
+        "F",
+        "R0",
+        "R1"
+      ],
+      "observed_log_order": [
+        "R2",
+        "R3",
+        "F",
+        "R0",
+        "R1"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "blocks_text",
+      "repeat": 4,
+      "expected_order": [
+        "R3",
+        "F",
+        "R0",
+        "R1",
+        "R2"
+      ],
+      "observed_log_order": [
+        "R3",
+        "F",
+        "R0",
+        "R1",
+        "R2"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "shirt_color",
+      "repeat": 0,
+      "expected_order": [
+        "F",
+        "R0",
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "observed_log_order": [
+        "F",
+        "R0",
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "shirt_color",
+      "repeat": 1,
+      "expected_order": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "F"
+      ],
+      "observed_log_order": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "F"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "shirt_color",
+      "repeat": 2,
+      "expected_order": [
+        "R1",
+        "R2",
+        "R3",
+        "F",
+        "R0"
+      ],
+      "observed_log_order": [
+        "R1",
+        "R2",
+        "R3",
+        "F",
+        "R0"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "shirt_color",
+      "repeat": 3,
+      "expected_order": [
+        "R2",
+        "R3",
+        "F",
+        "R0",
+        "R1"
+      ],
+      "observed_log_order": [
+        "R2",
+        "R3",
+        "F",
+        "R0",
+        "R1"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "shirt_color",
+      "repeat": 4,
+      "expected_order": [
+        "R3",
+        "F",
+        "R0",
+        "R1",
+        "R2"
+      ],
+      "observed_log_order": [
+        "R3",
+        "F",
+        "R0",
+        "R1",
+        "R2"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "remove_hair",
+      "repeat": 0,
+      "expected_order": [
+        "F",
+        "R0",
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "observed_log_order": [
+        "F",
+        "R0",
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "remove_hair",
+      "repeat": 1,
+      "expected_order": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "F"
+      ],
+      "observed_log_order": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "F"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "remove_hair",
+      "repeat": 2,
+      "expected_order": [
+        "R1",
+        "R2",
+        "R3",
+        "F",
+        "R0"
+      ],
+      "observed_log_order": [
+        "R1",
+        "R2",
+        "R3",
+        "F",
+        "R0"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "remove_hair",
+      "repeat": 3,
+      "expected_order": [
+        "R2",
+        "R3",
+        "F",
+        "R0",
+        "R1"
+      ],
+      "observed_log_order": [
+        "R2",
+        "R3",
+        "F",
+        "R0",
+        "R1"
+      ],
+      "order_matches": true
+    },
+    {
+      "case_id": "remove_hair",
+      "repeat": 4,
+      "expected_order": [
+        "R3",
+        "F",
+        "R0",
+        "R1",
+        "R2"
+      ],
+      "observed_log_order": [
+        "R3",
+        "F",
+        "R0",
+        "R1",
+        "R2"
+      ],
+      "order_matches": true
+    }
+  ],
+  "timing_protocol": "Five repeats per case/config; pair each local request with F from the same case and repeat cycle. Report median, sample CV, median paired ratio and geometric paired ratio. Cyclic order is audited. Warmup, correctness, reset and shape-audit runs are excluded. No hypothesis test, CI, P95 or independent-seed quality claim.",
+  "quality_protocol": "Only measurement repeat0 per case/config. Full-image LPIPS Alex spatial map computed from unmasked RGB in [0,1], then average globally or over common R0/bands. Spatial LPIPS receptive fields cross region boundaries. Source uses LANCZOS resize. F is a computational reference, not editing ground truth.",
+  "common_boundary_protocol": "For k=1/2/4 target tokens, band=dilate_Linf(R0,k) AND dilate_Linf(NOT R0,k), clipped to the finite target grid; combines inside and outside around the same frozen core for every config. No artificial outside-image boundary. One token is 16x16 pixels here. Bands are cumulative and overlap.",
+  "gradient_protocol": "Band2 RGB finite-difference MAE to F; include horizontal/vertical edges only when both endpoints lie in the common band. No masked-image black borders.",
+  "background_protocol": "Far background is the complement of the frozen previous allowed_box, with round(normalized coordinate * pixel dimension), identical for all configs. ExtraBG=MAE(config,source,far)-MAE(F,source,far), possibly negative; it is not MAE(config,F,far). Coarse boxes are diagnostics rather than validated preservation truth.",
+  "predefined_gate": {
+    "lpips_mapmean_to_F_max": 0.02,
+    "extra_background_mae_over_F_max": 0.00392156862745098,
+    "operator": "AND, per case",
+    "frozen_before_analysis": true,
+    "meaning": "Provisional retention relative to F, not semantic correctness, noninferiority or visual acceptance. Missing or failed quality is not a pass."
+  },
+  "configs": {
+    "F": {
+      "baseline_config": "F",
+      "expected_repeats": 5,
+      "case_medians_seconds": {
+        "blocks_text": 6.662328495644033,
+        "shirt_color": 6.677081652916968,
+        "remove_hair": 6.795574859715998
+      },
+      "case_CVs": {
+        "blocks_text": 0.003696801677394796,
+        "shirt_color": 0.0018723689923462602,
+        "remove_hair": 0.002019223863022592
+      },
+      "paired_geometric_latency_ratio_to_baseline_across_cases": 1.0,
+      "all_cases_have_expected_repeats": true,
+      "all_timing_pairs_present": true,
+      "quality_cases_complete": 3,
+      "gate_pass_cases": [
+        "blocks_text",
+        "shirt_color",
+        "remove_hair"
+      ],
+      "gate_pass_all_cases": true,
+      "mean_lpips_mapmean_to_F": 0.0,
+      "max_extra_background_mae_over_F": 0.0,
+      "max_allocated_GiB": 54.66764688491821,
+      "paired_geometric_latency_ratio_to_F_across_cases": 1.0,
+      "all_cases_have_five_repeats": true
+    },
+    "R0": {
+      "baseline_config": "F",
+      "expected_repeats": 5,
+      "case_medians_seconds": {
+        "blocks_text": 5.851472053676844,
+        "shirt_color": 5.924883011728525,
+        "remove_hair": 5.795987620018423
+      },
+      "case_CVs": {
+        "blocks_text": 0.0016342774180835972,
+        "shirt_color": 0.0019522726018135893,
+        "remove_hair": 0.0006977462080241016
+      },
+      "paired_geometric_latency_ratio_to_baseline_across_cases": 0.8724508198911485,
+      "all_cases_have_expected_repeats": true,
+      "all_timing_pairs_present": true,
+      "quality_cases_complete": 3,
+      "gate_pass_cases": [
+        "remove_hair"
+      ],
+      "gate_pass_all_cases": false,
+      "mean_lpips_mapmean_to_F": 0.03457639738917351,
+      "max_extra_background_mae_over_F": 0.0014780485071241856,
+      "max_allocated_GiB": 57.6522331237793,
+      "paired_geometric_latency_ratio_to_F_across_cases": 0.8724508198911485,
+      "all_cases_have_five_repeats": true
+    },
+    "R1": {
+      "baseline_config": "F",
+      "expected_repeats": 5,
+      "case_medians_seconds": {
+        "blocks_text": 5.9418282974511385,
+        "shirt_color": 5.925087728537619,
+        "remove_hair": 5.849974726326764
+      },
+      "case_CVs": {
+        "blocks_text": 0.0010319459772424621,
+        "shirt_color": 0.0018413817029396251,
+        "remove_hair": 0.0003293385775588233
+      },
+      "paired_geometric_latency_ratio_to_baseline_across_cases": 0.8800239423910037,
+      "all_cases_have_expected_repeats": true,
+      "all_timing_pairs_present": true,
+      "quality_cases_complete": 3,
+      "gate_pass_cases": [
+        "remove_hair"
+      ],
+      "gate_pass_all_cases": false,
+      "mean_lpips_mapmean_to_F": 0.03363110994299253,
+      "max_extra_background_mae_over_F": 0.0019905073568224907,
+      "max_allocated_GiB": 57.65224361419678,
+      "paired_geometric_latency_ratio_to_F_across_cases": 0.8800239423910037,
+      "all_cases_have_five_repeats": true
+    },
+    "R2": {
+      "baseline_config": "F",
+      "expected_repeats": 5,
+      "case_medians_seconds": {
+        "blocks_text": 5.889902217313647,
+        "shirt_color": 5.939240609295666,
+        "remove_hair": 5.82866857945919
+      },
+      "case_CVs": {
+        "blocks_text": 0.0018766208719365478,
+        "shirt_color": 0.001930539808592808,
+        "remove_hair": 0.0027497572060960636
+      },
+      "paired_geometric_latency_ratio_to_baseline_across_cases": 0.8764809265345441,
+      "all_cases_have_expected_repeats": true,
+      "all_timing_pairs_present": true,
+      "quality_cases_complete": 3,
+      "gate_pass_cases": [
+        "remove_hair"
+      ],
+      "gate_pass_all_cases": false,
+      "mean_lpips_mapmean_to_F": 0.03411404602229595,
+      "max_extra_background_mae_over_F": 0.0015470846556127071,
+      "max_allocated_GiB": 57.65223407745361,
+      "paired_geometric_latency_ratio_to_F_across_cases": 0.8764809265345441,
+      "all_cases_have_five_repeats": true
+    },
+    "R3": {
+      "baseline_config": "F",
+      "expected_repeats": 5,
+      "case_medians_seconds": {
+        "blocks_text": 5.880889728665352,
+        "shirt_color": 5.92455571424216,
+        "remove_hair": 5.824779964052141
+      },
+      "case_CVs": {
+        "blocks_text": 0.003620055599147409,
+        "shirt_color": 0.002214568391456963,
+        "remove_hair": 0.003384592389074055
+      },
+      "paired_geometric_latency_ratio_to_baseline_across_cases": 0.8763002320320065,
+      "all_cases_have_expected_repeats": true,
+      "all_timing_pairs_present": true,
+      "quality_cases_complete": 3,
+      "gate_pass_cases": [
+        "remove_hair"
+      ],
+      "gate_pass_all_cases": false,
+      "mean_lpips_mapmean_to_F": 0.03416426464294394,
+      "max_extra_background_mae_over_F": 0.0015049860812723637,
+      "max_allocated_GiB": 57.65223503112793,
+      "paired_geometric_latency_ratio_to_F_across_cases": 0.8763002320320065,
+      "all_cases_have_five_repeats": true
+    }
+  },
+  "R2_vs_R3_common_band2": [
+    {
+      "case_id": "blocks_text",
+      "structure_config": "R2",
+      "equal_budget_control": "R3",
+      "status": "complete",
+      "R2_band2_mae": 0.029269356280565262,
+      "R3_band2_mae": 0.028766760602593422,
+      "band2_mae_improvement_absolute": -0.0005025956779718399,
+      "band2_mae_improvement_relative": -0.017471403364288755,
+      "R2_band2_gradient_mae": 0.0023180296811408456,
+      "R3_band2_gradient_mae": 0.00225369045639306,
+      "band2_gradient_improvement_absolute": -6.433922474778555e-05,
+      "R2_predefined_quality_gate_pass": false,
+      "R3_predefined_quality_gate_pass": false
+    },
+    {
+      "case_id": "shirt_color",
+      "structure_config": "R2",
+      "equal_budget_control": "R3",
+      "status": "complete",
+      "R2_band2_mae": 0.02007417008280754,
+      "R3_band2_mae": 0.019776852801442146,
+      "band2_mae_improvement_absolute": -0.0002973172813653946,
+      "band2_mae_improvement_relative": -0.015033599347198152,
+      "R2_band2_gradient_mae": 0.007170022935891305,
+      "R3_band2_gradient_mae": 0.0069922724824911025,
+      "band2_gradient_improvement_absolute": -0.00017775045340020276,
+      "R2_predefined_quality_gate_pass": false,
+      "R3_predefined_quality_gate_pass": false
+    },
+    {
+      "case_id": "remove_hair",
+      "structure_config": "R2",
+      "equal_budget_control": "R3",
+      "status": "complete",
+      "R2_band2_mae": 0.02115578018128872,
+      "R3_band2_mae": 0.021891610696911812,
+      "band2_mae_improvement_absolute": 0.0007358305156230927,
+      "band2_mae_improvement_relative": 0.033612442949521947,
+      "R2_band2_gradient_mae": 0.002527398649228621,
+      "R3_band2_gradient_mae": 0.002315318315942915,
+      "band2_gradient_improvement_absolute": -0.00021208033328570623,
+      "R2_predefined_quality_gate_pass": true,
+      "R3_predefined_quality_gate_pass": true
+    }
+  ],
+  "fallback": {
+    "separate_from_primary": true,
+    "plan": {
+      "configs": [
+        "F_safe",
+        "R2_safe",
+        "R3_safe"
+      ],
+      "repeats": 3,
+      "cases": [
+        "blocks_text",
+        "shirt_color",
+        "remove_hair"
+      ],
+      "warmups_per_case_config": 1,
+      "planned_requests": 36,
+      "full_steps_1based": [
+        1,
+        2,
+        4,
+        6,
+        8
+      ],
+      "native_baseline": "F_safe",
+      "deviations": [
+        "P25/P50 sweeps deferred; R0 fractions 9-28% provide low-area evidence, no 50% area trend claim",
+        "G used for correctness, no standalone five-repeat overhead benchmark",
+        "No mid-step branch clone; only request reset and dynamic expansion tested"
+      ]
+    },
+    "expected_repeats": 3,
+    "timing_baseline_config": "F_safe",
+    "quality_reference_config": "primary F",
+    "F_safe_repeat0_vs_primary_F": [
+      {
+        "case_id": "blocks_text",
+        "primary_reference_config": "F",
+        "same_round_reference_config": "F_safe",
+        "repeat": 0,
+        "status": "complete",
+        "primary_F_run_id": "F__blocks_text__measurement_0",
+        "F_safe_run_id": "F_safe__blocks_text__measurement_0",
+        "png_sha256_equal": true,
+        "pixel_identical": true,
+        "mae": 0.0,
+        "max_channel_error": 0.0
+      },
+      {
+        "case_id": "shirt_color",
+        "primary_reference_config": "F",
+        "same_round_reference_config": "F_safe",
+        "repeat": 0,
+        "status": "complete",
+        "primary_F_run_id": "F__shirt_color__measurement_0",
+        "F_safe_run_id": "F_safe__shirt_color__measurement_0",
+        "png_sha256_equal": true,
+        "pixel_identical": true,
+        "mae": 0.0,
+        "max_channel_error": 0.0
+      },
+      {
+        "case_id": "remove_hair",
+        "primary_reference_config": "F",
+        "same_round_reference_config": "F_safe",
+        "repeat": 0,
+        "status": "complete",
+        "primary_F_run_id": "F__remove_hair__measurement_0",
+        "F_safe_run_id": "F_safe__remove_hair__measurement_0",
+        "png_sha256_equal": true,
+        "pixel_identical": true,
+        "mae": 0.0,
+        "max_channel_error": 0.0
+      }
+    ],
+    "configs": {
+      "F_safe": {
+        "baseline_config": "F_safe",
+        "expected_repeats": 3,
+        "case_medians_seconds": {
+          "blocks_text": 6.7035532128065825,
+          "shirt_color": 6.708893928676844,
+          "remove_hair": 6.815366854891181
+        },
+        "case_CVs": {
+          "blocks_text": 0.0014978750628240698,
+          "shirt_color": 0.0013209362051181954,
+          "remove_hair": 0.001243566337221398
+        },
+        "paired_geometric_latency_ratio_to_baseline_across_cases": 1.0,
+        "all_cases_have_expected_repeats": true,
+        "all_timing_pairs_present": true,
+        "quality_cases_complete": 3,
+        "gate_pass_cases": [
+          "blocks_text",
+          "shirt_color",
+          "remove_hair"
+        ],
+        "gate_pass_all_cases": true,
+        "mean_lpips_mapmean_to_F": 0.0,
+        "max_extra_background_mae_over_F": 0.0,
+        "max_allocated_GiB": 54.66763925552368
+      },
+      "R2_safe": {
+        "baseline_config": "F_safe",
+        "expected_repeats": 3,
+        "case_medians_seconds": {
+          "blocks_text": 6.3312033992260695,
+          "shirt_color": 6.355119984596968,
+          "remove_hair": 6.359556931070983
+        },
+        "case_CVs": {
+          "blocks_text": 0.0009674459539913503,
+          "shirt_color": 0.0029148419249766188,
+          "remove_hair": 0.0012768988798159695
+        },
+        "paired_geometric_latency_ratio_to_baseline_across_cases": 0.9424590176768706,
+        "all_cases_have_expected_repeats": true,
+        "all_timing_pairs_present": true,
+        "quality_cases_complete": 3,
+        "gate_pass_cases": [
+          "blocks_text",
+          "shirt_color",
+          "remove_hair"
+        ],
+        "gate_pass_all_cases": true,
+        "mean_lpips_mapmean_to_F": 0.00996834421918417,
+        "max_extra_background_mae_over_F": 0.0014450973831117153,
+        "max_allocated_GiB": 57.652231216430664
+      },
+      "R3_safe": {
+        "baseline_config": "F_safe",
+        "expected_repeats": 3,
+        "case_medians_seconds": {
+          "blocks_text": 6.333130699582398,
+          "shirt_color": 6.3497257474809885,
+          "remove_hair": 6.353318991139531
+        },
+        "case_CVs": {
+          "blocks_text": 0.0004760847638098117,
+          "shirt_color": 0.0006100341241492222,
+          "remove_hair": 0.0010720595916555342
+        },
+        "paired_geometric_latency_ratio_to_baseline_across_cases": 0.9416484900588012,
+        "all_cases_have_expected_repeats": true,
+        "all_timing_pairs_present": true,
+        "quality_cases_complete": 3,
+        "gate_pass_cases": [
+          "blocks_text",
+          "shirt_color",
+          "remove_hair"
+        ],
+        "gate_pass_all_cases": true,
+        "mean_lpips_mapmean_to_F": 0.009919435038076093,
+        "max_extra_background_mae_over_F": 0.0014657131396234035,
+        "max_allocated_GiB": 57.65223026275635
+      }
+    },
+    "R2_vs_R3_common_band2": [
+      {
+        "case_id": "blocks_text",
+        "structure_config": "R2_safe",
+        "equal_budget_control": "R3_safe",
+        "status": "complete",
+        "R2_band2_mae": 0.0022930833511054516,
+        "R3_band2_mae": 0.0022825205232948065,
+        "band2_mae_improvement_absolute": -1.0562827810645103e-05,
+        "band2_mae_improvement_relative": -0.004627703323077996,
+        "R2_band2_gradient_mae": 0.00189742796619623,
+        "R3_band2_gradient_mae": 0.0019040875045135013,
+        "band2_gradient_improvement_absolute": 6.659538317271407e-06,
+        "R2_predefined_quality_gate_pass": true,
+        "R3_predefined_quality_gate_pass": true
+      },
+      {
+        "case_id": "shirt_color",
+        "structure_config": "R2_safe",
+        "equal_budget_control": "R3_safe",
+        "status": "complete",
+        "R2_band2_mae": 0.008894910104572773,
+        "R3_band2_mae": 0.008251633495092392,
+        "band2_mae_improvement_absolute": -0.000643276609480381,
+        "band2_mae_improvement_relative": -0.07795748682524083,
+        "R2_band2_gradient_mae": 0.0038860618592143226,
+        "R3_band2_gradient_mae": 0.003647800817386338,
+        "band2_gradient_improvement_absolute": -0.00023826104182798468,
+        "R2_predefined_quality_gate_pass": true,
+        "R3_predefined_quality_gate_pass": true
+      },
+      {
+        "case_id": "remove_hair",
+        "structure_config": "R2_safe",
+        "equal_budget_control": "R3_safe",
+        "status": "complete",
+        "R2_band2_mae": 0.001968532567843795,
+        "R3_band2_mae": 0.0019517593318596482,
+        "band2_mae_improvement_absolute": -1.6773235984146595e-05,
+        "band2_mae_improvement_relative": -0.008593905872690231,
+        "R2_band2_gradient_mae": 0.001812076725773793,
+        "R3_band2_gradient_mae": 0.0018172606090002428,
+        "band2_gradient_improvement_absolute": 5.1838832264498435e-06,
+        "R2_predefined_quality_gate_pass": true,
+        "R3_predefined_quality_gate_pass": true
+      }
+    ],
+    "limitations": "Fallback is an extra three-repeat diagnostic with its own native F_safe baseline in the same round. Pair timing only to F_safe from the same case and repeat; missing F_safe remains missing. Quality is relative to primary F, with F_safe repeat0 pixel/PNG hash agreement checked separately. Never mix these three repeats with the primary five, and never overwrite primary [1,8] full-refresh results."
+  },
+  "correctness_status": "passed"
+}

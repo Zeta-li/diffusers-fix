@@ -1,0 +1,5264 @@
+{
+  "status": "pass",
+  "started_at": "2026-10-22T21:13:33.378502+08:00",
+  "device": "cpu",
+  "gpu_requests": 0,
+  "tiny_model_config": {
+    "patch_size": 2,
+    "in_channels": 8,
+    "out_channels": 2,
+    "num_layers": 2,
+    "attention_head_dim": 16,
+    "num_attention_heads": 2,
+    "joint_attention_dim": 24,
+    "axes_dims_rope": [
+      4,
+      6,
+      6
+    ]
+  },
+  "target_tokens": 6,
+  "condition_tokens": 4,
+  "text_tokens": 5,
+  "text_mask": [
+    [
+      1,
+      0,
+      1,
+      1,
+      0
+    ]
+  ],
+  "fp32_tolerances": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "bf16_tolerances": {
+    "atol": 0.02,
+    "rtol": 0.02
+  },
+  "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+  "packages": {
+    "torch": "2.9.1+cu129",
+    "peft": "0.21.2",
+    "transformers": "5.3.0",
+    "huggingface_hub": "1.32.0",
+    "torchao": "0.16.0"
+  },
+  "diffusers_version": "0.42.0.dev0",
+  "diffusers_source": "/workspace/diffusers-fix/src/diffusers/__init__.py",
+  "model_source": "/workspace/diffusers-fix/src/diffusers/models/transformers/transformer_qwenimage.py",
+  "model_source_sha256": "39df645130da4ad05521cb373f3bc0ce14c40d12d8065b72d5a0d9043355545d",
+  "executor_source_sha256": "8f8688bf35625dbd31b2c23f6152a1484f18eb52cff778a9748b4c7d9cce1732",
+  "test_source_sha256": "86199fc74951c720d6a2a220ed635e3cd0486a9d1b335e4be2e336286f3ee987",
+  "tests": [
+    {
+      "name": "pack_unpack_non_square",
+      "status": "pass",
+      "result": {
+        "target_packed_grid": [
+          2,
+          3
+        ],
+        "target_pixels_hw": [
+          32,
+          48
+        ],
+        "packed_shape": [
+          1,
+          6,
+          8
+        ],
+        "condition_grid_is_independently_sized": [
+          2,
+          2
+        ],
+        "roundtrip_exact": true,
+        "mappings": [
+          {
+            "index": 0,
+            "packed_yx": [
+              0,
+              0
+            ],
+            "output_xyxy": [
+              0,
+              0,
+              16,
+              16
+            ]
+          },
+          {
+            "index": 1,
+            "packed_yx": [
+              0,
+              1
+            ],
+            "output_xyxy": [
+              16,
+              0,
+              32,
+              16
+            ]
+          },
+          {
+            "index": 2,
+            "packed_yx": [
+              0,
+              2
+            ],
+            "output_xyxy": [
+              32,
+              0,
+              48,
+              16
+            ]
+          },
+          {
+            "index": 3,
+            "packed_yx": [
+              1,
+              0
+            ],
+            "output_xyxy": [
+              0,
+              16,
+              16,
+              32
+            ]
+          },
+          {
+            "index": 4,
+            "packed_yx": [
+              1,
+              1
+            ],
+            "output_xyxy": [
+              16,
+              16,
+              32,
+              32
+            ]
+          },
+          {
+            "index": 5,
+            "packed_yx": [
+              1,
+              2
+            ],
+            "output_xyxy": [
+              32,
+              16,
+              48,
+              32
+            ]
+          }
+        ]
+      },
+      "seconds": 0.0026655765250325203
+    },
+    {
+      "name": "invalid_indices_rejected",
+      "status": "pass",
+      "result": {
+        "empty": {
+          "exception": "ValueError",
+          "message": "Invalid target indices"
+        },
+        "duplicate": {
+          "exception": "ValueError",
+          "message": "Invalid target indices"
+        },
+        "negative": {
+          "exception": "ValueError",
+          "message": "Invalid target indices"
+        },
+        "out_of_range": {
+          "exception": "ValueError",
+          "message": "Invalid target indices"
+        }
+      },
+      "seconds": 0.1833159476518631
+    },
+    {
+      "name": "missing_cache_and_state_change_rejected",
+      "status": "pass",
+      "result": {
+        "first_partial_rejected": {
+          "exception": "RuntimeError",
+          "message": "First step must initialize all target caches"
+        },
+        "missing_partial_cache_rejected": {
+          "exception": "RuntimeError",
+          "message": "Missing initialized layer cache on partial step"
+        },
+        "state_changes_rejected": {
+          "hidden_shape": {
+            "exception": "RuntimeError",
+            "message": "Request geometry or state changed without cache reset"
+          },
+          "hidden_dtype": {
+            "exception": "RuntimeError",
+            "message": "Request geometry or state changed without cache reset"
+          },
+          "text_sequence_length": {
+            "exception": "RuntimeError",
+            "message": "Request geometry or state changed without cache reset"
+          }
+        },
+        "reset_contract": "Same-shape new images and prompts require an explicit begin() by the caller"
+      },
+      "seconds": 0.023008713498711586
+    },
+    {
+      "name": "fp32_full_custom",
+      "status": "pass",
+      "result": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "relative_l2": 0.0,
+        "bitwise_equal": true,
+        "actual_dtype": "torch.float32",
+        "expected_dtype": "torch.float32",
+        "atol": 1e-05,
+        "rtol": 1e-05,
+        "return_dict": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "actual_dtype": "torch.float32",
+          "expected_dtype": "torch.float32",
+          "atol": 1e-05,
+          "rtol": 1e-05
+        },
+        "reverse_full": false,
+        "cache_bytes": 3392
+      },
+      "seconds": 0.01082201860845089
+    },
+    {
+      "name": "fp32_reverse_full_custom",
+      "status": "pass",
+      "result": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "relative_l2": 0.0,
+        "bitwise_equal": true,
+        "actual_dtype": "torch.float32",
+        "expected_dtype": "torch.float32",
+        "atol": 1e-05,
+        "rtol": 1e-05,
+        "return_dict": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "actual_dtype": "torch.float32",
+          "expected_dtype": "torch.float32",
+          "atol": 1e-05,
+          "rtol": 1e-05
+        },
+        "reverse_full": true,
+        "cache_bytes": 3392
+      },
+      "seconds": 0.011742337606847286
+    },
+    {
+      "name": "fp32_eight_full_steps",
+      "status": "pass",
+      "result": {
+        "reverse_full": false,
+        "steps": [
+          {
+            "step": 1,
+            "timestep": 1000.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 2,
+            "timestep": 954.5454711914062,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 3,
+            "timestep": 900.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 4,
+            "timestep": 833.3333740234375,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 5,
+            "timestep": 750.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 6,
+            "timestep": 642.8570556640625,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 7,
+            "timestep": 500.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 8,
+            "timestep": 300.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          }
+        ],
+        "ninth_call_rejected": {
+          "exception": "RuntimeError",
+          "message": "New requests must call begin to reset caches"
+        },
+        "explicit_new_request_reset": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "actual_dtype": "torch.float32",
+          "expected_dtype": "torch.float32",
+          "atol": 1e-05,
+          "rtol": 1e-05
+        }
+      },
+      "seconds": 0.03439549636095762
+    },
+    {
+      "name": "fp32_eight_reverse_full_steps",
+      "status": "pass",
+      "result": {
+        "reverse_full": true,
+        "steps": [
+          {
+            "step": 1,
+            "timestep": 1000.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 2,
+            "timestep": 954.5454711914062,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 3,
+            "timestep": 900.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 4,
+            "timestep": 833.3333740234375,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 5,
+            "timestep": 750.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 6,
+            "timestep": 642.8570556640625,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 7,
+            "timestep": 500.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          },
+          {
+            "step": 8,
+            "timestep": 300.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            }
+          }
+        ],
+        "ninth_call_rejected": {
+          "exception": "RuntimeError",
+          "message": "New requests must call begin to reset caches"
+        },
+        "explicit_new_request_reset": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "actual_dtype": "torch.float32",
+          "expected_dtype": "torch.float32",
+          "atol": 1e-05,
+          "rtol": 1e-05
+        }
+      },
+      "seconds": 0.03249585069715977
+    },
+    {
+      "name": "fp32_partial_dynamic_module_audit",
+      "status": "pass",
+      "result": {
+        "steps": [
+          {
+            "step": 1,
+            "selected_targets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "image_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  10,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "full_step_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "inactive_latent_updated": null,
+            "reactivated_from_current_latent": 0,
+            "cache_bytes": 3392
+          },
+          {
+            "step": 2,
+            "selected_targets": [
+              1
+            ],
+            "image_indices": [
+              1,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  5,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "full_step_error": null,
+            "inactive_latent_updated": true,
+            "reactivated_from_current_latent": 0,
+            "cache_bytes": 3392
+          },
+          {
+            "step": 3,
+            "selected_targets": [
+              1
+            ],
+            "image_indices": [
+              1,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  5,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "full_step_error": null,
+            "inactive_latent_updated": true,
+            "reactivated_from_current_latent": 0,
+            "cache_bytes": 3392
+          },
+          {
+            "step": 4,
+            "selected_targets": [
+              1,
+              2
+            ],
+            "image_indices": [
+              1,
+              2,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  6,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "full_step_error": null,
+            "inactive_latent_updated": true,
+            "reactivated_from_current_latent": 1,
+            "cache_bytes": 3392
+          },
+          {
+            "step": 5,
+            "selected_targets": [
+              2,
+              4
+            ],
+            "image_indices": [
+              2,
+              4,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  6,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "full_step_error": null,
+            "inactive_latent_updated": true,
+            "reactivated_from_current_latent": 1,
+            "cache_bytes": 3392
+          },
+          {
+            "step": 6,
+            "selected_targets": [
+              4
+            ],
+            "image_indices": [
+              4,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  5,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "full_step_error": null,
+            "inactive_latent_updated": true,
+            "reactivated_from_current_latent": 0,
+            "cache_bytes": 3392
+          },
+          {
+            "step": 7,
+            "selected_targets": [
+              0,
+              4,
+              5
+            ],
+            "image_indices": [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  7,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "full_step_error": null,
+            "inactive_latent_updated": true,
+            "reactivated_from_current_latent": 2,
+            "cache_bytes": 3392
+          },
+          {
+            "step": 8,
+            "selected_targets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "image_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  10,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "full_step_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.float32",
+              "expected_dtype": "torch.float32",
+              "atol": 1e-05,
+              "rtol": 1e-05
+            },
+            "inactive_latent_updated": null,
+            "reactivated_from_current_latent": 3,
+            "cache_bytes": 3392
+          }
+        ],
+        "stale_inactive_velocity_is_explicit_approximation": true,
+        "inactive_keys_values_preserved": true,
+        "no_dense_image_projection_before_gather": true
+      },
+      "seconds": 0.02541414462029934
+    },
+    {
+      "name": "bf16_full_custom",
+      "status": "pass",
+      "result": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "relative_l2": 0.0,
+        "bitwise_equal": true,
+        "actual_dtype": "torch.bfloat16",
+        "expected_dtype": "torch.bfloat16",
+        "atol": 0.02,
+        "rtol": 0.02,
+        "return_dict": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "actual_dtype": "torch.bfloat16",
+          "expected_dtype": "torch.bfloat16",
+          "atol": 0.02,
+          "rtol": 0.02
+        },
+        "reverse_full": false,
+        "cache_bytes": 1696
+      },
+      "seconds": 0.04167668428272009
+    },
+    {
+      "name": "bf16_reverse_full_custom",
+      "status": "pass",
+      "result": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "relative_l2": 0.0,
+        "bitwise_equal": true,
+        "actual_dtype": "torch.bfloat16",
+        "expected_dtype": "torch.bfloat16",
+        "atol": 0.02,
+        "rtol": 0.02,
+        "return_dict": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "actual_dtype": "torch.bfloat16",
+          "expected_dtype": "torch.bfloat16",
+          "atol": 0.02,
+          "rtol": 0.02
+        },
+        "reverse_full": true,
+        "cache_bytes": 1696
+      },
+      "seconds": 0.012984972447156906
+    },
+    {
+      "name": "bf16_eight_full_steps",
+      "status": "pass",
+      "result": {
+        "reverse_full": false,
+        "steps": [
+          {
+            "step": 1,
+            "timestep": 1000.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 2,
+            "timestep": 954.5454711914062,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 3,
+            "timestep": 900.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 4,
+            "timestep": 833.3333740234375,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 5,
+            "timestep": 750.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 6,
+            "timestep": 642.8570556640625,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 7,
+            "timestep": 500.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 8,
+            "timestep": 300.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          }
+        ],
+        "ninth_call_rejected": {
+          "exception": "RuntimeError",
+          "message": "New requests must call begin to reset caches"
+        },
+        "explicit_new_request_reset": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "actual_dtype": "torch.bfloat16",
+          "expected_dtype": "torch.bfloat16",
+          "atol": 0.02,
+          "rtol": 0.02
+        }
+      },
+      "seconds": 0.04801304079592228
+    },
+    {
+      "name": "bf16_eight_reverse_full_steps",
+      "status": "pass",
+      "result": {
+        "reverse_full": true,
+        "steps": [
+          {
+            "step": 1,
+            "timestep": 1000.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 2,
+            "timestep": 954.5454711914062,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 3,
+            "timestep": 900.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 4,
+            "timestep": 833.3333740234375,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 5,
+            "timestep": 750.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 6,
+            "timestep": 642.8570556640625,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 7,
+            "timestep": 500.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          },
+          {
+            "step": 8,
+            "timestep": 300.0,
+            "velocity_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "latent_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            }
+          }
+        ],
+        "ninth_call_rejected": {
+          "exception": "RuntimeError",
+          "message": "New requests must call begin to reset caches"
+        },
+        "explicit_new_request_reset": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise_equal": true,
+          "actual_dtype": "torch.bfloat16",
+          "expected_dtype": "torch.bfloat16",
+          "atol": 0.02,
+          "rtol": 0.02
+        }
+      },
+      "seconds": 0.04699669685214758
+    },
+    {
+      "name": "bf16_partial_dynamic_module_audit",
+      "status": "pass",
+      "result": {
+        "steps": [
+          {
+            "step": 1,
+            "selected_targets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "image_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  10,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "full_step_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "inactive_latent_updated": null,
+            "reactivated_from_current_latent": 0,
+            "cache_bytes": 1696
+          },
+          {
+            "step": 2,
+            "selected_targets": [
+              1
+            ],
+            "image_indices": [
+              1,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  5,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "full_step_error": null,
+            "inactive_latent_updated": true,
+            "reactivated_from_current_latent": 0,
+            "cache_bytes": 1696
+          },
+          {
+            "step": 3,
+            "selected_targets": [
+              1
+            ],
+            "image_indices": [
+              1,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  5,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "full_step_error": null,
+            "inactive_latent_updated": true,
+            "reactivated_from_current_latent": 0,
+            "cache_bytes": 1696
+          },
+          {
+            "step": 4,
+            "selected_targets": [
+              1,
+              2
+            ],
+            "image_indices": [
+              1,
+              2,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  6,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "full_step_error": null,
+            "inactive_latent_updated": true,
+            "reactivated_from_current_latent": 1,
+            "cache_bytes": 1696
+          },
+          {
+            "step": 5,
+            "selected_targets": [
+              2,
+              4
+            ],
+            "image_indices": [
+              2,
+              4,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  6,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  6,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "full_step_error": null,
+            "inactive_latent_updated": true,
+            "reactivated_from_current_latent": 1,
+            "cache_bytes": 1696
+          },
+          {
+            "step": 6,
+            "selected_targets": [
+              4
+            ],
+            "image_indices": [
+              4,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  5,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "full_step_error": null,
+            "inactive_latent_updated": true,
+            "reactivated_from_current_latent": 0,
+            "cache_bytes": 1696
+          },
+          {
+            "step": 7,
+            "selected_targets": [
+              0,
+              4,
+              5
+            ],
+            "image_indices": [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  7,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  7,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "full_step_error": null,
+            "inactive_latent_updated": true,
+            "reactivated_from_current_latent": 2,
+            "cache_bytes": 1696
+          },
+          {
+            "step": 8,
+            "selected_targets": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "image_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "source_gather_exact": true,
+            "module_inputs": [
+              {
+                "name": "img_in",
+                "layer": null,
+                "shape": [
+                  1,
+                  10,
+                  8
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 0,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm1",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_q",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_k",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "text_v",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              },
+              {
+                "name": "image_out",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_norm2",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "image_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  10,
+                  32
+                ]
+              },
+              {
+                "name": "text_mlp",
+                "layer": 1,
+                "shape": [
+                  1,
+                  5,
+                  32
+                ]
+              }
+            ],
+            "cached_key_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "cached_value_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "full_step_error": {
+              "max_abs": 0.0,
+              "mean_abs": 0.0,
+              "relative_l2": 0.0,
+              "bitwise_equal": true,
+              "actual_dtype": "torch.bfloat16",
+              "expected_dtype": "torch.bfloat16",
+              "atol": 0.02,
+              "rtol": 0.02
+            },
+            "inactive_latent_updated": null,
+            "reactivated_from_current_latent": 3,
+            "cache_bytes": 1696
+          }
+        ],
+        "stale_inactive_velocity_is_explicit_approximation": true,
+        "inactive_keys_values_preserved": true,
+        "no_dense_image_projection_before_gather": true
+      },
+      "seconds": 0.03818496875464916
+    }
+  ],
+  "limitations": [
+    "Synthetic tiny-model correctness does not establish 20B model quality or speed",
+    "BF16 tolerances allow floating point variation and do not imply lossless editing",
+    "Callers must begin() for every new request even when tensor shapes match"
+  ],
+  "failed_tests": [],
+  "test_count": 13,
+  "passed_tests": 13,
+  "elapsed_seconds": 0.533805200830102,
+  "completed_at": "2026-10-22T21:13:33.909309+08:00"
+}

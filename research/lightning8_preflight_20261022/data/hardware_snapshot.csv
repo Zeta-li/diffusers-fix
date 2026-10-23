@@ -1,0 +1,2 @@
+name, uuid, driver_version, memory.total [MiB], power.limit [W], clocks.max.sm [MHz]
+NVIDIA L20Y, GPU-753e5995-121f-23fd-2f15-27788ad9c56e, 580.105.08, 81559 MiB, 700.00 W, 1980 MHz

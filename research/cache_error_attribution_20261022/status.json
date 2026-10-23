@@ -1,0 +1,9 @@
+{
+  "phase": "complete",
+  "time": "2026-10-22T22:03:54.626574+08:00",
+  "local": 72,
+  "oracle": 72,
+  "native": 24,
+  "requests": 12,
+  "total_model_forwards": 168
+}

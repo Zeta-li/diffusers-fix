@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "25139",
+    "original_img_id": "25139",
+    "turn_index": 1,
+    "instruction": "Let the zebra put its face up close to a tree.",
+    "official_split": "dev",
+    "shard_path": "data/dev-00000-of-00004-f147d414270a90e1.parquet",
+    "row_group": 2,
+    "row_in_group": 19,
+    "row_in_shard": 83,
+    "selection_rank_sha256": "0afc686c9b775b5d65302797363f97aadad629b613abfb0b49fd94748ddec121"
+  },
+  "image": "inputs/val16/25139/source.original",
+  "original_mask": "inputs/val16/25139/mask.original",
+  "source_sha256": "3b41700a5e443a5631000c209ca047897222ff8c8aee75a99c67e5a273bba26b",
+  "mask_sha256": "dbb3ff295dc0655d2b0f2d7d934c72794b5c0e9fe559c1452b6b61d7914be2fe",
+  "source_bytes": 441260,
+  "mask_bytes": 1679838,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00000-of-00004-f147d414270a90e1.parquet",
+  "source_url_sha256": "466a17c5098e06b264e11f478a9a2fe9a3044978d50af7e78e86e49be877cd2b"
+}

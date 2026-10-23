@@ -1,0 +1,28 @@
+{
+  "configs": [
+    "F_safe",
+    "R2_safe",
+    "R3_safe"
+  ],
+  "repeats": 3,
+  "cases": [
+    "blocks_text",
+    "shirt_color",
+    "remove_hair"
+  ],
+  "warmups_per_case_config": 1,
+  "planned_requests": 36,
+  "full_steps_1based": [
+    1,
+    2,
+    4,
+    6,
+    8
+  ],
+  "native_baseline": "F_safe",
+  "deviations": [
+    "P25/P50 sweeps deferred; R0 fractions 9-28% provide low-area evidence, no 50% area trend claim",
+    "G used for correctness, no standalone five-repeat overhead benchmark",
+    "No mid-step branch clone; only request reset and dynamic expansion tested"
+  ]
+}

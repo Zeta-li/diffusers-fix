@@ -1,0 +1,1532 @@
+{
+  "schema_version": 1,
+  "status": "COMPLETE",
+  "reviewer_type": "assistant visual review; nonblind; not a human subject or blinded evaluation",
+  "scope": "Only the original first8 frozen Val16 cases; successful measurement repeat0 for F/R2/PRIOR/A/B",
+  "warmup_outputs_excluded": true,
+  "target_ground_truth_not_viewed": true,
+  "formal_human_accuracy_claim_permitted": false,
+  "independent_sample_warning": "8 source cases x 5 configurations = 40 qualitative output records, not 40 independent samples",
+  "panel_layout": [
+    "INPUT",
+    "F",
+    "R2",
+    "PRIOR",
+    "A",
+    "B"
+  ],
+  "cases_manifest_sha256": "d66d413ffa385e96def3392faed5156eba3fa55827e204080ef3923bea4eae25",
+  "allowed_labels": {
+    "instruction_complete": [
+      "pass",
+      "partial",
+      "fail",
+      "uncertain"
+    ],
+    "candidate_new_degradation_vs_F": [
+      "yes",
+      "no",
+      "uncertain",
+      "not_applicable"
+    ],
+    "spatial_issue_observed": [
+      "observed",
+      "none_observed",
+      "uncertain"
+    ],
+    "spatial_issue_new_vs_F": [
+      "yes",
+      "no",
+      "uncertain",
+      "not_applicable"
+    ]
+  },
+  "evidence_rules": [
+    "Judge F instruction completeness first; then grade each candidate independently.",
+    "Instruction completeness is absolute adherence to the prompt; a candidate can match a failing F and still fail.",
+    "Compare candidate new degradation against the same-case F measurement repeat0.",
+    "Use full panel for outside-region and global lighting; use native crop for object identity, borders and blending.",
+    "A change outside the ROI is not automatically an error; describe whether it is plausibly required and use uncertain when attribution is unclear.",
+    "Use a short observable evidence sentence, and uncertain for details not resolvable from supplied pixels.",
+    "Verify source_runs snapshot, output PNG digests, receipt digests and panel digests before attaching judgments.",
+    "Do not infer a formal human accuracy rate, blinded preference or statistical significance from this review."
+  ],
+  "source_runs_snapshot": {
+    "path": "data/monitor_snapshots/runs_first8_measurement0.jsonl",
+    "sha256": "a5ef4d67a37ad5729966d093dbdfa271977c6c9619aee544a60dae2dc98684c5",
+    "rows": 123
+  },
+  "receipts": {
+    "path": "figures/review_during_run/receipts_first8.json",
+    "sha256": "0431f08cdeb6c15c9de8b653afeb082c93bc7fabc533d5668bdf323ed9f66e22"
+  },
+  "cases": [
+    {
+      "case_id": "mb_val_308192",
+      "img_id": "308192",
+      "prompt": "put a tennis racket next to the bat",
+      "frozen_selection_rank_sha256": "033a4c07998049314cca57c712b2c372d7a05d5437f89d64a046959257444555",
+      "source_image": {
+        "path": "inputs/val16/308192/source.original",
+        "sha256": "1fc30a0d88c88967c93d35d73e4814d0f3f481a03d6606695b2d0f5c12f19f0c"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/308192/mask.target.binary.png",
+        "sha256": "083649df6fcad8284cbae20827b1312c3ba0e1720f0f1407caca92e017f6a5ac"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_308192_full.png",
+        "sha256": "32b190e0a95dadb5b5c350ed1ef9f95d61ba7b84528516c3d93d100d980c0fc8"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_308192_crop.png",
+        "sha256": "bf1d344668e12aef1df420648555104b20493ca17e279ec7b8221a68db725499"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_308192__measurement_0",
+          "output_path": "outputs/F__mb_val_308192.png",
+          "output_sha256": "2853834b779e28240c19fa7c0a0a2bf2956a0567dfe04b3f298f55744a5fe29b",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "原球棒保留，旁边增加完整椭圆拍框、网线及黑色手柄的网球拍。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "F作为参照，不与自身比较。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "拍框、网线和手柄边界可辨；未见明显断裂或矩形接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "球拍与落叶场景之间未见明显不合理的亮度或色块断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "球棒、红色容器和远处落叶的主要结构保留，未见候选新增的大范围结构破坏。"
+            }
+          },
+          "limitations": "未把网线逐像素差异或配色变化直接判为质量下降；本例不证明无损。"
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_308192__measurement_0",
+          "output_path": "outputs/R2__mb_val_308192.png",
+          "output_sha256": "76460981670d3a16d674ed55574b511f771fc0ed903419cd1c80128288310421",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "球拍和球棒同时可见；拍框偏亮青色，仍是合理网球拍。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "拍框配色差异没有明显损害指令完成。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "拍框、网线和手柄边界可辨；未见明显断裂或矩形接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "球拍与落叶场景之间未见明显不合理的亮度或色块断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "球棒、红色容器和远处落叶的主要结构保留，未见候选新增的大范围结构破坏。"
+            }
+          },
+          "limitations": "未把网线逐像素差异或配色变化直接判为质量下降；本例不证明无损。"
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_308192__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_308192.png",
+          "output_sha256": "cc4be6c79193be5fbe768c86c1d2210625156e855c990c5acbed1ae2d7cc630f",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "球拍完整且位于球棒旁，姿态略变，未见缺失关键部件。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "姿态变化仍合理，没有可确认新增退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "拍框、网线和手柄边界可辨；未见明显断裂或矩形接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "球拍与落叶场景之间未见明显不合理的亮度或色块断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "球棒、红色容器和远处落叶的主要结构保留，未见候选新增的大范围结构破坏。"
+            }
+          },
+          "limitations": "未把网线逐像素差异或配色变化直接判为质量下降；本例不证明无损。"
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_308192__measurement_0",
+          "output_path": "outputs/A__mb_val_308192.png",
+          "output_sha256": "aaf97bf3f44dead3a3cbfbec72428ed06f952e3992e87ab50993b44f7cfe027f",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "球拍完整，拍面和手柄清楚，位置关系符合指令。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "与F的细节差异没有形成可确认的语义或接缝问题。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "拍框、网线和手柄边界可辨；未见明显断裂或矩形接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "球拍与落叶场景之间未见明显不合理的亮度或色块断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "球棒、红色容器和远处落叶的主要结构保留，未见候选新增的大范围结构破坏。"
+            }
+          },
+          "limitations": "未把网线逐像素差异或配色变化直接判为质量下降；本例不证明无损。"
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_308192__measurement_0",
+          "output_path": "outputs/B__mb_val_308192.png",
+          "output_sha256": "5a173720b83ce701f0ff091b656a9a09791fbb08b21605dd0d9691c3a51a13ff",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "保留球棒并新增完整球拍，未见相对F新增明显缺损。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "拍框网线存在细节变化，但没有可确认新增退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "拍框、网线和手柄边界可辨；未见明显断裂或矩形接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "球拍与落叶场景之间未见明显不合理的亮度或色块断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "球棒、红色容器和远处落叶的主要结构保留，未见候选新增的大范围结构破坏。"
+            }
+          },
+          "limitations": "未把网线逐像素差异或配色变化直接判为质量下降；本例不证明无损。"
+        }
+      ],
+      "case_summary": "五个输出均在原球棒旁增加可辨识网球拍。拍框颜色、角度、拍面网格有变化，但这些变体本身不构成退化；没有观察到候选新增的明确语义失败。",
+      "crop_xyxy": [
+        274,
+        42,
+        1014,
+        928
+      ]
+    },
+    {
+      "case_id": "mb_val_565269",
+      "img_id": "565269",
+      "prompt": "add a bus station",
+      "frozen_selection_rank_sha256": "0399fc9bd3c638e406f4635e077b263eed539a8875a131721498769287ceb76c",
+      "source_image": {
+        "path": "inputs/val16/565269/source.original",
+        "sha256": "8c0abb03bbdd4f075a8fca39bd8db63843d699dc8a4e6b5821f235428a9ab2c9"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/565269/mask.target.binary.png",
+        "sha256": "c7a1414e9b8f9279caae3e92bbef7114db022aee0c7bf86fe3181c25f7fdf533"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_565269_full.png",
+        "sha256": "1b24ef2e92346fa43fb7e315dae859eabe95483e98b496291f45efe3b89d43c5"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_565269_crop.png",
+        "sha256": "e305af5f566ad64b6a88d7ada6bf089a74374d9b9f7af4b58991962c486d5ceb"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_565269__measurement_0",
+          "output_path": "outputs/F__mb_val_565269.png",
+          "output_sha256": "6a721e3927a275a535316c6d982665560414c3632ec84b77bec9a772d81a84ed",
+          "measurement_repeat": 0,
+          "instruction_complete": "fail",
+          "instruction_evidence": "新增站点设施不可辨识；主要变化是原远处公交车变成白色车头，原Bus Stop牌仍在。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "F本身未清楚完成指令。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "站牌和黑色箱体主要轮廓保留；未见明确矩形图像拼接裂缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "天空、箱体和道路之间未见候选新增的明显亮度断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "远处交通灯、主站牌和道路总体保留；不能把车辆变化误称为新增站点。"
+            }
+          },
+          "limitations": "station的具体形式存在语言歧义；PRIOR/A灰块被遮挡，故记uncertain，不记pass。"
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_565269__measurement_0",
+          "output_path": "outputs/R2__mb_val_565269.png",
+          "output_sha256": "17116392ec54244a9dc7c32a1b91da91c71638f39d5d50c33ac8358a030edb09",
+          "measurement_repeat": 0,
+          "instruction_complete": "fail",
+          "instruction_evidence": "仍主要是公交车外观变化，没有清楚新增站房、站台或候车结构。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "没有确认比F进一步恶化；与F同样缺少新增站点证据。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "站牌和黑色箱体主要轮廓保留；未见明确矩形图像拼接裂缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "天空、箱体和道路之间未见候选新增的明显亮度断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "远处交通灯、主站牌和道路总体保留；不能把车辆变化误称为新增站点。"
+            }
+          },
+          "limitations": "station的具体形式存在语言歧义；PRIOR/A灰块被遮挡，故记uncertain，不记pass。"
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_565269__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_565269.png",
+          "output_sha256": "0e02ddcbd0b469cfdfa396ffac9065a310fb305dd24bd700b1f9cf45cbba1d56",
+          "measurement_repeat": 0,
+          "instruction_complete": "uncertain",
+          "instruction_evidence": "箱体上方出现灰色矩形结构，但大部分被遮挡，无法确认是公交站设施。",
+          "candidate_new_degradation_vs_F": "uncertain",
+          "candidate_new_degradation_evidence": "新增灰块可能是设施片段，也可能是杂物或伪影，不能确定净改善或新增退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "箱体上新增灰色小结构，但缺少可辨站点形态，无法确认是否是合理设施或伪影。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "天空、箱体和道路之间未见候选新增的明显亮度断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "远处交通灯、主站牌和道路总体保留；不能把车辆变化误称为新增站点。"
+            }
+          },
+          "limitations": "station的具体形式存在语言歧义；PRIOR/A灰块被遮挡，故记uncertain，不记pass。"
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_565269__measurement_0",
+          "output_path": "outputs/A__mb_val_565269.png",
+          "output_sha256": "057904a47edddb04097611b35aa1722f8f7f7f7af36ae118f7b2eae595785194",
+          "measurement_repeat": 0,
+          "instruction_complete": "uncertain",
+          "instruction_evidence": "出现与PRIOR相似的灰色小结构，不能可靠判断是否完成新增公交站。",
+          "candidate_new_degradation_vs_F": "uncertain",
+          "candidate_new_degradation_evidence": "灰块的功能及结构不清，不能据此声称改善或退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "箱体上新增灰色小结构，但缺少可辨站点形态，无法确认是否是合理设施或伪影。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "天空、箱体和道路之间未见候选新增的明显亮度断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "远处交通灯、主站牌和道路总体保留；不能把车辆变化误称为新增站点。"
+            }
+          },
+          "limitations": "station的具体形式存在语言歧义；PRIOR/A灰块被遮挡，故记uncertain，不记pass。"
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_565269__measurement_0",
+          "output_path": "outputs/B__mb_val_565269.png",
+          "output_sha256": "1267212791213c1b78f7120cda611d38d01a9a6dad6ef3f693895be70601f6fa",
+          "measurement_repeat": 0,
+          "instruction_complete": "fail",
+          "instruction_evidence": "没有辨认出新增站点设施，主要仍是远处公交车变白。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "未见明确新增破损，但同样未补足F的指令失败。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "站牌和黑色箱体主要轮廓保留；未见明确矩形图像拼接裂缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "天空、箱体和道路之间未见候选新增的明显亮度断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "远处交通灯、主站牌和道路总体保留；不能把车辆变化误称为新增站点。"
+            }
+          },
+          "limitations": "station的具体形式存在语言歧义；PRIOR/A灰块被遮挡，故记uncertain，不记pass。"
+        }
+      ],
+      "case_summary": "F主要把远处公交车改成白色车头，未清楚新增可辨识的站房或候车设施。R2/B保留这一失败。PRIOR/A在黑色箱体上方多出灰色小矩形，但性质和完整结构不清，不能判为已建成公交站。",
+      "crop_xyxy": [
+        20,
+        418,
+        1024,
+        1024
+      ]
+    },
+    {
+      "case_id": "mb_val_392687",
+      "img_id": "392687",
+      "prompt": "change the scooter into a skateboard",
+      "frozen_selection_rank_sha256": "040ab0a4d5671b057fcf6e00f7f8498ae45b7e0c354efb3170367d36257f77c8",
+      "source_image": {
+        "path": "inputs/val16/392687/source.original",
+        "sha256": "0d4e3a033013f2b00f0b972b41a3891b2534b031d641aa96cc41a97daf895274"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/392687/mask.target.binary.png",
+        "sha256": "5b41b0a99fcf666428ec102a59c0503b79c3969c9b268cb6f3f3239dd488212f"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_392687_full.png",
+        "sha256": "82d385d315516633ed13f5bcc25580c1f244120c6b6e3c6d1fd020cb324a5af2"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_392687_crop.png",
+        "sha256": "abf222daad4cb03072a3bde82b3976d4f7082f06f893c55765512e745d7a7535"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_392687__measurement_0",
+          "output_path": "outputs/F__mb_val_392687.png",
+          "output_sha256": "a703fffdfbe6143b1aa4ce79bd78e1cc993a96309a504d248feeb16d5d860e84",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "脚下已是带轮滑板，原踏板车竖直杆消失；手部仍保持原姿势。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "F整体完成替换；手部暗细节不足作残留把手结论。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "not_applicable",
+              "evidence": "滑板轮廓和轮子可辨；手指附近少量暗线分辨率有限，无法确定是残留零件。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "滑板与道路的色调和投影未见明确新增断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "旁人、树、停车挡块和海面总体保留，未见候选新增的区域外主体破坏。"
+            }
+          },
+          "limitations": "细小手部和脚部不能仅靠面板定性作严格解剖判断；B板头变化不是已确认失败。"
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_392687__measurement_0",
+          "output_path": "outputs/R2__mb_val_392687.png",
+          "output_sha256": "71f0dfd8afe3db3d3e5c45df2c62216588f3ef03690d07cd6d11278ffa4da6f2",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "踏板车换成粉色板面滑板，轮子可见，竖直杆移除。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "板面配色变化本身不是退化，未见明确新增失败。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "滑板轮廓和轮子可辨；手指附近少量暗线分辨率有限，无法确定是残留零件。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "滑板与道路的色调和投影未见明确新增断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "旁人、树、停车挡块和海面总体保留，未见候选新增的区域外主体破坏。"
+            }
+          },
+          "limitations": "细小手部和脚部不能仅靠面板定性作严格解剖判断；B板头变化不是已确认失败。"
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_392687__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_392687.png",
+          "output_sha256": "620e4c178fc42fea371637905e7dee9c593504965f7f8bd474b6c33d5d18b872",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "已生成可辨识滑板，人物站位和周围停车场保持。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "未观察到相对F新增的明确主体缺失或断裂。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "滑板轮廓和轮子可辨；手指附近少量暗线分辨率有限，无法确定是残留零件。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "滑板与道路的色调和投影未见明确新增断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "旁人、树、停车挡块和海面总体保留，未见候选新增的区域外主体破坏。"
+            }
+          },
+          "limitations": "细小手部和脚部不能仅靠面板定性作严格解剖判断；B板头变化不是已确认失败。"
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_392687__measurement_0",
+          "output_path": "outputs/A__mb_val_392687.png",
+          "output_sha256": "7fc502c03050c24237d4b73368bcbe67437e522f8ad167704f98fa6663b059ba",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "脚下为有轮滑板，替换对象可辨识，未见竖直杆。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "主要语义与F一致，未见可确认新增退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "滑板轮廓和轮子可辨；手指附近少量暗线分辨率有限，无法确定是残留零件。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "滑板与道路的色调和投影未见明确新增断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "旁人、树、停车挡块和海面总体保留，未见候选新增的区域外主体破坏。"
+            }
+          },
+          "limitations": "细小手部和脚部不能仅靠面板定性作严格解剖判断；B板头变化不是已确认失败。"
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_392687__measurement_0",
+          "output_path": "outputs/B__mb_val_392687.png",
+          "output_sha256": "d3d6dab12e88caecb3175c3d584229afba1d42913a844efae8d293fe2ab60213",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "已生成滑板，但板头明显上翘；前脚与翘起板面的接触细节不够清楚。",
+          "candidate_new_degradation_vs_F": "uncertain",
+          "candidate_new_degradation_evidence": "板头和脚部关系与F不同，但滑板本来可有翘头，无法确定这是结构错误。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "板头更高翘，前脚接触细节不清；正常滑板也可有翘头，不能确认新增结构错误。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "滑板与道路的色调和投影未见明确新增断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "旁人、树、停车挡块和海面总体保留，未见候选新增的区域外主体破坏。"
+            }
+          },
+          "limitations": "细小手部和脚部不能仅靠面板定性作严格解剖判断；B板头变化不是已确认失败。"
+        }
+      ],
+      "case_summary": "五个输出均生成有轮子的滑板并去掉踏板车竖直支杆，主要替换目标完成。手部仍保持原持车姿势，但原始F PNG中的小暗线不足以确定为残留把手；不据此误判基线失败。B板头更高翘，前脚接触关系需要保留不确定。",
+      "crop_xyxy": [
+        192,
+        584,
+        520,
+        948
+      ]
+    },
+    {
+      "case_id": "mb_val_175584",
+      "img_id": "175584",
+      "prompt": "Put a pond next to the cows.",
+      "frozen_selection_rank_sha256": "04d14a52a9523bb6204f7862b039fe067909cc18de4f6b019078cf7050d05827",
+      "source_image": {
+        "path": "inputs/val16/175584/source.original",
+        "sha256": "08f2929c59bcd22ef86f5b42ffe92198db59d69e6fef4c1013a5114fb80ca609"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/175584/mask.target.binary.png",
+        "sha256": "fca762ad4647df78dbd8c347dcb2a11b6b5a4180eb2a852e0e04dc87e95cba77"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_175584_full.png",
+        "sha256": "69aae58efbbd69134c289f7a3df15ba92b932663cba9260a3995a904952b6c8e"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_175584_crop.png",
+        "sha256": "6f9afe23bece734a1c13c2644bf9a4e48c87108dfa7e87d3e1376b0f45880b79"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_175584__measurement_0",
+          "output_path": "outputs/F__mb_val_175584.png",
+          "output_sha256": "d8f7b5f6aea19fd24226cca793e61c77c6ddc91ed5582f9302b230038b297fbb",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "牛前方新增完整椭圆池塘及倒影，满足增加池塘的主要语义。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "F池边过于规整且倒影块状，但没有B同样明显的水平拼接断层。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "F及多数候选池边偏规则、倒影偏平涂；B另有更强的水平拼接与截断。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "池面和牛倒影整体显得平涂、对比强；B另外出现跨水面的水平色调层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "主要牛群、远景围栏和天空仍保留；池塘扩展超出原小mask的部分不能自动视为不合理变化。"
+            }
+          },
+          "limitations": "没有根据接缝位置推断算法因果；只确认视觉退化。池塘存在并不意味着合成质量通过。"
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_175584__measurement_0",
+          "output_path": "outputs/R2__mb_val_175584.png",
+          "output_sha256": "cc7c95609c104fbfb3b929e161bcb3707c24e20a062f269332d9568327f95942",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "牛旁新增池塘，范围与F不同，但主体仍明确。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "池形和范围变化未构成可确认新增失败；F共有的人工倒影仍在。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "F及多数候选池边偏规则、倒影偏平涂；B另有更强的水平拼接与截断。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "池面和牛倒影整体显得平涂、对比强；B另外出现跨水面的水平色调层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "主要牛群、远景围栏和天空仍保留；池塘扩展超出原小mask的部分不能自动视为不合理变化。"
+            }
+          },
+          "limitations": "没有根据接缝位置推断算法因果；只确认视觉退化。池塘存在并不意味着合成质量通过。"
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_175584__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_175584.png",
+          "output_sha256": "77bcf636628a8bbf037e8c7f6b8ba750357452c08649d0534f8614a9005e9226",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "池塘与牛同时可辨，池形略变，主要指令完成。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "没有确认新增矩形接缝；保留与F相似的人工水面感。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "F及多数候选池边偏规则、倒影偏平涂；B另有更强的水平拼接与截断。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "池面和牛倒影整体显得平涂、对比强；B另外出现跨水面的水平色调层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "主要牛群、远景围栏和天空仍保留；池塘扩展超出原小mask的部分不能自动视为不合理变化。"
+            }
+          },
+          "limitations": "没有根据接缝位置推断算法因果；只确认视觉退化。池塘存在并不意味着合成质量通过。"
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_175584__measurement_0",
+          "output_path": "outputs/A__mb_val_175584.png",
+          "output_sha256": "6c646252de233f4de723df5ddc5d81aca081987d9d5c3987c8b41d9edec30877",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "牛前形成池塘，主要语义完成。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "池形变体仍合理，未见B那样的明显下缘截断。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "F及多数候选池边偏规则、倒影偏平涂；B另有更强的水平拼接与截断。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "池面和牛倒影整体显得平涂、对比强；B另外出现跨水面的水平色调层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "主要牛群、远景围栏和天空仍保留；池塘扩展超出原小mask的部分不能自动视为不合理变化。"
+            }
+          },
+          "limitations": "没有根据接缝位置推断算法因果；只确认视觉退化。池塘存在并不意味着合成质量通过。"
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_175584__measurement_0",
+          "output_path": "outputs/B__mb_val_175584.png",
+          "output_sha256": "5bd5519132b7a5251b1ad31f70b8953feb866e1e3bfdac9184a89875f09714d8",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "池塘已生成，但水面内部有水平分层，下边缘出现平直截断并遮住部分水管。",
+          "candidate_new_degradation_vs_F": "yes",
+          "candidate_new_degradation_evidence": "原1024 PNG可见池塘左侧中部水平亮度/纹理断层和近水平下缘；F下缘为连续椭圆且水管完整露在草地上。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "yes",
+              "evidence": "比F新增左侧水面中部的水平拼接线及平直下缘，水面遮住部分原水管。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "observed",
+              "new_vs_F": "yes",
+              "evidence": "水面跨越一条明显水平色调层；F原PNG没有同样的分层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "主要牛群、远景围栏和天空仍保留；池塘扩展超出原小mask的部分不能自动视为不合理变化。"
+            }
+          },
+          "limitations": "没有根据接缝位置推断算法因果；只确认视觉退化。池塘存在并不意味着合成质量通过。"
+        }
+      ],
+      "case_summary": "五个输出都在牛旁增加池塘，故语义均可辨。F本身池边与倒影已有较人工的平涂感；B进一步出现池塘内部水平分层、下缘平直截断和水管被水面遮断的明显新增问题。",
+      "crop_xyxy": [
+        0,
+        694,
+        1024,
+        1024
+      ]
+    },
+    {
+      "case_id": "mb_val_190360",
+      "img_id": "190360",
+      "prompt": "let the cat have its eyes closed",
+      "frozen_selection_rank_sha256": "06173679b9f6f8b6e069c1477ce5218b09ae6261ac09f6bccd461dc95b542d27",
+      "source_image": {
+        "path": "inputs/val16/190360/source.original",
+        "sha256": "4c426c159b837a39181bd2e6de50d9b62c9292565bd9692d61bc3cc61641cff8"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/190360/mask.target.binary.png",
+        "sha256": "e8ca3464978effac77ef4a2bc42954e01f02c34d0cca1289ffbcd20da19101fa"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_190360_full.png",
+        "sha256": "346f8660c8230f57b06d461bffe77b23a5652d480c50e6976ad7a44b253ea4ee"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_190360_crop.png",
+        "sha256": "e18990d68412351f4b38ec356884a2bb5ee57df2d42f9407bb577d81cf75d62a"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_190360__measurement_0",
+          "output_path": "outputs/F__mb_val_190360.png",
+          "output_sha256": "96a4e5d53675536039b941fe7a509d7c2daf04d95dd5c080bb52a483b57c06bc",
+          "measurement_repeat": 0,
+          "instruction_complete": "partial",
+          "instruction_evidence": "下侧眼变成闭眼弧线，上侧眼仍有开口和瞳孔，未完成双眼闭合。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "F闭眼只完成一部分，不能作为完全正确教师输出。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "not_applicable",
+              "evidence": "眼线是重绘结果；未见明确硬接缝，但眼周精细解剖不作确定结论。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "毛色与车盖照明总体连贯，未见明确新增的大块亮度接缝。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "远处车窗、房屋及猫躯干总体保留；PRIOR/A眼区附近的额外头部漂移另记不确定性。"
+            }
+          },
+          "limitations": "双眼开闭在crop上可判；不能凭该面板精确判定猫身份保持或额外耳廓的解剖正确性。"
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_190360__measurement_0",
+          "output_path": "outputs/R2__mb_val_190360.png",
+          "output_sha256": "13d3ae75840d3492993833c472269b063c5bc2347d2f674f04e5316ade0632f0",
+          "measurement_repeat": 0,
+          "instruction_complete": "fail",
+          "instruction_evidence": "两眼仍可辨为睁开状态，未完成闭眼。",
+          "candidate_new_degradation_vs_F": "yes",
+          "candidate_new_degradation_evidence": "相对F连下侧已闭眼的变化也丢失，形成明确语义退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "右侧浅色尖突较显著，像耳廓；是否多余部件不确定，不据此作额外解剖失败判断。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "毛色与车盖照明总体连贯，未见明确新增的大块亮度接缝。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "远处车窗、房屋及猫躯干总体保留；PRIOR/A眼区附近的额外头部漂移另记不确定性。"
+            }
+          },
+          "limitations": "双眼开闭在crop上可判；不能凭该面板精确判定猫身份保持或额外耳廓的解剖正确性。"
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_190360__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_190360.png",
+          "output_sha256": "3bf14875ac4a72f6226bc295b6d1406d897784f666396aeafc5294f9c21c3bc7",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "两眼均变成闭合线，没有可辨的睁眼瞳孔；头部同时更大且角度改变。",
+          "candidate_new_degradation_vs_F": "uncertain",
+          "candidate_new_degradation_evidence": "闭眼语义优于F，但额外头部姿态与轮廓漂移是否可接受不确定。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "头部角度与大小明显重绘，右侧耳廓外移；这是否为可接受的睡眠姿态变化不确定。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "毛色与车盖照明总体连贯，未见明确新增的大块亮度接缝。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "不只眼睛，整个头部和右侧耳轮廓也变化；远处车身房屋保留，额外局部身份/姿态漂移是否可接受不确定。"
+            }
+          },
+          "limitations": "双眼开闭在crop上可判；不能凭该面板精确判定猫身份保持或额外耳廓的解剖正确性。"
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_190360__measurement_0",
+          "output_path": "outputs/A__mb_val_190360.png",
+          "output_sha256": "15ec9752829e39927556736276f5668fd55a6f9b218e84fd06cda0a4c638766c",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "双眼均闭合，指令主体完成；头部与耳廓位置也明显改变。",
+          "candidate_new_degradation_vs_F": "uncertain",
+          "candidate_new_degradation_evidence": "双眼闭合改善明确，头部变化较大，整体保持质量不能确定优于F。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "头部角度与大小明显重绘，右侧耳廓外移；这是否为可接受的睡眠姿态变化不确定。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "毛色与车盖照明总体连贯，未见明确新增的大块亮度接缝。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "不只眼睛，整个头部和右侧耳轮廓也变化；远处车身房屋保留，额外局部身份/姿态漂移是否可接受不确定。"
+            }
+          },
+          "limitations": "双眼开闭在crop上可判；不能凭该面板精确判定猫身份保持或额外耳廓的解剖正确性。"
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_190360__measurement_0",
+          "output_path": "outputs/B__mb_val_190360.png",
+          "output_sha256": "a371b461d1190ea1c6173b0e1e0f8f13df03f1bec4786213ac154bfa45bacf11",
+          "measurement_repeat": 0,
+          "instruction_complete": "fail",
+          "instruction_evidence": "两眼仍可看到深色瞳孔，未闭合双眼。",
+          "candidate_new_degradation_vs_F": "yes",
+          "candidate_new_degradation_evidence": "相对F已闭合的下侧眼重新睁开，形成明确语义退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "右侧浅色尖突较显著，像耳廓；是否多余部件不确定，不据此作额外解剖失败判断。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "毛色与车盖照明总体连贯，未见明确新增的大块亮度接缝。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "远处车窗、房屋及猫躯干总体保留；PRIOR/A眼区附近的额外头部漂移另记不确定性。"
+            }
+          },
+          "limitations": "双眼开闭在crop上可判；不能凭该面板精确判定猫身份保持或额外耳廓的解剖正确性。"
+        }
+      ],
+      "case_summary": "F只闭合下侧一只眼，上侧仍可见眼睛开口，记partial。R2/B仍能看到两眼睁开的深色瞳孔，较F丢失已完成的闭眼变化。PRIOR/A两眼均呈闭眼线，语义改善明显，但头部角度、大小和耳廓位置比F变化更大，不能据此声称整体质量全面改善。",
+      "crop_xyxy": [
+        595,
+        489,
+        826,
+        752
+      ]
+    },
+    {
+      "case_id": "mb_val_178572",
+      "img_id": "178572",
+      "prompt": "Let the player wear a red hat.",
+      "frozen_selection_rank_sha256": "062f2ae7622dde481adbc6c216dd73efdaa9d20fe022713247b0c53cd7d3eb33",
+      "source_image": {
+        "path": "inputs/val16/178572/source.original",
+        "sha256": "5780caad2c24018fa130239d76be4a7014cc82d25b6d7983b1d9292e5ff54df4"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/178572/mask.target.binary.png",
+        "sha256": "e55076dccface07c6bdab20f0ffd940b99e852d13a28281982396c6f430b035f"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_178572_full.png",
+        "sha256": "52c2c17a9e57582848ff7fa9a36658259c1c3abe4b1202b7fe36881f34d2855e"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_178572_crop.png",
+        "sha256": "1e33894cca15186698ed079ccef04fcd1b020281cd5e14a1c0938c3349155382"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_178572__measurement_0",
+          "output_path": "outputs/F__mb_val_178572.png",
+          "output_sha256": "00de1b54aa2afbc80baf2dc4b46a123b6c34924f673fde814a8479a04decf13a",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "球员帽冠与帽檐均为明显红色，白色标志可见。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "F帽子平滑鲜亮、边缘很清晰，属于基线共有的合成质感问题。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "红帽边缘和表面明显比周围低清显示屏更平滑锐利；这一问题F和候选共有。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "not_applicable",
+              "evidence": "红帽颜色很饱和且纹理少，但仅凭屏幕照片不能可靠判断光照是否错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "显示屏、砖墙与窗户主体总体保留，未见候选新增区域外破坏。"
+            }
+          },
+          "limitations": "指令完成不等同于显示屏像素风格或照片质感完全匹配。"
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_178572__measurement_0",
+          "output_path": "outputs/R2__mb_val_178572.png",
+          "output_sha256": "1b680a6f16148e74cfd6e34e379bb96e66a1910f2e0678bff0dd395a56052064",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "完整红帽可辨，仍位于原球员头部。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "没有确认相对F新增缺口或主体错误。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "红帽边缘和表面明显比周围低清显示屏更平滑锐利；这一问题F和候选共有。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "红帽颜色很饱和且纹理少，但仅凭屏幕照片不能可靠判断光照是否错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "显示屏、砖墙与窗户主体总体保留，未见候选新增区域外破坏。"
+            }
+          },
+          "limitations": "指令完成不等同于显示屏像素风格或照片质感完全匹配。"
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_178572__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_178572.png",
+          "output_sha256": "97300ef20f409be4e2e6431f1e77ba22b71c6e23051a4d90fd00ca3d71f5a665",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "球员戴鲜红帽，主要位置和人物保留。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "帽冠形状略变，但未见可确认新增退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "红帽边缘和表面明显比周围低清显示屏更平滑锐利；这一问题F和候选共有。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "红帽颜色很饱和且纹理少，但仅凭屏幕照片不能可靠判断光照是否错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "显示屏、砖墙与窗户主体总体保留，未见候选新增区域外破坏。"
+            }
+          },
+          "limitations": "指令完成不等同于显示屏像素风格或照片质感完全匹配。"
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_178572__measurement_0",
+          "output_path": "outputs/A__mb_val_178572.png",
+          "output_sha256": "8f1e1b434b1a78a5ed9296aaa0c5803e8d0989f15c537a38130280fa5b6287e9",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "帽冠改为红色，符合指令。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "与F相近的平滑红帽，没有可确认新增失败。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "红帽边缘和表面明显比周围低清显示屏更平滑锐利；这一问题F和候选共有。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "红帽颜色很饱和且纹理少，但仅凭屏幕照片不能可靠判断光照是否错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "显示屏、砖墙与窗户主体总体保留，未见候选新增区域外破坏。"
+            }
+          },
+          "limitations": "指令完成不等同于显示屏像素风格或照片质感完全匹配。"
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_178572__measurement_0",
+          "output_path": "outputs/B__mb_val_178572.png",
+          "output_sha256": "b114a0ff1a3a1bc282878479fdd30ebc679bbc11fae20d942ca10f1a8039eb3a",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "红帽可辨，主体位置和显示屏保留。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "未见比F进一步恶化的明确帽子结构或边界问题。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "红帽边缘和表面明显比周围低清显示屏更平滑锐利；这一问题F和候选共有。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "红帽颜色很饱和且纹理少，但仅凭屏幕照片不能可靠判断光照是否错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "显示屏、砖墙与窗户主体总体保留，未见候选新增区域外破坏。"
+            }
+          },
+          "limitations": "指令完成不等同于显示屏像素风格或照片质感完全匹配。"
+        }
+      ],
+      "case_summary": "五个配置均把显示屏里球员的帽冠改为鲜红色，主要语义完成。F和候选共同存在帽子过于平滑、轮廓过于清晰而与原屏幕颗粒感不一致的观感；没有确认候选额外恶化。",
+      "crop_xyxy": [
+        99,
+        385,
+        364,
+        650
+      ]
+    },
+    {
+      "case_id": "mb_val_211860",
+      "img_id": "211860",
+      "prompt": "Have the woman be wearing a blue tank top",
+      "frozen_selection_rank_sha256": "07158b6f4d16f5fe867fbb837542174953393ccf4b9be72f5b4032618fabb212",
+      "source_image": {
+        "path": "inputs/val16/211860/source.original",
+        "sha256": "1ab36958751f5f8674679892ff9be9c18537cd93fe5d0b76bff095b0f6be02dc"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/211860/mask.target.binary.png",
+        "sha256": "493ad8e765a00f89f72d6d0e89c92541099a26cb5d9609ce67efd2672f58b921"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_211860_full.png",
+        "sha256": "e60d443583810d573b03c4e519dc35b0f37ea62140344fb6ef87bfd05415c5a2"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_211860_crop.png",
+        "sha256": "2e28b195d5d463453a67ceeb2ce8d65ee2dbb0b128fb70c924612649001c7f9e"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_211860__measurement_0",
+          "output_path": "outputs/F__mb_val_211860.png",
+          "output_sha256": "fe2c2444e539ce738b9a236740e0812325ed34c2809a86fb631de50270137169",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "白色短袖换成蓝色无袖背心，领口、肩带和衣身可辨。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "F完成服装替换，上臂因短袖移除而重绘不自动视为失败。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "肩带、领口、腋下与裤腰处未见明显断裂或矩形拼接。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "蓝色布料的阴影和褶皱总体连贯，未见候选新增亮度断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "网球、球拍、腿部和场地主要结构保留，未见候选新增的大范围改变。"
+            }
+          },
+          "limitations": "面板不能证明身体细节逐像素保持；未将服装版型的合理差异直接判为退化。"
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_211860__measurement_0",
+          "output_path": "outputs/R2__mb_val_211860.png",
+          "output_sha256": "1fb7096585228e084ae824a312cc2c24c8b4ec67d02a0185519a8a8f0b7da106",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "蓝色无袖背心完整，姿势和人物仍保留。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "未见相对F新增明显断裂或未完成属性。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "肩带、领口、腋下与裤腰处未见明显断裂或矩形拼接。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "蓝色布料的阴影和褶皱总体连贯，未见候选新增亮度断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "网球、球拍、腿部和场地主要结构保留，未见候选新增的大范围改变。"
+            }
+          },
+          "limitations": "面板不能证明身体细节逐像素保持；未将服装版型的合理差异直接判为退化。"
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_211860__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_211860.png",
+          "output_sha256": "8c1e6e53d0ca578d3185ebb8d2798440daf97f7c10958e96c9c1c06fbd375c9d",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "颜色为蓝且无袖结构明确，主要要求完成。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "衣褶细节略变，没有可确认新增退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "肩带、领口、腋下与裤腰处未见明显断裂或矩形拼接。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "蓝色布料的阴影和褶皱总体连贯，未见候选新增亮度断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "网球、球拍、腿部和场地主要结构保留，未见候选新增的大范围改变。"
+            }
+          },
+          "limitations": "面板不能证明身体细节逐像素保持；未将服装版型的合理差异直接判为退化。"
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_211860__measurement_0",
+          "output_path": "outputs/A__mb_val_211860.png",
+          "output_sha256": "0fa21d5abb350b814f524956150157baf4e1c38070d9ce21295ec60ed3564a49",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "蓝色背心和肩带可辨，主要指令完成。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "未观察到相对F新增接缝或语义错误。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "肩带、领口、腋下与裤腰处未见明显断裂或矩形拼接。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "蓝色布料的阴影和褶皱总体连贯，未见候选新增亮度断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "网球、球拍、腿部和场地主要结构保留，未见候选新增的大范围改变。"
+            }
+          },
+          "limitations": "面板不能证明身体细节逐像素保持；未将服装版型的合理差异直接判为退化。"
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_211860__measurement_0",
+          "output_path": "outputs/B__mb_val_211860.png",
+          "output_sha256": "6f41e0d3afc0c4bb3e3e8c9d6f3c798fc00791a0ced1a367940810ef7c32111b",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "蓝色无袖背心完整，符合颜色和服装类型要求。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "服装形状略变，但没有可确认新增退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "肩带、领口、腋下与裤腰处未见明显断裂或矩形拼接。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "蓝色布料的阴影和褶皱总体连贯，未见候选新增亮度断层。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "网球、球拍、腿部和场地主要结构保留，未见候选新增的大范围改变。"
+            }
+          },
+          "limitations": "面板不能证明身体细节逐像素保持；未将服装版型的合理差异直接判为退化。"
+        }
+      ],
+      "case_summary": "五个输出均为蓝色无袖背心，颜色、无袖结构及人物位置清楚，主要语义完成。服装和上臂重绘是这一编辑的合理后果；未看到候选相对F新增明显断裂或背景损伤。",
+      "crop_xyxy": [
+        428,
+        205,
+        790,
+        616
+      ]
+    },
+    {
+      "case_id": "mb_val_415314",
+      "img_id": "415314",
+      "prompt": "replace the baseball bat for a laser sword",
+      "frozen_selection_rank_sha256": "08a74989ff74c6d48b190c63487dc1ff85d9c3d0f0f488370f4672534d615b82",
+      "source_image": {
+        "path": "inputs/val16/415314/source.original",
+        "sha256": "6d5eb0fc8a4bcd28da352883dd66ad94f478818c310d3a5975d35fef7363bc23"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/415314/mask.target.binary.png",
+        "sha256": "2b909fdc94a0b5c900f8422384e588b9400edcf7b76c1a8907286520b8fa57a4"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_415314_full.png",
+        "sha256": "a7e548d2db4ec9123ef10ec272405b25854691a27d2a1005f08b4553f7b9cc1f"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_415314_crop.png",
+        "sha256": "04dd15d4a181568e248e2a482301bfffbd40073b391f85e9c2c54bafc21b2da7"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_415314__measurement_0",
+          "output_path": "outputs/F__mb_val_415314.png",
+          "output_sha256": "3c8973785130180677a39a1cc6bd90a34c4fa1d2419b2e4e6fe09ec12b279b1b",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "原绿色球棒消失，手中为有握柄和紫色光晕的发光剑。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "F作为完整发光剑参照；近景发光并不证明光照物理完全正确。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "剑刃连续、有明确握柄/连接位置；发光外缘属于预期效果，未见明显矩形接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "not_applicable",
+              "evidence": "各图都有紫色光晕；仅凭这组照片不能验证发光体对机器人和背景的照明是否物理一致。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "机器人躯干和背景主要结构保留；未见候选新增大范围主体破坏。"
+            }
+          },
+          "limitations": "长度差异不作为退化；不能对微小线路、握柄解剖细节或光照物理作精确结论。"
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_415314__measurement_0",
+          "output_path": "outputs/R2__mb_val_415314.png",
+          "output_sha256": "c862019634af7be3423adc213053ded67f17560ed6d33449941e26d726dd8178",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "绿色球棒换成紫色发光剑，主要语义明确。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "未见相对F新增的明确主体缺失或断裂。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "剑刃连续、有明确握柄/连接位置；发光外缘属于预期效果，未见明显矩形接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "各图都有紫色光晕；仅凭这组照片不能验证发光体对机器人和背景的照明是否物理一致。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "机器人躯干和背景主要结构保留；未见候选新增大范围主体破坏。"
+            }
+          },
+          "limitations": "长度差异不作为退化；不能对微小线路、握柄解剖细节或光照物理作精确结论。"
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_415314__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_415314.png",
+          "output_sha256": "d1411684251e6a682d2003904ef9755363bcbf8ddf2dc32d17cf8c2428cf9193",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "有紫色光晕的剑刃可辨，长度更长并越过画面上边界。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "剑长未被指令限定，超出上边界不自动视为新增质量失败。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "剑刃连续、有明确握柄/连接位置；发光外缘属于预期效果，未见明显矩形接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "各图都有紫色光晕；仅凭这组照片不能验证发光体对机器人和背景的照明是否物理一致。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "机器人躯干和背景主要结构保留；未见候选新增大范围主体破坏。"
+            }
+          },
+          "limitations": "长度差异不作为退化；不能对微小线路、握柄解剖细节或光照物理作精确结论。"
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_415314__measurement_0",
+          "output_path": "outputs/A__mb_val_415314.png",
+          "output_sha256": "225418642ab9835f992a7fe35faaeeee2e0187ba5ec4f432a86330c541cec55e",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "原球棒替换为发光剑，剑刃更长，主要指令完成。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "较长剑体仍符合指令，未见可确认新增退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "剑刃连续、有明确握柄/连接位置；发光外缘属于预期效果，未见明显矩形接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "各图都有紫色光晕；仅凭这组照片不能验证发光体对机器人和背景的照明是否物理一致。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "机器人躯干和背景主要结构保留；未见候选新增大范围主体破坏。"
+            }
+          },
+          "limitations": "长度差异不作为退化；不能对微小线路、握柄解剖细节或光照物理作精确结论。"
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_415314__measurement_0",
+          "output_path": "outputs/B__mb_val_415314.png",
+          "output_sha256": "badbf3e8c094c60c55511e4adf6b17ea62bff6da8bf56f1d89034c2b8700ab12",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "发光剑体与握柄可辨，原绿色棒身已移除。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "主体语义和主要握持关系保留，未见可确认新增退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "剑刃连续、有明确握柄/连接位置；发光外缘属于预期效果，未见明显矩形接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "no",
+              "evidence": "各图都有紫色光晕；仅凭这组照片不能验证发光体对机器人和背景的照明是否物理一致。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "机器人躯干和背景主要结构保留；未见候选新增大范围主体破坏。"
+            }
+          },
+          "limitations": "长度差异不作为退化；不能对微小线路、握柄解剖细节或光照物理作精确结论。"
+        }
+      ],
+      "case_summary": "五个输出均把绿色球棒换成带紫色光晕的发光剑体。PRIOR/A剑刃更长并越出上边界，但指令没有限定剑长，不能仅据此认定退化。复杂机器人细节总体保持，细小线路与反射不作无损保证。",
+      "crop_xyxy": [
+        137,
+        0,
+        649,
+        699
+      ]
+    }
+  ],
+  "reviewed_at": "2026-10-23T16:42:23.347555+08:00",
+  "reviewer": "Codex assistant vision",
+  "performance_metrics_consulted": false,
+  "later8_generated_outputs_viewed": false,
+  "all_first8_full_and_crop_panels_actually_viewed": true,
+  "full_panels_viewed": 8,
+  "crop_panels_viewed": 8,
+  "new_diffusion_requests_during_review": 0,
+  "evidence_manifest": {
+    "path": "data/visual_first8_evidence.json",
+    "sha256": "ad29fe34e06f52ac2adab4bd8c325ef350c585e6383cc28221704d4b29c69fd4"
+  },
+  "generated_outputs_viewed_for_this_review": true,
+  "display_limitations": "Some large panels were reduced by the image viewer. The pond F/B and skateboard F were additionally viewed as original 1024 PNGs. Fine hand/anatomy and illumination judgments retain uncertainty.",
+  "original_pngs_additionally_viewed": [
+    {
+      "path": "outputs/F__mb_val_175584.png",
+      "sha256": "d8f7b5f6aea19fd24226cca793e61c77c6ddc91ed5582f9302b230038b297fbb"
+    },
+    {
+      "path": "outputs/B__mb_val_175584.png",
+      "sha256": "5bd5519132b7a5251b1ad31f70b8953feb866e1e3bfdac9184a89875f09714d8"
+    },
+    {
+      "path": "outputs/F__mb_val_392687.png",
+      "sha256": "a703fffdfbe6143b1aa4ce79bd78e1cc993a96309a504d248feeb16d5d860e84"
+    }
+  ],
+  "interpretation": {
+    "baseline_failure_or_partial": [
+      "565269 F未清楚新增公交站；190360 F仅闭一眼。"
+    ],
+    "clear_candidate_new_degradation": [
+      "175584 B新增水平水面拼接/下缘截断。",
+      "190360 R2/B较F丢失下侧已闭眼变化，两眼仍开。"
+    ],
+    "clear_instruction_improvement_with_tradeoff": [
+      "190360 PRIOR/A双眼闭合优于F，但伴随额外头部轮廓和姿态漂移，不能认定整体质量全面改善。"
+    ],
+    "uncertain": [
+      "565269 PRIOR/A灰色结构能否构成站点。",
+      "392687 B翘起板头与脚部关系是否错误。",
+      "415314发光体对环境光照是否物理正确。"
+    ],
+    "not_supported": [
+      "不能由相似F推断指令必成功。",
+      "不能从本复核推出正式人工准确率、盲评偏好率、无损保证或总体统计显著性。"
+    ]
+  },
+  "template_rules_prepared_before_viewing_generated_outputs": true,
+  "template_sha256": "5931f8f911f59e238a4894be83aa96800d1ee27ff18d4175b075a7458af38f59"
+}

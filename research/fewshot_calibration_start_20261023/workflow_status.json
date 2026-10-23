@@ -1,0 +1,19 @@
+{
+  "status": "train8_acquisition_and_fit_complete_val_pending",
+  "time": "2026-10-23T15:56:45.237486+08:00",
+  "engineering_requests": 1,
+  "engineering_dit": 14,
+  "train8_sources": 8,
+  "train8_requests": 8,
+  "train8_student_dit": 64,
+  "train8_oracle_dit": 48,
+  "train8_total_dit": 112,
+  "statistical_fit_complete": true,
+  "fit_additional_model_queries": 0,
+  "main_model_gradient_steps": 0,
+  "val_generated": false,
+  "test_generated": false,
+  "rl_started": false,
+  "cumulative_requests": 428,
+  "cumulative_real_dit": 4134
+}

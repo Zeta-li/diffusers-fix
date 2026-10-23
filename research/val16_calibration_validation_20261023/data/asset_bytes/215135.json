@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "215135",
+    "original_img_id": "215135",
+    "turn_index": 1,
+    "instruction": "Put a wooden floor on the kitchen.",
+    "official_split": "dev",
+    "shard_path": "data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+    "row_group": 1,
+    "row_in_group": 29,
+    "row_in_shard": 61,
+    "selection_rank_sha256": "0a50a3852e3a6926376dc73aa840877912fb1511bdedd5a06f34b540fd76671b"
+  },
+  "image": "inputs/val16/215135/source.original",
+  "original_mask": "inputs/val16/215135/mask.original",
+  "source_sha256": "017a3f83ff7327d77eb6b7a12640398e46e5017b934486ed0e92706f43fc3fd6",
+  "mask_sha256": "120c2c8ede0ab29264b0bbdffebd35bd97465d7a0fe09b0cd40f9705cd225206",
+  "source_bytes": 210604,
+  "mask_bytes": 860861,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+  "source_url_sha256": "cf2671aad08c1f2b2ee93832b2069f6524205905bacaa412307e949e63f924b9"
+}

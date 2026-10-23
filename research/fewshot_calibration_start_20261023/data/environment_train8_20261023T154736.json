@@ -1,0 +1,52 @@
+{
+  "phase": "train8",
+  "attempt": "20261023T154736",
+  "seed": 2026102201,
+  "dtype": "bfloat16",
+  "cfg": 1,
+  "steps": 8,
+  "baseline_commit": "73faca368c0da77645ea58836aa8780d2d8c5353",
+  "device": "NVIDIA L20Y",
+  "capability": [
+    9,
+    0
+  ],
+  "physical_gpu": "H800 per user",
+  "packages": {
+    "torch": "2.9.1+cu129",
+    "diffusers": "0.37.0",
+    "transformers": "5.3.0",
+    "peft": "0.21.2",
+    "numpy": "2.5.2"
+  },
+  "data_manifest_sha256": "627212a7beaf3dbf28247559387936e210864f9e1636a8dbd57d90023c3f26c9",
+  "scripts": {
+    "check_moments.py": "886d6fac05bc9b6d86faa6e477365899ccb49c7aec1c57be2b749c8f2eb650b6",
+    "calibration_collector.py": "bf8e998c6bb0e738ad8de605d30e83f5f52e177c2914b0e78a668d2ce9a8694d",
+    "prepare_magicbrush_v2.py": "7076833073b202d7ac0feeab5e6708d33fa645674b743e385d972ffc243d7af8",
+    "value_time_correction.py": "fb1203fa955e71392c2e73ea2c47d0d9ed9e7d358f01e605a31e54097255ac2e",
+    "moments.py": "64f3d0227e33da55e3b92835abe4c643edaeb0b3a0a4dcfa81d8cd4f29071ae6",
+    "check_collector.py": "935cad05dfe7c5835e606e256f51c523bcb5a0e7b53f5a9f825cde3cac8489b5",
+    "local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "value_fitted_correction.py": "fec2d29eee4be376c6977d0b08042f65a0991df1c706815b9c56694732a2986e",
+    "validate_start.py": "715c2c8e81648fbef52dfc037d2a176a372d448f7bfcd905755e36cfba74dc7a",
+    "run_collection.py": "0b8aa819867c04060418b8e499b028765e3c2188a54b91686a9624278288a55b",
+    "prepare_magicbrush.py": "2b684f31a3ad77a0901db4376cc2d1e01cad10321e6b3c27bf436a2f4f752e14",
+    "value_channel_correction.py": "f3e088226bea615a1f703806226ebf4b8f121d7853d79aeadab7cb29d82a0151",
+    "scan_magicbrush_parallel.py": "e8b1f9a587ab69f7c71fb96268197d74b82c7704ce377c6bf3782c6bcfdb04ef",
+    "check_magicbrush_geometry_v2.py": "e0fddd83f04f01d9c0ff1c21cbce023445a2e0cb4b988f4365e80822c6732bce",
+    "fit_train8.py": "fc866835100f1bd6362f040c0003cd436e7390e4f99a554b818292056b622575",
+    "check_fitted_correction.py": "ebf817e49958bb608e7811745066e1eb8354aaef5ccff23f85a80dbbd0bd83a4"
+  },
+  "planned_requests": 8,
+  "planned_student_forwards": 64,
+  "planned_dense_shadow_forwards": 48,
+  "formal_training_images": 8,
+  "student": "uncorrected fixed core",
+  "sample_count": 128,
+  "sampling": "Fixed per-image, per-layer inactive indices reused across six shadow steps and first anchor; seed 2026102302",
+  "timing_scope": "Diagnostic collection including oracle, hashes, checks, GPU reductions and CPU transfer; not deployment latency",
+  "load_fuse_seconds": 17.217797881923616,
+  "layers": 60,
+  "width": 3072
+}

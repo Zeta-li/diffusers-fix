@@ -1,0 +1,15 @@
+{
+  "changed_at": "2026-10-23T12:16:18.465567+08:00",
+  "archive": "attempts/analysis_text_v1/analyze_budget.py.txt",
+  "original_sha256": "f4583a0f2aa9401d03778da04e966b78339e184334adde90d98ea2b258c67102",
+  "current_sha256": "f4affe01471e558bae707ced8125651ba3a9c8d05da8189c828a8176d1d61f14",
+  "scope": "Exactly three explanatory string changes; all non-string Python tokens unchanged",
+  "changes": [
+    "Plot title states only budget candidates incur planner cost and F/R2 are static",
+    "Summary protocol clarifies B125/B250/B333/B500 per-request rebuild and F/R2 zero selection time",
+    "Generated Markdown explains the same candidate/static-control distinction"
+  ],
+  "model_forwards_added": 0,
+  "metrics_or_audit_logic_changed": false,
+  "runtime_environment_provenance": "environment_primary.json scripts/analyze_budget.py refers to runtime-start historical version; metrics_environment_primary.json records actual analysis version"
+}

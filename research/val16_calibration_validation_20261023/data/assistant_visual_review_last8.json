@@ -1,0 +1,1426 @@
+{
+  "schema_version": 1,
+  "status": "COMPLETE_ASSISTANT_NONBLIND_REVIEW",
+  "reviewer_type": "assistant visual review; nonblind; not a human subject or blinded evaluation",
+  "scope": "last 8 frozen Val16 source cases; successful measurement repeat0 only",
+  "warmup_outputs_excluded": true,
+  "target_ground_truth_not_viewed": true,
+  "generated_outputs_viewed_for_this_template": true,
+  "formal_human_accuracy_claim_permitted": false,
+  "independent_sample_warning": "8 source cases x5 configurations=40 qualitative output records, not 40 independent samples",
+  "panel_layout": [
+    "INPUT",
+    "F",
+    "R2",
+    "PRIOR",
+    "A",
+    "B"
+  ],
+  "cases_manifest_sha256": "d66d413ffa385e96def3392faed5156eba3fa55827e204080ef3923bea4eae25",
+  "allowed_labels": {
+    "instruction_complete": [
+      "pass",
+      "partial",
+      "fail",
+      "uncertain"
+    ],
+    "candidate_new_degradation_vs_F": [
+      "yes",
+      "no",
+      "uncertain",
+      "not_applicable"
+    ],
+    "spatial_issue_observed": [
+      "observed",
+      "none_observed",
+      "uncertain"
+    ],
+    "spatial_issue_new_vs_F": [
+      "yes",
+      "no",
+      "uncertain",
+      "not_applicable"
+    ]
+  },
+  "evidence_rules": [
+    "Judge F instruction completeness first; then grade each candidate independently.",
+    "Instruction completeness is absolute adherence to the prompt; a candidate can match a failing F and still fail.",
+    "Compare candidate new degradation against the same-case F measurement repeat0.",
+    "Use full panel for outside-region and global lighting; use native crop for object identity, borders and blending.",
+    "A change outside the ROI is not automatically an error; describe whether it is plausibly required and use uncertain when attribution is unclear.",
+    "Use a short observable evidence sentence, and uncertain for details not resolvable from supplied pixels.",
+    "Verify source_runs snapshot, output PNG digests, receipt digests and panel digests before attaching judgments.",
+    "Do not infer a formal human accuracy rate, blinded preference or statistical significance from this review."
+  ],
+  "source_runs_snapshot": {
+    "path": "data/monitor_snapshots/runs_all16_measurement0.jsonl",
+    "sha256": "2599f527d2c2e0736b3501987cda0a9ff2b79b7db6f67b3bcd9fb1aa9576dc49"
+  },
+  "receipts": {
+    "path": "figures/review_during_run/receipts_all16.json",
+    "sha256": "423132f387ce91d3dc3b3ddd179fef934168ba9e459fcafebf7236ee5a72664d"
+  },
+  "cases": [
+    {
+      "case_id": "mb_val_50151",
+      "img_id": "50151",
+      "prompt": "Can we put a hand on the door?",
+      "frozen_selection_rank_sha256": "0a2fd9770c4f11a4ade660368346f9f916ebdbf09f70202ef62ef1ad049aa843",
+      "source_image": {
+        "path": "inputs/val16/50151/source.original",
+        "sha256": "acda867285f2ae3ff14b97f7a49b628e530bbf7a159d532f4fdebe78c5bd1e5f"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/50151/mask.target.binary.png",
+        "sha256": "fda5c66115289e368ccbdf2154a06e4b33d200907beaa900ad4d6a83a40ea874"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_50151_full.png",
+        "sha256": "43f87cf1d0333881485a5c73e2a4391971ec4ab6264567752a22a35007fc5038"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_50151_crop.png",
+        "sha256": "51b28556e1c1dbd157e94e3b567209bb4de9af83af5346a55d2b40a61cc096c9"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_50151__measurement_0",
+          "output_path": "outputs/F__mb_val_50151.png",
+          "output_sha256": "9bbc8f1d943ff79b19e3b166b271bd18e5d7dd52639ba0066f5c471c5437a3fb",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "门板上新增了贴靠门面的手，手与前臂可见。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "手腕延伸为前臂，未见候选那样的水平截断；本例不评价手指解剖细节。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "手腕延伸为前臂，未见候选那样的水平截断；本例不评价手指解剖细节。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_50151__measurement_0",
+          "output_path": "outputs/R2__mb_val_50151.png",
+          "output_sha256": "73060bfcd031d6fab4574c016f614d334614fd76f6c1864476ec9b04fc389ec1",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "门板上新增一只手，指令所需手部可见。",
+          "candidate_new_degradation_vs_F": "yes",
+          "candidate_new_degradation_evidence": "腕部在画面内部沿近水平边缘终止，手像浮在门板上，原像素裁剪可见截断。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "yes",
+              "evidence": "腕部在画面内部沿近水平边缘终止，手像浮在门板上，原像素裁剪可见截断。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_50151__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_50151.png",
+          "output_sha256": "5ed72d31f8ae04034fc5686c97f0e81db1732d71ed67ae5343667d4c726232ba",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "门板上新增一只手，指令所需手部可见。",
+          "candidate_new_degradation_vs_F": "yes",
+          "candidate_new_degradation_evidence": "腕部近水平终止及局部纹理转接仍可见，未恢复F连续前臂。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "yes",
+              "evidence": "腕部近水平终止及局部纹理转接仍可见，未恢复F连续前臂。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_50151__measurement_0",
+          "output_path": "outputs/A__mb_val_50151.png",
+          "output_sha256": "66470c816fc029dfd79e5c280207ce2db37879af67c56b695704b526e55e579b",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "门板上新增一只手，指令所需手部可见。",
+          "candidate_new_degradation_vs_F": "yes",
+          "candidate_new_degradation_evidence": "腕部近水平终止及局部纹理转接仍可见，未恢复F连续前臂。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "yes",
+              "evidence": "腕部近水平终止及局部纹理转接仍可见，未恢复F连续前臂。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_50151__measurement_0",
+          "output_path": "outputs/B__mb_val_50151.png",
+          "output_sha256": "3643adce5d2a2fe98ab194903dd3f1c5e43f2cc669da1ff008991a615c8d4003",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "门板上新增一只手，指令所需手部可见。",
+          "candidate_new_degradation_vs_F": "yes",
+          "candidate_new_degradation_evidence": "手腕下部依旧突兀切断，指甲更清晰不能修复该接缝。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "yes",
+              "evidence": "手腕下部依旧突兀切断，指甲更清晰不能修复该接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_215135",
+      "img_id": "215135",
+      "prompt": "Put a wooden floor on the kitchen.",
+      "frozen_selection_rank_sha256": "0a50a3852e3a6926376dc73aa840877912fb1511bdedd5a06f34b540fd76671b",
+      "source_image": {
+        "path": "inputs/val16/215135/source.original",
+        "sha256": "017a3f83ff7327d77eb6b7a12640398e46e5017b934486ed0e92706f43fc3fd6"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/215135/mask.target.binary.png",
+        "sha256": "baa0c382bdb0980c368dbf420bd4b14c7441d907f03b0df0cceceb49c1e96311"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_215135_full.png",
+        "sha256": "365c8b035d6f2cbbe62d87554fbba64193c73703cf42b180694a3aa94f18b7f2"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_215135_crop.png",
+        "sha256": "5dfd573a473caf45f225f97ef8e5685c17a368ce4d8a388533e9b8e7c574542d"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_215135__measurement_0",
+          "output_path": "outputs/F__mb_val_215135.png",
+          "output_sha256": "c9a6c81c9760aafa94dd5003f20e0d432eaac3547b676a228ebdf601908dedd8",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "厨房地面已换为木板，橱柜和电器保留。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "木地板与柜脚/踢脚线关系连贯；配置间板缝和色调有差异，未见明确新增硬接缝。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "木地板与柜脚/踢脚线关系连贯；配置间板缝和色调有差异，未见明确新增硬接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_215135__measurement_0",
+          "output_path": "outputs/R2__mb_val_215135.png",
+          "output_sha256": "74e2e0e8d211d3ddebf5e457fde048cfd88333d67a844c9618768761169e0ed5",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "厨房地面已换为木板，橱柜和电器保留。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "木地板与柜脚/踢脚线关系连贯；配置间板缝和色调有差异，未见明确新增硬接缝。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "木地板与柜脚/踢脚线关系连贯；配置间板缝和色调有差异，未见明确新增硬接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_215135__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_215135.png",
+          "output_sha256": "48790419b13346a6e217dee9477123caf69ac9885559c7d5ec5230430e3cf718",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "厨房地面已换为木板，橱柜和电器保留。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "木地板与柜脚/踢脚线关系连贯；配置间板缝和色调有差异，未见明确新增硬接缝。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "木地板与柜脚/踢脚线关系连贯；配置间板缝和色调有差异，未见明确新增硬接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_215135__measurement_0",
+          "output_path": "outputs/A__mb_val_215135.png",
+          "output_sha256": "9daaf2d0175cd6dffa3bb056ee058e1b953ea051f70a3fec2d43da828b059b39",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "厨房地面已换为木板，橱柜和电器保留。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "木地板与柜脚/踢脚线关系连贯；配置间板缝和色调有差异，未见明确新增硬接缝。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "木地板与柜脚/踢脚线关系连贯；配置间板缝和色调有差异，未见明确新增硬接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_215135__measurement_0",
+          "output_path": "outputs/B__mb_val_215135.png",
+          "output_sha256": "eaec5652301f6b0839d2630c12888a1557af1b21439c27b5aa76de03aec6f59a",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "厨房地面已换为木板，橱柜和电器保留。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "木地板与柜脚/踢脚线关系连贯；配置间板缝和色调有差异，未见明确新增硬接缝。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "木地板与柜脚/踢脚线关系连贯；配置间板缝和色调有差异，未见明确新增硬接缝。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_354126",
+      "img_id": "354126",
+      "prompt": "change the stuffed toys into rubber duckies",
+      "frozen_selection_rank_sha256": "0aa8c65aa3113cb19045bc88ea0de08ffc84e6d9944361ecf27af78c853b6064",
+      "source_image": {
+        "path": "inputs/val16/354126/source.original",
+        "sha256": "307e200928271e15eb49b52e0a587e1d98e37c19ea35632215b8386d30271e7d"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/354126/mask.target.binary.png",
+        "sha256": "0f044a7fa1a9f1ed0d9ed211d6c04c19769492d6168ffdecb44a503ebbb5a0f7"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_354126_full.png",
+        "sha256": "21ef5cdb60d2f3d4c9d903c7d4fbc8a415ae695facc684777b6e800427aae16b"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_354126_crop.png",
+        "sha256": "b863d232a2b0dd7daa7e2f4454ce91809fbc71ed524fe6e572dc4f48f7efe292"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_354126__measurement_0",
+          "output_path": "outputs/F__mb_val_354126.png",
+          "output_sha256": "0f97d5893c53845ec00ba2cf64913966791c12761b7e87a494adea9914124b8a",
+          "measurement_repeat": 0,
+          "instruction_complete": "partial",
+          "instruction_evidence": "出现三只黄橡皮鸭，但右下粉色人偶及紫色毛绒仍在；一只鸭新增在狗背上。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "未见明确新增硬接缝；主要问题为替换不完整，狗大体保留。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "未见明确新增硬接缝；主要问题为替换不完整，狗大体保留。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "not_applicable",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_354126__measurement_0",
+          "output_path": "outputs/R2__mb_val_354126.png",
+          "output_sha256": "e275bcbd97786798a7c23289e97931f5be627cdbe7f17a6950953a147d5f8b75",
+          "measurement_repeat": 0,
+          "instruction_complete": "partial",
+          "instruction_evidence": "出现三只黄橡皮鸭，但右下粉色人偶及紫色毛绒仍在。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "未见明确新增硬接缝；主要问题为替换不完整，狗大体保留。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见明确新增硬接缝；主要问题为替换不完整，狗大体保留。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_354126__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_354126.png",
+          "output_sha256": "7f1332f33f2facc167f4e5787a869e79a9583c70769b22e20722b23bc6ad566d",
+          "measurement_repeat": 0,
+          "instruction_complete": "partial",
+          "instruction_evidence": "出现三只黄橡皮鸭，但右下粉色人偶及紫色毛绒仍在。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "未见明确新增硬接缝；主要问题为替换不完整，狗大体保留。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见明确新增硬接缝；主要问题为替换不完整，狗大体保留。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_354126__measurement_0",
+          "output_path": "outputs/A__mb_val_354126.png",
+          "output_sha256": "23f4ac8a0459ea68a7ebbb4440d3a8e10e39dd1e1d25546088d59b7e67f5cc9b",
+          "measurement_repeat": 0,
+          "instruction_complete": "partial",
+          "instruction_evidence": "可见两只黄橡皮鸭，右下粉色人偶及紫色毛绒仍在。",
+          "candidate_new_degradation_vs_F": "uncertain",
+          "candidate_new_degradation_evidence": "未见明确新增硬接缝；主要问题为替换不完整，狗大体保留。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "uncertain",
+              "evidence": "未见明确新增硬接缝；主要问题为替换不完整，狗大体保留。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_354126__measurement_0",
+          "output_path": "outputs/B__mb_val_354126.png",
+          "output_sha256": "692d74bb98e112dd341f8dcb38a4c6213781994df126e10335d2d8660b0908b9",
+          "measurement_repeat": 0,
+          "instruction_complete": "partial",
+          "instruction_evidence": "出现三只黄橡皮鸭，但右下粉色人偶及紫色毛绒仍在。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "未见明确新增硬接缝；主要问题为替换不完整，狗大体保留。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见明确新增硬接缝；主要问题为替换不完整，狗大体保留。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_25139",
+      "img_id": "25139",
+      "prompt": "Let the zebra put its face up close to a tree.",
+      "frozen_selection_rank_sha256": "0afc686c9b775b5d65302797363f97aadad629b613abfb0b49fd94748ddec121",
+      "source_image": {
+        "path": "inputs/val16/25139/source.original",
+        "sha256": "3b41700a5e443a5631000c209ca047897222ff8c8aee75a99c67e5a273bba26b"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/25139/mask.target.binary.png",
+        "sha256": "d196cffac0aaa2e450aa9fd4d8e9efef13569cb5d1b5bd251b58ebedc4c68563"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_25139_full.png",
+        "sha256": "2c1b53eb4126edae2b1974288a7b638b40dcbf78dde016c78a095b3840bdfef3"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_25139_crop.png",
+        "sha256": "774c5e0713b04c0e9c7c365dd303e39b00111d5c8589a4270440b066fdf9b82c"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_25139__measurement_0",
+          "output_path": "outputs/F__mb_val_25139.png",
+          "output_sha256": "5d595c0b16f047e9ea3b68da496af1889f8375196cd3771a328a90cb8c324a36",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "完整斑马头部贴近右侧树干，但全图相对源图重新构图且风格更像插画。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "F的右下为连贯树干；大幅重构源场景是否必要不能仅凭此例确定。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "F的右下为连贯树干；大幅重构源场景是否必要不能仅凭此例确定。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "not_applicable",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_25139__measurement_0",
+          "output_path": "outputs/R2__mb_val_25139.png",
+          "output_sha256": "948ba494d9f2354a8e2468fa76693f4afe28541e413c918685cb7512a07b5e77",
+          "measurement_repeat": 0,
+          "instruction_complete": "partial",
+          "instruction_evidence": "头部靠树，但右下出现与主体不连续的矩形斑马纹理块，主体完整性失败。",
+          "candidate_new_degradation_vs_F": "yes",
+          "candidate_new_degradation_evidence": "右下矩形边界处条纹突然接入树干与背景；全图及原像素crop均清楚。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "yes",
+              "evidence": "右下矩形边界处条纹突然接入树干与背景；全图及原像素crop均清楚。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_25139__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_25139.png",
+          "output_sha256": "71e15a4fee9bf84801a5c468999c509e330ab9b5fa9665acc370de1877b5e30d",
+          "measurement_repeat": 0,
+          "instruction_complete": "partial",
+          "instruction_evidence": "头部靠树，但右下仍有不连续的斑马条纹/树干局部块，主体结构不完整。",
+          "candidate_new_degradation_vs_F": "yes",
+          "candidate_new_degradation_evidence": "右下条纹楔块与主体缺少连续连接，树干局部精细块与模糊邻域不一致。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "yes",
+              "evidence": "右下条纹楔块与主体缺少连续连接，树干局部精细块与模糊邻域不一致。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_25139__measurement_0",
+          "output_path": "outputs/A__mb_val_25139.png",
+          "output_sha256": "90b2444c36356e441e8edebdf438dcfba3800289074106cfe52d7280f7f4dea4",
+          "measurement_repeat": 0,
+          "instruction_complete": "partial",
+          "instruction_evidence": "头部靠树，但右下仍有不连续的斑马条纹/树干局部块，主体结构不完整。",
+          "candidate_new_degradation_vs_F": "yes",
+          "candidate_new_degradation_evidence": "右下条纹楔块与主体缺少连续连接，局部块结构与整体不一致。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "yes",
+              "evidence": "右下条纹楔块与主体缺少连续连接，局部块结构与整体不一致。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_25139__measurement_0",
+          "output_path": "outputs/B__mb_val_25139.png",
+          "output_sha256": "ec70211a072cb723b9667f3ba5867e032a405c4a1ccafe50c24fc7cb589e4dc0",
+          "measurement_repeat": 0,
+          "instruction_complete": "partial",
+          "instruction_evidence": "头部靠树，但右下出现明显的矩形斑马纹理块，主体完整性失败。",
+          "candidate_new_degradation_vs_F": "yes",
+          "candidate_new_degradation_evidence": "右下矩形条纹块及直角边界清楚，校准仍未修复。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "yes",
+              "evidence": "右下矩形条纹块及直角边界清楚，校准仍未修复。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_282572",
+      "img_id": "282572",
+      "prompt": "let there be pigs in the pen",
+      "frozen_selection_rank_sha256": "0b7d8298483f2e1114a8276ef2f7986e9e20d24aa0f8512a106cab7b2f4b5827",
+      "source_image": {
+        "path": "inputs/val16/282572/source.original",
+        "sha256": "650959a5ee80432aa58e98ef370240c0d37d3d9714e3ca9c1543a38484f7d362"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/282572/mask.target.binary.png",
+        "sha256": "994dd0f673a71f7b56ac6b8a6627c8d13a18f8c8e0db0a5d3e9372e1d5413e71"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_282572_full.png",
+        "sha256": "1c7b5c3946875eef17c82c7f6762d4f2bc73592a4e9ca41ce106bbccb88ca0b5"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_282572_crop.png",
+        "sha256": "e7949bc467dde83680f383cd10a9a4a85ba76701b5d934425c354dffe9c6baf3"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_282572__measurement_0",
+          "output_path": "outputs/F__mb_val_282572.png",
+          "output_sha256": "d85ee63403e2e3d6725d367aa75294fa58e2d5556413f8fa20ffd6cb0ba8760e",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "围栏内已出现多只猪，栏杆仍在前景形成遮挡。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "栏杆遮挡较重；F的猪头较可辨。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "not_applicable",
+              "evidence": "栏杆遮挡较重；F的猪头较可辨。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "not_applicable",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_282572__measurement_0",
+          "output_path": "outputs/R2__mb_val_282572.png",
+          "output_sha256": "6f03773e90f8f745f4825e087e5fe7fb49cb945c692319c02d3bdf9574006bcb",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "围栏内已出现多只猪，栏杆仍在前景形成遮挡。",
+          "candidate_new_degradation_vs_F": "uncertain",
+          "candidate_new_degradation_evidence": "猪背/腹部大片光滑且头部比F模糊；是合理姿态差异还是融合退化，定性标uncertain。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "猪背/腹部大片光滑且头部比F模糊；是合理姿态差异还是融合退化，定性标uncertain。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_282572__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_282572.png",
+          "output_sha256": "14eb2954805a9a71ee787e90066fccad20d699bde16e515c8ebb63f89ddc9cd3",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "围栏内已出现多只猪，栏杆仍在前景形成遮挡。",
+          "candidate_new_degradation_vs_F": "uncertain",
+          "candidate_new_degradation_evidence": "前景猪头和身体较F模糊，栏杆遮挡下是否新增粘连难可靠判断。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "前景猪头和身体较F模糊，栏杆遮挡下是否新增粘连难可靠判断。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_282572__measurement_0",
+          "output_path": "outputs/A__mb_val_282572.png",
+          "output_sha256": "67b85861656c2219cf77069f0fb91df90ccb2bca7404c3a96266d68dd86156b6",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "围栏内已出现多只猪，栏杆仍在前景形成遮挡。",
+          "candidate_new_degradation_vs_F": "uncertain",
+          "candidate_new_degradation_evidence": "部分猪脸可辨，但与F不同姿态及遮挡下不能确定新增融合错误。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "部分猪脸可辨，但与F不同姿态及遮挡下不能确定新增融合错误。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_282572__measurement_0",
+          "output_path": "outputs/B__mb_val_282572.png",
+          "output_sha256": "8c0131ebdcf70bf20f21056871e7793081e76333ca2d4e1e650317acd9fdef1e",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "围栏内已出现多只猪，栏杆仍在前景形成遮挡。",
+          "candidate_new_degradation_vs_F": "uncertain",
+          "candidate_new_degradation_evidence": "前景躯体和猪头较F不清晰，但被栏杆遮挡，新增结构退化标uncertain。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "前景躯体和猪头较F不清晰，但被栏杆遮挡，新增结构退化标uncertain。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "全局布局/新增对象位置与F不同，其必要性不能只凭该例确定；主要确定问题另见边界记录。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_466845",
+      "img_id": "466845",
+      "prompt": "Let the fence be made of wood.",
+      "frozen_selection_rank_sha256": "0be1f5cd00b5eed96ee94d36714377a876f2bc3104a2ed0c5e4b13100ed08fb6",
+      "source_image": {
+        "path": "inputs/val16/466845/source.original",
+        "sha256": "d4c74a4960c1c95df0fd9124aebee279deba617dc8a91198a95b75e0daa792e8"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/466845/mask.target.binary.png",
+        "sha256": "1ffd795f329e913b6b8874eea9ba80332d65b07fa898171b37fe9a2b1d57da71"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_466845_full.png",
+        "sha256": "f940db8762f63f899b0813038f6d2339f238e723fd2400ff6e9f4f9815fdf413"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_466845_crop.png",
+        "sha256": "12f641b8d3bdb78585f3b4fc86334b831f6f141feb37b9044d8056db9821f023"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_466845__measurement_0",
+          "output_path": "outputs/F__mb_val_466845.png",
+          "output_sha256": "2946c6571eae90f4076f7a302b536114043641fe689999f7e8100becb9b56c82",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "羊/山羊后方黑色金属围栏已换成竖向木板，前方三只动物保留。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "木板沿动物轮廓后方延伸，未见明确新增硬接缝；木纹/色调差异不单独判失败。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "木板沿动物轮廓后方延伸，未见明确新增硬接缝；木纹/色调差异不单独判失败。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_466845__measurement_0",
+          "output_path": "outputs/R2__mb_val_466845.png",
+          "output_sha256": "dd980473a47bf9458bafbc62dbb9808bd934b3bbb7c04df3180865c2366ae3b9",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "羊/山羊后方黑色金属围栏已换成竖向木板，前方三只动物保留。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "木板沿动物轮廓后方延伸，未见明确新增硬接缝；木纹/色调差异不单独判失败。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "木板沿动物轮廓后方延伸，未见明确新增硬接缝；木纹/色调差异不单独判失败。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_466845__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_466845.png",
+          "output_sha256": "3afe4a2ffc9ae6b8c000d2b38b8c8e0759e16fc3d9a9819d84333422cc74b94f",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "羊/山羊后方黑色金属围栏已换成竖向木板，前方三只动物保留。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "木板沿动物轮廓后方延伸，未见明确新增硬接缝；木纹/色调差异不单独判失败。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "木板沿动物轮廓后方延伸，未见明确新增硬接缝；木纹/色调差异不单独判失败。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_466845__measurement_0",
+          "output_path": "outputs/A__mb_val_466845.png",
+          "output_sha256": "b327a0d9dd581aa1b17ce49f2b09d975557d6b601cf9fcbdd29a9e198033473b",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "羊/山羊后方黑色金属围栏已换成竖向木板，前方三只动物保留。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "木板沿动物轮廓后方延伸，未见明确新增硬接缝；木纹/色调差异不单独判失败。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "木板沿动物轮廓后方延伸，未见明确新增硬接缝；木纹/色调差异不单独判失败。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_466845__measurement_0",
+          "output_path": "outputs/B__mb_val_466845.png",
+          "output_sha256": "c91a16a84032694b9d402d7f7847d930324757c07b7239d192aa5363d83ff1fc",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "羊/山羊后方黑色金属围栏已换成竖向木板，前方三只动物保留。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "木板沿动物轮廓后方延伸，未见明确新增硬接缝；木纹/色调差异不单独判失败。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "木板沿动物轮廓后方延伸，未见明确新增硬接缝；木纹/色调差异不单独判失败。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_55458",
+      "img_id": "55458",
+      "prompt": "remove the apple",
+      "frozen_selection_rank_sha256": "0e8cd84ef11dfd2d6029d5d4a2486dc293a3af35fbc6e68c20544556fb021cf1",
+      "source_image": {
+        "path": "inputs/val16/55458/source.original",
+        "sha256": "c0ce180718aec3a1aad468ff728bf389981238072fb7993f09aee76b8b04d014"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/55458/mask.target.binary.png",
+        "sha256": "7fb4cc5086e34ab9a0e1d9fd638541489108688d48f41da9ae0f694c17a5410b"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_55458_full.png",
+        "sha256": "d866ff67b679788777f6946fbcf9ecd6e7b3b62438d6ca31cca72faa84c9ca88"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_55458_crop.png",
+        "sha256": "588386db8c356128d36161296e56b296d5fe222566b56541f84e33be6a7becb4"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_55458__measurement_0",
+          "output_path": "outputs/F__mb_val_55458.png",
+          "output_sha256": "d3a76aebaf660c348f2834512503d9bc8952c58ffeb03050c338a42ed48dc005",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "红苹果块已移除；填补处是新生成的叶片与盘面。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "填补叶片呈平滑矢量感，与原照片叶片质感差异明显；F本身就有此缺陷。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "填补叶片呈平滑矢量感，与原照片叶片质感差异明显；F本身就有此缺陷。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_55458__measurement_0",
+          "output_path": "outputs/R2__mb_val_55458.png",
+          "output_sha256": "c3a1fb3d5bc084f84c0b265d50453d677212f1aa11cc17ee9b7bfb0dde1dc8fd",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "红苹果块已移除；填补处是新生成的叶片与盘面。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "填补叶片同样呈平滑矢量感，属于F已存在的缺陷，不能据相似宣称高保真。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "填补叶片同样呈平滑矢量感，属于F已存在的缺陷，不能据相似宣称高保真。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_55458__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_55458.png",
+          "output_sha256": "4a199bd6bbc54fdba768502ad4592f3f095962ecc18f6e9e7a9fa911aa3e5c24",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "红苹果块已移除；填补处是新生成的叶片与盘面。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "填补叶片同样呈平滑矢量感，属于F已存在的缺陷。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "填补叶片同样呈平滑矢量感，属于F已存在的缺陷。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_55458__measurement_0",
+          "output_path": "outputs/A__mb_val_55458.png",
+          "output_sha256": "d5f6624f89128ab2dedfa56e1a6e3646e49943741f39299f30e176f1ade48f41",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "红苹果块已移除；填补处是新生成的叶片与盘面。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "填补叶片同样呈平滑矢量感，属于F已存在的缺陷。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "填补叶片同样呈平滑矢量感，属于F已存在的缺陷。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_55458__measurement_0",
+          "output_path": "outputs/B__mb_val_55458.png",
+          "output_sha256": "7ad597d754bf708615a2e701bd7b8bef20b07d1940ad42f15923136e327f36c3",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "红苹果块已移除；填补处是新生成的叶片与盘面。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "填补叶片同样呈平滑矢量感，属于F已存在的缺陷。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "observed",
+              "new_vs_F": "no",
+              "evidence": "填补叶片同样呈平滑矢量感，属于F已存在的缺陷。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_155790",
+      "img_id": "155790",
+      "prompt": "it should be a tennis ball on the glove.",
+      "frozen_selection_rank_sha256": "0ed7d98f52224fbce2c9e5f477362a04a98212cdcbdc2ab6974e665a13067975",
+      "source_image": {
+        "path": "inputs/val16/155790/source.original",
+        "sha256": "18cec3807c60cb22f65ce7414101bd53c0aed9bd18d0c84e8d2de709cf1b3613"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/155790/mask.target.binary.png",
+        "sha256": "eba29603db327b6586b4ff09c59d8ffbac15f508d378c0576101ba4038b8f9ee"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_155790_full.png",
+        "sha256": "328469fdc8a520f91936682a7e6b38f6f2759a4ca219cac33d301575c6b5aa2c"
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_155790_crop.png",
+        "sha256": "359a1c2ff60ff5fedcfce3ec6a83ec9db74a4bec136dd7dda63d46aaa8a5d02e"
+      },
+      "review_status": "COMPLETE",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": "F__mb_val_155790__measurement_0",
+          "output_path": "outputs/F__mb_val_155790.png",
+          "output_sha256": "f0cdb748d368af0e6f30e9383fcdece18f82f147833a6cd0701906dca261af0b",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "手套中的棒球已换成黄绿色、带毛绒表面的网球，原棒球标记消失。",
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": "左上缝线为短段并与下部线不连续，结构是否合理标uncertain，不影响识别为网球。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "not_applicable",
+              "evidence": "左上缝线为短段并与下部线不连续，结构是否合理标uncertain，不影响识别为网球。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "not_applicable",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "R2",
+          "run_id": "R2__mb_val_155790__measurement_0",
+          "output_path": "outputs/R2__mb_val_155790.png",
+          "output_sha256": "15db1f3a04f223832a542dac82013c16435de19eb79028f00fcbda1d903d6052",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "手套中的棒球已换成黄绿色、带毛绒表面的网球，原棒球标记消失。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "球体轮廓与手套接触较连贯；缝线与F不同，不自动视为退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "球体轮廓与手套接触较连贯；缝线与F不同，不自动视为退化。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "PRIOR",
+          "run_id": "PRIOR__mb_val_155790__measurement_0",
+          "output_path": "outputs/PRIOR__mb_val_155790.png",
+          "output_sha256": "bb20b6b362987112fd8a33ef1c66cbc2c44f9865b8779a9549f5bea55189d983",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "手套中的棒球已换成黄绿色、带毛绒表面的网球，原棒球标记消失。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "球体轮廓与手套接触较连贯；缝线与F不同，不自动视为退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "球体轮廓与手套接触较连贯；缝线与F不同，不自动视为退化。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "A",
+          "run_id": "A__mb_val_155790__measurement_0",
+          "output_path": "outputs/A__mb_val_155790.png",
+          "output_sha256": "9eb35a784130191bc3e31e2a325e9d208f62fa0d04e48f16ab99e5164bf0cab6",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "手套中的棒球已换成黄绿色、带毛绒表面的网球，原棒球标记消失。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "球体轮廓与手套接触较连贯；缝线与F不同，不自动视为退化。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "球体轮廓与手套接触较连贯；缝线与F不同，不自动视为退化。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        },
+        {
+          "config": "B",
+          "run_id": "B__mb_val_155790__measurement_0",
+          "output_path": "outputs/B__mb_val_155790.png",
+          "output_sha256": "2cfe9ee68b078304a7ef3f34eec2f3b632db133f24dd65df7def0bfdbe41bb6f",
+          "measurement_repeat": 0,
+          "instruction_complete": "pass",
+          "instruction_evidence": "手套中的棒球已换成黄绿色、带毛绒表面的网球，原棒球标记消失。",
+          "candidate_new_degradation_vs_F": "no",
+          "candidate_new_degradation_evidence": "左上缝线也为短段，类似F；是否为不合理结构标uncertain。",
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": "uncertain",
+              "new_vs_F": "uncertain",
+              "evidence": "左上缝线也为短段，类似F；是否为不合理结构标uncertain。"
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "未见足以明确判断的新增全局光照断层；色调或材质变化不单独判错误。"
+            },
+            "outside_region_preservation": {
+              "issue_observed": "none_observed",
+              "new_vs_F": "no",
+              "evidence": "全图未见明确新增的区域外对象消失或布局破坏；不等于像素无变化。"
+            }
+          },
+          "limitations": "Nonblind assistant judgment, no target image or numeric LPIPS viewed; ambiguous anatomy/occlusion is not a formal human rating."
+        }
+      ]
+    }
+  ],
+  "review_time": "2026-10-23T16:40:49.326052+08:00"
+}

@@ -1,0 +1,10 @@
+{
+  "time": "2026-10-22T22:10:26.201516+08:00",
+  "branch": "test/lightning8-preflight-20261022",
+  "commit": "73faca368c0da77645ea58836aa8780d2d8c5353",
+  "git_status_short": "?? research/\n",
+  "tracked_diff_stat": "",
+  "gpu": "NVIDIA L20Y, 0 %, 0 MiB",
+  "cuda_total_memory_bytes": 85017624576,
+  "cuda_total_memory_GiB": 79.1788330078125
+}

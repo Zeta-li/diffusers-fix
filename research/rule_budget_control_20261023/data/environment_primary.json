@@ -1,0 +1,102 @@
+{
+  "phase": "primary",
+  "attempt": "20261023T121119",
+  "previous_root": "/workspace/diffusers-fix/research/local_executor_boundary_20261022",
+  "baseline_root": "/workspace/diffusers-fix/research/lightning8_preflight_20261022",
+  "source": "/workspace/diffusers-fix/src/diffusers/__init__.py",
+  "source_version": "0.42.0.dev0",
+  "git_commit": "73faca368c0da77645ea58836aa8780d2d8c5353",
+  "packages": {
+    "torch": "2.9.1+cu129",
+    "transformers": "5.3.0",
+    "peft": "0.21.2",
+    "huggingface_hub": "1.32.0",
+    "torchao": "0.16.0"
+  },
+  "gpu_driver_name": "NVIDIA L20Y",
+  "physical_gpu_user_confirmed": "H800",
+  "capability": [
+    9,
+    0
+  ],
+  "cuda_total_memory_bytes": 85017624576,
+  "configs": [
+    "F",
+    "R2",
+    "B125",
+    "B250",
+    "B333",
+    "B500"
+  ],
+  "repeats": 3,
+  "planned_requests": 72,
+  "dtype": "bfloat16",
+  "steps": 8,
+  "cfg": 1,
+  "seed": 2026102201,
+  "vae_tiling": true,
+  "backend": "native SDPA",
+  "region_plan_sha256": "e2c9e1a18b44bcd0d4d762c643d2acb897155c275629471340c7486e562b6910",
+  "scripts": {
+    "prepare_budget.py": "03b366803d20b2beecdd3be7eec422c565fd88480e96043081d807f19028fc47",
+    "analyze_budget.py": "f4583a0f2aa9401d03778da04e966b78339e184334adde90d98ea2b258c67102",
+    "local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "run_budget.py": "ee2743843f85fc9eac299881ff1207a242f6adffd284b713a29d9abf254d02c7",
+    "check_budget_policy.py": "a0433564f482047762b17a5e3f17c0d2e4e94393d8cdb53d7f01ff65531b274e",
+    "budget_policy.py": "03298c1d3a5383951d5c286cd56582788bea8543dcf1fd7116f3cd364b2fd0bb"
+  },
+  "timing_scope": "Memory source image and supplied R2 core plus pre-encoded background blocks to PIL; includes per-request CPU eight-step budget selection, executor indices/cache setup, encoding, all DiT, scheduler, decode and cache cleanup. Excludes model load, initial block partition, reference checks, PNG and metrics.",
+  "budget_selector": "Oldest real refresh first, SHA tie-break, whole 2x2 background blocks, greedy cap, no clipping of core or blocks",
+  "background_budgets": {
+    "R2": [
+      0,
+      1
+    ],
+    "B125": [
+      1,
+      8
+    ],
+    "B250": [
+      1,
+      4
+    ],
+    "B333": [
+      1,
+      3
+    ],
+    "B500": [
+      1,
+      2
+    ]
+  },
+  "selection_precomputation_reused_for_candidates": false,
+  "static_policies_used_only_for_F_R2": true,
+  "block_partition_reused": true,
+  "extra_dense_oracles_in_performance": 0,
+  "training_images_used": 0,
+  "value_correction": false,
+  "adaptive_quality_risk": false,
+  "full_fallback_other_than_endpoints": false,
+  "expected_model_timesteps": [
+    1.0,
+    0.95703125,
+    0.8984375,
+    0.83203125,
+    0.75390625,
+    0.64453125,
+    0.5,
+    0.30078125
+  ],
+  "expected_raw_timesteps": [
+    1000.0,
+    954.5454711914062,
+    900.0,
+    833.3333740234375,
+    750.0,
+    642.8570556640625,
+    500.0,
+    300.0
+  ],
+  "model_load_and_fuse_seconds": 15.97085041180253,
+  "timestep_contract_instrumentation": "Eight small GPU timestep clones in every config; checked after request timing without additional model forward"
+}

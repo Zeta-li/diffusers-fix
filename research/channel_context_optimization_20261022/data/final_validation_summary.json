@@ -1,0 +1,92 @@
+{
+  "status": "pass",
+  "scope": "Artifact integrity and execution correctness, not algorithm quality acceptance",
+  "validated_at": "2026-10-22T23:07:05.288603+08:00",
+  "total_requests": 36,
+  "measured_requests": 27,
+  "warmup_requests": 9,
+  "total_real_dit_forwards": 288,
+  "extra_dense_oracles_in_performance": 0,
+  "training_images_used": 0,
+  "prior_F_R2_exact_output_controls": 24,
+  "model_timestep_contract_checks": 36,
+  "independent_request_age_contract_checks": 36,
+  "local_requests_with_8_step_age_checks": 24,
+  "native_F_empty_cache_trace_checks": 12,
+  "measured_summary_age_contract_checks": 27,
+  "independent_execution_order_matches": true,
+  "all_output_hashes_verified": true,
+  "all_group_repeated_hashes_identical": true,
+  "tiny_model_forwards": 172,
+  "tiny_test_count": 10,
+  "failed_real_model_requests": 0,
+  "failed_tiny_tests": 0,
+  "table_validation": {
+    "bytes": 100285440,
+    "MiB": 95.6396484375,
+    "prepare_seconds": 0.2288630735129118,
+    "statistics_prior_content_independently_verified": true,
+    "model_timestep_conversion_independently_verified": true,
+    "finite_validation_scope": "Producer finite flag and numeric metadata checked; actual static table tensors were not exported for an independent elementwise scan."
+  },
+  "statistics_mode": "no_sample_mean_zero_variance_one",
+  "prior_sources": [
+    {
+      "recorded_path": "run_channel.py",
+      "resolved_local_path": "/workspace/diffusers-fix/research/channel_context_optimization_20261022/scripts/run_channel.py",
+      "sha256": "771ab908d60df668eeb682f165945bbf6d81deff72dcb7252e7432168a89e7bf"
+    },
+    {
+      "recorded_path": "local_executor.py",
+      "resolved_local_path": "/workspace/diffusers-fix/research/channel_context_optimization_20261022/scripts/local_executor.py",
+      "sha256": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1"
+    },
+    {
+      "recorded_path": "value_time_correction.py",
+      "resolved_local_path": "/workspace/diffusers-fix/research/channel_context_optimization_20261022/scripts/value_time_correction.py",
+      "sha256": "fb1203fa955e71392c2e73ea2c47d0d9ed9e7d358f01e605a31e54097255ac2e"
+    },
+    {
+      "recorded_path": "value_channel_correction.py",
+      "resolved_local_path": "/workspace/diffusers-fix/research/channel_context_optimization_20261022/scripts/value_channel_correction.py",
+      "sha256": "f3e088226bea615a1f703806226ebf4b8f121d7853d79aeadab7cb29d82a0151"
+    },
+    {
+      "recorded_path": "check_channel_correction.py",
+      "resolved_local_path": "/workspace/diffusers-fix/research/channel_context_optimization_20261022/scripts/check_channel_correction.py",
+      "sha256": "5a6870f217b6aa8599d4d6867020b663a5cf4d6f2c85c80e74a3717db8af8098"
+    }
+  ],
+  "tiny_sources_with_remote_to_local_mapping": [
+    {
+      "recorded_path": "/workspace/diffusers-fix/research/channel_context_optimization_20261022/scripts/check_channel_correction.py",
+      "resolved_local_path": "/workspace/diffusers-fix/research/channel_context_optimization_20261022/scripts/check_channel_correction.py",
+      "sha256": "5a6870f217b6aa8599d4d6867020b663a5cf4d6f2c85c80e74a3717db8af8098"
+    },
+    {
+      "recorded_path": "/workspace/diffusers-fix/research/channel_context_optimization_20261022/scripts/value_channel_correction.py",
+      "resolved_local_path": "/workspace/diffusers-fix/research/channel_context_optimization_20261022/scripts/value_channel_correction.py",
+      "sha256": "f3e088226bea615a1f703806226ebf4b8f121d7853d79aeadab7cb29d82a0151"
+    },
+    {
+      "recorded_path": "/workspace/diffusers-fix/research/rotation_context_optimization_20261022/scripts/local_executor.py",
+      "resolved_local_path": "/workspace/diffusers-fix/research/rotation_context_optimization_20261022/scripts/local_executor.py",
+      "sha256": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1"
+    },
+    {
+      "recorded_path": "/workspace/diffusers-fix/research/rotation_context_optimization_20261022/scripts/value_time_correction.py",
+      "resolved_local_path": "/workspace/diffusers-fix/research/rotation_context_optimization_20261022/scripts/value_time_correction.py",
+      "sha256": "fb1203fa955e71392c2e73ea2c47d0d9ed9e7d358f01e605a31e54097255ac2e"
+    }
+  ],
+  "peak_allocated_GiB": 57.74394464492798,
+  "request_seconds_sum": 220.22949896752834,
+  "model_load_and_fuse_seconds": 17.389006109908223,
+  "cold_table_preparation_not_a_DiT": true,
+  "candidate_numeric_quality_pass_all_cases": false,
+  "deployment_joint_target_inferred": false,
+  "runs_sha256": "1c337747a0f89294140fe1a4273036e3e46219e89367864c795683bd38f9f2d8",
+  "preregistration_sha256": "7d8050255eb683f3eb12ed58582f7e8e8f5e914c34166451aaac063102c1505e",
+  "validator_sha256": "48345891b31c6fc5dc991969df0445ea78e88d5ab606eebd374ed7bc1c7287e6",
+  "artifact_manifest_scope": "Snapshot of current local files; rerun after any further document edits or synchronization."
+}

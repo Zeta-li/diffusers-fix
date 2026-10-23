@@ -1,0 +1,29 @@
+{
+  "recorded_at": "2026-10-22T21:19:20.853587+08:00",
+  "trigger": "Nonblind first R0 blocks_text output visibly corrupts target phrase; frozen conservative-refresh diagnostic activated, without replacing any primary results.",
+  "observed_run": "R0__blocks_text__reset_a1_0",
+  "configs": [
+    "F_safe",
+    "R2_safe",
+    "R3_safe"
+  ],
+  "cases": [
+    "blocks_text",
+    "shirt_color",
+    "remove_hair"
+  ],
+  "full_steps_local_1based": [
+    1,
+    2,
+    4,
+    6,
+    8
+  ],
+  "baseline": "F_safe native full 8-step, same round",
+  "warmups_per_config_case": 1,
+  "repeats": 3,
+  "planned_requests": 36,
+  "planned_dit_calls": 288,
+  "primary_unchanged": true,
+  "no_new_roi_tuning": true
+}

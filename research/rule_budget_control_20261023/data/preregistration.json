@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-10-23T12:10:56.177404+08:00",
+  "configs": [
+    "F",
+    "R2",
+    "B125",
+    "B250",
+    "B333",
+    "B500"
+  ],
+  "requests": 72,
+  "dit_forwards": 576,
+  "warmups": 18,
+  "measurements": 54,
+  "repeats": 3,
+  "oracle_forwards": 0,
+  "training_images_used": 0,
+  "value_correction": false,
+  "per_request_selection_for_budget_candidates": true,
+  "static_controls": [
+    "F",
+    "R2"
+  ],
+  "policy_plan_sha256": "e2c9e1a18b44bcd0d4d762c643d2acb897155c275629471340c7486e562b6910",
+  "protocol_sha256": "b7837b1cae8568816d27f52ac8738e445483c2eca16c75991d63d64f61c72fb4",
+  "cpu_checks_sha256": "11ce4311d43525fad4095800e469033dc6817f67b7b4c6432897a943680fe56f",
+  "scripts": {
+    "run_budget.py": "ee2743843f85fc9eac299881ff1207a242f6adffd284b713a29d9abf254d02c7",
+    "local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "budget_policy.py": "03298c1d3a5383951d5c286cd56582788bea8543dcf1fd7116f3cd364b2fd0bb",
+    "prepare_budget.py": "03b366803d20b2beecdd3be7eec422c565fd88480e96043081d807f19028fc47",
+    "check_budget_policy.py": "a0433564f482047762b17a5e3f17c0d2e4e94393d8cdb53d7f01ff65531b274e"
+  }
+}

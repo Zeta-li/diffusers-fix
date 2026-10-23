@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "282572",
+    "original_img_id": "282572",
+    "turn_index": 1,
+    "instruction": "let there be pigs in the pen",
+    "official_split": "dev",
+    "shard_path": "data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+    "row_group": 1,
+    "row_in_group": 13,
+    "row_in_shard": 45,
+    "selection_rank_sha256": "0b7d8298483f2e1114a8276ef2f7986e9e20d24aa0f8512a106cab7b2f4b5827"
+  },
+  "image": "inputs/val16/282572/source.original",
+  "original_mask": "inputs/val16/282572/mask.original",
+  "source_sha256": "650959a5ee80432aa58e98ef370240c0d37d3d9714e3ca9c1543a38484f7d362",
+  "mask_sha256": "b8863b63303a6f45d226d3ba20157acbb6ed34787dc32910ca01ca651a450156",
+  "source_bytes": 465406,
+  "mask_bytes": 1480384,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00002-of-00004-54c4d7b0a9e49db5.parquet",
+  "source_url_sha256": "d84cba0911688514a197edfb35accfa03855f3241310cc06c8ca5b1aff4df8bc"
+}

@@ -1,0 +1,1720 @@
+{
+  "audited_at": "2026-10-22 local read-only audit",
+  "workspace": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计",
+  "settings": {
+    "model": "Original Qwen/Qwen-Image-Edit, not 2509/2511",
+    "base_revision": "ac7f9318f633fc4b5778c59367c8128225f1e3de",
+    "lora": "Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors",
+    "lora_bytes": 849608296,
+    "lora_sha256": "36ee4ff860856559b9c581eaa69414900488f3de8be2f2448586daec77e201b9",
+    "runtime": {
+      "diffusers": "0.42.0.dev0",
+      "commit": "73faca368c0da77645ea58836aa8780d2d8c5353",
+      "python": "3.12.3",
+      "torch": "2.9.1+cu129",
+      "transformers": "5.3.0",
+      "peft": "0.21.2",
+      "huggingface_hub": "1.32.0",
+      "torchao": "0.16.0 after isolated loader fix"
+    },
+    "hardware": {
+      "user_confirmed": "H800",
+      "driver_name": "NVIDIA L20Y",
+      "cuda_capability": "9.0",
+      "visible_bytes": 85017624576,
+      "H20_measured": false
+    },
+    "common": {
+      "dtype": "BF16",
+      "batch": 1,
+      "seed": 2026102201,
+      "attention": "native PyTorch SDPA",
+      "vae_tiling": true,
+      "quantized": false,
+      "cpu_offload": false,
+      "compiled": false,
+      "cross_request_condition_encoding_cache": false,
+      "public_demo_source_images": 3,
+      "independent_generation_seeds": 1
+    },
+    "later_stages": {
+      "lora_fused_and_unloaded": true,
+      "steps": 8,
+      "cfg": 1,
+      "scheduler": "shift3 dynamic exponential fixed Lightning schedule",
+      "target_tokens": [
+        4056,
+        4056,
+        4096
+      ],
+      "condition_tokens": [
+        4056,
+        4056,
+        4096
+      ],
+      "text_tokens": [
+        1378,
+        1369,
+        1383
+      ],
+      "all_condition_and_text_context_retained": true,
+      "full_steps_1based_default": [
+        1,
+        8
+      ]
+    }
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "name": "Lightning8基线",
+      "successful_complete_requests": 27,
+      "real_dit_forwards": 800,
+      "breakdown": [
+        {
+          "kind": "主协议",
+          "requests": 26,
+          "dit": 792,
+          "warmup": 5,
+          "primary_measurements": 15,
+          "extra_anchor_timing_repeats": 6
+        },
+        {
+          "kind": "C环境回归冷诊断",
+          "requests": 1,
+          "dit": 8,
+          "included_in_main_performance": false
+        }
+      ],
+      "extra_dense_oracle_forwards": 0,
+      "tiny_model_forward_count": 0,
+      "failed_generation_requests": 0,
+      "setup_or_nonmodel_failures": [
+        "两次管线/加载阶段中断：VAE tiling接口、LoRA可选TorchAO类型检测；此前Hub导入问题另存，不是失败生成请求"
+      ],
+      "key_numbers": {
+        "A_base50_cfg4": {
+          "mean_seconds": 49.24504920343558,
+          "paired_geometric_ratio_to_A": 1.0,
+          "mean_lpips_spatial_to_A": 0.0,
+          "max_allocated_GiB": 54.66704273223877,
+          "mean_dit_fraction": 0.9285087808490264
+        },
+        "B_base8_cfg4_shift3": {
+          "mean_seconds": 10.729966570312778,
+          "paired_geometric_ratio_to_A": 0.2178913659283265,
+          "mean_lpips_spatial_to_A": 0.05118850991129875,
+          "max_allocated_GiB": 54.671485900878906,
+          "mean_dit_fraction": 0.6801939947515605
+        },
+        "C_base8_cfg1_shift3": {
+          "mean_seconds": 6.7161394683644176,
+          "paired_geometric_ratio_to_A": 0.1363832947532729,
+          "mean_lpips_spatial_to_A": 0.07482917467132211,
+          "max_allocated_GiB": 54.66538429260254,
+          "mean_dit_fraction": 0.5432756809328538
+        },
+        "D_lightning8_cfg1": {
+          "mean_seconds": 7.507153133861721,
+          "paired_geometric_ratio_to_A": 0.152423638567481,
+          "mean_lpips_spatial_to_A": 0.08479316222170989,
+          "max_allocated_GiB": 55.60780191421509,
+          "mean_dit_fraction": 0.573878112157669
+        },
+        "E_lightning8_fused": {
+          "mean_seconds": 6.7427419706558185,
+          "paired_geometric_ratio_to_A": 0.1369215497067671,
+          "mean_lpips_spatial_to_A": 0.07950451970100403,
+          "max_allocated_GiB": 55.484554290771484,
+          "mean_dit_fraction": 0.5410866517536188
+        }
+      },
+      "fusion": [
+        {
+          "case_id": "blocks_text",
+          "mae": 0.013400434516370296,
+          "max_channel_error": 0.9764705896377563,
+          "identical_pixels_fraction": 0.37668153661242604
+        },
+        {
+          "case_id": "shirt_color",
+          "mae": 0.013142901472747326,
+          "max_channel_error": 0.7607843279838562,
+          "identical_pixels_fraction": 0.08853299895216962
+        },
+        {
+          "case_id": "remove_hair",
+          "mae": 0.0012719685910269618,
+          "max_channel_error": 0.11764705926179886,
+          "identical_pixels_fraction": 0.41937828063964844
+        }
+      ],
+      "evidence_limits": [
+        "仅3个公开演示输入、1生成seed；只有文字A/D/E各3次计时",
+        "C文字编辑失败；D/E非逐像素等价，人物保持性漂移",
+        "E历史显存含观测列表强引用约0.791GiB adapter，不是干净融合部署显存",
+        "7.30x速度相对50step CFG4；后续局部研究以完整Lightning8 CFG1为参照，不能混用"
+      ],
+      "decision": "Go only to minimal local executor",
+      "sources": [
+        {
+          "path": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/Lightning8前置实验_20261022/data/summary.json",
+          "sha256": "1949fe7c9254190882da93e381161a2591c0f8fff3270416d6ddcaab97221579"
+        },
+        {
+          "path": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/Lightning8前置实验_20261022/02_实验数据记录与结果分析.md",
+          "sha256": "22ccf0586341313fa487112f2124a63c240d57312f560434b2d48fee5e56d2c2"
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "name": "局部执行与边界",
+      "successful_complete_requests": 152,
+      "real_dit_forwards": 1216,
+      "breakdown": [
+        {
+          "kind": "真实正确性/隔离/shape",
+          "requests": 12,
+          "dit": 96
+        },
+        {
+          "kind": "主性能",
+          "requests": 90,
+          "dit": 720,
+          "warmup": 15,
+          "measurements": 75,
+          "repeats": 5
+        },
+        {
+          "kind": "保守刷新",
+          "requests": 36,
+          "dit": 288,
+          "warmup": 9,
+          "measurements": 27,
+          "repeats": 3
+        },
+        {
+          "kind": "额外profiler",
+          "requests": 2,
+          "dit": 16,
+          "included_in_main_performance": false
+        },
+        {
+          "kind": "事后整盘closure",
+          "requests": 12,
+          "dit": 96,
+          "warmup": 3,
+          "measurements": 9,
+          "posthoc": true
+        }
+      ],
+      "extra_dense_oracle_forwards": 0,
+      "tiny_tests_passed": 13,
+      "tiny_model_forward_count": null,
+      "tiny_count_caveat": "13为测试项数量，未保存全局tiny forward计数；不得当13次模型调用",
+      "failed_generation_requests": 0,
+      "correctness": "三输入canonical全选以及文字reverse全选，8步noise/latent逐元素一致；真实gather先于目标Q/K/V/MLP，不是全量后mask",
+      "main_configs": {
+        "F": {
+          "baseline_config": "F",
+          "expected_repeats": 5,
+          "case_medians_seconds": {
+            "blocks_text": 6.662328495644033,
+            "shirt_color": 6.677081652916968,
+            "remove_hair": 6.795574859715998
+          },
+          "case_CVs": {
+            "blocks_text": 0.003696801677394796,
+            "shirt_color": 0.0018723689923462602,
+            "remove_hair": 0.002019223863022592
+          },
+          "paired_geometric_latency_ratio_to_baseline_across_cases": 1.0,
+          "all_cases_have_expected_repeats": true,
+          "all_timing_pairs_present": true,
+          "quality_cases_complete": 3,
+          "gate_pass_cases": [
+            "blocks_text",
+            "shirt_color",
+            "remove_hair"
+          ],
+          "gate_pass_all_cases": true,
+          "mean_lpips_mapmean_to_F": 0.0,
+          "max_extra_background_mae_over_F": 0.0,
+          "max_allocated_GiB": 54.66764688491821,
+          "paired_geometric_latency_ratio_to_F_across_cases": 1.0,
+          "all_cases_have_five_repeats": true
+        },
+        "R0": {
+          "baseline_config": "F",
+          "expected_repeats": 5,
+          "case_medians_seconds": {
+            "blocks_text": 5.851472053676844,
+            "shirt_color": 5.924883011728525,
+            "remove_hair": 5.795987620018423
+          },
+          "case_CVs": {
+            "blocks_text": 0.0016342774180835972,
+            "shirt_color": 0.0019522726018135893,
+            "remove_hair": 0.0006977462080241016
+          },
+          "paired_geometric_latency_ratio_to_baseline_across_cases": 0.8724508198911485,
+          "all_cases_have_expected_repeats": true,
+          "all_timing_pairs_present": true,
+          "quality_cases_complete": 3,
+          "gate_pass_cases": [
+            "remove_hair"
+          ],
+          "gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.03457639738917351,
+          "max_extra_background_mae_over_F": 0.0014780485071241856,
+          "max_allocated_GiB": 57.6522331237793,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.8724508198911485,
+          "all_cases_have_five_repeats": true
+        },
+        "R1": {
+          "baseline_config": "F",
+          "expected_repeats": 5,
+          "case_medians_seconds": {
+            "blocks_text": 5.9418282974511385,
+            "shirt_color": 5.925087728537619,
+            "remove_hair": 5.849974726326764
+          },
+          "case_CVs": {
+            "blocks_text": 0.0010319459772424621,
+            "shirt_color": 0.0018413817029396251,
+            "remove_hair": 0.0003293385775588233
+          },
+          "paired_geometric_latency_ratio_to_baseline_across_cases": 0.8800239423910037,
+          "all_cases_have_expected_repeats": true,
+          "all_timing_pairs_present": true,
+          "quality_cases_complete": 3,
+          "gate_pass_cases": [
+            "remove_hair"
+          ],
+          "gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.03363110994299253,
+          "max_extra_background_mae_over_F": 0.0019905073568224907,
+          "max_allocated_GiB": 57.65224361419678,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.8800239423910037,
+          "all_cases_have_five_repeats": true
+        },
+        "R2": {
+          "baseline_config": "F",
+          "expected_repeats": 5,
+          "case_medians_seconds": {
+            "blocks_text": 5.889902217313647,
+            "shirt_color": 5.939240609295666,
+            "remove_hair": 5.82866857945919
+          },
+          "case_CVs": {
+            "blocks_text": 0.0018766208719365478,
+            "shirt_color": 0.001930539808592808,
+            "remove_hair": 0.0027497572060960636
+          },
+          "paired_geometric_latency_ratio_to_baseline_across_cases": 0.8764809265345441,
+          "all_cases_have_expected_repeats": true,
+          "all_timing_pairs_present": true,
+          "quality_cases_complete": 3,
+          "gate_pass_cases": [
+            "remove_hair"
+          ],
+          "gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.03411404602229595,
+          "max_extra_background_mae_over_F": 0.0015470846556127071,
+          "max_allocated_GiB": 57.65223407745361,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.8764809265345441,
+          "all_cases_have_five_repeats": true
+        },
+        "R3": {
+          "baseline_config": "F",
+          "expected_repeats": 5,
+          "case_medians_seconds": {
+            "blocks_text": 5.880889728665352,
+            "shirt_color": 5.92455571424216,
+            "remove_hair": 5.824779964052141
+          },
+          "case_CVs": {
+            "blocks_text": 0.003620055599147409,
+            "shirt_color": 0.002214568391456963,
+            "remove_hair": 0.003384592389074055
+          },
+          "paired_geometric_latency_ratio_to_baseline_across_cases": 0.8763002320320065,
+          "all_cases_have_expected_repeats": true,
+          "all_timing_pairs_present": true,
+          "quality_cases_complete": 3,
+          "gate_pass_cases": [
+            "remove_hair"
+          ],
+          "gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.03416426464294394,
+          "max_extra_background_mae_over_F": 0.0015049860812723637,
+          "max_allocated_GiB": 57.65223503112793,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.8763002320320065,
+          "all_cases_have_five_repeats": true
+        }
+      },
+      "safe_configs": {
+        "F_safe": {
+          "baseline_config": "F_safe",
+          "expected_repeats": 3,
+          "case_medians_seconds": {
+            "blocks_text": 6.7035532128065825,
+            "shirt_color": 6.708893928676844,
+            "remove_hair": 6.815366854891181
+          },
+          "case_CVs": {
+            "blocks_text": 0.0014978750628240698,
+            "shirt_color": 0.0013209362051181954,
+            "remove_hair": 0.001243566337221398
+          },
+          "paired_geometric_latency_ratio_to_baseline_across_cases": 1.0,
+          "all_cases_have_expected_repeats": true,
+          "all_timing_pairs_present": true,
+          "quality_cases_complete": 3,
+          "gate_pass_cases": [
+            "blocks_text",
+            "shirt_color",
+            "remove_hair"
+          ],
+          "gate_pass_all_cases": true,
+          "mean_lpips_mapmean_to_F": 0.0,
+          "max_extra_background_mae_over_F": 0.0,
+          "max_allocated_GiB": 54.66763925552368
+        },
+        "R2_safe": {
+          "baseline_config": "F_safe",
+          "expected_repeats": 3,
+          "case_medians_seconds": {
+            "blocks_text": 6.3312033992260695,
+            "shirt_color": 6.355119984596968,
+            "remove_hair": 6.359556931070983
+          },
+          "case_CVs": {
+            "blocks_text": 0.0009674459539913503,
+            "shirt_color": 0.0029148419249766188,
+            "remove_hair": 0.0012768988798159695
+          },
+          "paired_geometric_latency_ratio_to_baseline_across_cases": 0.9424590176768706,
+          "all_cases_have_expected_repeats": true,
+          "all_timing_pairs_present": true,
+          "quality_cases_complete": 3,
+          "gate_pass_cases": [
+            "blocks_text",
+            "shirt_color",
+            "remove_hair"
+          ],
+          "gate_pass_all_cases": true,
+          "mean_lpips_mapmean_to_F": 0.00996834421918417,
+          "max_extra_background_mae_over_F": 0.0014450973831117153,
+          "max_allocated_GiB": 57.652231216430664
+        },
+        "R3_safe": {
+          "baseline_config": "F_safe",
+          "expected_repeats": 3,
+          "case_medians_seconds": {
+            "blocks_text": 6.333130699582398,
+            "shirt_color": 6.3497257474809885,
+            "remove_hair": 6.353318991139531
+          },
+          "case_CVs": {
+            "blocks_text": 0.0004760847638098117,
+            "shirt_color": 0.0006100341241492222,
+            "remove_hair": 0.0010720595916555342
+          },
+          "paired_geometric_latency_ratio_to_baseline_across_cases": 0.9416484900588012,
+          "all_cases_have_expected_repeats": true,
+          "all_timing_pairs_present": true,
+          "quality_cases_complete": 3,
+          "gate_pass_cases": [
+            "blocks_text",
+            "shirt_color",
+            "remove_hair"
+          ],
+          "gate_pass_all_cases": true,
+          "mean_lpips_mapmean_to_F": 0.009919435038076093,
+          "max_extra_background_mae_over_F": 0.0014657131396234035,
+          "max_allocated_GiB": 57.65223026275635
+        }
+      },
+      "boundary_R2_vs_R3": [
+        {
+          "case_id": "blocks_text",
+          "structure_config": "R2",
+          "equal_budget_control": "R3",
+          "status": "complete",
+          "R2_band2_mae": 0.029269356280565262,
+          "R3_band2_mae": 0.028766760602593422,
+          "band2_mae_improvement_absolute": -0.0005025956779718399,
+          "band2_mae_improvement_relative": -0.017471403364288755,
+          "R2_band2_gradient_mae": 0.0023180296811408456,
+          "R3_band2_gradient_mae": 0.00225369045639306,
+          "band2_gradient_improvement_absolute": -6.433922474778555e-05,
+          "R2_predefined_quality_gate_pass": false,
+          "R3_predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "shirt_color",
+          "structure_config": "R2",
+          "equal_budget_control": "R3",
+          "status": "complete",
+          "R2_band2_mae": 0.02007417008280754,
+          "R3_band2_mae": 0.019776852801442146,
+          "band2_mae_improvement_absolute": -0.0002973172813653946,
+          "band2_mae_improvement_relative": -0.015033599347198152,
+          "R2_band2_gradient_mae": 0.007170022935891305,
+          "R3_band2_gradient_mae": 0.0069922724824911025,
+          "band2_gradient_improvement_absolute": -0.00017775045340020276,
+          "R2_predefined_quality_gate_pass": false,
+          "R3_predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "remove_hair",
+          "structure_config": "R2",
+          "equal_budget_control": "R3",
+          "status": "complete",
+          "R2_band2_mae": 0.02115578018128872,
+          "R3_band2_mae": 0.021891610696911812,
+          "band2_mae_improvement_absolute": 0.0007358305156230927,
+          "band2_mae_improvement_relative": 0.033612442949521947,
+          "R2_band2_gradient_mae": 0.002527398649228621,
+          "R3_band2_gradient_mae": 0.002315318315942915,
+          "band2_gradient_improvement_absolute": -0.00021208033328570623,
+          "R2_predefined_quality_gate_pass": true,
+          "R3_predefined_quality_gate_pass": true
+        }
+      ],
+      "closure": {
+        "R4_vs_R5": {
+          "target_token_count_equal": true,
+          "band2_mae_relative_improvement_R4": 0.29304155317438413,
+          "band2_gradient_relative_improvement_R4": 0.006469082508391889,
+          "R4_latency_ratio_to_R5": 0.999023346351292,
+          "formal_boundary_go_inferred": false
+        },
+        "R4": {
+          "timing_n": 3,
+          "timing_complete": true,
+          "e2e_median_seconds": 6.274776490405202,
+          "e2e_mean_seconds": 6.2753760411093635,
+          "e2e_cv": 0.0007559516674155298,
+          "paired_baseline_n": 3,
+          "paired_median_latency_ratio_to_baseline": 0.9135658443680075,
+          "paired_geometric_latency_ratio_to_baseline": 0.9138004191688383,
+          "paired_median_speedup_over_baseline": 1.09461185109409,
+          "timing_pairing_status": "complete"
+        },
+        "posthoc": true,
+        "extraBG_R4_approx": 0.01046,
+        "extraBG_R5_approx": 0.01136
+      },
+      "max_allocated_GiB": 57.65927696228027,
+      "extra_cache_GiB": 2.8134765625,
+      "evidence_limits": [
+        "主方案约11-15%降时但文字/衣服失败；hair数字过线但有明显亮度块",
+        "safe数字通过、文字恢复，仅约5-7%降时，且3次重复不同于主5重复",
+        "R2相对等预算R3公共band2改善 -1.75%/-1.50%/+3.36%，不支持一般结构边界优越",
+        "整盘R4为事后单例：band2 MAE较R5降低29.3%，梯度仅0.65%，extraBG失败且降时约8.62%",
+        "区域为人工预给，无自动语义定位成本；profile有observer开销，不能作部署计时"
+      ],
+      "decision": "Revise boundary and temporal approximation; executor retained",
+      "sources": [
+        {
+          "path": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/局部执行与边界验证_20261022/data/final_validation_summary.json",
+          "sha256": "451ed75d836fbf14aed190f5651264517522d5945a5c67f07e1670d8a1b85630"
+        },
+        {
+          "path": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/局部执行与边界验证_20261022/data/summary.json",
+          "sha256": "aa971f31f4c222e903b460d4c70dfd0086b41fa78798b5c5f893d1c8621f49e3"
+        },
+        {
+          "path": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/局部执行与边界验证_20261022/data/closure_summary.json",
+          "sha256": "0a6da86c7ccaa6055f0e19945a3bd7ec746a6bb6f6bfb42f9bd341210403af7e"
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "name": "同状态误差归因",
+      "successful_complete_requests": 12,
+      "real_dit_forwards": 168,
+      "breakdown": [
+        {
+          "kind": "B/V/K各自轨迹local",
+          "dit": 72
+        },
+        {
+          "kind": "同当前z_t的dense oracle",
+          "dit": 72
+        },
+        {
+          "kind": "D原生dense轨迹",
+          "dit": 24
+        }
+      ],
+      "extra_dense_oracle_forwards": 72,
+      "oracle_already_in_total": true,
+      "tiny_test_rounds": 2,
+      "tiny_tests_passed": 16,
+      "tiny_model_forward_count": 192,
+      "failed_generation_requests": 0,
+      "nonmodel_revisions": [
+        "派生分析字段active_count被scalar计数覆盖，修复分析不重跑模型；原预测/图像/SSE不变",
+        "两轮tiny均成功，第二轮增加真实Euler核对，各96次，合计192"
+      ],
+      "B_energy": [
+        {
+          "case_id": "blocks_text",
+          "mode": "B",
+          "recorded_steps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "partial_steps": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "partial_step_count": 6,
+          "active_sse_sum_over_recorded_partial_steps": 23066.2158203125,
+          "inactive_sse_sum_over_recorded_partial_steps": 2033.4959411621094,
+          "active_share_of_summed_partial_velocity_sse": 0.9189832950877425,
+          "inactive_share_of_summed_partial_velocity_sse": 0.08101670491225758,
+          "active_share_of_summed_one_step_euler_sse": 0.8817249882599495,
+          "inactive_share_of_summed_one_step_euler_sse": 0.11827501174005052,
+          "summed_one_step_euler_sse": 376.6622785034738,
+          "full_step_count": 2,
+          "full_step_exact_zero_all": true,
+          "sse_additivity_all": true,
+          "orthogonality_all": true
+        },
+        {
+          "case_id": "shirt_color",
+          "mode": "B",
+          "recorded_steps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "partial_steps": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "partial_step_count": 6,
+          "active_sse_sum_over_recorded_partial_steps": 17074.069091796875,
+          "inactive_sse_sum_over_recorded_partial_steps": 3698.752960205078,
+          "active_share_of_summed_partial_velocity_sse": 0.8219426830429803,
+          "inactive_share_of_summed_partial_velocity_sse": 0.1780573169570196,
+          "active_share_of_summed_one_step_euler_sse": 0.7965616343182659,
+          "inactive_share_of_summed_one_step_euler_sse": 0.2034383656817342,
+          "summed_one_step_euler_sse": 343.789856984028,
+          "full_step_count": 2,
+          "full_step_exact_zero_all": true,
+          "sse_additivity_all": true,
+          "orthogonality_all": true
+        },
+        {
+          "case_id": "remove_hair",
+          "mode": "B",
+          "recorded_steps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "partial_steps": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "partial_step_count": 6,
+          "active_sse_sum_over_recorded_partial_steps": 13137.319091796875,
+          "inactive_sse_sum_over_recorded_partial_steps": 2057.808822631836,
+          "active_share_of_summed_partial_velocity_sse": 0.8645744323956747,
+          "inactive_share_of_summed_partial_velocity_sse": 0.1354255676043253,
+          "active_share_of_summed_one_step_euler_sse": 0.8469396053152146,
+          "inactive_share_of_summed_one_step_euler_sse": 0.1530603946847854,
+          "summed_one_step_euler_sse": 260.11435289819286,
+          "full_step_count": 2,
+          "full_step_exact_zero_all": true,
+          "sse_additivity_all": true,
+          "orthogonality_all": true
+        }
+      ],
+      "diagnostic_quality_lpips": {
+        "blocks_text": {
+          "B": 0.04931,
+          "V": 0.00441,
+          "K": 0.04568
+        },
+        "shirt_color": {
+          "B": 0.04402,
+          "V": 0.01593,
+          "K": 0.03941
+        },
+        "remove_hair": {
+          "B": 0.00901,
+          "V": 0.00105,
+          "K": 0.00766
+        }
+      },
+      "audits": {
+        "status": "pass",
+        "requests": 12,
+        "total_real_model_forwards": 168,
+        "local_forwards": 72,
+        "oracle_forwards": 72,
+        "native_forwards": 24,
+        "same_state_records": 72,
+        "full_step_exact_controls": 18,
+        "actual_euler_bitwise_checks": 72,
+        "prior_exact_output_controls": 6,
+        "tiny_test_rounds": 2,
+        "tiny_test_cases": 16,
+        "tiny_model_forwards": 192,
+        "failed_real_model_requests": 0,
+        "failed_tiny_tests": 0,
+        "peak_allocated_bytes": 61903613952,
+        "diagnostic_request_seconds_sum": 108.8020773017779,
+        "local_seconds_sum": 25.71844920795411,
+        "oracle_seconds_sum": 32.69682329148054,
+        "deployment_timing_measured": false,
+        "preregistration_sha256": "c78f6a5a41b9ccc3f5ac79f2718335e12642e37e9b672a3089bfe8d7945c8fff",
+        "runs_sha256": "df8b7e99fc8850de3c9966b529fc92e6d8e3352e589adc73a66f3a8466cd6595",
+        "step_metrics_sha256": "71f7075f9b235fcb2cbb43929f4f881c722d9abd38ada997e218f384adaedfc3"
+      },
+      "evidence_limits": [
+        "V是velocity模式，K是活动分支上下文近似简称；不是单独Attention Value vs Key因素实验",
+        "active/inactive SSE按输出支撑正交可加，不代表因果机制独立；只以B同当前状态作主归因",
+        "V/K自有轨迹后续状态不同，终图/LPIPS/份额不能相减为因果贡献",
+        "V用dense active替换在三例有效，但不能把V质量和旧B速度拼接为可部署算法",
+        "20B实际检查velocity完整及3层少量KV位置；全量缓存隔离在tiny验证，不是20B全缓存逐元素审计",
+        "108.80秒是诊断成本，不能推出部署加速"
+      ],
+      "decision": "Prioritize accurate active-query context; no trained correction yet",
+      "sources": [
+        {
+          "path": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/缓存误差归因与校正_20261022/data/final_validation_summary.json",
+          "sha256": "e4ca4610fcbe9e7c28019a2a2d416d6f54959ea022c6d5ff0c900843b9257b8b"
+        },
+        {
+          "path": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/缓存误差归因与校正_20261022/data/summary.json",
+          "sha256": "7f7d24b18044d2ca119efce51c107343d20f204117dc98486e4c1d9186e99318"
+        }
+      ]
+    },
+    {
+      "stage": 4,
+      "name": "背景轮转与标量时间校正",
+      "successful_complete_requests": 120,
+      "real_dit_forwards": 960,
+      "breakdown": {
+        "primary": {
+          "requests": 72,
+          "dit_forwards": 576,
+          "oracle_forwards": 0,
+          "measured_requests": 54,
+          "warmup_requests": 18,
+          "all_prior_F_R2_outputs_exact": true,
+          "prior_output_controls": 24,
+          "peak_allocated_GiB": 57.65136480331421,
+          "request_seconds_sum": 450.4550653761253,
+          "runs_sha256": "79bc29ee89b34004438604af79a590244a08cb42a782d7aab4d786435d404aed"
+        },
+        "optimization": {
+          "requests": 48,
+          "dit_forwards": 384,
+          "oracle_forwards": 0,
+          "measured_requests": 36,
+          "warmup_requests": 12,
+          "all_prior_F_R2_outputs_exact": true,
+          "prior_output_controls": 24,
+          "peak_allocated_GiB": 57.70037889480591,
+          "request_seconds_sum": 295.1075995527208,
+          "runs_sha256": "a928e83fe098a9a7140bef7dcfebcc9e9387edb31a2f32f4ddab1d88e0e3733f"
+        }
+      },
+      "extra_dense_oracle_forwards": 0,
+      "tiny_model_forward_count": 192,
+      "tiny_breakdown": {
+        "rotation": 20,
+        "value_time": 172
+      },
+      "failed_generation_requests": 0,
+      "setup_or_nonmodel_failures": [
+        "一次tiny保存函数缺失，在任何tiny Transformer forward前失败；失败原件保留，修复后成功"
+      ],
+      "primary_configs": {
+        "F": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 6.687429421581328,
+            "shirt_color": 6.706360591575503,
+            "remove_hair": 6.806904735043645
+          },
+          "case_CV": {
+            "blocks_text": 0.007516238158107201,
+            "shirt_color": 0.0037837559366425922,
+            "remove_hair": 8.799290906067103e-05
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 1.0,
+          "descriptive_net_latency_reduction_fraction": 0.0,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [
+            "blocks_text",
+            "shirt_color",
+            "remove_hair"
+          ],
+          "quality_gate_pass_all_cases": true,
+          "mean_lpips_mapmean_to_F": 0.0,
+          "max_extra_background_mae_over_F": 0.0,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 54.66764211654663,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        },
+        "R2": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 5.907190784811974,
+            "shirt_color": 5.952842908911407,
+            "remove_hair": 5.845182307995856
+          },
+          "case_CV": {
+            "blocks_text": 0.0016073956933353166,
+            "shirt_color": 0.0017151855575762535,
+            "remove_hair": 0.0002316614719832137
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.8758192821083035,
+          "descriptive_net_latency_reduction_fraction": 0.12418071789169649,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [
+            "remove_hair"
+          ],
+          "quality_gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.03411404602229595,
+          "max_extra_background_mae_over_F": 0.0015470846556127071,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 57.65130949020386,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        },
+        "FIX0": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 6.175351371988654,
+            "shirt_color": 6.217098667286336,
+            "remove_hair": 6.174876136705279
+          },
+          "case_CV": {
+            "blocks_text": 0.0022685832685909366,
+            "shirt_color": 0.0031442825995818416,
+            "remove_hair": 0.007540121227514561
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.9199121681124349,
+          "descriptive_net_latency_reduction_fraction": 0.08008783188756508,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [
+            "remove_hair"
+          ],
+          "quality_gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.0379021818904827,
+          "max_extra_background_mae_over_F": 0.0046096802689135075,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 57.65136480331421,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        },
+        "FIX1": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 6.168042493984103,
+            "shirt_color": 6.212097856216133,
+            "remove_hair": 6.1737415585666895
+          },
+          "case_CV": {
+            "blocks_text": 0.002261337563580712,
+            "shirt_color": 0.0033287590337946296,
+            "remove_hair": 0.0016687958427553978
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.9180360614782197,
+          "descriptive_net_latency_reduction_fraction": 0.0819639385217803,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [
+            "remove_hair"
+          ],
+          "quality_gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.029654408028970163,
+          "max_extra_background_mae_over_F": 0.0038837119936943054,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 57.65136098861694,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        },
+        "FIX2": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 6.173108354210854,
+            "shirt_color": 6.228282272815704,
+            "remove_hair": 6.191203441470861
+          },
+          "case_CV": {
+            "blocks_text": 0.0027830699242468076,
+            "shirt_color": 0.002672623490924865,
+            "remove_hair": 0.0029623284124439893
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.9189999421447161,
+          "descriptive_net_latency_reduction_fraction": 0.08100005785528386,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [],
+          "quality_gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.028427891122798126,
+          "max_extra_background_mae_over_F": 0.005211228504776955,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 57.65136098861694,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        },
+        "ROT": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 6.198430988937616,
+            "shirt_color": 6.223628759384155,
+            "remove_hair": 6.181153426878154
+          },
+          "case_CV": {
+            "blocks_text": 0.0034558435189042894,
+            "shirt_color": 0.0027293020976204927,
+            "remove_hair": 0.0008538645648828951
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.9198322263399619,
+          "descriptive_net_latency_reduction_fraction": 0.08016777366003813,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [
+            "remove_hair"
+          ],
+          "quality_gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.016980023123323917,
+          "max_extra_background_mae_over_F": 0.002468628343194723,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 57.65136194229126,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        }
+      },
+      "scalar_configs": {
+        "F": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 6.675403954461217,
+            "shirt_color": 6.682717734016478,
+            "remove_hair": 6.8020668206736445
+          },
+          "case_CV": {
+            "blocks_text": 0.00036852041678360963,
+            "shirt_color": 0.001440128468615474,
+            "remove_hair": 0.0005426389261110152
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 1.0,
+          "descriptive_net_latency_reduction_fraction": 0.0,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [
+            "blocks_text",
+            "shirt_color",
+            "remove_hair"
+          ],
+          "quality_gate_pass_all_cases": true,
+          "mean_lpips_mapmean_to_F": 0.0,
+          "max_extra_background_mae_over_F": 0.0,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 54.7168493270874,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        },
+        "R2": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 5.8904647044837475,
+            "shirt_color": 5.938449724577367,
+            "remove_hair": 5.830309884622693
+          },
+          "case_CV": {
+            "blocks_text": 0.00025820074437918,
+            "shirt_color": 0.0015093090346639966,
+            "remove_hair": 0.0016729759420324585
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.8760139734590592,
+          "descriptive_net_latency_reduction_fraction": 0.12398602654094082,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [
+            "remove_hair"
+          ],
+          "quality_gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.03411404602229595,
+          "max_extra_background_mae_over_F": 0.0015470846556127071,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 57.70034646987915,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        },
+        "SHIFT": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 5.939288862980902,
+            "shirt_color": 5.984617862850428,
+            "remove_hair": 5.881242596544325
+          },
+          "case_CV": {
+            "blocks_text": 0.00046549235569890574,
+            "shirt_color": 0.0015120227189128839,
+            "remove_hair": 0.0016703264902663637
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.8829517017448129,
+          "descriptive_net_latency_reduction_fraction": 0.11704829825518714,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [
+            "remove_hair"
+          ],
+          "quality_gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.028440209881712992,
+          "max_extra_background_mae_over_F": 0.0016261260025203228,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 57.70037794113159,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        },
+        "AFFINE": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 5.961648180149496,
+            "shirt_color": 6.000097236596048,
+            "remove_hair": 5.888461286202073
+          },
+          "case_CV": {
+            "blocks_text": 0.003297446480869452,
+            "shirt_color": 0.0018415099006329064,
+            "remove_hair": 0.003834750729740402
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.8858421589462022,
+          "descriptive_net_latency_reduction_fraction": 0.11415784105379778,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [
+            "remove_hair"
+          ],
+          "quality_gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.02166599314659834,
+          "max_extra_background_mae_over_F": 0.001576306764036417,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 57.70037889480591,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        }
+      },
+      "quality_rows": [
+        {
+          "case_id": "blocks_text",
+          "config": "R2",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.907190784811974,
+          "paired_geometric_latency_ratio_to_F": 0.8806699695662202,
+          "lpips_mapmean_to_F": 0.04931245744228363,
+          "band2_mae_to_F": 0.029269356280565262,
+          "extra_background_mae_over_F": 0.0015470846556127071,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "blocks_text",
+          "config": "ROT",
+          "baseline_config": "F",
+          "e2e_median_seconds": 6.198430988937616,
+          "paired_geometric_latency_ratio_to_F": 0.9228452105881857,
+          "lpips_mapmean_to_F": 0.023320214822888374,
+          "band2_mae_to_F": 0.002859450178220868,
+          "extra_background_mae_over_F": 0.002468628343194723,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "shirt_color",
+          "config": "R2",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.952842908911407,
+          "paired_geometric_latency_ratio_to_F": 0.8882186872459945,
+          "lpips_mapmean_to_F": 0.044015660881996155,
+          "band2_mae_to_F": 0.02007417008280754,
+          "extra_background_mae_over_F": -0.00578729435801506,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "shirt_color",
+          "config": "ROT",
+          "baseline_config": "F",
+          "e2e_median_seconds": 6.223628759384155,
+          "paired_geometric_latency_ratio_to_F": 0.9282036792297318,
+          "lpips_mapmean_to_F": 0.026795167475938797,
+          "band2_mae_to_F": 0.013920590281486511,
+          "extra_background_mae_over_F": -0.007103957235813141,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "remove_hair",
+          "config": "R2",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.845182307995856,
+          "paired_geometric_latency_ratio_to_F": 0.858836342705324,
+          "lpips_mapmean_to_F": 0.00901401974260807,
+          "band2_mae_to_F": 0.02115578018128872,
+          "extra_background_mae_over_F": 0.0014667585492134094,
+          "predefined_quality_gate_pass": true
+        },
+        {
+          "case_id": "remove_hair",
+          "config": "ROT",
+          "baseline_config": "F",
+          "e2e_median_seconds": 6.181153426878154,
+          "paired_geometric_latency_ratio_to_F": 0.9085602135725206,
+          "lpips_mapmean_to_F": 0.0008246870711445808,
+          "band2_mae_to_F": 0.0021063408348709345,
+          "extra_background_mae_over_F": -0.0010980293154716492,
+          "predefined_quality_gate_pass": true
+        },
+        {
+          "case_id": "blocks_text",
+          "config": "R2",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.8904647044837475,
+          "paired_geometric_latency_ratio_to_F": 0.8825792146894562,
+          "lpips_mapmean_to_F": 0.04931245744228363,
+          "band2_mae_to_F": 0.029269356280565262,
+          "extra_background_mae_over_F": 0.0015470846556127071,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "blocks_text",
+          "config": "SHIFT",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.939288862980902,
+          "paired_geometric_latency_ratio_to_F": 0.8897122929647688,
+          "lpips_mapmean_to_F": 0.044042184948921204,
+          "band2_mae_to_F": 0.002944862237200141,
+          "extra_background_mae_over_F": 0.0016261260025203228,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "blocks_text",
+          "config": "AFFINE",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.961648180149496,
+          "paired_geometric_latency_ratio_to_F": 0.8922633741211091,
+          "lpips_mapmean_to_F": 0.03160148486495018,
+          "band2_mae_to_F": 0.015550077892839909,
+          "extra_background_mae_over_F": 0.001576306764036417,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "shirt_color",
+          "config": "R2",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.938449724577367,
+          "paired_geometric_latency_ratio_to_F": 0.8888058559505299,
+          "lpips_mapmean_to_F": 0.044015660881996155,
+          "band2_mae_to_F": 0.02007417008280754,
+          "extra_background_mae_over_F": -0.00578729435801506,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "shirt_color",
+          "config": "SHIFT",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.984617862850428,
+          "paired_geometric_latency_ratio_to_F": 0.8946784388749391,
+          "lpips_mapmean_to_F": 0.0400613471865654,
+          "band2_mae_to_F": 0.01748424582183361,
+          "extra_background_mae_over_F": -0.0067133717238903046,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "shirt_color",
+          "config": "AFFINE",
+          "baseline_config": "F",
+          "e2e_median_seconds": 6.000097236596048,
+          "paired_geometric_latency_ratio_to_F": 0.8982295405337343,
+          "lpips_mapmean_to_F": 0.030625632032752037,
+          "band2_mae_to_F": 0.016148213297128677,
+          "extra_background_mae_over_F": -0.006858497858047485,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "remove_hair",
+          "config": "R2",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.830309884622693,
+          "paired_geometric_latency_ratio_to_F": 0.8569835755533676,
+          "lpips_mapmean_to_F": 0.00901401974260807,
+          "band2_mae_to_F": 0.02115578018128872,
+          "extra_background_mae_over_F": 0.0014667585492134094,
+          "predefined_quality_gate_pass": true
+        },
+        {
+          "case_id": "remove_hair",
+          "config": "SHIFT",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.881242596544325,
+          "paired_geometric_latency_ratio_to_F": 0.8647573885410967,
+          "lpips_mapmean_to_F": 0.0012170975096523762,
+          "band2_mae_to_F": 0.0028411895036697388,
+          "extra_background_mae_over_F": 0.00015767104923725128,
+          "predefined_quality_gate_pass": true
+        },
+        {
+          "case_id": "remove_hair",
+          "config": "AFFINE",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.888461286202073,
+          "paired_geometric_latency_ratio_to_F": 0.8673385226967866,
+          "lpips_mapmean_to_F": 0.0027708625420928,
+          "band2_mae_to_F": 0.016220184043049812,
+          "extra_background_mae_over_F": 0.0003715604543685913,
+          "predefined_quality_gate_pass": true
+        }
+      ],
+      "rotation_vs_fixed": [
+        {
+          "case_id": "blocks_text",
+          "status": "complete",
+          "fixed_quality_gate_pass_configs": [],
+          "ROT_quality_gate_pass": false,
+          "lpips_mapmean_to_F_FIX_mean": 0.05856075386206309,
+          "lpips_mapmean_to_F_FIX_min": 0.04030897095799446,
+          "lpips_mapmean_to_F_FIX_max": 0.0795111358165741,
+          "lpips_mapmean_to_F_best_FIXED_config": "FIX2",
+          "lpips_mapmean_to_F_ROT": 0.023320214822888374,
+          "lpips_mapmean_to_F_improvement_vs_FIX_mean": 0.03524053903917471,
+          "lpips_mapmean_to_F_improvement_vs_best_FIXED": 0.016988756135106087,
+          "lpips_mapmean_to_F_relative_improvement_vs_FIX_mean": 0.6017774143103081,
+          "mae_to_F_FIX_mean": 0.017061519746979077,
+          "mae_to_F_FIX_min": 0.01547800563275814,
+          "mae_to_F_FIX_max": 0.018084388226270676,
+          "mae_to_F_best_FIXED_config": "FIX2",
+          "mae_to_F_ROT": 0.008702469989657402,
+          "mae_to_F_improvement_vs_FIX_mean": 0.008359049757321674,
+          "mae_to_F_improvement_vs_best_FIXED": 0.0067755356431007385,
+          "mae_to_F_relative_improvement_vs_FIX_mean": 0.4899358252538865,
+          "band2_mae_to_F_FIX_mean": 0.018951210503776867,
+          "band2_mae_to_F_FIX_min": 0.018088115379214287,
+          "band2_mae_to_F_FIX_max": 0.01981356367468834,
+          "band2_mae_to_F_best_FIXED_config": "FIX2",
+          "band2_mae_to_F_ROT": 0.002859450178220868,
+          "band2_mae_to_F_improvement_vs_FIX_mean": 0.016091760325556,
+          "band2_mae_to_F_improvement_vs_best_FIXED": 0.015228665200993419,
+          "band2_mae_to_F_relative_improvement_vs_FIX_mean": 0.8491151698383068,
+          "band2_gradient_mae_to_F_FIX_mean": 0.002172654028184333,
+          "band2_gradient_mae_to_F_FIX_min": 0.002121541818353166,
+          "band2_gradient_mae_to_F_FIX_max": 0.002200740326143211,
+          "band2_gradient_mae_to_F_best_FIXED_config": "FIX2",
+          "band2_gradient_mae_to_F_ROT": 0.0019259054265680306,
+          "band2_gradient_mae_to_F_improvement_vs_FIX_mean": 0.0002467486016163023,
+          "band2_gradient_mae_to_F_improvement_vs_best_FIXED": 0.00019563639178513527,
+          "band2_gradient_mae_to_F_relative_improvement_vs_FIX_mean": 0.11357013054789394,
+          "extra_background_mae_over_F_FIX_mean": 0.0030461970406274,
+          "extra_background_mae_over_F_FIX_min": 0.001356187742203474,
+          "extra_background_mae_over_F_FIX_max": 0.0046096802689135075,
+          "extra_background_mae_over_F_best_FIXED_config": "FIX2",
+          "extra_background_mae_over_F_ROT": 0.002468628343194723,
+          "extra_background_mae_over_F_improvement_vs_FIX_mean": 0.0005775686974326768,
+          "extra_background_mae_over_F_improvement_vs_best_FIXED": -0.001112440600991249,
+          "e2e_median_seconds_FIX_mean": 6.17216740672787,
+          "e2e_median_seconds_FIX_min": 6.168042493984103,
+          "e2e_median_seconds_FIX_max": 6.175351371988654,
+          "e2e_median_seconds_best_FIXED_config": "FIX1",
+          "e2e_median_seconds_ROT": 6.198430988937616,
+          "e2e_median_seconds_improvement_vs_FIX_mean": -0.02626358220974634,
+          "e2e_median_seconds_improvement_vs_best_FIXED": -0.030388494953513145,
+          "e2e_median_seconds_relative_improvement_vs_FIX_mean": -0.004255163620662354
+        },
+        {
+          "case_id": "shirt_color",
+          "status": "complete",
+          "fixed_quality_gate_pass_configs": [],
+          "ROT_quality_gate_pass": false,
+          "lpips_mapmean_to_F_FIX_mean": 0.030909786621729534,
+          "lpips_mapmean_to_F_FIX_min": 0.030475065112113953,
+          "lpips_mapmean_to_F_FIX_max": 0.03165237605571747,
+          "lpips_mapmean_to_F_best_FIXED_config": "FIX2",
+          "lpips_mapmean_to_F_ROT": 0.026795167475938797,
+          "lpips_mapmean_to_F_improvement_vs_FIX_mean": 0.004114619145790737,
+          "lpips_mapmean_to_F_improvement_vs_best_FIXED": 0.0036798976361751556,
+          "lpips_mapmean_to_F_relative_improvement_vs_FIX_mean": 0.1331170349425242,
+          "mae_to_F_FIX_mean": 0.015836865951617558,
+          "mae_to_F_FIX_min": 0.015424564480781555,
+          "mae_to_F_FIX_max": 0.01613425277173519,
+          "mae_to_F_best_FIXED_config": "FIX2",
+          "mae_to_F_ROT": 0.012197451665997505,
+          "mae_to_F_improvement_vs_FIX_mean": 0.0036394142856200525,
+          "mae_to_F_improvement_vs_best_FIXED": 0.00322711281478405,
+          "mae_to_F_relative_improvement_vs_FIX_mean": 0.22980647160483966,
+          "band2_mae_to_F_FIX_mean": 0.017046547184387844,
+          "band2_mae_to_F_FIX_min": 0.016555845737457275,
+          "band2_mae_to_F_FIX_max": 0.01770293526351452,
+          "band2_mae_to_F_best_FIXED_config": "FIX2",
+          "band2_mae_to_F_ROT": 0.013920590281486511,
+          "band2_mae_to_F_improvement_vs_FIX_mean": 0.0031259569029013327,
+          "band2_mae_to_F_improvement_vs_best_FIXED": 0.002635255455970764,
+          "band2_mae_to_F_relative_improvement_vs_FIX_mean": 0.18337771685307944,
+          "band2_gradient_mae_to_F_FIX_mean": 0.005881841275822659,
+          "band2_gradient_mae_to_F_FIX_min": 0.005711688083523069,
+          "band2_gradient_mae_to_F_FIX_max": 0.006191487151128095,
+          "band2_gradient_mae_to_F_best_FIXED_config": "FIX1",
+          "band2_gradient_mae_to_F_ROT": 0.005670255154596222,
+          "band2_gradient_mae_to_F_improvement_vs_FIX_mean": 0.0002115861212264366,
+          "band2_gradient_mae_to_F_improvement_vs_best_FIXED": 4.1432928926847e-05,
+          "band2_gradient_mae_to_F_relative_improvement_vs_FIX_mean": 0.03597276963187744,
+          "extra_background_mae_over_F_FIX_mean": -0.005435505261023839,
+          "extra_background_mae_over_F_FIX_min": -0.005818959325551987,
+          "extra_background_mae_over_F_FIX_max": -0.004801448434591293,
+          "extra_background_mae_over_F_best_FIXED_config": "FIX0",
+          "extra_background_mae_over_F_ROT": -0.007103957235813141,
+          "extra_background_mae_over_F_improvement_vs_FIX_mean": 0.0016684519747893018,
+          "extra_background_mae_over_F_improvement_vs_best_FIXED": 0.0012849979102611542,
+          "e2e_median_seconds_FIX_mean": 6.219159598772724,
+          "e2e_median_seconds_FIX_min": 6.212097856216133,
+          "e2e_median_seconds_FIX_max": 6.228282272815704,
+          "e2e_median_seconds_best_FIXED_config": "FIX1",
+          "e2e_median_seconds_ROT": 6.223628759384155,
+          "e2e_median_seconds_improvement_vs_FIX_mean": -0.0044691606114311,
+          "e2e_median_seconds_improvement_vs_best_FIXED": -0.011530903168022633,
+          "e2e_median_seconds_relative_improvement_vs_FIX_mean": -0.0007186116613429626
+        },
+        {
+          "case_id": "remove_hair",
+          "status": "complete",
+          "fixed_quality_gate_pass_configs": [
+            "FIX0",
+            "FIX1"
+          ],
+          "ROT_quality_gate_pass": true,
+          "lpips_mapmean_to_F_FIX_mean": 0.006513940558458368,
+          "lpips_mapmean_to_F_FIX_min": 0.002499150577932596,
+          "lpips_mapmean_to_F_FIX_max": 0.014499637298285961,
+          "lpips_mapmean_to_F_best_FIXED_config": "FIX1",
+          "lpips_mapmean_to_F_ROT": 0.0008246870711445808,
+          "lpips_mapmean_to_F_improvement_vs_FIX_mean": 0.005689253487313787,
+          "lpips_mapmean_to_F_improvement_vs_best_FIXED": 0.0016744635067880154,
+          "lpips_mapmean_to_F_relative_improvement_vs_FIX_mean": 0.8733965924706325,
+          "mae_to_F_FIX_mean": 0.008515579625964165,
+          "mae_to_F_FIX_min": 0.00754968449473381,
+          "mae_to_F_FIX_max": 0.009838929399847984,
+          "mae_to_F_best_FIXED_config": "FIX1",
+          "mae_to_F_ROT": 0.002262767404317856,
+          "mae_to_F_improvement_vs_FIX_mean": 0.006252812221646309,
+          "mae_to_F_improvement_vs_best_FIXED": 0.005286917090415955,
+          "mae_to_F_relative_improvement_vs_FIX_mean": 0.7342791091497007,
+          "band2_mae_to_F_FIX_mean": 0.014783133442203203,
+          "band2_mae_to_F_FIX_min": 0.012223878875374794,
+          "band2_mae_to_F_FIX_max": 0.016483141109347343,
+          "band2_mae_to_F_best_FIXED_config": "FIX1",
+          "band2_mae_to_F_ROT": 0.0021063408348709345,
+          "band2_mae_to_F_improvement_vs_FIX_mean": 0.012676792607332269,
+          "band2_mae_to_F_improvement_vs_best_FIXED": 0.01011753804050386,
+          "band2_mae_to_F_relative_improvement_vs_FIX_mean": 0.857517295429553,
+          "band2_gradient_mae_to_F_FIX_mean": 0.0022124175382738824,
+          "band2_gradient_mae_to_F_FIX_min": 0.0021760959528613526,
+          "band2_gradient_mae_to_F_FIX_max": 0.002265223142377901,
+          "band2_gradient_mae_to_F_best_FIXED_config": "FIX1",
+          "band2_gradient_mae_to_F_ROT": 0.0018397237925217177,
+          "band2_gradient_mae_to_F_improvement_vs_FIX_mean": 0.0003726937457521648,
+          "band2_gradient_mae_to_F_improvement_vs_best_FIXED": 0.00033637216033963495,
+          "band2_gradient_mae_to_F_relative_improvement_vs_FIX_mean": 0.1684554290972303,
+          "extra_background_mae_over_F_FIX_mean": 0.004273371770977974,
+          "extra_background_mae_over_F_FIX_min": 0.0037251748144626617,
+          "extra_background_mae_over_F_FIX_max": 0.005211228504776955,
+          "extra_background_mae_over_F_best_FIXED_config": "FIX0",
+          "extra_background_mae_over_F_ROT": -0.0010980293154716492,
+          "extra_background_mae_over_F_improvement_vs_FIX_mean": 0.005371401086449623,
+          "extra_background_mae_over_F_improvement_vs_best_FIXED": 0.004823204129934311,
+          "e2e_median_seconds_FIX_mean": 6.179940378914277,
+          "e2e_median_seconds_FIX_min": 6.1737415585666895,
+          "e2e_median_seconds_FIX_max": 6.191203441470861,
+          "e2e_median_seconds_best_FIXED_config": "FIX1",
+          "e2e_median_seconds_ROT": 6.181153426878154,
+          "e2e_median_seconds_improvement_vs_FIX_mean": -0.001213047963877223,
+          "e2e_median_seconds_improvement_vs_best_FIXED": -0.0074118683114647865,
+          "e2e_median_seconds_relative_improvement_vs_FIX_mean": -0.00019628797197074858
+        }
+      ],
+      "table_bytes": 53114880,
+      "table_prepare_seconds": 0.19963117316365242,
+      "evidence_limits": [
+        "ROT逐步active token预算与FIX0/1/2严格相同，三例LPIPS均优于各FIX；同时刷新K/V/velocity，不能归因为仅KV",
+        "ROT跨例配对几何降时8.0168%，未到10%；文字/衣服LPIPS失败",
+        "SHIFT hair LPIPS0.001217、band2 0.002841、降时13.52%为开发单例正结果；SHIFT文字残留旧字",
+        "SHIFT/AFFINE没有学习；静态表50.65MiB及冷准备0.1996秒独立记账，执行时gather/cast成本包含在e2e",
+        "active error主导不证明stale Value唯一原因"
+      ],
+      "decision": "Revise; one useful hair case, no joint all-case quality+10% Go",
+      "sources": [
+        {
+          "path": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/背景轮转与上下文优化_20261022/data/final_validation_summary.json",
+          "sha256": "404056eb11aee8f7bd7e7d6d22a6e8ef5cd6051a96c90c3b102b1eb71fab5874"
+        },
+        {
+          "path": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/背景轮转与上下文优化_20261022/data/summary_primary.json",
+          "sha256": "ddfef6d6117ae512668c2fe45377681a509e5713e357888ee2c95cb82766d1cf"
+        },
+        {
+          "path": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/背景轮转与上下文优化_20261022/data/summary_optimization.json",
+          "sha256": "fd07f98ec7c7e55d59360d1babec4ccf722e451e61b3215c335864fe891a85ef"
+        }
+      ]
+    },
+    {
+      "stage": 5,
+      "name": "逐Value输出通道先验校正",
+      "successful_complete_requests": 36,
+      "real_dit_forwards": 288,
+      "breakdown": {
+        "warmup": 9,
+        "measurements": 27,
+        "configs": [
+          "F",
+          "R2",
+          "CHANNEL"
+        ],
+        "cases": 3,
+        "repeats": 3
+      },
+      "extra_dense_oracle_forwards": 0,
+      "tiny_model_forward_count": 172,
+      "tiny_tests_passed": 10,
+      "failed_generation_requests": 0,
+      "configs": {
+        "F": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 6.564203206449747,
+            "shirt_color": 6.562335149385035,
+            "remove_hair": 6.687966596335173
+          },
+          "case_CV": {
+            "blocks_text": 0.003211725049616881,
+            "shirt_color": 0.0007479061364024475,
+            "remove_hair": 0.0006264373514718109
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 1.0,
+          "descriptive_net_latency_reduction_fraction": 0.0,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [
+            "blocks_text",
+            "shirt_color",
+            "remove_hair"
+          ],
+          "quality_gate_pass_all_cases": true,
+          "mean_lpips_mapmean_to_F": 0.0,
+          "max_extra_background_mae_over_F": 0.0,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 54.76175308227539,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        },
+        "R2": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 5.782184328883886,
+            "shirt_color": 5.817415799945593,
+            "remove_hair": 5.70772431883961
+          },
+          "case_CV": {
+            "blocks_text": 0.0016538449796257603,
+            "shirt_color": 0.0002839486254099515,
+            "remove_hair": 0.002363754154733703
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.8731259591415403,
+          "descriptive_net_latency_reduction_fraction": 0.12687404085845966,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [
+            "remove_hair"
+          ],
+          "quality_gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.03411404602229595,
+          "max_extra_background_mae_over_F": 0.0015470846556127071,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 57.74391508102417,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        },
+        "CHANNEL": {
+          "baseline_config": "F",
+          "case_median_seconds": {
+            "blocks_text": 5.841164327226579,
+            "shirt_color": 5.888081019744277,
+            "remove_hair": 5.7772634960711
+          },
+          "case_CV": {
+            "blocks_text": 0.0013084505675325612,
+            "shirt_color": 0.0012809312394964796,
+            "remove_hair": 0.0008918905343520181
+          },
+          "all_expected_repeats_complete": true,
+          "all_timing_pairs_complete": true,
+          "paired_geometric_latency_ratio_to_F_across_cases": 0.8833277920253344,
+          "descriptive_net_latency_reduction_fraction": 0.1166722079746656,
+          "quality_cases_complete": 3,
+          "quality_gate_pass_cases": [
+            "remove_hair"
+          ],
+          "quality_gate_pass_all_cases": false,
+          "mean_lpips_mapmean_to_F": 0.02092771973305692,
+          "max_extra_background_mae_over_F": 0.00169656565412879,
+          "all_repeated_output_hashes_identical": true,
+          "max_allocated_GiB": 57.74394464492798,
+          "exploratory_numeric_target_met": false,
+          "formal_Go_established": false
+        }
+      },
+      "quality_rows": [
+        {
+          "case_id": "blocks_text",
+          "config": "F",
+          "baseline_config": "F",
+          "e2e_median_seconds": 6.564203206449747,
+          "paired_geometric_latency_ratio_to_F": 1.0,
+          "lpips_mapmean_to_F": 0.0,
+          "band2_mae_to_F": 0.0,
+          "extra_background_mae_over_F": 0.0,
+          "predefined_quality_gate_pass": true
+        },
+        {
+          "case_id": "blocks_text",
+          "config": "R2",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.782184328883886,
+          "paired_geometric_latency_ratio_to_F": 0.8795980327632542,
+          "lpips_mapmean_to_F": 0.04931245744228363,
+          "band2_mae_to_F": 0.029269356280565262,
+          "extra_background_mae_over_F": 0.0015470846556127071,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "blocks_text",
+          "config": "CHANNEL",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.841164327226579,
+          "paired_geometric_latency_ratio_to_F": 0.8891780005759239,
+          "lpips_mapmean_to_F": 0.030464258044958115,
+          "band2_mae_to_F": 0.012347675859928131,
+          "extra_background_mae_over_F": 0.00169656565412879,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "shirt_color",
+          "config": "F",
+          "baseline_config": "F",
+          "e2e_median_seconds": 6.562335149385035,
+          "paired_geometric_latency_ratio_to_F": 1.0,
+          "lpips_mapmean_to_F": 0.0,
+          "band2_mae_to_F": 0.0,
+          "extra_background_mae_over_F": 0.0,
+          "predefined_quality_gate_pass": true
+        },
+        {
+          "case_id": "shirt_color",
+          "config": "R2",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.817415799945593,
+          "paired_geometric_latency_ratio_to_F": 0.8865982827451793,
+          "lpips_mapmean_to_F": 0.044015660881996155,
+          "band2_mae_to_F": 0.02007417008280754,
+          "extra_background_mae_over_F": -0.00578729435801506,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "shirt_color",
+          "config": "CHANNEL",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.888081019744277,
+          "paired_geometric_latency_ratio_to_F": 0.8970038673737162,
+          "lpips_mapmean_to_F": 0.03039197064936161,
+          "band2_mae_to_F": 0.015400633215904236,
+          "extra_background_mae_over_F": -0.006751362234354019,
+          "predefined_quality_gate_pass": false
+        },
+        {
+          "case_id": "remove_hair",
+          "config": "F",
+          "baseline_config": "F",
+          "e2e_median_seconds": 6.687966596335173,
+          "paired_geometric_latency_ratio_to_F": 1.0,
+          "lpips_mapmean_to_F": 0.0,
+          "band2_mae_to_F": 0.0,
+          "extra_background_mae_over_F": 0.0,
+          "predefined_quality_gate_pass": true
+        },
+        {
+          "case_id": "remove_hair",
+          "config": "R2",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.70772431883961,
+          "paired_geometric_latency_ratio_to_F": 0.8535315252614238,
+          "lpips_mapmean_to_F": 0.00901401974260807,
+          "band2_mae_to_F": 0.02115578018128872,
+          "extra_background_mae_over_F": 0.0014667585492134094,
+          "predefined_quality_gate_pass": true
+        },
+        {
+          "case_id": "remove_hair",
+          "config": "CHANNEL",
+          "baseline_config": "F",
+          "e2e_median_seconds": 5.7772634960711,
+          "paired_geometric_latency_ratio_to_F": 0.8641371172616565,
+          "lpips_mapmean_to_F": 0.0019269305048510432,
+          "band2_mae_to_F": 0.011721421033143997,
+          "extra_background_mae_over_F": 0.0003480594605207443,
+          "predefined_quality_gate_pass": true
+        }
+      ],
+      "statistics_mode": "no_sample_mean_zero_variance_one",
+      "training_images_used": 0,
+      "table": {
+        "bytes": 100285440,
+        "MiB": 95.6396484375,
+        "prepare_seconds": 0.2288630735129118,
+        "statistics_prior_content_independently_verified": true,
+        "model_timestep_conversion_independently_verified": true,
+        "finite_validation_scope": "Producer finite flag and numeric metadata checked; actual static table tensors were not exported for an independent elementwise scan."
+      },
+      "evidence_limits": [
+        "默认mu0/S1；没有Train8统计、拟合或训练，synthetic tiny stats仅接口测试",
+        "CHANNEL三个LPIPS0.0304643/0.0303920/0.00192693；文字仍有错字，衣服未过0.02",
+        "跨例配对几何降时11.6672%仅满足时间侧；逐例质量和语义未共同通过",
+        "95.64MiB表及0.228863秒冷构表已单列；每token通道gather/FP32带宽临时张量不是免费",
+        "实际静态表tensor未导出供独立逐元素finite扫描；验证producer finite flag和metadata，tiny有元素级检查"
+      ],
+      "decision": "Revise, not Go",
+      "sources": [
+        {
+          "path": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/背景通道校正验证_20261022/data/final_validation_summary.json",
+          "sha256": "0c544f51d4d688b8aba3aac30a73a034d6e915bb68dd4bc0a4469ccdd8224e65"
+        },
+        {
+          "path": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/背景通道校正验证_20261022/data/summary_optimization.json",
+          "sha256": "24d54fabe7fb467e3a03c6b359328fc68046d3460a5f9287e6c802751773d8ba"
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "successful_complete_real_model_requests": 347,
+    "known_successful_real_dit_forwards": 3432,
+    "oracle_forwards_included": 72,
+    "failed_generation_requests": 0,
+    "known_counted_tiny_forwards": 556,
+    "additional_tiny_tests_without_forward_total": 13,
+    "tiny_forward_grand_total": null,
+    "scope": "Actual known successful research work, including correctness, warmups, diagnostics, oracle, profile and posthoc closure; not an aggregate performance benchmark or independent sample size"
+  },
+  "additivity_rules": [
+    "Requests/actual forward costs may add across disjoint ledgers, but oracle72 already included in attribution168",
+    "Do not add saved prior F/R2 output comparisons as new requests: they verify already-counted requests",
+    "Do not sum tiny13 test cases as forward count; known tiny556 excludes stage2 forwards",
+    "Do not merge timing repeats or baseline denominators across stages; phase2 table uses paired median whereas stages4/5 report geometric pairing",
+    "Stage1 quality reference is original50step A; later reference is same-round complete fused8step F/D; metrics cannot be presented as one shared reference",
+    "Summed request seconds mix diagnostic instrumentation and deployment timing; do not call this end-to-end project wallclock",
+    "347 requests are repeated studies on3 source images/one seed, not347 independent image-quality samples",
+    "Frozen stage-local plans with pending items are historical snapshots; current completion comes from latest final summaries"
+  ],
+  "current_status": {
+    "engineering_feasible": true,
+    "joint_quality_and_10percent_latency_target_met": false,
+    "current_decision": "Revise",
+    "few_shot_training_completed": false,
+    "RL_completed": false,
+    "SGLang_completed": false,
+    "automatic_semantic_boundary_completed": false,
+    "formal_test_evaluated": false
+  },
+  "uncompleted": [
+    "Freeze new Train32/Val16/Test64 image-level manifests and hashes; old3 demo images excluded",
+    "Collect nested Train8/16/32 statistics and same-current-state Value teacher pairs",
+    "Implement direct paired affine coefficient import API separately from norm-statistics table builder",
+    "Fit/evaluate calibrated channel statistics and/or true oldValue-to-freshValue ridge regression",
+    "Independent Val closed-loop semantic/text/boundary and latency evaluation with same-round F",
+    "Automatic semantic/structural boundary selection and its inference cost",
+    "Comparable RegionE/SpotEdit/LinCa baselines and broader task comparisons",
+    "Cross-seed/generalization, formal test, noninferiority, OCR/identity/appropriate task metrics",
+    "SGLang native backend implementation and numerical/behavior/performance parity",
+    "RL action-dependence study only after deployable supervised/rule baselines",
+    "Own distillation or LoRA training; currentLightning is downloaded author model"
+  ],
+  "next_planned_not_executed": {
+    "Train8": {
+      "images": 8,
+      "seeds": 1,
+      "local_forwards": 64,
+      "teacher_forwards": 48,
+      "total_forwards": 112,
+      "state_pairs": 48
+    },
+    "validation16_four_configs": {
+      "requests": 64,
+      "dit_forwards": 512,
+      "timing_warmups_and_repeats_additional": true
+    },
+    "go_gate": "Same-round F latency reduction>=10%, per-case LPIPS<=0.02 and extraBG<=1/255, plus semantics/text/boundary visual pass"
+  },
+  "evidence_limits_global": [
+    "All visual reviews nonblind; no formal independent test or statistical significance claim",
+    "LPIPS is AlexNet spatial mapmean on full RGB, region receptive fields cross boundaries",
+    "ExtraBG is MAE(candidate,source,far)-MAE(F,source,far); negative is not better editing",
+    "Allowed edit region/evaluation masks remain fixed when computation ROI expands",
+    "No lossless claim; fused LoRA itself differs from unfused BF16 path",
+    "PhysicalGPU H800 user-confirmed; never label results H20 just because H20 was planned"
+  ]
+}

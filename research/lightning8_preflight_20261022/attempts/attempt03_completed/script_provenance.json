@@ -1,0 +1,4 @@
+{
+  "sha256": "7fb8f9def92f4e5b697e342b275b04bd596ee6a82d20db28194ef74de72fa8ce",
+  "purpose": "Historical resume runner for measured D/E and C environment regression. Retained adapter_params references affect E memory accounting. Current runner receives a post-run reference-cleanup fix, not used for these data."
+}

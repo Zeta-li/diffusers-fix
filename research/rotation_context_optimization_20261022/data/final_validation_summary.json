@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "phases": {
+    "primary": {
+      "requests": 72,
+      "dit_forwards": 576,
+      "oracle_forwards": 0,
+      "measured_requests": 54,
+      "warmup_requests": 18,
+      "all_prior_F_R2_outputs_exact": true,
+      "prior_output_controls": 24,
+      "peak_allocated_GiB": 57.65136480331421,
+      "request_seconds_sum": 450.4550653761253,
+      "runs_sha256": "79bc29ee89b34004438604af79a590244a08cb42a782d7aab4d786435d404aed"
+    },
+    "optimization": {
+      "requests": 48,
+      "dit_forwards": 384,
+      "oracle_forwards": 0,
+      "measured_requests": 36,
+      "warmup_requests": 12,
+      "all_prior_F_R2_outputs_exact": true,
+      "prior_output_controls": 24,
+      "peak_allocated_GiB": 57.70037889480591,
+      "request_seconds_sum": 295.1075995527208,
+      "runs_sha256": "a928e83fe098a9a7140bef7dcfebcc9e9387edb31a2f32f4ddab1d88e0e3733f"
+    }
+  },
+  "total_requests": 120,
+  "total_real_dit_forwards": 960,
+  "extra_dense_oracles_in_performance": 0,
+  "tiny_model_forwards": 192,
+  "failed_real_model_requests": 0,
+  "failed_final_tiny_tests": 0,
+  "harness_setup_failure_attempts": 1,
+  "harness_setup_failed_before_tiny_model_forward": true,
+  "value_table_bytes": 53114880,
+  "value_table_prepare_seconds": 0.19963117316365242,
+  "static_table_preparation_not_a_full_DiT": true,
+  "value_time_contract_checks": 48
+}

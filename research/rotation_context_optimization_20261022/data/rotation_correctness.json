@@ -1,0 +1,1157 @@
+{
+  "status": "pass",
+  "started_at": "2026-10-22T22:29:14.308214+08:00",
+  "gpu_requests": 0,
+  "real_20B_forwards": 0,
+  "tiny_local_forwards": 16,
+  "tiny_native_control_forwards": 4,
+  "tiny_executed": true,
+  "tests": [
+    {
+      "name": "independent_manifest_and_age_audit",
+      "status": "pass"
+    },
+    {
+      "name": "fp32_rotation_dynamic",
+      "status": "pass",
+      "result": {
+        "status": "pass",
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "target_tokens": 6,
+        "E": [
+          0,
+          5
+        ],
+        "core": [
+          1
+        ],
+        "groups": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "reactivated": 0,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 0,
+            "full_output_bitwise_equal": true,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 2,
+            "selected": [
+              0,
+              1,
+              2,
+              5
+            ],
+            "reactivated": 0,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 1,
+            "full_output_bitwise_equal": null,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 3,
+            "selected": [
+              0,
+              1,
+              3,
+              5
+            ],
+            "reactivated": 1,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 2,
+            "full_output_bitwise_equal": null,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 4,
+            "selected": [
+              0,
+              1,
+              4,
+              5
+            ],
+            "reactivated": 1,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 2,
+            "full_output_bitwise_equal": null,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 5,
+            "selected": [
+              0,
+              1,
+              2,
+              5
+            ],
+            "reactivated": 1,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 2,
+            "full_output_bitwise_equal": null,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 6,
+            "selected": [
+              0,
+              1,
+              3,
+              5
+            ],
+            "reactivated": 1,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 2,
+            "full_output_bitwise_equal": null,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 7,
+            "selected": [
+              0,
+              1,
+              4,
+              5
+            ],
+            "reactivated": 1,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 2,
+            "full_output_bitwise_equal": null,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 8,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "reactivated": 2,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 0,
+            "full_output_bitwise_equal": true,
+            "actual_Euler_bitwise_equal": true
+          }
+        ],
+        "request_reset": true
+      }
+    },
+    {
+      "name": "bf16_rotation_dynamic",
+      "status": "pass",
+      "result": {
+        "status": "pass",
+        "device": "cpu",
+        "dtype": "torch.bfloat16",
+        "target_tokens": 6,
+        "E": [
+          0,
+          5
+        ],
+        "core": [
+          1
+        ],
+        "groups": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "reactivated": 0,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 0,
+            "full_output_bitwise_equal": true,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 2,
+            "selected": [
+              0,
+              1,
+              2,
+              5
+            ],
+            "reactivated": 0,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 1,
+            "full_output_bitwise_equal": null,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 3,
+            "selected": [
+              0,
+              1,
+              3,
+              5
+            ],
+            "reactivated": 1,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 2,
+            "full_output_bitwise_equal": null,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 4,
+            "selected": [
+              0,
+              1,
+              4,
+              5
+            ],
+            "reactivated": 1,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 2,
+            "full_output_bitwise_equal": null,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 5,
+            "selected": [
+              0,
+              1,
+              2,
+              5
+            ],
+            "reactivated": 1,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 2,
+            "full_output_bitwise_equal": null,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 6,
+            "selected": [
+              0,
+              1,
+              3,
+              5
+            ],
+            "reactivated": 1,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 2,
+            "full_output_bitwise_equal": null,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 7,
+            "selected": [
+              0,
+              1,
+              4,
+              5
+            ],
+            "reactivated": 1,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 2,
+            "full_output_bitwise_equal": null,
+            "actual_Euler_bitwise_equal": true
+          },
+          {
+            "step": 8,
+            "selected": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "reactivated": 2,
+            "gathered_current_latent_exact": true,
+            "inactive_cache_and_velocity_unchanged": true,
+            "first_layer_current_KV_exact": true,
+            "max_read_age": 0,
+            "full_output_bitwise_equal": true,
+            "actual_Euler_bitwise_equal": true
+          }
+        ],
+        "request_reset": true
+      }
+    }
+  ],
+  "manifest_sha256": "944c26ec413e095486b64821c46ff7ee77f66483deb80cbcd80cb2d5a65fdfcc",
+  "test_script_sha256": "29117693db5e42db530032cffccf5dbc51e173d9b7012e49678a5753f9fbb775",
+  "previous_root": "/workspace/diffusers-fix/research/local_executor_boundary_20261022",
+  "manifest_cases": {
+    "blocks_text": {
+      "status": "pass",
+      "target_tokens": 4056,
+      "core_tokens": 1088,
+      "E": 1,
+      "group_tokens": 989,
+      "partial_budget": 2078,
+      "independently_reconstructed_SHA_tile_order": true,
+      "coverage_and_disjointness": true,
+      "exact_FIX_ROT_per_step_budget": true,
+      "all_groups_refreshed_twice": true,
+      "tile_boundary_split_count": 2,
+      "ROT_max_read_age": 2,
+      "config_schedules": {
+        "F": [
+          {
+            "step": 1,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 3,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 4,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 5,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 6,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 7,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          }
+        ],
+        "R2": [
+          {
+            "step": 1,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 1088,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 1088,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 1088,
+            "max_read_age": 3
+          },
+          {
+            "step": 5,
+            "selected_target_count": 1088,
+            "max_read_age": 4
+          },
+          {
+            "step": 6,
+            "selected_target_count": 1088,
+            "max_read_age": 5
+          },
+          {
+            "step": 7,
+            "selected_target_count": 1088,
+            "max_read_age": 6
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          }
+        ],
+        "FIX0": [
+          {
+            "step": 1,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 2078,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 2078,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 2078,
+            "max_read_age": 3
+          },
+          {
+            "step": 5,
+            "selected_target_count": 2078,
+            "max_read_age": 4
+          },
+          {
+            "step": 6,
+            "selected_target_count": 2078,
+            "max_read_age": 5
+          },
+          {
+            "step": 7,
+            "selected_target_count": 2078,
+            "max_read_age": 6
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          }
+        ],
+        "FIX1": [
+          {
+            "step": 1,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 2078,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 2078,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 2078,
+            "max_read_age": 3
+          },
+          {
+            "step": 5,
+            "selected_target_count": 2078,
+            "max_read_age": 4
+          },
+          {
+            "step": 6,
+            "selected_target_count": 2078,
+            "max_read_age": 5
+          },
+          {
+            "step": 7,
+            "selected_target_count": 2078,
+            "max_read_age": 6
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          }
+        ],
+        "FIX2": [
+          {
+            "step": 1,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 2078,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 2078,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 2078,
+            "max_read_age": 3
+          },
+          {
+            "step": 5,
+            "selected_target_count": 2078,
+            "max_read_age": 4
+          },
+          {
+            "step": 6,
+            "selected_target_count": 2078,
+            "max_read_age": 5
+          },
+          {
+            "step": 7,
+            "selected_target_count": 2078,
+            "max_read_age": 6
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          }
+        ],
+        "ROT": [
+          {
+            "step": 1,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 2078,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 2078,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 2078,
+            "max_read_age": 2
+          },
+          {
+            "step": 5,
+            "selected_target_count": 2078,
+            "max_read_age": 2
+          },
+          {
+            "step": 6,
+            "selected_target_count": 2078,
+            "max_read_age": 2
+          },
+          {
+            "step": 7,
+            "selected_target_count": 2078,
+            "max_read_age": 2
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          }
+        ]
+      }
+    },
+    "shirt_color": {
+      "status": "pass",
+      "target_tokens": 4056,
+      "core_tokens": 1282,
+      "E": 2,
+      "group_tokens": 924,
+      "partial_budget": 2208,
+      "independently_reconstructed_SHA_tile_order": true,
+      "coverage_and_disjointness": true,
+      "exact_FIX_ROT_per_step_budget": true,
+      "all_groups_refreshed_twice": true,
+      "tile_boundary_split_count": 3,
+      "ROT_max_read_age": 2,
+      "config_schedules": {
+        "F": [
+          {
+            "step": 1,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 3,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 4,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 5,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 6,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 7,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          }
+        ],
+        "R2": [
+          {
+            "step": 1,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 1282,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 1282,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 1282,
+            "max_read_age": 3
+          },
+          {
+            "step": 5,
+            "selected_target_count": 1282,
+            "max_read_age": 4
+          },
+          {
+            "step": 6,
+            "selected_target_count": 1282,
+            "max_read_age": 5
+          },
+          {
+            "step": 7,
+            "selected_target_count": 1282,
+            "max_read_age": 6
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          }
+        ],
+        "FIX0": [
+          {
+            "step": 1,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 2208,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 2208,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 2208,
+            "max_read_age": 3
+          },
+          {
+            "step": 5,
+            "selected_target_count": 2208,
+            "max_read_age": 4
+          },
+          {
+            "step": 6,
+            "selected_target_count": 2208,
+            "max_read_age": 5
+          },
+          {
+            "step": 7,
+            "selected_target_count": 2208,
+            "max_read_age": 6
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          }
+        ],
+        "FIX1": [
+          {
+            "step": 1,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 2208,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 2208,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 2208,
+            "max_read_age": 3
+          },
+          {
+            "step": 5,
+            "selected_target_count": 2208,
+            "max_read_age": 4
+          },
+          {
+            "step": 6,
+            "selected_target_count": 2208,
+            "max_read_age": 5
+          },
+          {
+            "step": 7,
+            "selected_target_count": 2208,
+            "max_read_age": 6
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          }
+        ],
+        "FIX2": [
+          {
+            "step": 1,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 2208,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 2208,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 2208,
+            "max_read_age": 3
+          },
+          {
+            "step": 5,
+            "selected_target_count": 2208,
+            "max_read_age": 4
+          },
+          {
+            "step": 6,
+            "selected_target_count": 2208,
+            "max_read_age": 5
+          },
+          {
+            "step": 7,
+            "selected_target_count": 2208,
+            "max_read_age": 6
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          }
+        ],
+        "ROT": [
+          {
+            "step": 1,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 2208,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 2208,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 2208,
+            "max_read_age": 2
+          },
+          {
+            "step": 5,
+            "selected_target_count": 2208,
+            "max_read_age": 2
+          },
+          {
+            "step": 6,
+            "selected_target_count": 2208,
+            "max_read_age": 2
+          },
+          {
+            "step": 7,
+            "selected_target_count": 2208,
+            "max_read_age": 2
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4056,
+            "max_read_age": 0
+          }
+        ]
+      }
+    },
+    "remove_hair": {
+      "status": "pass",
+      "target_tokens": 4096,
+      "core_tokens": 438,
+      "E": 1,
+      "group_tokens": 1219,
+      "partial_budget": 1658,
+      "independently_reconstructed_SHA_tile_order": true,
+      "coverage_and_disjointness": true,
+      "exact_FIX_ROT_per_step_budget": true,
+      "all_groups_refreshed_twice": true,
+      "tile_boundary_split_count": 2,
+      "ROT_max_read_age": 2,
+      "config_schedules": {
+        "F": [
+          {
+            "step": 1,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          },
+          {
+            "step": 3,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          },
+          {
+            "step": 4,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          },
+          {
+            "step": 5,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          },
+          {
+            "step": 6,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          },
+          {
+            "step": 7,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          }
+        ],
+        "R2": [
+          {
+            "step": 1,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 438,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 438,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 438,
+            "max_read_age": 3
+          },
+          {
+            "step": 5,
+            "selected_target_count": 438,
+            "max_read_age": 4
+          },
+          {
+            "step": 6,
+            "selected_target_count": 438,
+            "max_read_age": 5
+          },
+          {
+            "step": 7,
+            "selected_target_count": 438,
+            "max_read_age": 6
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          }
+        ],
+        "FIX0": [
+          {
+            "step": 1,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 1658,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 1658,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 1658,
+            "max_read_age": 3
+          },
+          {
+            "step": 5,
+            "selected_target_count": 1658,
+            "max_read_age": 4
+          },
+          {
+            "step": 6,
+            "selected_target_count": 1658,
+            "max_read_age": 5
+          },
+          {
+            "step": 7,
+            "selected_target_count": 1658,
+            "max_read_age": 6
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          }
+        ],
+        "FIX1": [
+          {
+            "step": 1,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 1658,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 1658,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 1658,
+            "max_read_age": 3
+          },
+          {
+            "step": 5,
+            "selected_target_count": 1658,
+            "max_read_age": 4
+          },
+          {
+            "step": 6,
+            "selected_target_count": 1658,
+            "max_read_age": 5
+          },
+          {
+            "step": 7,
+            "selected_target_count": 1658,
+            "max_read_age": 6
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          }
+        ],
+        "FIX2": [
+          {
+            "step": 1,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 1658,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 1658,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 1658,
+            "max_read_age": 3
+          },
+          {
+            "step": 5,
+            "selected_target_count": 1658,
+            "max_read_age": 4
+          },
+          {
+            "step": 6,
+            "selected_target_count": 1658,
+            "max_read_age": 5
+          },
+          {
+            "step": 7,
+            "selected_target_count": 1658,
+            "max_read_age": 6
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          }
+        ],
+        "ROT": [
+          {
+            "step": 1,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          },
+          {
+            "step": 2,
+            "selected_target_count": 1658,
+            "max_read_age": 1
+          },
+          {
+            "step": 3,
+            "selected_target_count": 1658,
+            "max_read_age": 2
+          },
+          {
+            "step": 4,
+            "selected_target_count": 1658,
+            "max_read_age": 2
+          },
+          {
+            "step": 5,
+            "selected_target_count": 1658,
+            "max_read_age": 2
+          },
+          {
+            "step": 6,
+            "selected_target_count": 1658,
+            "max_read_age": 2
+          },
+          {
+            "step": 7,
+            "selected_target_count": 1658,
+            "max_read_age": 2
+          },
+          {
+            "step": 8,
+            "selected_target_count": 4096,
+            "max_read_age": 0
+          }
+        ]
+      }
+    }
+  },
+  "executor_sha256": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+  "borrowed_fixture_sha256": "86199fc74951c720d6a2a220ed635e3cd0486a9d1b335e4be2e336286f3ee987",
+  "torch_version": "2.9.1+cu129",
+  "device": "cpu",
+  "completed_at": "2026-10-22T22:29:22.515692+08:00",
+  "elapsed_seconds": 8.207579713314772,
+  "actual_tiny_model_forwards": 20
+}

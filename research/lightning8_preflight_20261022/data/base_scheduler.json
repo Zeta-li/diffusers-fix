@@ -1,0 +1,18 @@
+{
+  "num_train_timesteps": 1000,
+  "shift": 1.0,
+  "use_dynamic_shifting": true,
+  "base_shift": 0.5,
+  "max_shift": 0.9,
+  "base_image_seq_len": 256,
+  "max_image_seq_len": 8192,
+  "invert_sigmas": false,
+  "shift_terminal": 0.02,
+  "use_karras_sigmas": false,
+  "use_exponential_sigmas": false,
+  "use_beta_sigmas": false,
+  "time_shift_type": "exponential",
+  "stochastic_sampling": false,
+  "_class_name": "FlowMatchEulerDiscreteScheduler",
+  "_diffusers_version": "0.35.0.dev0"
+}

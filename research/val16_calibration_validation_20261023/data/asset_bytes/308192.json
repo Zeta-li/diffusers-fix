@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "308192",
+    "original_img_id": "308192",
+    "turn_index": 1,
+    "instruction": "put a tennis racket next to the bat",
+    "official_split": "dev",
+    "shard_path": "data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+    "row_group": 0,
+    "row_in_group": 8,
+    "row_in_shard": 8,
+    "selection_rank_sha256": "033a4c07998049314cca57c712b2c372d7a05d5437f89d64a046959257444555"
+  },
+  "image": "inputs/val16/308192/source.original",
+  "original_mask": "inputs/val16/308192/mask.original",
+  "source_sha256": "1fc30a0d88c88967c93d35d73e4814d0f3f481a03d6606695b2d0f5c12f19f0c",
+  "mask_sha256": "d4a582cdaa1db1e44123acedb10a8e5c1f758026d4ead7f4cdd4eb12d3519254",
+  "source_bytes": 585837,
+  "mask_bytes": 1515175,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+  "source_url_sha256": "cf2671aad08c1f2b2ee93832b2069f6524205905bacaa412307e949e63f924b9"
+}

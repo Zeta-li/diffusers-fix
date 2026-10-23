@@ -1,0 +1,52 @@
+{
+  "attempt": "20261022T220145",
+  "git_commit": "73faca368c0da77645ea58836aa8780d2d8c5353",
+  "packages": {
+    "torch": "2.9.1+cu129",
+    "diffusers": "0.37.0",
+    "transformers": "5.3.0",
+    "peft": "0.21.2",
+    "huggingface_hub": "1.32.0",
+    "torchao": "0.16.0"
+  },
+  "gpu_driver_name": "NVIDIA L20Y",
+  "physical_gpu_user_confirmed": "H800",
+  "capability": [
+    9,
+    0
+  ],
+  "dtype": "bfloat16",
+  "steps": 8,
+  "cfg": 1,
+  "seed": 2026102201,
+  "model": "/workspace/model-weights/Qwen-Image-Edit",
+  "lora": "/workspace/model-weights/Qwen-Image-Lightning/Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors",
+  "previous_root": "/workspace/diffusers-fix/research/local_executor_boundary_20261022",
+  "primary_root": "/workspace/diffusers-fix/research/local_executor_boundary_20261022",
+  "local_pilot_root": "/workspace/diffusers-fix/research/local_executor_boundary_20261022",
+  "baseline_root": "/workspace/diffusers-fix/research/lightning8_preflight_20261022",
+  "region": "R2",
+  "full_steps_1based": [
+    1,
+    8
+  ],
+  "planned_requests": 12,
+  "planned_model_forwards": 168,
+  "oracle_used_for_deployment_timing": false,
+  "error_tensor_scope": "active_error/inactive_error/combined_error: raw local before mixing vs same-current-state dense; returned_error: mixed returned target output vs same-state dense",
+  "main_attribution_trajectory": "B",
+  "independent_trajectory_outputs": [
+    "D",
+    "B",
+    "V",
+    "K"
+  ],
+  "scripts": {
+    "run_attribution.py": "1a2965af14e64582b8b7b419987d58dd6ea5b82ca30f94dfffc162e25e008b74",
+    "analyze_attribution.py": "f31641904e23a8bcecc5d0425c27c720707939d2d72a76e5a1392ad496c398c5",
+    "local_executor.py": "8f8688bf35625dbd31b2c23f6152a1484f18eb52cff778a9748b4c7d9cce1732",
+    "check_attribution_tiny.py": "855c0aa79d7bc1e1099006b6c0bd2c6551ce32daddb900fe548f6bb80731ad08",
+    "attribution_executor.py": "6f39974119e2f092cb2716120ffcf7f1ec4ab71e1232017dac4582193546732e"
+  },
+  "model_load_and_fuse_seconds": 15.41437041759491
+}

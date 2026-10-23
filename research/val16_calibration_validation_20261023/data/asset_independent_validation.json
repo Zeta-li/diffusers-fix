@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "frozen_val16_count": 16,
+  "original_rank_order_preserved": true,
+  "source_mask_binary_sha256_checks": 48,
+  "independent_core_geometry_checks": 16,
+  "independently_recomputed_duplicate_pairs": 296,
+  "prior_reference_count": 11,
+  "within_val16_pairs": 120,
+  "hard_duplicate_hits": 0,
+  "gray_zone_hits": 0,
+  "successful_http_ranges": 81,
+  "failed_http_ranges": 0,
+  "received_bytes": 510427841,
+  "target_payload_range_overlaps": 0,
+  "all_ranges_exact_206": true,
+  "core_fraction": {
+    "min": 0.034912109375,
+    "median": 0.26708984375,
+    "mean": 0.25360107421875,
+    "max": 0.5458984375
+  },
+  "target_columns_read": false,
+  "test_media_read": false,
+  "train8_assets_modified": false,
+  "model_calls": 0,
+  "dit_forwards": 0,
+  "training_steps": 0,
+  "source_case_manifest_sha256": "d66d413ffa385e96def3392faed5156eba3fa55827e204080ef3923bea4eae25",
+  "source_asset_manifest_sha256": "1a5d6156210d57f797873daa5f5c185692ff2aa2a06d6787dadd564b689fe4ce",
+  "audit_script_sha256": "68883db9577e788bbe1e4f029109bb17aafe69563d71e5efe1a7eff74a3b185e"
+}

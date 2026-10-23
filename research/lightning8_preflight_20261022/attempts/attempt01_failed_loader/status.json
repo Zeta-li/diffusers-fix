@@ -1,0 +1,5 @@
+{
+  "phase": "failed",
+  "time": "2026-10-22T19:44:36.702847+08:00",
+  "error": "AttributeError: 'QwenImageEditPipeline' object has no attribute 'enable_vae_tiling'"
+}

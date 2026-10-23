@@ -1,0 +1,45 @@
+{
+  "status": "BLOCKED_EXTRACTION",
+  "time": "2026-10-23T07:32:27.919462+00:00",
+  "frozen_selection_sha256": "577ff3a6f7bcbfc94ff150c055e335db63adc9f76247f00135138482185ba01a",
+  "error_type": "ValueError",
+  "error": "Nonopaque mask alpha has no verified white-region convention",
+  "partial_records": [
+    {
+      "img_id": "257102",
+      "original_img_id": "257102",
+      "turn_index": 1,
+      "instruction": "Could it be a fridge on the kitchen?",
+      "official_split": "train",
+      "shard_path": "data/train-00014-of-00051-34fbf4e78f18f540.parquet",
+      "row_group": 3,
+      "row_in_group": 31,
+      "row_in_shard": 127,
+      "selection_rank_sha256": "004d0cebed3e8db1e4f411521ae2e23c2ed4944fd5205626b73c9bfd84d61e91",
+      "case_id": "mb_train_257102",
+      "status": "EXTRACTING",
+      "target_column_read": false,
+      "columns_read": [
+        "img_id",
+        "turn_index",
+        "instruction",
+        "source_img",
+        "mask_img"
+      ],
+      "source_sha256": "70f904910835bc9e2490ca2bb56815977d2df1f262418a60d238e917a981b357",
+      "mask_sha256": "5ab38020776c051ffa9f129416976e06abfaf2514a4bd20569dfbd77dd9273b3",
+      "source_size_bytes": 279604,
+      "mask_size_bytes": 1116779,
+      "image": "inputs/train8/257102/source.original",
+      "original_mask": "inputs/train8/257102/mask.original",
+      "prompt": "Could it be a fridge on the kitchen?"
+    }
+  ],
+  "no_replacement_performed": true,
+  "ready_for_calibration": false,
+  "target_columns_read": false,
+  "test_media_read": false,
+  "model_calls": 0,
+  "dit_forwards": 0,
+  "training_steps": 0
+}

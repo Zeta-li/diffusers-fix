@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Every deliverable file listed in local frozen manifest independently rehashed on zeta",
+  "file_count": 459,
+  "total_bytes": 388832746,
+  "failed_files": [],
+  "manifest_sha256": "43b63dab01268ca6d778fccef414a22676bf20a143d9d9b09282ae5e718ddf2d",
+  "excluded": [
+    "__pycache__",
+    ".DS_Store",
+    "data/artifact_manifest.json",
+    "data/bundle_validation.json"
+  ]
+}

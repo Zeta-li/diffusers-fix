@@ -1,0 +1,21 @@
+{
+  "packages": {
+    "torch": "2.9.1+cu129",
+    "torchvision": "0.24.1+cu129",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "scikit-image": "0.25.2",
+    "lpips": "0.1.4"
+  },
+  "lpips_version": "0.1.4",
+  "network": "alex",
+  "spatial": true,
+  "normalize": true,
+  "device": "cuda",
+  "regional_method": "average of full-image spatial LPIPS map; receptive fields cross boundaries",
+  "ring_method": "cumulative L1 dilation outside coarse core; scaled by shorter image edge / 1024; overlapping rings",
+  "weights": {
+    "alexnet-owt-7be5be79.pth": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+    "alex.pth": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0"
+  }
+}

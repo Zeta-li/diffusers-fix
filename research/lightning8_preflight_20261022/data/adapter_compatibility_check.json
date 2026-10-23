@@ -1,0 +1,14 @@
+{
+  "torch": "2.9.1+cu129",
+  "peft": "0.21.2",
+  "torchao": "0.16.0",
+  "torchao_cpp_skipped": true,
+  "adapter_dtypes": {
+    "0.base_layer.weight": "torch.bfloat16",
+    "0.lora_A.pilot.weight": "torch.bfloat16",
+    "0.lora_B.pilot.weight": "torch.bfloat16"
+  },
+  "max_unfused_fused_abs": 0.0009765625,
+  "fused_unloaded_equal": true,
+  "status": "passed"
+}

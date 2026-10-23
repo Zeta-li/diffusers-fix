@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-10-22T23:05:35.106834+08:00",
+  "git_branch": "test/lightning8-preflight-20261022",
+  "git_head": "73faca368c0da77645ea58836aa8780d2d8c5353",
+  "git_status_short": "?? research/\n",
+  "git_tracked_diff": "",
+  "gpu_driver_name": "NVIDIA L20Y",
+  "cuda_capability": [
+    9,
+    0
+  ],
+  "cuda_total_memory_bytes": 85017624576,
+  "physical_gpu_user_confirmed": "H800",
+  "nvidia_smi": "NVIDIA L20Y, 81559 MiB, 4 MiB, 0 %",
+  "commit_or_push_performed": false
+}

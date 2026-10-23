@@ -1,0 +1,161 @@
+{
+  "status": "complete",
+  "diagnostic_id": "C_blocks_text_environment_regression_20261022T200044",
+  "started_at": "2026-10-22T20:00:44.653942+08:00",
+  "kind": "environment_regression_diagnostic",
+  "included_in_main_protocol": false,
+  "timing_scope": "one cold diagnostic request, model load reported separately, no warmup or performance inference",
+  "request_count": 1,
+  "script_sha256": "319f38007d6659c427445dd9b19420fe0d0d11fa5c41cd931215bafa868de5e8",
+  "run_pilot_script_sha256": "7fb8f9def92f4e5b697e342b275b04bd596ee6a82d20db28194ef74de72fa8ce",
+  "log": "diagnostics/C_blocks_text_environment_regression_20261022T200044.log",
+  "config": {
+    "id": "C_base8_cfg1_shift3",
+    "steps": 8,
+    "cfg": 1.0,
+    "scheduler": "shift3",
+    "lora": "none"
+  },
+  "seed": 2026102201,
+  "negative_prompt": " ",
+  "base": "/workspace/model-weights/Qwen-Image-Edit",
+  "source_image": "inputs/blocks_text.png",
+  "source_image_sha256": "f7471140b2d350c899ae16d07b284478b93bc6eaf211906764eeb39adeb75a46",
+  "prompt": "Replace the words 'HEALTH INSURANCE' on the letter blocks with 'Tomorrow will be better'.",
+  "reference_run_id": "C_base8_cfg1_shift3__blocks_text__measurement_0",
+  "reference_attempt_id": null,
+  "reference_runs_jsonl_sha256": "069d9cc3a1d8d05d2dc46a558963afe5322eaf0a9081b819a73ee94b0038c60a",
+  "initial_latent_path": "latents/blocks_text.pt",
+  "initial_latent_sha256": "ecb71485411e909a6d3a75cd017d321cb38d532dae7a8274810bac5c08cc0edc",
+  "reference_initial_latent_sha256": "ecb71485411e909a6d3a75cd017d321cb38d532dae7a8274810bac5c08cc0edc",
+  "initial_latent_sha256_equal": true,
+  "reference_output": "outputs/C_base8_cfg1_shift3__blocks_text__measurement_0.png",
+  "reference_output_sha256": "76a038431b6c7fc7f02374165a9017aa761e954eb8bbff24bc34918c8964c064",
+  "environment": {
+    "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+    "executable": "/workspace/venvs/qwen-edit-pilot/bin/python",
+    "platform": "Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.9.1+cu129",
+      "transformers": "5.3.0",
+      "huggingface_hub": "1.32.0",
+      "peft": "0.21.2",
+      "accelerate": "1.13.0",
+      "safetensors": "0.8.0",
+      "torchao": "0.16.0",
+      "Pillow": "12.2.0"
+    },
+    "diffusers_source": "/workspace/diffusers-fix/src/diffusers/__init__.py",
+    "diffusers_source_version": "0.42.0.dev0",
+    "code_commit": "73faca368c0da77645ea58836aa8780d2d8c5353",
+    "dtype": "bfloat16",
+    "batch_size": 1,
+    "vae_tiling": true,
+    "cpu_offload": false,
+    "cross_request_condition_cache": false,
+    "attention_backend": "native PyTorch SDPA",
+    "tf32": false,
+    "gpu_name": "NVIDIA L20Y",
+    "device_capability": [
+      9,
+      0
+    ],
+    "device_total_bytes": 85017624576,
+    "torch_flash_sdp_enabled": true,
+    "torch_mem_efficient_sdp_enabled": true,
+    "torch_math_sdp_enabled": true,
+    "attention_processors": [
+      "QwenDoubleStreamAttnProcessor2_0"
+    ]
+  },
+  "model_load_seconds": 12.954334038309753,
+  "target_hw": [
+    832,
+    1248
+  ],
+  "regenerated_initial_latent_sha256": "ecb71485411e909a6d3a75cd017d321cb38d532dae7a8274810bac5c08cc0edc",
+  "completed_at": "2026-10-22T20:01:05.830435+08:00",
+  "output": "diagnostics/C_blocks_text_environment_regression_20261022T200044.png",
+  "output_sha256": "76a038431b6c7fc7f02374165a9017aa761e954eb8bbff24bc34918c8964c064",
+  "output_sha256_equal": true,
+  "rgb_pixels_equal": true,
+  "output_wh": [
+    1248,
+    832
+  ],
+  "e2e_cold_diagnostic_seconds": 7.763344842940569,
+  "cuda_event_seconds": {
+    "prompt_encode": 1.0557435302734375,
+    "vae_encode": 1.2930155029296875,
+    "dit": 3.651751037597656,
+    "scheduler": 0.0004781440012156964,
+    "vae_decode": 1.70306298828125
+  },
+  "dit_calls": 8,
+  "first_cond_shapes": {
+    "hidden_states": [
+      1,
+      8112,
+      64
+    ],
+    "encoder_hidden_states": [
+      1,
+      1378,
+      3584
+    ],
+    "img_shapes": [
+      [
+        [
+          1,
+          52,
+          78
+        ],
+        [
+          1,
+          52,
+          78
+        ]
+      ]
+    ]
+  },
+  "peak_allocated_bytes": 58677698048,
+  "peak_reserved_bytes": 59523465216,
+  "scheduler_config": {
+    "num_train_timesteps": 1000,
+    "shift": 1.0,
+    "use_dynamic_shifting": true,
+    "base_shift": 1.0986122886681098,
+    "max_shift": 1.0986122886681098,
+    "base_image_seq_len": 256,
+    "max_image_seq_len": 8192,
+    "invert_sigmas": false,
+    "shift_terminal": null,
+    "use_karras_sigmas": false,
+    "use_exponential_sigmas": false,
+    "use_beta_sigmas": false,
+    "time_shift_type": "exponential",
+    "stochastic_sampling": false
+  },
+  "timesteps": [
+    1000.0,
+    954.5454711914062,
+    900.0,
+    833.3333740234375,
+    750.0,
+    642.8570556640625,
+    500.0,
+    300.0
+  ],
+  "sigmas": [
+    1.0,
+    0.9545454978942871,
+    0.8999999761581421,
+    0.8333333730697632,
+    0.75,
+    0.6428570747375488,
+    0.5,
+    0.30000001192092896,
+    0.0
+  ],
+  "initial_latent_after_request_sha256": "ecb71485411e909a6d3a75cd017d321cb38d532dae7a8274810bac5c08cc0edc"
+}

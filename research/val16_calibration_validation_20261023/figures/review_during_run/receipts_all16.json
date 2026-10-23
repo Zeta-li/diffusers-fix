@@ -1,0 +1,614 @@
+{
+  "source_runs": "独立Val16校准验证_20261023/data/monitor_snapshots/runs_all16_measurement0.jsonl",
+  "source_runs_sha256": "2599f527d2c2e0736b3501987cda0a9ff2b79b7db6f67b3bcd9fb1aa9576dc49",
+  "cases": [
+    {
+      "case_id": "mb_val_308192",
+      "prompt": "put a tennis racket next to the bat",
+      "crop_xyxy": [
+        274,
+        42,
+        1014,
+        928
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_308192__measurement_0",
+          "output": "outputs/F__mb_val_308192.png",
+          "sha256": "2853834b779e28240c19fa7c0a0a2bf2956a0567dfe04b3f298f55744a5fe29b"
+        },
+        {
+          "run_id": "R2__mb_val_308192__measurement_0",
+          "output": "outputs/R2__mb_val_308192.png",
+          "sha256": "76460981670d3a16d674ed55574b511f771fc0ed903419cd1c80128288310421"
+        },
+        {
+          "run_id": "PRIOR__mb_val_308192__measurement_0",
+          "output": "outputs/PRIOR__mb_val_308192.png",
+          "sha256": "cc4be6c79193be5fbe768c86c1d2210625156e855c990c5acbed1ae2d7cc630f"
+        },
+        {
+          "run_id": "A__mb_val_308192__measurement_0",
+          "output": "outputs/A__mb_val_308192.png",
+          "sha256": "aaf97bf3f44dead3a3cbfbec72428ed06f952e3992e87ab50993b44f7cfe027f"
+        },
+        {
+          "run_id": "B__mb_val_308192__measurement_0",
+          "output": "outputs/B__mb_val_308192.png",
+          "sha256": "5a173720b83ce701f0ff091b656a9a09791fbb08b21605dd0d9691c3a51a13ff"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_565269",
+      "prompt": "add a bus station",
+      "crop_xyxy": [
+        20,
+        418,
+        1024,
+        1024
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_565269__measurement_0",
+          "output": "outputs/F__mb_val_565269.png",
+          "sha256": "6a721e3927a275a535316c6d982665560414c3632ec84b77bec9a772d81a84ed"
+        },
+        {
+          "run_id": "R2__mb_val_565269__measurement_0",
+          "output": "outputs/R2__mb_val_565269.png",
+          "sha256": "17116392ec54244a9dc7c32a1b91da91c71638f39d5d50c33ac8358a030edb09"
+        },
+        {
+          "run_id": "PRIOR__mb_val_565269__measurement_0",
+          "output": "outputs/PRIOR__mb_val_565269.png",
+          "sha256": "0e02ddcbd0b469cfdfa396ffac9065a310fb305dd24bd700b1f9cf45cbba1d56"
+        },
+        {
+          "run_id": "A__mb_val_565269__measurement_0",
+          "output": "outputs/A__mb_val_565269.png",
+          "sha256": "057904a47edddb04097611b35aa1722f8f7f7f7af36ae118f7b2eae595785194"
+        },
+        {
+          "run_id": "B__mb_val_565269__measurement_0",
+          "output": "outputs/B__mb_val_565269.png",
+          "sha256": "1267212791213c1b78f7120cda611d38d01a9a6dad6ef3f693895be70601f6fa"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_392687",
+      "prompt": "change the scooter into a skateboard",
+      "crop_xyxy": [
+        192,
+        584,
+        520,
+        948
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_392687__measurement_0",
+          "output": "outputs/F__mb_val_392687.png",
+          "sha256": "a703fffdfbe6143b1aa4ce79bd78e1cc993a96309a504d248feeb16d5d860e84"
+        },
+        {
+          "run_id": "R2__mb_val_392687__measurement_0",
+          "output": "outputs/R2__mb_val_392687.png",
+          "sha256": "71f0dfd8afe3db3d3e5c45df2c62216588f3ef03690d07cd6d11278ffa4da6f2"
+        },
+        {
+          "run_id": "PRIOR__mb_val_392687__measurement_0",
+          "output": "outputs/PRIOR__mb_val_392687.png",
+          "sha256": "620e4c178fc42fea371637905e7dee9c593504965f7f8bd474b6c33d5d18b872"
+        },
+        {
+          "run_id": "A__mb_val_392687__measurement_0",
+          "output": "outputs/A__mb_val_392687.png",
+          "sha256": "7fc502c03050c24237d4b73368bcbe67437e522f8ad167704f98fa6663b059ba"
+        },
+        {
+          "run_id": "B__mb_val_392687__measurement_0",
+          "output": "outputs/B__mb_val_392687.png",
+          "sha256": "d3d6dab12e88caecb3175c3d584229afba1d42913a844efae8d293fe2ab60213"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_175584",
+      "prompt": "Put a pond next to the cows.",
+      "crop_xyxy": [
+        0,
+        694,
+        1024,
+        1024
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_175584__measurement_0",
+          "output": "outputs/F__mb_val_175584.png",
+          "sha256": "d8f7b5f6aea19fd24226cca793e61c77c6ddc91ed5582f9302b230038b297fbb"
+        },
+        {
+          "run_id": "R2__mb_val_175584__measurement_0",
+          "output": "outputs/R2__mb_val_175584.png",
+          "sha256": "cc7c95609c104fbfb3b929e161bcb3707c24e20a062f269332d9568327f95942"
+        },
+        {
+          "run_id": "PRIOR__mb_val_175584__measurement_0",
+          "output": "outputs/PRIOR__mb_val_175584.png",
+          "sha256": "77bcf636628a8bbf037e8c7f6b8ba750357452c08649d0534f8614a9005e9226"
+        },
+        {
+          "run_id": "A__mb_val_175584__measurement_0",
+          "output": "outputs/A__mb_val_175584.png",
+          "sha256": "6c646252de233f4de723df5ddc5d81aca081987d9d5c3987c8b41d9edec30877"
+        },
+        {
+          "run_id": "B__mb_val_175584__measurement_0",
+          "output": "outputs/B__mb_val_175584.png",
+          "sha256": "5bd5519132b7a5251b1ad31f70b8953feb866e1e3bfdac9184a89875f09714d8"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_190360",
+      "prompt": "let the cat have its eyes closed",
+      "crop_xyxy": [
+        595,
+        489,
+        826,
+        752
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_190360__measurement_0",
+          "output": "outputs/F__mb_val_190360.png",
+          "sha256": "96a4e5d53675536039b941fe7a509d7c2daf04d95dd5c080bb52a483b57c06bc"
+        },
+        {
+          "run_id": "R2__mb_val_190360__measurement_0",
+          "output": "outputs/R2__mb_val_190360.png",
+          "sha256": "13d3ae75840d3492993833c472269b063c5bc2347d2f674f04e5316ade0632f0"
+        },
+        {
+          "run_id": "PRIOR__mb_val_190360__measurement_0",
+          "output": "outputs/PRIOR__mb_val_190360.png",
+          "sha256": "3bf14875ac4a72f6226bc295b6d1406d897784f666396aeafc5294f9c21c3bc7"
+        },
+        {
+          "run_id": "A__mb_val_190360__measurement_0",
+          "output": "outputs/A__mb_val_190360.png",
+          "sha256": "15ec9752829e39927556736276f5668fd55a6f9b218e84fd06cda0a4c638766c"
+        },
+        {
+          "run_id": "B__mb_val_190360__measurement_0",
+          "output": "outputs/B__mb_val_190360.png",
+          "sha256": "a371b461d1190ea1c6173b0e1e0f8f13df03f1bec4786213ac154bfa45bacf11"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_178572",
+      "prompt": "Let the player wear a red hat.",
+      "crop_xyxy": [
+        99,
+        385,
+        364,
+        650
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_178572__measurement_0",
+          "output": "outputs/F__mb_val_178572.png",
+          "sha256": "00de1b54aa2afbc80baf2dc4b46a123b6c34924f673fde814a8479a04decf13a"
+        },
+        {
+          "run_id": "R2__mb_val_178572__measurement_0",
+          "output": "outputs/R2__mb_val_178572.png",
+          "sha256": "1b680a6f16148e74cfd6e34e379bb96e66a1910f2e0678bff0dd395a56052064"
+        },
+        {
+          "run_id": "PRIOR__mb_val_178572__measurement_0",
+          "output": "outputs/PRIOR__mb_val_178572.png",
+          "sha256": "97300ef20f409be4e2e6431f1e77ba22b71c6e23051a4d90fd00ca3d71f5a665"
+        },
+        {
+          "run_id": "A__mb_val_178572__measurement_0",
+          "output": "outputs/A__mb_val_178572.png",
+          "sha256": "8f1e1b434b1a78a5ed9296aaa0c5803e8d0989f15c537a38130280fa5b6287e9"
+        },
+        {
+          "run_id": "B__mb_val_178572__measurement_0",
+          "output": "outputs/B__mb_val_178572.png",
+          "sha256": "b114a0ff1a3a1bc282878479fdd30ebc679bbc11fae20d942ca10f1a8039eb3a"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_211860",
+      "prompt": "Have the woman be wearing a blue tank top",
+      "crop_xyxy": [
+        428,
+        205,
+        790,
+        616
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_211860__measurement_0",
+          "output": "outputs/F__mb_val_211860.png",
+          "sha256": "fe2c2444e539ce738b9a236740e0812325ed34c2809a86fb631de50270137169"
+        },
+        {
+          "run_id": "R2__mb_val_211860__measurement_0",
+          "output": "outputs/R2__mb_val_211860.png",
+          "sha256": "1fb7096585228e084ae824a312cc2c24c8b4ec67d02a0185519a8a8f0b7da106"
+        },
+        {
+          "run_id": "PRIOR__mb_val_211860__measurement_0",
+          "output": "outputs/PRIOR__mb_val_211860.png",
+          "sha256": "8c1e6e53d0ca578d3185ebb8d2798440daf97f7c10958e96c9c1c06fbd375c9d"
+        },
+        {
+          "run_id": "A__mb_val_211860__measurement_0",
+          "output": "outputs/A__mb_val_211860.png",
+          "sha256": "0fa21d5abb350b814f524956150157baf4e1c38070d9ce21295ec60ed3564a49"
+        },
+        {
+          "run_id": "B__mb_val_211860__measurement_0",
+          "output": "outputs/B__mb_val_211860.png",
+          "sha256": "6f41e0d3afc0c4bb3e3e8c9d6f3c798fc00791a0ced1a367940810ef7c32111b"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_415314",
+      "prompt": "replace the baseball bat for a laser sword",
+      "crop_xyxy": [
+        137,
+        0,
+        649,
+        699
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_415314__measurement_0",
+          "output": "outputs/F__mb_val_415314.png",
+          "sha256": "3c8973785130180677a39a1cc6bd90a34c4fa1d2419b2e4e6fe09ec12b279b1b"
+        },
+        {
+          "run_id": "R2__mb_val_415314__measurement_0",
+          "output": "outputs/R2__mb_val_415314.png",
+          "sha256": "c862019634af7be3423adc213053ded67f17560ed6d33449941e26d726dd8178"
+        },
+        {
+          "run_id": "PRIOR__mb_val_415314__measurement_0",
+          "output": "outputs/PRIOR__mb_val_415314.png",
+          "sha256": "d1411684251e6a682d2003904ef9755363bcbf8ddf2dc32d17cf8c2428cf9193"
+        },
+        {
+          "run_id": "A__mb_val_415314__measurement_0",
+          "output": "outputs/A__mb_val_415314.png",
+          "sha256": "225418642ab9835f992a7fe35faaeeee2e0187ba5ec4f432a86330c541cec55e"
+        },
+        {
+          "run_id": "B__mb_val_415314__measurement_0",
+          "output": "outputs/B__mb_val_415314.png",
+          "sha256": "badbf3e8c094c60c55511e4adf6b17ea62bff6da8bf56f1d89034c2b8700ab12"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_50151",
+      "prompt": "Can we put a hand on the door?",
+      "crop_xyxy": [
+        0,
+        380,
+        645,
+        967
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_50151__measurement_0",
+          "output": "outputs/F__mb_val_50151.png",
+          "sha256": "9bbc8f1d943ff79b19e3b166b271bd18e5d7dd52639ba0066f5c471c5437a3fb"
+        },
+        {
+          "run_id": "R2__mb_val_50151__measurement_0",
+          "output": "outputs/R2__mb_val_50151.png",
+          "sha256": "73060bfcd031d6fab4574c016f614d334614fd76f6c1864476ec9b04fc389ec1"
+        },
+        {
+          "run_id": "PRIOR__mb_val_50151__measurement_0",
+          "output": "outputs/PRIOR__mb_val_50151.png",
+          "sha256": "5ed72d31f8ae04034fc5686c97f0e81db1732d71ed67ae5343667d4c726232ba"
+        },
+        {
+          "run_id": "A__mb_val_50151__measurement_0",
+          "output": "outputs/A__mb_val_50151.png",
+          "sha256": "66470c816fc029dfd79e5c280207ce2db37879af67c56b695704b526e55e579b"
+        },
+        {
+          "run_id": "B__mb_val_50151__measurement_0",
+          "output": "outputs/B__mb_val_50151.png",
+          "sha256": "3643adce5d2a2fe98ab194903dd3f1c5e43f2cc669da1ff008991a615c8d4003"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_215135",
+      "prompt": "Put a wooden floor on the kitchen.",
+      "crop_xyxy": [
+        26,
+        756,
+        1024,
+        1024
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_215135__measurement_0",
+          "output": "outputs/F__mb_val_215135.png",
+          "sha256": "c9a6c81c9760aafa94dd5003f20e0d432eaac3547b676a228ebdf601908dedd8"
+        },
+        {
+          "run_id": "R2__mb_val_215135__measurement_0",
+          "output": "outputs/R2__mb_val_215135.png",
+          "sha256": "74e2e0e8d211d3ddebf5e457fde048cfd88333d67a844c9618768761169e0ed5"
+        },
+        {
+          "run_id": "PRIOR__mb_val_215135__measurement_0",
+          "output": "outputs/PRIOR__mb_val_215135.png",
+          "sha256": "48790419b13346a6e217dee9477123caf69ac9885559c7d5ec5230430e3cf718"
+        },
+        {
+          "run_id": "A__mb_val_215135__measurement_0",
+          "output": "outputs/A__mb_val_215135.png",
+          "sha256": "9daaf2d0175cd6dffa3bb056ee058e1b953ea051f70a3fec2d43da828b059b39"
+        },
+        {
+          "run_id": "B__mb_val_215135__measurement_0",
+          "output": "outputs/B__mb_val_215135.png",
+          "sha256": "eaec5652301f6b0839d2630c12888a1557af1b21439c27b5aa76de03aec6f59a"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_354126",
+      "prompt": "change the stuffed toys into rubber duckies",
+      "crop_xyxy": [
+        129,
+        564,
+        1024,
+        1024
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_354126__measurement_0",
+          "output": "outputs/F__mb_val_354126.png",
+          "sha256": "0f97d5893c53845ec00ba2cf64913966791c12761b7e87a494adea9914124b8a"
+        },
+        {
+          "run_id": "R2__mb_val_354126__measurement_0",
+          "output": "outputs/R2__mb_val_354126.png",
+          "sha256": "e275bcbd97786798a7c23289e97931f5be627cdbe7f17a6950953a147d5f8b75"
+        },
+        {
+          "run_id": "PRIOR__mb_val_354126__measurement_0",
+          "output": "outputs/PRIOR__mb_val_354126.png",
+          "sha256": "7f1332f33f2facc167f4e5787a869e79a9583c70769b22e20722b23bc6ad566d"
+        },
+        {
+          "run_id": "A__mb_val_354126__measurement_0",
+          "output": "outputs/A__mb_val_354126.png",
+          "sha256": "23f4ac8a0459ea68a7ebbb4440d3a8e10e39dd1e1d25546088d59b7e67f5cc9b"
+        },
+        {
+          "run_id": "B__mb_val_354126__measurement_0",
+          "output": "outputs/B__mb_val_354126.png",
+          "sha256": "692d74bb98e112dd341f8dcb38a4c6213781994df126e10335d2d8660b0908b9"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_25139",
+      "prompt": "Let the zebra put its face up close to a tree.",
+      "crop_xyxy": [
+        764,
+        634,
+        1024,
+        1024
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_25139__measurement_0",
+          "output": "outputs/F__mb_val_25139.png",
+          "sha256": "5d595c0b16f047e9ea3b68da496af1889f8375196cd3771a328a90cb8c324a36"
+        },
+        {
+          "run_id": "R2__mb_val_25139__measurement_0",
+          "output": "outputs/R2__mb_val_25139.png",
+          "sha256": "948ba494d9f2354a8e2468fa76693f4afe28541e413c918685cb7512a07b5e77"
+        },
+        {
+          "run_id": "PRIOR__mb_val_25139__measurement_0",
+          "output": "outputs/PRIOR__mb_val_25139.png",
+          "sha256": "71e15a4fee9bf84801a5c468999c509e330ab9b5fa9665acc370de1877b5e30d"
+        },
+        {
+          "run_id": "A__mb_val_25139__measurement_0",
+          "output": "outputs/A__mb_val_25139.png",
+          "sha256": "90b2444c36356e441e8edebdf438dcfba3800289074106cfe52d7280f7f4dea4"
+        },
+        {
+          "run_id": "B__mb_val_25139__measurement_0",
+          "output": "outputs/B__mb_val_25139.png",
+          "sha256": "ec70211a072cb723b9667f3ba5867e032a405c4a1ccafe50c24fc7cb589e4dc0"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_282572",
+      "prompt": "let there be pigs in the pen",
+      "crop_xyxy": [
+        390,
+        509,
+        1018,
+        977
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_282572__measurement_0",
+          "output": "outputs/F__mb_val_282572.png",
+          "sha256": "d85ee63403e2e3d6725d367aa75294fa58e2d5556413f8fa20ffd6cb0ba8760e"
+        },
+        {
+          "run_id": "R2__mb_val_282572__measurement_0",
+          "output": "outputs/R2__mb_val_282572.png",
+          "sha256": "6f03773e90f8f745f4825e087e5fe7fb49cb945c692319c02d3bdf9574006bcb"
+        },
+        {
+          "run_id": "PRIOR__mb_val_282572__measurement_0",
+          "output": "outputs/PRIOR__mb_val_282572.png",
+          "sha256": "14eb2954805a9a71ee787e90066fccad20d699bde16e515c8ebb63f89ddc9cd3"
+        },
+        {
+          "run_id": "A__mb_val_282572__measurement_0",
+          "output": "outputs/A__mb_val_282572.png",
+          "sha256": "67b85861656c2219cf77069f0fb91df90ccb2bca7404c3a96266d68dd86156b6"
+        },
+        {
+          "run_id": "B__mb_val_282572__measurement_0",
+          "output": "outputs/B__mb_val_282572.png",
+          "sha256": "8c0131ebdcf70bf20f21056871e7793081e76333ca2d4e1e650317acd9fdef1e"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_466845",
+      "prompt": "Let the fence be made of wood.",
+      "crop_xyxy": [
+        486,
+        258,
+        1024,
+        996
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_466845__measurement_0",
+          "output": "outputs/F__mb_val_466845.png",
+          "sha256": "2946c6571eae90f4076f7a302b536114043641fe689999f7e8100becb9b56c82"
+        },
+        {
+          "run_id": "R2__mb_val_466845__measurement_0",
+          "output": "outputs/R2__mb_val_466845.png",
+          "sha256": "dd980473a47bf9458bafbc62dbb9808bd934b3bbb7c04df3180865c2366ae3b9"
+        },
+        {
+          "run_id": "PRIOR__mb_val_466845__measurement_0",
+          "output": "outputs/PRIOR__mb_val_466845.png",
+          "sha256": "3afe4a2ffc9ae6b8c000d2b38b8c8e0759e16fc3d9a9819d84333422cc74b94f"
+        },
+        {
+          "run_id": "A__mb_val_466845__measurement_0",
+          "output": "outputs/A__mb_val_466845.png",
+          "sha256": "b327a0d9dd581aa1b17ce49f2b09d975557d6b601cf9fcbdd29a9e198033473b"
+        },
+        {
+          "run_id": "B__mb_val_466845__measurement_0",
+          "output": "outputs/B__mb_val_466845.png",
+          "sha256": "c91a16a84032694b9d402d7f7847d930324757c07b7239d192aa5363d83ff1fc"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_55458",
+      "prompt": "remove the apple",
+      "crop_xyxy": [
+        548,
+        273,
+        1024,
+        850
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_55458__measurement_0",
+          "output": "outputs/F__mb_val_55458.png",
+          "sha256": "d3a76aebaf660c348f2834512503d9bc8952c58ffeb03050c338a42ed48dc005"
+        },
+        {
+          "run_id": "R2__mb_val_55458__measurement_0",
+          "output": "outputs/R2__mb_val_55458.png",
+          "sha256": "c3a1fb3d5bc084f84c0b265d50453d677212f1aa11cc17ee9b7bfb0dde1dc8fd"
+        },
+        {
+          "run_id": "PRIOR__mb_val_55458__measurement_0",
+          "output": "outputs/PRIOR__mb_val_55458.png",
+          "sha256": "4a199bd6bbc54fdba768502ad4592f3f095962ecc18f6e9e7a9fa911aa3e5c24"
+        },
+        {
+          "run_id": "A__mb_val_55458__measurement_0",
+          "output": "outputs/A__mb_val_55458.png",
+          "sha256": "d5f6624f89128ab2dedfa56e1a6e3646e49943741f39299f30e176f1ade48f41"
+        },
+        {
+          "run_id": "B__mb_val_55458__measurement_0",
+          "output": "outputs/B__mb_val_55458.png",
+          "sha256": "7ad597d754bf708615a2e701bd7b8bef20b07d1940ad42f15923136e327f36c3"
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_155790",
+      "prompt": "it should be a tennis ball on the glove.",
+      "crop_xyxy": [
+        241,
+        263,
+        919,
+        862
+      ],
+      "quality_repeat": 0,
+      "outputs": [
+        {
+          "run_id": "F__mb_val_155790__measurement_0",
+          "output": "outputs/F__mb_val_155790.png",
+          "sha256": "f0cdb748d368af0e6f30e9383fcdece18f82f147833a6cd0701906dca261af0b"
+        },
+        {
+          "run_id": "R2__mb_val_155790__measurement_0",
+          "output": "outputs/R2__mb_val_155790.png",
+          "sha256": "15db1f3a04f223832a542dac82013c16435de19eb79028f00fcbda1d903d6052"
+        },
+        {
+          "run_id": "PRIOR__mb_val_155790__measurement_0",
+          "output": "outputs/PRIOR__mb_val_155790.png",
+          "sha256": "bb20b6b362987112fd8a33ef1c66cbc2c44f9865b8779a9549f5bea55189d983"
+        },
+        {
+          "run_id": "A__mb_val_155790__measurement_0",
+          "output": "outputs/A__mb_val_155790.png",
+          "sha256": "9eb35a784130191bc3e31e2a325e9d208f62fa0d04e48f16ab99e5164bf0cab6"
+        },
+        {
+          "run_id": "B__mb_val_155790__measurement_0",
+          "output": "outputs/B__mb_val_155790.png",
+          "sha256": "2cfe9ee68b078304a7ef3f34eec2f3b632db133f24dd65df7def0bfdbe41bb6f"
+        }
+      ]
+    }
+  ]
+}

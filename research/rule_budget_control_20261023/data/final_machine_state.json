@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-23T12:27:13.503872+08:00",
+  "physical_gpu": "H800 as confirmed by user",
+  "driver_gpu_name": "NVIDIA L20Y",
+  "compute_capability": "9.0 from CUDA runtime recorded in environment_primary.json",
+  "gpu": {
+    "returncode": 0,
+    "stdout": "NVIDIA L20Y, 81559 MiB, 0 MiB, 0 %",
+    "stderr": ""
+  },
+  "compute_processes": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "git_branch": {
+    "returncode": 0,
+    "stdout": "test/lightning8-preflight-20261022",
+    "stderr": ""
+  },
+  "git_head": {
+    "returncode": 0,
+    "stdout": "73faca368c0da77645ea58836aa8780d2d8c5353",
+    "stderr": ""
+  },
+  "git_status": {
+    "returncode": 0,
+    "stdout": "?? research/",
+    "stderr": ""
+  },
+  "gpu_experiments_complete": true,
+  "training_or_rl_started": false
+}

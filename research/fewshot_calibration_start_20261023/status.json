@@ -1,0 +1,8 @@
+{
+  "phase": "complete",
+  "time": "2026-10-23T15:49:36.058400+08:00",
+  "phase_name": "train8",
+  "successful_requests": 8,
+  "real_dit_forwards": 112,
+  "formal_training_images": 8
+}

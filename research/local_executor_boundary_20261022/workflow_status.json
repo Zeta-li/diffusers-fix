@@ -1,0 +1,11 @@
+{
+  "phase": "complete",
+  "time": "2026-10-22T21:31:56.759923+08:00",
+  "ledger_requests": 138,
+  "ledger_dit_calls": 1104,
+  "extra_profile_requests": 2,
+  "extra_profile_dit_calls": 16,
+  "total_real_model_requests": 140,
+  "total_real_model_dit_calls": 1120,
+  "primary_prefix_preserved_sha256": "8fd674b4f468c00eb35873d5e60f71b5742185bf0d5daf0903bdf717d7948365"
+}

@@ -1,0 +1,419 @@
+import argparse
+import csv
+import importlib.util
+import json
+import math
+import statistics
+from collections import defaultdict
+from datetime import datetime
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+import torch
+from PIL import Image
+
+
+MODES = ["D", "V", "K", "B"]
+ALIASES = {"D": "D", "V": "V", "K": "K", "B": "B", "Vonly": "V", "Konly": "K", "Both": "B"}
+ERROR_FIELDS = ["mse", "rmse", "relative_rmse", "cosine", "squared_error_sum", "reference_squared_sum", "count"]
+
+
+def mode_id(value):
+    return ALIASES.get(str(value), str(value))
+
+
+def read_jsonl(path):
+    return [json.loads(line) for line in path.read_text().splitlines() if line.strip()] if path.exists() else []
+
+
+def write_json(path, value):
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False))
+
+
+def save_csv(path, rows):
+    if not rows:
+        return
+    fields = list(dict.fromkeys(key for row in rows for key in row))
+    with path.open("w", newline="") as stream:
+        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def finite(value):
+    return value is not None and math.isfinite(float(value))
+
+
+def display(value, digits=5):
+    if isinstance(value, bool):
+        return "是" if value else "否"
+    if value is None:
+        return "N/A"
+    return f"{value:.{digits}g}" if isinstance(value, (int, float)) else str(value)
+
+
+def metadata_value(metadata, keys):
+    for key in keys:
+        value = metadata.get(key, metadata.get("paths", {}).get(key))
+        if value:
+            return value
+    return None
+
+
+def resolve_path(value, base):
+    path = Path(value).expanduser()
+    return path.resolve() if path.is_absolute() else (base / path).resolve()
+
+
+def normalize_steps(records):
+    result = {}
+    duplicates = []
+    for row in records:
+        if row.get("status") == "failed" or "active_error" not in row:
+            continue
+        key = (row["case_id"], mode_id(row["mode"]), int(row["step"]))
+        if key in result:
+            duplicates.append(list(key))
+        result[key] = row
+    return result, duplicates
+
+
+def step_metrics(row):
+    active = row["active_error"]
+    inactive = row["inactive_error"]
+    combined = row["combined_error"]
+    a = float(active["squared_error_sum"])
+    i = float(inactive["squared_error_sum"])
+    total = float(combined["squared_error_sum"])
+    delta = float(row["sigma_delta"])
+    residual = total - a - i
+    cross = row.get("orthogonality_cross_term")
+    returned = row.get("returned_error", {})
+    expected_returned_sse = {"V": i, "K": a, "B": total}.get(mode_id(row["mode"]))
+    tolerance = 1e-5 * max(1.0, abs(total), a + i)
+    full = bool(row["full_step"])
+    euler = row.get("euler_error", {})
+    result = {
+        "case_id": row["case_id"],
+        "mode": mode_id(row["mode"]),
+        "step": int(row["step"]),
+        "full_step": full,
+        "active_count": int(row["active_count"]),
+        "inactive_count": int(row["inactive_count"]),
+        "active_fraction": row["active_count"] / (row["active_count"] + row["inactive_count"]),
+        "sigma_delta": delta,
+        "current_latent_sha256": row.get("current_latent_sha256"),
+        "active_error_energy_fraction_computed": a / (a + i) if a + i else None,
+        "inactive_error_energy_fraction_computed": i / (a + i) if a + i else None,
+        "inactive_error_energy_fraction_recorded": row.get("inactive_error_energy_fraction"),
+        "sse_additivity_residual": residual,
+        "sse_additivity_pass": abs(residual) <= tolerance,
+        "orthogonality_cross_term": cross,
+        "orthogonality_pass": abs(float(cross)) <= tolerance if finite(cross) else None,
+        "factorization_max_abs": row.get("factorization_max_abs"),
+        "factorization_exact_pass": row.get("factorization_max_abs") == 0 if row.get("factorization_max_abs") is not None else None,
+        "actual_euler_update_bitwise_equal": row.get("actual_euler_update_bitwise_equal"),
+        "oracle_sampled_cache_unchanged": row.get("oracle_sampled_cache_unchanged"),
+        "euler_active_squared_error_sum": delta * delta * a,
+        "euler_inactive_squared_error_sum": delta * delta * i,
+        "euler_combined_squared_error_sum": delta * delta * total,
+        "euler_active_rmse_recorded": euler.get("active_rmse"),
+        "euler_inactive_rmse_recorded": euler.get("inactive_rmse"),
+        "euler_combined_rmse_recorded": euler.get("combined_rmse"),
+        "full_step_exact_zero_error": a == 0 and i == 0 and total == 0 if full else None,
+        "returned_sse_fraction_of_raw_same_state_sse": float(returned["squared_error_sum"]) / total if returned.get("squared_error_sum") is not None and total else None,
+        "output_mixing_sse_identity_pass": abs(float(returned["squared_error_sum"]) - expected_returned_sse) <= tolerance if returned.get("squared_error_sum") is not None and expected_returned_sse is not None else None,
+        "local_seconds_research_only": row.get("local_seconds"),
+        "oracle_seconds_research_only": row.get("oracle_seconds"),
+    }
+    for key in ERROR_FIELDS:
+        value = returned.get(key)
+        result[f"returned_{key}"] = value if value is None or finite(value) else None
+        rounded_value = row.get("rounded_euler_error", {}).get(key)
+        result[f"rounded_euler_{key}"] = rounded_value if rounded_value is None or finite(rounded_value) else None
+    rounded_rmse = row.get("rounded_euler_error", {}).get("rmse")
+    result["rounded_euler_rmse_minus_analytic"] = float(rounded_rmse) - float(euler["combined_rmse"]) if finite(rounded_rmse) and finite(euler.get("combined_rmse")) else None
+    for region, values in [("active", active), ("inactive", inactive), ("combined", combined)]:
+        for key in ERROR_FIELDS:
+            value = values.get(key)
+            result[f"{region}_{key}"] = value if value is None or finite(value) else None
+        recorded = euler.get(f"{region}_rmse")
+        expected = abs(delta) * float(values["rmse"]) if finite(values.get("rmse")) else None
+        result[f"euler_{region}_rmse_from_velocity"] = expected
+        result[f"euler_{region}_analytic_rmse_consistent"] = bool(math.isclose(float(recorded), expected, rel_tol=1e-4, abs_tol=1e-7)) if finite(recorded) and expected is not None else None
+    return result
+
+
+def aggregate_steps(rows, case_id, mode):
+    selected = [row for row in rows if row["case_id"] == case_id and row["mode"] == mode]
+    partial = [row for row in selected if not row["full_step"]]
+    a = sum(row["active_squared_error_sum"] for row in partial)
+    i = sum(row["inactive_squared_error_sum"] for row in partial)
+    ea = sum(row["euler_active_squared_error_sum"] for row in partial)
+    ei = sum(row["euler_inactive_squared_error_sum"] for row in partial)
+    return {
+        "case_id": case_id,
+        "mode": mode,
+        "recorded_steps": [row["step"] for row in selected],
+        "partial_steps": [row["step"] for row in partial],
+        "partial_step_count": len(partial),
+        "active_sse_sum_over_recorded_partial_steps": a,
+        "inactive_sse_sum_over_recorded_partial_steps": i,
+        "active_share_of_summed_partial_velocity_sse": a / (a + i) if a + i else None,
+        "inactive_share_of_summed_partial_velocity_sse": i / (a + i) if a + i else None,
+        "active_share_of_summed_one_step_euler_sse": ea / (ea + ei) if ea + ei else None,
+        "inactive_share_of_summed_one_step_euler_sse": ei / (ea + ei) if ea + ei else None,
+        "summed_one_step_euler_sse": ea + ei,
+        "full_step_count": sum(row["full_step"] for row in selected),
+        "full_step_exact_zero_all": all(row["full_step_exact_zero_error"] for row in selected if row["full_step"]) if any(row["full_step"] for row in selected) else None,
+        "sse_additivity_all": all(row["sse_additivity_pass"] for row in selected) if selected else None,
+        "orthogonality_all": all(row["orthogonality_pass"] for row in selected if row["orthogonality_pass"] is not None) if selected else None,
+    }
+
+
+def renamed_quality(values):
+    result = {}
+    for key, value in values.items():
+        name = key.replace("_to_F", "_to_D").replace("F_far_background", "D_far_background").replace("_over_F", "_over_D")
+        result[name] = value
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parent.parent)
+    parser.add_argument("--metadata", type=Path)
+    parser.add_argument("--local-root", type=Path)
+    parser.add_argument("--cases", type=Path)
+    parser.add_argument("--regions", type=Path)
+    parser.add_argument("--source-root", type=Path)
+    parser.add_argument("--device", choices=["cpu", "cuda"], default="cpu")
+    args = parser.parse_args()
+    root = args.root.resolve()
+    data, figures = root / "data", root / "figures"
+    data.mkdir(parents=True, exist_ok=True)
+    figures.mkdir(exist_ok=True)
+    metadata_path = args.metadata or next((path for path in [data / "metadata.json", data / "environment.json", root / "metadata.json"] if path.exists()), None)
+    metadata = json.loads(metadata_path.read_text()) if metadata_path else {}
+    local_value = args.local_root or metadata_value(metadata, ["local_pilot_root", "local_root", "previous_root", "primary_root"])
+    local_root = resolve_path(local_value, root) if local_value else root.parent / "局部执行与边界验证_20261022"
+    cases_value = args.cases or metadata_value(metadata, ["cases_json", "cases_path"])
+    regions_value = args.regions or metadata_value(metadata, ["regions_json", "regions_path"])
+    source_value = args.source_root or metadata_value(metadata, ["source_root"])
+    cases_path = resolve_path(cases_value, root) if cases_value else local_root / "cases.json"
+    regions_path = resolve_path(regions_value, root) if regions_value else local_root / "masks/regions.json"
+    source_root = resolve_path(source_value, root) if source_value else local_root
+    manifest = json.loads(regions_path.read_text())
+    cases = json.loads(cases_path.read_text())["cases"] if cases_path.exists() else [{"case_id": cid, "image": value["source_image"]} for cid, value in manifest["cases"].items()]
+    helper_path = local_root / "scripts/analyze_local_pilot.py"
+    spec = importlib.util.spec_from_file_location("attribution_quality_helpers", helper_path)
+    helpers = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(helpers)
+    torch.set_num_threads(8)
+    step_records = read_jsonl(data / "step_metrics.jsonl")
+    run_records = read_jsonl(data / "runs.jsonl")
+    normalized, step_duplicates = normalize_steps(step_records)
+    step_rows = [step_metrics(row) for _, row in sorted(normalized.items())]
+    unique_runs = {}
+    run_duplicates = []
+    for row in run_records:
+        if row.get("status", "complete") == "failed" or "output" not in row:
+            continue
+        key = (row["case_id"], mode_id(row["mode"]))
+        if key in unique_runs:
+            run_duplicates.append(list(key))
+        unique_runs[key] = row
+    warnings = []
+    for row in step_rows:
+        if row["full_step"] and not row["full_step_exact_zero_error"]:
+            warnings.append(f"Full-step nonzero residual: {row['case_id']}/{row['mode']}/step{row['step']}")
+        if row["factorization_exact_pass"] is False or row["actual_euler_update_bitwise_equal"] is False:
+            warnings.append(f"Factorization or actual Euler audit failed: {row['case_id']}/{row['mode']}/step{row['step']}")
+        if row["output_mixing_sse_identity_pass"] is False:
+            warnings.append(f"Returned mixed-output identity failed: {row['case_id']}/{row['mode']}/step{row['step']}")
+        if not row["sse_additivity_pass"] or row["orthogonality_pass"] is False:
+            warnings.append(f"Partition identity audit failed: {row['case_id']}/{row['mode']}/step{row['step']}")
+    scope = metadata_value(metadata, ["error_tensor_scope", "step_error_tensor_scope"]) or "unknown: inspect producer code before interpreting V/K errors"
+    if str(scope).startswith("unknown"):
+        warnings.append("The producer did not declare whether V/K error fields use raw local or returned hybrid predictions. B is the primary attribution mode; V/K fields remain descriptive.")
+    import lpips
+    network = lpips.LPIPS(net="alex", spatial=True).eval().to(args.device)
+    quality_rows = []
+    for case in cases:
+        cid = case["case_id"]
+        case_data = manifest["cases"][cid]
+        height, width = case_data["target_hw"]
+        source = Image.open(source_root / case.get("image", case_data["source_image"])).convert("RGB").resize((width, height), Image.Resampling.LANCZOS)
+        masks = helpers.evaluation_masks(case_data, local_root, height, width)
+        d_run = unique_runs.get((cid, "D"))
+        reference = None
+        if d_run:
+            try:
+                reference = helpers.load_image(root, d_run, (width, height))
+            except Exception as error:
+                warnings.append(f"{cid}: invalid D image: {type(error).__name__}: {error}")
+        images = {"INPUT": source}
+        for mode in MODES:
+            run = unique_runs.get((cid, mode))
+            result = {"case_id": cid, "mode": mode, "quality_reference_mode": "D"}
+            if not run or reference is None:
+                result.update(quality_status="missing_run_or_D_reference")
+            else:
+                try:
+                    image = helpers.load_image(root, run, reference.size)
+                    result.update(renamed_quality(helpers.quality_metrics(image, reference, source, masks, network, args.device)))
+                    result.update(output=run["output"], output_sha256=run.get("output_sha256"), research_e2e_seconds=run.get("e2e_seconds"), local_calls=run.get("local_calls"), oracle_calls=run.get("oracle_calls"), native_calls=run.get("native_calls"))
+                    images[mode] = image
+                except Exception as error:
+                    result.update(quality_status="invalid_output", quality_error=f"{type(error).__name__}: {error}")
+                    warnings.append(f"{cid}/{mode}: {result['quality_error']}")
+            quality_rows.append(result)
+        labels = ["INPUT"] + MODES
+        helpers.comparison_panel([images.get(label) for label in labels], labels, figures / f"{cid}_attribution_trajectories.png")
+        ys, xs = np.nonzero(masks["core"])
+        crop = (int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)
+        helpers.comparison_panel([images.get(label) for label in labels], labels, figures / f"{cid}_attribution_core_crop.png", crop=crop)
+    aggregates = [aggregate_steps(step_rows, case["case_id"], mode) for case in cases for mode in ["V", "K", "B"]]
+    research = []
+    for (cid, mode), row in sorted(unique_runs.items()):
+        research.append({"case_id": cid, "mode": mode, "e2e_seconds_research_only": row.get("e2e_seconds"), "local_calls": row.get("local_calls", 0), "oracle_calls": row.get("oracle_calls", 0), "native_calls": row.get("native_calls", 0)})
+    old_records = read_jsonl(local_root / "data/runs.jsonl")
+    old_lookup = {(row["case_id"], str(row["config"]), int(row.get("repeat", 0))): row for row in old_records if row.get("status") == "complete" and row.get("kind") == "measurement"}
+    old_output_audits = []
+    for case in cases:
+        cid = case["case_id"]
+        for mode, old_config in [("D", "F"), ("B", "R2")]:
+            run = unique_runs.get((cid, mode))
+            old = old_lookup.get((cid, old_config, 0))
+            audit = {"case_id": cid, "mode": mode, "old_config": old_config, "old_repeat": 0, "producer_old_output_exact": run.get("old_output_exact") if run else None}
+            if run is None or old is None:
+                audit["status"] = "missing_run_or_old_reference"
+            else:
+                try:
+                    new_path, old_path = root / run["output"], local_root / old["output"]
+                    new_hash = helpers.sha256(new_path)
+                    old_hash = helpers.sha256(old_path)
+                    new_image = Image.open(new_path).convert("RGB")
+                    old_image = Image.open(old_path).convert("RGB")
+                    audit.update(status="complete", new_output_sha256=new_hash, old_output_sha256=old_hash,
+                        new_recorded_sha256_matches=new_hash == run.get("output_sha256"), old_recorded_sha256_matches=old_hash == old.get("output_sha256"),
+                        png_sha256_equal=new_hash == old_hash, pixel_identical=bool(np.array_equal(np.asarray(new_image), np.asarray(old_image))))
+                    if not audit["png_sha256_equal"] or not audit["pixel_identical"]:
+                        warnings.append(f"{cid}/{mode}: output differs from old {old_config} repeat0.")
+                except Exception as error:
+                    audit.update(status="invalid_reference", error=f"{type(error).__name__}: {error}")
+            old_output_audits.append(audit)
+    expected_euler_count = len(cases) * 3 * 8
+    actual_euler_count = sum(row.get("actual_euler_update_bitwise_equal") is True for row in step_rows)
+    actual_euler_audit = {"expected_local_step_records": expected_euler_count, "observed_local_step_records": len(step_rows), "bitwise_equal_true_count": actual_euler_count,
+        "all_expected_steps_bitwise_equal": len(step_rows) == expected_euler_count and actual_euler_count == expected_euler_count,
+        "definition": "The producer callback compares actual scheduler post-latent bitwise to (current_sample.float()+delta_sigma_tensor*returned_prediction_BF16).to(BF16). This validates the returned intervention update, separate from raw-local-vs-dense error metrics.",
+        "rounded_error_definition": "rounded_euler_error compares the producer-computed BF16 next states for raw local and dense at the same current sample; it need not equal ideal abs(delta_sigma)*velocity_RMSE because arithmetic and final rounding differ."}
+    if not actual_euler_audit["all_expected_steps_bitwise_equal"]:
+        warnings.append(f"Actual Euler bitwise audit incomplete or failed: {actual_euler_count}/{expected_euler_count} expected true records.")
+    complete_quality = all(row["quality_status"] == "complete" for row in quality_rows) and len(quality_rows) == len(cases) * len(MODES)
+    expected_step_keys = {(case["case_id"], mode, step) for case in cases for mode in ["V", "K", "B"] for step in range(1, 9)}
+    missing_step_keys = sorted(expected_step_keys - set(normalized))
+    summary = {
+        "created_at": datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(),
+        "status": "complete" if complete_quality and not missing_step_keys else "partial",
+        "analysis_paths": {"metadata": str(metadata_path) if metadata_path else None, "local_pilot_root": str(local_root), "source_root": str(source_root), "cases_json": str(cases_path), "regions_json": str(regions_path), "quality_helper": str(helper_path)},
+        "error_tensor_scope": scope,
+        "primary_attribution_mode": "B",
+        "protocol": {"case_count": len(cases), "region": "fixed primary R2", "full_steps_1based_local": [1, 8], "CFG": 1, "denoising_steps": 8,
+            "D": "Native dense trajectory.", "V": "Own trajectory; same-state oracle supplies active output, reused inactive velocity remains, dense active output is written back into the velocity cache.",
+            "K": "Own trajectory; local active output remains, same-state oracle supplies inactive output.", "B": "Own trajectory; original local active output and reused inactive output.",
+            "same_state_reference": "Within each step, compare the recorded local prediction with an extra dense oracle evaluated at that trajectory's current z_t; the oracle does not mutate local KV/velocity caches.",
+            "causal_limit": "Active/inactive squared errors partition output coordinates, not independently isolated causes. Active residual includes stale-context effects and numerical/execution differences. Inactive residual reflects reuse at the current state. V/K/B have different future states and cache histories; differences between final images or pooled SSE are not an additive causal decomposition.",
+            "energy_definition": "For one same-state prediction, active_SSE+inactive_SSE=combined_SSE because masks are disjoint. SSE shares measure error energy; region MSE/relative-RMSE measure average/relative severity and must not be interpreted as energy fractions.",
+            "relative_rmse_and_cosine": "Producer computes MSE=SSE/number of scalar elements (tokens times channels), relative_RMSE=sqrt(SSE/max(reference_SSE,1e-30)), and cosine on the flattened region. Empty regions have count 0 and zero error with undefined cosine. A small reference norm can make relative errors unstable. Inspect reference_squared_sum alongside relative_rmse.",
+            "returned_mixing_identity": "Within the same recorded state, returned V SSE equals raw inactive SSE, returned K SSE equals raw active SSE, and returned B SSE equals raw combined SSE. These coordinate-replacement identities are audited independently of final-trajectory quality. The producer explicitly constructs disjoint active/inactive difference tensors, measures their product sum and factorization residual, and asserts both are exactly zero. This verifies coordinate factorization, not absence of causal interaction across future trajectories.",
+            "euler_definition": "For shared Euler delta_sigma, increment error is delta_sigma*(local-dense); its SSE is delta_sigma^2*velocity_SSE. Summing these one-step energies over steps is a diagnostic, not final accumulated latent/image error.",
+            "final_quality": "One generated trajectory per case/mode; all final images compared to D using common old R0/core bands and allowed-box background. Whole-image LPIPS map is computed before region averaging, with no black masking. D is a computational reference, not ground-truth successful editing.",
+            "runtime": "All oracle, local and native calls are research cost only. No deployment speedup is computed or claimed."},
+        "counts": {"step_records": len(step_records), "unique_step_records": len(normalized), "run_records": len(run_records), "unique_final_runs": len(unique_runs), "expected_final_runs": len(cases) * len(MODES), "quality_rows_complete": sum(row["quality_status"] == "complete" for row in quality_rows)},
+        "missing_expected_local_step_keys": [list(key) for key in missing_step_keys],
+        "duplicate_step_keys": step_duplicates,
+        "duplicate_run_keys": run_duplicates,
+        "failed_step_records": [row for row in step_records if row.get("status") == "failed"],
+        "failed_run_records": [row for row in run_records if row.get("status") == "failed"],
+        "warnings": warnings,
+        "full_step_audits": [row for row in step_rows if row["full_step"]],
+        "actual_euler_update_audit": actual_euler_audit,
+        "old_D_B_output_audits": old_output_audits,
+        "same_state_step_errors": step_rows,
+        "within_trajectory_energy_summaries": aggregates,
+        "final_trajectory_quality": quality_rows,
+        "research_cost": {"runs": research, "sum_e2e_seconds": sum(row["e2e_seconds_research_only"] for row in research if finite(row["e2e_seconds_research_only"])),
+            "local_calls": sum(row["local_calls"] for row in research), "oracle_calls": sum(row["oracle_calls"] for row in research), "native_calls": sum(row["native_calls"] for row in research)},
+        "quality_gate_note": "Reused helper gate LPIPS<=0.02 and extra-background MAE<=1/255 is descriptive retention to D here; it is not semantic quality acceptance, an attribution hypothesis test, or a reason to change the frozen earlier thresholds.",
+    }
+    save_csv(data / "step_attribution.csv", step_rows)
+    save_csv(data / "trajectory_quality.csv", quality_rows)
+    write_json(data / "summary.json", summary)
+    environment = helpers.metric_environment(lpips, args.device, local_root)
+    environment["analysis_script_sha256"] = helpers.sha256(Path(__file__))
+    environment["regions_used_sha256"] = helpers.sha256(regions_path)
+    write_json(data / "metrics_environment.json", environment)
+    lines = ["# 缓存误差归因与输出校正诊断", "", f"生成时间：{summary['created_at']}。状态：**{summary['status']}**。", "",
+        "本轮固定三个公开演示输入、R2 计算区域、8 步与首尾全图刷新。比较 D/V/K/B 四条各自演化的轨迹；V/K/B 每步额外执行同当前状态的 dense oracle。这里的运行时间和前向次数是研究成本，不是部署加速结果。", "",
+        "D 为完整原生轨迹；V 用 oracle 替换 active 输出、保留 inactive 复用输出，并把 dense active 写回 velocity cache；K 保留 local active、以 oracle 替换 inactive；B 保留原局部输出。oracle 不写入 local cache。", "",
+        f"记录误差的张量口径：`{scope}`。", "",
+        "active/inactive/combined 字段均是混合干预前的 raw local 对 dense；returned 字段记录最终混合输出。V 的 returned SSE 应等于 raw inactive SSE，K 应等于 raw active SSE，B 应等于 raw combined SSE；这只是同状态坐标替换恒等式。误差 count 为标量元素数，即 token 数乘通道数。", "",
+        "## 1 同状态输出误差的区域分摊", "",
+        "以下只在每条轨迹自己的同一步状态中分摊输出坐标。active/inactive 的 SSE 可相加；区域 MSE 的大小不能代表总误差占比。active 残差不能直接命名为纯 KV 因果贡献，跨轨迹终图差异也不能相加。主要归因看 B，其余模式用于干预诊断。", "",
+        "| 输入 | 模式 | 局部步骤数 | inactive 速度误差能量份额 | inactive 一步 Euler 能量份额 | 全图步误差严格为零 |", "|---|---|---:|---:|---:|---|"]
+    for row in aggregates:
+        lines.append(f"| {row['case_id']} | {row['mode']} | {row['partial_step_count']} | {display(row['inactive_share_of_summed_partial_velocity_sse'])} | {display(row['inactive_share_of_summed_one_step_euler_sse'])} | {display(row['full_step_exact_zero_all'])} |")
+    lines += ["", "一步 Euler 增量误差按 `Δσ × (local − dense)` 计算。时间步加权 SSE 的和只是局部误差诊断，不能作为最后一张图的累计误差或损失归因。相对 RMSE 在 dense 参考能量很小时可能偏大，需结合参考平方和理解。", "", "## 2 B 轨迹逐步记录", "",
+        "| 输入 | 步骤 | 全图步 | active MSE | inactive MSE | active 相对RMSE | inactive 相对RMSE | inactive SSE份额 | 一步综合RMSE |", "|---|---:|---|---:|---:|---:|---:|---:|---:|"]
+    for row in step_rows:
+        if row["mode"] == "B":
+            values = [row["case_id"], row["step"], row["full_step"], row.get("active_mse"), row.get("inactive_mse"), row.get("active_relative_rmse"), row.get("inactive_relative_rmse"), row["inactive_error_energy_fraction_computed"], row["euler_combined_rmse_recorded"]]
+            lines.append("| " + " | ".join(display(value) for value in values) + " |")
+    lines += ["", "## 3 最终轨迹到 D 的保真度", "", "每模式每输入只有一张终图，没有独立随机种子重复。参考 D 也可能不完全满足编辑指令；低 LPIPS 或背景变化小不等同于编辑成功。评价区域始终使用原先冻结的 R0 与 allowed box，未随 V/K/B 输出改变。", "",
+        "| 输入 | 模式 | LPIPS 到D | 全图MAE到D | 公共band2 MAE到D | 远背景相对D增量 | 状态 |", "|---|---|---:|---:|---:|---:|---|"]
+    for row in quality_rows:
+        values = [row["case_id"], row["mode"], row.get("lpips_mapmean_to_D"), row.get("mae_to_D"), row.get("band2_mae_to_D"), row.get("extra_background_mae_over_D"), row["quality_status"]]
+        lines.append("| " + " | ".join(display(value) for value in values) + " |")
+    lines += ["", "## 4 研究成本与审计", "", f"最终轨迹记录 {len(unique_runs)}/{len(cases) * len(MODES)} 条；local/oracle/native 前向分别为 {summary['research_cost']['local_calls']}/{summary['research_cost']['oracle_calls']}/{summary['research_cost']['native_calls']} 次。报告中不以这些带 oracle 的请求耗时计算部署加速。", "",
+        f"缺失的局部步骤记录：{len(missing_step_keys)}；重复步骤键：{len(step_duplicates)}；重复终图键：{len(run_duplicates)}。失败记录保留在原始日志与 summary.json。", "",
+        f"实际 scheduler 更新的逐位审计：{actual_euler_count}/{expected_euler_count} 个 V/K/B 步骤记录为 True。校验的是混合后返回预测所产生的真实 BF16 post-latent，而非只验证理想浮点 Euler 恒等式。", "",
+        "producer 实际构造 active/inactive 差分张量，检查乘积和 cross-term 为零及差分重构残差为零。该审计验证坐标分解，不证明未来轨迹之间没有因果相互作用。rounded_euler_error 单独记录 BF16 next-state 误差，不要求它等于理想 Δσ 缩放的速度误差。", "",
+        "| 输入 | 新轨迹 / 旧配置 | PNG SHA一致 | RGB逐位一致 | producer旧输出断言 |", "|---|---|---|---|---|"]
+    for audit in old_output_audits:
+        lines.append(f"| {audit['case_id']} | {audit['mode']} / {audit['old_config']} | {display(audit.get('png_sha256_equal'))} | {display(audit.get('pixel_identical'))} | {display(audit.get('producer_old_output_exact'))} |")
+    lines += [""]
+    if warnings:
+        lines += ["审计提示：", ""] + [f"- {message}" for message in warnings] + [""]
+    else:
+        lines += ["未发现全图步零误差或分区平方和审计警告；这不替代缓存状态正确性和源代码复核。", ""]
+    lines += ["## 5 图像与原始数据", ""]
+    for case in cases:
+        cid = case["case_id"]
+        lines += [f"- [{cid} 完整轨迹对照](figures/{cid}_attribution_trajectories.png)", f"- [{cid} 原分辨率核心裁剪](figures/{cid}_attribution_core_crop.png)"]
+    lines += ["", "- [逐步指标 CSV](data/step_attribution.csv)", "- [终图指标 CSV](data/trajectory_quality.csv)", "- [完整摘要 JSON](data/summary.json)", "", "本轮不自动给出因果成立、无损或训练已可行的结论。下一步需结合实际残差分布、V/K/B 的干预结果与视觉检查决定校正器针对什么误差，且保留同预算规则与冻结测试划分。", ""]
+    (root / "01_误差归因数据摘要.md").write_text("\n".join(lines))
+    fig, axes = plt.subplots(1, len(cases), figsize=(5 * len(cases), 3.8), squeeze=False)
+    for ax, case in zip(axes[0], cases):
+        selected = [row for row in step_rows if row["case_id"] == case["case_id"] and row["mode"] == "B"]
+        xs = [row["step"] for row in selected]
+        ax.plot(xs, [row["active_squared_error_sum"] for row in selected], marker="o", label="active SSE")
+        ax.plot(xs, [row["inactive_squared_error_sum"] for row in selected], marker="s", label="inactive SSE")
+        ax.set_title(case["case_id"])
+        ax.set_xlabel("Step in B trajectory")
+        ax.set_ylabel("Same-state velocity squared error sum")
+        ax.legend(fontsize=8)
+    fig.tight_layout()
+    fig.savefig(figures / "B_error_energy_by_step.png", dpi=180)
+    plt.close(fig)
+    print(json.dumps({"status": summary["status"], "counts": summary["counts"], "main_B_energy": [row for row in aggregates if row["mode"] == "B"], "research_cost": summary["research_cost"], "warnings": warnings}, ensure_ascii=False, indent=2, allow_nan=False))
+
+
+if __name__ == "__main__":
+    main()

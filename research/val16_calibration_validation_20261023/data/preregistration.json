@@ -1,0 +1,2707 @@
+{
+  "version": 1,
+  "cases_sha256": "d66d413ffa385e96def3392faed5156eba3fa55827e204080ef3923bea4eae25",
+  "calibration_sha256": "6df60e49ca8d618c5458063a80ce5bf3a5b02b0c28c7e618b04b76733964518f",
+  "evaluation_regions_path": "masks/evaluation_regions.json",
+  "evaluation_regions_sha256": "e2dec94c03999e6077e3e21f64f1731c619ebbed7bfd6c706ed10d422d90d660",
+  "case_ids": [
+    "mb_val_308192",
+    "mb_val_565269",
+    "mb_val_392687",
+    "mb_val_175584",
+    "mb_val_190360",
+    "mb_val_178572",
+    "mb_val_211860",
+    "mb_val_415314",
+    "mb_val_50151",
+    "mb_val_215135",
+    "mb_val_354126",
+    "mb_val_25139",
+    "mb_val_282572",
+    "mb_val_466845",
+    "mb_val_55458",
+    "mb_val_155790"
+  ],
+  "configs": [
+    "F",
+    "R2",
+    "PRIOR",
+    "A",
+    "B"
+  ],
+  "planned_requests": 320,
+  "planned_dit_forwards": 2560,
+  "warmups": 80,
+  "measurements": 240,
+  "repeats": 3,
+  "quality_repeat": 0,
+  "seed": 2026102201,
+  "planned_execution_order": [
+    "F__mb_val_308192__warmup_0",
+    "R2__mb_val_308192__warmup_0",
+    "PRIOR__mb_val_308192__warmup_0",
+    "A__mb_val_308192__warmup_0",
+    "B__mb_val_308192__warmup_0",
+    "F__mb_val_565269__warmup_0",
+    "R2__mb_val_565269__warmup_0",
+    "PRIOR__mb_val_565269__warmup_0",
+    "A__mb_val_565269__warmup_0",
+    "B__mb_val_565269__warmup_0",
+    "F__mb_val_392687__warmup_0",
+    "R2__mb_val_392687__warmup_0",
+    "PRIOR__mb_val_392687__warmup_0",
+    "A__mb_val_392687__warmup_0",
+    "B__mb_val_392687__warmup_0",
+    "F__mb_val_175584__warmup_0",
+    "R2__mb_val_175584__warmup_0",
+    "PRIOR__mb_val_175584__warmup_0",
+    "A__mb_val_175584__warmup_0",
+    "B__mb_val_175584__warmup_0",
+    "F__mb_val_190360__warmup_0",
+    "R2__mb_val_190360__warmup_0",
+    "PRIOR__mb_val_190360__warmup_0",
+    "A__mb_val_190360__warmup_0",
+    "B__mb_val_190360__warmup_0",
+    "F__mb_val_178572__warmup_0",
+    "R2__mb_val_178572__warmup_0",
+    "PRIOR__mb_val_178572__warmup_0",
+    "A__mb_val_178572__warmup_0",
+    "B__mb_val_178572__warmup_0",
+    "F__mb_val_211860__warmup_0",
+    "R2__mb_val_211860__warmup_0",
+    "PRIOR__mb_val_211860__warmup_0",
+    "A__mb_val_211860__warmup_0",
+    "B__mb_val_211860__warmup_0",
+    "F__mb_val_415314__warmup_0",
+    "R2__mb_val_415314__warmup_0",
+    "PRIOR__mb_val_415314__warmup_0",
+    "A__mb_val_415314__warmup_0",
+    "B__mb_val_415314__warmup_0",
+    "F__mb_val_50151__warmup_0",
+    "R2__mb_val_50151__warmup_0",
+    "PRIOR__mb_val_50151__warmup_0",
+    "A__mb_val_50151__warmup_0",
+    "B__mb_val_50151__warmup_0",
+    "F__mb_val_215135__warmup_0",
+    "R2__mb_val_215135__warmup_0",
+    "PRIOR__mb_val_215135__warmup_0",
+    "A__mb_val_215135__warmup_0",
+    "B__mb_val_215135__warmup_0",
+    "F__mb_val_354126__warmup_0",
+    "R2__mb_val_354126__warmup_0",
+    "PRIOR__mb_val_354126__warmup_0",
+    "A__mb_val_354126__warmup_0",
+    "B__mb_val_354126__warmup_0",
+    "F__mb_val_25139__warmup_0",
+    "R2__mb_val_25139__warmup_0",
+    "PRIOR__mb_val_25139__warmup_0",
+    "A__mb_val_25139__warmup_0",
+    "B__mb_val_25139__warmup_0",
+    "F__mb_val_282572__warmup_0",
+    "R2__mb_val_282572__warmup_0",
+    "PRIOR__mb_val_282572__warmup_0",
+    "A__mb_val_282572__warmup_0",
+    "B__mb_val_282572__warmup_0",
+    "F__mb_val_466845__warmup_0",
+    "R2__mb_val_466845__warmup_0",
+    "PRIOR__mb_val_466845__warmup_0",
+    "A__mb_val_466845__warmup_0",
+    "B__mb_val_466845__warmup_0",
+    "F__mb_val_55458__warmup_0",
+    "R2__mb_val_55458__warmup_0",
+    "PRIOR__mb_val_55458__warmup_0",
+    "A__mb_val_55458__warmup_0",
+    "B__mb_val_55458__warmup_0",
+    "F__mb_val_155790__warmup_0",
+    "R2__mb_val_155790__warmup_0",
+    "PRIOR__mb_val_155790__warmup_0",
+    "A__mb_val_155790__warmup_0",
+    "B__mb_val_155790__warmup_0",
+    "F__mb_val_308192__measurement_0",
+    "R2__mb_val_308192__measurement_0",
+    "PRIOR__mb_val_308192__measurement_0",
+    "A__mb_val_308192__measurement_0",
+    "B__mb_val_308192__measurement_0",
+    "R2__mb_val_565269__measurement_0",
+    "PRIOR__mb_val_565269__measurement_0",
+    "A__mb_val_565269__measurement_0",
+    "B__mb_val_565269__measurement_0",
+    "F__mb_val_565269__measurement_0",
+    "PRIOR__mb_val_392687__measurement_0",
+    "A__mb_val_392687__measurement_0",
+    "B__mb_val_392687__measurement_0",
+    "F__mb_val_392687__measurement_0",
+    "R2__mb_val_392687__measurement_0",
+    "A__mb_val_175584__measurement_0",
+    "B__mb_val_175584__measurement_0",
+    "F__mb_val_175584__measurement_0",
+    "R2__mb_val_175584__measurement_0",
+    "PRIOR__mb_val_175584__measurement_0",
+    "B__mb_val_190360__measurement_0",
+    "F__mb_val_190360__measurement_0",
+    "R2__mb_val_190360__measurement_0",
+    "PRIOR__mb_val_190360__measurement_0",
+    "A__mb_val_190360__measurement_0",
+    "F__mb_val_178572__measurement_0",
+    "R2__mb_val_178572__measurement_0",
+    "PRIOR__mb_val_178572__measurement_0",
+    "A__mb_val_178572__measurement_0",
+    "B__mb_val_178572__measurement_0",
+    "R2__mb_val_211860__measurement_0",
+    "PRIOR__mb_val_211860__measurement_0",
+    "A__mb_val_211860__measurement_0",
+    "B__mb_val_211860__measurement_0",
+    "F__mb_val_211860__measurement_0",
+    "PRIOR__mb_val_415314__measurement_0",
+    "A__mb_val_415314__measurement_0",
+    "B__mb_val_415314__measurement_0",
+    "F__mb_val_415314__measurement_0",
+    "R2__mb_val_415314__measurement_0",
+    "A__mb_val_50151__measurement_0",
+    "B__mb_val_50151__measurement_0",
+    "F__mb_val_50151__measurement_0",
+    "R2__mb_val_50151__measurement_0",
+    "PRIOR__mb_val_50151__measurement_0",
+    "B__mb_val_215135__measurement_0",
+    "F__mb_val_215135__measurement_0",
+    "R2__mb_val_215135__measurement_0",
+    "PRIOR__mb_val_215135__measurement_0",
+    "A__mb_val_215135__measurement_0",
+    "F__mb_val_354126__measurement_0",
+    "R2__mb_val_354126__measurement_0",
+    "PRIOR__mb_val_354126__measurement_0",
+    "A__mb_val_354126__measurement_0",
+    "B__mb_val_354126__measurement_0",
+    "R2__mb_val_25139__measurement_0",
+    "PRIOR__mb_val_25139__measurement_0",
+    "A__mb_val_25139__measurement_0",
+    "B__mb_val_25139__measurement_0",
+    "F__mb_val_25139__measurement_0",
+    "PRIOR__mb_val_282572__measurement_0",
+    "A__mb_val_282572__measurement_0",
+    "B__mb_val_282572__measurement_0",
+    "F__mb_val_282572__measurement_0",
+    "R2__mb_val_282572__measurement_0",
+    "A__mb_val_466845__measurement_0",
+    "B__mb_val_466845__measurement_0",
+    "F__mb_val_466845__measurement_0",
+    "R2__mb_val_466845__measurement_0",
+    "PRIOR__mb_val_466845__measurement_0",
+    "B__mb_val_55458__measurement_0",
+    "F__mb_val_55458__measurement_0",
+    "R2__mb_val_55458__measurement_0",
+    "PRIOR__mb_val_55458__measurement_0",
+    "A__mb_val_55458__measurement_0",
+    "F__mb_val_155790__measurement_0",
+    "R2__mb_val_155790__measurement_0",
+    "PRIOR__mb_val_155790__measurement_0",
+    "A__mb_val_155790__measurement_0",
+    "B__mb_val_155790__measurement_0",
+    "R2__mb_val_308192__measurement_1",
+    "PRIOR__mb_val_308192__measurement_1",
+    "A__mb_val_308192__measurement_1",
+    "B__mb_val_308192__measurement_1",
+    "F__mb_val_308192__measurement_1",
+    "PRIOR__mb_val_565269__measurement_1",
+    "A__mb_val_565269__measurement_1",
+    "B__mb_val_565269__measurement_1",
+    "F__mb_val_565269__measurement_1",
+    "R2__mb_val_565269__measurement_1",
+    "A__mb_val_392687__measurement_1",
+    "B__mb_val_392687__measurement_1",
+    "F__mb_val_392687__measurement_1",
+    "R2__mb_val_392687__measurement_1",
+    "PRIOR__mb_val_392687__measurement_1",
+    "B__mb_val_175584__measurement_1",
+    "F__mb_val_175584__measurement_1",
+    "R2__mb_val_175584__measurement_1",
+    "PRIOR__mb_val_175584__measurement_1",
+    "A__mb_val_175584__measurement_1",
+    "F__mb_val_190360__measurement_1",
+    "R2__mb_val_190360__measurement_1",
+    "PRIOR__mb_val_190360__measurement_1",
+    "A__mb_val_190360__measurement_1",
+    "B__mb_val_190360__measurement_1",
+    "R2__mb_val_178572__measurement_1",
+    "PRIOR__mb_val_178572__measurement_1",
+    "A__mb_val_178572__measurement_1",
+    "B__mb_val_178572__measurement_1",
+    "F__mb_val_178572__measurement_1",
+    "PRIOR__mb_val_211860__measurement_1",
+    "A__mb_val_211860__measurement_1",
+    "B__mb_val_211860__measurement_1",
+    "F__mb_val_211860__measurement_1",
+    "R2__mb_val_211860__measurement_1",
+    "A__mb_val_415314__measurement_1",
+    "B__mb_val_415314__measurement_1",
+    "F__mb_val_415314__measurement_1",
+    "R2__mb_val_415314__measurement_1",
+    "PRIOR__mb_val_415314__measurement_1",
+    "B__mb_val_50151__measurement_1",
+    "F__mb_val_50151__measurement_1",
+    "R2__mb_val_50151__measurement_1",
+    "PRIOR__mb_val_50151__measurement_1",
+    "A__mb_val_50151__measurement_1",
+    "F__mb_val_215135__measurement_1",
+    "R2__mb_val_215135__measurement_1",
+    "PRIOR__mb_val_215135__measurement_1",
+    "A__mb_val_215135__measurement_1",
+    "B__mb_val_215135__measurement_1",
+    "R2__mb_val_354126__measurement_1",
+    "PRIOR__mb_val_354126__measurement_1",
+    "A__mb_val_354126__measurement_1",
+    "B__mb_val_354126__measurement_1",
+    "F__mb_val_354126__measurement_1",
+    "PRIOR__mb_val_25139__measurement_1",
+    "A__mb_val_25139__measurement_1",
+    "B__mb_val_25139__measurement_1",
+    "F__mb_val_25139__measurement_1",
+    "R2__mb_val_25139__measurement_1",
+    "A__mb_val_282572__measurement_1",
+    "B__mb_val_282572__measurement_1",
+    "F__mb_val_282572__measurement_1",
+    "R2__mb_val_282572__measurement_1",
+    "PRIOR__mb_val_282572__measurement_1",
+    "B__mb_val_466845__measurement_1",
+    "F__mb_val_466845__measurement_1",
+    "R2__mb_val_466845__measurement_1",
+    "PRIOR__mb_val_466845__measurement_1",
+    "A__mb_val_466845__measurement_1",
+    "F__mb_val_55458__measurement_1",
+    "R2__mb_val_55458__measurement_1",
+    "PRIOR__mb_val_55458__measurement_1",
+    "A__mb_val_55458__measurement_1",
+    "B__mb_val_55458__measurement_1",
+    "R2__mb_val_155790__measurement_1",
+    "PRIOR__mb_val_155790__measurement_1",
+    "A__mb_val_155790__measurement_1",
+    "B__mb_val_155790__measurement_1",
+    "F__mb_val_155790__measurement_1",
+    "PRIOR__mb_val_308192__measurement_2",
+    "A__mb_val_308192__measurement_2",
+    "B__mb_val_308192__measurement_2",
+    "F__mb_val_308192__measurement_2",
+    "R2__mb_val_308192__measurement_2",
+    "A__mb_val_565269__measurement_2",
+    "B__mb_val_565269__measurement_2",
+    "F__mb_val_565269__measurement_2",
+    "R2__mb_val_565269__measurement_2",
+    "PRIOR__mb_val_565269__measurement_2",
+    "B__mb_val_392687__measurement_2",
+    "F__mb_val_392687__measurement_2",
+    "R2__mb_val_392687__measurement_2",
+    "PRIOR__mb_val_392687__measurement_2",
+    "A__mb_val_392687__measurement_2",
+    "F__mb_val_175584__measurement_2",
+    "R2__mb_val_175584__measurement_2",
+    "PRIOR__mb_val_175584__measurement_2",
+    "A__mb_val_175584__measurement_2",
+    "B__mb_val_175584__measurement_2",
+    "R2__mb_val_190360__measurement_2",
+    "PRIOR__mb_val_190360__measurement_2",
+    "A__mb_val_190360__measurement_2",
+    "B__mb_val_190360__measurement_2",
+    "F__mb_val_190360__measurement_2",
+    "PRIOR__mb_val_178572__measurement_2",
+    "A__mb_val_178572__measurement_2",
+    "B__mb_val_178572__measurement_2",
+    "F__mb_val_178572__measurement_2",
+    "R2__mb_val_178572__measurement_2",
+    "A__mb_val_211860__measurement_2",
+    "B__mb_val_211860__measurement_2",
+    "F__mb_val_211860__measurement_2",
+    "R2__mb_val_211860__measurement_2",
+    "PRIOR__mb_val_211860__measurement_2",
+    "B__mb_val_415314__measurement_2",
+    "F__mb_val_415314__measurement_2",
+    "R2__mb_val_415314__measurement_2",
+    "PRIOR__mb_val_415314__measurement_2",
+    "A__mb_val_415314__measurement_2",
+    "F__mb_val_50151__measurement_2",
+    "R2__mb_val_50151__measurement_2",
+    "PRIOR__mb_val_50151__measurement_2",
+    "A__mb_val_50151__measurement_2",
+    "B__mb_val_50151__measurement_2",
+    "R2__mb_val_215135__measurement_2",
+    "PRIOR__mb_val_215135__measurement_2",
+    "A__mb_val_215135__measurement_2",
+    "B__mb_val_215135__measurement_2",
+    "F__mb_val_215135__measurement_2",
+    "PRIOR__mb_val_354126__measurement_2",
+    "A__mb_val_354126__measurement_2",
+    "B__mb_val_354126__measurement_2",
+    "F__mb_val_354126__measurement_2",
+    "R2__mb_val_354126__measurement_2",
+    "A__mb_val_25139__measurement_2",
+    "B__mb_val_25139__measurement_2",
+    "F__mb_val_25139__measurement_2",
+    "R2__mb_val_25139__measurement_2",
+    "PRIOR__mb_val_25139__measurement_2",
+    "B__mb_val_282572__measurement_2",
+    "F__mb_val_282572__measurement_2",
+    "R2__mb_val_282572__measurement_2",
+    "PRIOR__mb_val_282572__measurement_2",
+    "A__mb_val_282572__measurement_2",
+    "F__mb_val_466845__measurement_2",
+    "R2__mb_val_466845__measurement_2",
+    "PRIOR__mb_val_466845__measurement_2",
+    "A__mb_val_466845__measurement_2",
+    "B__mb_val_466845__measurement_2",
+    "R2__mb_val_55458__measurement_2",
+    "PRIOR__mb_val_55458__measurement_2",
+    "A__mb_val_55458__measurement_2",
+    "B__mb_val_55458__measurement_2",
+    "F__mb_val_55458__measurement_2",
+    "PRIOR__mb_val_155790__measurement_2",
+    "A__mb_val_155790__measurement_2",
+    "B__mb_val_155790__measurement_2",
+    "F__mb_val_155790__measurement_2",
+    "R2__mb_val_155790__measurement_2"
+  ],
+  "planned_execution": [
+    {
+      "case_id": "mb_val_308192",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_308192__warmup_0"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_308192__warmup_0"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_308192__warmup_0"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_308192__warmup_0"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_308192__warmup_0"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_565269__warmup_0"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_565269__warmup_0"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_565269__warmup_0"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_565269__warmup_0"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_565269__warmup_0"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_392687__warmup_0"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_392687__warmup_0"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_392687__warmup_0"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_392687__warmup_0"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_392687__warmup_0"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_175584__warmup_0"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_175584__warmup_0"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_175584__warmup_0"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_175584__warmup_0"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_175584__warmup_0"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_190360__warmup_0"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_190360__warmup_0"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_190360__warmup_0"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_190360__warmup_0"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_190360__warmup_0"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_178572__warmup_0"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_178572__warmup_0"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_178572__warmup_0"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_178572__warmup_0"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_178572__warmup_0"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_211860__warmup_0"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_211860__warmup_0"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_211860__warmup_0"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_211860__warmup_0"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_211860__warmup_0"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_415314__warmup_0"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_415314__warmup_0"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_415314__warmup_0"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_415314__warmup_0"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_415314__warmup_0"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_50151__warmup_0"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_50151__warmup_0"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_50151__warmup_0"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_50151__warmup_0"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_50151__warmup_0"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_215135__warmup_0"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_215135__warmup_0"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_215135__warmup_0"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_215135__warmup_0"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_215135__warmup_0"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_354126__warmup_0"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_354126__warmup_0"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_354126__warmup_0"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_354126__warmup_0"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_354126__warmup_0"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_25139__warmup_0"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_25139__warmup_0"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_25139__warmup_0"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_25139__warmup_0"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_25139__warmup_0"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_282572__warmup_0"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_282572__warmup_0"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_282572__warmup_0"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_282572__warmup_0"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_282572__warmup_0"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_466845__warmup_0"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_466845__warmup_0"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_466845__warmup_0"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_466845__warmup_0"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_466845__warmup_0"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_55458__warmup_0"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_55458__warmup_0"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_55458__warmup_0"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_55458__warmup_0"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_55458__warmup_0"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "F",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "F__mb_val_155790__warmup_0"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "R2",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "R2__mb_val_155790__warmup_0"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "PRIOR",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_155790__warmup_0"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "A",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "A__mb_val_155790__warmup_0"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "B",
+      "kind": "warmup",
+      "repeat": 0,
+      "run_id": "B__mb_val_155790__warmup_0"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_308192__measurement_0"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_308192__measurement_0"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_308192__measurement_0"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_308192__measurement_0"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_308192__measurement_0"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_565269__measurement_0"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_565269__measurement_0"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_565269__measurement_0"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_565269__measurement_0"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_565269__measurement_0"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_392687__measurement_0"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_392687__measurement_0"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_392687__measurement_0"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_392687__measurement_0"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_392687__measurement_0"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_175584__measurement_0"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_175584__measurement_0"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_175584__measurement_0"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_175584__measurement_0"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_175584__measurement_0"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_190360__measurement_0"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_190360__measurement_0"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_190360__measurement_0"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_190360__measurement_0"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_190360__measurement_0"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_178572__measurement_0"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_178572__measurement_0"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_178572__measurement_0"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_178572__measurement_0"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_178572__measurement_0"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_211860__measurement_0"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_211860__measurement_0"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_211860__measurement_0"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_211860__measurement_0"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_211860__measurement_0"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_415314__measurement_0"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_415314__measurement_0"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_415314__measurement_0"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_415314__measurement_0"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_415314__measurement_0"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_50151__measurement_0"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_50151__measurement_0"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_50151__measurement_0"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_50151__measurement_0"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_50151__measurement_0"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_215135__measurement_0"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_215135__measurement_0"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_215135__measurement_0"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_215135__measurement_0"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_215135__measurement_0"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_354126__measurement_0"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_354126__measurement_0"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_354126__measurement_0"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_354126__measurement_0"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_354126__measurement_0"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_25139__measurement_0"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_25139__measurement_0"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_25139__measurement_0"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_25139__measurement_0"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_25139__measurement_0"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_282572__measurement_0"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_282572__measurement_0"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_282572__measurement_0"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_282572__measurement_0"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_282572__measurement_0"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_466845__measurement_0"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_466845__measurement_0"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_466845__measurement_0"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_466845__measurement_0"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_466845__measurement_0"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_55458__measurement_0"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_55458__measurement_0"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_55458__measurement_0"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_55458__measurement_0"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_55458__measurement_0"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "F__mb_val_155790__measurement_0"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "R2__mb_val_155790__measurement_0"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "PRIOR__mb_val_155790__measurement_0"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "A__mb_val_155790__measurement_0"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 0,
+      "run_id": "B__mb_val_155790__measurement_0"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_308192__measurement_1"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_308192__measurement_1"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_308192__measurement_1"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_308192__measurement_1"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_308192__measurement_1"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_565269__measurement_1"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_565269__measurement_1"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_565269__measurement_1"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_565269__measurement_1"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_565269__measurement_1"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_392687__measurement_1"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_392687__measurement_1"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_392687__measurement_1"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_392687__measurement_1"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_392687__measurement_1"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_175584__measurement_1"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_175584__measurement_1"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_175584__measurement_1"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_175584__measurement_1"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_175584__measurement_1"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_190360__measurement_1"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_190360__measurement_1"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_190360__measurement_1"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_190360__measurement_1"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_190360__measurement_1"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_178572__measurement_1"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_178572__measurement_1"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_178572__measurement_1"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_178572__measurement_1"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_178572__measurement_1"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_211860__measurement_1"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_211860__measurement_1"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_211860__measurement_1"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_211860__measurement_1"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_211860__measurement_1"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_415314__measurement_1"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_415314__measurement_1"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_415314__measurement_1"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_415314__measurement_1"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_415314__measurement_1"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_50151__measurement_1"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_50151__measurement_1"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_50151__measurement_1"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_50151__measurement_1"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_50151__measurement_1"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_215135__measurement_1"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_215135__measurement_1"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_215135__measurement_1"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_215135__measurement_1"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_215135__measurement_1"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_354126__measurement_1"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_354126__measurement_1"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_354126__measurement_1"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_354126__measurement_1"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_354126__measurement_1"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_25139__measurement_1"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_25139__measurement_1"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_25139__measurement_1"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_25139__measurement_1"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_25139__measurement_1"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_282572__measurement_1"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_282572__measurement_1"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_282572__measurement_1"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_282572__measurement_1"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_282572__measurement_1"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_466845__measurement_1"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_466845__measurement_1"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_466845__measurement_1"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_466845__measurement_1"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_466845__measurement_1"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_55458__measurement_1"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_55458__measurement_1"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_55458__measurement_1"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_55458__measurement_1"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_55458__measurement_1"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "R2__mb_val_155790__measurement_1"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "PRIOR__mb_val_155790__measurement_1"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "A__mb_val_155790__measurement_1"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "B__mb_val_155790__measurement_1"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 1,
+      "run_id": "F__mb_val_155790__measurement_1"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_308192__measurement_2"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_308192__measurement_2"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_308192__measurement_2"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_308192__measurement_2"
+    },
+    {
+      "case_id": "mb_val_308192",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_308192__measurement_2"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_565269__measurement_2"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_565269__measurement_2"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_565269__measurement_2"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_565269__measurement_2"
+    },
+    {
+      "case_id": "mb_val_565269",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_565269__measurement_2"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_392687__measurement_2"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_392687__measurement_2"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_392687__measurement_2"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_392687__measurement_2"
+    },
+    {
+      "case_id": "mb_val_392687",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_392687__measurement_2"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_175584__measurement_2"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_175584__measurement_2"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_175584__measurement_2"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_175584__measurement_2"
+    },
+    {
+      "case_id": "mb_val_175584",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_175584__measurement_2"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_190360__measurement_2"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_190360__measurement_2"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_190360__measurement_2"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_190360__measurement_2"
+    },
+    {
+      "case_id": "mb_val_190360",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_190360__measurement_2"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_178572__measurement_2"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_178572__measurement_2"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_178572__measurement_2"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_178572__measurement_2"
+    },
+    {
+      "case_id": "mb_val_178572",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_178572__measurement_2"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_211860__measurement_2"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_211860__measurement_2"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_211860__measurement_2"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_211860__measurement_2"
+    },
+    {
+      "case_id": "mb_val_211860",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_211860__measurement_2"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_415314__measurement_2"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_415314__measurement_2"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_415314__measurement_2"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_415314__measurement_2"
+    },
+    {
+      "case_id": "mb_val_415314",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_415314__measurement_2"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_50151__measurement_2"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_50151__measurement_2"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_50151__measurement_2"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_50151__measurement_2"
+    },
+    {
+      "case_id": "mb_val_50151",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_50151__measurement_2"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_215135__measurement_2"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_215135__measurement_2"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_215135__measurement_2"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_215135__measurement_2"
+    },
+    {
+      "case_id": "mb_val_215135",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_215135__measurement_2"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_354126__measurement_2"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_354126__measurement_2"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_354126__measurement_2"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_354126__measurement_2"
+    },
+    {
+      "case_id": "mb_val_354126",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_354126__measurement_2"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_25139__measurement_2"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_25139__measurement_2"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_25139__measurement_2"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_25139__measurement_2"
+    },
+    {
+      "case_id": "mb_val_25139",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_25139__measurement_2"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_282572__measurement_2"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_282572__measurement_2"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_282572__measurement_2"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_282572__measurement_2"
+    },
+    {
+      "case_id": "mb_val_282572",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_282572__measurement_2"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_466845__measurement_2"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_466845__measurement_2"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_466845__measurement_2"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_466845__measurement_2"
+    },
+    {
+      "case_id": "mb_val_466845",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_466845__measurement_2"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_55458__measurement_2"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_55458__measurement_2"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_55458__measurement_2"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_55458__measurement_2"
+    },
+    {
+      "case_id": "mb_val_55458",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_55458__measurement_2"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "PRIOR",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "PRIOR__mb_val_155790__measurement_2"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "A",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "A__mb_val_155790__measurement_2"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "B",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "B__mb_val_155790__measurement_2"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "F",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "F__mb_val_155790__measurement_2"
+    },
+    {
+      "case_id": "mb_val_155790",
+      "config": "R2",
+      "kind": "measurement",
+      "repeat": 2,
+      "run_id": "R2__mb_val_155790__measurement_2"
+    }
+  ],
+  "sources": {
+    "mb_val_308192": {
+      "source_sha256": "1fc30a0d88c88967c93d35d73e4814d0f3f481a03d6606695b2d0f5c12f19f0c",
+      "mask_sha256": "d4a582cdaa1db1e44123acedb10a8e5c1f758026d4ead7f4cdd4eb12d3519254",
+      "core_indices_sha256": "72fab0d6952ca9978caffe7e6d42b11ca9d3ff5edc4f805d9166f95951b66d31"
+    },
+    "mb_val_565269": {
+      "source_sha256": "8c0abb03bbdd4f075a8fca39bd8db63843d699dc8a4e6b5821f235428a9ab2c9",
+      "mask_sha256": "730dcc08b58a31540f1e12713f94fc3e967965a4456f21d7ae2e2cedf1137000",
+      "core_indices_sha256": "1f1c9e6435ed7abb9b2e390c73c620912db7c1e8d025fe0ae619057d41c71214"
+    },
+    "mb_val_392687": {
+      "source_sha256": "0d4e3a033013f2b00f0b972b41a3891b2534b031d641aa96cc41a97daf895274",
+      "mask_sha256": "08cd722c1bbe42da6f3017524e0f7ad40c2bea522c0cef75d21556cb9e111517",
+      "core_indices_sha256": "3806d314fee7bfdd6cc80a085d31e739dc1feb4d53afee1f284e5f4cd5478930"
+    },
+    "mb_val_175584": {
+      "source_sha256": "08f2929c59bcd22ef86f5b42ffe92198db59d69e6fef4c1013a5114fb80ca609",
+      "mask_sha256": "b1606b428a90107c88ad18896d70a9a2a6baf472da98c639ff96d6484964ed82",
+      "core_indices_sha256": "77ce6be6c37650c6cba75be39dd05c3b59f9b979a4d47c1e5057945358001267"
+    },
+    "mb_val_190360": {
+      "source_sha256": "4c426c159b837a39181bd2e6de50d9b62c9292565bd9692d61bc3cc61641cff8",
+      "mask_sha256": "04da5548abd91d35f1c0a2dcf4884fe4f702965c7b15c9eb802e2d4974a24ba2",
+      "core_indices_sha256": "19cfad71f377470eb56df8046ff95bc3f5cce39bee56117a088457c842fca580"
+    },
+    "mb_val_178572": {
+      "source_sha256": "5780caad2c24018fa130239d76be4a7014cc82d25b6d7983b1d9292e5ff54df4",
+      "mask_sha256": "029c8c5626a16a8ee2a59071cd2fd30ef97ec6d06e79e5fd9084d79249900a94",
+      "core_indices_sha256": "fc867cee1617609cd96a2bc9eb5af8e97cfdb645c0b91d1f4c191c3bae7b8b5c"
+    },
+    "mb_val_211860": {
+      "source_sha256": "1ab36958751f5f8674679892ff9be9c18537cd93fe5d0b76bff095b0f6be02dc",
+      "mask_sha256": "7c6a06b40669fe7fd6f6ea9a5d54f3f79317e5b1c6de1ce4f2efce17dc9e7664",
+      "core_indices_sha256": "e4f590921b381973b15338c0e91e6a49555bcf03d2ac7076c7b04709e9b8142b"
+    },
+    "mb_val_415314": {
+      "source_sha256": "6d5eb0fc8a4bcd28da352883dd66ad94f478818c310d3a5975d35fef7363bc23",
+      "mask_sha256": "8fbc609ee3ef81cf3803de4b87c88d33e18c031c29c6bb8a3c750ee64d4c76ce",
+      "core_indices_sha256": "9acb0aee8d22bb6c81e191d90c7e31f23da197e03e445c149557528ef0cb37e0"
+    },
+    "mb_val_50151": {
+      "source_sha256": "acda867285f2ae3ff14b97f7a49b628e530bbf7a159d532f4fdebe78c5bd1e5f",
+      "mask_sha256": "39bf6949911fc35785ba8d53e08d7be4113ed6e8112a58ba8339c60700a33485",
+      "core_indices_sha256": "cd5a5d9d35446095f1131d3fd7c86f7725e5d9739dd55b0dd19d9ba10e7deba0"
+    },
+    "mb_val_215135": {
+      "source_sha256": "017a3f83ff7327d77eb6b7a12640398e46e5017b934486ed0e92706f43fc3fd6",
+      "mask_sha256": "120c2c8ede0ab29264b0bbdffebd35bd97465d7a0fe09b0cd40f9705cd225206",
+      "core_indices_sha256": "a2ac66f856765f00ab33bc1efb0f15aea22f217b1ca3cf07a302788cd9ed74db"
+    },
+    "mb_val_354126": {
+      "source_sha256": "307e200928271e15eb49b52e0a587e1d98e37c19ea35632215b8386d30271e7d",
+      "mask_sha256": "e015cd482cf5d8c422a7dd10439019923677e20302c13d7c342e7dd8a3f97821",
+      "core_indices_sha256": "81bf8106bacd18387a16ec5f44665c1adb008e4604c938899c3c7666c4b39c5b"
+    },
+    "mb_val_25139": {
+      "source_sha256": "3b41700a5e443a5631000c209ca047897222ff8c8aee75a99c67e5a273bba26b",
+      "mask_sha256": "dbb3ff295dc0655d2b0f2d7d934c72794b5c0e9fe559c1452b6b61d7914be2fe",
+      "core_indices_sha256": "8988c263176b15db58b97dbd98876fb4e3ea14a6e74f6d7aa2c54a172bb4227f"
+    },
+    "mb_val_282572": {
+      "source_sha256": "650959a5ee80432aa58e98ef370240c0d37d3d9714e3ca9c1543a38484f7d362",
+      "mask_sha256": "b8863b63303a6f45d226d3ba20157acbb6ed34787dc32910ca01ca651a450156",
+      "core_indices_sha256": "29b1425e231730ec91e8f1aac21165cff084ae8cdf947f40d04951cbfee99557"
+    },
+    "mb_val_466845": {
+      "source_sha256": "d4c74a4960c1c95df0fd9124aebee279deba617dc8a91198a95b75e0daa792e8",
+      "mask_sha256": "a6d714a8aa69813ebc1f1c3d08d87e2c6d5ba2eba56d7c5499188e2fcb2be12d",
+      "core_indices_sha256": "50e474ae77b24860d3df55efb3424be3a912ec94b5edf0e762d796e996d8ce15"
+    },
+    "mb_val_55458": {
+      "source_sha256": "c0ce180718aec3a1aad468ff728bf389981238072fb7993f09aee76b8b04d014",
+      "mask_sha256": "ecb96729648645cc8a5fff48179dbe381352365b6a7183b606155eaff779e624",
+      "core_indices_sha256": "7dc8fc89e67e06d6dff277a51a45272ed8583e8701e7d61412824d5abb57300e"
+    },
+    "mb_val_155790": {
+      "source_sha256": "18cec3807c60cb22f65ce7414101bd53c0aed9bd18d0c84e8d2de709cf1b3613",
+      "mask_sha256": "c609934ce0873e8cf5ca0a125f3de0fa0106b16d0bd89ce31bb1dc8f5de7dc3d",
+      "core_indices_sha256": "68da817e647334ad690f59bd3ed72a6067d049d31085a26c0cb87898a01b3322"
+    }
+  },
+  "model_identity": "Qwen-Image-Edit@ac7f9318f633fc4b5778c59367c8128225f1e3de|Lightning8@36ee4ff860856559b9c581eaa69414900488f3de8be2f2448586daec77e201b9|bf16-fused-unloaded|73faca368c0da77645ea58836aa8780d2d8c5353",
+  "scripts": {
+    "/workspace/diffusers-fix/research/fewshot_calibration_start_20261023/scripts/local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "/workspace/diffusers-fix/research/fewshot_calibration_start_20261023/scripts/value_time_correction.py": "fb1203fa955e71392c2e73ea2c47d0d9ed9e7d358f01e605a31e54097255ac2e",
+    "/workspace/diffusers-fix/research/fewshot_calibration_start_20261023/scripts/value_channel_correction.py": "f3e088226bea615a1f703806226ebf4b8f121d7853d79aeadab7cb29d82a0151",
+    "/workspace/diffusers-fix/research/fewshot_calibration_start_20261023/scripts/value_fitted_correction.py": "fec2d29eee4be376c6977d0b08042f65a0991df1c706815b9c56694732a2986e",
+    "/workspace/diffusers-fix/research/fewshot_calibration_start_20261023/scripts/moments.py": "64f3d0227e33da55e3b92835abe4c643edaeb0b3a0a4dcfa81d8cd4f29071ae6",
+    "/workspace/diffusers-fix/research/val16_calibration_validation_20261023/scripts/run_val16.py": "4713369404a49458ea13d195a33384c53135075d761443cc768da4c3361e34c5"
+  },
+  "quality_gate": {
+    "lpips_to_F_max": 0.02,
+    "extra_far_background_over_F_max": 0.00392156862745098
+  },
+  "latency_target_saving": 0.1,
+  "evaluation_region": "R0 is annotation-positive bbox rounded outward to target 16px token grid; band r=dilate(R0,r)&dilate(~R0,r), r=1/2/4; R2=R0 bbox plus clipped 2-token halo; far background=complement of R2; all configs share these regions",
+  "fitting_on_val": false,
+  "target_column_used": false,
+  "test_used": false,
+  "rl": false,
+  "new_gradient_steps": 0,
+  "timing_scope": "Memory source image and supplied ROI to PIL output; includes executor begin/index copies, encoding, all 8 DiT, correction reads/checks, Euler steps, decode and request cache cleanup. Excludes model load, source file I/O, source/ROI annotation, static coefficient preparation and table switching, initial latent creation, PNG and metrics; no subtraction of runtime correction cost",
+  "region_scope": "Annotation-assisted executor/calibration validation; not automatic semantic ROI detection or its end-to-end latency"
+}

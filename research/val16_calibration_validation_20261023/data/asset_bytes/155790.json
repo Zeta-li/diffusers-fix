@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "155790",
+    "original_img_id": "155790",
+    "turn_index": 1,
+    "instruction": "it should be a tennis ball on the glove.",
+    "official_split": "dev",
+    "shard_path": "data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+    "row_group": 3,
+    "row_in_group": 26,
+    "row_in_shard": 122,
+    "selection_rank_sha256": "0ed7d98f52224fbce2c9e5f477362a04a98212cdcbdc2ab6974e665a13067975"
+  },
+  "image": "inputs/val16/155790/source.original",
+  "original_mask": "inputs/val16/155790/mask.original",
+  "source_sha256": "18cec3807c60cb22f65ce7414101bd53c0aed9bd18d0c84e8d2de709cf1b3613",
+  "mask_sha256": "c609934ce0873e8cf5ca0a125f3de0fa0106b16d0bd89ce31bb1dc8f5de7dc3d",
+  "source_bytes": 350099,
+  "mask_bytes": 1042167,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+  "source_url_sha256": "5fab15f436714d22fa54a2311e641ac757c913af1bf128fae5c2a44580efe465"
+}

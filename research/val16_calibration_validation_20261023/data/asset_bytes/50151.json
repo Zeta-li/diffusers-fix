@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "50151",
+    "original_img_id": "50151",
+    "turn_index": 1,
+    "instruction": "Can we put a hand on the door?",
+    "official_split": "dev",
+    "shard_path": "data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+    "row_group": 3,
+    "row_in_group": 19,
+    "row_in_shard": 115,
+    "selection_rank_sha256": "0a2fd9770c4f11a4ade660368346f9f916ebdbf09f70202ef62ef1ad049aa843"
+  },
+  "image": "inputs/val16/50151/source.original",
+  "original_mask": "inputs/val16/50151/mask.original",
+  "source_sha256": "acda867285f2ae3ff14b97f7a49b628e530bbf7a159d532f4fdebe78c5bd1e5f",
+  "mask_sha256": "39bf6949911fc35785ba8d53e08d7be4113ed6e8112a58ba8339c60700a33485",
+  "source_bytes": 494426,
+  "mask_bytes": 1360772,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00001-of-00004-8ef3de1dc8cb8a6a.parquet",
+  "source_url_sha256": "5fab15f436714d22fa54a2311e641ac757c913af1bf128fae5c2a44580efe465"
+}

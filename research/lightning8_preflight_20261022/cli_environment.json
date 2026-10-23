@@ -1,0 +1,20 @@
+
+Copy-and-paste the text below in your GitHub issue and FILL OUT the two last points.
+
+- 🤗 Diffusers version: 0.42.0.dev0
+- Platform: Linux-5.10.134-19.103.al8.x86_64-x86_64-with-glibc2.39
+- Running on Google Colab?: No
+- Python version: 3.12.3
+- PyTorch version (GPU?): 2.9.1+cu129 (True)
+- Huggingface_hub version: 1.32.0
+- Transformers version: 5.3.0
+- Accelerate version: 1.13.0
+- PEFT version: 0.21.2
+- gguf version: 0.18.0
+- torchao version: 0.9.0
+- Safetensors version: 0.8.0
+- xFormers version: not installed
+- Accelerator: NVIDIA L20Y, 81559 MiB
+- Using GPU in script?: <fill in>
+- Using distributed or parallel set-up in script?: <fill in>
+

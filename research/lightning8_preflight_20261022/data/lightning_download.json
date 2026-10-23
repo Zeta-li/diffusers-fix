@@ -1,0 +1,10 @@
+{
+  "repo": "lightx2v/Qwen-Image-Lightning",
+  "revision": "d468c534b360e0754c6bf9e38ed49e1e09cd2e2a",
+  "filename": "Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors",
+  "bytes": 849608296,
+  "sha256": "36ee4ff860856559b9c581eaa69414900488f3de8be2f2448586daec77e201b9",
+  "phase": "complete",
+  "path": "/workspace/model-weights/Qwen-Image-Lightning/Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors",
+  "verified_at": "2026-10-22T19:35:15.143446+08:00"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "COMPLETE_VAL16_REVISE",
+  "time": "2026-10-23T17:10:37.044962+08:00",
+  "sources": 16,
+  "configs": [
+    "F",
+    "R2",
+    "PRIOR",
+    "A",
+    "B"
+  ],
+  "successful_requests": 320,
+  "real_dit_forwards": 2560,
+  "failed_inference_requests": 0,
+  "extra_oracle_calls": 0,
+  "quality_outputs": 80,
+  "fitting_on_val": false,
+  "new_gradient_steps": 0,
+  "rl_started": false,
+  "test_media_read": false,
+  "test_generated": false,
+  "frozen_calibration_sha256": "6df60e49ca8d618c5458063a80ce5bf3a5b02b0c28c7e618b04b76733964518f",
+  "independent_audit": "PASS",
+  "offline_statistics_audit": "PASS",
+  "quality_decision": "Revise; no stable high-fidelity joint Go",
+  "future_C1_C2_C3": "planned, not executed",
+  "gpu_final_observed": "0 MiB, 0% after analysis",
+  "report": "02_独立验证实测报告.md"
+}

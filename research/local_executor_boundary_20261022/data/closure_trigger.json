@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-22T21:33:52.516382+08:00",
+  "phase": "posthoc_exploration_after_primary_and_safe",
+  "trigger": "Primary remove_hair output has a visible brightness patch aligned with computation ROI; test whole-object support boundary rather than another small contextual dilation.",
+  "case": "remove_hair",
+  "configs": [
+    "F_closure",
+    "R4",
+    "R5"
+  ],
+  "full_steps_local_1based": [
+    1,
+    8
+  ],
+  "warmups": 1,
+  "timing_repeats": 3,
+  "planned_extra_requests": 12,
+  "planned_extra_dit_calls": 96,
+  "ledger": "data/closure_runs.jsonl",
+  "closure_probe_sha256": "158453be1320d10729e2fa23534b0584afb61552465e129742bf8fe08259d852",
+  "primary_regions_not_modified": true,
+  "test_set_used": false
+}

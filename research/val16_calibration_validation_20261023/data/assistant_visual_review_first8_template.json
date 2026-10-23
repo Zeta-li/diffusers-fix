@@ -1,0 +1,1425 @@
+{
+  "schema_version": 1,
+  "status": "PENDING_MEASUREMENT_REPEAT0",
+  "reviewer_type": "assistant visual review; nonblind; not a human subject or blinded evaluation",
+  "scope": "first 8 cases in frozen Val16 order, successful measurement repeat 0 only",
+  "warmup_outputs_excluded": true,
+  "target_ground_truth_not_viewed": true,
+  "generated_outputs_viewed_for_this_template": false,
+  "formal_human_accuracy_claim_permitted": false,
+  "independent_sample_warning": "8 source cases x 5 configurations = 40 qualitative output records, not 40 independent samples",
+  "panel_layout": [
+    "INPUT",
+    "F",
+    "R2",
+    "PRIOR",
+    "A",
+    "B"
+  ],
+  "cases_manifest_sha256": "d66d413ffa385e96def3392faed5156eba3fa55827e204080ef3923bea4eae25",
+  "allowed_labels": {
+    "instruction_complete": [
+      "pass",
+      "partial",
+      "fail",
+      "uncertain"
+    ],
+    "candidate_new_degradation_vs_F": [
+      "yes",
+      "no",
+      "uncertain",
+      "not_applicable"
+    ],
+    "spatial_issue_observed": [
+      "observed",
+      "none_observed",
+      "uncertain"
+    ],
+    "spatial_issue_new_vs_F": [
+      "yes",
+      "no",
+      "uncertain",
+      "not_applicable"
+    ]
+  },
+  "evidence_rules": [
+    "Judge F instruction completeness first; then grade each candidate independently.",
+    "Instruction completeness is absolute adherence to the prompt; a candidate can match a failing F and still fail.",
+    "Compare candidate new degradation against the same-case F measurement repeat0.",
+    "Use full panel for outside-region and global lighting; use native crop for object identity, borders and blending.",
+    "A change outside the ROI is not automatically an error; describe whether it is plausibly required and use uncertain when attribution is unclear.",
+    "Use a short observable evidence sentence, and uncertain for details not resolvable from supplied pixels.",
+    "Verify source_runs snapshot, output PNG digests, receipt digests and panel digests before attaching judgments.",
+    "Do not infer a formal human accuracy rate, blinded preference or statistical significance from this review."
+  ],
+  "source_runs_snapshot": {
+    "path": null,
+    "sha256": null
+  },
+  "receipts": {
+    "path": null,
+    "sha256": null
+  },
+  "cases": [
+    {
+      "case_id": "mb_val_308192",
+      "img_id": "308192",
+      "prompt": "put a tennis racket next to the bat",
+      "frozen_selection_rank_sha256": "033a4c07998049314cca57c712b2c372d7a05d5437f89d64a046959257444555",
+      "source_image": {
+        "path": "inputs/val16/308192/source.original",
+        "sha256": "1fc30a0d88c88967c93d35d73e4814d0f3f481a03d6606695b2d0f5c12f19f0c"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/308192/mask.target.binary.png",
+        "sha256": "083649df6fcad8284cbae20827b1312c3ba0e1720f0f1407caca92e017f6a5ac"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_308192_full.png",
+        "sha256": null
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_308192_crop.png",
+        "sha256": null
+      },
+      "review_status": "PENDING",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "R2",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "PRIOR",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "A",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "B",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_565269",
+      "img_id": "565269",
+      "prompt": "add a bus station",
+      "frozen_selection_rank_sha256": "0399fc9bd3c638e406f4635e077b263eed539a8875a131721498769287ceb76c",
+      "source_image": {
+        "path": "inputs/val16/565269/source.original",
+        "sha256": "8c0abb03bbdd4f075a8fca39bd8db63843d699dc8a4e6b5821f235428a9ab2c9"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/565269/mask.target.binary.png",
+        "sha256": "c7a1414e9b8f9279caae3e92bbef7114db022aee0c7bf86fe3181c25f7fdf533"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_565269_full.png",
+        "sha256": null
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_565269_crop.png",
+        "sha256": null
+      },
+      "review_status": "PENDING",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "R2",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "PRIOR",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "A",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "B",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_392687",
+      "img_id": "392687",
+      "prompt": "change the scooter into a skateboard",
+      "frozen_selection_rank_sha256": "040ab0a4d5671b057fcf6e00f7f8498ae45b7e0c354efb3170367d36257f77c8",
+      "source_image": {
+        "path": "inputs/val16/392687/source.original",
+        "sha256": "0d4e3a033013f2b00f0b972b41a3891b2534b031d641aa96cc41a97daf895274"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/392687/mask.target.binary.png",
+        "sha256": "5b41b0a99fcf666428ec102a59c0503b79c3969c9b268cb6f3f3239dd488212f"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_392687_full.png",
+        "sha256": null
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_392687_crop.png",
+        "sha256": null
+      },
+      "review_status": "PENDING",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "R2",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "PRIOR",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "A",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "B",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_175584",
+      "img_id": "175584",
+      "prompt": "Put a pond next to the cows.",
+      "frozen_selection_rank_sha256": "04d14a52a9523bb6204f7862b039fe067909cc18de4f6b019078cf7050d05827",
+      "source_image": {
+        "path": "inputs/val16/175584/source.original",
+        "sha256": "08f2929c59bcd22ef86f5b42ffe92198db59d69e6fef4c1013a5114fb80ca609"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/175584/mask.target.binary.png",
+        "sha256": "fca762ad4647df78dbd8c347dcb2a11b6b5a4180eb2a852e0e04dc87e95cba77"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_175584_full.png",
+        "sha256": null
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_175584_crop.png",
+        "sha256": null
+      },
+      "review_status": "PENDING",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "R2",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "PRIOR",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "A",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "B",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_190360",
+      "img_id": "190360",
+      "prompt": "let the cat have its eyes closed",
+      "frozen_selection_rank_sha256": "06173679b9f6f8b6e069c1477ce5218b09ae6261ac09f6bccd461dc95b542d27",
+      "source_image": {
+        "path": "inputs/val16/190360/source.original",
+        "sha256": "4c426c159b837a39181bd2e6de50d9b62c9292565bd9692d61bc3cc61641cff8"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/190360/mask.target.binary.png",
+        "sha256": "e8ca3464978effac77ef4a2bc42954e01f02c34d0cca1289ffbcd20da19101fa"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_190360_full.png",
+        "sha256": null
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_190360_crop.png",
+        "sha256": null
+      },
+      "review_status": "PENDING",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "R2",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "PRIOR",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "A",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "B",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_178572",
+      "img_id": "178572",
+      "prompt": "Let the player wear a red hat.",
+      "frozen_selection_rank_sha256": "062f2ae7622dde481adbc6c216dd73efdaa9d20fe022713247b0c53cd7d3eb33",
+      "source_image": {
+        "path": "inputs/val16/178572/source.original",
+        "sha256": "5780caad2c24018fa130239d76be4a7014cc82d25b6d7983b1d9292e5ff54df4"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/178572/mask.target.binary.png",
+        "sha256": "e55076dccface07c6bdab20f0ffd940b99e852d13a28281982396c6f430b035f"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_178572_full.png",
+        "sha256": null
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_178572_crop.png",
+        "sha256": null
+      },
+      "review_status": "PENDING",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "R2",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "PRIOR",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "A",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "B",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_211860",
+      "img_id": "211860",
+      "prompt": "Have the woman be wearing a blue tank top",
+      "frozen_selection_rank_sha256": "07158b6f4d16f5fe867fbb837542174953393ccf4b9be72f5b4032618fabb212",
+      "source_image": {
+        "path": "inputs/val16/211860/source.original",
+        "sha256": "1ab36958751f5f8674679892ff9be9c18537cd93fe5d0b76bff095b0f6be02dc"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/211860/mask.target.binary.png",
+        "sha256": "493ad8e765a00f89f72d6d0e89c92541099a26cb5d9609ce67efd2672f58b921"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_211860_full.png",
+        "sha256": null
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_211860_crop.png",
+        "sha256": null
+      },
+      "review_status": "PENDING",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "R2",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "PRIOR",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "A",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "B",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        }
+      ]
+    },
+    {
+      "case_id": "mb_val_415314",
+      "img_id": "415314",
+      "prompt": "replace the baseball bat for a laser sword",
+      "frozen_selection_rank_sha256": "08a74989ff74c6d48b190c63487dc1ff85d9c3d0f0f488370f4672534d615b82",
+      "source_image": {
+        "path": "inputs/val16/415314/source.original",
+        "sha256": "6d5eb0fc8a4bcd28da352883dd66ad94f478818c310d3a5975d35fef7363bc23"
+      },
+      "binary_mask": {
+        "path": "inputs/val16/415314/mask.target.binary.png",
+        "sha256": "2b909fdc94a0b5c900f8422384e588b9400edcf7b76c1a8907286520b8fa57a4"
+      },
+      "full_panel": {
+        "path": "figures/review_during_run/mb_val_415314_full.png",
+        "sha256": null
+      },
+      "crop_panel": {
+        "path": "figures/review_during_run/mb_val_415314_crop.png",
+        "sha256": null
+      },
+      "review_status": "PENDING",
+      "outputs": [
+        {
+          "config": "F",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": "not_applicable",
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": "not_applicable",
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "R2",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "PRIOR",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "A",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        },
+        {
+          "config": "B",
+          "run_id": null,
+          "output_path": null,
+          "output_sha256": null,
+          "measurement_repeat": 0,
+          "instruction_complete": null,
+          "instruction_evidence": null,
+          "candidate_new_degradation_vs_F": null,
+          "candidate_new_degradation_evidence": null,
+          "spatial_checks": {
+            "edge_or_blending": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "lighting_or_color_consistency": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            },
+            "outside_region_preservation": {
+              "issue_observed": null,
+              "new_vs_F": null,
+              "evidence": null
+            }
+          },
+          "limitations": null
+        }
+      ]
+    }
+  ]
+}

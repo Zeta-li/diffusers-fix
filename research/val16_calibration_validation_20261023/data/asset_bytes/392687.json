@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "392687",
+    "original_img_id": "392687",
+    "turn_index": 1,
+    "instruction": "change the scooter into a skateboard",
+    "official_split": "dev",
+    "shard_path": "data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+    "row_group": 3,
+    "row_in_group": 1,
+    "row_in_shard": 97,
+    "selection_rank_sha256": "040ab0a4d5671b057fcf6e00f7f8498ae45b7e0c354efb3170367d36257f77c8"
+  },
+  "image": "inputs/val16/392687/source.original",
+  "original_mask": "inputs/val16/392687/mask.original",
+  "source_sha256": "0d4e3a033013f2b00f0b972b41a3891b2534b031d641aa96cc41a97daf895274",
+  "mask_sha256": "08cd722c1bbe42da6f3017524e0f7ad40c2bea522c0cef75d21556cb9e111517",
+  "source_bytes": 364706,
+  "mask_bytes": 1320825,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+  "source_url_sha256": "cf2671aad08c1f2b2ee93832b2069f6524205905bacaa412307e949e63f924b9"
+}

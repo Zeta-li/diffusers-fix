@@ -1,0 +1,56 @@
+{
+  "seed": 2026102201,
+  "configs": [
+    {
+      "id": "A_base50_cfg4",
+      "steps": 50,
+      "cfg": 4.0,
+      "scheduler": "base",
+      "lora": "none"
+    },
+    {
+      "id": "B_base8_cfg4_shift3",
+      "steps": 8,
+      "cfg": 4.0,
+      "scheduler": "shift3",
+      "lora": "none"
+    },
+    {
+      "id": "C_base8_cfg1_shift3",
+      "steps": 8,
+      "cfg": 1.0,
+      "scheduler": "shift3",
+      "lora": "none"
+    },
+    {
+      "id": "D_lightning8_cfg1",
+      "steps": 8,
+      "cfg": 1.0,
+      "scheduler": "shift3",
+      "lora": "unfused"
+    },
+    {
+      "id": "E_lightning8_fused",
+      "steps": 8,
+      "cfg": 1.0,
+      "scheduler": "shift3",
+      "lora": "fused"
+    }
+  ],
+  "shift3": {
+    "base_image_seq_len": 256,
+    "base_shift": 1.0986122886681098,
+    "invert_sigmas": false,
+    "max_image_seq_len": 8192,
+    "max_shift": 1.0986122886681098,
+    "num_train_timesteps": 1000,
+    "shift": 1.0,
+    "shift_terminal": null,
+    "stochastic_sampling": false,
+    "time_shift_type": "exponential",
+    "use_beta_sigmas": false,
+    "use_dynamic_shifting": true,
+    "use_exponential_sigmas": false,
+    "use_karras_sigmas": false
+  }
+}

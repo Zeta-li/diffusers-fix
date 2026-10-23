@@ -1,0 +1,30 @@
+{
+  "locator": {
+    "img_id": "175584",
+    "original_img_id": "175584",
+    "turn_index": 1,
+    "instruction": "Put a pond next to the cows.",
+    "official_split": "dev",
+    "shard_path": "data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+    "row_group": 3,
+    "row_in_group": 11,
+    "row_in_shard": 107,
+    "selection_rank_sha256": "04d14a52a9523bb6204f7862b039fe067909cc18de4f6b019078cf7050d05827"
+  },
+  "image": "inputs/val16/175584/source.original",
+  "original_mask": "inputs/val16/175584/mask.original",
+  "source_sha256": "08f2929c59bcd22ef86f5b42ffe92198db59d69e6fef4c1013a5114fb80ca609",
+  "mask_sha256": "b1606b428a90107c88ad18896d70a9a2a6baf472da98c639ff96d6484964ed82",
+  "source_bytes": 356726,
+  "mask_bytes": 743991,
+  "target_column_read": false,
+  "columns_read": [
+    "img_id",
+    "turn_index",
+    "instruction",
+    "source_img",
+    "mask_img"
+  ],
+  "source_url": "https://huggingface.co/datasets/osunlp/MagicBrush/resolve/6c254560879df7851233ea0fd2ae2a62764d0ef2/data/dev-00003-of-00004-384b81a61c93b7e3.parquet",
+  "source_url_sha256": "cf2671aad08c1f2b2ee93832b2069f6524205905bacaa412307e949e63f924b9"
+}

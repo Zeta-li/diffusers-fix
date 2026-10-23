@@ -1,0 +1,944 @@
+{
+  "attempt": "20261023T161546",
+  "git_commit": "73faca368c0da77645ea58836aa8780d2d8c5353",
+  "gpu_driver_name": "NVIDIA L20Y",
+  "physical_gpu_user_confirmed": "H800",
+  "capability": [
+    9,
+    0
+  ],
+  "total_memory_bytes": 85017624576,
+  "packages": {
+    "torch": "2.9.1+cu129",
+    "diffusers": "0.37.0",
+    "transformers": "5.3.0",
+    "peft": "0.21.2",
+    "numpy": "2.5.2"
+  },
+  "model_identity": "Qwen-Image-Edit@ac7f9318f633fc4b5778c59367c8128225f1e3de|Lightning8@36ee4ff860856559b9c581eaa69414900488f3de8be2f2448586daec77e201b9|bf16-fused-unloaded|73faca368c0da77645ea58836aa8780d2d8c5353",
+  "calibration_sha256": "6df60e49ca8d618c5458063a80ce5bf3a5b02b0c28c7e618b04b76733964518f",
+  "preregistration_sha256": "3fd384bde721e3446e2620eaf6d487a7beb44d0541430fb6f6d2b0e9ec510f85",
+  "model_dtype": "bfloat16",
+  "cfg": 1,
+  "steps": 8,
+  "backend": "native SDPA",
+  "vae_tiling": true,
+  "expected_model_timesteps": [
+    1.0,
+    0.95703125,
+    0.8984375,
+    0.83203125,
+    0.75390625,
+    0.64453125,
+    0.5,
+    0.30078125
+  ],
+  "expected_raw_timesteps": [
+    1000.0,
+    954.5454711914062,
+    900.0,
+    833.3333740234375,
+    750.0,
+    642.8570556640625,
+    500.0,
+    300.0
+  ],
+  "timing_scope": "Memory source image and supplied ROI to PIL output; includes executor begin/index copies, encoding, all 8 DiT, correction reads/checks, Euler steps, decode and request cache cleanup. Excludes model load, source file I/O, source/ROI annotation, static coefficient preparation and table switching, initial latent creation, PNG and metrics; no subtraction of runtime correction cost",
+  "all_correction_tables_resident_for_all_configs": true,
+  "new_teacher_or_shadow_forwards": 0,
+  "val_refit": false,
+  "lora_sha256_verified": true,
+  "base_weight_provenance": "Same frozen local snapshot as Train8; this run does not rehash all base weight shards",
+  "model_load_fuse_seconds": 17.38517771754414,
+  "tables": {
+    "PRIOR": {
+      "status": "prepared",
+      "prepare_seconds": 0.19311397802084684,
+      "table_bytes": 100285440,
+      "table_dtype": "torch.float32",
+      "alpha_shape": [
+        60,
+        8,
+        8,
+        24,
+        128
+      ],
+      "delta_shape": [
+        60,
+        8,
+        8,
+        24,
+        128
+      ],
+      "projected_shift_shape": [
+        60,
+        8,
+        24,
+        128
+      ],
+      "rho_shape": [
+        60,
+        8,
+        8
+      ],
+      "model_device": "cuda:0",
+      "model_dtype": "torch.bfloat16",
+      "raw_scheduler_timesteps": [
+        1000.0,
+        954.5454711914062,
+        900.0,
+        833.3333740234375,
+        750.0,
+        642.8570556640625,
+        500.0,
+        300.0
+      ],
+      "model_timesteps": [
+        1.0,
+        0.95703125,
+        0.8984375,
+        0.83203125,
+        0.75390625,
+        0.64453125,
+        0.5,
+        0.30078125
+      ],
+      "timestep_conversion": "Cast scheduler timestep to model dtype, then divide by 1000, matching pipeline input",
+      "preparation_batch_size": 1,
+      "preparation_timestep_calls": 8,
+      "shift_projection_includes_linear_bias": true,
+      "feature_mean_projection_has_bias": false,
+      "alpha_clipped": false,
+      "diagonal_alpha": 1.0,
+      "diagonal_delta": 0.0,
+      "ridge_relative": 1e-06,
+      "ridge_floor": 1e-12,
+      "hyperparameter_search_performed": false,
+      "ridge_definition": "lambda_s=1e-6*mean_output_channel(D_s)+1e-12; a=(N+lambda_s)/(D+lambda_s)",
+      "objective": "Diagonal-covariance frozen-centered-feature MSE plus lambda_s*(a-1)^2 for each output channel",
+      "rho_definition": "Square root of summed predicted centered Value residual variance divided by summed target variance; surrogate diagnostic only",
+      "schedule_contract": "Reuse only with identical frozen fused weights, dtype, device, statistics and exact eight model timesteps; caller verifies scheduler",
+      "inference_cost": "No extra token projection; eager per-token channel coefficient gathers add bandwidth and temporary memory",
+      "interpretation": "Per-output-channel attention Value approximation; does not recover hidden drift, stale K or general cross-channel covariance; no quality claim",
+      "stage4_scripts": "/workspace/diffusers-fix/research/fewshot_calibration_start_20261023/scripts",
+      "statistics_mode": "no_sample_mean_zero_variance_one",
+      "input_shapes": null,
+      "caller_statistics_source": null,
+      "caller_statistics_source_hash": null,
+      "statistics_float32_content_sha256": "4000d83e5c8c43c79a9c0b3050e735fcb42d0f002b01cf87199fa3255c7f9980",
+      "calibration_performed_here": false,
+      "sample_count_verified": false,
+      "provenance_responsibility": "Caller supplies and verifies source hashes, calibration-only data and image-level split",
+      "statistic_semantics": "Target img_norm1 output before modulation; population variance, not post-modulation features",
+      "timestep_statistics_semantics": "For pair (t,s), the same frozen h=mean_s+xi_s is used at both timesteps with diagonal Var(xi_s)=variance_s; anchor mean and variance only",
+      "alpha_min": 0.16072425246238708,
+      "alpha_max": 3.110534191131592,
+      "alpha_causal_min": 0.16072425246238708,
+      "alpha_causal_max": 3.110534191131592,
+      "rho_causal_min": 0.0,
+      "rho_causal_max": 0.7954025268554688,
+      "delta_min": -400.37347412109375,
+      "delta_max": 434.5828857421875,
+      "regularizer_min": 0.00012470371439121664,
+      "regularizer_max": 5.400343418121338,
+      "finite": true
+    },
+    "A": {
+      "status": "prepared",
+      "prepare_seconds": 0.088032316416502,
+      "table_bytes": 100285440,
+      "table_dtype": "torch.float32",
+      "alpha_shape": [
+        60,
+        8,
+        8,
+        24,
+        128
+      ],
+      "delta_shape": [
+        60,
+        8,
+        8,
+        24,
+        128
+      ],
+      "projected_shift_shape": [
+        60,
+        8,
+        24,
+        128
+      ],
+      "rho_shape": [
+        60,
+        8,
+        8
+      ],
+      "model_device": "cuda:0",
+      "model_dtype": "torch.bfloat16",
+      "raw_scheduler_timesteps": [
+        1000.0,
+        954.5454711914062,
+        900.0,
+        833.3333740234375,
+        750.0,
+        642.8570556640625,
+        500.0,
+        300.0
+      ],
+      "model_timesteps": [
+        1.0,
+        0.95703125,
+        0.8984375,
+        0.83203125,
+        0.75390625,
+        0.64453125,
+        0.5,
+        0.30078125
+      ],
+      "timestep_conversion": "Cast scheduler timestep to model dtype, then divide by 1000, matching pipeline input",
+      "preparation_batch_size": 1,
+      "preparation_timestep_calls": 8,
+      "shift_projection_includes_linear_bias": true,
+      "feature_mean_projection_has_bias": false,
+      "alpha_clipped": false,
+      "diagonal_alpha": 1.0,
+      "diagonal_delta": 0.0,
+      "ridge_relative": 1e-06,
+      "ridge_floor": 1e-12,
+      "hyperparameter_search_performed": false,
+      "ridge_definition": "lambda_s=1e-6*mean_output_channel(D_s)+1e-12; a=(N+lambda_s)/(D+lambda_s)",
+      "objective": "Diagonal-covariance frozen-centered-feature MSE plus lambda_s*(a-1)^2 for each output channel",
+      "rho_definition": "Square root of summed predicted centered Value residual variance divided by summed target variance; surrogate diagnostic only",
+      "schedule_contract": "Reuse only with identical frozen fused weights, dtype, device, statistics and exact eight model timesteps; caller verifies scheduler",
+      "inference_cost": "No extra token projection; eager per-token channel coefficient gathers add bandwidth and temporary memory",
+      "interpretation": "Per-output-channel attention Value approximation; does not recover hidden drift, stale K or general cross-channel covariance; no quality claim",
+      "stage4_scripts": "/workspace/diffusers-fix/research/fewshot_calibration_start_20261023/scripts",
+      "statistics_mode": "caller_provided_unverified_statistics",
+      "input_shapes": {
+        "mean": [
+          60,
+          8,
+          3072
+        ],
+        "variance": [
+          60,
+          8,
+          3072
+        ]
+      },
+      "caller_statistics_source": "/workspace/diffusers-fix/research/fewshot_calibration_start_20261023/data/calibration_train8.npz",
+      "caller_statistics_source_hash": "6df60e49ca8d618c5458063a80ce5bf3a5b02b0c28c7e618b04b76733964518f",
+      "statistics_float32_content_sha256": "6763f6b842b52ec59165fbcc268e1abe83c7c7af9b4ff451fdfc1ab8d9c7df56",
+      "calibration_performed_here": false,
+      "sample_count_verified": false,
+      "provenance_responsibility": "Caller supplies and verifies source hashes, calibration-only data and image-level split",
+      "statistic_semantics": "Target img_norm1 output before modulation; population variance, not post-modulation features",
+      "timestep_statistics_semantics": "For pair (t,s), the same frozen h=mean_s+xi_s is used at both timesteps with diagonal Var(xi_s)=variance_s; anchor mean and variance only",
+      "alpha_min": 0.023241350427269936,
+      "alpha_max": 3.4537086486816406,
+      "alpha_causal_min": 0.023241350427269936,
+      "alpha_causal_max": 3.4537086486816406,
+      "rho_causal_min": 0.0,
+      "rho_causal_max": 0.9612920880317688,
+      "delta_min": -602.117919921875,
+      "delta_max": 642.6935424804688,
+      "regularizer_min": 5.250062167760916e-05,
+      "regularizer_max": 5.400343418121338,
+      "finite": true
+    },
+    "B": {
+      "status": "prepared",
+      "route": "B_fitted_raw_value_affine",
+      "prepare_seconds": 0.13896926771849394,
+      "table_bytes": 94375696,
+      "observed_mask_bytes": 3840,
+      "table_dtype": "torch.float32",
+      "alpha_shape": [
+        60,
+        8,
+        8,
+        24,
+        128
+      ],
+      "delta_shape": [
+        60,
+        8,
+        8,
+        24,
+        128
+      ],
+      "model_device": "cuda:0",
+      "model_dtype": "torch.bfloat16",
+      "contract": {
+        "schema_version": 1,
+        "model_identity": "Qwen-Image-Edit@ac7f9318f633fc4b5778c59367c8128225f1e3de|Lightning8@36ee4ff860856559b9c581eaa69414900488f3de8be2f2448586daec77e201b9|bf16-fused-unloaded|73faca368c0da77645ea58836aa8780d2d8c5353",
+        "layers": 60,
+        "heads": 24,
+        "head_dim": 128,
+        "input_width": 3072,
+        "model_dtype": "torch.bfloat16",
+        "raw_scheduler_timesteps": [
+          1000.0,
+          954.5454711914062,
+          900.0,
+          833.3333740234375,
+          750.0,
+          642.8570556640625,
+          500.0,
+          300.0
+        ],
+        "model_timesteps": [
+          1.0,
+          0.95703125,
+          0.8984375,
+          0.83203125,
+          0.75390625,
+          0.64453125,
+          0.5,
+          0.30078125
+        ],
+        "raw_value_projections": [
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          },
+          {
+            "weight_shape": [
+              3072,
+              3072
+            ],
+            "bias_shape": [
+              3072
+            ]
+          }
+        ],
+        "tensor_layout": "layer,current_step,anchor_step,head,channel",
+        "indexing": "zero_based",
+        "value_semantics": "raw Value before attention; no RoPE",
+        "timestep_conversion": "Cast scheduler timestep to model dtype, then divide by 1000"
+      },
+      "source": "/workspace/diffusers-fix/research/fewshot_calibration_start_20261023/data/calibration_train8.npz",
+      "source_hash": "6df60e49ca8d618c5458063a80ce5bf3a5b02b0c28c7e618b04b76733964518f",
+      "training_image_ids": [
+        "mb_train_253960",
+        "mb_train_257102",
+        "mb_train_271359",
+        "mb_train_301232",
+        "mb_train_315467",
+        "mb_train_355272",
+        "mb_train_405994",
+        "mb_train_544811"
+      ],
+      "declared_training_image_count": 8,
+      "sample_count_verified": false,
+      "calibration_performed_here": false,
+      "raw_coefficient_sha256": "799a5cfaf15c75b97628d825019e0a12a8c8dbf6d2d60967a52e1bc797a6294b",
+      "effective_coefficient_sha256": "799a5cfaf15c75b97628d825019e0a12a8c8dbf6d2d60967a52e1bc797a6294b",
+      "observed_pairs_per_layer": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "unseen_pair_fallback": "identity",
+      "diagonal_alpha": 1.0,
+      "diagonal_delta": 0.0,
+      "alpha_clipped": false,
+      "alpha_min": -0.3929605185985565,
+      "alpha_max": 4.162696361541748,
+      "delta_min": -1240.8056640625,
+      "delta_max": 1550.2486572265625,
+      "cache_write_semantics": "Temporary read only; raw K/V and real anchor timestamps remain unchanged",
+      "model_identity_verification": "Caller-verified frozen weight identity; full weights are not rehashed here",
+      "provenance_responsibility": "Caller verifies source-level split, manifest hash, model identity and fitted label provenance",
+      "runtime_checks": "Parameter object/storage/version signature at begin and exact model timestep on each corrected forward",
+      "interpretation": "Direct fitted per-channel raw Value correction only; not norm-statistics reconstruction and no quality guarantee"
+    }
+  },
+  "total_static_table_bytes": 294946576,
+  "static_allocated_bytes": 58090720256,
+  "static_reserved_bytes": 59347304448
+}

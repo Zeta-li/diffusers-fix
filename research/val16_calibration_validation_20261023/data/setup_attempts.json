@@ -1,0 +1,23 @@
+{
+  "scope": "Setup events, excluded from inference ledger; no model or DiT executed by these failed commands",
+  "events": [
+    {
+      "event": "check_ai_initial_default_import",
+      "result": "ModuleNotFoundError: diffusers.commands.skills",
+      "resolution": "Set PYTHONPATH=/workspace/diffusers-fix/src; repeated check_ai completed with exit prompt",
+      "model_forwards": 0
+    },
+    {
+      "event": "diffusers_cli_skills_list",
+      "result": "Registry SSL handshake timeout",
+      "resolution": "Used already-read local repository guides and frozen research scripts; no dependency installation",
+      "model_forwards": 0
+    },
+    {
+      "event": "primary_shell_redirection_initial",
+      "result": "logs/run_primary.log: No such file or directory; shell did not start Python",
+      "resolution": "Created experiment logs directory and launched unchanged runner",
+      "model_forwards": 0
+    }
+  ]
+}

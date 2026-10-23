@@ -1,0 +1,765 @@
+{
+  "protocol_version": "val16_annotation_bbox_v1",
+  "configs": [
+    "F",
+    "R2",
+    "PRIOR",
+    "A",
+    "B"
+  ],
+  "cases_file": "cases_val16.json",
+  "cases_sha256": "d66d413ffa385e96def3392faed5156eba3fa55827e204080ef3923bea4eae25",
+  "case_ids": [
+    "mb_val_308192",
+    "mb_val_565269",
+    "mb_val_392687",
+    "mb_val_175584",
+    "mb_val_190360",
+    "mb_val_178572",
+    "mb_val_211860",
+    "mb_val_415314",
+    "mb_val_50151",
+    "mb_val_215135",
+    "mb_val_354126",
+    "mb_val_25139",
+    "mb_val_282572",
+    "mb_val_466845",
+    "mb_val_55458",
+    "mb_val_155790"
+  ],
+  "cases": {
+    "mb_val_308192": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        338,
+        106,
+        950,
+        864
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        21,
+        6,
+        60,
+        54
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_308192/R0.npy",
+          "sha256": "bc2b5daa8c69e41e27ac833bfba9875359b60004a0461f9f61a00b62c00cf0d7",
+          "tokens": 1872
+        },
+        "R2": {
+          "path": "masks/mb_val_308192/R2.npy",
+          "sha256": "ef396310f5629349818e62b62321b8009e13b3f90a64d2b5d219b27c50cebf5e",
+          "tokens": 2236
+        }
+      },
+      "source": "inputs/val16/308192/source.original",
+      "source_sha256": "1fc30a0d88c88967c93d35d73e4814d0f3f481a03d6606695b2d0f5c12f19f0c",
+      "binary_mask": "inputs/val16/308192/mask.target.binary.png",
+      "binary_mask_sha256": "083649df6fcad8284cbae20827b1312c3ba0e1720f0f1407caca92e017f6a5ac",
+      "far_background_tokens": 1860,
+      "far_background_fraction": 0.4541015625,
+      "band_tokens": {
+        "band1": 348,
+        "band2": 696,
+        "band4": 1392
+      }
+    },
+    "mb_val_565269": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        84,
+        482,
+        1024,
+        1024
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        5,
+        30,
+        64,
+        64
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_565269/R0.npy",
+          "sha256": "ba35afc13300f80a0b130a7a3825a39059e2615f279cadd4f8a47d9199a5e215",
+          "tokens": 2006
+        },
+        "R2": {
+          "path": "masks/mb_val_565269/R2.npy",
+          "sha256": "ee7fbbb84d5b0fa4153dc7bde4cf162032b9fa8b8e33d88283d8c1f079cc2e2e",
+          "tokens": 2196
+        }
+      },
+      "source": "inputs/val16/565269/source.original",
+      "source_sha256": "8c0abb03bbdd4f075a8fca39bd8db63843d699dc8a4e6b5821f235428a9ab2c9",
+      "binary_mask": "inputs/val16/565269/mask.target.binary.png",
+      "binary_mask_sha256": "c7a1414e9b8f9279caae3e92bbef7114db022aee0c7bf86fe3181c25f7fdf533",
+      "far_background_tokens": 1900,
+      "far_background_fraction": 0.4638671875,
+      "band_tokens": {
+        "band1": 186,
+        "band2": 372,
+        "band4": 744
+      }
+    },
+    "mb_val_392687": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        256,
+        648,
+        456,
+        884
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        16,
+        40,
+        29,
+        56
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_392687/R0.npy",
+          "sha256": "e551021941a38e1ca8486ecd983d47c9d5fdf7698ee990f13e65bac0f98998d9",
+          "tokens": 208
+        },
+        "R2": {
+          "path": "masks/mb_val_392687/R2.npy",
+          "sha256": "c93134b9e3b3d27e64657d3d5b64117da5429d204bd28e6d7b4df4a59714fb14",
+          "tokens": 340
+        }
+      },
+      "source": "inputs/val16/392687/source.original",
+      "source_sha256": "0d4e3a033013f2b00f0b972b41a3891b2534b031d641aa96cc41a97daf895274",
+      "binary_mask": "inputs/val16/392687/mask.target.binary.png",
+      "binary_mask_sha256": "5b41b0a99fcf666428ec102a59c0503b79c3969c9b268cb6f3f3239dd488212f",
+      "far_background_tokens": 3756,
+      "far_background_fraction": 0.9169921875,
+      "band_tokens": {
+        "band1": 116,
+        "band2": 232,
+        "band4": 464
+      }
+    },
+    "mb_val_175584": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        0,
+        758,
+        1024,
+        1024
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        0,
+        47,
+        64,
+        64
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_175584/R0.npy",
+          "sha256": "d024a2e01849e5681b3599a918b4688d0704404faa30296bffc878a7afc2c710",
+          "tokens": 1088
+        },
+        "R2": {
+          "path": "masks/mb_val_175584/R2.npy",
+          "sha256": "fa6a0a42302d027007c27b8e2c6851d9a7439fb415fd0a78855120dfca2aa9d7",
+          "tokens": 1216
+        }
+      },
+      "source": "inputs/val16/175584/source.original",
+      "source_sha256": "08f2929c59bcd22ef86f5b42ffe92198db59d69e6fef4c1013a5114fb80ca609",
+      "binary_mask": "inputs/val16/175584/mask.target.binary.png",
+      "binary_mask_sha256": "fca762ad4647df78dbd8c347dcb2a11b6b5a4180eb2a852e0e04dc87e95cba77",
+      "far_background_tokens": 2880,
+      "far_background_fraction": 0.703125,
+      "band_tokens": {
+        "band1": 128,
+        "band2": 256,
+        "band4": 512
+      }
+    },
+    "mb_val_190360": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        659,
+        553,
+        762,
+        688
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        41,
+        34,
+        48,
+        43
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_190360/R0.npy",
+          "sha256": "559e6b345362e113e34dd4fc9255cde534b8ebca33b022c3978f6e6504fd2aa4",
+          "tokens": 63
+        },
+        "R2": {
+          "path": "masks/mb_val_190360/R2.npy",
+          "sha256": "b8420c438849f743811d55baf4b3e113b58cd7fcffbcb52ed4713b3346a33531",
+          "tokens": 143
+        }
+      },
+      "source": "inputs/val16/190360/source.original",
+      "source_sha256": "4c426c159b837a39181bd2e6de50d9b62c9292565bd9692d61bc3cc61641cff8",
+      "binary_mask": "inputs/val16/190360/mask.target.binary.png",
+      "binary_mask_sha256": "e8ca3464978effac77ef4a2bc42954e01f02c34d0cca1289ffbcd20da19101fa",
+      "far_background_tokens": 3953,
+      "far_background_fraction": 0.965087890625,
+      "band_tokens": {
+        "band1": 64,
+        "band2": 128,
+        "band4": 255
+      }
+    },
+    "mb_val_178572": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        163,
+        449,
+        300,
+        586
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        10,
+        28,
+        19,
+        37
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_178572/R0.npy",
+          "sha256": "d74eea39dcc54c6623cb8539a32bb4ab70abe58e6212d1f95cbd5318aff00c2e",
+          "tokens": 81
+        },
+        "R2": {
+          "path": "masks/mb_val_178572/R2.npy",
+          "sha256": "078c00ff67df0b70ce41db02af4abaff57445efb399ee65e0b1f6634d3e083e0",
+          "tokens": 169
+        }
+      },
+      "source": "inputs/val16/178572/source.original",
+      "source_sha256": "5780caad2c24018fa130239d76be4a7014cc82d25b6d7983b1d9292e5ff54df4",
+      "binary_mask": "inputs/val16/178572/mask.target.binary.png",
+      "binary_mask_sha256": "e55076dccface07c6bdab20f0ffd940b99e852d13a28281982396c6f430b035f",
+      "far_background_tokens": 3927,
+      "far_background_fraction": 0.958740234375,
+      "band_tokens": {
+        "band1": 72,
+        "band2": 144,
+        "band4": 288
+      }
+    },
+    "mb_val_211860": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        492,
+        269,
+        726,
+        552
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        30,
+        16,
+        46,
+        35
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_211860/R0.npy",
+          "sha256": "d16125120038f62126a461aa5ba7bde3574fd7d62bf3edb57c752a2b7e938023",
+          "tokens": 304
+        },
+        "R2": {
+          "path": "masks/mb_val_211860/R2.npy",
+          "sha256": "3e95442088d08ccecc8479f34fd78a9fe5328b174af8c5a2bc1aab3bc8e1b7dd",
+          "tokens": 460
+        }
+      },
+      "source": "inputs/val16/211860/source.original",
+      "source_sha256": "1ab36958751f5f8674679892ff9be9c18537cd93fe5d0b76bff095b0f6be02dc",
+      "binary_mask": "inputs/val16/211860/mask.target.binary.png",
+      "binary_mask_sha256": "493ad8e765a00f89f72d6d0e89c92541099a26cb5d9609ce67efd2672f58b921",
+      "far_background_tokens": 3636,
+      "far_background_fraction": 0.8876953125,
+      "band_tokens": {
+        "band1": 140,
+        "band2": 280,
+        "band4": 560
+      }
+    },
+    "mb_val_415314": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        201,
+        0,
+        585,
+        635
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        12,
+        0,
+        37,
+        40
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_415314/R0.npy",
+          "sha256": "263eb302af3ade12829e729b9cbeb27107efc4e9fcec869a43691752b6bd4b8a",
+          "tokens": 1000
+        },
+        "R2": {
+          "path": "masks/mb_val_415314/R2.npy",
+          "sha256": "ddf7ee3f47bcd6b3543d90f359d1ee7c9c7f63835ad14942a16a616fef0219d7",
+          "tokens": 1218
+        }
+      },
+      "source": "inputs/val16/415314/source.original",
+      "source_sha256": "6d5eb0fc8a4bcd28da352883dd66ad94f478818c310d3a5975d35fef7363bc23",
+      "binary_mask": "inputs/val16/415314/mask.target.binary.png",
+      "binary_mask_sha256": "2b909fdc94a0b5c900f8422384e588b9400edcf7b76c1a8907286520b8fa57a4",
+      "far_background_tokens": 2878,
+      "far_background_fraction": 0.70263671875,
+      "band_tokens": {
+        "band1": 210,
+        "band2": 420,
+        "band4": 840
+      }
+    },
+    "mb_val_50151": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        0,
+        444,
+        581,
+        903
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        0,
+        27,
+        37,
+        57
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_50151/R0.npy",
+          "sha256": "11bc22cb7331b2aacc810381ab5f89fdc5b1cbe85dcdf4d80be46ad621962a18",
+          "tokens": 1110
+        },
+        "R2": {
+          "path": "masks/mb_val_50151/R2.npy",
+          "sha256": "c19068d720fd7bd691228b01b154c54606cd40ae1cef3863827854e6055f25ae",
+          "tokens": 1326
+        }
+      },
+      "source": "inputs/val16/50151/source.original",
+      "source_sha256": "acda867285f2ae3ff14b97f7a49b628e530bbf7a159d532f4fdebe78c5bd1e5f",
+      "binary_mask": "inputs/val16/50151/mask.target.binary.png",
+      "binary_mask_sha256": "fda5c66115289e368ccbdf2154a06e4b33d200907beaa900ad4d6a83a40ea874",
+      "far_background_tokens": 2770,
+      "far_background_fraction": 0.67626953125,
+      "band_tokens": {
+        "band1": 208,
+        "band2": 416,
+        "band4": 832
+      }
+    },
+    "mb_val_215135": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        90,
+        820,
+        1024,
+        1024
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        5,
+        51,
+        64,
+        64
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_215135/R0.npy",
+          "sha256": "8696ee9a9a3b23d626c7c60c08a5eebe5033fca47eee8c18c94f6681f11ca831",
+          "tokens": 767
+        },
+        "R2": {
+          "path": "masks/mb_val_215135/R2.npy",
+          "sha256": "5dc4c068befe1887984ff31924159095bb666cc3b4e746300d56cd30e700118c",
+          "tokens": 915
+        }
+      },
+      "source": "inputs/val16/215135/source.original",
+      "source_sha256": "017a3f83ff7327d77eb6b7a12640398e46e5017b934486ed0e92706f43fc3fd6",
+      "binary_mask": "inputs/val16/215135/mask.target.binary.png",
+      "binary_mask_sha256": "baa0c382bdb0980c368dbf420bd4b14c7441d907f03b0df0cceceb49c1e96311",
+      "far_background_tokens": 3181,
+      "far_background_fraction": 0.776611328125,
+      "band_tokens": {
+        "band1": 144,
+        "band2": 288,
+        "band4": 576
+      }
+    },
+    "mb_val_354126": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        193,
+        628,
+        1024,
+        1024
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        12,
+        39,
+        64,
+        64
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_354126/R0.npy",
+          "sha256": "1498c9de893ffc6163e1beccee2353c9fb28d4bd929aaf7c2e709585c7d7f864",
+          "tokens": 1300
+        },
+        "R2": {
+          "path": "masks/mb_val_354126/R2.npy",
+          "sha256": "377482e0d0e9d8af3a015b5675295e1ca751816c90fd047a73743c05530c3833",
+          "tokens": 1458
+        }
+      },
+      "source": "inputs/val16/354126/source.original",
+      "source_sha256": "307e200928271e15eb49b52e0a587e1d98e37c19ea35632215b8386d30271e7d",
+      "binary_mask": "inputs/val16/354126/mask.target.binary.png",
+      "binary_mask_sha256": "0f044a7fa1a9f1ed0d9ed211d6c04c19769492d6168ffdecb44a503ebbb5a0f7",
+      "far_background_tokens": 2638,
+      "far_background_fraction": 0.64404296875,
+      "band_tokens": {
+        "band1": 154,
+        "band2": 308,
+        "band4": 616
+      }
+    },
+    "mb_val_25139": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        828,
+        698,
+        1024,
+        1024
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        51,
+        43,
+        64,
+        64
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_25139/R0.npy",
+          "sha256": "c81ed26d23827ffa75588d1edc23fc3b1e1f2f1879116f177eae0f7c9924ddf4",
+          "tokens": 273
+        },
+        "R2": {
+          "path": "masks/mb_val_25139/R2.npy",
+          "sha256": "156dba175689492189acd240ac3afb15f5282aa55e0634cf445b08ab4b86e8e2",
+          "tokens": 345
+        }
+      },
+      "source": "inputs/val16/25139/source.original",
+      "source_sha256": "3b41700a5e443a5631000c209ca047897222ff8c8aee75a99c67e5a273bba26b",
+      "binary_mask": "inputs/val16/25139/mask.target.binary.png",
+      "binary_mask_sha256": "d196cffac0aaa2e450aa9fd4d8e9efef13569cb5d1b5bd251b58ebedc4c68563",
+      "far_background_tokens": 3751,
+      "far_background_fraction": 0.915771484375,
+      "band_tokens": {
+        "band1": 68,
+        "band2": 136,
+        "band4": 272
+      }
+    },
+    "mb_val_282572": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        454,
+        573,
+        954,
+        913
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        28,
+        35,
+        60,
+        58
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_282572/R0.npy",
+          "sha256": "a9e63ca6ec3d5cf1ebd3efce8be951cc8059137dc61f04cca20f61dccd0bf010",
+          "tokens": 736
+        },
+        "R2": {
+          "path": "masks/mb_val_282572/R2.npy",
+          "sha256": "e62a918a7016e7112518d1b34245f9748114145f39918b45b9ec141dc26194a2",
+          "tokens": 972
+        }
+      },
+      "source": "inputs/val16/282572/source.original",
+      "source_sha256": "650959a5ee80432aa58e98ef370240c0d37d3d9714e3ca9c1543a38484f7d362",
+      "binary_mask": "inputs/val16/282572/mask.target.binary.png",
+      "binary_mask_sha256": "994dd0f673a71f7b56ac6b8a6627c8d13a18f8c8e0db0a5d3e9372e1d5413e71",
+      "far_background_tokens": 3124,
+      "far_background_fraction": 0.7626953125,
+      "band_tokens": {
+        "band1": 220,
+        "band2": 440,
+        "band4": 880
+      }
+    },
+    "mb_val_466845": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        550,
+        322,
+        1024,
+        932
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        34,
+        20,
+        64,
+        59
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_466845/R0.npy",
+          "sha256": "2ea4dea78fa1585a51a2bdd9ab16a6190a0418140501b4d0faac038ad4ecad2f",
+          "tokens": 1170
+        },
+        "R2": {
+          "path": "masks/mb_val_466845/R2.npy",
+          "sha256": "719762c159892363c3b9f08488da27bed9e68c6cf9af5c76c83f24381199b5fa",
+          "tokens": 1376
+        }
+      },
+      "source": "inputs/val16/466845/source.original",
+      "source_sha256": "d4c74a4960c1c95df0fd9124aebee279deba617dc8a91198a95b75e0daa792e8",
+      "binary_mask": "inputs/val16/466845/mask.target.binary.png",
+      "binary_mask_sha256": "1ffd795f329e913b6b8874eea9ba80332d65b07fa898171b37fe9a2b1d57da71",
+      "far_background_tokens": 2720,
+      "far_background_fraction": 0.6640625,
+      "band_tokens": {
+        "band1": 198,
+        "band2": 396,
+        "band4": 792
+      }
+    },
+    "mb_val_55458": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        612,
+        337,
+        1024,
+        786
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        38,
+        21,
+        64,
+        50
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_55458/R0.npy",
+          "sha256": "701ac684a09409622f76f7971c7b9ef5181ff07eb8ec99878b64302a6df981c1",
+          "tokens": 754
+        },
+        "R2": {
+          "path": "masks/mb_val_55458/R2.npy",
+          "sha256": "b891238bb4ecd85c0a5f220ec2f01152c356a398620884323870ea0e6538b3d6",
+          "tokens": 924
+        }
+      },
+      "source": "inputs/val16/55458/source.original",
+      "source_sha256": "c0ce180718aec3a1aad468ff728bf389981238072fb7993f09aee76b8b04d014",
+      "binary_mask": "inputs/val16/55458/mask.target.binary.png",
+      "binary_mask_sha256": "7fb4cc5086e34ab9a0e1d9fd638541489108688d48f41da9ae0f694c17a5410b",
+      "far_background_tokens": 3172,
+      "far_background_fraction": 0.7744140625,
+      "band_tokens": {
+        "band1": 162,
+        "band2": 324,
+        "band4": 648
+      }
+    },
+    "mb_val_155790": {
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "target_grid_hw": [
+        64,
+        64
+      ],
+      "annotation_target_bbox_xyxy_exclusive": [
+        305,
+        327,
+        855,
+        798
+      ],
+      "R0_token_bbox_xyxy_exclusive": [
+        19,
+        20,
+        54,
+        50
+      ],
+      "assets": {
+        "R0": {
+          "path": "masks/mb_val_155790/R0.npy",
+          "sha256": "ea16538e791804ea3061fe02dad4d81b5e8e4a624394440c157395c3c87b87ac",
+          "tokens": 1050
+        },
+        "R2": {
+          "path": "masks/mb_val_155790/R2.npy",
+          "sha256": "8a67fe28158e75b727b768c5a67f5f9863754e9fdd5780f8ce1df8249832e23d",
+          "tokens": 1326
+        }
+      },
+      "source": "inputs/val16/155790/source.original",
+      "source_sha256": "18cec3807c60cb22f65ce7414101bd53c0aed9bd18d0c84e8d2de709cf1b3613",
+      "binary_mask": "inputs/val16/155790/mask.target.binary.png",
+      "binary_mask_sha256": "eba29603db327b6586b4ff09c59d8ffbac15f508d378c0576101ba4038b8f9ee",
+      "far_background_tokens": 2770,
+      "far_background_fraction": 0.67626953125,
+      "band_tokens": {
+        "band1": 260,
+        "band2": 520,
+        "band4": 1040
+      }
+    }
+  },
+  "protocol": {
+    "R0": "Annotation binary positive bbox projected to target 16px grid by floor/ceil; no halo",
+    "R2": "L-infinity dilation of R0 by 2 target tokens, finite canvas; equals frozen execution indices",
+    "bands": "dilate_Linf(R0,r) & dilate_Linf(~R0,r), r=1,2,4; finite grid, no artificial image exterior",
+    "far_background": "Complement of R2; differs from historical allowed-box far background",
+    "unmasked_lpips": "Compute full RGB LPIPS Alex spatial map before region averaging; receptive fields cross masks",
+    "gate": {
+      "lpips_mapmean_to_F_max": 0.02,
+      "extra_background_mae_over_F_max": 0.00392156862745098
+    },
+    "frozen_before_generation": true,
+    "adaptive_regions": false
+  }
+}

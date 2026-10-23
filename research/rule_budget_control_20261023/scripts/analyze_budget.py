@@ -1,0 +1,521 @@
+import argparse
+import importlib.util
+import json
+import math
+import statistics
+from collections import Counter
+from fractions import Fraction
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+import torch
+from PIL import Image
+
+
+CONFIGS = ["F", "R2", "B125", "B250", "B333", "B500"]
+FRACTIONS = {"R2": Fraction(0), "B125": Fraction(1, 8), "B250": Fraction(1, 4),
+             "B333": Fraction(1, 3), "B500": Fraction(1, 2)}
+
+
+def read_json(path):
+    return json.loads(path.read_text())
+
+
+def read_rows(path):
+    return [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
+
+
+def save_json(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False), encoding="utf-8")
+
+
+def resolve(value, root):
+    path = Path(value).expanduser()
+    return path.resolve() if path.is_absolute() else (root / path).resolve()
+
+
+def find_previous(root, supplied, environment):
+    value = supplied or environment.get("previous_root") or environment.get("local_pilot_root")
+    candidates = [resolve(value, root)] if value else []
+    candidates += [root.parent / name for name in ["局部执行与边界验证_20261022", "local_executor_boundary_20261022"]]
+    for path in candidates:
+        if (path / "scripts/analyze_local_pilot.py").is_file():
+            return path.resolve()
+    raise FileNotFoundError("Use --previous-root to identify the original local-boundary experiment")
+
+
+def config_id(row):
+    value = row.get("config", "")
+    return str(value.get("id", "")) if isinstance(value, dict) else str(value)
+
+
+def histogram(values):
+    return {str(key): count for key, count in sorted(Counter(values).items())}
+
+
+def budget_summary(case_id, case, config):
+    n, core = int(case["n_target_tokens"]), set(case["core_indices"])
+    background = n - len(core)
+    policy = case["configs"][config]
+    height, width = case["target_grid_hw"]
+    if height * width != n or len(core) != case["n_core_tokens"] or background != case["n_background_tokens"]:
+        raise ValueError(f"Invalid case geometry/counts: {case_id}")
+    blocks = case["blocks"]
+    block_sets = [set(block["indices"]) for block in blocks]
+    flattened = [index for block in blocks for index in block["indices"]]
+    if len(flattened) != len(set(flattened)) or set(flattened) != set(range(n)) - core:
+        raise ValueError(f"Background blocks do not partition noncore targets: {case_id}")
+    for block, indices in zip(blocks, block_sets):
+        tile_y, tile_x = int(block["tile_row"]), int(block["tile_col"])
+        expected = {y * width + x for y in range(2 * tile_y, min(height, 2 * tile_y + 2))
+                    for x in range(2 * tile_x, min(width, 2 * tile_x + 2))} - core
+        if not indices or indices != expected or len(indices) != block["n_tokens"]:
+            raise ValueError(f"Invalid whole background tile: {case_id}/{block.get('block_id')}")
+    previous = [-1] * n
+    rows = []
+    plan_audits = {int(row["step_1based"]): row for row in policy["per_step_audit"]}
+    for step in range(8):
+        selected = [int(value) for value in policy["per_step_indices"][str(step)]]
+        selected_set = set(selected)
+        valid_indices = len(selected) == len(selected_set) and bool(selected) and min(selected) >= 0 and max(selected) < n
+        if not valid_indices:
+            raise ValueError(f"Invalid planned indices: {case_id}/{config}/step{step + 1}")
+        includes_core = core.issubset(selected_set)
+        extra = selected_set - core
+        full = config == "F" or step in [0, 7]
+        fraction = Fraction(1) if full else FRACTIONS[config]
+        cap = background * fraction.numerator // fraction.denominator
+        unused = cap - len(extra)
+        old = previous.copy()
+        for index in selected:
+            previous[index] = step
+        if min(previous) < 0:
+            raise ValueError(f"Plan leaves uninitialized cache: {case_id}/{config}/step{step + 1}")
+        ages = [step - value for value in previous]
+        newly_activated = sum(old[index] >= 0 and old[index] < step - 1 for index in selected) if step else 0
+        whole_blocks = all(not (block & extra) or block.issubset(extra) for block in block_sets)
+        planned = plan_audits.get(step + 1, {})
+        planned_fields_match = all(planned.get(key) == expected for key, expected in {
+            "selected_target_count": len(selected), "selected_background_count": len(extra),
+            "background_cap": cap, "unused_background_cap": unused,
+            "max_age_at_attention_read": max(ages), "age_at_attention_read_histogram": histogram(ages),
+        }.items())
+        rows.append(dict(case_id=case_id, config=config, step_1based=step + 1, full_step=full,
+            selected_target_count=len(selected), selected_background_count=len(extra), background_cap=cap,
+            unused_background_cap=unused, actual_background_fraction=len(extra) / background if background else 0.0,
+            actual_active_target_fraction=len(selected) / n, max_age_at_attention_read=max(ages),
+            mean_age_at_attention_read=sum(ages) / n, age_at_attention_read_histogram=histogram(ages),
+            newly_activated=newly_activated, includes_core=includes_core, whole_background_tiles=whole_blocks,
+            capacity_respected=unused >= 0, full_step_exact=not full or len(selected) == n,
+            exported_plan_fields_match=planned_fields_match))
+    partial = rows[1:7]
+    return dict(case_id=case_id, config=config, n_target_tokens=n, n_core_tokens=len(core),
+        n_background_tokens=background, requested_background_fraction=str(FRACTIONS[config]) if config != "F" else None,
+        requested_background_fraction_float=float(FRACTIONS[config]) if config != "F" else None,
+        mean_partial_background_fraction=statistics.mean(row["actual_background_fraction"] for row in partial),
+        min_partial_background_fraction=min(row["actual_background_fraction"] for row in partial),
+        max_partial_background_fraction=max(row["actual_background_fraction"] for row in partial),
+        mean_partial_active_target_fraction=statistics.mean(row["actual_active_target_fraction"] for row in partial),
+        min_partial_active_target_fraction=min(row["actual_active_target_fraction"] for row in partial),
+        max_partial_active_target_fraction=max(row["actual_active_target_fraction"] for row in partial),
+        full8_target_fraction=sum(row["selected_target_count"] for row in rows) / (8 * n),
+        mean_unused_partial_background_cap=statistics.mean(row["unused_background_cap"] for row in partial),
+        max_unused_partial_background_cap=max(row["unused_background_cap"] for row in partial),
+        total_unused_partial_background_cap=sum(row["unused_background_cap"] for row in partial),
+        max_read_age=max(row["max_age_at_attention_read"] for row in rows),
+        all_plan_audits_passed=all(row["includes_core"] and row["whole_background_tiles"] and row["capacity_respected"]
+            and row["full_step_exact"] and row["exported_plan_fields_match"] for row in rows),
+        steps=rows)
+
+
+def audit_runtime(row, schedule):
+    result = dict(run_id=row["run_id"], case_id=row["case_id"], config=config_id(row), kind=row["kind"], repeat=int(row["repeat"]))
+    age_trace, shape_trace = row.get("age_trace", []), row.get("trace", [])
+    if config_id(row) == "F":
+        result.update(native=True, age_trace_count=len(age_trace), shape_trace_count=len(shape_trace),
+                      all_steps_match=not age_trace and not shape_trace)
+        return result
+    planned = {item["step_1based"]: item for item in schedule["steps"]}
+    audits = []
+    for entry in age_trace:
+        step = int(entry["step"])
+        expected = planned.get(step)
+        current = dict(step_1based=step)
+        if expected:
+            current.update(selected_count_matches=entry.get("selected_target") == expected["selected_target_count"],
+                max_read_age_matches=entry.get("max_read_age") == expected["max_age_at_attention_read"],
+                histogram_matches=entry.get("age_histogram") == expected["age_at_attention_read_histogram"],
+                mean_read_age_matches=math.isclose(entry.get("mean_read_age", float("inf")), expected["mean_age_at_attention_read"], abs_tol=1e-6),
+                newly_activated_matches=entry.get("newly_activated") == expected["newly_activated"])
+        traced = [value for value in shape_trace if int(value["step"]) == step]
+        shapes_match = len(traced) == 3 and expected is not None
+        for value in traced:
+            selected = expected["selected_target_count"] if expected else -1
+            condition, n = row["condition_count"], row["target_count"]
+            shapes_match = shapes_match and value.get("selected_target") == selected and value.get("condition") == condition
+            shapes_match = shapes_match and value.get("image_qkv_tokens") == value.get("image_mlp_tokens") == selected + condition
+            shapes_match = shapes_match and value.get("joint_query_tokens") == value.get("text_tokens", -1) + selected + condition
+            shapes_match = shapes_match and value.get("joint_kv_tokens") == value.get("text_tokens", -1) + n + condition
+        current["qkv_mlp_shapes_match"] = bool(shapes_match)
+        audits.append(current)
+    keys = ["selected_count_matches", "max_read_age_matches", "histogram_matches", "mean_read_age_matches", "newly_activated_matches", "qkv_mlp_shapes_match"]
+    result.update(native=False, age_trace_count=len(age_trace), shape_trace_count=len(shape_trace), steps=audits,
+        max_observed_read_age=max((entry["max_read_age"] for entry in age_trace), default=None),
+        all_steps_match=len(age_trace) == 8 and {int(entry["step"]) for entry in age_trace} == set(range(1, 9))
+            and len(shape_trace) == 24 and all(all(value.get(key, False) for key in keys) for value in audits))
+    return result
+
+
+def configuration_summaries(rows, case_count):
+    result = {}
+    for config in CONFIGS:
+        selected = [row for row in rows if row["config"] == config]
+        ratios = [row["paired_geometric_latency_ratio_to_baseline"] for row in selected if row.get("paired_geometric_latency_ratio_to_baseline") is not None]
+        quality = [row for row in selected if row.get("quality_status") == "complete"]
+        ratio = math.exp(statistics.mean(math.log(value) for value in ratios)) if len(ratios) == case_count else None
+        all_quality = len(quality) == case_count and all(row.get("predefined_quality_gate_pass") for row in quality)
+        complete = len(selected) == case_count and all(row["timing_complete"] for row in selected)
+        result[config] = dict(baseline_config="F", case_median_seconds={row["case_id"]: row["e2e_median_seconds"] for row in selected},
+            case_CV={row["case_id"]: row["e2e_cv"] for row in selected}, all_expected_repeats_complete=complete,
+            all_timing_pairs_complete=complete and all(row["timing_pairing_status"] == "complete" for row in selected),
+            paired_geometric_latency_ratio_to_F_across_cases=ratio,
+            descriptive_net_latency_reduction_fraction=1 - ratio if ratio is not None else None,
+            quality_cases_complete=len(quality), quality_gate_pass_cases=[row["case_id"] for row in quality if row.get("predefined_quality_gate_pass")],
+            quality_gate_pass_all_cases=all_quality if len(quality) == case_count else None,
+            mean_lpips_mapmean_to_F=statistics.mean(row["lpips_mapmean_to_F"] for row in quality) if quality else None,
+            max_extra_background_mae_over_F=max((row["extra_background_mae_over_F"] for row in quality if row.get("extra_background_mae_over_F") is not None), default=None),
+            all_repeated_output_hashes_identical=complete and all(row["distinct_output_hashes"] == 1 for row in selected),
+            max_allocated_GiB=max((row["peak_allocated_GiB"] for row in selected if row.get("peak_allocated_GiB") is not None), default=None),
+            exploratory_numeric_target_met=bool(all_quality and ratio <= .9) if ratio is not None and len(quality) == case_count else None,
+            formal_Go_established=False)
+    return result
+
+
+def display(value):
+    if isinstance(value, bool):
+        return "通过" if value else "未通过"
+    if value is None:
+        return "N/A"
+    return f"{value:.6g}" if isinstance(value, (float, int)) else str(value)
+
+
+def box(mask):
+    ys, xs = np.nonzero(mask)
+    if not len(xs):
+        raise ValueError("Empty common evaluation crop")
+    return int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1
+
+
+def make_plots(root, cases, metrics, measurements, budgets, helpers):
+    folder = root / "figures/primary"
+    lookup = {(row["case_id"], row["config"]): row for row in metrics}
+    fig, ax = plt.subplots(figsize=(10, 4.5))
+    width = .24
+    for index, case in enumerate(cases):
+        cid = case["case_id"]
+        positions = np.arange(len(CONFIGS)) + (index - (len(cases) - 1) / 2) * width
+        values = [lookup[(cid, config)].get("e2e_median_seconds") for config in CONFIGS]
+        ax.bar(positions, [value if value is not None else float("nan") for value in values], width=width, label=cid)
+        for position, config in zip(positions, CONFIGS):
+            samples = [row["e2e_seconds"] for row in measurements if row["case_id"] == cid and config_id(row) == config]
+            ax.scatter([position] * len(samples), samples, color="black", s=10, alpha=.55, zorder=3)
+    ax.set_xticks(np.arange(len(CONFIGS)), CONFIGS)
+    ax.set_ylabel("End-to-end seconds; median and timing repeats")
+    ax.set_title("Candidate planner cost included; F/R2 use static policies")
+    ax.legend(fontsize=8)
+    fig.tight_layout()
+    fig.savefig(folder / "latency.png", dpi=180)
+    plt.close(fig)
+    fig, axes = plt.subplots(len(cases), 2, figsize=(11, 3.1 * len(cases)), squeeze=False)
+    for index, case in enumerate(cases):
+        cid = case["case_id"]
+        selected = [lookup[(cid, config)] for config in CONFIGS if config != "F"]
+        x = [budgets[(cid, row["config"])]["mean_partial_background_fraction"] for row in selected]
+        y = [row.get("lpips_mapmean_to_F") for row in selected]
+        z = [100 * (1 - row["paired_geometric_latency_ratio_to_F"]) if row.get("paired_geometric_latency_ratio_to_F") is not None else None for row in selected]
+        for axis, values, threshold, label in [(axes[index, 0], y, .02, "LPIPS spatial map mean to same-round F"),
+                                                (axes[index, 1], z, 10, "Paired geometric latency reduction (%)")]:
+            axis.plot(x, [value if value is not None else float("nan") for value in values], marker="o")
+            for xx, yy, row in zip(x, values, selected):
+                if yy is not None:
+                    axis.annotate(row["config"], (xx, yy), xytext=(4, 5), textcoords="offset points", fontsize=8)
+            axis.axhline(threshold, color="red", linestyle="--", linewidth=1)
+            axis.set_title(cid)
+            axis.set_xlabel("Actual mean background fraction at six partial steps")
+            axis.set_ylabel(label)
+            axis.grid(alpha=.2)
+    fig.tight_layout()
+    fig.savefig(folder / "budget_quality_latency.png", dpi=180)
+    plt.close(fig)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parent.parent)
+    parser.add_argument("--previous-root", type=Path)
+    parser.add_argument("--repeats", type=int, default=3)
+    parser.add_argument("--runs", type=Path)
+    parser.add_argument("--device", choices=["cpu", "cuda"], default="cpu")
+    args = parser.parse_args()
+    if args.repeats != 3:
+        raise ValueError("Frozen budget matrix uses three measured repeats")
+    root, phase = args.root.resolve(), "primary"
+    data, figures = root / "data", root / "figures/primary"
+    figures.mkdir(parents=True, exist_ok=True)
+    (figures / "by_budget").mkdir(exist_ok=True)
+    environment_path = data / "environment_primary.json"
+    if not environment_path.exists():
+        environment_path = data / "env_primary.json"
+    environment = read_json(environment_path)
+    previous = find_previous(root, args.previous_root, environment)
+    helper_path = previous / "scripts/analyze_local_pilot.py"
+    spec = importlib.util.spec_from_file_location("budget_quality_helpers", helper_path)
+    helpers = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(helpers)
+    plan_path, regions_path = root / "masks/budget_plan.json", previous / "masks/regions.json"
+    plan, regions = read_json(plan_path), read_json(regions_path)
+    if plan["configs"] != CONFIGS:
+        raise ValueError("Frozen configuration order differs from the budget matrix")
+    cases = read_json(previous / "cases.json")["cases"]
+    if set(plan["cases"]) != {case["case_id"] for case in cases}:
+        raise ValueError("Case lists differ between budget plan and old evaluation masks")
+    runs_path = args.runs.resolve() if args.runs else data / "runs_primary.jsonl"
+    raw = read_rows(runs_path)
+    relevant_raw = [row for row in raw if config_id(row) in CONFIGS]
+    successful, duplicates = {}, []
+    for row in relevant_raw:
+        if row.get("status") == "complete":
+            if row["run_id"] in successful:
+                duplicates.append(row["run_id"])
+            successful[row["run_id"]] = row
+    relevant = list(successful.values())
+    measurements = [row for row in relevant if row.get("kind") == "measurement"]
+    lookup, duplicate_measurements = {}, []
+    for row in measurements:
+        key = row["case_id"], config_id(row), int(row["repeat"])
+        if key in lookup:
+            duplicate_measurements.append(list(key))
+        lookup[key] = row
+    old_rows = read_rows(previous / "data/runs.jsonl")
+    old_lookup = {(row["case_id"], config_id(row)): row for row in old_rows
+        if row.get("status") == "complete" and row.get("kind") == "measurement" and int(row.get("repeat", 0)) == 0 and config_id(row) in ["F", "R2"]}
+    warnings, metrics, timings, baseline_audits, runtime_audits, policy_audits, planner_rows, output_audits = [], [], [], [], [], [], [], []
+    budgets = {(case["case_id"], config): budget_summary(case["case_id"], plan["cases"][case["case_id"]], config)
+               for case in cases for config in CONFIGS}
+    for value in budgets.values():
+        if not value["all_plan_audits_passed"]:
+            warnings.append(f"Plan budget, tile, age or exported audit mismatch: {value['case_id']}/{value['config']}")
+    for row in relevant:
+        cid, config = row["case_id"], config_id(row)
+        if (cid, config) not in budgets:
+            warnings.append(f"Unexpected case/config in raw ledger: {row['run_id']}")
+            continue
+        output_path = root / row["output"]
+        actual_hash = helpers.sha256(output_path) if output_path.is_file() else None
+        output_audits.append(dict(run_id=row["run_id"], output=row["output"], file_exists=output_path.is_file(),
+            recorded_sha256=row.get("output_sha256"), actual_sha256=actual_hash, matches=actual_hash == row.get("output_sha256") and actual_hash is not None))
+        if not output_audits[-1]["matches"]:
+            warnings.append(f"Output file missing or SHA mismatch: {row['run_id']}")
+        audit = audit_runtime(row, budgets[(cid, config)])
+        runtime_audits.append(audit)
+        if not audit["all_steps_match"]:
+            warnings.append(f"Runtime age or QKV/MLP shape differs from frozen policy: {row['run_id']}")
+        seconds = row.get("budget_selection_seconds")
+        metadata = row.get("budget_selection_metadata")
+        timing_valid = isinstance(seconds, (float, int)) and not isinstance(seconds, bool) and math.isfinite(seconds) and 0 <= seconds <= row["e2e_seconds"]
+        metadata_matches = isinstance(metadata, dict) and metadata == plan["cases"][cid]["configs"][config]["budgetmeta"]
+        selected_counts_match = row.get("per_step_selected_target_counts") == [step["selected_target_count"] for step in budgets[(cid, config)]["steps"]]
+        planner_rows.append(dict(case_id=cid, config=config, run_id=row["run_id"], kind=row["kind"], repeat=row["repeat"],
+            budget_selection_seconds=seconds, e2e_seconds=row["e2e_seconds"], timing_valid=timing_valid,
+            selection_fraction_of_request=seconds / row["e2e_seconds"] if timing_valid else None,
+            metadata_recorded=isinstance(metadata, dict), metadata_matches_frozen=metadata_matches,
+            selected_counts_match=selected_counts_match, producer_policy_match=row.get("policy_matches_frozen"), recorded_metadata=metadata))
+        if not timing_valid or not metadata_matches or not selected_counts_match or row.get("policy_matches_frozen") is not True:
+            warnings.append(f"Missing or invalid in-request planner time/metadata: {row['run_id']}")
+        if row.get("model_timestep_contract_exact") is not True or row.get("observed_model_timesteps") != environment.get("expected_model_timesteps"):
+            warnings.append(f"Model timestep conversion mismatch: {row['run_id']}")
+        if config in ["F", "R2"]:
+            control = old_lookup.get((cid, config))
+            match = control is not None and row.get("old_output_exact") is True and row.get("output_sha256") == control.get("output_sha256")
+            policy_audits.append(dict(case_id=cid, config=config, run_id=row["run_id"], kind=row["kind"], output_matches_old=match))
+            if not match:
+                warnings.append(f"F/R2 request does not reproduce the old output: {row['run_id']}")
+    import lpips
+    torch.set_num_threads(8)
+    network = lpips.LPIPS(net="alex", spatial=True).eval().to(args.device)
+    for case in cases:
+        cid, geometry = case["case_id"], regions["cases"][case["case_id"]]
+        height, width = geometry["target_hw"]
+        source = Image.open(previous / case.get("image", geometry["source_image"])).convert("RGB").resize((width, height), Image.Resampling.LANCZOS)
+        masks = helpers.evaluation_masks(geometry, previous, height, width)
+        f_rows = {repeat: row for (key, config, repeat), row in lookup.items() if key == cid and config == "F"}
+        f_zero = f_rows.get(0)
+        reference = helpers.load_image(root, f_zero, (width, height)) if f_zero else None
+        images = {"INPUT": source}
+        for config in CONFIGS:
+            selected = sorted([row for (key, name, repeat), row in lookup.items() if key == cid and name == config], key=lambda row: int(row["repeat"]))
+            result = dict(phase=phase, case_id=cid, config=config)
+            result.update(helpers.timing_summary(selected, f_rows, expected_repeats=3, baseline_config="F"))
+            if selected and result["distinct_output_hashes"] != 1:
+                warnings.append(f"Measured output SHA differs across timing repeats: {cid}/{config}")
+            zero = lookup.get((cid, config, 0))
+            if zero is None or reference is None:
+                result.update(quality_status="missing_repeat0_or_F", predefined_quality_gate_pass=None)
+            else:
+                try:
+                    if zero.get("initial_latent_sha256") != f_zero.get("initial_latent_sha256"):
+                        raise ValueError("Initial latent differs from same-round F")
+                    if any(zero.get(key) != f_zero.get(key) for key in ["timesteps", "sigmas"]):
+                        raise ValueError("Scheduler differs from same-round F")
+                    output = helpers.load_image(root, zero, reference.size)
+                    result.update(helpers.quality_metrics(output, reference, source, masks, network, args.device))
+                    result.update(quality_output=zero["output"], quality_output_sha256=zero.get("output_sha256"), quality_run_id=zero["run_id"])
+                    images[config] = output
+                except Exception as error:
+                    result.update(quality_status="invalid_output", quality_error=f"{type(error).__name__}: {error}", predefined_quality_gate_pass=None)
+                    warnings.append(f"{cid}/{config}: {result['quality_error']}")
+            budget = budgets[(cid, config)]
+            result.update({key: value for key, value in budget.items() if key not in ["steps", "case_id", "config"]})
+            measured_planner = [row["budget_selection_seconds"] for row in planner_rows if row["case_id"] == cid and row["config"] == config and row["kind"] == "measurement" and row["timing_valid"]]
+            result["budget_selection_median_seconds"] = statistics.median(measured_planner) if measured_planner else None
+            result["budget_selection_max_seconds"] = max(measured_planner) if measured_planner else None
+            result["budget_selection_time_count"] = len(measured_planner)
+            metrics.append(result)
+            for row in selected:
+                detail = helpers.timing_detail(row, f_rows, phase, baseline_config="F")
+                detail.update(budget_selection_seconds=row.get("budget_selection_seconds"))
+                timings.append(detail)
+            if config in ["F", "R2"]:
+                old = old_lookup.get((cid, config))
+                audit = dict(case_id=cid, config=config)
+                if zero is None or old is None:
+                    audit["status"] = "missing_reference"
+                else:
+                    try:
+                        old_image = helpers.load_image(previous, old, (width, height))
+                        new_image = helpers.load_image(root, zero, (width, height))
+                        audit.update(status="complete", old_output_sha256=old["output_sha256"], new_output_sha256=zero["output_sha256"],
+                            png_sha256_equal=old["output_sha256"] == zero["output_sha256"],
+                            pixel_identical=bool(np.array_equal(np.asarray(old_image), np.asarray(new_image))))
+                    except Exception as error:
+                        audit.update(status="invalid_reference", error=f"{type(error).__name__}: {error}")
+                baseline_audits.append(audit)
+                if not audit.get("png_sha256_equal") or not audit.get("pixel_identical"):
+                    warnings.append(f"F/R2 repeat0 pixels or PNG differ from old baseline: {cid}/{config}")
+        core_crop, boundary_crop = box(masks["core"]), box(masks["core"] | masks["band4"])
+        helpers.comparison_panel([images.get(label) for label in ["INPUT"] + CONFIGS], ["INPUT"] + CONFIGS, figures / f"{cid}_comparison.png")
+        helpers.comparison_panel([images.get(label) for label in ["INPUT"] + CONFIGS], ["INPUT"] + CONFIGS, figures / f"{cid}_core_crop.png", crop=core_crop)
+        helpers.comparison_panel([images.get(label) for label in ["INPUT"] + CONFIGS], ["INPUT"] + CONFIGS, figures / f"{cid}_boundary_crop.png", crop=boundary_crop)
+        for config in CONFIGS:
+            if config in images:
+                images[config].crop(core_crop).save(figures / "by_budget" / f"{cid}_{config}_raw_core_crop.png")
+            if config not in ["F", "R2"]:
+                labels = ["INPUT", "F", "R2", config]
+                helpers.comparison_panel([images.get(label) for label in labels], labels, figures / "by_budget" / f"{cid}_{config}_core_crop.png", crop=core_crop)
+                helpers.comparison_panel([images.get(label) for label in labels], labels, figures / "by_budget" / f"{cid}_{config}_boundary_crop.png", crop=boundary_crop)
+    expected = [(case["case_id"], config, "warmup", 0) for case in cases for config in CONFIGS]
+    order_audits = []
+    for repeat in range(3):
+        for index, case in enumerate(cases):
+            shift = (repeat + index) % len(CONFIGS)
+            order = CONFIGS[shift:] + CONFIGS[:shift]
+            expected += [(case["case_id"], config, "measurement", repeat) for config in order]
+            observed = [config_id(row) for row in measurements if row["case_id"] == case["case_id"] and row["repeat"] == repeat]
+            order_audits.append(dict(case_id=case["case_id"], repeat=repeat, expected_order=order, observed_order=observed, matches=order == observed))
+    observed = [(row["case_id"], config_id(row), row["kind"], int(row["repeat"])) for row in relevant]
+    order_matches = expected == observed
+    if not order_matches:
+        warnings.append("Full warmup/measurement interleaving differs from frozen cyclic order")
+    failures = [row for row in relevant_raw if row.get("status") != "complete"]
+    counts = dict(raw_records=len(raw), successful_unique_relevant_records=len(relevant), expected_successful_records=72,
+        measurements=len(measurements), expected_measurements=54, warmups=sum(row.get("kind") == "warmup" for row in relevant), expected_warmups=18,
+        actual_recorded_dit_calls=sum(row.get("dit_calls", 0) for row in relevant), expected_dit_calls=576)
+    repeated_audits = []
+    for case in cases:
+        cid = case["case_id"]
+        for config in CONFIGS:
+            group = [row for row in relevant if row["case_id"] == cid and config_id(row) == config]
+            group_complete = len(group) == 4 and sum(row["kind"] == "warmup" for row in group) == 1
+            group_complete = group_complete and {int(row["repeat"]) for row in group if row["kind"] == "measurement"} == {0, 1, 2}
+            identical = len({row.get("output_sha256") for row in group}) == 1 if group else False
+            repeated_audits.append(dict(case_id=cid, config=config, requests=len(group), complete=group_complete,
+                warmup_and_measurement_output_sha_identical=identical))
+            if group and not identical:
+                warnings.append(f"Warmup/measurement output SHA differs: {cid}/{config}")
+    complete = len(relevant) == 72 and len(measurements) == 54 and counts["warmups"] == 18 and not duplicates and not duplicate_measurements
+    complete = complete and all(row["complete"] for row in repeated_audits)
+    complete = complete and all(row["timing_complete"] and row.get("quality_status") == "complete" for row in metrics)
+    configurations = configuration_summaries(metrics, len(cases))
+    summary = dict(phase=phase, status="complete" if complete else "partial",
+        status_scope="Aggregation completeness only, not quality, budget correctness, visual acceptance or formal Go",
+        configs=configurations, counts=counts, failed_records=failures, duplicate_successful_run_ids=duplicates,
+        duplicate_measurement_keys=duplicate_measurements, warnings=warnings,
+        baseline_F_R2_audits=baseline_audits, all_request_F_R2_audits=policy_audits,
+        repeated_output_sha_audits=repeated_audits,
+        repeated_output_sha_audit_all_passed=complete and all(row["warmup_and_measurement_output_sha_identical"] for row in repeated_audits),
+        output_file_sha_audits=output_audits, output_file_sha_audits_all_passed=len(output_audits) == len(relevant) and all(row["matches"] for row in output_audits),
+        measurement_order_audits=order_audits, execution_order_audit=dict(planned_execution=[list(value) for value in expected],
+            observed_execution=[list(value) for value in observed], complete_order_matches=order_matches),
+        budget_summaries=list(budgets.values()), budget_plan_audits_all_passed=all(value["all_plan_audits_passed"] for value in budgets.values()),
+        runtime_age_audits=runtime_audits, runtime_age_audits_all_passed=len(runtime_audits) == len(relevant) and all(value["all_steps_match"] for value in runtime_audits),
+        planner_runtime_rows=planner_rows, planner_runtime_metadata_all_recorded=len(planner_rows) == len(relevant) and all(value["timing_valid"] and value["metadata_recorded"]
+            and value["metadata_matches_frozen"] and value["selected_counts_match"] and value["producer_policy_match"] is True for value in planner_rows),
+        quality_rows=metrics, extra_dense_oracles_in_performance=0,
+        paths=dict(runs=str(runs_path), environment=str(environment_path), previous_root=str(previous), regions=str(regions_path), helpers=str(helper_path), budget_plan=str(plan_path)),
+        protocol=dict(case_count=len(cases), repeats=3, quality_repeat=0, timing_baseline="Same-stage F of the same case/repeat; no previous-phase timing denominator",
+            budget="b limits each partial step background target count to floor(b*N_background); non-core parts of each whole 2x2 tile are indivisible",
+            actual_budget="Report used background/N_background, active target/N_target, full8 sum(active target)/(8*N_target), and unused cap separately; none is an actual latency ratio",
+            age="Oldest-first scheduling has no hard maximum-age guarantee; full steps 1/8 and always-active R2 core are retained",
+            operation="Real target Q/K/V/MLP plus complete condition/text; selected K/V/velocity are jointly refreshed; no Value correction or teacher in deployment",
+            planner_timing="Only B125/B250/B333/B500 rebuild all eight step policies inside each request e2e; F/R2 use frozen static policies with zero selection seconds; do not subtract candidate planner time",
+            quality="Unmasked RGB LPIPS Alex spatial map; old R0 evaluation core/bands and unchanged old allowed-box far background; repeat0 only",
+            frozen_gate=dict(lpips_mapmean_to_F_max=.02, extra_background_mae_over_F_max=1 / 255),
+            formal_target="Numeric quality and >=10% e2e latency reduction plus semantic/boundary pass; these three repeatedly viewed demos cannot establish formal Go",
+            limits="No quality guarantee from budget, age, area or lower LPIPS alone; no learned controller, RL, independent test, confidence interval, significance or noninferiority claim"))
+    helpers.save_csv(data / "quality_primary.csv", metrics)
+    helpers.save_csv(data / "timings_primary.csv", timings)
+    helpers.save_csv(data / "budget_primary.csv", [{key: value for key, value in row.items() if key != "steps"} for row in budgets.values()])
+    helpers.save_csv(data / "budget_steps_primary.csv", [step for row in budgets.values() for step in row["steps"]])
+    helpers.save_csv(data / "planner_primary.csv", planner_rows)
+    save_json(data / "summary_primary.json", summary)
+    metric_environment = helpers.metric_environment(lpips, args.device, previous)
+    metric_environment.update(phase=phase, script_sha256=helpers.sha256(Path(__file__)), raw_runs_sha256=helpers.sha256(runs_path), budget_plan_sha256=helpers.sha256(plan_path))
+    save_json(data / "metrics_environment_primary.json", metric_environment)
+    make_plots(root, cases, metrics, measurements, budgets, helpers)
+    lines = ["# 规则预算控制：实测数据摘要", "", f"汇总状态：**{summary['status']}**；完成 {len(relevant)}/72 个成功请求、{counts['actual_recorded_dit_calls']}/576 次 DiT。18 预热、54 计时；仅 repeat0 评质量。complete 不代表算法质量验收通过。", "",
+        "## 1 同期 F 配对结果", "", "| 输入 | 配置 | 中位秒 | CV | 配对几何耗时比/F | LPIPS/F | 公共band2 MAE/F | extraBG/F | 数值门槛 |", "|---|---|---:|---:|---:|---:|---:|---:|---|"]
+    for row in metrics:
+        lines.append("| " + " | ".join(display(value) for value in [row["case_id"], row["config"], row["e2e_median_seconds"], row["e2e_cv"], row["paired_geometric_latency_ratio_to_F"], row.get("lpips_mapmean_to_F"), row.get("band2_mae_to_F"), row.get("extra_background_mae_over_F"), row.get("predefined_quality_gate_pass")]) + " |")
+    lines += ["", "数值门槛逐例为 LPIPS≤0.02 且 extraBG≤1/255；不保证文字正确、身份保持或无接缝。extraBG=候选对源图远背景MAE−同期F对应MAE，负数不表示编辑更正确。三个旧开发样例、一个生成种子；计时重复不是独立质量样本。", "",
+        "## 2 实际计算预算与规划成本", "", "| 输入 | 配置 | 请求b | 六局部步实际bg比例均值 | 六局部步active target比例 | 完整8步target比例 | 未用cap均值/最大 | 最大读age | 规划中位秒 |", "|---|---|---|---:|---:|---:|---|---:|---:|"]
+    for row in metrics:
+        unused = f"{display(row['mean_unused_partial_background_cap'])}/{display(row['max_unused_partial_background_cap'])}"
+        values = [row["case_id"], row["config"], row["requested_background_fraction"] or "FULL", row["mean_partial_background_fraction"], row["mean_partial_active_target_fraction"], row["full8_target_fraction"], unused, row["max_read_age"], row["budget_selection_median_seconds"]]
+        lines.append("| " + " | ".join(display(value) for value in values) + " |")
+    lines += ["", "b 约束的是每个局部步背景目标 token 的上限；整块不能截断，因此实际使用可略小于 floor(b×背景数)。full8 比例为8步选中目标总数/(8×全目标数)，包含首尾全量；它不含条件图和文本固定计算，不能解释为全DiT FLOPs或耗时比。", "",
+        "仅 B125/B250/B333/B500 在每个请求内重建8步策略并计时；F/R2 读取冻结静态策略，规划耗时记0。候选规划已包含于端到端耗时，不从测量中减去。不施加硬age阈值、不进行Value校正，不把预算或观测年龄当质量保证。", "",
+        "## 3 审计与结论边界", "", f"计划预算/整块/年龄核对：**{display(summary['budget_plan_audits_all_passed'])}**；所有成功请求运行时年龄/QKV/MLP：**{display(summary['runtime_age_audits_all_passed'])}**；完整执行顺序：**{display(order_matches)}**；规划元数据和耗时：**{display(summary['planner_runtime_metadata_all_recorded'])}**。", "",
+        "| 输入 | 配置 | 旧PNG SHA一致 | RGB一致 |", "|---|---|---|---|"]
+    for row in baseline_audits:
+        lines.append("| " + " | ".join(display(value) for value in [row["case_id"], row["config"], row.get("png_sha256_equal"), row.get("pixel_identical")]) + " |")
+    lines += ["", "预算递增不能预先保证质量单调改善或保持至少10%净节时。所有预算、失败语义和局部亮度块必须并列检查；此摘要不自动宣布编辑成功或正式Go，不从多个预算中后验挑一个冒充冻结策略。", ""]
+    if warnings:
+        lines += ["审计提示：", ""] + [f"- {value}" for value in warnings] + [""]
+    lines += ["## 4 对照与原分辨率裁剪", "", "原分辨率 crop 不做缩放；公共core/边界范围由旧评价区决定，不随预算变动。", ""]
+    for case in cases:
+        cid = case["case_id"]
+        lines += [f"- [{cid} 所有配置全图](figures/primary/{cid}_comparison.png)", f"- [{cid} 所有配置原分辨率边界](figures/primary/{cid}_boundary_crop.png)"]
+        for config in CONFIGS[2:]:
+            lines += [f"- [{cid} {config} 原分辨率核心](figures/primary/by_budget/{cid}_{config}_core_crop.png)", f"- [{cid} {config} 原分辨率边界](figures/primary/by_budget/{cid}_{config}_boundary_crop.png)"]
+    lines += ["", "- [同期延迟与重复](figures/primary/latency.png)", "- [实际预算—质量—延迟图](figures/primary/budget_quality_latency.png)", "- [完整汇总](data/summary_primary.json)", "- [实际预算](data/budget_primary.csv)", "- [逐步预算](data/budget_steps_primary.csv)", "- [规划耗时](data/planner_primary.csv)", "", "人工非盲视觉检查与最终Go/Revise判断须由实际图像另行补充。", ""]
+    (root / "03_预算数据摘要.md").write_text("\n".join(lines), encoding="utf-8")
+    print(json.dumps(dict(status=summary["status"], counts=counts, configs=configurations, warnings=warnings), ensure_ascii=False, indent=2, allow_nan=False))
+
+
+if __name__ == "__main__":
+    main()

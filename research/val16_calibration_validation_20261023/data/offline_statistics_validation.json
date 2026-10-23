@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "scope": "Independent CPU recomputation from emitted timing/quality CSV; does not add model/LPIPS forward or fit",
+  "quality_rows": 80,
+  "timing_rows": 240,
+  "source_images": 16,
+  "config_checks": [
+    {
+      "config": "F",
+      "paired_latency_recomputed_from_240_raw_timing_csv": "PASS",
+      "source_bootstrap_latency_95": "PASS",
+      "lpips_bootstrap_95": "PASS",
+      "numeric_threshold_count": "PASS",
+      "wilson_interval": "PASS"
+    },
+    {
+      "config": "R2",
+      "paired_latency_recomputed_from_240_raw_timing_csv": "PASS",
+      "source_bootstrap_latency_95": "PASS",
+      "lpips_bootstrap_95": "PASS",
+      "numeric_threshold_count": "PASS",
+      "wilson_interval": "PASS"
+    },
+    {
+      "config": "PRIOR",
+      "paired_latency_recomputed_from_240_raw_timing_csv": "PASS",
+      "source_bootstrap_latency_95": "PASS",
+      "lpips_bootstrap_95": "PASS",
+      "numeric_threshold_count": "PASS",
+      "wilson_interval": "PASS"
+    },
+    {
+      "config": "A",
+      "paired_latency_recomputed_from_240_raw_timing_csv": "PASS",
+      "source_bootstrap_latency_95": "PASS",
+      "lpips_bootstrap_95": "PASS",
+      "numeric_threshold_count": "PASS",
+      "wilson_interval": "PASS"
+    },
+    {
+      "config": "B",
+      "paired_latency_recomputed_from_240_raw_timing_csv": "PASS",
+      "source_bootstrap_latency_95": "PASS",
+      "lpips_bootstrap_95": "PASS",
+      "numeric_threshold_count": "PASS",
+      "wilson_interval": "PASS"
+    }
+  ],
+  "route_lpips_delta_bootstrap_checks": {
+    "PRIOR_vs_R2": "PASS",
+    "A_vs_PRIOR": "PASS",
+    "B_vs_R2": "PASS",
+    "B_vs_PRIOR": "PASS",
+    "B_vs_A": "PASS"
+  },
+  "inputs_sha256": {
+    "data/summary_val16.json": "2d3013fa8cb514e9775813f0f12fbea25ebfcbf2b3885a5f560cae69cc054ca6",
+    "data/quality_val16.csv": "b690481d243e39bd28d527a389f193900bfc58ba41ceeb736dcdf42d238fd5f3",
+    "data/timings_val16.csv": "fce11aa1abbb2d5c58b78b76d8ff9d5b71e3e21b80346723da02bb11f5873bbc"
+  }
+}

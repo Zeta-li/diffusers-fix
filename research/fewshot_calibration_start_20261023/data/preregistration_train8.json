@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-10-23T15:47:29.825175+08:00",
+  "phase": "train8",
+  "planned_requests": 8,
+  "planned_student_calls": 64,
+  "planned_oracle_calls": 48,
+  "planned_real_dit_forwards": 112,
+  "training_ids": [
+    "mb_train_405994",
+    "mb_train_301232",
+    "mb_train_544811",
+    "mb_train_253960",
+    "mb_train_315467",
+    "mb_train_355272",
+    "mb_train_257102",
+    "mb_train_271359"
+  ],
+  "val_and_test_generated": false,
+  "source_files": {
+    "cases_train8.json": "627212a7beaf3dbf28247559387936e210864f9e1636a8dbd57d90023c3f26c9",
+    "data/train8_assets.json": "1ffe1b620416f7d725562e7fd2d19c56bba3199e330cc6c22e53580b2ae92190",
+    "data/frozen_selection.json": "577ff3a6f7bcbfc94ff150c055e335db63adc9f76247f00135138482185ba01a",
+    "preprocess_alpha_v2/data/frozen_selection.json": "761369ee6fa70e36af76f63ed30e5b6ce6050b2250171def0be563dd1dd568b9",
+    "preprocess_alpha_v2/data/decoder_amendment.json": "8fae41a3230083e9b892f6df7f5aaedb33c7c727766384f9344c51903c044c0a",
+    "scripts/run_collection.py": "0b8aa819867c04060418b8e499b028765e3c2188a54b91686a9624278288a55b",
+    "scripts/calibration_collector.py": "bf8e998c6bb0e738ad8de605d30e83f5f52e177c2914b0e78a668d2ce9a8694d",
+    "scripts/moments.py": "64f3d0227e33da55e3b92835abe4c643edaeb0b3a0a4dcfa81d8cd4f29071ae6",
+    "scripts/local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "scripts/fit_train8.py": "fc866835100f1bd6362f040c0003cd436e7390e4f99a554b818292056b622575"
+  }
+}

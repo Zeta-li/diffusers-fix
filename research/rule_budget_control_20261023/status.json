@@ -1,0 +1,7 @@
+{
+  "phase": "complete",
+  "time": "2026-10-23T12:19:32.713768+08:00",
+  "group": "primary",
+  "requests": 72,
+  "total_model_forwards": 576
+}
