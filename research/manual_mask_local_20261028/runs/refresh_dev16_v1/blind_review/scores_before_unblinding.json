@@ -1,0 +1,488 @@
+{
+  "status": "FROZEN_BEFORE_UNBLINDING",
+  "mapping_read": false,
+  "frozen_at": "2026-10-30T13:58:03.838652+00:00",
+  "reviewer": "single assistant; all 4 anonymous pages and 6 detail sheets inspected; no arm mapping read",
+  "rows": [
+    {
+      "case_id": "refresh_dev_29324",
+      "source_instruction": "Remove the surfboards. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "All three surfboards removed; people, dog and shoreline retained."
+        },
+        "B": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "All three surfboards removed; people, dog and shoreline retained."
+        },
+        "C": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "All three surfboards removed; people, dog and shoreline retained."
+        },
+        "D": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "All three surfboards removed; people, dog and shoreline retained."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_270186",
+      "source_instruction": "Let's add a monitor on the wall. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Wall monitor added with room objects retained."
+        },
+        "B": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Wall monitor added with room objects retained."
+        },
+        "C": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Wall monitor added with room objects retained."
+        },
+        "D": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Wall monitor added with room objects retained."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_520480",
+      "source_instruction": "Have there be a basket of fruit on the counter. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Fruit basket added on counter; original mixed drawing/photo background retained."
+        },
+        "B": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Fruit basket added on counter; original mixed drawing/photo background retained."
+        },
+        "C": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Fruit basket added on counter; original mixed drawing/photo background retained."
+        },
+        "D": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Fruit basket added on counter; original mixed drawing/photo background retained."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_140043",
+      "source_instruction": "Let the jam be changed to strawberry one. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": false,
+          "preservation": false,
+          "uncertain": false,
+          "note": "Grape-jelly packet remains grape in all enlarged views; unrelated toast receives red spread. Wrong object binding."
+        },
+        "B": {
+          "edit": false,
+          "preservation": false,
+          "uncertain": false,
+          "note": "Grape-jelly packet remains grape in all enlarged views; unrelated toast receives red spread. Wrong object binding."
+        },
+        "C": {
+          "edit": false,
+          "preservation": false,
+          "uncertain": false,
+          "note": "Grape-jelly packet remains grape in all enlarged views; unrelated toast receives red spread. Wrong object binding."
+        },
+        "D": {
+          "edit": false,
+          "preservation": false,
+          "uncertain": false,
+          "note": "Grape-jelly packet remains grape in all enlarged views; unrelated toast receives red spread. Wrong object binding."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_86582",
+      "source_instruction": "a parakeet should be sitting on the knit item. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Parakeet sits on knitted item; surrounding objects retained."
+        },
+        "B": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Parakeet sits on knitted item; surrounding objects retained."
+        },
+        "C": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Parakeet sits on knitted item; surrounding objects retained."
+        },
+        "D": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Parakeet sits on knitted item; surrounding objects retained."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_204837",
+      "source_instruction": "Have one of the children be blowing bubbles. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": true,
+          "note": "A/B show a pale disk at mouth; C/D a tiny ring. Enlarged view does not clearly establish blowing bubbles. Uncertain excluded from joint pass."
+        },
+        "B": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": true,
+          "note": "A/B show a pale disk at mouth; C/D a tiny ring. Enlarged view does not clearly establish blowing bubbles. Uncertain excluded from joint pass."
+        },
+        "C": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": true,
+          "note": "A/B show a pale disk at mouth; C/D a tiny ring. Enlarged view does not clearly establish blowing bubbles. Uncertain excluded from joint pass."
+        },
+        "D": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": true,
+          "note": "A/B show a pale disk at mouth; C/D a tiny ring. Enlarged view does not clearly establish blowing bubbles. Uncertain excluded from joint pass."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_102625",
+      "source_instruction": "let there be a game show on TV. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": false,
+          "preservation": false,
+          "uncertain": false,
+          "note": "Kitchen window/mirror becomes screen; original lower-left TV stays dark. Wrong object binding."
+        },
+        "B": {
+          "edit": false,
+          "preservation": false,
+          "uncertain": false,
+          "note": "Kitchen window/mirror becomes screen; original lower-left TV stays dark. Wrong object binding."
+        },
+        "C": {
+          "edit": false,
+          "preservation": false,
+          "uncertain": false,
+          "note": "Kitchen window/mirror becomes screen; original lower-left TV stays dark. Wrong object binding."
+        },
+        "D": {
+          "edit": false,
+          "preservation": false,
+          "uncertain": false,
+          "note": "Kitchen window/mirror becomes screen; original lower-left TV stays dark. Wrong object binding."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_509416",
+      "source_instruction": "Let the drink be replaced by a glass of milk. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Drink becomes a glass with pale milk; wrapper and setting retained."
+        },
+        "B": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Drink becomes a glass with pale milk; wrapper and setting retained."
+        },
+        "C": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Drink becomes a glass with pale milk; wrapper and setting retained."
+        },
+        "D": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Drink becomes a glass with pale milk; wrapper and setting retained."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_10546",
+      "source_instruction": "Add a turtle. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Turtle added on grass beside bag; surrounding scene retained."
+        },
+        "B": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Turtle added on grass beside bag; surrounding scene retained."
+        },
+        "C": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Turtle added on grass beside bag; surrounding scene retained."
+        },
+        "D": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Turtle added on grass beside bag; surrounding scene retained."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_581668",
+      "source_instruction": "Add cookies to the tray. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": false,
+          "preservation": false,
+          "uncertain": false,
+          "note": "No clearly added cookies versus source; tray composition zooms out and existing top food changes. All fail edit and preservation."
+        },
+        "B": {
+          "edit": false,
+          "preservation": false,
+          "uncertain": false,
+          "note": "No clearly added cookies versus source; tray composition zooms out and existing top food changes. All fail edit and preservation."
+        },
+        "C": {
+          "edit": false,
+          "preservation": false,
+          "uncertain": false,
+          "note": "No clearly added cookies versus source; tray composition zooms out and existing top food changes. All fail edit and preservation."
+        },
+        "D": {
+          "edit": false,
+          "preservation": false,
+          "uncertain": false,
+          "note": "No clearly added cookies versus source; tray composition zooms out and existing top food changes. All fail edit and preservation."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_371643",
+      "source_instruction": "let the fruit be sliced bananas. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Yellow citrus wedges and red watermelon remain; no recognizable sliced bananas."
+        },
+        "B": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Yellow citrus wedges and red watermelon remain; no recognizable sliced bananas."
+        },
+        "C": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Yellow citrus wedges and red watermelon remain; no recognizable sliced bananas."
+        },
+        "D": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Yellow citrus wedges and red watermelon remain; no recognizable sliced bananas."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_395040",
+      "source_instruction": "What if the man was standing?. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Athlete now upright, skis, venue and equipment retained with pose-related changes allowed."
+        },
+        "B": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Athlete now upright, skis, venue and equipment retained with pose-related changes allowed."
+        },
+        "C": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Athlete now upright, skis, venue and equipment retained with pose-related changes allowed."
+        },
+        "D": {
+          "edit": true,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Athlete now upright, skis, venue and equipment retained with pose-related changes allowed."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_341070",
+      "source_instruction": "Let the faucet be turned on. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": true,
+          "note": "Enlarged faucet view does not establish a continuous water stream; uncertain excluded."
+        },
+        "B": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": true,
+          "note": "Enlarged faucet view does not establish a continuous water stream; uncertain excluded."
+        },
+        "C": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": true,
+          "note": "Enlarged faucet view does not establish a continuous water stream; uncertain excluded."
+        },
+        "D": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": true,
+          "note": "Enlarged faucet view does not establish a continuous water stream; uncertain excluded."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_80932",
+      "source_instruction": "Make the glass of water a to go cup. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": true,
+          "note": "Gray drawn cup overlay; C is more opaque but takeaway identity and coherent rendering remain uncertain for all."
+        },
+        "B": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": true,
+          "note": "Gray drawn cup overlay; C is more opaque but takeaway identity and coherent rendering remain uncertain for all."
+        },
+        "C": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": true,
+          "note": "Gray drawn cup overlay; C is more opaque but takeaway identity and coherent rendering remain uncertain for all."
+        },
+        "D": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": true,
+          "note": "Gray drawn cup overlay; C is more opaque but takeaway identity and coherent rendering remain uncertain for all."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_267300",
+      "source_instruction": "Put popcorn in the plate. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Plate filled with smooth yellow corn kernels rather than popped popcorn."
+        },
+        "B": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Plate filled with smooth yellow corn kernels rather than popped popcorn."
+        },
+        "C": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Plate filled with smooth yellow corn kernels rather than popped popcorn."
+        },
+        "D": {
+          "edit": false,
+          "preservation": true,
+          "uncertain": false,
+          "note": "Plate filled with smooth yellow corn kernels rather than popped popcorn."
+        }
+      }
+    },
+    {
+      "case_id": "refresh_dev_468505",
+      "source_instruction": "Replace all the food with a big pizza. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "scores": {
+        "A": {
+          "edit": true,
+          "preservation": false,
+          "uncertain": false,
+          "note": "Large pizza replaces food but removes foreground drinks/glasses and other table items required to remain."
+        },
+        "B": {
+          "edit": true,
+          "preservation": false,
+          "uncertain": false,
+          "note": "Large pizza replaces food but removes foreground drinks/glasses and other table items required to remain."
+        },
+        "C": {
+          "edit": true,
+          "preservation": false,
+          "uncertain": false,
+          "note": "Large pizza replaces food but removes foreground drinks/glasses and other table items required to remain."
+        },
+        "D": {
+          "edit": true,
+          "preservation": false,
+          "uncertain": false,
+          "note": "Large pizza replaces food but removes foreground drinks/glasses and other table items required to remain."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "reviewer": "single assistant, nonblind visual inspection of every F and FIX32 output; no human independent rating",
+  "sources": 3,
+  "seeds": 2,
+  "selected_prompt_quality": {
+    "F_task_pass": 6,
+    "FIX32_task_pass": 6,
+    "total_source_seed_pairs": 6,
+    "FIX32_numeric_pass": 6
+  },
+  "texture_limitations": [
+    "Hat weave is weaker in both F and FIX32; this selectivity result is not lossless fidelity",
+    "Seed2 hat band is dark in F and light in FIX32; task-level selectivity passes but fine-detail fidelity does not imply exact equivalence"
+  ],
+  "seed2_notes": {
+    "272738": "Only target glass replaced; left patterned mug retained in F and FIX32",
+    "210597": "Right flat cushion red and left cushion blue in both arms",
+    "213020": "Man hat red; no hat added to woman; original hair and face broadly retained in both arms"
+  },
+  "original_internal_gate": "UNCHANGED_NO_GO_NET_LATENCY_3of4",
+  "new_independent_validation": false,
+  "net_latency_permission_from_this_diagnostic": false,
+  "prompt_selection_cost_full_requests": 6,
+  "paired_seed1_FIX32_requests": 3,
+  "seed2_F_and_FIX32_requests": 6,
+  "total_new_requests": 15,
+  "total_new_DiT": 120,
+  "next": "Continue only training-source same-state refresh-signal diagnosis; freeze a new source-disjoint evaluation before claiming generalization",
+  "final_review_resolution": "Every selected seed2 F/FIX32 re-inspected at500px; detailed hat band difference retained"
+}

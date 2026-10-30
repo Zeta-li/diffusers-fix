@@ -1,0 +1,698 @@
+{
+  "reviewed_at": "2026-10-30T12:32:49.181041+00:00",
+  "reviewer": "single assistant nonblind;4 contact sheets inspected; F/R25 existing frozen rubric retained",
+  "rows": [
+    {
+      "case_id": "expand_train_372317",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Stickers added on bus body.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_372317",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Stickers added on bus body.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_236484",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Bananas replaced with piggy banks; other fruit retained.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_236484",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Bananas replaced with piggy banks; other fruit retained.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_45626",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Catcher has cowboy hat; other people and scene retained.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_45626",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Catcher has cowboy hat; other people and scene retained.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_181796",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Wine changed to orange juice in glass.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_181796",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Wine changed to orange juice in glass.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_399532",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Ball supported by tee.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_399532",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Ball supported by tee.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_108442",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Dog added, but existing cat removed.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_108442",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Dog added, but existing cat removed.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_385707",
+      "edit": false,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Bottle erased instead of closed.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_385707",
+      "edit": false,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Bottle erased instead of closed.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_302289",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Both monitors changed to red despite singular computer request.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_302289",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Both monitors changed to red despite singular computer request.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_463844",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Wine bottle added on counter.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_463844",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Wine bottle added on counter.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_522229",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Pizza replaced by burger.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_522229",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Pizza replaced by burger.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_445972",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Sign is green, but shifted down from original partly cropped location; preservation fails under frozen rule.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_445972",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Sign is green, but shifted down from original partly cropped location; preservation fails under frozen rule.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_343552",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Cat eyes changed to green.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_343552",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Cat eyes changed to green.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_286442",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Phone replaced by walkie-talkie.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_286442",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Phone replaced by walkie-talkie.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_352264",
+      "edit": false,
+      "preservation": true,
+      "uncertain": false,
+      "joint": false,
+      "note": "Native crops show nose repainting, no clear damage to plane.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_352264",
+      "edit": false,
+      "preservation": true,
+      "uncertain": false,
+      "joint": false,
+      "note": "Native crops show nose repainting, no clear damage to plane.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_196699",
+      "edit": false,
+      "preservation": true,
+      "uncertain": false,
+      "joint": false,
+      "note": "Whole uncut apple replaces cut pepper; requested cut state absent.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_196699",
+      "edit": false,
+      "preservation": true,
+      "uncertain": false,
+      "joint": false,
+      "note": "Whole uncut apple replaces cut pepper; requested cut state absent.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_47893",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "LEAF text readable on large red bag; other bags retained.",
+      "arm": "R4",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    },
+    {
+      "case_id": "expand_train_47893",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "LEAF text readable on large red bag; other bags retained.",
+      "arm": "R6",
+      "observed_change_from_R25": "none affecting frozen strict edit/preservation classification"
+    }
+  ],
+  "previous_frozen_review_sha256": "da6c3bb821a6224300017d65f59a2ac04d05c89577f475300668927059f8a68e",
+  "joint_counts": {
+    "F": 10,
+    "R25": 10,
+    "R4": 10,
+    "R6": 10,
+    "SUP": 10,
+    "RL": 10
+  },
+  "n": 16,
+  "new_joint_regressions_vs_R25": 0,
+  "same_semantic_outcome_does_not_imply_pixel_lossless": true,
+  "images": [
+    "runs/refresh_bandit_v1/analysis/review/calibration_1.jpg",
+    "runs/refresh_bandit_v1/analysis/review/calibration_2.jpg",
+    "runs/refresh_bandit_v1/analysis/review/calibration_3.jpg",
+    "runs/refresh_bandit_v1/analysis/review/calibration_4.jpg"
+  ],
+  "policy_scores": [
+    {
+      "case_id": "expand_train_372317",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Stickers added on bus body.",
+      "policy": "SUP",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_372317",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Stickers added on bus body.",
+      "policy": "RL",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_236484",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Bananas replaced with piggy banks; other fruit retained.",
+      "policy": "SUP",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_236484",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Bananas replaced with piggy banks; other fruit retained.",
+      "policy": "RL",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_45626",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Catcher has cowboy hat; other people and scene retained.",
+      "policy": "SUP",
+      "selected_action": "R4",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_45626",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Catcher has cowboy hat; other people and scene retained.",
+      "policy": "RL",
+      "selected_action": "R4",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_181796",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Wine changed to orange juice in glass.",
+      "policy": "SUP",
+      "selected_action": "R4",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_181796",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Wine changed to orange juice in glass.",
+      "policy": "RL",
+      "selected_action": "R4",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_399532",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Ball supported by tee.",
+      "policy": "SUP",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_399532",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Ball supported by tee.",
+      "policy": "RL",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_108442",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Dog added, but existing cat removed.",
+      "policy": "SUP",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_108442",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Dog added, but existing cat removed.",
+      "policy": "RL",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_385707",
+      "edit": false,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Bottle erased instead of closed.",
+      "policy": "SUP",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_385707",
+      "edit": false,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Bottle erased instead of closed.",
+      "policy": "RL",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_302289",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Both monitors changed to red despite singular computer request.",
+      "policy": "SUP",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_302289",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Both monitors changed to red despite singular computer request.",
+      "policy": "RL",
+      "selected_action": "R4",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_463844",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Wine bottle added on counter.",
+      "policy": "SUP",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_463844",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Wine bottle added on counter.",
+      "policy": "RL",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_522229",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Pizza replaced by burger.",
+      "policy": "SUP",
+      "selected_action": "R4",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_522229",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Pizza replaced by burger.",
+      "policy": "RL",
+      "selected_action": "R4",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_445972",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Sign is green, but shifted down from original partly cropped location; preservation fails under frozen rule.",
+      "policy": "SUP",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_445972",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "joint": false,
+      "note": "Sign is green, but shifted down from original partly cropped location; preservation fails under frozen rule.",
+      "policy": "RL",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_343552",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Cat eyes changed to green.",
+      "policy": "SUP",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_343552",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Cat eyes changed to green.",
+      "policy": "RL",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_286442",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Phone replaced by walkie-talkie.",
+      "policy": "SUP",
+      "selected_action": "R25",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_286442",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "Phone replaced by walkie-talkie.",
+      "policy": "RL",
+      "selected_action": "R25",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_352264",
+      "edit": false,
+      "preservation": true,
+      "uncertain": false,
+      "joint": false,
+      "note": "Native crops show nose repainting, no clear damage to plane.",
+      "policy": "SUP",
+      "selected_action": "R6",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_352264",
+      "edit": false,
+      "preservation": true,
+      "uncertain": false,
+      "joint": false,
+      "note": "Native crops show nose repainting, no clear damage to plane.",
+      "policy": "RL",
+      "selected_action": "R4",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_196699",
+      "edit": false,
+      "preservation": true,
+      "uncertain": false,
+      "joint": false,
+      "note": "Whole uncut apple replaces cut pepper; requested cut state absent.",
+      "policy": "SUP",
+      "selected_action": "R4",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_196699",
+      "edit": false,
+      "preservation": true,
+      "uncertain": false,
+      "joint": false,
+      "note": "Whole uncut apple replaces cut pepper; requested cut state absent.",
+      "policy": "RL",
+      "selected_action": "R4",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_47893",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "LEAF text readable on large red bag; other bags retained.",
+      "policy": "SUP",
+      "selected_action": "R4",
+      "inherited_by_verified_RGB_equality": true
+    },
+    {
+      "case_id": "expand_train_47893",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "joint": true,
+      "note": "LEAF text readable on large red bag; other bags retained.",
+      "policy": "RL",
+      "selected_action": "R4",
+      "inherited_by_verified_RGB_equality": true
+    }
+  ]
+}

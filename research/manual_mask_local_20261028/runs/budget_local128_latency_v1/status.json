@@ -1,0 +1,13 @@
+{
+  "phase": "complete_analysis_pending",
+  "active": {
+    "index": 74,
+    "case_id": "expand_dev_572804",
+    "arm": "LOCAL128",
+    "phase": "paired",
+    "repeat": 3
+  },
+  "invoked_dit": 600,
+  "completed_dit": 600,
+  "successful_requests": 75
+}

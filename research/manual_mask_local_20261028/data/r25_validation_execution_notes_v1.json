@@ -1,0 +1,21 @@
+{
+  "seed2_attempt": "r25_seed2_v1",
+  "fresh_dev_attempt": "r25_fresh_dev32_v1",
+  "seed2_pid": 409360,
+  "fresh_dev_pid": 411695,
+  "source_only_pid": 409882,
+  "environment_checks": [
+    "python utils/check_ai.py passed",
+    "diffusers-cli skills list passed"
+  ],
+  "source_download_successes": 64,
+  "source_download_failures": 0,
+  "new_gradient_updates": 0,
+  "new_RL_updates": 0,
+  "diagnostic_seconds_are_not_net_latency": true,
+  "git_commit": false,
+  "git_push": false,
+  "latency_pid": 414094,
+  "latency_addition": "after quality pass; first8 in frozen dev order, 3repeats and3warmups, 75requests600DiT",
+  "gpu_final_receipt": "data/r25_validation_gpu_final_receipt_v1.json"
+}

@@ -1,0 +1,26 @@
+{
+  "chosen": "untiled",
+  "development_checks": [
+    {
+      "case_id": "local_train_286770_goat",
+      "RGB_MAE": 0.001497919438406825,
+      "peak_GiB": 62.30674505233765,
+      "tiled_vae_seconds": 2.9548631591796877,
+      "untiled_vae_seconds": 0.2596559295654297
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "RGB_MAE": 0.0022329455241560936,
+      "peak_GiB": 62.30674505233765,
+      "tiled_vae_seconds": 2.954652587890625,
+      "untiled_vae_seconds": 0.23431603240966797
+    }
+  ],
+  "rule": {
+    "use_untiled_if": "both VAE-check outputs finite, each RGB MAE versus tiled <=0.01, peak <=76GiB, and summed encode+decode CUDA time lower",
+    "selection_sources": 2,
+    "selection_is_development_not_test": true,
+    "same_engine_for_all_main_arms": true
+  },
+  "semantic_review_pending": true
+}

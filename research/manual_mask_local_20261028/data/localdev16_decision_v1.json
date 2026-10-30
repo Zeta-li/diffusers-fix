@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-10-28T17:20:08.197155+08:00",
+  "status": "NO_GO_NET_LATENCY_AND_SPATIAL_HEAD_UNDER_CURRENT_PROTOCOL",
+  "stage1": "COMPLETE_64_REQUESTS_512_DIT_WITH_FULL_AUDIT_AND_REVIEW",
+  "stage2": "NOT_EXECUTED_QUALITY_GATE_FAILED",
+  "stage3": "FOLLOW_ON_DECISION_COMPLETE_NEW_SPATIAL_EXPERIMENT_AND_TRAINING_NOT_EXECUTED_PRECONDITION_FAILED",
+  "gates": {
+    "execution_audit": true,
+    "mean_improvement": false,
+    "wins": true,
+    "worst_case": false,
+    "numeric15": true,
+    "F_semantic14": false,
+    "C_semantic14": false,
+    "no_new_regression": true
+  },
+  "mean_MAE_reduction": 0.003600788378475217,
+  "wins": 14,
+  "worst_relative_MAE_increase": 0.11725785497010399,
+  "numeric_passes": 15,
+  "F_joint_task_pass": 10,
+  "C_joint_task_pass": 10,
+  "CONTEXT64_beats_FRESH64": 16,
+  "new_CONTEXT64_semantic_regressions_vs_FIX32": 0,
+  "new_training_updates": 0,
+  "new_teacher_dit": 0,
+  "new_RL_updates": 0,
+  "new_net_latency_requests": 0,
+  "dev16_status": "OPENED_AND_REPORTED_NOT_AVAILABLE_AS_UNSEEN_FOR_FUTURE_HEAD",
+  "test64_opened": false,
+  "allowed_conclusion": "Weak consistency gain and velocity-retention comparison; fixed sparse patch not promoted. No independent net acceleration or learned spatial benefit established.",
+  "next": "Stop expansion of this patch. Future work must separate foundation-model target selection/identity failures from approximation error, define a different frozen quality-valid candidate on training sources, and reserve new validation. Do not tune this LocalDev16 or treat more epochs/RL as a remedy without training opportunity evidence."
+}

@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-10-30T03:55:14.629210+00:00",
+  "reviewer": "single assistant, nonblind",
+  "edit_success": "requested object/attribute and intended target visibly present",
+  "preservation_success": "no clear extra object replacement, removal, shape or text damage outside intended change",
+  "comparison": "record baseline shared failures and incremental failures/repairs for JOINT, VELOCITY_ONLY, LORA_ONLY, FRESH_B, FULL_STUDENT",
+  "pixel_MAE": "reference closeness only, never equated with edit success",
+  "coverage": "all15 evaluation source panels, no filtering by numerical performance",
+  "qualification": "historical development sources, not independentDev32"
+}

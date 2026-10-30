@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-10-28T17:07:32.476320+08:00",
+  "phase": "BEFORE_OUTPUT_VISUAL_REVIEW",
+  "reviewer": "assistant nonblind",
+  "criteria": {
+    "158548": "Foreground sheep wool clearly black; its face, limbs and other subjects preserved.",
+    "194956": "Central model liner dark hull blue; decks/funnels and surrounding teddy bears not materially recolored.",
+    "491430": "Specified rightmost black sock white; right shoe and racket geometry preserved.",
+    "259097": "Thrower red shirt blue, including raised sleeve; skin, pose and frisbee preserved.",
+    "362944": "Car visible body paint white; windows/tires remain plausible and bicycle/sign intact.",
+    "459272": "Foreground scarf has red and blue stripes; face/hair/phone preserved.",
+    "102171": "Display screen black; white bezel and other devices preserved.",
+    "543942": "Lower-left toilet tank pale pink; sink and countertop unchanged.",
+    "193680": "Sleeping red fox with identifiable pointed muzzle replaces cat at similar scale/pose; red car intact.",
+    "407550": "Broccoli replaces carrots in specified lower-middle compartment; tray walls and other food preserved.",
+    "311326": "Only designated central blood-orange half becomes green apple half, with plausible cut apple interior; surrounding orange halves retained.",
+    "359569": "Small red ball held naturally at original frisbee contact in dog mouth; face/legs/other dogs intact.",
+    "57350": "Brown cowboy hat on giraffe, with brim beyond original head; zebras and giraffe neck intact.",
+    "134597": "Tall red cone hat with white pom-pom above dog ears; dog face/pose and frisbee preserved.",
+    "111376": "Brown cowboy hat naturally on cow head, broad brim; face and fence intact.",
+    "122927": "Tail substantially longer and curves upward, attached at original location and inside canvas; bird head/body/legs intact."
+  },
+  "rule": "An uncertain object identity, incomplete main instruction, obvious structure defect, or material unrelated object edit counts as task fail. Harmless fine texture differences recorded separately. Compare F failures and additional local failures separately.",
+  "no_outputs_inspected": true
+}

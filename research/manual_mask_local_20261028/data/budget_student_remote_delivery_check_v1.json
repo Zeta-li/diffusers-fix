@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-30T04:26:08.795587+00:00",
+  "files_verified": {
+    "data/budget_student_delivery_manifest_v1.json": 57,
+    "data/budget_student_raw_manifest_v1.json": 363,
+    "data/budget_student_latency_raw_manifest_v2.json": 213,
+    "data/budget_preflight_raw_manifest_v1.json": 180
+  },
+  "delivery_archive_sha256": "114bcb1769bd094907cb3a831a4db10348eae88a85a0824b736565bb6c2432c0",
+  "delivery_manifest_sha256": "35b99f58db3c752c919b25b32f660268c99cab8532e827ab528dbf40640b7ef2",
+  "original_records_unchanged": true
+}

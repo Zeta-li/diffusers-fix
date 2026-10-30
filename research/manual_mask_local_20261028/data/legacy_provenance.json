@@ -1,0 +1,14 @@
+[
+  {
+    "file": "手工选区局部编辑_20261028/scripts/legacy_local_executor.py",
+    "origin": "小样本校准启动_20261023/scripts/local_executor.py",
+    "sha256": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "verbatim": true
+  },
+  {
+    "file": "手工选区局部编辑_20261028/scripts/legacy_refresh_policy.py",
+    "origin": "风险约束刷新与策略学习_20261023/scripts/refresh_policy.py",
+    "sha256": "0b319fbbb05c8dff0880e75634cca524211dd8b4fce4e65006ebde7f990adfcf",
+    "verbatim": true
+  }
+]

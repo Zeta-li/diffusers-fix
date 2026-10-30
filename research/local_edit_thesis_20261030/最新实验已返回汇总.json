@@ -1,0 +1,50 @@
+{
+  "provenance": "Remote completed analysis returned these aggregates before shutdown; original latest per-request raw files not downloaded.",
+  "quality_sources": 16,
+  "latency_sources": 8,
+  "repeats_per_source": 3,
+  "results": [
+    {
+      "method": "F",
+      "rgb_mae": 0,
+      "outside_mae": 0,
+      "joint_pass": 7,
+      "latency_s": 4.265883787690351,
+      "speedup": 1,
+      "peak_GiB": 62.30374765396118
+    },
+    {
+      "method": "R25",
+      "rgb_mae": 0.008569548183004372,
+      "outside_mae": 0.006229023347259499,
+      "joint_pass": 7,
+      "latency_s": 2.8343935212275637,
+      "speedup": 1.5050428798054882,
+      "speedup_CI": [
+        1.449021516783383,
+        1.55287778954491
+      ],
+      "peak_GiB": 68.89975595474243
+    },
+    {
+      "method": "SUP",
+      "rgb_mae": 0.00841720125026768,
+      "outside_mae": 0.005668952515407,
+      "joint_pass": 7,
+      "latency_s": 2.8490154579437026,
+      "speedup": 1.4973185827392046,
+      "speedup_CI": [
+        1.445749192802051,
+        1.5392978065562806
+      ],
+      "peak_GiB": 68.89975595474243
+    },
+    {
+      "method": "R6",
+      "rgb_mae": 0.00908853697910672,
+      "outside_mae": 0.006662491643510293,
+      "joint_pass": 7,
+      "latency_s": null
+    }
+  ]
+}

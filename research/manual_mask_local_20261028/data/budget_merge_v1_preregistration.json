@@ -1,0 +1,628 @@
+{
+  "created_at": "2026-10-30T13:01:11.682965",
+  "phase": "FROZEN_BEFORE_MERGE_INFERENCE",
+  "cases": [
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "image": "inputs/s1_train8/local_train_286770_goat/source.original",
+      "source_sha256": "75247dd935a0f86f1a6a799d66b5bd8c8f3f65c5d50cdda829c6c6129404463a",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        165,
+        180,
+        250,
+        395
+      ],
+      "prompt": "Replace only the leftmost lamb with a young goat of similar size in the same standing pose and position. Keep the other two sheep and the rest of the scene unchanged."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "image": "inputs/s1_train8/local_train_486018_dog/source.original",
+      "source_sha256": "17d9d3e818058c897ed59d4b5b9e01ab7559c881f3f33b352f6ae7137a3900ae",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        75,
+        85,
+        275,
+        250
+      ],
+      "prompt": "Replace the black cat on the microwave with a small black Labrador retriever puppy with floppy hanging ears and a broad dog muzzle. Keep the puppy on top of the same microwave. Preserve the microwave and the rest of the room."
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "source_group_id": "178810",
+      "image": "inputs/s1_train8/local_train_178810_bollard/source.original",
+      "source_sha256": "840d713265c58ef1b6ead8f0804e1688f142b48cc136b75494933d3c9b9d3d00",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        155,
+        345,
+        230,
+        465
+      ],
+      "prompt": "Replace the fire hydrant with a short red cylindrical street bollard of similar height at the same ground position. Keep the wall, trees, pavement, and the rest of the scene unchanged."
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "source_group_id": "429111",
+      "image": "inputs/s1_train8/local_train_429111_remote/source.original",
+      "source_sha256": "88309e0d2e156a12d8bf79000db2e435625cacc16d5a372c5967e6f81142a67a",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        330,
+        120,
+        380,
+        210
+      ],
+      "prompt": "Replace only the red mobile phone on the right side of the desk with a red television remote control with a circular directional pad, power button, and volume rocker buttons, and no display screen. Keep the remote in the same area of the desk and preserve every other object."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "image": "inputs/s1_train8/local_train_15953_chocolate/source.original",
+      "source_sha256": "dcdc856732161f84c3052750d4f0acaee67e91fbec25b58f3ffaecb9c16ed723",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        210,
+        110,
+        465,
+        255
+      ],
+      "prompt": "Change only the white frosting on top of the cupcake to chocolate-brown frosting. Preserve its spiral shape, the cupcake wrapper, the apple, the plate, and the rest of the image."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "image": "inputs/s1_train8/local_train_26498_woodbat/source.original",
+      "source_sha256": "6007d94a612a0e6bc90ef659ac98e10770a0dd12272b7ee497dc72a949aca264",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        130,
+        208,
+        250,
+        245
+      ],
+      "prompt": "Make the baseball bat look like natural brown wood while preserving its exact position, length, and direction. Keep the player's hands, clothing, and the rest of the scene unchanged."
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "source_group_id": "452168",
+      "image": "inputs/s1_train8/local_train_452168_bluesign/source.original",
+      "source_sha256": "03c2682225df3e237686fb4fa548d376e5ff0385d88ac4a200d3031c91f8caac",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        115,
+        275,
+        370,
+        430
+      ],
+      "prompt": "Change only the black background of the sign to dark blue. Keep the white words NO BIRDS ALLOWED readable and preserve the surrounding scene."
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "source_group_id": "210597",
+      "image": "inputs/s1_train8/local_train_210597_redcushion/source.original",
+      "source_sha256": "25167d7069dc155c0ed1e3595d67e1036db0fa2aa8ce6e3e8acfc2dbb8d78a38",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        298,
+        284,
+        403,
+        326
+      ],
+      "prompt": "Change only the blue cushion lying flat on the right side of the sofa to red. Preserve its shape, texture, and position. Keep the other cushions and the rest of the room unchanged."
+    },
+    {
+      "case_id": "free_414772",
+      "source_group_id": "414772",
+      "image": "inputs/free_train24/414772/source.original",
+      "source_sha256": "977d1578a3df1b240773b92884e28c91a25efd2ff794c6cb469250f2eaf52293",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        295,
+        310,
+        385,
+        375
+      ],
+      "prompt": "Replace the roast chicken near the right side of the dining table with a small upright pineapple with green leaves. Keep it on the same platter and preserve the dining room and other table objects."
+    },
+    {
+      "case_id": "free_557907",
+      "source_group_id": "557907",
+      "image": "inputs/free_train24/557907/source.original",
+      "source_sha256": "7770ab7747057afccf8b2de51aecdae7d2190b6b660acd8161b060b272400a66",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        205,
+        85,
+        495,
+        350
+      ],
+      "prompt": "Change only the wool of the foreground sheep on the right from white to black. Preserve the other sheep, their poses and the grassy field."
+    },
+    {
+      "case_id": "free_275197",
+      "source_group_id": "275197",
+      "image": "inputs/free_train24/275197/source.original",
+      "source_sha256": "bbb32db23e8e803bbedfe0b640d4a1a865f8d06a3874e98dd761076bf1a6dafb",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        0,
+        65,
+        80,
+        305
+      ],
+      "prompt": "Change only the hanging white kitchen towel on the left to blue. Preserve its shape and position, the sink and all other kitchen objects."
+    },
+    {
+      "case_id": "free_475277",
+      "source_group_id": "475277",
+      "image": "inputs/free_train24/475277/source.original",
+      "source_sha256": "25d5adf8f7b040c67f72d7ff95172a312528a334d271c87499f2cdc6b64ecdf1",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        235,
+        10,
+        405,
+        195
+      ],
+      "prompt": "Add a single slender ivory unicorn horn growing upward from the center of the white horse forehead between its ears. Preserve the horse face, mane, fence and background."
+    },
+    {
+      "case_id": "free_272738",
+      "source_group_id": "272738",
+      "image": "inputs/free_train24/272738/source.original",
+      "source_sha256": "1e36f8cea50c5d001782da0cddae36f672bc79bfe545c202268679e1fde91c9f",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        225,
+        0,
+        365,
+        290
+      ],
+      "prompt": "Replace the clear stemmed drinking glass with a red ceramic mug with a handle, standing on the same desk. Preserve the other objects on the desk."
+    },
+    {
+      "case_id": "free_403221",
+      "source_group_id": "403221",
+      "image": "inputs/free_train24/403221/source.original",
+      "source_sha256": "1d28786a5939def64e26ecddd5ded9c24e429019173781b466176adcc12bfd3e",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        240,
+        180,
+        355,
+        310
+      ],
+      "prompt": "Change the collar around the foreground sheep neck to bright red. Preserve the sheep, its tags, and the mountain landscape."
+    },
+    {
+      "case_id": "free_374087",
+      "source_group_id": "374087",
+      "image": "inputs/free_train24/374087/source.original",
+      "source_sha256": "12ce8c3d48bc8085631f68ebf3698720125794fb86727930d25b90040e706dd2",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        25,
+        300,
+        280,
+        500
+      ],
+      "prompt": "Change the green bananas in the lower-left part of the box to ripe yellow bananas. Preserve their number, shape, and all other groceries."
+    }
+  ],
+  "jobs": [
+    {
+      "phase": "warmup",
+      "case_id": "local_train_286770_goat",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "warmup",
+      "case_id": "local_train_286770_goat",
+      "arm": "UNMERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "warmup",
+      "case_id": "local_train_286770_goat",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "UNMERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "UNMERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "UNMERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "UNMERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "UNMERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "UNMERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "UNMERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "UNMERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "UNMERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "MERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "MERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "UNMERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "UNMERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "MERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "UNMERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "MERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "MERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "UNMERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "UNMERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "MERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "UNMERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "MERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "MERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "UNMERGED",
+      "repeat": 1
+    },
+    {
+      "phase": "quality_only",
+      "case_id": "free_414772",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "quality_only",
+      "case_id": "free_557907",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "quality_only",
+      "case_id": "free_275197",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "quality_only",
+      "case_id": "free_475277",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "quality_only",
+      "case_id": "free_272738",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "quality_only",
+      "case_id": "free_403221",
+      "arm": "MERGED",
+      "repeat": 0
+    },
+    {
+      "phase": "quality_only",
+      "case_id": "free_374087",
+      "arm": "MERGED",
+      "repeat": 0
+    }
+  ],
+  "planned_DiT": 464,
+  "planned_requests": 58,
+  "checkpoint": "runs/budget_student_pilot_v1/checkpoints/student_inference025.pt",
+  "checkpoint_sha256": "ab56cf02a50a68e6b07e0e3b124afa468240589e970e1a8fdf2bc6b280099245",
+  "code_sha256": {
+    "benchmark_merged_student.py": "89b0594d6166da6a413ef92a0f4052f1c1318e29b591ec3583b435b1e12eedfb",
+    "cache_aware_adapters.py": "3c3a37ffd8ba9d884a9555f26cf7e7b095d86a34fa9aabf8d0b45b34c4ce0702",
+    "trainable_budget_executor.py": "34dcd940d2f3594235726aaed989dd3fc54f4b52353c7fcd7bf3def32ff76d51",
+    "budget_cache_executor.py": "80a821bc1a80368a3e409cd3ec9b81a57d36e1666a72f1f7990dab237d45f195",
+    "budget_profiles.py": "45898a0aa40427186b6267b0550e18d6457c4f6bfa0b19f5f2d8a25362d6dfc2",
+    "run_free_pilot.py": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8",
+    "run_s1.py": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81"
+  },
+  "timing": "Full native pipeline including encode/8DiT/scheduler/untiled decode/PIL and online cache/plan; swap weights and image I/O outside clock; resident original+merged weights inflate memory but same scaffolding all arms",
+  "quality_gate": "All15 mean RGBMAE vsF <=1.01*unmerged; no new severe semantic failure in source-by-source review; otherwise retain unmerged",
+  "test64_opened": false,
+  "training_updates": 0
+}

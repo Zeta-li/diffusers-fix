@@ -1,0 +1,56 @@
+{
+  "reviewer": "single assistant visual review; nonblind, not independent human rating",
+  "source_scope": "seen development; original validation failures retained",
+  "rows": [
+    {
+      "case_id": "free_272738_p1",
+      "selection_pass": true,
+      "semantic_pass": true,
+      "note": "Only target glass replaced; original left patterned mug retained"
+    },
+    {
+      "case_id": "free_272738_p2",
+      "selection_pass": true,
+      "semantic_pass": true,
+      "note": "Both target edit and left patterned mug preservation visible"
+    },
+    {
+      "case_id": "local_train_210597_redcushion_p1",
+      "selection_pass": false,
+      "semantic_pass": false,
+      "note": "Two red cushions; originally tucked left cushion moved upright to right"
+    },
+    {
+      "case_id": "local_train_210597_redcushion_p2",
+      "selection_pass": true,
+      "semantic_pass": true,
+      "note": "Right flat cushion red, left tucked cushion remains blue"
+    },
+    {
+      "case_id": "free_213020_p1",
+      "selection_pass": true,
+      "semantic_pass": true,
+      "note": "Only man hat red; woman face and hair retained; woven texture weaker, fine texture fidelity not solved"
+    },
+    {
+      "case_id": "free_213020_p2",
+      "selection_pass": true,
+      "semantic_pass": false,
+      "note": "Woman remains bareheaded but hair style/appearance changed; preservation failure"
+    }
+  ],
+  "selected": [
+    "free_272738_p1",
+    "local_train_210597_redcushion_p2",
+    "free_213020_p1"
+  ],
+  "selection_rule": "P1 first if semantic pass else P2",
+  "claim": "Selectivity corrected at one seen seed for three cases; robustness pending; hat texture limitation retained",
+  "selected_seed1_FIX32_visual": {
+    "reviewer": "single assistant nonblind",
+    "selection_pass": 3,
+    "semantic_pass": 3,
+    "total": 3,
+    "note": "Target choice and retained distractors match paired F; hat woven texture remains weaker in both"
+  }
+}

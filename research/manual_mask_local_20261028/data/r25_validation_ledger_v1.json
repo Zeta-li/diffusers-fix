@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-30T11:06:38.205561+00:00",
+  "base_ledger": "data/budget_r25_ledger_v1.json",
+  "base_project_requests": 2879,
+  "base_project_DiT": 28374,
+  "batches": [
+    {
+      "name": "r25_seed2_v1",
+      "new_requests": 144,
+      "DiT": 1152,
+      "conditioning_only": 0,
+      "status_sha256": "33477e761497b6fc274efa82b7cf1092b6ddb84bf7fbf415de1a4f2738a797f0"
+    },
+    {
+      "name": "r25_fresh_dev32_v1",
+      "new_requests": 96,
+      "DiT": 768,
+      "conditioning_only": 32,
+      "status_sha256": "026e811c1d8a515d3a216b3023e13c548580006c0b9917409055592a878e15f4"
+    },
+    {
+      "name": "r25_fresh_latency_v1",
+      "new_requests": 75,
+      "DiT": 600,
+      "warmups": 3,
+      "paired_requests": 72,
+      "status_sha256": "9ee4b534d994aac50eef839e78b866ff67fd0a734d80e090a97489166c4ce2cb"
+    }
+  ],
+  "new_requests": 315,
+  "new_DiT": 2520,
+  "new_teacher_queries": 0,
+  "new_LoRA_updates": 0,
+  "new_RL_updates": 0,
+  "new_net_latency_requests": 75,
+  "project_requests": 3194,
+  "project_DiT": 30894,
+  "project_dense_teacher": 1441,
+  "new_machine_requests": 1859,
+  "new_machine_DiT": 19637,
+  "free_region_GPU_DiT": 19445,
+  "LoRA_cumulative_updates": 153,
+  "cumulative_LoRA_fit_sources": 140,
+  "source_only_downloads": 64,
+  "source_only_DiT": 0,
+  "conditioning_capture_DiT": 0,
+  "note": "Full F reference generations included in requests, not additional training teacher queries. Real source captures do not invoke DiT; planned counts not added separately."
+}

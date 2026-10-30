@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-10-30T03:24:16.407862+00:00",
+  "exit_code": 0,
+  "tests": 4,
+  "CPU_tiny_DiT_calls": 65,
+  "real_GPU_DiT": 0,
+  "dtypes": [
+    "float32",
+    "bfloat16"
+  ],
+  "checks": [
+    "full8/native bitwise with padding",
+    "actual skipped text/image branches",
+    "full-latent Euler",
+    "exception restoration",
+    "budget/core/no-last-anchor"
+  ],
+  "code_sha256": {
+    "budget_profiles.py": "45898a0aa40427186b6267b0550e18d6457c4f6bfa0b19f5f2d8a25362d6dfc2",
+    "budget_cache_executor.py": "80a821bc1a80368a3e409cd3ec9b81a57d36e1666a72f1f7990dab237d45f195",
+    "test_budget_cache_executor.py": "23da71665b95631be29d80c98d2952844e7caf83f71fa9de0a3c25083d62aa64"
+  },
+  "repository_setup": "check_ai.py PASS; skills list PASS using existing proxy; first registry access without proxy timed out"
+}

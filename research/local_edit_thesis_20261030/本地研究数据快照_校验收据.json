@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "archive": "本地研究数据完整快照_20261030.tar.gz",
+  "bytes": 13100518286,
+  "sha256": "5d7ac82fc7c6087e682d123b9eea38772dbc18215242f9f2ee87761fde8b4349",
+  "source_bytes": 16699040907,
+  "verified_files": 11497,
+  "manifest_sha256": "17924002136ad434f6a745c1fcaa2287c0740e568c23c9e5e592bfdf7844f7bd",
+  "machine_stopped": true,
+  "remote_completeness": false
+}

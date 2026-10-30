@@ -1,0 +1,27 @@
+{
+  "criteria": "Same prior square source and bbox0.2%-50%; reject exact/near/gray aHash/dHash matches; compact object/attribute action, no broad background/global changes; bbox must identify requested object/context; source-only screening before any newdev generation",
+  "reserve17": [
+    "109776",
+    "129062",
+    "207833",
+    "557105",
+    "7730",
+    "540816",
+    "493074",
+    "57357",
+    "399759",
+    "26735",
+    "566041",
+    "106772",
+    "163114",
+    "142400",
+    "538741",
+    "501972",
+    "25989"
+  ],
+  "new_candidate_count": 64,
+  "new_selected_required": 15,
+  "selection": "Keep all17 prior accepted reserve IDs if historical-generation audit confirms unused. Add first15 new eligible in parent rank; retain rejections and reasons; no generated-output-based replacement.",
+  "test_media": false,
+  "target_media": false
+}

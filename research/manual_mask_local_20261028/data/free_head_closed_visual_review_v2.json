@@ -1,0 +1,728 @@
+{
+  "updated_at": "2026-10-28T13:52:16.290196+08:00",
+  "reviewer": "single assistant, nonblind visual screening; not human blind assessment",
+  "all_12_paired_panels_reviewed": true,
+  "cases": [
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "role": "fit",
+      "arm": "F",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "role": "fit",
+      "arm": "FIX16",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "role": "fit",
+      "arm": "FIX48",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "role": "fit",
+      "arm": "HEAD",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "role": "fit",
+      "arm": "MATCH",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "role": "fit",
+      "arm": "F",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "role": "fit",
+      "arm": "FIX16",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "role": "fit",
+      "arm": "FIX48",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "role": "fit",
+      "arm": "HEAD",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "role": "fit",
+      "arm": "MATCH",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "role": "fit",
+      "arm": "F",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "role": "fit",
+      "arm": "FIX16",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "role": "fit",
+      "arm": "FIX48",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "role": "fit",
+      "arm": "HEAD",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "role": "fit",
+      "arm": "MATCH",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "role": "fit",
+      "arm": "F",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "role": "fit",
+      "arm": "FIX16",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "role": "fit",
+      "arm": "FIX48",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "role": "fit",
+      "arm": "HEAD",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "role": "fit",
+      "arm": "MATCH",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_414772",
+      "source_group_id": "414772",
+      "role": "calibration",
+      "arm": "F",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_414772",
+      "source_group_id": "414772",
+      "role": "calibration",
+      "arm": "FIX16",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_414772",
+      "source_group_id": "414772",
+      "role": "calibration",
+      "arm": "FIX48",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_414772",
+      "source_group_id": "414772",
+      "role": "calibration",
+      "arm": "HEAD",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_414772",
+      "source_group_id": "414772",
+      "role": "calibration",
+      "arm": "MATCH",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_475277",
+      "source_group_id": "475277",
+      "role": "internal_validation",
+      "arm": "F",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_475277",
+      "source_group_id": "475277",
+      "role": "internal_validation",
+      "arm": "FIX16",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_475277",
+      "source_group_id": "475277",
+      "role": "internal_validation",
+      "arm": "FIX48",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_475277",
+      "source_group_id": "475277",
+      "role": "internal_validation",
+      "arm": "HEAD",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_475277",
+      "source_group_id": "475277",
+      "role": "internal_validation",
+      "arm": "MATCH",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_57395",
+      "source_group_id": "57395",
+      "role": "calibration",
+      "arm": "F",
+      "semantic_pass": false,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "F and all four local arms show smooth bead-like white food with uncertain cauliflower anatomy; uncertainty remains a failure."
+    },
+    {
+      "case_id": "free_57395",
+      "source_group_id": "57395",
+      "role": "calibration",
+      "arm": "FIX16",
+      "semantic_pass": false,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "F and all four local arms show smooth bead-like white food with uncertain cauliflower anatomy; uncertainty remains a failure."
+    },
+    {
+      "case_id": "free_57395",
+      "source_group_id": "57395",
+      "role": "calibration",
+      "arm": "FIX48",
+      "semantic_pass": false,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "F and all four local arms show smooth bead-like white food with uncertain cauliflower anatomy; uncertainty remains a failure."
+    },
+    {
+      "case_id": "free_57395",
+      "source_group_id": "57395",
+      "role": "calibration",
+      "arm": "HEAD",
+      "semantic_pass": false,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "F and all four local arms show smooth bead-like white food with uncertain cauliflower anatomy; uncertainty remains a failure."
+    },
+    {
+      "case_id": "free_57395",
+      "source_group_id": "57395",
+      "role": "calibration",
+      "arm": "MATCH",
+      "semantic_pass": false,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "F and all four local arms show smooth bead-like white food with uncertain cauliflower anatomy; uncertainty remains a failure."
+    },
+    {
+      "case_id": "free_557907",
+      "source_group_id": "557907",
+      "role": "calibration",
+      "arm": "F",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_557907",
+      "source_group_id": "557907",
+      "role": "calibration",
+      "arm": "FIX16",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_557907",
+      "source_group_id": "557907",
+      "role": "calibration",
+      "arm": "FIX48",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_557907",
+      "source_group_id": "557907",
+      "role": "calibration",
+      "arm": "HEAD",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_557907",
+      "source_group_id": "557907",
+      "role": "calibration",
+      "arm": "MATCH",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_272738",
+      "source_group_id": "272738",
+      "role": "internal_validation",
+      "arm": "F",
+      "semantic_pass": false,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "F and all four local arms turn both the stemmed glass and the existing patterned mug into red mugs; off-target edit remains."
+    },
+    {
+      "case_id": "free_272738",
+      "source_group_id": "272738",
+      "role": "internal_validation",
+      "arm": "FIX16",
+      "semantic_pass": false,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "F and all four local arms turn both the stemmed glass and the existing patterned mug into red mugs; off-target edit remains."
+    },
+    {
+      "case_id": "free_272738",
+      "source_group_id": "272738",
+      "role": "internal_validation",
+      "arm": "FIX48",
+      "semantic_pass": false,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "F and all four local arms turn both the stemmed glass and the existing patterned mug into red mugs; off-target edit remains."
+    },
+    {
+      "case_id": "free_272738",
+      "source_group_id": "272738",
+      "role": "internal_validation",
+      "arm": "HEAD",
+      "semantic_pass": false,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "F and all four local arms turn both the stemmed glass and the existing patterned mug into red mugs; off-target edit remains."
+    },
+    {
+      "case_id": "free_272738",
+      "source_group_id": "272738",
+      "role": "internal_validation",
+      "arm": "MATCH",
+      "semantic_pass": false,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "F and all four local arms turn both the stemmed glass and the existing patterned mug into red mugs; off-target edit remains."
+    },
+    {
+      "case_id": "free_275197",
+      "source_group_id": "275197",
+      "role": "calibration",
+      "arm": "F",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_275197",
+      "source_group_id": "275197",
+      "role": "calibration",
+      "arm": "FIX16",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_275197",
+      "source_group_id": "275197",
+      "role": "calibration",
+      "arm": "FIX48",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_275197",
+      "source_group_id": "275197",
+      "role": "calibration",
+      "arm": "HEAD",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_275197",
+      "source_group_id": "275197",
+      "role": "calibration",
+      "arm": "MATCH",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_403221",
+      "source_group_id": "403221",
+      "role": "internal_validation",
+      "arm": "F",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_403221",
+      "source_group_id": "403221",
+      "role": "internal_validation",
+      "arm": "FIX16",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_403221",
+      "source_group_id": "403221",
+      "role": "internal_validation",
+      "arm": "FIX48",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_403221",
+      "source_group_id": "403221",
+      "role": "internal_validation",
+      "arm": "HEAD",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_403221",
+      "source_group_id": "403221",
+      "role": "internal_validation",
+      "arm": "MATCH",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_374087",
+      "source_group_id": "374087",
+      "role": "internal_validation",
+      "arm": "F",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_374087",
+      "source_group_id": "374087",
+      "role": "internal_validation",
+      "arm": "FIX16",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_374087",
+      "source_group_id": "374087",
+      "role": "internal_validation",
+      "arm": "FIX48",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_374087",
+      "source_group_id": "374087",
+      "role": "internal_validation",
+      "arm": "HEAD",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "free_374087",
+      "source_group_id": "374087",
+      "role": "internal_validation",
+      "arm": "MATCH",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels."
+    },
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "role": "fit",
+      "arm": "FIX32",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels. Fixed32 supplementary paired panels were also reviewed."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "role": "fit",
+      "arm": "FIX32",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels. Fixed32 supplementary paired panels were also reviewed."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "role": "fit",
+      "arm": "FIX32",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels. Fixed32 supplementary paired panels were also reviewed."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "role": "fit",
+      "arm": "FIX32",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels. Fixed32 supplementary paired panels were also reviewed."
+    },
+    {
+      "case_id": "free_414772",
+      "source_group_id": "414772",
+      "role": "calibration",
+      "arm": "FIX32",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels. Fixed32 supplementary paired panels were also reviewed."
+    },
+    {
+      "case_id": "free_475277",
+      "source_group_id": "475277",
+      "role": "internal_validation",
+      "arm": "FIX32",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels. Fixed32 supplementary paired panels were also reviewed."
+    },
+    {
+      "case_id": "free_57395",
+      "source_group_id": "57395",
+      "role": "calibration",
+      "arm": "FIX32",
+      "semantic_pass": false,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "F and all four local arms show smooth bead-like white food with uncertain cauliflower anatomy; uncertainty remains a failure. Fixed32 supplementary paired panels were also reviewed."
+    },
+    {
+      "case_id": "free_557907",
+      "source_group_id": "557907",
+      "role": "calibration",
+      "arm": "FIX32",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels. Fixed32 supplementary paired panels were also reviewed."
+    },
+    {
+      "case_id": "free_272738",
+      "source_group_id": "272738",
+      "role": "internal_validation",
+      "arm": "FIX32",
+      "semantic_pass": false,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "F and all four local arms turn both the stemmed glass and the existing patterned mug into red mugs; off-target edit remains. Fixed32 supplementary paired panels were also reviewed."
+    },
+    {
+      "case_id": "free_275197",
+      "source_group_id": "275197",
+      "role": "calibration",
+      "arm": "FIX32",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels. Fixed32 supplementary paired panels were also reviewed."
+    },
+    {
+      "case_id": "free_403221",
+      "source_group_id": "403221",
+      "role": "internal_validation",
+      "arm": "FIX32",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels. Fixed32 supplementary paired panels were also reviewed."
+    },
+    {
+      "case_id": "free_374087",
+      "source_group_id": "374087",
+      "role": "internal_validation",
+      "arm": "FIX32",
+      "semantic_pass": true,
+      "new_semantic_regression_vs_F": false,
+      "severe_truncation": false,
+      "note": "Current target class/attribute is visible and complete; no clear new semantic regression or severe truncation versus F was observed in the paired panels. Fixed32 supplementary paired panels were also reviewed."
+    }
+  ],
+  "supplementary_fixed32_reviewed": true
+}

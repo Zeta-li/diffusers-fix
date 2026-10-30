@@ -1,0 +1,10 @@
+{
+  "invoked_dit": 1024,
+  "completed_dit": 1024,
+  "successful_requests": 128,
+  "RL_episodes": 128,
+  "RL_updates": 16,
+  "calibration_requests": 0,
+  "checkpoint_sha256": "18df09d3dd0bae8729220eca21548549679f54ae677a1a3716300999c454431e",
+  "calibration_started": false
+}

@@ -1,0 +1,535 @@
+{
+  "phase": "FROZEN_BEFORE_GENERATION",
+  "created_at": "2026-10-28T17:02:43.388983+08:00",
+  "cases": [
+    {
+      "source_group_id": "158548",
+      "case_id": "localdev16_158548",
+      "task_type": "attribute",
+      "bbox": [
+        77,
+        240,
+        135,
+        330
+      ],
+      "evaluation_box": [
+        45,
+        208,
+        167,
+        362
+      ],
+      "prompt": "Change only the wool of the single foreground sheep to black. Preserve the sheep's face, pose and size, and keep the field, people and distant background unchanged.",
+      "image": "inputs/localdev16_candidates_v1/158548/source.original",
+      "source_sha256": "79af99a0dfd5402f913a1699f24302bd47b6b964160b766e1bfb76788905f86f",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "Make it a black sheep.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/158548/provenance.json"
+    },
+    {
+      "source_group_id": "194956",
+      "case_id": "localdev16_194956",
+      "task_type": "attribute",
+      "bbox": [
+        18,
+        208,
+        401,
+        273
+      ],
+      "evaluation_box": [
+        0,
+        176,
+        433,
+        305
+      ],
+      "prompt": "Change only the dark hull of the large model ocean liner in the center to blue. Preserve the white decks, yellow funnels, ship shape and all surrounding teddy bears.",
+      "image": "inputs/localdev16_candidates_v1/194956/source.original",
+      "source_sha256": "b40cb16e120f8b4671cde4a45597274c6c75e16827e1c8eccdeb111fe9b9bc21",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "let the ship be blue",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/194956/provenance.json"
+    },
+    {
+      "source_group_id": "491430",
+      "case_id": "localdev16_491430",
+      "task_type": "attribute",
+      "bbox": [
+        325,
+        0,
+        425,
+        180
+      ],
+      "evaluation_box": [
+        293,
+        0,
+        457,
+        212
+      ],
+      "prompt": "Change only the visible black sock above the rightmost shoe to plain white. Preserve the shoes, leg, tennis racket, ball and court.",
+      "image": "inputs/localdev16_candidates_v1/491430/source.original",
+      "source_sha256": "4d86130fd0458b44e25470f7355002ee6ccec05c668c3e9e945e5ed20a96c887",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "Let the player wear white socks.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/491430/provenance.json"
+    },
+    {
+      "source_group_id": "259097",
+      "case_id": "localdev16_259097",
+      "task_type": "attribute",
+      "bbox": [
+        290,
+        228,
+        352,
+        332
+      ],
+      "evaluation_box": [
+        258,
+        196,
+        384,
+        364
+      ],
+      "prompt": "Change only the red shirt of the man throwing the frisbee to blue. Preserve his skin, pose and trousers, the frisbee, field and sky.",
+      "image": "inputs/localdev16_candidates_v1/259097/source.original",
+      "source_sha256": "017b84044fd28fbbd515a0d4913083e23c3332b22e18ded4cfdf779055085322",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "Make the man's top blue.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/259097/provenance.json"
+    },
+    {
+      "source_group_id": "362944",
+      "case_id": "localdev16_362944",
+      "task_type": "attribute",
+      "bbox": [
+        0,
+        112,
+        306,
+        282
+      ],
+      "evaluation_box": [
+        0,
+        80,
+        338,
+        314
+      ],
+      "prompt": "Change the visible dark gray body paint of the parked Audi car to white. Preserve its windows, tires, shape and position, and keep the bicycle, repair sign and building unchanged.",
+      "image": "inputs/localdev16_candidates_v1/362944/source.original",
+      "source_sha256": "a941b78fbf2b48f1fbbc68d245fa3f7b6dd93f18a077a14311ee16703cc3a6ae",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "The car should be white.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/362944/provenance.json"
+    },
+    {
+      "source_group_id": "459272",
+      "case_id": "localdev16_459272",
+      "task_type": "attribute",
+      "bbox": [
+        68,
+        245,
+        287,
+        500
+      ],
+      "evaluation_box": [
+        36,
+        213,
+        319,
+        500
+      ],
+      "prompt": "Change only the scarf worn around the foreground woman's neck to a scarf with red and blue stripes. Preserve its shape, her face, hair, coat, hands and phone, and the people behind her.",
+      "image": "inputs/localdev16_candidates_v1/459272/source.original",
+      "source_sha256": "62f96a825770a8b1abf12848c9ffd668a1c9bcb965fa0311b9211e8baeab483d",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "Make the scarf multi-colored.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/459272/provenance.json"
+    },
+    {
+      "source_group_id": "102171",
+      "case_id": "localdev16_102171",
+      "task_type": "attribute",
+      "bbox": [
+        55,
+        192,
+        251,
+        317
+      ],
+      "evaluation_box": [
+        23,
+        160,
+        283,
+        349
+      ],
+      "prompt": "Turn only the computer display screen solid black as if switched off. Preserve the white monitor frame and stand, the keyboard, phones, desk and wall.",
+      "image": "inputs/localdev16_candidates_v1/102171/source.original",
+      "source_sha256": "80ab1795a4a832f8a1c2dee90d59bda6396a9caa984584617dad42c48a1d3ea3",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "Let the monitor turn black.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/102171/provenance.json"
+    },
+    {
+      "source_group_id": "543942",
+      "case_id": "localdev16_543942",
+      "task_type": "attribute",
+      "bbox": [
+        57,
+        390,
+        159,
+        500
+      ],
+      "evaluation_box": [
+        25,
+        358,
+        191,
+        500
+      ],
+      "prompt": "Change only the visible white toilet tank at the lower left to pale pink. Preserve its shape, the towels, sink, countertop, mirror and the rest of the bathroom.",
+      "image": "inputs/localdev16_candidates_v1/543942/source.original",
+      "source_sha256": "4e9fe20c1084c03206266dd8a774d80ae9e07cf030e3725e3e2d59da2fe554e8",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "Make the toilet pink.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/543942/provenance.json"
+    },
+    {
+      "source_group_id": "193680",
+      "case_id": "localdev16_193680",
+      "task_type": "replace",
+      "bbox": [
+        0,
+        130,
+        385,
+        300
+      ],
+      "evaluation_box": [
+        0,
+        90,
+        425,
+        340
+      ],
+      "prompt": "Replace the sleeping orange cat on the red car with one sleeping red fox of similar size, curled on its side in the same position. Give it a pointed fox muzzle and orange fur with a white underside. Preserve the red car and background.",
+      "image": "inputs/localdev16_candidates_v1/193680/source.original",
+      "source_sha256": "c788e0749f981786a9539e4beb5c36c7345837ee37e1562d24522ead5b27e17b",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "change the cat to a fox.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/193680/provenance.json"
+    },
+    {
+      "source_group_id": "407550",
+      "case_id": "localdev16_407550",
+      "task_type": "replace",
+      "bbox": [
+        147,
+        205,
+        385,
+        392
+      ],
+      "evaluation_box": [
+        115,
+        173,
+        417,
+        424
+      ],
+      "prompt": "Replace only the baby carrots in the lower-middle blue compartment of the lunch tray with green broccoli florets filling the same compartment. Preserve the tray walls, the chicken, yellow fruit, almonds and fork.",
+      "image": "inputs/localdev16_candidates_v1/407550/source.original",
+      "source_sha256": "69bdc8023efbed915b153fc19be129a14945ac8367ff1e08ae17f743377e8ebb",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "change the carrot into broccoli",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/407550/provenance.json"
+    },
+    {
+      "source_group_id": "311326",
+      "case_id": "localdev16_311326",
+      "task_type": "replace",
+      "bbox": [
+        210,
+        113,
+        384,
+        282
+      ],
+      "evaluation_box": [
+        178,
+        81,
+        416,
+        314
+      ],
+      "prompt": "Replace only the central blood-orange half, directly above the large lower-middle orange half, with half of a green apple, cut surface facing the camera. Keep it about the same size and position. Preserve all the surrounding orange halves and the background.",
+      "image": "inputs/localdev16_candidates_v1/311326/source.original",
+      "source_sha256": "ecd4af9c263dece933dff2ff4787da2d11acb0def32a23d06fe675f9dca11d71",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "Let the blood orange be swapped with an apple.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/311326/provenance.json"
+    },
+    {
+      "source_group_id": "359569",
+      "case_id": "localdev16_359569",
+      "task_type": "replace",
+      "bbox": [
+        108,
+        232,
+        155,
+        282
+      ],
+      "evaluation_box": [
+        76,
+        200,
+        187,
+        314
+      ],
+      "prompt": "Replace only the red frisbee in the foreground German shepherd's mouth with a small red rubber ball of similar size, held naturally in the same place. Preserve the dog's face, teeth, body and running pose, the other dogs, snow and gazebo.",
+      "image": "inputs/localdev16_supplement_v1/359569/source.original",
+      "source_sha256": "f422a937e1afbab02d74cd8e1f4c532b814c59787e10fd514fda6cb26af00775",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "Replace the frisbee with a ball.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_supplement_v1/359569/provenance.json"
+    },
+    {
+      "source_group_id": "57350",
+      "case_id": "localdev16_57350",
+      "task_type": "expansion",
+      "bbox": [
+        75,
+        145,
+        135,
+        190
+      ],
+      "evaluation_box": [
+        40,
+        65,
+        175,
+        222
+      ],
+      "prompt": "Add one brown cowboy hat resting on top of the giraffe's head behind the zebras. The hat should have a clearly visible brim extending beyond the giraffe's head. Preserve the giraffe's face and neck, all zebras, grass and background.",
+      "image": "inputs/localdev16_candidates_v1/57350/source.original",
+      "source_sha256": "a5dc8b9c695b7f6e5527b158c280516978f573d6435d4b827dbfed553ae8f083",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "Let's add a cowboy hat to the giraffe.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/57350/provenance.json"
+    },
+    {
+      "source_group_id": "134597",
+      "case_id": "localdev16_134597",
+      "task_type": "expansion",
+      "bbox": [
+        258,
+        78,
+        385,
+        247
+      ],
+      "evaluation_box": [
+        226,
+        0,
+        417,
+        279
+      ],
+      "prompt": "Add a tall red cone-shaped party hat with a white pom-pom resting on the black dog's head between its ears. Let the hat extend upward above the ears. Preserve the dog's face, body and running pose, the frisbee and background.",
+      "image": "inputs/localdev16_candidates_v1/134597/source.original",
+      "source_sha256": "e350f1d24c4b25f62ff21ad52415cf6c63808fff410f1b24bc33204dfa0be7b0",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "put a party hat on the dog",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/134597/provenance.json"
+    },
+    {
+      "source_group_id": "111376",
+      "case_id": "localdev16_111376",
+      "task_type": "expansion",
+      "bbox": [
+        18,
+        145,
+        250,
+        410
+      ],
+      "evaluation_box": [
+        0,
+        65,
+        290,
+        442
+      ],
+      "prompt": "Add one brown cowboy hat resting on top of the foreground black cow's head, with a broad brim extending past the head. Preserve the cow's face and body, the fence and background.",
+      "image": "inputs/localdev16_candidates_v1/111376/source.original",
+      "source_sha256": "01f8565481cae0d1051b7e0dd165bafd9abab6434710a566d22238b3348cdcf9",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "Have the cow wear a hat.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/111376/provenance.json"
+    },
+    {
+      "source_group_id": "122927",
+      "case_id": "localdev16_122927",
+      "task_type": "expansion",
+      "bbox": [
+        50,
+        280,
+        286,
+        365
+      ],
+      "evaluation_box": [
+        0,
+        130,
+        320,
+        400
+      ],
+      "prompt": "Give the pheasant a much longer flowing tail that curves upward behind its body, fully inside the image. Keep the tail attached naturally at the same place. Preserve the bird's head, body, legs and the blurred background.",
+      "image": "inputs/localdev16_candidates_v1/122927/source.original",
+      "source_sha256": "a37af680ea88785bed78f6efbcb6e3490f30ae0429308c359efe07788b40e570",
+      "source_wh": [
+        500,
+        500
+      ],
+      "official_split": "dev",
+      "role": "new_frozen_local_validation",
+      "dataset_instruction": "Give the bird a long tail.",
+      "prompt_authoring": "source-only task-specific clarification before any outputs",
+      "source_provenance_path": "inputs/localdev16_candidates_v1/122927/provenance.json"
+    }
+  ],
+  "planned_requests": 64,
+  "planned_dit": 512,
+  "arms": [
+    "F",
+    "FIX32",
+    "FRESH64",
+    "CONTEXT64"
+  ],
+  "steps": 8,
+  "cfg": 1,
+  "dtype": "bfloat16",
+  "seed": 2026102201,
+  "noise_sha256": "2fdb96612e3eb7335105fab086c0f1d6af86b66c7241ef080479c1a7de83be79",
+  "target_hw": [
+    1024,
+    1024
+  ],
+  "refresh_steps": [
+    3,
+    5
+  ],
+  "extra_tokens": 64,
+  "core_margin_source_pixels": 32,
+  "hard_output_mask": false,
+  "pixel_copy": false,
+  "online_teacher": false,
+  "new_training_updates": 0,
+  "new_RL_updates": 0,
+  "source_qc_sha256": "997dee89062ca3360fe22b708f06ec1a40d307531912753d30d2027c6a5c2167",
+  "quality_gate": {
+    "mean_MAE_reduction_min": 0.02,
+    "improved_sources_min": 11,
+    "worst_relative_MAE_increase_max": 0.1,
+    "whole_MAE_max": 0.015,
+    "outside_MAE_max": 0.01,
+    "numeric_pass_sources_min": 15,
+    "F_task_pass_min": 14,
+    "CONTEXT64_task_pass_min": 14,
+    "new_semantic_structure_boundary_regressions_vs_FIX32_max": 0,
+    "execution_audit_required": true
+  },
+  "failure_policy": "retain every source; no parameter or prompt changes after first output; no replacement; quality gate fail stops net latency and this patch family expansion",
+  "metric": "mean absolute difference of decoded 1024x1024 RGB PNG /255 vs same-source F; evaluation domain fixed before generation",
+  "semantic_review": "all 16 source/F/FIX32/FRESH64/CONTEXT64 panels; uncertain counts fail; assistant review explicitly not human blind evaluation",
+  "cpu_receipts": [
+    "data/cpu_free_region_v1.json",
+    "data/cpu_context_refresh_v1.json"
+  ],
+  "code_sha256": {
+    "run_localdev16.py": "1fcaed472440fc8284200eb115c50b843b9608e65f5180889a7cae392a5288f2",
+    "analyze_localdev16.py": "1fc5c5d68782f0ceac90bf0f812981b201a834c3e320cfabe14e9e2b63d92ad5",
+    "audit_localdev16.py": "781ca36f35081a1b54dcb59b4baf57e9bbc7297159e2f61dfe786aa474c04f3c",
+    "context_refresh.py": "fdb160eb561f32bb688c3ac3648532024d6f6d4de478a78595b5ef5bd5265a5d",
+    "refresh_supervision.py": "b223b9e1fafe2853b0b7613c8ed0541d7912f315c1c263c486e49de5dc8abe83",
+    "free_region.py": "4dbfbb1f20146bcc8bb20dfaf1de71eed4da25fe8806f827a945547e032c0d51",
+    "local_mask_bridge.py": "0c78df2866540005bb762c3d9946f70f806a6f5cb98b6d2c7b0331e07facbd2f",
+    "legacy_local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "legacy_refresh_policy.py": "0b319fbbb05c8dff0880e75634cca524211dd8b4fce4e65006ebde7f990adfcf",
+    "run_free_pilot.py": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8",
+    "run_s1.py": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81",
+    "controlled_mask.py": "a8b95a5d4eb6d8fc1efa3d004e00d72c500a7b4d2cb4d04c828bbb892b192408"
+  },
+  "test64_opened": false,
+  "new_Dev16_generated_before_freeze": false,
+  "independence": "sources unused in this project; curated local-task validation, not standardized original-instruction MagicBrush benchmark and no claim of foundation-model pretraining disjointness"
+}

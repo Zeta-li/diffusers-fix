@@ -1,0 +1,165 @@
+{
+  "created_at": "2026-10-30T03:35:15.953651+00:00",
+  "reviewer": "single_assistant_nonblind",
+  "scope": "all8 full panels, two VAE pairs and enlarged cupcake crop actually inspected",
+  "main_edit_passes": {
+    "F": 8,
+    "FIX32": 8,
+    "SOURCE": 8,
+    "ALL": 8
+  },
+  "joint_passes": {
+    "F": 5,
+    "FIX32": 5,
+    "SOURCE": 4,
+    "ALL": 4
+  },
+  "extra_clear_preservation_failure_sources": {
+    "SOURCE": [
+      "local_train_15953_chocolate"
+    ],
+    "ALL": [
+      "local_train_15953_chocolate"
+    ]
+  },
+  "vae_pairs": "No obvious new semantic issue from untiled VAE in the two development comparisons; small texture changes remain",
+  "cases": [
+    {
+      "case_id": "local_train_286770_goat",
+      "main_edit": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "pass",
+        "ALL": "pass"
+      },
+      "joint_edit_preservation": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "pass",
+        "ALL": "pass"
+      },
+      "note": "All arms produce a plausible young goat and preserve the other sheep. ALL lacks the horns seen in F/SOURCE; horns were not requested, so this difference alone is not a task failure.",
+      "image_panel": "runs/budget_preflight_v1/analysis/panels/local_train_286770_goat.png"
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "main_edit": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "pass",
+        "ALL": "pass"
+      },
+      "joint_edit_preservation": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "pass",
+        "ALL": "pass"
+      },
+      "note": "All arms produce a black puppy. SOURCE/ALL change shadow, contrast and fine texture; no clear additional object loss observed.",
+      "image_panel": "runs/budget_preflight_v1/analysis/panels/local_train_486018_dog.png"
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "main_edit": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "pass",
+        "ALL": "pass"
+      },
+      "joint_edit_preservation": {
+        "F": "fail",
+        "FIX32": "fail",
+        "SOURCE": "fail",
+        "ALL": "fail"
+      },
+      "note": "All arms make a red bollard but substantially redraw buildings, trees and paving. Shared baseline preservation failure.",
+      "image_panel": "runs/budget_preflight_v1/analysis/panels/local_train_178810_bollard.png"
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "main_edit": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "pass",
+        "ALL": "pass"
+      },
+      "joint_edit_preservation": {
+        "F": "fail",
+        "FIX32": "fail",
+        "SOURCE": "fail",
+        "ALL": "fail"
+      },
+      "note": "All arms make a remote but cover/remove the white player below the original phone. Shared baseline preservation failure.",
+      "image_panel": "runs/budget_preflight_v1/analysis/panels/local_train_429111_remote.png"
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "main_edit": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "pass",
+        "ALL": "pass"
+      },
+      "joint_edit_preservation": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "fail",
+        "ALL": "fail"
+      },
+      "note": "F/FIX32 retain the wrapper and apple substantially. SOURCE and ALL redraw the frosting silhouette and upper wrapper edge; SOURCE additionally changes the apple texture. Detail crop confirms extra preservation failure in both cached arms.",
+      "image_panel": "runs/budget_preflight_v1/analysis/panels/local_train_15953_chocolate.png"
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "main_edit": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "pass",
+        "ALL": "pass"
+      },
+      "joint_edit_preservation": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "pass",
+        "ALL": "pass"
+      },
+      "note": "All arms make the bat brown wood and retain the action. SOURCE has visible texture/color drift and a small bright fleck in the lower ground; recorded as a minor artifact.",
+      "image_panel": "runs/budget_preflight_v1/analysis/panels/local_train_26498_woodbat.png"
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "main_edit": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "pass",
+        "ALL": "pass"
+      },
+      "joint_edit_preservation": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "pass",
+        "ALL": "pass"
+      },
+      "note": "All arms change the sign to dark blue with NO BIRDS ALLOWED readable. SOURCE/ALL alter small sign details and tones.",
+      "image_panel": "runs/budget_preflight_v1/analysis/panels/local_train_452168_bluesign.png"
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "main_edit": {
+        "F": "pass",
+        "FIX32": "pass",
+        "SOURCE": "pass",
+        "ALL": "pass"
+      },
+      "joint_edit_preservation": {
+        "F": "fail",
+        "FIX32": "fail",
+        "SOURCE": "fail",
+        "ALL": "fail"
+      },
+      "note": "All arms recolor both blue cushions, despite requesting only the flat right cushion. Shared baseline selectivity failure.",
+      "image_panel": "runs/budget_preflight_v1/analysis/panels/local_train_210597_redcushion.png"
+    }
+  ],
+  "limitation": "seen sources, one nonblind assistant; neither population quality estimate nor user preference study"
+}

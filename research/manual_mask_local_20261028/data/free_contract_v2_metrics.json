@@ -1,0 +1,58 @@
+[
+  {
+    "case": "local_train_15953_chocolate",
+    "arm": "FIX16",
+    "mae": 0.003840909106656909,
+    "p95": 0.0156862735748291,
+    "target_token_fraction": 0.55780029296875
+  },
+  {
+    "case": "local_train_15953_chocolate",
+    "arm": "FIX48",
+    "mae": 0.0033354442566633224,
+    "p95": 0.011764705181121826,
+    "target_token_fraction": 0.630859375
+  },
+  {
+    "case": "local_train_286770_goat",
+    "arm": "FIX16",
+    "mae": 0.0053099594078958035,
+    "p95": 0.0156862735748291,
+    "target_token_fraction": 0.510009765625
+  },
+  {
+    "case": "local_train_286770_goat",
+    "arm": "FIX48",
+    "mae": 0.005219124257564545,
+    "p95": 0.0156862735748291,
+    "target_token_fraction": 0.57867431640625
+  },
+  {
+    "case": "local_train_26498_woodbat",
+    "arm": "FIX16",
+    "mae": 0.0033814359921962023,
+    "p95": 0.0078431386500597,
+    "target_token_fraction": 0.46661376953125
+  },
+  {
+    "case": "local_train_26498_woodbat",
+    "arm": "FIX48",
+    "mae": 0.0037622302770614624,
+    "p95": 0.00784314051270485,
+    "target_token_fraction": 0.50946044921875
+  },
+  {
+    "case": "local_train_486018_dog",
+    "arm": "FIX16",
+    "mae": 0.002786648692563176,
+    "p95": 0.003921583294868469,
+    "target_token_fraction": 0.5528564453125
+  },
+  {
+    "case": "local_train_486018_dog",
+    "arm": "FIX48",
+    "mae": 0.0023928273003548384,
+    "p95": 0.003921568393707275,
+    "target_token_fraction": 0.6253662109375
+  }
+]

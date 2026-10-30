@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-10-30T12:38:23.780948+00:00",
+  "base_ledger": "data/r25_validation_ledger_v1.json",
+  "new_requests": 256,
+  "new_DiT": 2048,
+  "batches": [
+    {
+      "name": "refresh_timing_pilot8_v1",
+      "requests": 16,
+      "DiT": 128
+    },
+    {
+      "name": "refresh_timing_remaining40_v1",
+      "requests": 80,
+      "DiT": 640
+    },
+    {
+      "name": "refresh_bandit_v1",
+      "requests": 160,
+      "DiT": 1280,
+      "RL_episodes": 128,
+      "RL_optimizer_updates": 16,
+      "frozen_policy_validation_requests": 32
+    }
+  ],
+  "supervised_all_optimizer_updates": 4500,
+  "supervised_final_optimizer_updates": 500,
+  "supervised_fit_sources": 32,
+  "new_RL_updates": 16,
+  "new_LoRA_updates": 0,
+  "new_dense_teacher_queries": 0,
+  "new_net_latency_requests": 0,
+  "reused_fixed_reference_requests": 144,
+  "project_requests": 3450,
+  "project_DiT": 32942,
+  "project_dense_teacher": 1441,
+  "new_machine_requests": 2115,
+  "new_machine_DiT": 21685,
+  "free_region_GPU_DiT": 21493,
+  "LoRA_cumulative_updates": 153,
+  "cumulative_LoRA_fit_sources": 140,
+  "GPU_generation_failures": 0,
+  "CPU_guard_notes": "One early incomplete-analysis guard; one over-strict all32feature bitwise check diagnosed as4vs8thread rounding;actual8geometryfeatures exact;no extraDiT."
+}

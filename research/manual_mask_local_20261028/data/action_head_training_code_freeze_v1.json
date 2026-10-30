@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-10-28T15:37:57.412149+08:00",
+  "before_training": true,
+  "training_protocol": "data/action_tree_v1_preregistration.json",
+  "code_sha256": {
+    "action_value_head.py": "3665152284edefa371cc37ac351e0d2253f43a2e4bbe47b43d009159712f14a2",
+    "train_action_value_head.py": "96ba7b38e0f29edc2b0583af2f5ea3d10bbf3cf791a08cb1229f21105e169171",
+    "audit_action_tree.py": "5edbd3431d744bf4945b8c0f53a57538a92bfbb18a7922ea8f3e67ac7a1ff142",
+    "analyze_action_head.py": "d40390651f7a7c69cbd7dde05bae0409c6dc0c44097fbc58262f3106d0c98e4b"
+  }
+}

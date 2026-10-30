@@ -1,0 +1,328 @@
+{
+  "created_at": "2026-10-30T14:36:32.186959",
+  "parent": "data/budget_student_delivery_manifest_v1.json",
+  "scope": "Completed expansion/rescue/Dev32/diagnosticlatency reports,protocols,code,receipts; original states archived separately",
+  "raw_manifests": [
+    "data/budget_expansion_sources_raw_v1.json",
+    "data/budget_merge_raw_v1.json",
+    "data/budget_training_rescue_raw_v1.json",
+    "data/budget_dev_latency_raw_v1.json"
+  ],
+  "files": [
+    {
+      "path": "00_实施与实验记录.md",
+      "bytes": 22396,
+      "sha256": "6ef61e5479c61226f7488e1b78ec1ea81dc29cd207c01f86c33115c8bb631b67"
+    },
+    {
+      "path": "02_后续实验与执行计划.md",
+      "bytes": 32928,
+      "sha256": "d0bf1ff4421db6ae0506e0f03d61d785010ca4cd92dc358b9e09af2a066df32d"
+    },
+    {
+      "path": "13_双路径预算蒸馏执行计划_20261030.md",
+      "bytes": 14570,
+      "sha256": "f93bc64412fffda390d6207c826fbebf5d24e985acf84e370a5b0027fe85c6cb"
+    },
+    {
+      "path": "16_扩量训练与LoRA合并验证_20261030.md",
+      "bytes": 25376,
+      "sha256": "eb21bf69541bfb919cfac6bce1699ba614ab485587929277c3f3ee1cf348deeb"
+    },
+    {
+      "path": "data/budget_dev_latency_raw_v1.json",
+      "bytes": 128491,
+      "sha256": "cd616f1d13a80587de0f9064b48e4b5819e694056ab9bd4ad917e61854d3a52f"
+    },
+    {
+      "path": "data/budget_dev_latency_raw_v1_archive.json",
+      "bytes": 157,
+      "sha256": "71185ed07d93b8e55d057d799b0f03dcce62f9042e3b42f147237c7df6978430"
+    },
+    {
+      "path": "data/budget_development_decision_v1.json",
+      "bytes": 2927,
+      "sha256": "f6e4dc54037676b62eb2b2d13a5bfad47397c88e239829af564adc9ec88832df"
+    },
+    {
+      "path": "data/budget_development_gate_v1.json",
+      "bytes": 882,
+      "sha256": "e4db60f3882c271e4ea18435a694b05078696d7a55c07e369e822975f9792e43"
+    },
+    {
+      "path": "data/budget_development_v1_preregistration.json",
+      "bytes": 13881068,
+      "sha256": "a3474f48cf50a538d4b927ba2b57e8ed9564c974ad2709cdf6e4e1e3ee2bf1b3"
+    },
+    {
+      "path": "data/budget_expansion_final_environment_v1.json",
+      "bytes": 261,
+      "sha256": "36dc879c12088bd284791b9fc37bf2fe99d329bb4a882d1d5d0cc24e9c8ef6d4"
+    },
+    {
+      "path": "data/budget_expansion_historical_visual_v1.json",
+      "bytes": 13888,
+      "sha256": "6d14b18e278773e9f62a2fe7f960143d32541ccfffb76f5e2903790ade75bb30"
+    },
+    {
+      "path": "data/budget_expansion_ledger_v1.json",
+      "bytes": 1121,
+      "sha256": "c5be6f76e68e3f1d51eb55cdd88a5632fba275f0ad79212b4d7842b9f4947886"
+    },
+    {
+      "path": "data/budget_expansion_local_source_archive_check_v1.json",
+      "bytes": 159,
+      "sha256": "aaaa062cb5d5ebec23c7117db5894352c2f801386c215bebe0e8cbce34637b20"
+    },
+    {
+      "path": "data/budget_expansion_network_summary_v1.json",
+      "bytes": 202,
+      "sha256": "70c676da18cf8d7ca2f758ab005d26e39adf458dbabab0ba7a17653d3f72f0f5"
+    },
+    {
+      "path": "data/budget_expansion_sources_raw_v1.json",
+      "bytes": 214280,
+      "sha256": "10a686456bd8c9e7f3a8e6f5d4fd974e3371426ea9d89bef349dea9e088697f6"
+    },
+    {
+      "path": "data/budget_expansion_sources_raw_v1_archive.json",
+      "bytes": 181,
+      "sha256": "f6a8167f46a25dc00835e76af3e6ce96b31a3a4e24315a3497ae16907f75fc46"
+    },
+    {
+      "path": "data/budget_expansion_sources_v1.json",
+      "bytes": 193264,
+      "sha256": "21340c0c143808dad505522addc50e60966e38256523f96cfc0c348983e4ce12"
+    },
+    {
+      "path": "data/budget_expansion_split_v1.json",
+      "bytes": 314737,
+      "sha256": "71b755d23f0fcf32aa5e839882951bd489169858e22fa4c5821f445e526d9188"
+    },
+    {
+      "path": "data/budget_expansion_task_categories_v1.json",
+      "bytes": 22239,
+      "sha256": "38805780bd34f3020d26467c4a8075c9acb3948433314ad8029104d9c3f8bd71"
+    },
+    {
+      "path": "data/budget_expansion_train_launch_v1.json",
+      "bytes": 205,
+      "sha256": "407e196cefbe1289a938660b1d314b9d97905bc612b37d6fb9c53ddea53ed95b"
+    },
+    {
+      "path": "data/budget_expansion_train_v1_preregistration.json",
+      "bytes": 73293410,
+      "sha256": "6eb4caea196969f7fa4057d19272f503dfd5f78690696e87340eba2a298d8508"
+    },
+    {
+      "path": "data/budget_expansion_training_summary_v1.json",
+      "bytes": 330,
+      "sha256": "22910ee543261d352aa80dc5235d171141513a1d3a9ec95c8f0a414629aaf3bd"
+    },
+    {
+      "path": "data/budget_expansion_training_weight_check_v1.json",
+      "bytes": 494,
+      "sha256": "8f4267150aa0184944e58e26cd22d4c6f5a0135d810c9ad728c1175aa154bce1"
+    },
+    {
+      "path": "data/budget_expansion_visual_rubric_v1.json",
+      "bytes": 847,
+      "sha256": "1f24b5789e6660bb1e030ae8f9219bd7936a2a38c8b9e2a6c64b192ee81082e3"
+    },
+    {
+      "path": "data/budget_local128_anchor_audit_v1.json",
+      "bytes": 8574,
+      "sha256": "677c713041f12e75193b1032d3e4bbcf42ff3ba2fb55ea44a230b7b40e59dd9c"
+    },
+    {
+      "path": "data/budget_local128_candidate_v1.json",
+      "bytes": 849,
+      "sha256": "8e2d03713b00413211a3ffe4445ada2ddb89f3750bf91ae3f8f39c9a7bd9e379"
+    },
+    {
+      "path": "data/budget_local128_latency_v1_preregistration.json",
+      "bytes": 3332072,
+      "sha256": "00c0b004a6f2c866feac6c6ce35fe88ec1ad8da24022e172b3af3421131d31ee"
+    },
+    {
+      "path": "data/budget_merge_local_archive_check_v1.json",
+      "bytes": 157,
+      "sha256": "9b532a4baed502f1d680f40c3982b6531eecad5fd688103f55e92c5619293970"
+    },
+    {
+      "path": "data/budget_merge_raw_v1.json",
+      "bytes": 28390,
+      "sha256": "9530459975b1df5d28dbefd0c47344a72e67c1a6d5aabb9d0760b2ba6d6662b2"
+    },
+    {
+      "path": "data/budget_merge_raw_v1_archive.json",
+      "bytes": 167,
+      "sha256": "3f27e923e3d0231267ef3e450e449aa5dcb996b5dd43b08ecb46ca0cfad83ca0"
+    },
+    {
+      "path": "data/budget_merge_v1_preregistration.json",
+      "bytes": 17179,
+      "sha256": "2f9d5a11533726663067e3e78c6a55d82adbeb463d943c709249a7a274f649fa"
+    },
+    {
+      "path": "data/budget_merge_visual_review_v1.json",
+      "bytes": 2952,
+      "sha256": "75c662304e75baac7b11bf85b92cf2811b2eb4cf7dbbd974dcf9ec3650d20fcb"
+    },
+    {
+      "path": "data/budget_rescue_v1_launch.json",
+      "bytes": 161,
+      "sha256": "1a30185a140e72c19e1a5c3bbad502245410d895e47bd2c1704c050c4f1c7c46"
+    },
+    {
+      "path": "data/budget_rescue_v1_preregistration.json",
+      "bytes": 12904358,
+      "sha256": "978aceac2d4417dbf1f5774f266d767730cbc5fa7bf2c14f99cb02e0db7992de"
+    },
+    {
+      "path": "data/budget_rescue_visual_v1.json",
+      "bytes": 21543,
+      "sha256": "f33d9f9cdb879d4b95f2eed8c2a7c1a243ee63d19abbd200685d9eb4f70f9317"
+    },
+    {
+      "path": "data/budget_training_rescue_local_archive_check_v1.json",
+      "bytes": 188,
+      "sha256": "76661503755464cc43b1fc9cfda22293dab39fcf6afc63c317d3d70c257dcba9"
+    },
+    {
+      "path": "data/budget_training_rescue_raw_v1.json",
+      "bytes": 219164,
+      "sha256": "0e945e3943b226a78db3cc0680e84c15dc9d51c386fd2708548017754c6c2ea1"
+    },
+    {
+      "path": "data/budget_training_rescue_raw_v1_archive.json",
+      "bytes": 166,
+      "sha256": "21fbcba3bbe2c0bf29321f8852309d53c01d75156b086c150f70f69fe5946b7c"
+    },
+    {
+      "path": "data/current_research_status.json",
+      "bytes": 8153,
+      "sha256": "61a14d4cfec6e204162b3989b4a839506f9c727f7b489cab13ff6c36fd1c1fa9"
+    },
+    {
+      "path": "notes/current_external_reports/budget_expansion_06_研究进度与八个月执行表.md",
+      "bytes": 26236,
+      "sha256": "af4ef2984196071209c9e4aee31f99101686d2e9cad13ac62a608a33f36b8fee"
+    },
+    {
+      "path": "notes/current_external_reports/budget_expansion_局部图像编辑加速研究_阶段性总结报告.md",
+      "bytes": 173036,
+      "sha256": "8334a097fae4737f0b962ea06b95618bb5356dfb01b103d2b004c1e2f301a9c5"
+    },
+    {
+      "path": "notes/current_external_reports/budget_expansion_研究总控_当前状态.md",
+      "bytes": 17541,
+      "sha256": "e20e03a46e86337d30f248408bd77027c42fc7e54b9d7e64675aea8a1e5161ab"
+    },
+    {
+      "path": "runs/budget_development_v1/analysis/remaining_failures.jpg",
+      "bytes": 979570,
+      "sha256": "89b2e567212d522adb3af2ff58033f519a38edf39548d46b728b4e99fff56e49"
+    },
+    {
+      "path": "runs/budget_development_v1/analysis/repairs.jpg",
+      "bytes": 637089,
+      "sha256": "6a483bead80a7b2f10995a689f471c4ec01adf310e3809c5980e405591fea8fd"
+    },
+    {
+      "path": "runs/budget_development_v1/blind_review/scores_before_unblinding.json",
+      "bytes": 34425,
+      "sha256": "44958b3cead699e623be668f9cc792d97a09e4104854b8bd34e1dabb5cf78280"
+    },
+    {
+      "path": "runs/budget_development_v1/blind_review/unblinded_results.json",
+      "bytes": 36240,
+      "sha256": "60caac1186b0facae0dcf5e3fce147d8a1d4c1ee05c779153473dcfcaba46ec6"
+    },
+    {
+      "path": "runs/budget_expansion_train_v1/blind_review/scores_before_unblinding.json",
+      "bytes": 34194,
+      "sha256": "a48efdd71c0912897f69a562be9226036c5b4770fd6a3aec84dc3cb29e176963"
+    },
+    {
+      "path": "runs/budget_expansion_train_v1/blind_review/unblinded_results.json",
+      "bytes": 35707,
+      "sha256": "2c29266fa9d59a5ea21c6edfa4be75091751eb2cbd87b7b8705979633287a1c6"
+    },
+    {
+      "path": "runs/budget_local128_latency_v1/analysis/latency_and_tradeoff.png",
+      "bytes": 82827,
+      "sha256": "e398204a99bc81727ec058949c0471ad81e270184f48a53c47de88c2485f2b44"
+    },
+    {
+      "path": "scripts/analyze_budget_development.py",
+      "bytes": 5624,
+      "sha256": "430303183ea9cafaff8812c482e6f3bbe5e94cc323a04a3730700828564db8ae"
+    },
+    {
+      "path": "scripts/analyze_budget_expansion.py",
+      "bytes": 8441,
+      "sha256": "2299660f108139a3abaa603e2d0e8c947a5f1de17d9a529a96ab8de1b1ca35a0"
+    },
+    {
+      "path": "scripts/analyze_budget_local128_latency.py",
+      "bytes": 4064,
+      "sha256": "e118758781f54865f3140c67416ebd28c46c83fe6a3cdd6ff06d20079598fc39"
+    },
+    {
+      "path": "scripts/analyze_budget_rescue.py",
+      "bytes": 3698,
+      "sha256": "bacf7bc594260b345f1e7c265be5ae54f3ea1759c9a0721d5e0b5f06881cea4a"
+    },
+    {
+      "path": "scripts/analyze_merged_student.py",
+      "bytes": 3612,
+      "sha256": "3aac1d6f0017dbfcedb7480316a71d02cd2466d1ffa828b749bf5599d23ce983"
+    },
+    {
+      "path": "scripts/benchmark_expanded_student.py",
+      "bytes": 4906,
+      "sha256": "a0952b629ea255857051e964a51cefc3ca4973b6d76790f12703498ee002e720"
+    },
+    {
+      "path": "scripts/benchmark_merged_student.py",
+      "bytes": 6186,
+      "sha256": "89b0594d6166da6a413ef92a0f4052f1c1318e29b591ec3583b435b1e12eedfb"
+    },
+    {
+      "path": "scripts/evaluate_budget_development.py",
+      "bytes": 5310,
+      "sha256": "89179b6b69be063a01da7ee1c3fdf0336c9c8838d894806e92b54b1654374e30"
+    },
+    {
+      "path": "scripts/evaluate_budget_rescue.py",
+      "bytes": 5339,
+      "sha256": "b894b8afbe2840f3db1e44004a0518de2eae08d6771769b6c527fa96660b9e4c"
+    },
+    {
+      "path": "scripts/freeze_budget_expansion_training.py",
+      "bytes": 4399,
+      "sha256": "9c4a8ccd9c049b89db7e36c54e695d44b8280b8f25ed4cee9465285cfe5a8156"
+    },
+    {
+      "path": "scripts/prepare_budget_expansion.py",
+      "bytes": 5649,
+      "sha256": "53316d87a623f9fe976f082b678ad6dcf063e93cf4fbc1ffcb5851b9c790be0c"
+    },
+    {
+      "path": "scripts/render_budget_blind_review.py",
+      "bytes": 2428,
+      "sha256": "06171368d0646372e2364be22a25694768dd3beb3920fa744d91a82f9dd103dd"
+    },
+    {
+      "path": "scripts/review_budget_expansion_sources.py",
+      "bytes": 3113,
+      "sha256": "2dc4beaf0737a9b5f3307968f095be5824f61cb6364ca88b6c363c19e6db1999"
+    },
+    {
+      "path": "scripts/train_budget_expansion.py",
+      "bytes": 15373,
+      "sha256": "e1ad8dd437063d46e979e749cd161a4c818d96a6e5bd9b33fec405058b23faac"
+    }
+  ]
+}

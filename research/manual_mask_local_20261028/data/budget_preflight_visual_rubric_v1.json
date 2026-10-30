@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-10-30T03:26:34.274175+00:00",
+  "stage": "BEFORE_VIEWING_NEW_OUTPUTS",
+  "reviewer": "assistant_nonblind",
+  "scope": "all8 sources and 4 arms; VAE development pairs separately",
+  "criteria": {
+    "main_edit": "requested object/attribute accomplished",
+    "preservation": "other objects and important source structures retained",
+    "boundary": "new seams, truncation, glued structures or local artifacts",
+    "new_vs_F": "new failure introduced, baseline-shared, or repaired"
+  },
+  "labels": [
+    "pass",
+    "fail",
+    "uncertain"
+  ],
+  "rule": "Record every source including F failures; no retrospective exclusions; numeric error is auxiliary, uncertain is not a pass.",
+  "files": "runs/budget_preflight_v1/analysis/panels/*.png"
+}

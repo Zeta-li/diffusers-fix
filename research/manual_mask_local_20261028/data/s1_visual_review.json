@@ -1,0 +1,245 @@
+{
+  "status": "COMPLETED_AI_VISUAL_REVIEW_NOT_HUMAN_GROUND_TRUTH",
+  "attempt": "/workspace/diffusers-fix/research/manual_mask_local_20261028/runs/s1_v2",
+  "reviewer": "Codex root plus separately recorded agent visual review",
+  "review_time_local": "2026-10-28T12:40:54.555355+08:00",
+  "instructions": "Review source, mask, complete images, and boundaries. Numeric similarity cannot determine semantic correctness. Fill booleans explicitly and explain uncertainty. Preserve every source in denominator. F is not ground truth.",
+  "frozen_gate": {
+    "mask_semantic_min_of_8": 7,
+    "mask_semantic_min_per_stratum_of_4": 3,
+    "severe_mask_boundary_failures_max": 0,
+    "note": "Requires actual reviewer observations; this script never sets quality PASS."
+  },
+  "cases": [
+    {
+      "case_id": "local_train_286770_goat",
+      "task_type": "replace",
+      "NATIVE_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": true,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": true,
+        "uncertain": false,
+        "overall_semantic_pass": true,
+        "notes": "Correct young goat; full horns and ears."
+      },
+      "MASK_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": true,
+        "structure_intact": false,
+        "seams_absent": false,
+        "other_objects_preserved": true,
+        "uncertain": false,
+        "overall_semantic_pass": false,
+        "notes": "Goat category clear, but left horn/ear cut at allowed-mask border."
+      },
+      "mask_introduced_semantic_failure": true,
+      "severe_mask_boundary_failure": true,
+      "paired_notes": "Uncertain requirements counted as not passed; no source removed."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "task_type": "replace",
+      "NATIVE_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": false,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": true,
+        "uncertain": true,
+        "overall_semantic_pass": false,
+        "notes": "Still visibly cat-like; dog identity not confirmed."
+      },
+      "MASK_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": false,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": true,
+        "uncertain": true,
+        "overall_semantic_pass": false,
+        "notes": "Still cat-like; the complete baseline has not reliably changed the category."
+      },
+      "mask_introduced_semantic_failure": false,
+      "severe_mask_boundary_failure": false,
+      "paired_notes": "Uncertain requirements counted as not passed; no source removed."
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "task_type": "replace",
+      "NATIVE_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": true,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": false,
+        "uncertain": false,
+        "overall_semantic_pass": false,
+        "notes": "Bollard produced, but much of wall/trees/pavement redrawn."
+      },
+      "MASK_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": true,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": true,
+        "uncertain": true,
+        "overall_semantic_pass": false,
+        "notes": "Bollard and preserved background, but similar-height requirement uncertain."
+      },
+      "mask_introduced_semantic_failure": false,
+      "severe_mask_boundary_failure": false,
+      "paired_notes": "Uncertain requirements counted as not passed; no source removed."
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "task_type": "replace",
+      "NATIVE_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": false,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": true,
+        "uncertain": true,
+        "overall_semantic_pass": false,
+        "notes": "Still phone-like with earpiece, display and numeric keys."
+      },
+      "MASK_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": false,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": true,
+        "uncertain": true,
+        "overall_semantic_pass": false,
+        "notes": "Still phone-like; TV-remote identity not confirmed."
+      },
+      "mask_introduced_semantic_failure": false,
+      "severe_mask_boundary_failure": false,
+      "paired_notes": "Uncertain requirements counted as not passed; no source removed."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "task_type": "attribute",
+      "NATIVE_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": true,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": true,
+        "uncertain": false,
+        "overall_semantic_pass": true,
+        "notes": "Chocolate frosting and spiral retained."
+      },
+      "MASK_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": true,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": true,
+        "uncertain": false,
+        "overall_semantic_pass": true,
+        "notes": "Chocolate frosting; surrounding objects retained; no severe seam."
+      },
+      "mask_introduced_semantic_failure": false,
+      "severe_mask_boundary_failure": false,
+      "paired_notes": "Uncertain requirements counted as not passed; no source removed."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "task_type": "attribute",
+      "NATIVE_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": true,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": true,
+        "uncertain": false,
+        "overall_semantic_pass": true,
+        "notes": "Brown wooden bat, length/direction/hands retained."
+      },
+      "MASK_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": true,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": true,
+        "uncertain": false,
+        "overall_semantic_pass": true,
+        "notes": "Brown wooden bat with complete outline and hand contact."
+      },
+      "mask_introduced_semantic_failure": false,
+      "severe_mask_boundary_failure": false,
+      "paired_notes": "Uncertain requirements counted as not passed; no source removed."
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "task_type": "attribute",
+      "NATIVE_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": true,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": false,
+        "uncertain": false,
+        "overall_semantic_pass": false,
+        "notes": "Blue sign and correct words, but font and much of scene redrawn."
+      },
+      "MASK_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": true,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": true,
+        "uncertain": true,
+        "overall_semantic_pass": false,
+        "notes": "Blue sign/correct words, but original glyph shapes/spacing not retained reliably."
+      },
+      "mask_introduced_semantic_failure": false,
+      "severe_mask_boundary_failure": false,
+      "paired_notes": "Uncertain requirements counted as not passed; no source removed."
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "task_type": "attribute",
+      "NATIVE_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": true,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": false,
+        "uncertain": false,
+        "overall_semantic_pass": false,
+        "notes": "Both right flat and left upright blue cushions recolored red."
+      },
+      "MASK_FULL": {
+        "review_status": "REVIEWED_AI",
+        "editing_success": true,
+        "structure_intact": true,
+        "seams_absent": true,
+        "other_objects_preserved": true,
+        "uncertain": false,
+        "overall_semantic_pass": true,
+        "notes": "Only the requested right flat cushion red; left blue cushion retained."
+      },
+      "mask_introduced_semantic_failure": false,
+      "severe_mask_boundary_failure": false,
+      "paired_notes": "Uncertain requirements counted as not passed; no source removed."
+    }
+  ],
+  "final_decision": "NO_GO_S2_REPAIR_FULL_BASELINE_FIRST",
+  "quality_pass": false,
+  "summary": {
+    "NATIVE_FULL_strict_pass": 3,
+    "MASK_FULL_strict_pass": 3,
+    "MASK_FULL_replace_pass": 0,
+    "MASK_FULL_attribute_pass": 3,
+    "severe_mask_boundary_failures": 1,
+    "n_sources": 8
+  },
+  "evidence": {
+    "independent_review_path": "notes/s1_independent_visual_review.md",
+    "independent_review_sha256": "e61153932220b9b201af866759ca8fddfb12145911f34193a90a6eeccf49a777"
+  }
+}

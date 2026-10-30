@@ -1,0 +1,15 @@
+{
+  "seconds": 254.3635519053787,
+  "max_peak_GiB": 61.88333797454834,
+  "mean_micro_seconds": 2.5178652838803828,
+  "optimizer_updates": 25,
+  "microbatches": 100,
+  "parameters": {
+    "lora": 4423680,
+    "spatial": 353344,
+    "frozen": 20430401088
+  },
+  "prefix_dit": 392,
+  "teacher_dit": 125,
+  "gradient_student_dit": 125
+}

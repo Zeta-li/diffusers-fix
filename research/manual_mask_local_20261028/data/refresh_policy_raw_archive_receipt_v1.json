@@ -1,0 +1,9 @@
+{
+  "archive": "/tmp/refresh_policy_raw_v1.tar.gz",
+  "sha256": "c2beae81cfdb418d00eef9a832a9f7b3a08accc01c8bbf623e3a26e474271ef0",
+  "bytes": 1321317574,
+  "verified_files": 863,
+  "manifest_sha256": "d54bc816e0d3eca21f730dabde3ce845cf28963eef7995a099086da708de35f4",
+  "external_reused_files": 432,
+  "status": "PASS"
+}

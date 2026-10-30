@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "recomputed_terminal_MAE": 135,
+  "final1000_exact_context_PNGs": 4,
+  "frozen_collection_code_files": 10,
+  "new_DiT": 0
+}

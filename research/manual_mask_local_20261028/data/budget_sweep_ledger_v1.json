@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-10-30T17:46:54.555177",
+  "base_project_requests": 2471,
+  "base_project_DiT": 25110,
+  "batches": [
+    {
+      "name": "budget_sweep_v1",
+      "new_requests": 160,
+      "DiT": 1280,
+      "reused_requests": 32
+    },
+    {
+      "name": "budget_sweep_latency_v1",
+      "new_requests": 100,
+      "DiT": 800,
+      "warmups": 4
+    }
+  ],
+  "new_requests": 260,
+  "new_DiT": 2080,
+  "new_teacher_queries": 0,
+  "new_LoRA_updates": 0,
+  "new_RL_updates": 0,
+  "project_requests": 2731,
+  "project_DiT": 27190,
+  "project_dense_teacher": 1441,
+  "new_machine_requests": 1396,
+  "new_machine_DiT": 15933,
+  "LoRA_cumulative_updates": 153,
+  "cumulative_LoRA_fit_sources": 140,
+  "RL_note": "No actual policy training or real episodes in this batch",
+  "next_planned_DiT_not_executed": 1184
+}

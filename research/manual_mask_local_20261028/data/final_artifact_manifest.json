@@ -1,0 +1,9 @@
+{
+  "latest_manifest": "data/budget_student_delivery_manifest_v1.json",
+  "sha256": "35b99f58db3c752c919b25b32f660268c99cab8532e827ab528dbf40640b7ef2",
+  "parent_manifest": "data/budget_preflight_delivery_manifest_v1.json",
+  "raw_manifests": [
+    "data/budget_student_raw_manifest_v1.json",
+    "data/budget_student_latency_raw_manifest_v2.json"
+  ]
+}

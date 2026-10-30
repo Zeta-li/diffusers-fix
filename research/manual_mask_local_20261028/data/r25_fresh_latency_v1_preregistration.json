@@ -1,0 +1,733 @@
+{
+  "frozen_at": "2026-10-30T10:59:09.111038+00:00",
+  "candidate": "R25",
+  "expanded_checkpoint": "runs/budget_expansion_train_v1/checkpoints/student_inference.pt",
+  "expanded_checkpoint_sha256": "216794f27aacf696af7835612234dcdf04cb7dcc6dbfbc9ecffcfa3ef55332f7",
+  "cases": [
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "source_group_id": "109776",
+      "role": "independent_dev",
+      "image": "inputs/budget_expansion_v1/109776/source.original",
+      "source_sha256": "3a9b7b77ad2921de0a85390e48bb4481bac625c148288015acc5b3ee7ba6f72b",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        0.0,
+        31.73828125,
+        178.7109375,
+        214.84375
+      ],
+      "prompt": "change the bag of chips into a backpack. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "change the bag of chips into a backpack",
+      "signature": {
+        "raw_sha256": "3a9b7b77ad2921de0a85390e48bb4481bac625c148288015acc5b3ee7ba6f72b",
+        "rgb_sha256": "8b57d8339227c5b03a340466237590e5b549b4bc1d050b4e6dcdc46455067a35",
+        "width": 500,
+        "height": 500,
+        "average_hash": "18f8e87debf0f0e0",
+        "difference_hash": "b37191b1da46c0a5"
+      },
+      "official_split": "dev",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true
+    },
+    {
+      "case_id": "r25_fresh_dev_129062",
+      "source_group_id": "129062",
+      "role": "independent_dev",
+      "image": "inputs/budget_expansion_v1/129062/source.original",
+      "source_sha256": "f465521d95418df55ba372a6ebe2f51b30b9991f3ff9bc888f71de52340350a8",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        398.92578125,
+        57.6171875,
+        489.74609375,
+        142.08984375
+      ],
+      "prompt": "Add a cat falling out of a tree. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "Add a cat falling out of a tree.",
+      "signature": {
+        "raw_sha256": "f465521d95418df55ba372a6ebe2f51b30b9991f3ff9bc888f71de52340350a8",
+        "rgb_sha256": "c481ff2e8eae7176f122b4bf28309933752d760103dffb9a19aba2040dbe08f5",
+        "width": 500,
+        "height": 500,
+        "average_hash": "0400c3fffe1f1f00",
+        "difference_hash": "9c86070db4b6f6e7"
+      },
+      "official_split": "dev",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true
+    },
+    {
+      "case_id": "r25_fresh_dev_207833",
+      "source_group_id": "207833",
+      "role": "independent_dev",
+      "image": "inputs/budget_expansion_v1/207833/source.original",
+      "source_sha256": "5364e9ad4a18627959d622d3063f59d4ab42caa9998ab1a3471771313f1c5dc9",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        260.25390625,
+        236.328125,
+        497.0703125,
+        500.0
+      ],
+      "prompt": "Have a gorilla sit at the dinner table. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "Have a gorilla sit at the dinner table.",
+      "signature": {
+        "raw_sha256": "5364e9ad4a18627959d622d3063f59d4ab42caa9998ab1a3471771313f1c5dc9",
+        "rgb_sha256": "1428aee06a0cf2bee732b3c11844023ca1c9fb4fa97d1c304ec5ccbb12209673",
+        "width": 500,
+        "height": 500,
+        "average_hash": "06044c405ffffc80",
+        "difference_hash": "4cbdb989b5b29803"
+      },
+      "official_split": "dev",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true
+    },
+    {
+      "case_id": "r25_fresh_dev_557105",
+      "source_group_id": "557105",
+      "role": "independent_dev",
+      "image": "inputs/budget_expansion_v1/557105/source.original",
+      "source_sha256": "7fb4c0e825daa2a5f4f82d57fd824d38dca3ee8fb2fb88e9b607c7ac6eedf6c9",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        136.71875,
+        0.0,
+        455.078125,
+        336.42578125
+      ],
+      "prompt": "remove the yellow flowers. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "remove the yellow flowers",
+      "signature": {
+        "raw_sha256": "7fb4c0e825daa2a5f4f82d57fd824d38dca3ee8fb2fb88e9b607c7ac6eedf6c9",
+        "rgb_sha256": "5a03a1b86ab8e04fb82dfb267f7c67bb61ed3c065d96965ed7637907651a7eb0",
+        "width": 500,
+        "height": 500,
+        "average_hash": "07343f1cf8716367",
+        "difference_hash": "6e6cf1b9f3e3c6da"
+      },
+      "official_split": "dev",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true
+    },
+    {
+      "case_id": "r25_fresh_dev_7730",
+      "source_group_id": "7730",
+      "role": "independent_dev",
+      "image": "inputs/budget_expansion_v1/7730/source.original",
+      "source_sha256": "a06d465c033e0ad2ad45697bf38a57a283744aea8e31c5b48b570f403aed2980",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        39.55078125,
+        72.75390625,
+        259.27734375,
+        195.3125
+      ],
+      "prompt": "Change the cat to a rat. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "Change the cat to a rat.",
+      "signature": {
+        "raw_sha256": "a06d465c033e0ad2ad45697bf38a57a283744aea8e31c5b48b570f403aed2980",
+        "rgb_sha256": "9dc8f0fdb33ec66155c1939d321819f0ed9af9d24e0b5da75df5f118a0e1b164",
+        "width": 500,
+        "height": 500,
+        "average_hash": "0c2030c0c0f2f8ff",
+        "difference_hash": "78c8643619c622d9"
+      },
+      "official_split": "dev",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true
+    },
+    {
+      "case_id": "r25_fresh_dev_540816",
+      "source_group_id": "540816",
+      "role": "independent_dev",
+      "image": "inputs/budget_expansion_v1/540816/source.original",
+      "source_sha256": "5dad2002ee3004455e4b87ee217164886fa05bd61dd4aca038d7894f830e4ce1",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        0.0,
+        159.1796875,
+        486.328125,
+        385.25390625
+      ],
+      "prompt": "Make the plane further away. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "Make the plane further away.",
+      "signature": {
+        "raw_sha256": "5dad2002ee3004455e4b87ee217164886fa05bd61dd4aca038d7894f830e4ce1",
+        "rgb_sha256": "69bc73c534dfd33767732a3c4250ac1627b37d20be8240dbd6f79caccbf3fc07",
+        "width": 500,
+        "height": 500,
+        "average_hash": "80ffff70f98100e0",
+        "difference_hash": "00e082e483138c00"
+      },
+      "official_split": "dev",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true
+    },
+    {
+      "case_id": "r25_fresh_dev_493074",
+      "source_group_id": "493074",
+      "role": "independent_dev",
+      "image": "inputs/budget_expansion_v1/493074/source.original",
+      "source_sha256": "8a56a87b2f1f10053eb5f029725edc4038ef74670115e7e05f7d50a977abf57b",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        139.16015625,
+        203.125,
+        312.98828125,
+        317.3828125
+      ],
+      "prompt": "let the cat be white. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "let the cat be white",
+      "signature": {
+        "raw_sha256": "8a56a87b2f1f10053eb5f029725edc4038ef74670115e7e05f7d50a977abf57b",
+        "rgb_sha256": "479d8a715142324d31d63b37fd6bde6335c45bb54e86c2ba00e57e5861eb2b68",
+        "width": 500,
+        "height": 500,
+        "average_hash": "fffcf87860000c98",
+        "difference_hash": "2788a0c9ccbc1830"
+      },
+      "official_split": "dev",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true
+    },
+    {
+      "case_id": "r25_fresh_dev_57357",
+      "source_group_id": "57357",
+      "role": "independent_dev",
+      "image": "inputs/budget_expansion_v1/57357/source.original",
+      "source_sha256": "71c917a8a6ad351569795d6b55b1c37a3dc0617926be2ddab6e4375acc79951f",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        194.82421875,
+        41.015625,
+        312.5,
+        187.5
+      ],
+      "prompt": "have a bird stand on the zebras head. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "have a bird stand on the zebras head.",
+      "signature": {
+        "raw_sha256": "71c917a8a6ad351569795d6b55b1c37a3dc0617926be2ddab6e4375acc79951f",
+        "rgb_sha256": "d1aea9ddb44f2a4e988d684b05202ec6b83a9216562d4e56f69697b47148529d",
+        "width": 500,
+        "height": 500,
+        "average_hash": "ff38181879f2ec47",
+        "difference_hash": "dc486273b7a29a9e"
+      },
+      "official_split": "dev",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true
+    }
+  ],
+  "jobs": [
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "arm": "F",
+      "phase": "warmup",
+      "repeat": 0
+    },
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "arm": "B",
+      "phase": "warmup",
+      "repeat": 0
+    },
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "arm": "R25",
+      "phase": "warmup",
+      "repeat": 0
+    },
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_129062",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_129062",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_129062",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_207833",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_207833",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_207833",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_557105",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_557105",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_557105",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_7730",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_7730",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_7730",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_540816",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_540816",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_540816",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_493074",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_493074",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_493074",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_57357",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_57357",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_57357",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_129062",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_129062",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_129062",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_207833",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_207833",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_207833",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_557105",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_557105",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_557105",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_7730",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_7730",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_7730",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_540816",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_540816",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_540816",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_493074",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_493074",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_493074",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_57357",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_57357",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_57357",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_109776",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_129062",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_129062",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_129062",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_207833",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_207833",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_207833",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_557105",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_557105",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_557105",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_7730",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_7730",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_7730",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_540816",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_540816",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_540816",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_493074",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_493074",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_493074",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_57357",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_57357",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "r25_fresh_dev_57357",
+      "arm": "R25",
+      "phase": "measured",
+      "repeat": 3
+    }
+  ],
+  "arms": [
+    "F",
+    "B",
+    "R25"
+  ],
+  "noise_sha256": "2fdb96612e3eb7335105fab086c0f1d6af86b66c7241ef080479c1a7de83be79",
+  "evaluation_run": "runs/r25_fresh_dev32_v1",
+  "quality_decision_sha256": "6003a41308169c092ab7c20538d05fc39fb7b4517f6cbe99bc532767d27c4f4e",
+  "planned_DiT": 600,
+  "planned_requests": 75,
+  "code_sha256": {
+    "freeze_r25_fresh_latency.py": "a124f9180729b6e58dd45e829923e77a09dd4614b91adce91f6998f7d4aeced1",
+    "benchmark_budget_r25.py": "a1fab16e9ae23d6f4d2a44c974c9326f5bf25ce495e94e78e6dbb227c3a97a01",
+    "budget_r25_profiles.py": "0f6cfdd9c8a8215de81cb32f06d9f5b020c1e74301d6c94e63352eec0de419b0",
+    "budget_profiles.py": "45898a0aa40427186b6267b0550e18d6457c4f6bfa0b19f5f2d8a25362d6dfc2",
+    "cache_aware_adapters.py": "3c3a37ffd8ba9d884a9555f26cf7e7b095d86a34fa9aabf8d0b45b34c4ce0702",
+    "trainable_budget_executor.py": "34dcd940d2f3594235726aaed989dd3fc54f4b52353c7fcd7bf3def32ff76d51",
+    "budget_cache_executor.py": "80a821bc1a80368a3e409cd3ec9b81a57d36e1666a72f1f7990dab237d45f195",
+    "run_free_pilot.py": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8",
+    "run_s1.py": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81",
+    "controlled_mask.py": "a8b95a5d4eb6d8fc1efa3d004e00d72c500a7b4d2cb4d04c828bbb892b192408",
+    "free_region.py": "4dbfbb1f20146bcc8bb20dfaf1de71eed4da25fe8806f827a945547e032c0d51"
+  },
+  "source_selection": "first8 in previously frozen32source order, not selected by quality or speed; all cases remain in quality denominator",
+  "timing_scope": "resident models; source RGB/noise loaded; online plan, input preprocessing, text encode, source VAE, 8DiT, decode, PIL and cache cleanup included; model loading and file IO excluded",
+  "CUDA_synchronization": "before and after complete request",
+  "CPU_background": "no parallel archive or heavy analysis during timing",
+  "quality_status": "passes frozen single-assistant gate;3 common uncertain sources require human followup, one new failure versusF",
+  "decision_rule": "Report measured paired source mean speedup; repeated hashes must match frozen quality outputs; no quality retuning",
+  "diagnostic_only": false,
+  "test64_opened": false,
+  "training_updates": 0,
+  "RL_updates": 0
+}

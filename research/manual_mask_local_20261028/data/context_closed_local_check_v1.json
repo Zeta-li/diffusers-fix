@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checks": [
+    "9 frozen implementation hashes",
+    "36 terminal-image MAE values independently recomputed from decoded PNGs",
+    "11/12 improvement count",
+    "5 Python entrypoints parse"
+  ],
+  "new_GPU_DiT": 0
+}

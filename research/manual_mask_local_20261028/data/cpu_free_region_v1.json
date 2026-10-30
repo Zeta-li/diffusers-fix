@@ -1,0 +1,20 @@
+{
+  "exit_code": 0,
+  "time": 1793163320.1854196,
+  "result": {
+    "suite": "native_free_region_CPU_real_tiny_Qwen",
+    "tests_run": 7,
+    "failures": 0,
+    "errors": 0,
+    "cpu_tiny_transformer_forward_entries": 137,
+    "real_weight_gpu_dit_calls": 0,
+    "quality_or_latency_claim": false
+  },
+  "code_sha256": {
+    "free_region.py": "4dbfbb1f20146bcc8bb20dfaf1de71eed4da25fe8806f827a945547e032c0d51",
+    "test_free_region.py": "7ab39df08044c4bb39fcd25276711d96227ad3c96612bccbda78513cb4defc86",
+    "local_mask_bridge.py": "0c78df2866540005bb762c3d9946f70f806a6f5cb98b6d2c7b0331e07facbd2f",
+    "legacy_local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "legacy_refresh_policy.py": "0b319fbbb05c8dff0880e75634cca524211dd8b4fce4e65006ebde7f990adfcf"
+  }
+}

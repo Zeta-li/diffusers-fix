@@ -1,0 +1,12 @@
+{
+  "status": "SHA256_MATCH_REMOTE_AND_LOCAL",
+  "archive_local": "/tmp/localdev16_raw_20261028.tar.gz",
+  "archive_remote": "/tmp/localdev16_raw_20261028.tar.gz",
+  "bytes": 547340901,
+  "sha256": "2962ffa499efde01ce28a54c3f027a44e736113f112449b6d3f139c715954079",
+  "file_count": 232,
+  "review_archive_sha256": "18256913e714547300b72f5b7db211d3cbe455350ff8709bb16bf026fc0c3ae7",
+  "raw_trajectory_requests": 64,
+  "raw_trajectory_steps": 512,
+  "all_source_and_generated_files_preserved": true
+}

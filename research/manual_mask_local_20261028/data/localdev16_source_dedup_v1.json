@@ -1,0 +1,49 @@
+{
+  "candidate_sources": 24,
+  "prior_sources": 75,
+  "comparisons": 1800,
+  "flagged": [
+    {
+      "id": "111376",
+      "reference": "\u72ec\u7acbVal16\u6821\u51c6\u9a8c\u8bc1_20261023/inputs/val16/175584/source.original",
+      "exact": false,
+      "near": false,
+      "ahash": 7,
+      "dhash": 31
+    },
+    {
+      "id": "108871",
+      "reference": "\u72ec\u7acbVal16\u6821\u51c6\u9a8c\u8bc1_20261023/inputs/val16/175584/source.original",
+      "exact": false,
+      "near": false,
+      "ahash": 5,
+      "dhash": 43
+    },
+    {
+      "id": "3131",
+      "reference": "\u72ec\u7acbVal16\u6821\u51c6\u9a8c\u8bc1_20261023/inputs/val16/175584/source.original",
+      "exact": false,
+      "near": false,
+      "ahash": 8,
+      "dhash": 23
+    },
+    {
+      "id": "122927",
+      "reference": "\u65b0\u951a\u70b9\u6821\u51c6\u4e0e\u7ed3\u6784\u9a8c\u8bc1_20261023/data_d3_sources/inputs/dev16_new/358868/source.original",
+      "exact": false,
+      "near": false,
+      "ahash": 9,
+      "dhash": 30
+    },
+    {
+      "id": "259097",
+      "reference": "\u72ec\u7acbVal16\u6821\u51c6\u9a8c\u8bc1_20261023/inputs/val16/175584/source.original",
+      "exact": false,
+      "near": false,
+      "ahash": 8,
+      "dhash": 30
+    }
+  ],
+  "review_pending": true,
+  "test_media_read": false
+}

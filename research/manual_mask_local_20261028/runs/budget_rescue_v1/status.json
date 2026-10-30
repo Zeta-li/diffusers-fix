@@ -1,0 +1,13 @@
+{
+  "phase": "complete_analysis_pending",
+  "active": {
+    "case_id": "expand_train_494572",
+    "arm": "LOCAL128"
+  },
+  "invoked_dit": 512,
+  "completed_dit": 512,
+  "successful_requests": 64,
+  "training_updates": 0,
+  "RL_updates": 0,
+  "Dev32_opened": false
+}

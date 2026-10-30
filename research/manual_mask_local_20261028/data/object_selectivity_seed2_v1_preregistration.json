@@ -1,0 +1,116 @@
+{
+  "phase": "FROZEN_BEFORE_GENERATION",
+  "created_at": "2026-10-28T14:20:30.509731+08:00",
+  "purpose": "One additional fixed seed for selected prompts; not new independent sources",
+  "planned_requests": 6,
+  "planned_dit": 48,
+  "cases": [
+    {
+      "case_id": "free_272738_p1",
+      "source_group_id": "272738",
+      "image": "inputs/free_train24/272738/source.original",
+      "source_sha256": "1e36f8cea50c5d001782da0cddae36f672bc79bfe545c202268679e1fde91c9f",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        225,
+        0,
+        365,
+        290
+      ],
+      "prompt": "Replace only the transparent stemmed glass in the upper center-right of the desk with one red ceramic mug with a handle, located where that glass stood. Preserve the rest of the desk.",
+      "role": "seen_development_object_selection",
+      "task_type": "replace",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        },
+        {
+          "name": "FIX32",
+          "kind": "front",
+          "margin": 32
+        }
+      ],
+      "original_case_id": "free_272738"
+    },
+    {
+      "case_id": "local_train_210597_redcushion_p2",
+      "source_group_id": "210597",
+      "image": "inputs/s1_train8/local_train_210597_redcushion/source.original",
+      "source_sha256": "25167d7069dc155c0ed1e3595d67e1036db0fa2aa8ce6e3e8acfc2dbb8d78a38",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        298,
+        284,
+        403,
+        326
+      ],
+      "prompt": "Change the single flat blue cushion on the right sofa seat to red. Keep the other blue cushion tucked behind the upright white cushion on the left blue. Preserve both cushions shapes and positions, the white cushion, and the rest of the room.",
+      "role": "seen_development_object_selection",
+      "task_type": "attribute",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        },
+        {
+          "name": "FIX32",
+          "kind": "front",
+          "margin": 32
+        }
+      ],
+      "original_case_id": "local_train_210597_redcushion"
+    },
+    {
+      "case_id": "free_213020_p1",
+      "source_group_id": "213020",
+      "image": "inputs/free_train24/213020/source.original",
+      "source_sha256": "cd5c3510cca9da2f2414d0967966b6248cbe2d3de3c72c55e77099d74c211d77",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        360,
+        65,
+        500,
+        170
+      ],
+      "prompt": "Change only the existing hat worn by the man on the far right of the photograph to bright red. Preserve the people and the rest of the black-and-white photograph.",
+      "role": "seen_development_object_selection",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        },
+        {
+          "name": "FIX32",
+          "kind": "front",
+          "margin": 32
+        }
+      ],
+      "original_case_id": "free_213020"
+    }
+  ],
+  "seed": 2026102802,
+  "noise_path": "data/object_selectivity_seed2_noise.pt",
+  "noise_sha256": "1ba0a4325aba48523d0d25ce14ac28e454626e6658a02cd716fdd5e8799056bb",
+  "runner_sha256": "72076f35b151adaffb6a0bea628b29578bd14ddaf4c5df3f900d03f3d8f3362a",
+  "quality_gate": {
+    "semantic_required": "3/3 at both seeds for F and FIX32",
+    "image_MAE_vs_F_max": 0.015,
+    "outside_fixed_box_MAE_vs_F_max": 0.01
+  },
+  "independent_validation": false,
+  "original_failed_gate_preserved": true
+}

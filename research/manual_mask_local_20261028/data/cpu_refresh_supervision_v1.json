@@ -1,0 +1,18 @@
+{
+  "exit_code": 0,
+  "tests": 2,
+  "fp32_bf16_eight_state_isolation": true,
+  "exception_cleanup": true,
+  "equal_added_budget": true,
+  "log_remote": "notes/cpu_refresh_supervision_v1.log",
+  "tiny_forward_entries": "not instrumented",
+  "code_sha256": {
+    "refresh_supervision.py": "6716224e413900c4a1749425463a521f55f17acc948a6f3d9499f4917b6a7a6d",
+    "run_refresh_supervision.py": "e4a5de39a1e35ec2307dcad7744a2c6c8aa228ba1526f28fc8baf806afd1247c",
+    "test_refresh_supervision.py": "9c13d0511c9c2faf3e37da670b955a0342ad3ea37195271a9786bd78b16038c2",
+    "legacy_local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "free_region.py": "4dbfbb1f20146bcc8bb20dfaf1de71eed4da25fe8806f827a945547e032c0d51",
+    "run_free_pilot.py": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8",
+    "run_s1.py": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81"
+  }
+}

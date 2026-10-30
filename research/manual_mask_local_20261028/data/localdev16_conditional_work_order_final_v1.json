@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-10-28T17:30:49.474355+08:00",
+  "state": "COMPLETE_STAGE1_QUALITY_NO_GO",
+  "generation_protocol": "data/localdev16_v1_preregistration.json",
+  "actual_generation_requests": 64,
+  "actual_generation_dit": 512,
+  "decision": "data/localdev16_decision_v1.json",
+  "stage2": {
+    "status": "NOT_EXECUTED_PRECONDITION_FAILED",
+    "requests": 0,
+    "dit": 0,
+    "planned_design": "F/FIX32/CONTEXT64 one warmup each, 16 cases x 3 paired rotated repeats; remove diagnostics only after exact replay check; include region, cache, condition and VAE cost",
+    "timing_protocol_frozen": false
+  },
+  "stage3": {
+    "status": "NOT_EXECUTED_PRECONDITION_FAILED",
+    "new_opportunity_dit": 0,
+    "training_updates": 0,
+    "RL_updates": 0,
+    "planned_design": "Original training sources only; same budget spatial candidate comparison, establish terminal opportunity before fitting",
+    "spatial_protocol_frozen": false,
+    "new_dev16_may_not_be_used_as_unseen_again": true
+  },
+  "erratum": {
+    "original_auxiliary_file": "data/localdev16_conditional_work_order_v1.json",
+    "original_sha256": "27d076394b02baff19622c5f389cb4f37e189d268f5de3a15b28d320d20a495f",
+    "issue": "Auxiliary work-order writer mistakenly serialized semantic rubric variable instead of the intended pending work order; retained unchanged as evidence. This final post-decision file is the actual work-order status, not a retroactive preregistration.",
+    "frozen_generation_protocol_affected": false,
+    "GPU_execution_affected": false
+  }
+}

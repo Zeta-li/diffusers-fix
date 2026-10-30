@@ -1,0 +1,10 @@
+{
+  "status": "PASS_ALL_MEMBERS_VERIFIED",
+  "archive": "/tmp/r25_validation_raw_v1.tar.gz",
+  "archive_bytes": 1838872268,
+  "archive_sha256": "23c2b983bba310c13e6b1763bfb2ef692d0d07e75a0e3c7a60c8f161447ad380",
+  "manifest_sha256": "9edd1ae45ec1dbb4d98eab2e03c9ca3d2ed30c3d986c9b4f8b074461c3956e36",
+  "files": 1430,
+  "verified": 1430,
+  "raw_bytes": 2376160614
+}

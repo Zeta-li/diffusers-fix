@@ -1,0 +1,30 @@
+{
+  "frozen_at": "2026-10-30T14:02:24.102408",
+  "primary_fixed128_gate": "FAIL_NUMERIC_PRESERVED",
+  "exploratory_branch": "budget_rescue_v1",
+  "selected": "LOCAL128",
+  "selection_basis": "lower mean Cal32 reference error than EARLY32 and no added joint failures vsF; no Dev observations used",
+  "numeric": {
+    "RGB_MAE": 0.009739586905197939,
+    "inside_MAE": 0.024331104545126436,
+    "outside_MAE": 0.006092258867283817,
+    "latent_MAE": 0.020903840515529737,
+    "wins_vs_PILOT": 26,
+    "relative_RGB_change_vs_PILOT": -0.2336558728075654,
+    "source_bootstrap95_vs_PILOT": [
+      -0.31784627967861667,
+      -0.15605621388213048
+    ]
+  },
+  "visual": {
+    "edit": 28,
+    "preservation": 26,
+    "joint": 24,
+    "uncertain": 2
+  },
+  "PILOT_joint": 22,
+  "F_joint": 24,
+  "open_Dev32": true,
+  "Dev32_candidate_changes_allowed": false,
+  "Test64_opened": false
+}

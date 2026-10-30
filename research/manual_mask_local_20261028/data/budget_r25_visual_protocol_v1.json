@@ -1,0 +1,11 @@
+{
+  "frozen_at": "2026-10-30T09:55:22.695262+00:00",
+  "reviewer": "single assistant; prior source outputs seen",
+  "n_sources": 48,
+  "arms": 4,
+  "anonymous_labels": true,
+  "criteria": "Edit requires requested object/count/attribute/action or exact text. Preservation excludes obvious unrelated changes. Uncertain is not joint pass.",
+  "position_rule": "Explicitly treat STOP-sign relocation445972 as preservation failure for all methods that relocate it; disclose difference from prior main scoring",
+  "prior_scores": "Keep prior round original scores frozen; report repeated-score audit separately",
+  "no_human_consensus": true
+}

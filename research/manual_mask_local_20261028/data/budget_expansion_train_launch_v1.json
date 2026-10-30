@@ -1,0 +1,7 @@
+{
+  "pid": 368054,
+  "started_unix": 1793337386.6749191,
+  "protocol": "data/budget_expansion_train_v1_preregistration.json",
+  "attempt": "budget_expansion_train_v1",
+  "planned_optimizer_updates": 128
+}

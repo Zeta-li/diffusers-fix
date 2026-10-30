@@ -1,0 +1,11 @@
+{
+  "decision": "NO_GO_S2",
+  "reference_attempt": "runs/s1_v2",
+  "preregistration_sha256": "96bbc1769cd0c7f0cf3d773580452e03ebdfe928f784446b5390182c0390ed69",
+  "manual_review_path": "data/s1_visual_review.json",
+  "manual_review_sha256": "af1855f43fea74d431d5ec99b5b6142641a4a632f169f67e70c5300814013ad0",
+  "numeric_ledger_pass": true,
+  "semantic_quality_pass": false,
+  "reason": "Strict MASK_FULL3/8 plus severe horn/ear boundary truncation; first repair full baseline. No local GPU, net latency, fitting or RL.",
+  "next": "Six-request48DiT training-only diagnostic of mask margin and explicit target attributes; not an independent validation."
+}

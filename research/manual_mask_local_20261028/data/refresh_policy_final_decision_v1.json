@@ -1,0 +1,15 @@
+{
+  "decision": "retain_R25_mainline;supervised_research_candidate;RL_not_promoted",
+  "reason": "SUP RGB MAE is0.24% above train-selected fixedR4 despite lower surrogate loss;RL worse thanSUP;paired improvement CI vsR25 crosses0;no semantic gain",
+  "train_fixed": "R4",
+  "calibration_posthoc_best_fixed": "R6",
+  "SUP_vs_R25_RGB": -0.029528492580624732,
+  "RL_vs_R25_RGB": -0.014832449165344319,
+  "RL_vs_SUP_RGB": 0.01514319926234542,
+  "SUP_vs_train_fixed_RGB": 0.0023601032393851806,
+  "SUP_vs_train_fixed_surrogate": -0.01450256813686801,
+  "joint_all_arms": "10/16 under single-assistant nonblind comparison;shared base failures retained",
+  "new_latency_claim": false,
+  "test64_opened": false,
+  "next": "Freeze F/R25/R6/SUP on16 outcome-unseen dev sources;64requests512DiT. In parallel prepare stable executor/SGLang interface fromR25. No unconditional increase in same32source RL epochs."
+}

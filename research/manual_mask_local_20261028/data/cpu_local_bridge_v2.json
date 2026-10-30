@@ -1,0 +1,20 @@
+{
+  "exit_code": 0,
+  "time": 1793161265.1854568,
+  "result": {
+    "suite": "controlled_mask_local_bridge_CPU_tiny",
+    "tests_run": 4,
+    "failures": 0,
+    "errors": 0,
+    "cpu_tiny_dit_forward_entries": 64,
+    "real_weight_gpu_dit_calls": 0,
+    "quality_or_latency_claim": false
+  },
+  "code_sha256": {
+    "controlled_mask.py": "a8b95a5d4eb6d8fc1efa3d004e00d72c500a7b4d2cb4d04c828bbb892b192408",
+    "local_mask_bridge.py": "0c78df2866540005bb762c3d9946f70f806a6f5cb98b6d2c7b0331e07facbd2f",
+    "legacy_local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "legacy_refresh_policy.py": "0b319fbbb05c8dff0880e75634cca524211dd8b4fce4e65006ebde7f990adfcf",
+    "test_local_mask_bridge.py": "b7e758a1d5b8247ffa16b32f69b5d4745e9f86498765b78a80af44d1d7845982"
+  }
+}

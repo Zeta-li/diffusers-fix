@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-30T12:22:28.250557+08:00",
+  "status": "GO_EXPAND_CACHE_AWARE_LORA",
+  "training_updates": 25,
+  "training_sources": 12,
+  "microbatches": 100,
+  "actual_DiT": 2346,
+  "successful_complete_requests": 213,
+  "training_DiT": 1546,
+  "timing_DiT": 800,
+  "failed_real_model_calls": 0,
+  "candidate": "LORA_ONLY",
+  "mean_RGB_MAE_reduction_all15": 0.09793819780330859,
+  "mean_RGB_MAE_reduction_internal4": 0.1408678262565567,
+  "RGB_improved_sources": 15,
+  "strict_joint_passes": {
+    "F": 11,
+    "ALL": 8,
+    "FRESH_B": 11,
+    "JOINT": 9,
+    "VELOCITY_ONLY": 8,
+    "LORA_ONLY": 9,
+    "FULL_STUDENT": 11
+  },
+  "new_severe_failures_vs_ALL": 0,
+  "repaired_example": "free_275197",
+  "remaining_incremental_failures": [
+    "local_train_15953_chocolate",
+    "free_475277"
+  ],
+  "mean_latency_seconds": 2.5403394665724286,
+  "speedup": 1.6934652054164432,
+  "formal_quality_target_achieved": false,
+  "independent_Dev32_executed": false,
+  "RL_updates": 0,
+  "test64_opened": false,
+  "next": "ExpandTrain128/Cal32,LoRAprimarytraining;mergeadapterafterBF16qualityverification;separatelyablatevelocitynetwork;freeze_student_before_policy_RL"
+}

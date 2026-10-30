@@ -1,0 +1,83 @@
+{
+  "candidate_sources": 26,
+  "selected_sources": 16,
+  "prior_unique_sources": 75,
+  "exact_duplicates": 0,
+  "near_duplicates": 0,
+  "flagged": [
+    {
+      "id": "111376",
+      "reference": "独立Val16校准验证_20261023/inputs/val16/175584/source.original",
+      "exact": false,
+      "near": false,
+      "ahash": 7,
+      "dhash": 31,
+      "manual_source_review": "distinct scene; no near duplicate"
+    },
+    {
+      "id": "108871",
+      "reference": "独立Val16校准验证_20261023/inputs/val16/175584/source.original",
+      "exact": false,
+      "near": false,
+      "ahash": 5,
+      "dhash": 43,
+      "manual_source_review": "distinct scene; no near duplicate"
+    },
+    {
+      "id": "3131",
+      "reference": "独立Val16校准验证_20261023/inputs/val16/175584/source.original",
+      "exact": false,
+      "near": false,
+      "ahash": 8,
+      "dhash": 23,
+      "manual_source_review": "distinct scene; no near duplicate"
+    },
+    {
+      "id": "122927",
+      "reference": "新锚点校准与结构验证_20261023/data_d3_sources/inputs/dev16_new/358868/source.original",
+      "exact": false,
+      "near": false,
+      "ahash": 9,
+      "dhash": 30,
+      "manual_source_review": "distinct scene; no near duplicate"
+    },
+    {
+      "id": "122927",
+      "reference": "inputs/localdev16_candidates_v1/139276/source.original",
+      "exact": false,
+      "near": false,
+      "ahash": 8,
+      "dhash": 29,
+      "manual_source_review": "distinct scene; no near duplicate"
+    },
+    {
+      "id": "259097",
+      "reference": "独立Val16校准验证_20261023/inputs/val16/175584/source.original",
+      "exact": false,
+      "near": false,
+      "ahash": 8,
+      "dhash": 30,
+      "manual_source_review": "distinct scene; no near duplicate"
+    }
+  ],
+  "excluded_candidates": {
+    "178403": "Original instruction mentions apples but fruit identity is visually ambiguous; do not force an object interpretation.",
+    "90192": "Eligible source but large plate omitted after attribute quota filled.",
+    "108871": "Replacement target donkey head/body is heavily cropped by right image boundary.",
+    "291861": "Zebra fills most of image and is cropped; inconsistent with this local-task scope.",
+    "483587": "Dog head is outside the frame; unsuitable for evaluating dog-to-cat identity.",
+    "317806": "Crowded stationery holders with overlapping tools make cup identity ambiguous.",
+    "31749": "Eligible hat-addition reserve; expansion quota already filled.",
+    "139276": "Eligible hat-addition reserve; expansion quota already filled.",
+    "3131": "Thin toothpicks extend beyond upper boundary and plural task spans two separated objects.",
+    "315319": "Eligible replacement reserve; selected frisbee gives clearer local object contact."
+  },
+  "all_candidate_sources_visually_reviewed": true,
+  "all_selected_hint_and_evaluation_boxes_reviewed": true,
+  "source_only": true,
+  "generated_outputs_viewed": false,
+  "test_media_read": false,
+  "target_column_read": false,
+  "reviewer": "assistant_visual_review_nonblind_source_only",
+  "status": "PASS"
+}

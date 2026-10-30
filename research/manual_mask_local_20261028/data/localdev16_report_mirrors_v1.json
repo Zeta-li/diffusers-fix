@@ -1,0 +1,17 @@
+[
+  {
+    "source": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/研究总控_当前状态.md",
+    "mirror": "notes/current_external_reports/localdev16_0_研究总控_当前状态.md",
+    "sha256": "f648743ac550b76ddd70a441a403116267cdaf5e2a8971426dc566f4fed043ee"
+  },
+  {
+    "source": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/阶段研究报告_20261022/局部图像编辑加速研究_阶段性总结报告.md",
+    "mirror": "notes/current_external_reports/localdev16_1_局部图像编辑加速研究_阶段性总结报告.md",
+    "sha256": "afdd66100802c61e389c2e0ffca94eaa96cf6c587670a3732042949ac9fe7a88"
+  },
+  {
+    "source": "/Users/liziteng/Documents/ChatGPT/研究生毕业设计/新锚点校准与结构验证_20261023/06_研究进度与八个月执行表.md",
+    "mirror": "notes/current_external_reports/localdev16_2_06_研究进度与八个月执行表.md",
+    "sha256": "b2202f30cf6009d4b3eb605ffd480f06b3818d40943cbcebf06246b333134a65"
+  }
+]

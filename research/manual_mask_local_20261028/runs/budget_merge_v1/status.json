@@ -1,0 +1,13 @@
+{
+  "phase": "complete_analysis_pending",
+  "active": {
+    "index": 57,
+    "phase": "quality_only",
+    "case_id": "free_374087",
+    "arm": "MERGED",
+    "repeat": 0
+  },
+  "invoked_dit": 464,
+  "completed_dit": 464,
+  "successful_requests": 58
+}

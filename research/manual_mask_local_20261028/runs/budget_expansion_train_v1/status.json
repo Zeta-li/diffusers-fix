@@ -1,0 +1,22 @@
+{
+  "phase": "complete_analysis_pending",
+  "updated_unix": 1793339245.3536062,
+  "active": {
+    "stage": "evaluation",
+    "case_id": "free_374087",
+    "arm": "EXPAND"
+  },
+  "invoked_dit": 4743,
+  "completed_dit": 4743,
+  "teacher_dit": 640,
+  "prefix_dit": 1959,
+  "gradient_student_dit": 640,
+  "contract_dit": 0,
+  "evaluation_dit": 1504,
+  "optimizer_updates": 128,
+  "backward_passes": 512,
+  "successful_requests": 188,
+  "conditioning_only": 175,
+  "new_RL_updates": 0,
+  "test64_opened": false
+}

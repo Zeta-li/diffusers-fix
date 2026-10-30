@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "report_local_links_valid": true,
+  "frozen_protocol_sha256": "533e9702f21935d4c1e8e2364e0ec4a5912f51138d2d9a901a7f2a51a4727b4a",
+  "frozen_code_hashes": 12,
+  "raw_files": 64,
+  "PNG_files": 64,
+  "external_report_mirrors": 3,
+  "created_at": "2026-10-28T17:32:00.950799+08:00"
+}

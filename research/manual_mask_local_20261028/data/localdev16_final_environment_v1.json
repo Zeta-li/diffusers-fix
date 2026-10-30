@@ -1,0 +1,14 @@
+{
+  "host": "zeta",
+  "user_confirmed_gpu": "H800",
+  "driver_gpu": "NVIDIA L20Y",
+  "gpu_memory_MiB": 0,
+  "gpu_utilization_percent": 0,
+  "compute_processes": [],
+  "branch": "test/manual-mask-local-20261028",
+  "git_head": "4222cd5955b8033842748a7d676a5d180ab4c22d",
+  "git_status": "?? research/manual_mask_local_20261028/",
+  "commit": false,
+  "push": false,
+  "source": "remote final status check after generation and audit"
+}

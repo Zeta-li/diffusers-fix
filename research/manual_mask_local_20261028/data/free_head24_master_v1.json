@@ -1,0 +1,656 @@
+{
+  "phase": "FROZEN_BEFORE_GENERATION",
+  "created_at": "2026-10-28T13:16:15.454353+08:00",
+  "cases": [
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "image": "inputs/s1_train8/local_train_286770_goat/source.original",
+      "source_sha256": "75247dd935a0f86f1a6a799d66b5bd8c8f3f65c5d50cdda829c6c6129404463a",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        165,
+        180,
+        250,
+        395
+      ],
+      "prompt": "Replace only the leftmost lamb with a young goat of similar size in the same standing pose and position. Keep the other two sheep and the rest of the scene unchanged.",
+      "role": "fit",
+      "task_type": "replace",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "image": "inputs/s1_train8/local_train_486018_dog/source.original",
+      "source_sha256": "17d9d3e818058c897ed59d4b5b9e01ab7559c881f3f33b352f6ae7137a3900ae",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        75,
+        85,
+        275,
+        250
+      ],
+      "prompt": "Replace the black cat on the microwave with a small black Labrador retriever puppy with floppy hanging ears and a broad dog muzzle. Keep the puppy on top of the same microwave. Preserve the microwave and the rest of the room.",
+      "role": "fit",
+      "task_type": "replace",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "source_group_id": "178810",
+      "image": "inputs/s1_train8/local_train_178810_bollard/source.original",
+      "source_sha256": "840d713265c58ef1b6ead8f0804e1688f142b48cc136b75494933d3c9b9d3d00",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        155,
+        345,
+        230,
+        465
+      ],
+      "prompt": "Replace the fire hydrant with a short red cylindrical street bollard of similar height at the same ground position. Keep the wall, trees, pavement, and the rest of the scene unchanged.",
+      "role": "fit",
+      "task_type": "replace",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "source_group_id": "429111",
+      "image": "inputs/s1_train8/local_train_429111_remote/source.original",
+      "source_sha256": "88309e0d2e156a12d8bf79000db2e435625cacc16d5a372c5967e6f81142a67a",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        330,
+        120,
+        380,
+        210
+      ],
+      "prompt": "Replace only the red mobile phone on the right side of the desk with a red television remote control with a circular directional pad, power button, and volume rocker buttons, and no display screen. Keep the remote in the same area of the desk and preserve every other object.",
+      "role": "fit",
+      "task_type": "replace",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "image": "inputs/s1_train8/local_train_15953_chocolate/source.original",
+      "source_sha256": "dcdc856732161f84c3052750d4f0acaee67e91fbec25b58f3ffaecb9c16ed723",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        210,
+        110,
+        465,
+        255
+      ],
+      "prompt": "Change only the white frosting on top of the cupcake to chocolate-brown frosting. Preserve its spiral shape, the cupcake wrapper, the apple, the plate, and the rest of the image.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "image": "inputs/s1_train8/local_train_26498_woodbat/source.original",
+      "source_sha256": "6007d94a612a0e6bc90ef659ac98e10770a0dd12272b7ee497dc72a949aca264",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        130,
+        208,
+        250,
+        245
+      ],
+      "prompt": "Make the baseball bat look like natural brown wood while preserving its exact position, length, and direction. Keep the player's hands, clothing, and the rest of the scene unchanged.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "source_group_id": "452168",
+      "image": "inputs/s1_train8/local_train_452168_bluesign/source.original",
+      "source_sha256": "03c2682225df3e237686fb4fa548d376e5ff0385d88ac4a200d3031c91f8caac",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        115,
+        275,
+        370,
+        430
+      ],
+      "prompt": "Change only the black background of the sign to dark blue. Keep the white words NO BIRDS ALLOWED readable and preserve the surrounding scene.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "source_group_id": "210597",
+      "image": "inputs/s1_train8/local_train_210597_redcushion/source.original",
+      "source_sha256": "25167d7069dc155c0ed1e3595d67e1036db0fa2aa8ce6e3e8acfc2dbb8d78a38",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        298,
+        284,
+        403,
+        326
+      ],
+      "prompt": "Change only the blue cushion lying flat on the right side of the sofa to red. Preserve its shape, texture, and position. Keep the other cushions and the rest of the room unchanged.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_45237",
+      "source_group_id": "45237",
+      "image": "inputs/free_train24/45237/source.original",
+      "source_sha256": "b23f7bc33a470a55bc8214d12fd9910708773b1755a1a8c42a04db0c2121c9ec",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        95,
+        85,
+        450,
+        430
+      ],
+      "prompt": "Add a thin round slice of yellow lemon resting on top of the fish fillet. Preserve the fish, plate, vegetables and table.",
+      "role": "fit",
+      "task_type": "expansion",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_30836",
+      "source_group_id": "30836",
+      "image": "inputs/free_train24/30836/source.original",
+      "source_sha256": "42ab0878cbdad4d9fd3d77da6da854c99bd95869ab0c6a18d2590cc6dee39c21",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        0,
+        140,
+        180,
+        375
+      ],
+      "prompt": "Change only the visible laptop screen to a solid green screen. Preserve the laptop body, desk and other objects.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_379048",
+      "source_group_id": "379048",
+      "image": "inputs/free_train24/379048/source.original",
+      "source_sha256": "e355b423dc4bfab0cf0f24bd3edc2bbb847c6c214f5239164f8ed57bce464a49",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        105,
+        40,
+        470,
+        500
+      ],
+      "prompt": "Change the gray baseball jersey fabric to blue. Preserve its red lettering, position and the surrounding display.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_414772",
+      "source_group_id": "414772",
+      "image": "inputs/free_train24/414772/source.original",
+      "source_sha256": "977d1578a3df1b240773b92884e28c91a25efd2ff794c6cb469250f2eaf52293",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        348,
+        238,
+        445,
+        310
+      ],
+      "prompt": "Replace the roast chicken near the right side of the dining table with a small upright pineapple with green leaves. Keep it on the same platter and preserve the dining room and other table objects.",
+      "role": "calibration",
+      "task_type": "expansion",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_519299",
+      "source_group_id": "519299",
+      "image": "inputs/free_train24/519299/source.original",
+      "source_sha256": "d5a2c2a2914767bff607c65f8b0a8e7efbbafbdbe7c8fb5040b5a8a4dd8ad250",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        35,
+        25,
+        370,
+        385
+      ],
+      "prompt": "Change the bright pink piece of cake on the fork to chocolate brown. Preserve its crumb texture, the fork and plate.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_514668",
+      "source_group_id": "514668",
+      "image": "inputs/free_train24/514668/source.original",
+      "source_sha256": "d2df85e28b8e22c908eafb1de8f5465f15952bcfdf175a5024021705c4a99926",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        295,
+        215,
+        445,
+        500
+      ],
+      "prompt": "Change only the gray cat wearing the red collar to a white cat. Preserve the red collar, the other cat, and the car interior.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_363308",
+      "source_group_id": "363308",
+      "image": "inputs/free_train24/363308/source.original",
+      "source_sha256": "35fc5265a034225822589dadd601661d8adadb775c9fc39e602f9f05cbe8b582",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        0,
+        0,
+        170,
+        165
+      ],
+      "prompt": "Replace only the purple cake in the upper-left corner of the cooling rack with a red apple. Preserve the other cakes and the cooling rack.",
+      "role": "fit",
+      "task_type": "replace",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_546932",
+      "source_group_id": "546932",
+      "image": "inputs/free_train24/546932/source.original",
+      "source_sha256": "d30ca93a89088b637d920db929c7c29104723cb7e2128a905bf055134cf1a578",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        35,
+        55,
+        500,
+        500
+      ],
+      "prompt": "Change the color of the soup broth in the white bowl to tomato red. Preserve the bowl, vegetables, meat and table.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_475277",
+      "source_group_id": "475277",
+      "image": "inputs/free_train24/475277/source.original",
+      "source_sha256": "25d5adf8f7b040c67f72d7ff95172a312528a334d271c87499f2cdc6b64ecdf1",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        235,
+        10,
+        405,
+        195
+      ],
+      "prompt": "Add a single slender ivory unicorn horn growing upward from the center of the white horse forehead between its ears. Preserve the horse face, mane, fence and background.",
+      "role": "internal_validation",
+      "task_type": "expansion",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_213020",
+      "source_group_id": "213020",
+      "image": "inputs/free_train24/213020/source.original",
+      "source_sha256": "cd5c3510cca9da2f2414d0967966b6248cbe2d3de3c72c55e77099d74c211d77",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        355,
+        95,
+        500,
+        215
+      ],
+      "prompt": "Change only the man hat to bright red. Preserve the hat shape, the people, and the rest of the black-and-white photograph.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_57395",
+      "source_group_id": "57395",
+      "image": "inputs/free_train24/57395/source.original",
+      "source_sha256": "31be003210c46ae636d41427e6cfafd27fc688492e57c70f84a495d3775158aa",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        30,
+        100,
+        300,
+        405
+      ],
+      "prompt": "Replace the green broccoli on the blue plate with white cauliflower florets. Preserve the other food and the plate.",
+      "role": "calibration",
+      "task_type": "replace",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_557907",
+      "source_group_id": "557907",
+      "image": "inputs/free_train24/557907/source.original",
+      "source_sha256": "7770ab7747057afccf8b2de51aecdae7d2190b6b660acd8161b060b272400a66",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        205,
+        85,
+        495,
+        350
+      ],
+      "prompt": "Change only the wool of the foreground sheep on the right from white to black. Preserve the other sheep, their poses and the grassy field.",
+      "role": "calibration",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_272738",
+      "source_group_id": "272738",
+      "image": "inputs/free_train24/272738/source.original",
+      "source_sha256": "1e36f8cea50c5d001782da0cddae36f672bc79bfe545c202268679e1fde91c9f",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        225,
+        0,
+        365,
+        290
+      ],
+      "prompt": "Replace the clear stemmed drinking glass with a red ceramic mug with a handle, standing on the same desk. Preserve the other objects on the desk.",
+      "role": "internal_validation",
+      "task_type": "replace",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_275197",
+      "source_group_id": "275197",
+      "image": "inputs/free_train24/275197/source.original",
+      "source_sha256": "bbb32db23e8e803bbedfe0b640d4a1a865f8d06a3874e98dd761076bf1a6dafb",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        50,
+        90,
+        145,
+        290
+      ],
+      "prompt": "Change only the hanging white kitchen towel on the left to blue. Preserve its shape and position, the sink and all other kitchen objects.",
+      "role": "calibration",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_403221",
+      "source_group_id": "403221",
+      "image": "inputs/free_train24/403221/source.original",
+      "source_sha256": "1d28786a5939def64e26ecddd5ded9c24e429019173781b466176adcc12bfd3e",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        200,
+        325,
+        380,
+        420
+      ],
+      "prompt": "Change the collar around the foreground sheep neck to bright red. Preserve the sheep, its tags, and the mountain landscape.",
+      "role": "internal_validation",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "free_374087",
+      "source_group_id": "374087",
+      "image": "inputs/free_train24/374087/source.original",
+      "source_sha256": "12ce8c3d48bc8085631f68ebf3698720125794fb86727930d25b90040e706dd2",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        25,
+        300,
+        280,
+        500
+      ],
+      "prompt": "Change the green bananas in the lower-left part of the box to ripe yellow bananas. Preserve their number, shape, and all other groceries.",
+      "role": "internal_validation",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    }
+  ],
+  "split_counts": {
+    "fit": 16,
+    "calibration": 4,
+    "internal_validation": 4
+  },
+  "split_scope": "source-disjoint for this expansion head; all previously used research training sources, NOT independent new Dev16 or final Test",
+  "head_design": {
+    "features": "warmup step2 predicted clean latent versus reference, directional bands and pooled frozen text; no future states at inference",
+    "architecture": "shared per-side MLP, fixed width16, four nonnegative outward margins; calibration residual safety pad",
+    "fit": "fixed seed20261028, AdamW 1200 steps, training-only labels; reject semantically invalid F labels",
+    "labels": "AI-reviewed new target bbox union old hint, with contact repair and 2-token halo; label uncertainty retained",
+    "loss": "squared edge error + 4x undercoverage + area regularization; coefficients frozen before fit",
+    "comparison": "FIX16, FIX48, learned head; additionally equal-token geometric placement when learned region is useful"
+  },
+  "quality_gate": {
+    "internal_validation_success_min": 4,
+    "severe_truncation_max": 0,
+    "new_semantic_regressions_vs_F_max": 0,
+    "per_case_image_MAE_vs_F_max": 0.015,
+    "per_case_outside_common_evaluation_box_MAE_vs_F_max": 0.01,
+    "F_failures_count_as_not_passed": true,
+    "net_latency_requires_all_gates": true
+  },
+  "rl_updates": 0,
+  "target_media_read": false,
+  "test64_opened": false
+}

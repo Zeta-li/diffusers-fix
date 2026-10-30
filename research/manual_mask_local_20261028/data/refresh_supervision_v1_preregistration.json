@@ -1,0 +1,159 @@
+{
+  "phase": "FROZEN_BEFORE_GENERATION",
+  "created_at": "2026-10-28T14:17:58.433028+08:00",
+  "purpose": "FIX32 same-state teacher need map and equal-added-token one-step refresh utility; seen fit sources only",
+  "cases": [
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "image": "inputs/s1_train8/local_train_286770_goat/source.original",
+      "source_sha256": "75247dd935a0f86f1a6a799d66b5bd8c8f3f65c5d50cdda829c6c6129404463a",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        165,
+        180,
+        250,
+        395
+      ],
+      "prompt": "Replace only the leftmost lamb with a young goat of similar size in the same standing pose and position. Keep the other two sheep and the rest of the scene unchanged.",
+      "role": "fit",
+      "task_type": "replace",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "image": "inputs/s1_train8/local_train_486018_dog/source.original",
+      "source_sha256": "17d9d3e818058c897ed59d4b5b9e01ab7559c881f3f33b352f6ae7137a3900ae",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        75,
+        85,
+        275,
+        250
+      ],
+      "prompt": "Replace the black cat on the microwave with a small black Labrador retriever puppy with floppy hanging ears and a broad dog muzzle. Keep the puppy on top of the same microwave. Preserve the microwave and the rest of the room.",
+      "role": "fit",
+      "task_type": "replace",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "image": "inputs/s1_train8/local_train_15953_chocolate/source.original",
+      "source_sha256": "dcdc856732161f84c3052750d4f0acaee67e91fbec25b58f3ffaecb9c16ed723",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        210,
+        110,
+        465,
+        255
+      ],
+      "prompt": "Change only the white frosting on top of the cupcake to chocolate-brown frosting. Preserve its spiral shape, the cupcake wrapper, the apple, the plate, and the rest of the image.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "image": "inputs/s1_train8/local_train_26498_woodbat/source.original",
+      "source_sha256": "6007d94a612a0e6bc90ef659ac98e10770a0dd12272b7ee497dc72a949aca264",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        130,
+        208,
+        250,
+        245
+      ],
+      "prompt": "Make the baseball bat look like natural brown wood while preserving its exact position, length, and direction. Keep the player's hands, clothing, and the rest of the scene unchanged.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        }
+      ]
+    }
+  ],
+  "planned_requests": 4,
+  "planned_student_dit": 32,
+  "planned_teacher_dit": 20,
+  "planned_counterfactual_dit": 32,
+  "planned_dit": 84,
+  "teacher_steps": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "probe_steps": [
+    3,
+    5
+  ],
+  "step_indexing": "zero_based",
+  "extra_tokens": 64,
+  "tile_hw": [
+    2,
+    2
+  ],
+  "seed": 20261028,
+  "candidates": [
+    "ERROR",
+    "NEAR",
+    "FAR",
+    "RANDOM"
+  ],
+  "candidate_note": "ERROR uses same-state teacher and is an oracle diagnostic, not deployable inference. All actions add exactly64 inactive tokens. No persistent student updates from probes.",
+  "primary_loss": "all-target one-step native BF16 Euler MSE versus same-state full teacher",
+  "secondary_loss": "all-target velocity MSE; active and inactive partitions fixed to baseline",
+  "causal_scope": "Immediate single-step marginal utility conditioned on FIX32 student state/cache; not final-image utility or net speed",
+  "accept_signal": "ERROR beats RANDOM in at least6/8 state comparisons and has positive immediate update gain in at least6/8; exploratory small-source gate, not statistical/generalization proof",
+  "cpu_receipt": "data/cpu_refresh_supervision_v1.json",
+  "code_sha256": {
+    "refresh_supervision.py": "6716224e413900c4a1749425463a521f55f17acc948a6f3d9499f4917b6a7a6d",
+    "run_refresh_supervision.py": "e4a5de39a1e35ec2307dcad7744a2c6c8aa228ba1526f28fc8baf806afd1247c",
+    "test_refresh_supervision.py": "9c13d0511c9c2faf3e37da670b955a0342ad3ea37195271a9786bd78b16038c2",
+    "legacy_local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "free_region.py": "4dbfbb1f20146bcc8bb20dfaf1de71eed4da25fe8806f827a945547e032c0d51",
+    "run_free_pilot.py": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8",
+    "run_s1.py": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81"
+  },
+  "independent_validation": false,
+  "test64_opened": false,
+  "net_latency_requests": 0,
+  "RL_updates": 0
+}

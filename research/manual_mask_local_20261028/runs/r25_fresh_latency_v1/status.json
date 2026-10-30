@@ -1,0 +1,13 @@
+{
+  "phase": "complete_analysis_pending",
+  "active": {
+    "index": 74,
+    "case_id": "r25_fresh_dev_57357",
+    "arm": "R25",
+    "phase": "measured",
+    "repeat": 3
+  },
+  "invoked_dit": 600,
+  "completed_dit": 600,
+  "successful_requests": 75
+}

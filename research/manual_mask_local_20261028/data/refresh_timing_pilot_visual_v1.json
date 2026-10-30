@@ -1,0 +1,82 @@
+{
+  "reviewed_at": "2026-10-30T12:27:41.308133+00:00",
+  "reviewer": "single assistant, nonblind training-source review",
+  "images": [
+    "runs/refresh_timing_pilot8_v1/analysis/review/train_1.jpg",
+    "runs/refresh_timing_pilot8_v1/analysis/review/train_2.jpg"
+  ],
+  "rows": [
+    {
+      "case_id": "expand_train_420478",
+      "F_joint": true,
+      "R25_joint": true,
+      "R4_joint": true,
+      "R6_joint": true,
+      "note": "Requested edit visible; no new obvious preservation failure in comparison."
+    },
+    {
+      "case_id": "expand_train_139108",
+      "F_joint": false,
+      "R25_joint": false,
+      "R4_joint": false,
+      "R6_joint": false,
+      "note": "Instruction adds zebra but existing horses replaced; shared base-model failure."
+    },
+    {
+      "case_id": "expand_train_478067",
+      "F_joint": true,
+      "R25_joint": false,
+      "R4_joint": false,
+      "R6_joint": false,
+      "note": "F has visible horn; local R25/R4/R6 lack clear horn. Timing shift did not repair it."
+    },
+    {
+      "case_id": "expand_train_410708",
+      "F_joint": true,
+      "R25_joint": true,
+      "R4_joint": true,
+      "R6_joint": true,
+      "note": "Requested edit visible; no new obvious preservation failure in comparison."
+    },
+    {
+      "case_id": "expand_train_560266",
+      "F_joint": true,
+      "R25_joint": true,
+      "R4_joint": true,
+      "R6_joint": true,
+      "note": "Requested edit visible; no new obvious preservation failure in comparison."
+    },
+    {
+      "case_id": "expand_train_563267",
+      "F_joint": true,
+      "R25_joint": true,
+      "R4_joint": true,
+      "R6_joint": true,
+      "note": "Requested edit visible; no new obvious preservation failure in comparison."
+    },
+    {
+      "case_id": "expand_train_288923",
+      "F_joint": true,
+      "R25_joint": true,
+      "R4_joint": true,
+      "R6_joint": true,
+      "note": "Requested edit visible; no new obvious preservation failure in comparison."
+    },
+    {
+      "case_id": "expand_train_414492",
+      "F_joint": true,
+      "R25_joint": true,
+      "R4_joint": true,
+      "R6_joint": true,
+      "note": "Requested edit visible; no new obvious preservation failure in comparison."
+    }
+  ],
+  "joint_counts": {
+    "F": 7,
+    "R25": 6,
+    "R4": 6,
+    "R6": 6
+  },
+  "n": 8,
+  "purpose": "Diagnostic training failures; not independent validation or head policy selection."
+}

@@ -1,0 +1,196 @@
+{
+  "created_at": "2026-10-30T11:41:47.280079+08:00",
+  "scope": "Completed400DiT preflight documents, code and derived analysis; immutable raw generation separately hashed",
+  "raw_manifest": "data/budget_preflight_raw_manifest_v1.json",
+  "raw_archive_sha256": "454211c7f431cba5e8c19815ece7c05f195b59251f13213a6fbb04555f094af5",
+  "parent_manifest": "data/latency_temporal_delivery_manifest_v1.json",
+  "files": [
+    {
+      "path": "00_实施与实验记录.md",
+      "bytes": 19325,
+      "sha256": "eb1837f664cda53904426e0808d14900de7215364097c936fd23b5bf2c352014"
+    },
+    {
+      "path": "02_后续实验与执行计划.md",
+      "bytes": 29706,
+      "sha256": "e87d0c8b4b98304852f1f38b602d0a0ccbc2ddb5bd2e6d7bfdd8653659e25b9d"
+    },
+    {
+      "path": "12_面向实际收益的双路径预算蒸馏方案_20261030.md",
+      "bytes": 21425,
+      "sha256": "6b97c2b52a1e9fe10c0f211950562694c8a1c64265bd856fed7851652599e602"
+    },
+    {
+      "path": "13_双路径预算蒸馏执行计划_20261030.md",
+      "bytes": 10413,
+      "sha256": "b95598e87f5240849b6fae6da3a358bd02caef479accaf8a4ad460f369a2bd7e"
+    },
+    {
+      "path": "14_条件文本缓存与VAE优化前置实验_20261030.md",
+      "bytes": 10092,
+      "sha256": "a2ce00780fe1bd06c332c1bbe3022ca2c3745e655416b9220b273356be6d04d3"
+    },
+    {
+      "path": "data/budget_preflight_decision_v1.json",
+      "bytes": 926,
+      "sha256": "39bf4ef04f6be6b1cbc051c823c20297f0d9e84437c34aa1f581afb98c1ba399"
+    },
+    {
+      "path": "data/budget_preflight_final_environment_v1.json",
+      "bytes": 411,
+      "sha256": "b9a42a5c8c478d458cd2fea3469e1b82c32f3f83622b282ca25880b8c1e1fdc0"
+    },
+    {
+      "path": "data/budget_preflight_local_archive_check_v1.json",
+      "bytes": 136,
+      "sha256": "2bccc632efc3dcc4135595a82399327a9d13666ac419d6b9cb3a713cd11872ae"
+    },
+    {
+      "path": "data/budget_preflight_raw_manifest_v1.json",
+      "bytes": 37639,
+      "sha256": "675d54027523fa2c5e104fb2afae1ec3d91bb1b2b26e1dbcfc57aa46ccceafcc"
+    },
+    {
+      "path": "data/budget_preflight_visual_review_v1.json",
+      "bytes": 5454,
+      "sha256": "c155fc77bbce7fa6e584c9848813c89f20d30476be4d847340b595e23c3a0eb7"
+    },
+    {
+      "path": "data/budget_preflight_visual_rubric_v1.json",
+      "bytes": 769,
+      "sha256": "b4e2f0d903d3669f52770a0c1937cfd4461394f528fa394430ad09b661802fd1"
+    },
+    {
+      "path": "data/cpu_budget_cache_v1.json",
+      "bytes": 824,
+      "sha256": "a6b5425534487d97a758dfa630121979a3f55bdb059b163d725b429691829763"
+    },
+    {
+      "path": "data/current_research_status.json",
+      "bytes": 5954,
+      "sha256": "d9617e9c1572440e7c4d799530247f9a17eefc38644e8a63231bc79c29e26ef2"
+    },
+    {
+      "path": "figures/budget_preflight_v1/latency_main8.png",
+      "bytes": 67228,
+      "sha256": "67c68f167adc3a5a8d2953579fe3dbde59074ff4d90397d385989fdd35c7d1c8"
+    },
+    {
+      "path": "notes/current_external_reports/budget_preflight_0_研究总控_当前状态.md",
+      "bytes": 14250,
+      "sha256": "8579a5b1b4c8ecdb168f5803f2fe7c5f57de76b6cc7e8b6d2e1386df80c9f26a"
+    },
+    {
+      "path": "notes/current_external_reports/budget_preflight_1_局部图像编辑加速研究_阶段性总结报告.md",
+      "bytes": 168227,
+      "sha256": "aa6d6cf2e3842c5b7be5938a6ba504d95ae3f193e2da5abb309771727e1bf9c5"
+    },
+    {
+      "path": "notes/current_external_reports/budget_preflight_2_06_研究进度与八个月执行表.md",
+      "bytes": 23780,
+      "sha256": "b4b274218b6eebe5f64a0804cb5c2bc441a7c3b51ad8f125e8b4253ac7902685"
+    },
+    {
+      "path": "runs/budget_preflight_v1/analysis/panels/chocolate_detail.png",
+      "bytes": 1311318,
+      "sha256": "8f1bc8dbd8fb3baf0a72c4c74f10d81d3ed0cfd05dacda7cff43d8955514ba10"
+    },
+    {
+      "path": "runs/budget_preflight_v1/analysis/panels/local_train_15953_chocolate.png",
+      "bytes": 1668390,
+      "sha256": "7678aee16367ae07074eb8af550ad7450dd308f9ce8c975173b96ed180f7f5fe"
+    },
+    {
+      "path": "runs/budget_preflight_v1/analysis/panels/local_train_178810_bollard.png",
+      "bytes": 2294468,
+      "sha256": "bf1fb46326eb368e024f2743daa48e7d3f4c13bd8b12766fdd734409b9329643"
+    },
+    {
+      "path": "runs/budget_preflight_v1/analysis/panels/local_train_210597_redcushion.png",
+      "bytes": 1573559,
+      "sha256": "b1604a9f2ca4308a82c36276c69e6e2c50955bfb76564a6fccdf08f9a9ea50ad"
+    },
+    {
+      "path": "runs/budget_preflight_v1/analysis/panels/local_train_26498_woodbat.png",
+      "bytes": 1800504,
+      "sha256": "acb4312b5d50f7d259f8956d3f2c4ae5033baaeb298306d031232d37a816dcb5"
+    },
+    {
+      "path": "runs/budget_preflight_v1/analysis/panels/local_train_286770_goat.png",
+      "bytes": 1499744,
+      "sha256": "9d62257d84e8236a30c0e1bff5aac21f6562fde71dc6a6961881b2ab27b03978"
+    },
+    {
+      "path": "runs/budget_preflight_v1/analysis/panels/local_train_286770_goat_vae.png",
+      "bytes": 952239,
+      "sha256": "9f3568579ff9141e0dbdedb0cf2419126b4df2414e98b13db6a831c719dfd927"
+    },
+    {
+      "path": "runs/budget_preflight_v1/analysis/panels/local_train_429111_remote.png",
+      "bytes": 1903849,
+      "sha256": "7ffcd932d0139a6682e5f3d8ab229226a6219301be4e4d6b592755ef68be22c0"
+    },
+    {
+      "path": "runs/budget_preflight_v1/analysis/panels/local_train_452168_bluesign.png",
+      "bytes": 1533287,
+      "sha256": "cc2e026254f1f7229b069ca3f47a03a75f630bdae61ae74df6f572c6eff4093a"
+    },
+    {
+      "path": "runs/budget_preflight_v1/analysis/panels/local_train_486018_dog.png",
+      "bytes": 1263096,
+      "sha256": "ed830ac13c9c332241145e7d5bee731ead1d57f72f1c66c2b0559193847a536c"
+    },
+    {
+      "path": "runs/budget_preflight_v1/analysis/panels/local_train_486018_dog_vae.png",
+      "bytes": 816788,
+      "sha256": "728e4f01f4f6b5af28a2738be7fa839d49a6dc334ab641feae8bc099e62662fa"
+    },
+    {
+      "path": "runs/budget_preflight_v1/analysis/results.json",
+      "bytes": 36401,
+      "sha256": "f87387c093acd5f6f74823c61031b7a5ba5425bef5a2e61d50646d5e0c480db7"
+    },
+    {
+      "path": "scripts/analyze_budget_preflight.py",
+      "bytes": 7386,
+      "sha256": "94b2147d931434290cf513b07541cba935ca83be42c78af2151c8bf505094e32"
+    },
+    {
+      "path": "scripts/budget_cache_executor.py",
+      "bytes": 10537,
+      "sha256": "80a821bc1a80368a3e409cd3ec9b81a57d36e1666a72f1f7990dab237d45f195"
+    },
+    {
+      "path": "scripts/budget_edit_cost_scenarios.py",
+      "bytes": 4591,
+      "sha256": "30d1632cbaa0403eaaff0d15ec6d19b8242471fc935d892a20b4735c934e78f3"
+    },
+    {
+      "path": "scripts/budget_profiles.py",
+      "bytes": 3716,
+      "sha256": "45898a0aa40427186b6267b0550e18d6457c4f6bfa0b19f5f2d8a25362d6dfc2"
+    },
+    {
+      "path": "scripts/freeze_budget_preflight.py",
+      "bytes": 4485,
+      "sha256": "063c9f1037226a9721fb9c2bfe94401c9ee6d178ae17fab4bf2909258770e962"
+    },
+    {
+      "path": "scripts/render_budget_preflight.py",
+      "bytes": 1286,
+      "sha256": "5eb3d857d09a8afa8cef23f5a0ec261668632f864e06e60a7428f9625be8bc0e"
+    },
+    {
+      "path": "scripts/run_budget_preflight.py",
+      "bytes": 9544,
+      "sha256": "7cf5761146924c92d46474595ad79cc011578f1855ab1b17cf776276ce149dba"
+    },
+    {
+      "path": "scripts/test_budget_cache_executor.py",
+      "bytes": 5771,
+      "sha256": "23da71665b95631be29d80c98d2952844e7caf83f71fa9de0a3c25083d62aa64"
+    }
+  ],
+  "count": 37,
+  "bytes": 17117518
+}

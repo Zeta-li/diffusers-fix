@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "tests": 3,
+  "CPU_tiny_DiT": 77,
+  "device": "cpu",
+  "code_sha256": {
+    "spatial_velocity_student.py": "bb5c57802cbf1f7a34e53402a2c6ab59a2de612e9a96afda0114fe7197b5219d",
+    "cache_aware_adapters.py": "3c3a37ffd8ba9d884a9555f26cf7e7b095d86a34fa9aabf8d0b45b34c4ce0702",
+    "trainable_budget_executor.py": "34dcd940d2f3594235726aaed989dd3fc54f4b52353c7fcd7bf3def32ff76d51",
+    "test_budget_student.py": "11bacea6ef59ffd8b17bc052b3b4706ca76cce59ee0c8b3db07555fbe1fa8c88"
+  }
+}

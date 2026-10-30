@@ -1,0 +1,10 @@
+{
+  "notes": [
+    {
+      "event": "analysis_precondition_guard",
+      "detail": "One analysis invocation occurred before final generation completion; completion assertion stopped it before outputs were written. Re-run only after complete status. No additional DiT or inference failure."
+    }
+  ],
+  "quality_run": "runs/budget_r25_v1",
+  "latency_run": "runs/budget_r25_latency_v1"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checked_files": 481,
+  "manifest_sha256": "9169654d8dda4b7429b048a24caae4a8feba2b2f93b2438cbe6d5364476fe97a",
+  "docs_archive_sha256": "4e563f2f5c99dde763abc58d8f4b6ee12e46c65f480b685bad55ae26d22ddc33",
+  "new_generation_requests": 64,
+  "new_DiT": 512,
+  "quality_decision": "NO_GO_NET_LATENCY_AND_SPATIAL_HEAD_UNDER_CURRENT_PROTOCOL",
+  "net_latency_requests": 0,
+  "new_training_updates": 0,
+  "RL_updates": 0,
+  "checked_at": "2026-10-28T17:34:17.362219+08:00"
+}

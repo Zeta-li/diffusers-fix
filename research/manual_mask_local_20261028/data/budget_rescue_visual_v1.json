@@ -1,0 +1,659 @@
+{
+  "reviewer": "single assistant nonblind; no human consensus",
+  "summary": {
+    "EARLY32": {
+      "edit": 28,
+      "preservation": 25,
+      "joint": 23,
+      "uncertain": 2
+    },
+    "LOCAL128": {
+      "edit": 28,
+      "preservation": 26,
+      "joint": 24,
+      "uncertain": 2
+    }
+  },
+  "records": [
+    {
+      "case_id": "expand_train_372317",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "note": "Bus stickers visible; no obvious extra object loss.",
+      "uncertain": false,
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "note": "Bananas replaced by piggy banks; adjacent pineapples retained.",
+      "uncertain": false,
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "note": "Catcher now wears cowboy hat; other players retained. Face fidelity cannot be assessed from helmet-covered source.",
+      "uncertain": false,
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "note": "Wine replaced by orange juice; table and food retained.",
+      "uncertain": false,
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "note": "Ball placed on tee; surrounding vegetation retained.",
+      "uncertain": false,
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": false,
+      "note": "Dog added, but source cat on windowsill removed.",
+      "uncertain": false,
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "EARLY32",
+      "edit": false,
+      "preservation": false,
+      "note": "Bottle removed instead of closed.",
+      "uncertain": false,
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": false,
+      "note": "Both large monitor and separate laptop changed; singular target interpreted as large monitor. Prompt ambiguity limits judgment.",
+      "uncertain": true,
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_463844",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Wine bottle added on countertop; surrounding scene retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_522229",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Pizza replaced with burger; plate, glass and utensils retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_445972",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "note": "Sign is green but relocated downward from original top-cropped position; pole alignment changes.",
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_343552",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Eyes visibly green; cat and surrounding scene retained, stylized iris rendering.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_286442",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Phone replaced with walkie-talkie; other table objects retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_352264",
+      "arm": "EARLY32",
+      "edit": false,
+      "preservation": true,
+      "uncertain": true,
+      "note": "Close inspection still lacks clear damage; vague instruction, conservative failure with uncertainty flag.",
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_196699",
+      "arm": "EARLY32",
+      "edit": false,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Whole uncut apple replaces cut pepper; requested cut state not achieved.",
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_47893",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "LEAF text legible on large red bag; adjacent bags retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_509149",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Leather jacket visible; kitchen retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_154644",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Phone removed; person and background retained. Face under removed phone reconstructed.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_315434",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "No-parking sign replaced with STOP sign; surrounding pavement retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_543513",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Man seated in chair; office furniture retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_453972",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Gorilla seated on couch; room retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_303144",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "note": "Hats added to both men, including the unrequested non-bald man.",
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_281564",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Container white; contents and surrounding equipment retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_565303",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Eyeglasses removed; computer and radio retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_417825",
+      "arm": "EARLY32",
+      "edit": false,
+      "preservation": false,
+      "uncertain": false,
+      "note": "Foreground cow has dog head on cow body; intended young calf not correctly replaced. A additionally changes distant calf.",
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_286720",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Additional cat placed beside toilet; original cat retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_359925",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "VR headset added; muzzle and original noseband retained, repairing PILOT regression.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_388434",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Blue ball replaces red disc; dog retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_292365",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Toy placed by cat; bathroom retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_373712",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "note": "Black helmet but goggles removed; LOCAL128 retains goggles.",
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_74256",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Green hat on right woman; other people retained. Fine face identity not reliably assessable here.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_494572",
+      "arm": "EARLY32",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Traffic light becomes green; green remains in original upper lamp slot, shared physical-layout issue.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "note": "Bus stickers visible; no obvious extra object loss.",
+      "uncertain": false,
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "note": "Bananas replaced by piggy banks; adjacent pineapples retained.",
+      "uncertain": false,
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "note": "Catcher now wears cowboy hat; other players retained. Face fidelity cannot be assessed from helmet-covered source.",
+      "uncertain": false,
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "note": "Wine replaced by orange juice; table and food retained.",
+      "uncertain": false,
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "note": "Ball placed on tee; surrounding vegetation retained.",
+      "uncertain": false,
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": false,
+      "note": "Dog added, but source cat on windowsill removed.",
+      "uncertain": false,
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "LOCAL128",
+      "edit": false,
+      "preservation": false,
+      "note": "Bottle removed instead of closed.",
+      "uncertain": false,
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": false,
+      "note": "Both large monitor and separate laptop changed; singular target interpreted as large monitor. Prompt ambiguity limits judgment.",
+      "uncertain": true,
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_463844",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Wine bottle added on countertop; surrounding scene retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_522229",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Pizza replaced with burger; plate, glass and utensils retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_445972",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "note": "Sign is green but relocated downward from original top-cropped position; pole alignment changes.",
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_343552",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Eyes visibly green; cat and surrounding scene retained, stylized iris rendering.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_286442",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Phone replaced with walkie-talkie; other table objects retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_352264",
+      "arm": "LOCAL128",
+      "edit": false,
+      "preservation": true,
+      "uncertain": true,
+      "note": "Close inspection still lacks clear damage; vague instruction, conservative failure with uncertainty flag.",
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_196699",
+      "arm": "LOCAL128",
+      "edit": false,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Whole uncut apple replaces cut pepper; requested cut state not achieved.",
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_47893",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "LEAF text legible on large red bag; adjacent bags retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_509149",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Leather jacket visible; kitchen retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_154644",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Phone removed; person and background retained. Face under removed phone reconstructed.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_315434",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "No-parking sign replaced with STOP sign; surrounding pavement retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_543513",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Man seated in chair; office furniture retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_453972",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Gorilla seated on couch; room retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_303144",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": false,
+      "uncertain": false,
+      "note": "Hats added to both men, including the unrequested non-bald man.",
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_281564",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Container white; contents and surrounding equipment retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_565303",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Eyeglasses removed; computer and radio retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_417825",
+      "arm": "LOCAL128",
+      "edit": false,
+      "preservation": false,
+      "uncertain": false,
+      "note": "Foreground cow has dog head on cow body; intended young calf not correctly replaced. A additionally changes distant calf.",
+      "joint": false,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_286720",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Additional cat placed beside toilet; original cat retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_359925",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "VR headset added; muzzle and original noseband retained, repairing PILOT regression.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_388434",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Blue ball replaces red disc; dog retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_292365",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Toy placed by cat; bathroom retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_373712",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Close inspection: black helmet, goggles and rider retained.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_74256",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Green hat on right woman; other people retained. Fine face identity not reliably assessable here.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    },
+    {
+      "case_id": "expand_train_494572",
+      "arm": "LOCAL128",
+      "edit": true,
+      "preservation": true,
+      "uncertain": false,
+      "note": "Traffic light becomes green; green remains in original upper lamp slot, shared physical-layout issue.",
+      "joint": true,
+      "review": "nonblind rescue panel review, all32 sources inspected"
+    }
+  ]
+}

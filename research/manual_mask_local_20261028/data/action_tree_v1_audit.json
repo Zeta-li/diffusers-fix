@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "attempt": "action_tree_v1",
+  "offline_Euler_steps": 1080,
+  "requests": 135,
+  "invoked_DiT": 1080,
+  "completed_DiT": 1080,
+  "same_state_groups": 60,
+  "velocity_retention_events": 90,
+  "archived_control_matches": 21,
+  "teacher_calls": 0,
+  "script_sha256": "5edbd3431d744bf4945b8c0f53a57538a92bfbb18a7922ea8f3e67ac7a1ff142"
+}

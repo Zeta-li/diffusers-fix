@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "labels": 60,
+  "source_disjoint_fit_calibration": true,
+  "normalization_fit_only": true,
+  "online_fit_calibration_exact_replays": 15,
+  "checkpoint_sha256": "8dd907ea7b6f90df4e064df147243b01c5e44f4af709040c25720d746fde1370"
+}

@@ -1,0 +1,202 @@
+{
+  "status": "POSTHOC_EXISTING_SEEN_DATA_ONLY",
+  "input": "runs/free_head_closed_v1/analysis_fixed32/metrics.json",
+  "input_sha256": "a7243051ca618f1338c4b96d9a469443238cdeda3d3b026683d4400e716fda6e",
+  "objective": "minimize saved RGB MAE to F subject to per-source target-token update count no greater than FIX32",
+  "arms_considered": [
+    "FIX16",
+    "FIX32",
+    "FIX48"
+  ],
+  "limitations": [
+    "Oracle reads terminal reference error; not an online policy or achieved learned gain.",
+    "Target-token updates are not wall-clock latency or complete FLOPs.",
+    "All sources previously seen; internal validation remains historical, not new independent validation.",
+    "Numeric objective does not certify edit correctness or perceptual equivalence.",
+    "Bound applies only to these saved fixed halos and per-source budget; not dynamic spatial/temporal policies."
+  ],
+  "new_dit": 0,
+  "new_training_updates": 0,
+  "groups": {
+    "calibration": {
+      "n": 4,
+      "fixed_arm_means": {
+        "FIX16": {
+          "mae_vs_F": 0.004991345980670303,
+          "target_token_update_fraction": 0.5961151123046875
+        },
+        "FIX32": {
+          "mae_vs_F": 0.004549773992039263,
+          "target_token_update_fraction": 0.62481689453125
+        },
+        "FIX48": {
+          "mae_vs_F": 0.004374422482214868,
+          "target_token_update_fraction": 0.652008056640625
+        }
+      },
+      "oracle_relative_mae_reduction": 0.0,
+      "oracle_mean_target_update_fraction": 0.62481689453125,
+      "oracle_choices": [
+        {
+          "source_group_id": "414772",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "57395",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "557907",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "275197",
+          "arm": "FIX32"
+        }
+      ]
+    },
+    "fit": {
+      "n": 4,
+      "fixed_arm_means": {
+        "FIX16": {
+          "mae_vs_F": 0.0038297382998280227,
+          "target_token_update_fraction": 0.521820068359375
+        },
+        "FIX32": {
+          "mae_vs_F": 0.0037417374551296234,
+          "target_token_update_fraction": 0.5527191162109375
+        },
+        "FIX48": {
+          "mae_vs_F": 0.003677406522911042,
+          "target_token_update_fraction": 0.586090087890625
+        }
+      },
+      "oracle_relative_mae_reduction": 0.011052577868709612,
+      "oracle_mean_target_update_fraction": 0.54791259765625,
+      "oracle_choices": [
+        {
+          "source_group_id": "286770",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "486018",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "15953",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "26498",
+          "arm": "FIX16"
+        }
+      ]
+    },
+    "internal_validation": {
+      "n": 4,
+      "fixed_arm_means": {
+        "FIX16": {
+          "mae_vs_F": 0.00670934293884784,
+          "target_token_update_fraction": 0.5447540283203125
+        },
+        "FIX32": {
+          "mae_vs_F": 0.006367752968799323,
+          "target_token_update_fraction": 0.5711212158203125
+        },
+        "FIX48": {
+          "mae_vs_F": 0.006188149040099233,
+          "target_token_update_fraction": 0.5977630615234375
+        }
+      },
+      "oracle_relative_mae_reduction": 0.0022865400997647,
+      "oracle_mean_target_update_fraction": 0.564117431640625,
+      "oracle_choices": [
+        {
+          "source_group_id": "475277",
+          "arm": "FIX16"
+        },
+        {
+          "source_group_id": "272738",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "403221",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "374087",
+          "arm": "FIX32"
+        }
+      ]
+    },
+    "all_seen_posthoc": {
+      "n": 12,
+      "fixed_arm_means": {
+        "FIX16": {
+          "mae_vs_F": 0.005176809073115389,
+          "target_token_update_fraction": 0.554229736328125
+        },
+        "FIX32": {
+          "mae_vs_F": 0.0048864214719894035,
+          "target_token_update_fraction": 0.5828857421875
+        },
+        "FIX48": {
+          "mae_vs_F": 0.004746659348408381,
+          "target_token_update_fraction": 0.6119537353515625
+        }
+      },
+      "oracle_relative_mae_reduction": 0.003814377414103731,
+      "oracle_mean_target_update_fraction": 0.578948974609375,
+      "oracle_choices": [
+        {
+          "source_group_id": "286770",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "486018",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "15953",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "26498",
+          "arm": "FIX16"
+        },
+        {
+          "source_group_id": "414772",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "475277",
+          "arm": "FIX16"
+        },
+        {
+          "source_group_id": "57395",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "557907",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "272738",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "275197",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "403221",
+          "arm": "FIX32"
+        },
+        {
+          "source_group_id": "374087",
+          "arm": "FIX32"
+        }
+      ]
+    }
+  }
+}

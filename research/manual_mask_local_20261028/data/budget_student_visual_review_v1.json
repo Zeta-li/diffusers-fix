@@ -1,0 +1,675 @@
+{
+  "reviewed_utc": "2026-10-30T04:13:08.880586+00:00",
+  "reviewer": "single assistant nonblind visual review; all15panels plus enlargedtowel,cupcake,mane",
+  "rubric": "data/budget_student_visual_rubric_v1.json",
+  "n": 15,
+  "records": [
+    {
+      "case_id": "local_train_286770_goat",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        }
+      },
+      "observation": "均完成幼山羊替换、保留另两只羊；缓存臂无角不构成指令失败。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/local_train_286770_goat.png"
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        }
+      },
+      "observation": "幼犬替换完成；缓存与训练臂保留房间布局，阴影和纹理仍有差异。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/local_train_486018_dog.png"
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        }
+      },
+      "observation": "墙面、树木与地面被重画，所有方法共有。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/local_train_178810_bollard.png"
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        }
+      },
+      "observation": "新遥控器覆盖原手机下方白色播放器，所有方法共有。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/local_train_429111_remote.png"
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        }
+      },
+      "observation": "缓存方法重画奶油轮廓和纸杯包装上沿；25更新尚未修复。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/local_train_15953_chocolate.png"
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        }
+      },
+      "observation": "木质球棒、位置与人物均保留，颜色和衣料细节有轻微漂移。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/local_train_26498_woodbat.png"
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        }
+      },
+      "observation": "深蓝标牌与NO BIRDS ALLOWED文字可读。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/local_train_452168_bluesign.png"
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        }
+      },
+      "observation": "两只蓝色靠垫均改红，所有方法共有。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/local_train_210597_redcushion.png"
+    },
+    {
+      "case_id": "free_414772",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        }
+      },
+      "observation": "菠萝替换完成，桌面、餐具与餐厅布局保留。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/free_414772.png"
+    },
+    {
+      "case_id": "free_557907",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        }
+      },
+      "observation": "右侧前景羊变黑，另一只羊与姿态保留。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/free_557907.png"
+    },
+    {
+      "case_id": "free_275197",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        }
+      },
+      "observation": "ALL/仅velocity把宽平毛巾改为窄长垂褶；LoRA/联合恢复宽平轮廓与下沿，仅残留轻微褶皱差异。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/free_275197.png"
+    },
+    {
+      "case_id": "free_475277",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        }
+      },
+      "observation": "缓存方法重画马鬃、额头及眼周细节；LoRA仅略有改善，仍判保持失败。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/free_475277.png"
+    },
+    {
+      "case_id": "free_272738",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": false,
+          "joint_pass": false
+        }
+      },
+      "observation": "左侧原黑色花纹杯也被改红，所有方法共有。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/free_272738.png"
+    },
+    {
+      "case_id": "free_403221",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        }
+      },
+      "observation": "红项圈生成，标签、羊及山景保留；项圈宽度变化在完整模型也可见。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/free_403221.png"
+    },
+    {
+      "case_id": "free_374087",
+      "labels": {
+        "F": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "ALL": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FRESH_B": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "JOINT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "VELOCITY_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "LORA_ONLY": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        },
+        "FULL_STUDENT": {
+          "main_edit": true,
+          "preservation": true,
+          "joint_pass": true
+        }
+      },
+      "observation": "香蕉变黄，包装与其他杂货保留。",
+      "panel": "runs/budget_student_pilot_v1/analysis/panels/free_374087.png"
+    }
+  ],
+  "main_edit_passes": {
+    "F": 15,
+    "ALL": 15,
+    "FRESH_B": 15,
+    "JOINT": 15,
+    "VELOCITY_ONLY": 15,
+    "LORA_ONLY": 15,
+    "FULL_STUDENT": 15
+  },
+  "strict_joint_passes": {
+    "F": 11,
+    "ALL": 8,
+    "FRESH_B": 11,
+    "JOINT": 9,
+    "VELOCITY_ONLY": 8,
+    "LORA_ONLY": 9,
+    "FULL_STUDENT": 11
+  },
+  "shared_failure_count": 4,
+  "incremental_vs_F": {
+    "ALL": 3,
+    "JOINT": 2,
+    "LORA_ONLY": 2,
+    "VELOCITY_ONLY": 3,
+    "FRESH_B": 0,
+    "FULL_STUDENT": 0
+  },
+  "LoRA_new_clear_failure_vs_ALL": 0,
+  "LoRA_clear_repair_vs_ALL": [
+    "free_275197"
+  ],
+  "remaining_incremental_failures": [
+    "local_train_15953_chocolate",
+    "free_475277"
+  ],
+  "quality_near_lossless_claim": false,
+  "independent_validation_claim": false
+}

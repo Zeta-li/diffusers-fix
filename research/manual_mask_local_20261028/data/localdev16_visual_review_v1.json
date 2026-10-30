@@ -1,0 +1,502 @@
+{
+  "created_at": "2026-10-28T17:20:08.194720+08:00",
+  "status": "COMPLETE_ASSISTANT_NONBLIND_REVIEW",
+  "reviewer": "assistant_visual_review_not_human_blind_study",
+  "rubric": "data/localdev16_semantic_rubric_v1.json",
+  "all16_overview_panels_reviewed": true,
+  "detailed_failure_panels_reviewed": [
+    "259097",
+    "459272",
+    "193680",
+    "311326",
+    "57350",
+    "122927"
+  ],
+  "rows": [
+    {
+      "case_id": "localdev16_158548",
+      "source_group_id": "158548",
+      "task_type": "attribute",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "羊毛已变黑，姿态和场景保留；黑色区域细节减少为各臂共有现象。"
+    },
+    {
+      "case_id": "localdev16_194956",
+      "source_group_id": "194956",
+      "task_type": "attribute",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "模型船船体变蓝，甲板与周围玩具保留；未见CONTEXT64新增误改。"
+    },
+    {
+      "case_id": "localdev16_491430",
+      "source_group_id": "491430",
+      "task_type": "attribute",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "指定黑袜变白，球鞋与球拍结构保留。"
+    },
+    {
+      "case_id": "localdev16_259097",
+      "source_group_id": "259097",
+      "task_type": "attribute",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "衣服变蓝，但本应保留的红色飞盘也被改蓝；F与三种局部臂共有。"
+    },
+    {
+      "case_id": "localdev16_362944",
+      "source_group_id": "362944",
+      "task_type": "attribute",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "车身变白，轮胎、窗户、自行车与标牌保留。"
+    },
+    {
+      "case_id": "localdev16_459272",
+      "source_group_id": "459272",
+      "task_type": "attribute",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "红蓝条纹完成，但原来下垂的围巾被重新系结、轮廓明显改变，违反保留形状要求；各臂共有。"
+    },
+    {
+      "case_id": "localdev16_102171",
+      "source_group_id": "102171",
+      "task_type": "attribute",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "屏幕变黑；边框有重绘差异，未见明显结构损坏或局部臂独有的器物误改。"
+    },
+    {
+      "case_id": "localdev16_543942",
+      "source_group_id": "543942",
+      "task_type": "attribute",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "水箱变粉，浴室其他主要器物保留；轮廓/表面细节有重绘，不作像素无损判断。"
+    },
+    {
+      "case_id": "localdev16_193680",
+      "source_group_id": "193680",
+      "task_type": "replace",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": false,
+          "preservation_pass": true,
+          "joint_task_pass": false
+        },
+        "FIX32": {
+          "main_edit_correct": false,
+          "preservation_pass": true,
+          "joint_task_pass": false
+        },
+        "FRESH64": {
+          "main_edit_correct": false,
+          "preservation_pass": true,
+          "joint_task_pass": false
+        },
+        "CONTEXT64": {
+          "main_edit_correct": false,
+          "preservation_pass": true,
+          "joint_task_pass": false
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "替换后动物类别不确定：虽有尖耳与白颊，脸部与环状尾部仍偏猫科；按不确定计未通过。F与局部臂共有，不能确定宣称狐狸替换成功。"
+    },
+    {
+      "case_id": "localdev16_407550",
+      "source_group_id": "407550",
+      "task_type": "replace",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "胡萝卜替换为西兰花，餐盒格和其他食物保留；CONTEXT64数值误差比FIX32增加11.73%，但未见相应新增任务语义失败。"
+    },
+    {
+      "case_id": "localdev16_311326",
+      "source_group_id": "311326",
+      "task_type": "replace",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": false,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "FIX32": {
+          "main_edit_correct": false,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "FRESH64": {
+          "main_edit_correct": false,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "CONTEXT64": {
+          "main_edit_correct": false,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "要求只换中央一个血橙，实际中央和下方两个都变成苹果；各臂共有。域外MAE也未达绝对阈值。"
+    },
+    {
+      "case_id": "localdev16_359569",
+      "source_group_id": "359569",
+      "task_type": "replace",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "红球在狗嘴的接触位置生成，狗的动作与其他对象保留；球比原飞盘小，作为尺寸差异记录。"
+    },
+    {
+      "case_id": "localdev16_57350",
+      "source_group_id": "57350",
+      "task_type": "expansion",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": false,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "FIX32": {
+          "main_edit_correct": false,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "FRESH64": {
+          "main_edit_correct": false,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "CONTEXT64": {
+          "main_edit_correct": false,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "长颈鹿未戴帽，前方两只斑马被加帽；F与局部臂共同错选对象。"
+    },
+    {
+      "case_id": "localdev16_134597",
+      "source_group_id": "134597",
+      "task_type": "expansion",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "狗头上生成红色锥形帽和白绒球，轮廓超出原提示框，姿态保留。"
+    },
+    {
+      "case_id": "localdev16_111376",
+      "source_group_id": "111376",
+      "task_type": "expansion",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": true,
+          "joint_task_pass": true
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "牛头上宽檐帽生成完整，脸与围栏保留；存在正常帽檐遮挡。"
+    },
+    {
+      "case_id": "localdev16_122927",
+      "source_group_id": "122927",
+      "task_type": "expansion",
+      "per_arm": {
+        "F": {
+          "main_edit_correct": true,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "FIX32": {
+          "main_edit_correct": true,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "FRESH64": {
+          "main_edit_correct": true,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        },
+        "CONTEXT64": {
+          "main_edit_correct": true,
+          "preservation_pass": false,
+          "joint_task_pass": false
+        }
+      },
+      "new_CONTEXT64_semantic_or_structure_regression_vs_FIX32": false,
+      "notes": "尾部变长并向上弯曲，但躯干羽色/花纹被明显重画，违反保持身体要求。局部臂尾端比F短，仍完成向上延长；CONTEXT64相对FIX32未见新增任务失败。"
+    }
+  ],
+  "counts": {
+    "F": {
+      "main_edit_correct": 13,
+      "joint_task_pass": 10
+    },
+    "FIX32": {
+      "main_edit_correct": 13,
+      "joint_task_pass": 10
+    },
+    "FRESH64": {
+      "main_edit_correct": 13,
+      "joint_task_pass": 10
+    },
+    "CONTEXT64": {
+      "main_edit_correct": 13,
+      "joint_task_pass": 10
+    }
+  },
+  "new_CONTEXT64_regressions_vs_FIX32": 0,
+  "independent_human_review": false,
+  "limitations": "Source and generated images reviewed nonblind by assistant; uncertain class identity counts fail. Main instruction and requested preservation are reported separately; no claim of objective perceptual equivalence."
+}

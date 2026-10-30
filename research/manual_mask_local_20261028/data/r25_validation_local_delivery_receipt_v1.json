@@ -1,0 +1,9 @@
+{
+  "files": 832,
+  "verified_source_bytes": 492410140,
+  "transferred_mutable_files": 531,
+  "bundle_bytes": 31175160,
+  "bundle_sha256": "16efd223b61d9da7dd40463e04af45117f8478c52f9deebf2d3b96a81b99da62",
+  "manifest_sha256": "8a599ecd2669e6a176ef21f1826651cdbefd2685a56f45da322c4281d4ec8478",
+  "previously_remote_media_verified_by_manifest": true
+}

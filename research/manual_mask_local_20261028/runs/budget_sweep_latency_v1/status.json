@@ -1,0 +1,13 @@
+{
+  "phase": "complete_analysis_pending",
+  "active": {
+    "index": 99,
+    "case_id": "expand_train_302289",
+    "arm": "F",
+    "phase": "measured",
+    "repeat": 3
+  },
+  "invoked_dit": 800,
+  "completed_dit": 800,
+  "successful_requests": 100
+}

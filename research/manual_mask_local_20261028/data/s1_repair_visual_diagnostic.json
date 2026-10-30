@@ -1,0 +1,15 @@
+{
+  "status": "AI_VISUAL_DIAGNOSTIC_ONLY_NO_GATE_PASS",
+  "reviewed_at": "2026-10-28T13:01:35.913807+08:00",
+  "run": "runs/s1_repair_v1",
+  "successful_requests": 6,
+  "invoked_dit": 48,
+  "completed_dit": 48,
+  "main_S1_decision_unchanged": "NO_GO_S2",
+  "observations": {
+    "goat_ALLOW32_ALLOW48": "Both show recovered horn/ear outlines compared with original allow16; confirms coverage failure. Different allowed regions; not a same-budget compute-region result.",
+    "dog_specific_NATIVE_MASK": "Floppy-eared dog identity improves in both, but puppy is sitting instead of requested standing pose; full instruction not certified.",
+    "remote_specific_NATIVE_MASK": "Screen removed and circular navigation control added; TV-remote identity clearer. Native size/placement and masked shape differences remain; no automatic full-task pass."
+  },
+  "limits": "Seen training-source post-failure prompt/margin diagnosis, not independent validation; generation completed before user switched mainline away from hard output masks."
+}

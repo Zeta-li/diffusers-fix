@@ -1,0 +1,71 @@
+{
+  "provenance": "IDs from completed tool-returned experiment summary. This is not the missing original preregistration JSON.",
+  "ids": [
+    "29324",
+    "270186",
+    "520480",
+    "140043",
+    "86582",
+    "204837",
+    "102625",
+    "509416",
+    "10546",
+    "581668",
+    "371643",
+    "395040",
+    "341070",
+    "80932",
+    "267300",
+    "468505"
+  ],
+  "source_files": {
+    "29324": [
+      "inputs/r25_dev_candidates_v1/29324/source.original"
+    ],
+    "270186": [
+      "inputs/r25_dev_candidates_v1/270186/source.original"
+    ],
+    "520480": [
+      "inputs/r25_dev_candidates_v1/520480/source.original"
+    ],
+    "140043": [
+      "inputs/r25_dev_candidates_v1/140043/source.original"
+    ],
+    "86582": [
+      "inputs/r25_dev_candidates_v1/86582/source.original"
+    ],
+    "204837": [
+      "inputs/r25_dev_candidates_v1/204837/source.original"
+    ],
+    "102625": [
+      "inputs/r25_dev_candidates_v1/102625/source.original"
+    ],
+    "509416": [
+      "inputs/r25_dev_candidates_v1/509416/source.original"
+    ],
+    "10546": [
+      "inputs/r25_dev_candidates_v1/10546/source.original"
+    ],
+    "581668": [
+      "inputs/r25_dev_candidates_v1/581668/source.original"
+    ],
+    "371643": [
+      "inputs/r25_dev_candidates_v1/371643/source.original"
+    ],
+    "395040": [
+      "inputs/r25_dev_candidates_v1/395040/source.original"
+    ],
+    "341070": [
+      "inputs/r25_dev_candidates_v1/341070/source.original"
+    ],
+    "80932": [
+      "inputs/r25_dev_candidates_v1/80932/source.original"
+    ],
+    "267300": [
+      "inputs/r25_dev_candidates_v1/267300/source.original"
+    ],
+    "468505": [
+      "inputs/r25_dev_candidates_v1/468505/source.original"
+    ]
+  }
+}

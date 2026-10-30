@@ -1,0 +1,298 @@
+{
+  "created_at": "2026-10-30T12:23:59.262828+08:00",
+  "scope": "Incrementalcompletedstudenttraining,qualityandlatencydelivery;completeoriginaltrajectories/optimizerstatesremainonzetahashedbyseparatemanifests",
+  "parent_manifest": "data/budget_preflight_delivery_manifest_v1.json",
+  "raw_manifests": [
+    "data/budget_student_raw_manifest_v1.json",
+    "data/budget_student_latency_raw_manifest_v2.json"
+  ],
+  "files": [
+    {
+      "path": "00_实施与实验记录.md",
+      "bytes": 20414,
+      "sha256": "d98ce311ff265b05e70daf93bdfed15d52c8f7ed4fed9fa5bcd64e03f5723ab4"
+    },
+    {
+      "path": "02_后续实验与执行计划.md",
+      "bytes": 30946,
+      "sha256": "d52e1f4f2c8f7271ab5aeceea7607c367ad1beacb4e8277e0051494ad07b58eb"
+    },
+    {
+      "path": "13_双路径预算蒸馏执行计划_20261030.md",
+      "bytes": 12204,
+      "sha256": "2ed5e87d17c65f77eb63944763bef2b4131a88dc78324948d03652a2cbf742f9"
+    },
+    {
+      "path": "15_缓存感知学生训练与闭环验证_20261030.md",
+      "bytes": 13264,
+      "sha256": "233417786bad98dff355d93f35cd9f705db18f77f62a324eb7b1e47ede89823d"
+    },
+    {
+      "path": "data/budget_student_candidate_v1.json",
+      "bytes": 852,
+      "sha256": "c7e023a2d9e8f788bc5456dce9559ce219d672f2d5be1080ff0f21f1bb40f002"
+    },
+    {
+      "path": "data/budget_student_decision_v1.json",
+      "bytes": 1169,
+      "sha256": "f8ebabaebfa9362b3677ac06e26694c43d5e7c4381fd950d177d247d3dc147bd"
+    },
+    {
+      "path": "data/budget_student_final_environment_v1.json",
+      "bytes": 242,
+      "sha256": "ae532526ef42afbd1e8efab2cf9818de1ccdde56af9491b7435b5c10ad1d02b9"
+    },
+    {
+      "path": "data/budget_student_latency_launch_v2.json",
+      "bytes": 174,
+      "sha256": "2f1227e1c0cfcf835574cf6a4f750adbd0d58f86e14a2ea803bb7f2a2af5f882"
+    },
+    {
+      "path": "data/budget_student_latency_raw_manifest_v2.json",
+      "bytes": 45137,
+      "sha256": "755b0682c5fa90299c645935a8667800a1236af54957e05c69a8f94433cf26ca"
+    },
+    {
+      "path": "data/budget_student_latency_v1_preregistration.json",
+      "bytes": 16104,
+      "sha256": "6b74f379ce475926941d118b2986bd1e605c65ee357ce20ecc526056279f3b46"
+    },
+    {
+      "path": "data/budget_student_latency_v2_preregistration.json",
+      "bytes": 19345,
+      "sha256": "f1b61543d1c95d372d117eedf83bea48350d0cc1b0f5ca7dbd8268c63ba51ad1"
+    },
+    {
+      "path": "data/budget_student_launch_v1.json",
+      "bytes": 237,
+      "sha256": "fe693f2787b1b7c0ca208068bc33bd70e66a114be07fc976af565c8b33643591"
+    },
+    {
+      "path": "data/budget_student_local_review_archive_check_v1.json",
+      "bytes": 280,
+      "sha256": "de1ff30e73ac92929505af2686a7f7a306b3f93ec19b445499ad65b3e6f58d93"
+    },
+    {
+      "path": "data/budget_student_pilot_v1_preregistration.json",
+      "bytes": 9675822,
+      "sha256": "95c7a197f04878597d240e13f28c68f1f415e5f7614de4ed9ff2c7e1a796c8b0"
+    },
+    {
+      "path": "data/budget_student_raw_manifest_v1.json",
+      "bytes": 74961,
+      "sha256": "97d30acacb5814501aaec139d6ecc6d1d472fdb880453b182fd5f9c2f230b567"
+    },
+    {
+      "path": "data/budget_student_visual_review_v1.json",
+      "bytes": 17843,
+      "sha256": "4a5ef67b0a9d10bafbd17f69aee42c68455498d35450b95a3da40519302f608c"
+    },
+    {
+      "path": "data/budget_student_visual_rubric_v1.json",
+      "bytes": 682,
+      "sha256": "41da810b8f50eb9189c636f01a868eb886553e2e1ead3929af62dbb4358d8093"
+    },
+    {
+      "path": "data/cpu_budget_student_v1.json",
+      "bytes": 505,
+      "sha256": "c971dd8c11e2b94e04abef59f8ecdcf8bac4b778f78373a5f7759cf109e92e33"
+    },
+    {
+      "path": "data/current_research_status.json",
+      "bytes": 6550,
+      "sha256": "159933262092bb7681f5647ca302189b94a1575aec26f8229c28fc4c2e3c9fa7"
+    },
+    {
+      "path": "notes/current_external_reports/budget_student_0_研究总控_当前状态.md",
+      "bytes": 15524,
+      "sha256": "18caed19a472cf9f7fae26ce0887641741aaea7f5432af6773cb7a54d89436db"
+    },
+    {
+      "path": "notes/current_external_reports/budget_student_1_局部图像编辑加速研究_阶段性总结报告.md",
+      "bytes": 171017,
+      "sha256": "2e9df38f19b4aa10d929d01c612c21835544fd861be1d449e8f6162870037f61"
+    },
+    {
+      "path": "notes/current_external_reports/budget_student_2_06_研究进度与八个月执行表.md",
+      "bytes": 25057,
+      "sha256": "bec02142899c150fde48323473039ccc5ec4b305cdac9ba054e46d6fc439f299"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/analysis/latency_and_tradeoff.png",
+      "bytes": 86389,
+      "sha256": "ff92db726b9cfa24c88ae1e30466e4404e6a26511a0fe7e89b41d6f0a33fce7c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/analysis/results.json",
+      "bytes": 10602,
+      "sha256": "1a3edc09987b665d334485ab2505e3be8e9459fc91bb50e7df402e88dd41ec95"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/cupcake_detail.png",
+      "bytes": 754788,
+      "sha256": "a34a61952d7f5c5e77a78b1f04bdd9652b258d2804e038e46920077682d0a9ca"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/mane_detail.png",
+      "bytes": 583004,
+      "sha256": "e39580363af49bb59eca8f5a7918090698191a81d1ec4405ad40610983fd695e"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/free_272738.png",
+      "bytes": 907425,
+      "sha256": "e86f1a1de9cb1dd1050d01fb58290719736499a52fcdbdd3fb67fdc1022a90f3"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/free_275197.png",
+      "bytes": 760798,
+      "sha256": "d0897d4e302272bc66db22ee37f125c1cfe9788314d96d525826dc9eafb19591"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/free_374087.png",
+      "bytes": 942175,
+      "sha256": "9007505a268bf3d011d16b96637fd97662628708b755e8275d95e26c6d7bdfc2"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/free_403221.png",
+      "bytes": 967167,
+      "sha256": "1993f0d37c2c9a38a1f8f03e58354b76118b101aca5e9293956b782cdaf7b210"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/free_414772.png",
+      "bytes": 973800,
+      "sha256": "922e7c294985afa9451d298e4bb0d0370a9bf32a1026f6ded4c32964077874b9"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/free_475277.png",
+      "bytes": 805668,
+      "sha256": "b3825960e5b9bff0103d42f379aa04b964eaf8eb4b8845844080dea191f65032"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/free_557907.png",
+      "bytes": 1144325,
+      "sha256": "4c77826df9342ef0b3391a836658915168fe20fc078fa265a3ef94127f0cbf09"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/local_train_15953_chocolate.png",
+      "bytes": 812418,
+      "sha256": "0be810a6b521d99b8ded57b28b3a152b78c5096ae3990e01be1270c462d7be47"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/local_train_178810_bollard.png",
+      "bytes": 998002,
+      "sha256": "d7b3572291c6c8c602a5cc70bd73e327c654bb12effba330dc658411f46e9932"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/local_train_210597_redcushion.png",
+      "bytes": 785045,
+      "sha256": "eb9bb938f3a6efab7bbe81a1135f105ee36e963ad8f6f88b655afeb135a5f33b"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/local_train_26498_woodbat.png",
+      "bytes": 857964,
+      "sha256": "fc935e1c02948389279b71b4e194797c02eaa6cf1302fead028fb7275a8659c2"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/local_train_286770_goat.png",
+      "bytes": 753421,
+      "sha256": "a2077c170635f80a9e1c16d90c8ab10a030a4efedc5eff36b1b2c6e3e5e7b408"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/local_train_429111_remote.png",
+      "bytes": 933698,
+      "sha256": "4853a6005d211f66964505268bf34f7d38bcb69a240a73f605c2d14ff6c59e95"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/local_train_452168_bluesign.png",
+      "bytes": 793333,
+      "sha256": "98b9b6491ffc81555c19e08406732ffde3d7d1dca53c7a190d07149c70b82b6c"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/panels/local_train_486018_dog.png",
+      "bytes": 644903,
+      "sha256": "8f3a6756b9ff8031c90881f976b7be5ccd8454877edf8cf1a9b5e0acc1011439"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/results.json",
+      "bytes": 42011,
+      "sha256": "edbb436a37ada109229d82fd3ecbdedfeff8546925b39b67fe150b58b4d46150"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/towel_detail.png",
+      "bytes": 788500,
+      "sha256": "be6acdbf20b2d939878fd5d2f39c1ea8e879c2fddd73103bb0509124fd08f19b"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/analysis/training_and_error.png",
+      "bytes": 162941,
+      "sha256": "cff16ca538827f4a2093d8012e1789e50615ed110afca553af0ac6659d6c2627"
+    },
+    {
+      "path": "runs/budget_student_pilot_v1/checkpoints/student_inference025.pt",
+      "bytes": 19169717,
+      "sha256": "ab56cf02a50a68e6b07e0e3b124afa468240589e970e1a8fdf2bc6b280099245"
+    },
+    {
+      "path": "scripts/analyze_budget_student.py",
+      "bytes": 7497,
+      "sha256": "3045fe661d1571ee592419adb24e3829add5c7cf87ffabd1567e5867118ff24e"
+    },
+    {
+      "path": "scripts/analyze_budget_student_latency.py",
+      "bytes": 4041,
+      "sha256": "d31ffc70c7b43ceb95f33067a1751ba4fbc827fab40e1ae3cf3d38a6b9b98993"
+    },
+    {
+      "path": "scripts/benchmark_budget_student.py",
+      "bytes": 5023,
+      "sha256": "28458dd13a6ff0fd9907ae4f75e95844998eca0a29d4914dd282e2c994c61440"
+    },
+    {
+      "path": "scripts/cache_aware_adapters.py",
+      "bytes": 3002,
+      "sha256": "3c3a37ffd8ba9d884a9555f26cf7e7b095d86a34fa9aabf8d0b45b34c4ce0702"
+    },
+    {
+      "path": "scripts/freeze_budget_student.py",
+      "bytes": 4699,
+      "sha256": "8feed6294714e14e2de0d833222516a48bc2a9939f4fa649a82efdc8505f0ac7"
+    },
+    {
+      "path": "scripts/freeze_budget_student_latency.py",
+      "bytes": 2836,
+      "sha256": "640b8344b98de9698b741c3b96c60d564133d57756d0ecdf46e2ba60e14b177b"
+    },
+    {
+      "path": "scripts/freeze_budget_student_latency_v2.py",
+      "bytes": 2930,
+      "sha256": "d284b8debc896ee03da7a84cff1cecb34235c8198a5f1e615ab1644a265e8344"
+    },
+    {
+      "path": "scripts/render_budget_student_details.py",
+      "bytes": 1332,
+      "sha256": "2e153082e77973e6e3bd419ca569b217bdab4ce19a8240f95964046a3ed5ac17"
+    },
+    {
+      "path": "scripts/spatial_velocity_student.py",
+      "bytes": 3684,
+      "sha256": "bb5c57802cbf1f7a34e53402a2c6ab59a2de612e9a96afda0114fe7197b5219d"
+    },
+    {
+      "path": "scripts/test_budget_student.py",
+      "bytes": 6839,
+      "sha256": "11bacea6ef59ffd8b17bc052b3b4706ca76cce59ee0c8b3db07555fbe1fa8c88"
+    },
+    {
+      "path": "scripts/train_budget_student.py",
+      "bytes": 16507,
+      "sha256": "d11507e5bc4cc31b82c5b14b11d3d3487244afd0b0547d92ec14ecd8ff317f3b"
+    },
+    {
+      "path": "scripts/trainable_budget_executor.py",
+      "bytes": 8924,
+      "sha256": "34dcd940d2f3594235726aaed989dd3fc54f4b52353c7fcd7bf3def32ff76d51"
+    }
+  ],
+  "count": 57,
+  "bytes": 44893737
+}

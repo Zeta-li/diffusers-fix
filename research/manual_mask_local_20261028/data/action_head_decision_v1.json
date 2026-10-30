@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-10-28T16:14:05.726168+08:00",
+  "status": "NO_GO_LEARNED_HEAD_STOP_CURRENT_FIXED_ACTION_SPACE",
+  "training_completed": true,
+  "effective_training_steps": 1000,
+  "actual_optimizer_updates": 2000,
+  "archival_replay_updates": 1000,
+  "parameter_count": 467,
+  "calibrated_selected_update": 0,
+  "selected_checkpoint_is_trained": false,
+  "primary_numeric_gate_pass": false,
+  "primary_seen_holdout_MAE_increase_vs_CONTEXT64": 0.016409020436998434,
+  "primary_improved_sources": 0,
+  "final1000_diagnostic_only": true,
+  "final1000_improved_sources": 0,
+  "final1000_exact_CONTEXT64_sources": 4,
+  "train_action_space_oracle_extra_gain_vs_best_constant": 0.006272820530975665,
+  "new_obvious_semantic_regressions": 0,
+  "net_latency_requests": 0,
+  "new_RL_updates": 0,
+  "independent_Dev16_opened": false,
+  "Test64_opened": false,
+  "preferred_controls": [
+    "FIX32",
+    "CONTEXT64"
+  ],
+  "next": "Stop more epochs/RL in this fixed location and timing action space. If learning remains the goal, redesign a same-budget spatial selection head with C-style velocity retention; establish terminal opportunity on training sources before collecting new large labels. No new batch launched.",
+  "report": "08_动作收益头训练与闭环验证.md",
+  "checkpoint": "runs/action_weight_recovery_v1/final_step1000.pt"
+}

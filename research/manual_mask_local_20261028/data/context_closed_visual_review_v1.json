@@ -1,0 +1,137 @@
+{
+  "reviewed_at": "2026-10-28T15:16:07.178099+08:00",
+  "reviewer": "Codex multimodal visual review; not blinded; no independent human adjudication",
+  "scope": "All12 five-column overview panels at340px; additional full1024px checks for goat FIX32/CONTEXT64, pineapple CONTEXT64 and repaired cup CONTEXT64",
+  "new_obvious_semantic_regressions": 0,
+  "task_level_passes_per_arm": {
+    "F": 11,
+    "FIX32": 11,
+    "FRESH64": 11,
+    "CONTEXT64": 11
+  },
+  "limitations": "Small visible differences; no demonstrated perceptual improvement or losslessness. F is a model reference, not edit ground truth.",
+  "observations": [
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "baseline_task_pass": true,
+      "CONTEXT64_task_pass": true,
+      "FRESH64_task_pass": true,
+      "new_obvious_semantic_regression": false,
+      "note": "左侧羊替换为山羊，角、耳与四肢未见新增缺失；其他两羊保留。局部方法的山羊较F偏暗为既有差异；本轮数值略退化。"
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "baseline_task_pass": true,
+      "CONTEXT64_task_pass": true,
+      "FRESH64_task_pass": true,
+      "new_obvious_semantic_regression": false,
+      "note": "微波炉上为黑色垂耳幼犬；未见新对象误改或位置丢失。"
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "baseline_task_pass": true,
+      "CONTEXT64_task_pass": true,
+      "FRESH64_task_pass": true,
+      "new_obvious_semantic_regression": false,
+      "note": "糖霜变巧克力色，螺旋与纸杯、苹果保留；未见新增明显缺陷。"
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "baseline_task_pass": true,
+      "CONTEXT64_task_pass": true,
+      "FRESH64_task_pass": true,
+      "new_obvious_semantic_regression": false,
+      "note": "球棒变木色，位置及球员手部未见新增明显结构改变。"
+    },
+    {
+      "case_id": "free_414772",
+      "source_group_id": "414772",
+      "baseline_task_pass": true,
+      "CONTEXT64_task_pass": true,
+      "FRESH64_task_pass": true,
+      "new_obvious_semantic_regression": false,
+      "note": "原烤鸡处为菠萝，餐盘和邻近餐具仍在；CONTEXT64数值逊于同额FRESH64，不能称每例最优。"
+    },
+    {
+      "case_id": "free_475277",
+      "source_group_id": "475277",
+      "baseline_task_pass": true,
+      "CONTEXT64_task_pass": true,
+      "FRESH64_task_pass": true,
+      "new_obvious_semantic_regression": false,
+      "note": "白马额头单角完整，未见新增角截断或面部改变。"
+    },
+    {
+      "case_id": "free_57395",
+      "source_group_id": "57395",
+      "baseline_task_pass": false,
+      "CONTEXT64_task_pass": false,
+      "FRESH64_task_pass": false,
+      "new_obvious_semantic_regression": false,
+      "note": "基座已生成不自然的白色团块，花椰菜辨识不确定；各方法继承此失败，计为未通过。"
+    },
+    {
+      "case_id": "free_557907",
+      "source_group_id": "557907",
+      "baseline_task_pass": true,
+      "CONTEXT64_task_pass": true,
+      "FRESH64_task_pass": true,
+      "new_obvious_semantic_regression": false,
+      "note": "右前羊变黑，另一羊保留；黑色毛发细节弱是各方法共有现象，未见本候选新增明显退化。"
+    },
+    {
+      "case_id": "free_272738_p1",
+      "source_group_id": "272738",
+      "baseline_task_pass": true,
+      "CONTEXT64_task_pass": true,
+      "FRESH64_task_pass": true,
+      "new_obvious_semantic_regression": false,
+      "note": "上中偏右玻璃杯变红色带柄杯，左侧黑白杯保留；采用此前冻结P1，不能当作本轮自动定位创新。"
+    },
+    {
+      "case_id": "free_275197",
+      "source_group_id": "275197",
+      "baseline_task_pass": true,
+      "CONTEXT64_task_pass": true,
+      "FRESH64_task_pass": true,
+      "new_obvious_semantic_regression": false,
+      "note": "左侧毛巾变蓝，水池和橱柜保留；未见新增明显误改。"
+    },
+    {
+      "case_id": "free_403221",
+      "source_group_id": "403221",
+      "baseline_task_pass": true,
+      "CONTEXT64_task_pass": true,
+      "FRESH64_task_pass": true,
+      "new_obvious_semantic_regression": false,
+      "note": "前景羊颈圈为红色，标签保留；未见新增明显结构损坏。"
+    },
+    {
+      "case_id": "free_374087",
+      "source_group_id": "374087",
+      "baseline_task_pass": true,
+      "CONTEXT64_task_pass": true,
+      "FRESH64_task_pass": true,
+      "new_obvious_semantic_regression": false,
+      "note": "左下香蕉变黄，其他食材仍在；未见新增明显数量或轮廓退化。"
+    }
+  ],
+  "viewed_panels": [
+    {
+      "path": "runs/context_closed_v1/analysis/overview_0.jpg",
+      "sha256": "729f5dbd7f5c471630a15c65126ec95a9b17950371c4ddd7b0a6407dfb65f3bd"
+    },
+    {
+      "path": "runs/context_closed_v1/analysis/overview_1.jpg",
+      "sha256": "f59d00efcbd88e651297487e9e779d9f498f95cbf5408f0b29a03a40c91363d6"
+    },
+    {
+      "path": "runs/context_closed_v1/analysis/overview_2.jpg",
+      "sha256": "86b58d88415d4f239923136aa91542c43e6b3a4b97f6039d057e83799e70d100"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "frozen_at": "2026-10-30T13:19:01.701236",
+  "reviewer": "single assistant; newCal32 anonymized arms, permutation key read only after per-label scores saved; historical15 nonblind",
+  "edit_success": "Requested object/attribute and intended target visibly present",
+  "preservation": "No obvious extra object removal/replacement or significant shape/position damage outside requested change",
+  "scores": "Each arm: edit bool, preservation bool, specific note; unclear conservatively false with uncertainty flag",
+  "baseline_versus_student": "Unblind after fixed judgments; distinguish failures shared with F, new failure vsF, repair versus PILOT",
+  "cal_gate": "mean RGBMAE at least5% lower than PILOT, >=24/32 source wins, severe joint failure count no greater than PILOT",
+  "no_pixels_as_quality_proxy": true,
+  "test64_opened": false
+}

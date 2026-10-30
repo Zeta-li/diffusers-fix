@@ -1,0 +1,15 @@
+{
+  "status": "AST_PASS",
+  "scripts": {
+    "freeze_refresh_timing.py": "0e7854f7e04fb85aa87da4f39c62b8cad0fba87ffa6e05cba755b622920e8a4e",
+    "evaluate_refresh_timing.py": "c184ace1b12be45d2e0bf4d1a6acbb08c8d2d774c7acbff2421cac29d2085cb0",
+    "analyze_refresh_timing.py": "1e2109be25bd2e0e52d6a3875ea48821a8fbe78d3c5a014ba527b5fcd135bda5",
+    "refresh_policy.py": "315f9be04b529ebde11a56e02d7a18a8b42f3f4cca8a8c0f9d7af0b2fea4ec02",
+    "train_refresh_policy.py": "8af074ae9e9d359163fb29879c105e04285012ccdadbbd42daef73d2c534f5f4",
+    "run_refresh_bandit.py": "483013dec7730ef478d341400f1232befdcdde701c8818c7fd3ed738bd65ec9b",
+    "analyze_refresh_policy.py": "eb71c46be187009c28f496c7727bb8626b3854e940f35859b1227942bcee3c4d",
+    "archive_refresh_policy.py": "45f49a72f6a7ea3ebd34e5d5d1ad5eb2d612d56c97d75a784b690db67455c856",
+    "plot_refresh_policy.py": "3755406353345a5ae9e881aa1d1978dc2ea04c6c7da4ded011dbb1bce95a3fdf"
+  },
+  "note": "Actual runtime contracts recorded separately."
+}

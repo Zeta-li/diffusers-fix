@@ -1,0 +1,14 @@
+{
+  "phase": "collection_complete_analysis_pending",
+  "updated_unix": 1793168782.344686,
+  "invoked_dit": 84,
+  "completed_dit": 84,
+  "successful_requests": 4,
+  "student_invoked": 32,
+  "student_completed": 32,
+  "teacher_invoked": 20,
+  "teacher_completed": 20,
+  "counterfactual_invoked": 32,
+  "counterfactual_completed": 32,
+  "case_id": "local_train_26498_woodbat"
+}

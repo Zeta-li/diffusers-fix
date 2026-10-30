@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "archive_sha256": "756ad75deccc784121cbbb01e52dabfef17a6d4123687515d7181ed63b84c6a9",
+  "archive_bytes": 173706764,
+  "scope": "reports,numericrecords,alloutputPNGs,panels,inferenceweights;fulltrajectoriesandoptimizerstatesretainedonzetawithrawmanifest"
+}

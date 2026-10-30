@@ -1,0 +1,116 @@
+{
+  "frozen_at": "2026-10-30T14:19:51.730070",
+  "candidate": "LOCAL128",
+  "criteria": {
+    "numeric_mean": true,
+    "numeric_sources": true,
+    "joint_not_worse_than_PILOT": true,
+    "new_failures_vs_F_at_most1": false
+  },
+  "quality_gate": false,
+  "decision": "NO_GO_DEPLOYMENT_OR_RL;GO_DIAGNOSTIC_LATENCY_ONLY",
+  "justification": "User authorized diagnostic timing with failures disclosed; overall relative improvement deserves measured quality-speed tradeoff. Original quality gate is not waived or relabeled.",
+  "training_on_Dev": false,
+  "candidate_changed_after_Dev": false,
+  "numerical": {
+    "F": {
+      "RGB_MAE": 0.0,
+      "inside_MAE": 0.0,
+      "outside_MAE": 0.0,
+      "latent_MAE": 0.0,
+      "n": 32
+    },
+    "ALL": {
+      "RGB_MAE": 0.01588083928800188,
+      "inside_MAE": 0.03520677360938862,
+      "outside_MAE": 0.009387763442646246,
+      "latent_MAE": 0.03307908191345632,
+      "n": 32,
+      "RGB_wins_vs_ALL": 0,
+      "relative_RGB_change_vs_ALL": 0.0
+    },
+    "PILOT": {
+      "RGB_MAE": 0.014600270849769004,
+      "inside_MAE": 0.03235275880433619,
+      "outside_MAE": 0.00827135743747931,
+      "latent_MAE": 0.030169056524755433,
+      "n": 32,
+      "RGB_wins_vs_ALL": 31,
+      "relative_RGB_change_vs_ALL": -0.0806360680949878
+    },
+    "LOCAL128": {
+      "RGB_MAE": 0.011985453038505511,
+      "inside_MAE": 0.0273592925950652,
+      "outside_MAE": 0.006357150210533291,
+      "latent_MAE": 0.02438742434605956,
+      "n": 32,
+      "RGB_wins_vs_ALL": 29,
+      "relative_RGB_change_vs_ALL": -0.24528843714446302,
+      "relative_RGB_change_vs_PILOT": -0.1790937879282467,
+      "RGB_wins_vs_PILOT": 27,
+      "source_bootstrap95_relative_change_vs_PILOT": [
+        -0.26217015317448056,
+        -0.08700385387625659
+      ],
+      "worst_source_relative_change_vs_PILOT": 2.3642674042598633
+    }
+  },
+  "visual": {
+    "F": {
+      "edit": 29,
+      "preservation": 23,
+      "joint": 21,
+      "uncertain": 1
+    },
+    "ALL": {
+      "edit": 27,
+      "preservation": 20,
+      "joint": 16,
+      "uncertain": 1
+    },
+    "PILOT": {
+      "edit": 27,
+      "preservation": 21,
+      "joint": 17,
+      "uncertain": 1
+    },
+    "LOCAL128": {
+      "edit": 28,
+      "preservation": 23,
+      "joint": 19,
+      "uncertain": 1
+    }
+  },
+  "failures": {
+    "F": [],
+    "ALL": [
+      "expand_dev_234956",
+      "expand_dev_229301",
+      "expand_dev_150812",
+      "expand_dev_178928",
+      "expand_dev_39480"
+    ],
+    "PILOT": [
+      "expand_dev_229301",
+      "expand_dev_150812",
+      "expand_dev_178928",
+      "expand_dev_39480"
+    ],
+    "LOCAL128": [
+      "expand_dev_229301",
+      "expand_dev_150812",
+      "expand_dev_458821"
+    ]
+  },
+  "repairs": {
+    "F": [],
+    "ALL": [],
+    "PILOT": [],
+    "LOCAL128": [
+      "expand_dev_45999"
+    ]
+  },
+  "planned_latency_requests": 75,
+  "planned_latency_DiT": 600,
+  "Test64_opened": false
+}

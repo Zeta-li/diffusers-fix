@@ -1,0 +1,11 @@
+{
+  "status": "ARCHIVED_REMOTE_AND_FULL_CONTENT_VERIFIED",
+  "files": 994,
+  "raw_bytes": 1772019844,
+  "archive": "/tmp/budget_r25_raw_v1.tar.gz",
+  "archive_bytes": 1363590240,
+  "archive_sha256": "f6038eadb8f58da70074db8647ab5b4e0d15c5a35dc9507b7cb27f6752c04f20",
+  "manifest_sha256": "886aedbea08b62d2c92727dfb641b56d07a0cac550d8f0b3ed65f0bfc1720202",
+  "verified_members": 994,
+  "local_full_raw_copy": false
+}

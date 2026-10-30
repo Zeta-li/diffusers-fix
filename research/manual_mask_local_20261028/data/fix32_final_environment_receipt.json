@@ -1,0 +1,14 @@
+{
+  "host": "zeta",
+  "address": "10.148.16.42",
+  "confirmed_gpu": "H800",
+  "driver_name": "NVIDIA L20Y",
+  "memory_used_MiB": 0,
+  "utilization_percent": 0,
+  "compute_processes": [],
+  "git_head": "4222cd5955b8033842748a7d676a5d180ab4c22d",
+  "git_changes": "untracked research/manual_mask_local_20261028/ only",
+  "committed": false,
+  "pushed": false,
+  "checked_at": "2026-10-28T14:42:05.228417+08:00"
+}

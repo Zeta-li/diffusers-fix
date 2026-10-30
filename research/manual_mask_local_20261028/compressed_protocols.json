@@ -1,0 +1,80 @@
+[
+  {
+    "path": "data/budget_development_v1_preregistration.json.xz",
+    "restored_path": "data/budget_development_v1_preregistration.json",
+    "sha256": "a3474f48cf50a538d4b927ba2b57e8ed9564c974ad2709cdf6e4e1e3ee2bf1b3",
+    "bytes": 13881068
+  },
+  {
+    "path": "data/budget_expansion_train_v1_preregistration.json.xz",
+    "restored_path": "data/budget_expansion_train_v1_preregistration.json",
+    "sha256": "6eb4caea196969f7fa4057d19272f503dfd5f78690696e87340eba2a298d8508",
+    "bytes": 73293410
+  },
+  {
+    "path": "data/budget_local128_latency_v1_preregistration.json.xz",
+    "restored_path": "data/budget_local128_latency_v1_preregistration.json",
+    "sha256": "00c0b004a6f2c866feac6c6ce35fe88ec1ad8da24022e172b3af3421131d31ee",
+    "bytes": 3332072
+  },
+  {
+    "path": "data/budget_preflight_v1_preregistration.json.xz",
+    "restored_path": "data/budget_preflight_v1_preregistration.json",
+    "sha256": "2d9cafc2e1aeb3d42c1ca0c0cccecb3fc2c8e41d77f3756c7684f4ed773da9e1",
+    "bytes": 20090377
+  },
+  {
+    "path": "data/budget_r25_v1_preregistration.json.xz",
+    "restored_path": "data/budget_r25_v1_preregistration.json",
+    "sha256": "866e5207d125994892eb1038b2dc53956b82dbd9f68ce139f2b42b589c8ceede",
+    "bytes": 97012415
+  },
+  {
+    "path": "data/budget_rescue_v1_preregistration.json.xz",
+    "restored_path": "data/budget_rescue_v1_preregistration.json",
+    "sha256": "978aceac2d4417dbf1f5774f266d767730cbc5fa7bf2c14f99cb02e0db7992de",
+    "bytes": 12904358
+  },
+  {
+    "path": "data/budget_student_pilot_v1_preregistration.json.xz",
+    "restored_path": "data/budget_student_pilot_v1_preregistration.json",
+    "sha256": "95c7a197f04878597d240e13f28c68f1f415e5f7614de4ed9ff2c7e1a796c8b0",
+    "bytes": 9675822
+  },
+  {
+    "path": "data/budget_sweep_v1_preregistration.json.xz",
+    "restored_path": "data/budget_sweep_v1_preregistration.json",
+    "sha256": "e6f579cdbbe6c3eb52db28e0980b7c17b72485bee8f954d94586463bf88ec445",
+    "bytes": 72979264
+  },
+  {
+    "path": "data/latency_temporal_v1_preregistration.json.xz",
+    "restored_path": "data/latency_temporal_v1_preregistration.json",
+    "sha256": "23d4c92431b84a1fc1317f21f1232b0f314e5b9eb00ee57eead5bba88f39e4c9",
+    "bytes": 11573368
+  },
+  {
+    "path": "data/r25_fresh_dev32_v1_preregistration.json.xz",
+    "restored_path": "data/r25_fresh_dev32_v1_preregistration.json",
+    "sha256": "4510577f0e2697111a325f36c87f7d5a3bd8930da9d1479e18dd28648e0a6749",
+    "bytes": 33139432
+  },
+  {
+    "path": "data/r25_seed2_v1_preregistration.json.xz",
+    "restored_path": "data/r25_seed2_v1_preregistration.json",
+    "sha256": "56dc288100cd43caa159cc8f4b202fcf096df0a5dbda328c2c5d4aabbc9f16cc",
+    "bytes": 96928405
+  },
+  {
+    "path": "data/refresh_timing_pilot8_v1_preregistration.json.xz",
+    "restored_path": "data/refresh_timing_pilot8_v1_preregistration.json",
+    "sha256": "9bad55b023333f159ee505918f36dc1bfcde88a79fd8b1b65e340e8ade0261dc",
+    "bytes": 24698532
+  },
+  {
+    "path": "data/refresh_timing_remaining40_v1_preregistration.json.xz",
+    "restored_path": "data/refresh_timing_remaining40_v1_preregistration.json",
+    "sha256": "ead3ee8767c71e2689f317ba60dc1982d2604eb21fd67ade63aa0898b553b00b",
+    "bytes": 120248517
+  }
+]

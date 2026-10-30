@@ -1,0 +1,1072 @@
+{
+  "scope": "allrawtimingfilesretainedonzetaincludingrepeatedPNGs",
+  "files": [
+    {
+      "path": "runs/budget_student_latency_v2/code_snapshot/benchmark_budget_student.py",
+      "bytes": 5023,
+      "sha256": "28458dd13a6ff0fd9907ae4f75e95844998eca0a29d4914dd282e2c994c61440"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/code_snapshot/budget_cache_executor.py",
+      "bytes": 10537,
+      "sha256": "80a821bc1a80368a3e409cd3ec9b81a57d36e1666a72f1f7990dab237d45f195"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/code_snapshot/budget_profiles.py",
+      "bytes": 3716,
+      "sha256": "45898a0aa40427186b6267b0550e18d6457c4f6bfa0b19f5f2d8a25362d6dfc2"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/code_snapshot/cache_aware_adapters.py",
+      "bytes": 3002,
+      "sha256": "3c3a37ffd8ba9d884a9555f26cf7e7b095d86a34fa9aabf8d0b45b34c4ce0702"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/code_snapshot/freeze_budget_student_latency_v2.py",
+      "bytes": 2930,
+      "sha256": "d284b8debc896ee03da7a84cff1cecb34235c8198a5f1e615ab1644a265e8344"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/code_snapshot/run_free_pilot.py",
+      "bytes": 14399,
+      "sha256": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/code_snapshot/run_s1.py",
+      "bytes": 14906,
+      "sha256": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/code_snapshot/spatial_velocity_student.py",
+      "bytes": 3684,
+      "sha256": "bb5c57802cbf1f7a34e53402a2c6ab59a2de612e9a96afda0114fe7197b5219d"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/code_snapshot/trainable_budget_executor.py",
+      "bytes": 8924,
+      "sha256": "34dcd940d2f3594235726aaed989dd3fc54f4b52353c7fcd7bf3def32ff76d51"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/ALL_paired_r0.json",
+      "bytes": 324,
+      "sha256": "1e6c4651a68bb422d9548c1248bf2f7587d764668971f19daa602e7b15062819"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/ALL_paired_r0.png",
+      "bytes": 1272681,
+      "sha256": "4ee439e5278613820d67fbac93c185f8f17ad0568f39182a17e34177ae40f73c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/ALL_paired_r1.json",
+      "bytes": 324,
+      "sha256": "9e40806e4489281e202b5f1446dc243ac4fb5b785ff04520c12529372b51c945"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/ALL_paired_r1.png",
+      "bytes": 1272681,
+      "sha256": "4ee439e5278613820d67fbac93c185f8f17ad0568f39182a17e34177ae40f73c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/ALL_paired_r2.json",
+      "bytes": 323,
+      "sha256": "b6066b02fe02c56170bd2a4023e425cc4019dc2ebc73b9b4cdc8f5a7383bf391"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/ALL_paired_r2.png",
+      "bytes": 1272681,
+      "sha256": "4ee439e5278613820d67fbac93c185f8f17ad0568f39182a17e34177ae40f73c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/FRESH_B_paired_r0.json",
+      "bytes": 328,
+      "sha256": "254a4f9e4ad5ed3138b0eba48b5b94c2fb2c95ec211fa7ceed269792c5e70ba0"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/FRESH_B_paired_r0.png",
+      "bytes": 1259600,
+      "sha256": "8d2010fe5283efe39e754ad83fff6171ce71f9d424fb9ca1c064d3449f2a8f0e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/FRESH_B_paired_r1.json",
+      "bytes": 328,
+      "sha256": "2067f275ff49403ca9e40662e4ac399fb43d8b18df75501c273cbbe26f40cc64"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/FRESH_B_paired_r1.png",
+      "bytes": 1259600,
+      "sha256": "8d2010fe5283efe39e754ad83fff6171ce71f9d424fb9ca1c064d3449f2a8f0e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/FRESH_B_paired_r2.json",
+      "bytes": 328,
+      "sha256": "cb0a65c5aa92a1f50e7045aca129ce60a9f62e294d4056021417d9c88cb5b82a"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/FRESH_B_paired_r2.png",
+      "bytes": 1259600,
+      "sha256": "8d2010fe5283efe39e754ad83fff6171ce71f9d424fb9ca1c064d3449f2a8f0e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/F_paired_r0.json",
+      "bytes": 321,
+      "sha256": "8f28d1b47aa88cd2b30f260e7c353224c6d23a98f30b196052f38fc07f1f5809"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/F_paired_r0.png",
+      "bytes": 1251811,
+      "sha256": "fb3f76a4ba9d2048b228de9defc35de86c62ea27ddd36fb5a3baa9cf53c04b30"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/F_paired_r1.json",
+      "bytes": 322,
+      "sha256": "dbded0b4a5d01b96fb2e65497636837dab09df8e49b680ab249a599c490a0897"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/F_paired_r1.png",
+      "bytes": 1251811,
+      "sha256": "fb3f76a4ba9d2048b228de9defc35de86c62ea27ddd36fb5a3baa9cf53c04b30"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/F_paired_r2.json",
+      "bytes": 322,
+      "sha256": "3ee0486fb77fe703aae80355be8d285e0ce9983bebad75b23040271171fa4e43"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/F_paired_r2.png",
+      "bytes": 1251811,
+      "sha256": "fb3f76a4ba9d2048b228de9defc35de86c62ea27ddd36fb5a3baa9cf53c04b30"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/STUDENT_paired_r0.json",
+      "bytes": 328,
+      "sha256": "6ffcc37bdd3131fb2faf392348eca406e655b6048dae67b47a8cd6812c56fbe7"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/STUDENT_paired_r0.png",
+      "bytes": 1272521,
+      "sha256": "f8bd33acbfaa1dfa042055affad0b96d62e19e3dee53d07d60ddb4113e512cfe"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/STUDENT_paired_r1.json",
+      "bytes": 327,
+      "sha256": "f7913c1be9300e0cdcb4ef14c03f61f9577c69c834378f0e4b3f1fee628caf91"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/STUDENT_paired_r1.png",
+      "bytes": 1272521,
+      "sha256": "f8bd33acbfaa1dfa042055affad0b96d62e19e3dee53d07d60ddb4113e512cfe"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/STUDENT_paired_r2.json",
+      "bytes": 327,
+      "sha256": "475233a1d8fc0b13bb25e59cc3577e936a6181e71c0c9e760a01ddf3ad8109eb"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_15953_chocolate/STUDENT_paired_r2.png",
+      "bytes": 1272521,
+      "sha256": "f8bd33acbfaa1dfa042055affad0b96d62e19e3dee53d07d60ddb4113e512cfe"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/ALL_paired_r0.json",
+      "bytes": 322,
+      "sha256": "ec6c76f9f4838b454c0261e4d37cd80ab5440705f49d98ea94dde5e096b604a0"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/ALL_paired_r0.png",
+      "bytes": 2018205,
+      "sha256": "9a74f41ca5bda9f7ebf54890e1e1b5f3a111081bf2e56d31f8fa6e79acfdc529"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/ALL_paired_r1.json",
+      "bytes": 323,
+      "sha256": "ebdb530405f56e6e8617e8218d9ee36a11d1851160aca30e30759ddbb3798c8b"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/ALL_paired_r1.png",
+      "bytes": 2018205,
+      "sha256": "9a74f41ca5bda9f7ebf54890e1e1b5f3a111081bf2e56d31f8fa6e79acfdc529"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/ALL_paired_r2.json",
+      "bytes": 322,
+      "sha256": "35f34f2cf7e39c7a64df65bae515581de6f9c270c173695f71a8a23f2eb4ba61"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/ALL_paired_r2.png",
+      "bytes": 2018205,
+      "sha256": "9a74f41ca5bda9f7ebf54890e1e1b5f3a111081bf2e56d31f8fa6e79acfdc529"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/FRESH_B_paired_r0.json",
+      "bytes": 324,
+      "sha256": "4e238be3e3f02563e2d0de1b7eca3d0434990a9c82c8c4a6148367b1ef17687a"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/FRESH_B_paired_r0.png",
+      "bytes": 2041515,
+      "sha256": "77ac7c8bb2ba24b62ce528ab5ce8e33d45b6ac6424186a4a209aff47298bbe1c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/FRESH_B_paired_r1.json",
+      "bytes": 326,
+      "sha256": "99f43bb412ebdeacc0bc285fee3e0a987d88c08c72bbe1385e03426c825f07ca"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/FRESH_B_paired_r1.png",
+      "bytes": 2041515,
+      "sha256": "77ac7c8bb2ba24b62ce528ab5ce8e33d45b6ac6424186a4a209aff47298bbe1c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/FRESH_B_paired_r2.json",
+      "bytes": 326,
+      "sha256": "14465bf2a745d07d68a409b395cfc5c50b5331fbe329de68727ef4600f614194"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/FRESH_B_paired_r2.png",
+      "bytes": 2041515,
+      "sha256": "77ac7c8bb2ba24b62ce528ab5ce8e33d45b6ac6424186a4a209aff47298bbe1c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/F_paired_r0.json",
+      "bytes": 319,
+      "sha256": "236b9e630e36fb71d90122e609739f17c040de4710dd615448d67c1b23651d1a"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/F_paired_r0.png",
+      "bytes": 2001970,
+      "sha256": "634cbd529a0520b75d65ed7df32006038e672feefa83b94735cd32824d16d6bd"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/F_paired_r1.json",
+      "bytes": 319,
+      "sha256": "e8556c2d497269f54a877b1ea49cd6ca38d7d71f56a7068e152d5f4ae909677f"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/F_paired_r1.png",
+      "bytes": 2001970,
+      "sha256": "634cbd529a0520b75d65ed7df32006038e672feefa83b94735cd32824d16d6bd"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/F_paired_r2.json",
+      "bytes": 319,
+      "sha256": "74505fe5f4aafbd190f7fedadda3bbdce49610cd48669e0d0450f6a7e656e230"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/F_paired_r2.png",
+      "bytes": 2001970,
+      "sha256": "634cbd529a0520b75d65ed7df32006038e672feefa83b94735cd32824d16d6bd"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/STUDENT_paired_r0.json",
+      "bytes": 324,
+      "sha256": "e2b68ddb5b137ee8f1160d4e5593ec2eb067ae71275fe3a565fd0a7ce5771700"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/STUDENT_paired_r0.png",
+      "bytes": 2009323,
+      "sha256": "e7eacf3584137237b7fd316d58352ca82b395d9f86dcfb534b3c64ec8d861848"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/STUDENT_paired_r1.json",
+      "bytes": 326,
+      "sha256": "ed9d4fea54dfdc857f1827b7605c2af4639354fa55fb051abcee43952490775a"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/STUDENT_paired_r1.png",
+      "bytes": 2009323,
+      "sha256": "e7eacf3584137237b7fd316d58352ca82b395d9f86dcfb534b3c64ec8d861848"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/STUDENT_paired_r2.json",
+      "bytes": 327,
+      "sha256": "6739ab2e19d807552a194e24cb4696ae497220903947a3f90a90c84753229b1e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_178810_bollard/STUDENT_paired_r2.png",
+      "bytes": 2009323,
+      "sha256": "e7eacf3584137237b7fd316d58352ca82b395d9f86dcfb534b3c64ec8d861848"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/ALL_paired_r0.json",
+      "bytes": 325,
+      "sha256": "791276f3d140d7750d6ec99899e8797fc25b11bbeb5436bc2bab3e1d68ab2603"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/ALL_paired_r0.png",
+      "bytes": 1167727,
+      "sha256": "7522d7c716c9f2102fa9e2de576417aac2c52843a5c8a3d586273ac0f5999563"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/ALL_paired_r1.json",
+      "bytes": 325,
+      "sha256": "e1a34bdde704fc55706526aa8b397c9a34b86e0c6ad90eeb418aaa71fcf04028"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/ALL_paired_r1.png",
+      "bytes": 1167727,
+      "sha256": "7522d7c716c9f2102fa9e2de576417aac2c52843a5c8a3d586273ac0f5999563"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/ALL_paired_r2.json",
+      "bytes": 325,
+      "sha256": "24592062cad9c94f3d62500e9de35534bb8f4228c4b59d9d6fa827aa6146f8e1"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/ALL_paired_r2.png",
+      "bytes": 1167727,
+      "sha256": "7522d7c716c9f2102fa9e2de576417aac2c52843a5c8a3d586273ac0f5999563"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/FRESH_B_paired_r0.json",
+      "bytes": 329,
+      "sha256": "744ccc9915c4f3d1ea91f88fc27e061a53795ca430362ace6fa74e1034e8fcb7"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/FRESH_B_paired_r0.png",
+      "bytes": 1167395,
+      "sha256": "e3908ce673442dacee2c50315b08101a3d2585b886b20b584ba4fc1fc1feeec8"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/FRESH_B_paired_r1.json",
+      "bytes": 329,
+      "sha256": "210340b41a8abf1667d7457b3f70586dedd4ac9fd2104ec128de965cb334a8ed"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/FRESH_B_paired_r1.png",
+      "bytes": 1167395,
+      "sha256": "e3908ce673442dacee2c50315b08101a3d2585b886b20b584ba4fc1fc1feeec8"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/FRESH_B_paired_r2.json",
+      "bytes": 329,
+      "sha256": "34096fca93c4a69453ffd69da4d441f77868a5c2956f391973efd17da5bb9e2b"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/FRESH_B_paired_r2.png",
+      "bytes": 1167395,
+      "sha256": "e3908ce673442dacee2c50315b08101a3d2585b886b20b584ba4fc1fc1feeec8"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/F_paired_r0.json",
+      "bytes": 324,
+      "sha256": "bceac919ef367835cb286905170ff1201581ae782caaa8e3c0e6aef7ce649abd"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/F_paired_r0.png",
+      "bytes": 1160823,
+      "sha256": "0b5f9ff60112d50601bcce40471733c1db5b68a3f5372eeea2f5340ab56120af"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/F_paired_r1.json",
+      "bytes": 325,
+      "sha256": "9df7d06c8e70575f0138c2d161ecd38cc82310f5dad9f5fb0d4b0e69dd66d879"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/F_paired_r1.png",
+      "bytes": 1160823,
+      "sha256": "0b5f9ff60112d50601bcce40471733c1db5b68a3f5372eeea2f5340ab56120af"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/F_paired_r2.json",
+      "bytes": 324,
+      "sha256": "5d1e17112bb5668b673e394ef216197cb36b004399775c6c8ff31b15f3f74ffb"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/F_paired_r2.png",
+      "bytes": 1160823,
+      "sha256": "0b5f9ff60112d50601bcce40471733c1db5b68a3f5372eeea2f5340ab56120af"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/STUDENT_paired_r0.json",
+      "bytes": 329,
+      "sha256": "0f64c9d8755379db2ec1d1cd5719bc8ec18b3795a5b0b92ba7dea3672a398e6a"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/STUDENT_paired_r0.png",
+      "bytes": 1165596,
+      "sha256": "0a6076ff0d97968aa98627b983b0dd801b7da0f8875a9179ec47f721c3a953db"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/STUDENT_paired_r1.json",
+      "bytes": 328,
+      "sha256": "30f11dd53259d83c91ae21608e9b06b253a8b99615e2dcf7d191036f285f1fda"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/STUDENT_paired_r1.png",
+      "bytes": 1165596,
+      "sha256": "0a6076ff0d97968aa98627b983b0dd801b7da0f8875a9179ec47f721c3a953db"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/STUDENT_paired_r2.json",
+      "bytes": 329,
+      "sha256": "fde6a00ed8b5e9e8bd5fe54a234bd9d1ed77adfca388e5bd56cabb90ef03adf3"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_210597_redcushion/STUDENT_paired_r2.png",
+      "bytes": 1165596,
+      "sha256": "0a6076ff0d97968aa98627b983b0dd801b7da0f8875a9179ec47f721c3a953db"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/ALL_paired_r0.json",
+      "bytes": 321,
+      "sha256": "b15e5ecb3a2b5c1cdda5022f9e942f25c0e8a9ce2297d50da3a0ee30a13cde2b"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/ALL_paired_r0.png",
+      "bytes": 1299677,
+      "sha256": "72ccb5822a9f81163b4a019f16a237860b79c9ddd2ad62bae5016c23b9c29604"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/ALL_paired_r1.json",
+      "bytes": 322,
+      "sha256": "1dd87d4b7e4465cccf09d4b38c0acb3e7b7cea380b9d1ceb92d1c8ad81057a1e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/ALL_paired_r1.png",
+      "bytes": 1299677,
+      "sha256": "72ccb5822a9f81163b4a019f16a237860b79c9ddd2ad62bae5016c23b9c29604"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/ALL_paired_r2.json",
+      "bytes": 320,
+      "sha256": "6c045645da8b4237a64a8f8b51a86e1df5e411abbe805eb383daf598c08007c0"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/ALL_paired_r2.png",
+      "bytes": 1299677,
+      "sha256": "72ccb5822a9f81163b4a019f16a237860b79c9ddd2ad62bae5016c23b9c29604"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/FRESH_B_paired_r0.json",
+      "bytes": 326,
+      "sha256": "525315fab84e94ad79dc57f8de9b73a77b1268255754e5a1cc4b040e7402edc5"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/FRESH_B_paired_r0.png",
+      "bytes": 1298599,
+      "sha256": "e6032799f483205e2ced6d95c08e9c3ecdd32d6b5c2195973b81b2876b2b6dbe"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/FRESH_B_paired_r1.json",
+      "bytes": 326,
+      "sha256": "f30a6b61c39d7442bc76735751e2eda4da68bec009016479e07106dc9753e462"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/FRESH_B_paired_r1.png",
+      "bytes": 1298599,
+      "sha256": "e6032799f483205e2ced6d95c08e9c3ecdd32d6b5c2195973b81b2876b2b6dbe"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/FRESH_B_paired_r2.json",
+      "bytes": 326,
+      "sha256": "e26a647a6165e2d1b3b6024ce0ffe7f1dab1a8199a1e82afd5af239a5142e012"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/FRESH_B_paired_r2.png",
+      "bytes": 1298599,
+      "sha256": "e6032799f483205e2ced6d95c08e9c3ecdd32d6b5c2195973b81b2876b2b6dbe"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/F_paired_r0.json",
+      "bytes": 320,
+      "sha256": "db5e15c16da8ba9cd147140c45e650b1089d9a33a62b74071deb9a070b8905b2"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/F_paired_r0.png",
+      "bytes": 1294215,
+      "sha256": "843c05208dfc64860f40f47ecb235d95d2c0a2ec90c928d4c435bf3ee83566a3"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/F_paired_r1.json",
+      "bytes": 320,
+      "sha256": "6be28610d2f220ae86f1365593ce17f9c9a742e313f84f5ae05bbd584406c89e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/F_paired_r1.png",
+      "bytes": 1294215,
+      "sha256": "843c05208dfc64860f40f47ecb235d95d2c0a2ec90c928d4c435bf3ee83566a3"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/F_paired_r2.json",
+      "bytes": 320,
+      "sha256": "f5e44d2bedae3a3c10979c885ff4786316858135c63230c837eefd8d46e0905b"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/F_paired_r2.png",
+      "bytes": 1294215,
+      "sha256": "843c05208dfc64860f40f47ecb235d95d2c0a2ec90c928d4c435bf3ee83566a3"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/STUDENT_paired_r0.json",
+      "bytes": 325,
+      "sha256": "8a84c46dab3d6795c0cf9462cd3f14070dfe3b3e18d4b1f8f62148e023a81afb"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/STUDENT_paired_r0.png",
+      "bytes": 1298023,
+      "sha256": "b7798dd3be0ac0351ef3d6a8b73a12bd942aef2a5fc2ace4f6e5f2f436afe0db"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/STUDENT_paired_r1.json",
+      "bytes": 325,
+      "sha256": "afca0e38d5d3a89ac564999190504fbf59f47a918f307aa87603c0a9cd95bcb4"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/STUDENT_paired_r1.png",
+      "bytes": 1298023,
+      "sha256": "b7798dd3be0ac0351ef3d6a8b73a12bd942aef2a5fc2ace4f6e5f2f436afe0db"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/STUDENT_paired_r2.json",
+      "bytes": 326,
+      "sha256": "2d65664c978b88def7fbd3e444b3e9e7293adad308362a458a696bb675924816"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_26498_woodbat/STUDENT_paired_r2.png",
+      "bytes": 1298023,
+      "sha256": "b7798dd3be0ac0351ef3d6a8b73a12bd942aef2a5fc2ace4f6e5f2f436afe0db"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/ALL_paired_r0.json",
+      "bytes": 314,
+      "sha256": "0fcf659a7c6c57d7a6c661aa0e59c568911c148d2783afb552cd9cb8dedff819"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/ALL_paired_r0.png",
+      "bytes": 1088546,
+      "sha256": "8c775f0518d33ade1ad80f982aaf4d078ee40ec8613b04e8df85554288d89ce6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/ALL_paired_r1.json",
+      "bytes": 318,
+      "sha256": "57f77c8f4c25470058a52fc5742d07596f81242df82594ef6e061b2cb1de3fe6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/ALL_paired_r1.png",
+      "bytes": 1088546,
+      "sha256": "8c775f0518d33ade1ad80f982aaf4d078ee40ec8613b04e8df85554288d89ce6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/ALL_paired_r2.json",
+      "bytes": 319,
+      "sha256": "85f538ad9925b20edd96f5f3994fd768db9bde0690a397f949043d83d0a95f85"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/ALL_paired_r2.png",
+      "bytes": 1088546,
+      "sha256": "8c775f0518d33ade1ad80f982aaf4d078ee40ec8613b04e8df85554288d89ce6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/ALL_warmup_r0.json",
+      "bytes": 316,
+      "sha256": "dd383cfc6d433f2be826116f2e207b5eb2f945218bf2f8340502ccc09703f2d8"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/ALL_warmup_r0.png",
+      "bytes": 1088546,
+      "sha256": "8c775f0518d33ade1ad80f982aaf4d078ee40ec8613b04e8df85554288d89ce6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/FRESH_B_paired_r0.json",
+      "bytes": 321,
+      "sha256": "979f1442cbf669054a51582ae0fdd3160555df28e0c6d9a28b5290f73c413e74"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/FRESH_B_paired_r0.png",
+      "bytes": 1090942,
+      "sha256": "a483f8a94fd5dfeb4e1507bc94764d4501a12c4961e5c27c11c82f3ed20027c3"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/FRESH_B_paired_r1.json",
+      "bytes": 324,
+      "sha256": "6d0f9a133fc452b4129839d7e09f2312af5d119a691e74e14f509ed17e8b1f59"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/FRESH_B_paired_r1.png",
+      "bytes": 1090942,
+      "sha256": "a483f8a94fd5dfeb4e1507bc94764d4501a12c4961e5c27c11c82f3ed20027c3"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/FRESH_B_paired_r2.json",
+      "bytes": 324,
+      "sha256": "bd76e2a84e16d6915c70bd93d0f0278db697d2110320574124d5f2e5b1b3777c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/FRESH_B_paired_r2.png",
+      "bytes": 1090942,
+      "sha256": "a483f8a94fd5dfeb4e1507bc94764d4501a12c4961e5c27c11c82f3ed20027c3"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/FRESH_B_warmup_r0.json",
+      "bytes": 320,
+      "sha256": "0ce50578500215b296bba6dc906023b7db1ee67a06d09340ff9fc0aab905ac27"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/FRESH_B_warmup_r0.png",
+      "bytes": 1090942,
+      "sha256": "a483f8a94fd5dfeb4e1507bc94764d4501a12c4961e5c27c11c82f3ed20027c3"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/F_paired_r0.json",
+      "bytes": 315,
+      "sha256": "f193d1f1224909710a3995710b479bee7e4e8263b40b1501c0f79623455e4b4c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/F_paired_r0.png",
+      "bytes": 1085908,
+      "sha256": "b785cadf525a3074e0f8cf937be28b216d7a5ddb23da7340c0e57650cd4529b6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/F_paired_r1.json",
+      "bytes": 318,
+      "sha256": "ffe85c416ab1c34855ff306e28558b613802f8643e1056aee6a9cb94f4913869"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/F_paired_r1.png",
+      "bytes": 1085908,
+      "sha256": "b785cadf525a3074e0f8cf937be28b216d7a5ddb23da7340c0e57650cd4529b6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/F_paired_r2.json",
+      "bytes": 318,
+      "sha256": "347f06a4190132c28b4ecfec4a1abea15a8506eab27add9920fe3706dec377e3"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/F_paired_r2.png",
+      "bytes": 1085908,
+      "sha256": "b785cadf525a3074e0f8cf937be28b216d7a5ddb23da7340c0e57650cd4529b6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/F_warmup_r0.json",
+      "bytes": 313,
+      "sha256": "03bc47934658cbcd3bfaf118f2efc3813a0d581df86b63bfe0c503fad746661a"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/F_warmup_r0.png",
+      "bytes": 1085908,
+      "sha256": "b785cadf525a3074e0f8cf937be28b216d7a5ddb23da7340c0e57650cd4529b6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/STUDENT_paired_r0.json",
+      "bytes": 320,
+      "sha256": "3e8feb4e9cfff43debecf9cb92e77c710245c824a2ef49f59d38b0d8241f2dc1"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/STUDENT_paired_r0.png",
+      "bytes": 1087162,
+      "sha256": "6a829597a60819ad708b6a8413d068c919a0a8565c9f614f2732d5c234594fd6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/STUDENT_paired_r1.json",
+      "bytes": 323,
+      "sha256": "68f4e32f5f024f137c1c3df5e01c97b14a31e7ab3e17d6ffc72ec8369ff8421c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/STUDENT_paired_r1.png",
+      "bytes": 1087162,
+      "sha256": "6a829597a60819ad708b6a8413d068c919a0a8565c9f614f2732d5c234594fd6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/STUDENT_paired_r2.json",
+      "bytes": 324,
+      "sha256": "94f4363a8b5800bcb1e342a7d3b693d463652bdf3ce38f6d80cb9cef7ca9c768"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/STUDENT_paired_r2.png",
+      "bytes": 1087162,
+      "sha256": "6a829597a60819ad708b6a8413d068c919a0a8565c9f614f2732d5c234594fd6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/STUDENT_warmup_r0.json",
+      "bytes": 321,
+      "sha256": "55f031184057ee97bc777206594e7f8d1326d18bd229e15b01102fcfc73139a5"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_286770_goat/STUDENT_warmup_r0.png",
+      "bytes": 1087162,
+      "sha256": "6a829597a60819ad708b6a8413d068c919a0a8565c9f614f2732d5c234594fd6"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/ALL_paired_r0.json",
+      "bytes": 322,
+      "sha256": "753fff34378bd2abe26e0161c618a6fe9a2ab4ff7ecf7f8a2d5f3b94fdaa6fa2"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/ALL_paired_r0.png",
+      "bytes": 1364299,
+      "sha256": "4b5b84afe4b7f25e02ad9a0b6c08113e8c4c3943a508fbf6278d94d799ac6c15"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/ALL_paired_r1.json",
+      "bytes": 320,
+      "sha256": "d24a48bcf73ea3641b285576572fc1c9733a049176883c98285e90b655311847"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/ALL_paired_r1.png",
+      "bytes": 1364299,
+      "sha256": "4b5b84afe4b7f25e02ad9a0b6c08113e8c4c3943a508fbf6278d94d799ac6c15"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/ALL_paired_r2.json",
+      "bytes": 322,
+      "sha256": "256e41afcdbca2e76b51d21b4c3f5c97be43ef09866c4d4edc1b189cdb1fe201"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/ALL_paired_r2.png",
+      "bytes": 1364299,
+      "sha256": "4b5b84afe4b7f25e02ad9a0b6c08113e8c4c3943a508fbf6278d94d799ac6c15"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/FRESH_B_paired_r0.json",
+      "bytes": 325,
+      "sha256": "10ff61797f3657d36b93d2e252d97b483a00877f5b39da14e7e763e70b1e2d88"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/FRESH_B_paired_r0.png",
+      "bytes": 1361702,
+      "sha256": "2334c4099e6103f28d3db700c061652a9a7a2b61fa6f5f949cde41dbdc26949d"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/FRESH_B_paired_r1.json",
+      "bytes": 325,
+      "sha256": "41cccccd8c1da4545de69805e6aeccedc2349a05151b28b0cb5b7742d515aa67"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/FRESH_B_paired_r1.png",
+      "bytes": 1361702,
+      "sha256": "2334c4099e6103f28d3db700c061652a9a7a2b61fa6f5f949cde41dbdc26949d"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/FRESH_B_paired_r2.json",
+      "bytes": 326,
+      "sha256": "7cd8d57eac1aeaccce9bca16f08e512f95754b372099a21d261106ee56dc136e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/FRESH_B_paired_r2.png",
+      "bytes": 1361702,
+      "sha256": "2334c4099e6103f28d3db700c061652a9a7a2b61fa6f5f949cde41dbdc26949d"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/F_paired_r0.json",
+      "bytes": 319,
+      "sha256": "0de5b24fb6177a1170f04cadc6fff2c5860fd43a83c12e5fffdf0f26ed634e92"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/F_paired_r0.png",
+      "bytes": 1358855,
+      "sha256": "3b32417f80edea3507af5f4571fb2c3d7ac48f5c3da895351446cd298f534d70"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/F_paired_r1.json",
+      "bytes": 319,
+      "sha256": "5497ddddfe8fe2c8794b0e7dba22cf2873fb96d7478108a7da94c4bf2080d28a"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/F_paired_r1.png",
+      "bytes": 1358855,
+      "sha256": "3b32417f80edea3507af5f4571fb2c3d7ac48f5c3da895351446cd298f534d70"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/F_paired_r2.json",
+      "bytes": 317,
+      "sha256": "bcaac7d1cc59878fbedee8e699b9caec9e4c79cd03139b4e368d7c5f895b5d4b"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/F_paired_r2.png",
+      "bytes": 1358855,
+      "sha256": "3b32417f80edea3507af5f4571fb2c3d7ac48f5c3da895351446cd298f534d70"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/STUDENT_paired_r0.json",
+      "bytes": 325,
+      "sha256": "767eb65a48ce6aed45a592ba544bfc9fb65b41023793faa55aef547371e0eb73"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/STUDENT_paired_r0.png",
+      "bytes": 1362692,
+      "sha256": "e55f8961949ad35dbe02ea74e3d96f4855e4cc6045088ab944615787f4bb5132"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/STUDENT_paired_r1.json",
+      "bytes": 326,
+      "sha256": "a1f35a425dd142c1d332b745b9390fc84d2515b7a40d4b9fc86aaadab4807c65"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/STUDENT_paired_r1.png",
+      "bytes": 1362692,
+      "sha256": "e55f8961949ad35dbe02ea74e3d96f4855e4cc6045088ab944615787f4bb5132"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/STUDENT_paired_r2.json",
+      "bytes": 325,
+      "sha256": "dc79ecc219c71dffff38265f2f67fae9cf49489efc44a96d6255a4506d7dfdef"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_429111_remote/STUDENT_paired_r2.png",
+      "bytes": 1362692,
+      "sha256": "e55f8961949ad35dbe02ea74e3d96f4855e4cc6045088ab944615787f4bb5132"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/ALL_paired_r0.json",
+      "bytes": 323,
+      "sha256": "fe012454c04b31df77cfc9419e1e272886790ae097083e0c6327750da05255d7"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/ALL_paired_r0.png",
+      "bytes": 1115801,
+      "sha256": "8cd84e0a96b970e7e58b6aa7c885c897b587d775e7a14de7dbabdf2135fa57aa"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/ALL_paired_r1.json",
+      "bytes": 324,
+      "sha256": "badc691891edf96bfa9f5bde22ea4497da3f4198dd7122f882a2d1f1efbd027c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/ALL_paired_r1.png",
+      "bytes": 1115801,
+      "sha256": "8cd84e0a96b970e7e58b6aa7c885c897b587d775e7a14de7dbabdf2135fa57aa"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/ALL_paired_r2.json",
+      "bytes": 324,
+      "sha256": "da8440eab001700bde319b7ada399d596aab3ee297413793588f069447e84903"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/ALL_paired_r2.png",
+      "bytes": 1115801,
+      "sha256": "8cd84e0a96b970e7e58b6aa7c885c897b587d775e7a14de7dbabdf2135fa57aa"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/FRESH_B_paired_r0.json",
+      "bytes": 328,
+      "sha256": "cf19018c7ef84a6b0bbda5b683ad55b6a7d370402c8ee407d602054e505e675d"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/FRESH_B_paired_r0.png",
+      "bytes": 1110839,
+      "sha256": "f59bfef3f07d5381cba9fa5ca21a017da64c24e2edece4282de55b66aa4a69c3"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/FRESH_B_paired_r1.json",
+      "bytes": 327,
+      "sha256": "f82b2bb63dfd223494ce36cc2d6b03816fdcf9f46b0b317d6c7d19bdb15424d2"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/FRESH_B_paired_r1.png",
+      "bytes": 1110839,
+      "sha256": "f59bfef3f07d5381cba9fa5ca21a017da64c24e2edece4282de55b66aa4a69c3"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/FRESH_B_paired_r2.json",
+      "bytes": 327,
+      "sha256": "98700385380ca3adc1ad00ba5190218077f2a25d85bb577c8107a9ad2d8ac988"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/FRESH_B_paired_r2.png",
+      "bytes": 1110839,
+      "sha256": "f59bfef3f07d5381cba9fa5ca21a017da64c24e2edece4282de55b66aa4a69c3"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/F_paired_r0.json",
+      "bytes": 321,
+      "sha256": "31e848d7367076b7883dfa0e1750eff09d523c7f1c46ca9800cdefe12b7fa5a4"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/F_paired_r0.png",
+      "bytes": 1100944,
+      "sha256": "584984351c5ececebb13e57f41bc14059a5579c0a7e85bdea2c74c67cb8cd65d"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/F_paired_r1.json",
+      "bytes": 321,
+      "sha256": "d3e1eb4afb7c36364e0dbbc6ef25aa9e62b53e521293124d0c24ec646e109c8c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/F_paired_r1.png",
+      "bytes": 1100944,
+      "sha256": "584984351c5ececebb13e57f41bc14059a5579c0a7e85bdea2c74c67cb8cd65d"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/F_paired_r2.json",
+      "bytes": 321,
+      "sha256": "3b52cd92bcd9d5234e425925bbf93314caad8150e01e6183e03e75a9bf4e8c89"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/F_paired_r2.png",
+      "bytes": 1100944,
+      "sha256": "584984351c5ececebb13e57f41bc14059a5579c0a7e85bdea2c74c67cb8cd65d"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/STUDENT_paired_r0.json",
+      "bytes": 327,
+      "sha256": "4849b7bfb4d880bb29a3ec11e0e7601615c99da119fc2433d13cd6ad8b5758ec"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/STUDENT_paired_r0.png",
+      "bytes": 1114003,
+      "sha256": "042c420eccca324fb5986b49fb69cf6de14f17d341ff1d762305384971616d01"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/STUDENT_paired_r1.json",
+      "bytes": 328,
+      "sha256": "a2a3f2fd86bc6e367f9147d05779caa3e5483d8225e590dcf1eb360dc7e73519"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/STUDENT_paired_r1.png",
+      "bytes": 1114003,
+      "sha256": "042c420eccca324fb5986b49fb69cf6de14f17d341ff1d762305384971616d01"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/STUDENT_paired_r2.json",
+      "bytes": 328,
+      "sha256": "94d2bd6a53347c9bb8ce8dd4b4ed61bf3872bb7de15a3578dcf2145aabb152f1"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_452168_bluesign/STUDENT_paired_r2.png",
+      "bytes": 1114003,
+      "sha256": "042c420eccca324fb5986b49fb69cf6de14f17d341ff1d762305384971616d01"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/ALL_paired_r0.json",
+      "bytes": 316,
+      "sha256": "70a2de098f36ffb7b7c1dc920e0b0e670f9b3100247814e8a7060d37aab8aef9"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/ALL_paired_r0.png",
+      "bytes": 930810,
+      "sha256": "525a14da264771d9572535a1cf4cbe7cdfccfc9220afc09e3e7ca920e447c0ae"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/ALL_paired_r1.json",
+      "bytes": 317,
+      "sha256": "781eecd615f01823a192ae9fe0300bad8d218efe4dd3618c1102ddc8ed8d713e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/ALL_paired_r1.png",
+      "bytes": 930810,
+      "sha256": "525a14da264771d9572535a1cf4cbe7cdfccfc9220afc09e3e7ca920e447c0ae"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/ALL_paired_r2.json",
+      "bytes": 318,
+      "sha256": "778ffaffe59e16d41dac8e2d311e6d534f139291e395a395aaed200ab59861fb"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/ALL_paired_r2.png",
+      "bytes": 930810,
+      "sha256": "525a14da264771d9572535a1cf4cbe7cdfccfc9220afc09e3e7ca920e447c0ae"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/FRESH_B_paired_r0.json",
+      "bytes": 321,
+      "sha256": "cbc2b4b22faa609cd0373733d3ecd507f372fae2994e8e5d9b2de20de06dc49f"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/FRESH_B_paired_r0.png",
+      "bytes": 931994,
+      "sha256": "f421c8012e476507cb9fcd4d44a6cdd3139f96ef74fbe8d721ee305202d16d8e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/FRESH_B_paired_r1.json",
+      "bytes": 322,
+      "sha256": "e6178e36abe89cde0be8533702c2663ddb310367ba93fb238220f4616bb7360e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/FRESH_B_paired_r1.png",
+      "bytes": 931994,
+      "sha256": "f421c8012e476507cb9fcd4d44a6cdd3139f96ef74fbe8d721ee305202d16d8e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/FRESH_B_paired_r2.json",
+      "bytes": 323,
+      "sha256": "e2b1e386ed4b86720031bb2164762985c31b08efb109b5e4e86137986515f196"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/FRESH_B_paired_r2.png",
+      "bytes": 931994,
+      "sha256": "f421c8012e476507cb9fcd4d44a6cdd3139f96ef74fbe8d721ee305202d16d8e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/F_paired_r0.json",
+      "bytes": 314,
+      "sha256": "d90e2b368170a967728719e2ec33e028191d0d6d53077eb46616c93d1c0e6d0d"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/F_paired_r0.png",
+      "bytes": 934932,
+      "sha256": "eda2ca98c858317141e99ee94d07d9c500ef5d64daea9c3aaeee77e03df2c4b9"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/F_paired_r1.json",
+      "bytes": 316,
+      "sha256": "c77b751337c73e939c5d610de56fc9ee84304228e5f7dbfde314a9f396ed986e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/F_paired_r1.png",
+      "bytes": 934932,
+      "sha256": "eda2ca98c858317141e99ee94d07d9c500ef5d64daea9c3aaeee77e03df2c4b9"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/F_paired_r2.json",
+      "bytes": 316,
+      "sha256": "dd8402a8b36b9f059b4aa71aa6e9d91de217a4d8cf76ca4c2fe38d4583371e2c"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/F_paired_r2.png",
+      "bytes": 934932,
+      "sha256": "eda2ca98c858317141e99ee94d07d9c500ef5d64daea9c3aaeee77e03df2c4b9"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/STUDENT_paired_r0.json",
+      "bytes": 319,
+      "sha256": "b72ffcafd438892578c2acf9ab554769105dd4fb2cff70710eda29ef62f89e98"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/STUDENT_paired_r0.png",
+      "bytes": 930899,
+      "sha256": "3ed48968d9ce2a874eabfa7a52a3907c4e732a41d0ac72fb4bbd426bd6e27687"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/STUDENT_paired_r1.json",
+      "bytes": 322,
+      "sha256": "c7cd186919743fe9aa225874ed29f64159a65504d0eec3dd7f4f5a4ad5083c3e"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/STUDENT_paired_r1.png",
+      "bytes": 930899,
+      "sha256": "3ed48968d9ce2a874eabfa7a52a3907c4e732a41d0ac72fb4bbd426bd6e27687"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/STUDENT_paired_r2.json",
+      "bytes": 323,
+      "sha256": "80ac8945fbff7a225263c198de579d9055bd21ec08a97eae7bcac94cd8c94d60"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/local_train_486018_dog/STUDENT_paired_r2.png",
+      "bytes": 930899,
+      "sha256": "3ed48968d9ce2a874eabfa7a52a3907c4e732a41d0ac72fb4bbd426bd6e27687"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/preregistration.json",
+      "bytes": 19345,
+      "sha256": "f1b61543d1c95d372d117eedf83bea48350d0cc1b0f5ca7dbd8268c63ba51ad1"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/records.jsonl",
+      "bytes": 30082,
+      "sha256": "42b5989306324cceb4dd0a1388501c70776b14e3dc8a2a67e461f337cd181c72"
+    },
+    {
+      "path": "runs/budget_student_latency_v2/status.json",
+      "bytes": 258,
+      "sha256": "3f924b2ed60a06671f1cca18cbfb14b5df21a0d0e85610e97a1906be129daf05"
+    },
+    {
+      "path": "runs/budget_student_latency_v2.log",
+      "bytes": 14087,
+      "sha256": "516d1680fbf555e26060ef85d1096838f5c74f592da93ff80b89798631b43e2a"
+    }
+  ],
+  "count": 213,
+  "bytes": 127365760
+}

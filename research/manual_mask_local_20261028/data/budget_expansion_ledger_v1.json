@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-10-30T14:32:11.774422",
+  "parent": "versions/20261030_扩量训练前/current_research_status.json",
+  "batches": [
+    {
+      "batch": "budget_merge_v1",
+      "requests": 58,
+      "dit": 464
+    },
+    {
+      "batch": "budget_expansion_train_v1",
+      "requests": 188,
+      "dit": 4743
+    },
+    {
+      "batch": "budget_rescue_v1",
+      "requests": 64,
+      "dit": 512
+    },
+    {
+      "batch": "budget_development_v1",
+      "requests": 128,
+      "dit": 1024
+    },
+    {
+      "batch": "budget_local128_latency_v1",
+      "requests": 75,
+      "dit": 600
+    }
+  ],
+  "new_requests": 513,
+  "new_dit": 7343,
+  "new_optimization_updates": 128,
+  "new_backward_passes": 512,
+  "new_teacher_dit": 640,
+  "new_RL_updates": 0,
+  "model_execution_failures": 0,
+  "project_requests": 2471,
+  "project_dit": 25110,
+  "project_teacher_dit": 1441,
+  "new_machine_requests": 1136,
+  "new_machine_dit": 13853,
+  "raw_training_call_audit": {
+    "prefix": 1959,
+    "teacher": 640,
+    "gradient_student": 640,
+    "evaluation": 1504
+  },
+  "same_start_teacher_cache_unchanged_windows": 512
+}

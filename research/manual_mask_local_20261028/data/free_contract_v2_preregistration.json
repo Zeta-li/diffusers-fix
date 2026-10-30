@@ -1,0 +1,172 @@
+{
+  "phase": "FROZEN_BEFORE_GENERATION",
+  "created_at": "2026-10-28T13:12:21.869681+08:00",
+  "purpose": "free-region real-weight execution contract and fixed-expansion diagnosis",
+  "planned_requests": 13,
+  "planned_dit": 104,
+  "teacher_dit": 0,
+  "training_updates": 0,
+  "rl_updates": 0,
+  "net_latency_requests": 0,
+  "steps": 8,
+  "cfg": 1,
+  "dtype": "bfloat16",
+  "source_cases": "data/cases_s1.json",
+  "source_cases_sha256": "71cb7721f750a4be84a9bd9a626e2d8386f62cb28b37e8b71bcdb4b43811b79e",
+  "prompt_changes": {
+    "486018": "remove same standing pose and exact size to permit a new object silhouette; known prior failure, new development task, never retroactive success"
+  },
+  "quality_gate": {
+    "execution": "ALL bitwise F each step; all target Euler unchanged; initial two states shared",
+    "local_pilot": "F must satisfy task; no severe truncation; report regression separately from F failures",
+    "timing": "not permitted by this contract pilot alone"
+  },
+  "cases": [
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "image": "inputs/s1_train8/local_train_15953_chocolate/source.original",
+      "source_sha256": "dcdc856732161f84c3052750d4f0acaee67e91fbec25b58f3ffaecb9c16ed723",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        210,
+        110,
+        465,
+        255
+      ],
+      "prompt": "Change only the white frosting on top of the cupcake to chocolate-brown frosting. Preserve its spiral shape, the cupcake wrapper, the apple, the plate, and the rest of the image.",
+      "role": "seen_training_development_not_holdout",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        },
+        {
+          "name": "ALL",
+          "kind": "all_selected"
+        },
+        {
+          "name": "FIX16",
+          "kind": "front",
+          "margin": 16
+        },
+        {
+          "name": "FIX48",
+          "kind": "front",
+          "margin": 48
+        }
+      ],
+      "task_type": "attribute"
+    },
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "image": "inputs/s1_train8/local_train_286770_goat/source.original",
+      "source_sha256": "75247dd935a0f86f1a6a799d66b5bd8c8f3f65c5d50cdda829c6c6129404463a",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        165,
+        180,
+        250,
+        395
+      ],
+      "prompt": "Replace only the leftmost lamb with a young goat of similar size in the same standing pose and position. Keep the other two sheep and the rest of the scene unchanged.",
+      "role": "seen_training_development_not_holdout",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        },
+        {
+          "name": "FIX16",
+          "kind": "front",
+          "margin": 16
+        },
+        {
+          "name": "FIX48",
+          "kind": "front",
+          "margin": 48
+        }
+      ],
+      "task_type": "replace"
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "image": "inputs/s1_train8/local_train_26498_woodbat/source.original",
+      "source_sha256": "6007d94a612a0e6bc90ef659ac98e10770a0dd12272b7ee497dc72a949aca264",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        130,
+        208,
+        250,
+        245
+      ],
+      "prompt": "Make the baseball bat look like natural brown wood while preserving its exact position, length, and direction. Keep the player's hands, clothing, and the rest of the scene unchanged.",
+      "role": "seen_training_development_not_holdout",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        },
+        {
+          "name": "FIX16",
+          "kind": "front",
+          "margin": 16
+        },
+        {
+          "name": "FIX48",
+          "kind": "front",
+          "margin": 48
+        }
+      ],
+      "task_type": "attribute"
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "image": "inputs/s1_train8/local_train_486018_dog/source.original",
+      "source_sha256": "17d9d3e818058c897ed59d4b5b9e01ab7559c881f3f33b352f6ae7137a3900ae",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        75,
+        85,
+        275,
+        250
+      ],
+      "prompt": "Replace the black cat on the microwave with a small black Labrador retriever puppy with floppy hanging ears and a broad dog muzzle. Keep the puppy on top of the same microwave. Preserve the microwave and the rest of the room.",
+      "role": "seen_training_development_not_holdout",
+      "arms": [
+        {
+          "name": "F",
+          "kind": "native"
+        },
+        {
+          "name": "FIX16",
+          "kind": "front",
+          "margin": 16
+        },
+        {
+          "name": "FIX48",
+          "kind": "front",
+          "margin": 48
+        }
+      ],
+      "task_type": "replace"
+    }
+  ],
+  "failure_policy": "stop at first runtime/equivalence error, preserve all counted work",
+  "attempt_amendment": "v2: correct diagnostic Euler formula to preserve BF16 dt*velocity multiplication; v1 spent 8 completed DiT but checker rejected its native output, no usable successful request archived; no model/executor/prompt changes."
+}

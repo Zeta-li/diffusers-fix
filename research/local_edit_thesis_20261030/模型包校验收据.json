@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "archive": "LOCAL128_R25_模型与代码恢复包_20261030.zip",
+  "bytes": 17237822,
+  "sha256": "936154442638d8e6516ab0e7837c8a17b8ed19fec1b3634493fc540ac9c9b907",
+  "verified_files": 156,
+  "restore_to_empty_directory_verified": true,
+  "remote_newest_raw_results_included": false
+}

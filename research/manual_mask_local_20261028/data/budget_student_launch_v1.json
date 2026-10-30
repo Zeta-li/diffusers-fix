@@ -1,0 +1,7 @@
+{
+  "pid": 356498,
+  "created_utc": "2026-10-30T03:52:51.768661+00:00",
+  "planned_DiT": 1546,
+  "planned_optimizer_updates": 25,
+  "log": "/workspace/diffusers-fix/research/manual_mask_local_20261028/runs/budget_student_pilot_v1.log"
+}

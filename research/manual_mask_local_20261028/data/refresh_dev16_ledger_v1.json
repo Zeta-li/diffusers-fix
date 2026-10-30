@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-10-30T14:11:10.318289+00:00",
+  "base_ledger": "data/refresh_policy_ledger_v1.json",
+  "new_requests": 139,
+  "new_DiT": 1112,
+  "batches": [
+    {
+      "name": "refresh_dev16_v1",
+      "requests": 64,
+      "DiT": 512
+    },
+    {
+      "name": "local_edit_runtime_latency_v1",
+      "requests": 75,
+      "DiT": 600,
+      "measured_requests": 72,
+      "warmup_requests": 3
+    }
+  ],
+  "new_LoRA_updates": 0,
+  "new_supervised_updates": 0,
+  "new_RL_updates": 0,
+  "new_dense_teacher_queries": 0,
+  "conditioning_only": 16,
+  "new_net_latency_requests": 75,
+  "GPU_generation_failures": 0,
+  "test64_opened": false,
+  "source_of_counts": "Remote completed status and analysis returned in tool outputs; raw metadata synchronization pending",
+  "project_requests": 3589,
+  "project_DiT": 34054,
+  "new_machine_requests": 2254,
+  "new_machine_DiT": 22797,
+  "free_region_GPU_DiT": 22605,
+  "project_dense_teacher": 1441,
+  "LoRA_cumulative_updates": 153,
+  "cumulative_LoRA_fit_sources": 140
+}

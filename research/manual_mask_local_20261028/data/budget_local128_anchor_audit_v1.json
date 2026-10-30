@@ -1,0 +1,328 @@
+{
+  "status": "PASS",
+  "sources": 64,
+  "checked_anchor_states": 128,
+  "records": [
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_372317",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_236484",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_45626",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_181796",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_399532",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_108442",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_385707",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_302289",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_463844",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_522229",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_445972",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_343552",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_286442",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_352264",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_196699",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_47893",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_509149",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_154644",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_315434",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_543513",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_453972",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_303144",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_281564",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_565303",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_417825",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_286720",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_359925",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_388434",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_292365",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_373712",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_74256",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_rescue_v1",
+      "case_id": "expand_train_494572",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_45999",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_422328",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_182759",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_234956",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_102724",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_15653",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_515743",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_572804",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_308507",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_423391",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_393375",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_523394",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_229301",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_150812",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_376859",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_309",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_465825",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_34",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_178928",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_256884",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_142585",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_426040",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_458821",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_91839",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_403265",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_580685",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_39480",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_96497",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_360871",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_100081",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_337180",
+      "first_two_full_steps_bitwise_F": true
+    },
+    {
+      "run": "budget_development_v1",
+      "case_id": "expand_dev_184384",
+      "first_two_full_steps_bitwise_F": true
+    }
+  ],
+  "extra_DiT": 0
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-10-30T03:42:30.992352+00:00",
+  "host": "zeta",
+  "files_verified": {
+    "delivery": 37,
+    "raw": 180
+  },
+  "delivery_archive_sha256": "cc4300521b11e948a6691622b1eff419fc69c5aea7b7569b662714e847d9091e",
+  "delivery_manifest_sha256": "0f270160dffdc4fc038fc37f2e491cec86484df54f2e5ad2925d57abe4ad36a5",
+  "raw_files_unchanged": true
+}

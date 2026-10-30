@@ -1,0 +1,28 @@
+{
+  "decision": "NO_GO_NET_LATENCY",
+  "head_execution": "PASS",
+  "head_training": "COMPLETE",
+  "closed_loop_comparison": "COMPLETE",
+  "internal_validation_semantic_pass": 3,
+  "internal_validation_total": 4,
+  "internal_validation_numeric_pass": 4,
+  "required_semantic_pass": 4,
+  "new_semantic_regressions_vs_F": 0,
+  "severe_truncations": 0,
+  "failed_source_ids": [
+    "272738"
+  ],
+  "failure_reason": "Full-reference and local candidate both edit an untargeted existing mug. F failures count in the frozen gate; cannot remove source or relax threshold.",
+  "quality_gate_changed": false,
+  "head_checkpoint_reselected": false,
+  "net_latency_requests": 0,
+  "net_latency_dit": 0,
+  "rl_updates": 0,
+  "decision_scope": "4-source internal head holdout among existing research training sources; not new independent Dev16",
+  "next": "Keep head as candidate, resolve base task selectivity on development data, add shape-diverse fit sources and stronger rule controls, then freeze fresh source-disjoint LocalDev before timing.",
+  "supplementary_fixed32_complete": true,
+  "head_superiority_over_fixed32": "NOT_ESTABLISHED",
+  "preferred_strong_rule_for_next_round": "FIX32",
+  "head_vs_fixed32_all_mae_ratio": 0.9990914185869126,
+  "head_vs_fixed32_internal_val_mae_ratio": 1.003535228788337
+}

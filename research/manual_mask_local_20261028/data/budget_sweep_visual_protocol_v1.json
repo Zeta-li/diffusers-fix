@@ -1,0 +1,18 @@
+{
+  "frozen_at": "2026-10-30T06:50:38.145694+00:00",
+  "reviewer": "single assistant",
+  "n_sources": 48,
+  "arms": 4,
+  "anonymous": true,
+  "review": "all source+prompt vs 4 randomized outputs; freeze scores before mapping read",
+  "edit_pass": "Requested object, count, attribute, action or exact text is clearly satisfied. Ambiguous cases cannot pass joint.",
+  "preservation_pass": "No obvious unintended object, identity, shape, count or scene change outside the requested edit. Minor image-level texture variation tolerated consistently.",
+  "uncertainty": "Mark uncertain where evidence cannot resolve a requested detail; joint requires edit and preservation and not uncertain.",
+  "prespecified_costly_actions": "B50 spatial budget; C extra step5 refresh plus corresponding LoRA gate",
+  "baseline_is_ground_truth": false,
+  "report_by": [
+    "train32",
+    "calibration16"
+  ],
+  "no_multiple_reviewer_claim": true
+}

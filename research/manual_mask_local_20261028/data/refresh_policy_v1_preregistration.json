@@ -1,0 +1,47 @@
+{
+  "frozen_at": "2026-10-30T12:20:26.443771+00:00",
+  "training_sources": "same32 train only; four balanced source-group hash folds",
+  "feature_contract": "32 features from bbox/prompt/source/text and first2 shared full steps; F final only creates offline labels",
+  "surrogate_loss": "RGB_MAE_vs_F + 0.25 * outside_MAE_vs_F",
+  "supervision": "log(action_loss/R25_loss), clipped[-2,2]; R25 log score fixed zero",
+  "architectures": [
+    "geometry Linear8to2",
+    "full32 Linear32to8 Tanh Linear8to2"
+  ],
+  "optimizer": "AdamW lr0.01 weight_decay0.01,500 full-batch updates each; SmoothL1 beta0.2",
+  "selection": "lower cross-validated source mean selected-action loss; calibration never used to choose model, epoch, threshold or hyperparameters",
+  "calibration": "Cal16 after supervised and RL checkpoints both frozen; report raw policies even if fail",
+  "RL": {
+    "episodes": 128,
+    "sources": 32,
+    "rounds": 4,
+    "seed": 2026103011,
+    "actions": [
+      "R4",
+      "R25",
+      "R6"
+    ],
+    "temperature": 0.25,
+    "optimizer": "Adam lr0.0005; update per8 episodes;16 optimizer steps",
+    "objective": "REINFORCE reward=-log(loss/R25loss) clipped[-2,2], KL_to_initial weight0.05, entropy weight0.02; gradient clip1",
+    "reward_source": "each episode executes actual8DiT, decode RGB and compute loss, not cached reward lookup",
+    "teacher": "reuse original F and R25 train reference; repeated seed deterministic environments; no semantic reward",
+    "planned_DiT": 1024
+  },
+  "closed_loop_verification": {
+    "policies": [
+      "supervised",
+      "RL"
+    ],
+    "sources": 16,
+    "DiT": 256,
+    "assertions": "online common2step features; selected-action trajectory/RGB identical to corresponding frozen action"
+  },
+  "promotion": "No automatic promotion based on oracle, training fit or reference metric. Cal mean surrogate and RGB no worse than best train-fixed action; semantic review and net latency still needed.",
+  "code_sha256": {
+    "refresh_policy.py": "315f9be04b529ebde11a56e02d7a18a8b42f3f4cca8a8c0f9d7af0b2fea4ec02",
+    "train_refresh_policy.py": "8af074ae9e9d359163fb29879c105e04285012ccdadbbd42daef73d2c534f5f4"
+  },
+  "test64_opened": false,
+  "new_independent_validation": false
+}

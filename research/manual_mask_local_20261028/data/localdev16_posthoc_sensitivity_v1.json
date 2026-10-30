@@ -1,0 +1,32 @@
+{
+  "posthoc_exploratory_not_gate": true,
+  "paired_source_bootstrap_seed": 20261028,
+  "paired_source_bootstrap_samples": 10000,
+  "mean_reduction_percentile95_interval": [
+    -0.02096639759755452,
+    0.021813584184993108
+  ],
+  "main_absolute_MAE_reduction": 2.4311916500914174e-05,
+  "main_absolute_255scale_reduction": 0.006199538707733114,
+  "median_per_source_relative_reduction": 0.011938207528014277,
+  "F_joint_valid_subset": {
+    "n": 10,
+    "source_ids": [
+      "102171",
+      "111376",
+      "134597",
+      "158548",
+      "194956",
+      "359569",
+      "362944",
+      "407550",
+      "491430",
+      "543942"
+    ],
+    "FIX32_mean_MAE": 0.005670219246858085,
+    "CONTEXT64_mean_MAE": 0.0057147676804486435,
+    "relative_reduction": -0.00785656279785707,
+    "wins": 9
+  },
+  "note": "Main all16 result remains primary. Subset defined by nonblind assistant semantic review, not independent or source-admission change; no case removed from gate."
+}

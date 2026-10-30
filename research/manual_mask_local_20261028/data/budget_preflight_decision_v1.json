@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-30",
+  "status": "GO_CACHE_AWARE_STUDENT_TRAINING_SPEED_OPPORTUNITY_ESTABLISHED",
+  "actual_requests": 50,
+  "actual_DiT": 400,
+  "execution_failures": 0,
+  "new_training_updates": 0,
+  "new_RL_updates": 0,
+  "test64_opened": false,
+  "same_engine_speedups": {
+    "FIX32": 1.1522160940444357,
+    "SOURCE": 1.5264485673871113,
+    "ALL": 1.766578289931559
+  },
+  "joint_passes_nonblind": {
+    "F": 5,
+    "FIX32": 5,
+    "SOURCE": 4,
+    "ALL": 4
+  },
+  "new_failure": "cupcake wrapper/frosting preservation, SOURCE and ALL",
+  "next": "Train cache-aware internal adapters and spatial velocity student on more source-disjoint training data; retain untiled full F and optimized FIX32 baselines; include fresh-context B control to separate budget schedule from cache effects.",
+  "pixel_threshold_stop_gate_applied": false,
+  "formal_quality_target_demonstrated": false,
+  "first_stage_completed": true
+}

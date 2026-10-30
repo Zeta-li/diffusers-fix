@@ -1,0 +1,344 @@
+{
+  "torch": "2.9.1+cu129",
+  "cuda": "12.9",
+  "user_confirmed_gpu": "H800",
+  "driver_gpu": "NVIDIA L20Y",
+  "capability": [
+    9,
+    0
+  ],
+  "weights": {
+    "phase": "complete",
+    "models": [
+      {
+        "repo": "Qwen/Qwen-Image-Edit",
+        "revision": "ac7f9318f633fc4b5778c59367c8128225f1e3de",
+        "path": "/workspace/model-weights/Qwen-Image-Edit",
+        "phase": "complete",
+        "files": [
+          {
+            "name": ".gitattributes",
+            "size": 1580,
+            "sha256": null,
+            "git_blob_id": "b2ef89be59c5792bf037a43d1bb69d922d28e9d8",
+            "verified": true
+          },
+          {
+            "name": "README.md",
+            "size": 11747,
+            "sha256": null,
+            "git_blob_id": "69ae090e3c5e0b66fc2a7c9113d10a92e7bf655c",
+            "verified": true
+          },
+          {
+            "name": "model_index.json",
+            "size": 512,
+            "sha256": null,
+            "git_blob_id": "cd01879ca0486fc4cb10eb9f52d3eee3f693ad1b",
+            "verified": true
+          },
+          {
+            "name": "processor/added_tokens.json",
+            "size": 605,
+            "sha256": null,
+            "git_blob_id": "482ced4679301bf287ebb310bdd1790eb4514232",
+            "verified": true
+          },
+          {
+            "name": "processor/chat_template.jinja",
+            "size": 1017,
+            "sha256": null,
+            "git_blob_id": "6c226632394ae7474b0d4b13e15793eac2e21ee9",
+            "verified": true
+          },
+          {
+            "name": "processor/merges.txt",
+            "size": 1671853,
+            "sha256": null,
+            "git_blob_id": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+            "verified": true
+          },
+          {
+            "name": "processor/preprocessor_config.json",
+            "size": 788,
+            "sha256": null,
+            "git_blob_id": "14a710470a1f4f12724cd5ab906671939e28d1b7",
+            "verified": true
+          },
+          {
+            "name": "processor/special_tokens_map.json",
+            "size": 613,
+            "sha256": null,
+            "git_blob_id": "ac23c0aaa2434523c494330aeb79c58395378103",
+            "verified": true
+          },
+          {
+            "name": "processor/tokenizer.json",
+            "size": 11421896,
+            "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+            "git_blob_id": "51ebb3ba93988c73bbd83a3c163a14343fbc5b06",
+            "verified": true
+          },
+          {
+            "name": "processor/tokenizer_config.json",
+            "size": 4727,
+            "sha256": null,
+            "git_blob_id": "203eb2267a9b927c93a97b67990818164bf3c692",
+            "verified": true
+          },
+          {
+            "name": "processor/video_preprocessor_config.json",
+            "size": 904,
+            "sha256": null,
+            "git_blob_id": "5258b252856504563ff501bbeaf5204ad5d4bc4d",
+            "verified": true
+          },
+          {
+            "name": "processor/vocab.json",
+            "size": 2776833,
+            "sha256": null,
+            "git_blob_id": "4783fe10ac3adce15ac8f358ef5462739852c569",
+            "verified": true
+          },
+          {
+            "name": "scheduler/scheduler_config.json",
+            "size": 485,
+            "sha256": null,
+            "git_blob_id": "f4cc4fffa2878626fc807836f4eb5b0c03434e9a",
+            "verified": true
+          },
+          {
+            "name": "text_encoder/config.json",
+            "size": 3217,
+            "sha256": null,
+            "git_blob_id": "ea9e555296603c10d7252174f6b86032de4b73c9",
+            "verified": true
+          },
+          {
+            "name": "text_encoder/generation_config.json",
+            "size": 244,
+            "sha256": null,
+            "git_blob_id": "42f92ad18683e0865060d227914ecfc77c57a5bf",
+            "verified": true
+          },
+          {
+            "name": "text_encoder/model-00001-of-00004.safetensors",
+            "size": 4968243304,
+            "sha256": "d725335e4ea2399be706469e4b8807716a8fa64bd03468252e9f7acf2415fee4",
+            "git_blob_id": "184b37ee89f2f2e1a3cfd32094f3a6b620abb892",
+            "verified": true
+          },
+          {
+            "name": "text_encoder/model-00002-of-00004.safetensors",
+            "size": 4991495816,
+            "sha256": "b1830db6908dcc76df3a71492acbcf2b8cac130114cf1f3c2d9edae8de8c6de3",
+            "git_blob_id": "39c7b109b36e503a584b9e6570ff44ee51f99eaa",
+            "verified": true
+          },
+          {
+            "name": "text_encoder/model-00003-of-00004.safetensors",
+            "size": 4932751040,
+            "sha256": "09c1807c6d00d7cab94f7db39d4c02ebb8537225ccde383861ac48db97945aa6",
+            "git_blob_id": "550aeb0dada74ffbd038b974d8558c45231a2349",
+            "verified": true
+          },
+          {
+            "name": "text_encoder/model-00004-of-00004.safetensors",
+            "size": 1691924384,
+            "sha256": "5dd068336d14d45ffb43cef374d286cc6ba9d8741b028f90a7d040d847961f4a",
+            "git_blob_id": "e4d8aef129d402105054573957c663123303830a",
+            "verified": true
+          },
+          {
+            "name": "text_encoder/model.safetensors.index.json",
+            "size": 57655,
+            "sha256": null,
+            "git_blob_id": "92b467639266f4aa72a9b5ab73dbdf5a1f936ee4",
+            "verified": true
+          },
+          {
+            "name": "tokenizer/added_tokens.json",
+            "size": 605,
+            "sha256": null,
+            "git_blob_id": "482ced4679301bf287ebb310bdd1790eb4514232",
+            "verified": true
+          },
+          {
+            "name": "tokenizer/chat_template.jinja",
+            "size": 2427,
+            "sha256": null,
+            "git_blob_id": "28028c056af412405debd878cdda0171e35fa5d1",
+            "verified": true
+          },
+          {
+            "name": "tokenizer/merges.txt",
+            "size": 1671853,
+            "sha256": null,
+            "git_blob_id": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+            "verified": true
+          },
+          {
+            "name": "tokenizer/special_tokens_map.json",
+            "size": 613,
+            "sha256": null,
+            "git_blob_id": "ac23c0aaa2434523c494330aeb79c58395378103",
+            "verified": true
+          },
+          {
+            "name": "tokenizer/tokenizer_config.json",
+            "size": 4686,
+            "sha256": null,
+            "git_blob_id": "eaed590d62aaf0ba31e284b66ddcb18222f066c2",
+            "verified": true
+          },
+          {
+            "name": "tokenizer/vocab.json",
+            "size": 3383407,
+            "sha256": null,
+            "git_blob_id": "6bce3a0a3866c4791a74d83d78f6824c3af64ec3",
+            "verified": true
+          },
+          {
+            "name": "transformer/config.json",
+            "size": 339,
+            "sha256": null,
+            "git_blob_id": "9aa7e5ceb2ca987927ccc5224e687e07063cc09e",
+            "verified": true
+          },
+          {
+            "name": "transformer/diffusion_pytorch_model-00001-of-00009.safetensors",
+            "size": 4989364312,
+            "sha256": "2003cdd961d3a94897f70a49c4cda975e9f92dd938adfeeba4f335f695570310",
+            "git_blob_id": "ecab5c19ba97fefc4f20927a07ed6abadfa8b491",
+            "verified": true
+          },
+          {
+            "name": "transformer/diffusion_pytorch_model-00002-of-00009.safetensors",
+            "size": 4984214160,
+            "sha256": "d20abf545941bbffe26e201276226332e6ad6a2d3d7a7a18fb45ec7006fcdc8a",
+            "git_blob_id": "2e933e145431b1bfd9f6cd1bcc15448245bf1167",
+            "verified": true
+          },
+          {
+            "name": "transformer/diffusion_pytorch_model-00003-of-00009.safetensors",
+            "size": 4946470000,
+            "sha256": "1e4d15c80d388b630a97347694914cbc58ea9dc40e472305add52981ca02e856",
+            "git_blob_id": "13d5dd72d85f6a80700d8aa3364a49c1c467a0fd",
+            "verified": true
+          },
+          {
+            "name": "transformer/diffusion_pytorch_model-00004-of-00009.safetensors",
+            "size": 4984213736,
+            "sha256": "e5baa4c61fbce2011ea179122a8dc4bfaefb5387feeee5eff765fb237977cbd1",
+            "git_blob_id": "350aeeca57219a7b7ae14ba3a82d7df003f63399",
+            "verified": true
+          },
+          {
+            "name": "transformer/diffusion_pytorch_model-00005-of-00009.safetensors",
+            "size": 4946471896,
+            "sha256": "c08a2489c7e11f09c9fd4aae929085a31199699f1fa4a2dd95fc65d1ab5c223c",
+            "git_blob_id": "f3526fd291451982c5e2768b1f993ed955503967",
+            "verified": true
+          },
+          {
+            "name": "transformer/diffusion_pytorch_model-00006-of-00009.safetensors",
+            "size": 4946451560,
+            "sha256": "901dfafc0de496f358e27b81af4155b889080aebd4417909303c70a260885fff",
+            "git_blob_id": "2e70517858eed3e09a346c33decd0a957699a1de",
+            "verified": true
+          },
+          {
+            "name": "transformer/diffusion_pytorch_model-00007-of-00009.safetensors",
+            "size": 4908690520,
+            "sha256": "e8d9a14e343d841e425bb4f68c4be44b96d94730d328a175f4549bdde9114c96",
+            "git_blob_id": "15d6f31ab6762a0afbf56101191146ce155bf799",
+            "verified": true
+          },
+          {
+            "name": "transformer/diffusion_pytorch_model-00008-of-00009.safetensors",
+            "size": 4984232856,
+            "sha256": "f57b82e08f23a33af5a2a6dbf586180b4f5c9e69487d49112544ca5e8fe0d94e",
+            "git_blob_id": "58939a0872f36caea661e3604cfa6156acf114f1",
+            "verified": true
+          },
+          {
+            "name": "transformer/diffusion_pytorch_model-00009-of-00009.safetensors",
+            "size": 1170918840,
+            "sha256": "b068de3d8644da55bc75f156ba50cd374f397f2fc49c8e8e00c0392db7cd3a70",
+            "git_blob_id": "a6e5ced084faa4b01df8cf0b29e9aa17181d080a",
+            "verified": true
+          },
+          {
+            "name": "transformer/diffusion_pytorch_model.safetensors.index.json",
+            "size": 198887,
+            "sha256": null,
+            "git_blob_id": "056fddcb79864327ada8808ab3b584b6f484355d",
+            "verified": true
+          },
+          {
+            "name": "vae/config.json",
+            "size": 730,
+            "sha256": null,
+            "git_blob_id": "7107dc5ba335acf886f86541d4ea462a1e097f8a",
+            "verified": true
+          },
+          {
+            "name": "vae/diffusion_pytorch_model.safetensors",
+            "size": 253806966,
+            "sha256": "0c8bc8b758c649abef9ea407b95408389a3b2f610d0d10fcb054fe171d0a8344",
+            "git_blob_id": "5c203341583690b7e93ff899368ce1a7dce658a6",
+            "verified": true
+          }
+        ],
+        "verified_bytes": 57720467613
+      },
+      {
+        "repo": "lightx2v/Qwen-Image-Lightning",
+        "revision": "d468c534b360e0754c6bf9e38ed49e1e09cd2e2a",
+        "path": "/workspace/model-weights/Qwen-Image-Lightning",
+        "phase": "complete",
+        "files": [
+          {
+            "name": "Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors",
+            "size": 849608296,
+            "sha256": "36ee4ff860856559b9c581eaa69414900488f3de8be2f2448586daec77e201b9",
+            "git_blob_id": "d66a32dbb614ac16bef54321c0c149f97ceffe05",
+            "verified": true
+          }
+        ],
+        "verified_bytes": 849608296
+      }
+    ],
+    "updated_at_unix": 1793161442.2590613
+  },
+  "packages": {
+    "diffusers": "0.42.0.dev0",
+    "transformers": "5.3.0",
+    "huggingface_hub": "1.33.0",
+    "peft": "0.21.2",
+    "torchao": "0.16.0",
+    "accelerate": "1.13.0",
+    "safetensors": "0.8.0",
+    "numpy": "2.5.2",
+    "Pillow": "12.2.0"
+  },
+  "git_head": "4222cd5955b8033842748a7d676a5d180ab4c22d",
+  "git_status": "## test/manual-mask-local-20261028\n?? ./\n",
+  "scheduler_config": {
+    "num_train_timesteps": 1000,
+    "shift": 1.0,
+    "use_dynamic_shifting": true,
+    "base_shift": 1.0986122886681098,
+    "max_shift": 1.0986122886681098,
+    "base_image_seq_len": 256,
+    "max_image_seq_len": 8192,
+    "invert_sigmas": false,
+    "shift_terminal": null,
+    "use_karras_sigmas": false,
+    "use_exponential_sigmas": false,
+    "use_beta_sigmas": false,
+    "time_shift_type": "exponential",
+    "stochastic_sampling": false
+  },
+  "transformer_sha256": "39df645130da4ad05521cb373f3bc0ce14c40d12d8065b72d5a0d9043355545d"
+}

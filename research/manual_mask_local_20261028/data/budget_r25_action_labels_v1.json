@@ -1,0 +1,2462 @@
+{
+  "status": "OFFLINE_SUPERVISION_LABELS_ONLY_NOT_POLICY_OR_RL",
+  "checkpoint_sha256": "216794f27aacf696af7835612234dcdf04cb7dcc6dbfbc9ecffcfa3ef55332f7",
+  "source_protocol_sha256": null,
+  "allowed_training_sources": [
+    "expand_train_420478",
+    "expand_train_139108",
+    "expand_train_478067",
+    "expand_train_410708",
+    "expand_train_560266",
+    "expand_train_563267",
+    "expand_train_288923",
+    "expand_train_414492",
+    "expand_train_365220",
+    "expand_train_344857",
+    "expand_train_522661",
+    "expand_train_193664",
+    "expand_train_104739",
+    "expand_train_567825",
+    "expand_train_257117",
+    "expand_train_40966",
+    "expand_train_337843",
+    "expand_train_118997",
+    "expand_train_227059",
+    "expand_train_542625",
+    "expand_train_98853",
+    "expand_train_351809",
+    "expand_train_520181",
+    "expand_train_189648",
+    "expand_train_503793",
+    "expand_train_208882",
+    "expand_train_306593",
+    "expand_train_90139",
+    "expand_train_557855",
+    "expand_train_156301",
+    "expand_train_327155",
+    "expand_train_96984"
+  ],
+  "calibration_not_training": [
+    "expand_train_372317",
+    "expand_train_236484",
+    "expand_train_45626",
+    "expand_train_181796",
+    "expand_train_399532",
+    "expand_train_108442",
+    "expand_train_385707",
+    "expand_train_302289",
+    "expand_train_463844",
+    "expand_train_522229",
+    "expand_train_445972",
+    "expand_train_343552",
+    "expand_train_286442",
+    "expand_train_352264",
+    "expand_train_196699",
+    "expand_train_47893"
+  ],
+  "online_input_warning": "Future full-reference outputs and candidate images are labels only; never policy inputs",
+  "semantic_label_limit": "Single-assistant repeated review; base_F_joint false is not a correctness teacher",
+  "cost_type": "actual target token update fraction; full-pipeline per-source timing available for Cal8 only",
+  "records": [
+    {
+      "case_id": "expand_train_420478",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          317.3828125,
+          118.65234375,
+          455.078125,
+          301.7578125
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.019348179921507835,
+          "inside_MAE": 0.07047002762556076,
+          "outside_MAE": 0.006553790997713804,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.013346540741622448,
+          "inside_MAE": 0.033834896981716156,
+          "outside_MAE": 0.008218870498239994,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.020001621916890144,
+          "inside_MAE": 0.04038989543914795,
+          "outside_MAE": 0.01489899680018425,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_139108",
+      "role": "train",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          238.28125,
+          161.62109375,
+          377.9296875,
+          251.953125
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.010851685889065266,
+          "inside_MAE": 0.014579002745449543,
+          "outside_MAE": 0.01031254418194294,
+          "target_update_fraction": 0.53125,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.005961893126368523,
+          "inside_MAE": 0.00664297491312027,
+          "outside_MAE": 0.005863376893103123,
+          "target_update_fraction": 0.625,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.01119004562497139,
+          "inside_MAE": 0.009540798142552376,
+          "outside_MAE": 0.011428603902459145,
+          "target_update_fraction": 0.75,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_478067",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          0.0,
+          185.05859375,
+          272.94921875,
+          469.23828125
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.5
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.012962628155946732,
+          "inside_MAE": 0.025321494787931442,
+          "outside_MAE": 0.0038729829248040915,
+          "target_update_fraction": 0.6875,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.011840976774692535,
+          "inside_MAE": 0.020465640351176262,
+          "outside_MAE": 0.005497745703905821,
+          "target_update_fraction": 0.75,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.011840976774692535,
+          "inside_MAE": 0.020465640351176262,
+          "outside_MAE": 0.005497745703905821,
+          "target_update_fraction": 0.75,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_410708",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          365.234375,
+          243.65234375,
+          500.0,
+          435.546875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.0031474221032112837,
+          "inside_MAE": 0.006449478678405285,
+          "outside_MAE": 0.0024651819840073586,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.002485025906935334,
+          "inside_MAE": 0.0031280016992241144,
+          "outside_MAE": 0.002352180192247033,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.00420279148966074,
+          "inside_MAE": 0.004349858500063419,
+          "outside_MAE": 0.004172406159341335,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_560266",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          214.84375,
+          94.23828125,
+          312.5,
+          216.30859375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.01892508752644062,
+          "inside_MAE": 0.05971304327249527,
+          "outside_MAE": 0.013313067145645618,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.005596615374088287,
+          "inside_MAE": 0.01627817004919052,
+          "outside_MAE": 0.004126938991248608,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.011306908912956715,
+          "inside_MAE": 0.019649917259812355,
+          "outside_MAE": 0.010158992372453213,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_563267",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          134.27734375,
+          110.83984375,
+          238.28125,
+          342.28515625
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.014654641039669514,
+          "inside_MAE": 0.02649219147861004,
+          "outside_MAE": 0.01170662697404623,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.007904601283371449,
+          "inside_MAE": 0.008901906199753284,
+          "outside_MAE": 0.007656233385205269,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.008209849707782269,
+          "inside_MAE": 0.008897580206394196,
+          "outside_MAE": 0.008038577623665333,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_288923",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          66.89453125,
+          216.796875,
+          500.0,
+          482.421875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.75
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.024825245141983032,
+          "inside_MAE": 0.0383252389729023,
+          "outside_MAE": 0.005628244485706091,
+          "target_update_fraction": 0.84375,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0184330977499485,
+          "inside_MAE": 0.02953055314719677,
+          "outside_MAE": 0.0026525133289396763,
+          "target_update_fraction": 0.875,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.0184330977499485,
+          "inside_MAE": 0.02953055314719677,
+          "outside_MAE": 0.0026525133289396763,
+          "target_update_fraction": 0.875,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_414492",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          342.7734375,
+          249.0234375,
+          466.30859375,
+          467.28515625
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.004417638760060072,
+          "inside_MAE": 0.010085945948958397,
+          "outside_MAE": 0.002887288574129343,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0025540245696902275,
+          "inside_MAE": 0.005985616240650415,
+          "outside_MAE": 0.0016275506932288408,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.002814932493492961,
+          "inside_MAE": 0.005470574833452702,
+          "outside_MAE": 0.0020979521796107292,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_365220",
+      "role": "train",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          111.81640625,
+          189.453125,
+          231.4453125,
+          257.32421875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.007989291101694107,
+          "inside_MAE": 0.02445460483431816,
+          "outside_MAE": 0.0062118228524923325,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.004619229584932327,
+          "inside_MAE": 0.009126861579716206,
+          "outside_MAE": 0.004132620524615049,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.005101727321743965,
+          "inside_MAE": 0.00928650051355362,
+          "outside_MAE": 0.004649972077459097,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_344857",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          94.7265625,
+          176.26953125,
+          192.3828125,
+          335.9375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.004335964564234018,
+          "inside_MAE": 0.018391333520412445,
+          "outside_MAE": 0.0019459868781268597,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.004175100009888411,
+          "inside_MAE": 0.011178912594914436,
+          "outside_MAE": 0.0029841705691069365,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.003232841147109866,
+          "inside_MAE": 0.007761670742183924,
+          "outside_MAE": 0.002462757984176278,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_522661",
+      "role": "train",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          406.73828125,
+          291.50390625,
+          500.0,
+          471.19140625
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.009064394049346447,
+          "inside_MAE": 0.021980006247758865,
+          "outside_MAE": 0.007289293222129345,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0058710309676826,
+          "inside_MAE": 0.012563127093017101,
+          "outside_MAE": 0.004951280541718006,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.00838925875723362,
+          "inside_MAE": 0.014319700188934803,
+          "outside_MAE": 0.007574188057333231,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_193664",
+      "role": "train",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          278.3203125,
+          381.34765625,
+          355.46875,
+          448.2421875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.007578735705465078,
+          "inside_MAE": 0.015450593084096909,
+          "outside_MAE": 0.006946028675884008,
+          "target_update_fraction": 0.53125,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0029368968680500984,
+          "inside_MAE": 0.005288914777338505,
+          "outside_MAE": 0.0027478516567498446,
+          "target_update_fraction": 0.625,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.005402060225605965,
+          "inside_MAE": 0.006633521988987923,
+          "outside_MAE": 0.0053030806593596935,
+          "target_update_fraction": 0.75,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_104739",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          319.82421875,
+          167.96875,
+          415.0390625,
+          225.5859375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.011834011413156986,
+          "inside_MAE": 0.08194122463464737,
+          "outside_MAE": 0.0059060947969555855,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.005198175553232431,
+          "inside_MAE": 0.04482492431998253,
+          "outside_MAE": 0.0018475345568731427,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.005158211570233107,
+          "inside_MAE": 0.037620048969984055,
+          "outside_MAE": 0.0024133992847055197,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_567825",
+      "role": "train",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          0.0,
+          240.234375,
+          422.36328125,
+          493.1640625
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.75
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.015477360226213932,
+          "inside_MAE": 0.0263044536113739,
+          "outside_MAE": 0.0032215879764407873,
+          "target_update_fraction": 0.84375,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": true
+        },
+        "R25": {
+          "reference_MAE": 0.013089700601994991,
+          "inside_MAE": 0.022051209583878517,
+          "outside_MAE": 0.002945682732388377,
+          "target_update_fraction": 0.875,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": true
+        },
+        "C": {
+          "reference_MAE": 0.013089700601994991,
+          "inside_MAE": 0.022051209583878517,
+          "outside_MAE": 0.002945682732388377,
+          "target_update_fraction": 0.875,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": true
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_257117",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          144.04296875,
+          128.90625,
+          239.2578125,
+          233.3984375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.010295845568180084,
+          "inside_MAE": 0.0409756638109684,
+          "outside_MAE": 0.006585081107914448,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.010062914341688156,
+          "inside_MAE": 0.03800705075263977,
+          "outside_MAE": 0.006683033891022205,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.011887860484421253,
+          "inside_MAE": 0.040609125047922134,
+          "outside_MAE": 0.008413986302912235,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_40966",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          237.3046875,
+          144.04296875,
+          304.19921875,
+          210.9375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.004635198507457972,
+          "inside_MAE": 0.0225489791482687,
+          "outside_MAE": 0.0033073569647967815,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0034479089081287384,
+          "inside_MAE": 0.01380184106528759,
+          "outside_MAE": 0.002680433914065361,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.004532503429800272,
+          "inside_MAE": 0.013347635976970196,
+          "outside_MAE": 0.003879090305417776,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_337843",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          28.80859375,
+          41.015625,
+          286.62109375,
+          179.19921875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.5
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.005914038512855768,
+          "inside_MAE": 0.00827322993427515,
+          "outside_MAE": 0.0050918362103402615,
+          "target_update_fraction": 0.6875,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0024134379345923662,
+          "inside_MAE": 0.004042902961373329,
+          "outside_MAE": 0.001845552702434361,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.0024134379345923662,
+          "inside_MAE": 0.004042902961373329,
+          "outside_MAE": 0.001845552702434361,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_118997",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          369.62890625,
+          129.8828125,
+          472.65625,
+          184.08203125
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.005128974094986916,
+          "inside_MAE": 0.022611474618315697,
+          "outside_MAE": 0.0036670230329036713,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0025720708072185516,
+          "inside_MAE": 0.008460910059511662,
+          "outside_MAE": 0.002079624682664871,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.004275502637028694,
+          "inside_MAE": 0.00995059497654438,
+          "outside_MAE": 0.0038009309209883213,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_227059",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          141.11328125,
+          63.96484375,
+          348.14453125,
+          500.0
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.75
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.008442145772278309,
+          "inside_MAE": 0.010764463804662228,
+          "outside_MAE": 0.0060394760221242905,
+          "target_update_fraction": 0.84375,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.004157984163612127,
+          "inside_MAE": 0.005868991371244192,
+          "outside_MAE": 0.0023877746425569057,
+          "target_update_fraction": 0.875,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.004157984163612127,
+          "inside_MAE": 0.005868991371244192,
+          "outside_MAE": 0.0023877746425569057,
+          "target_update_fraction": 0.875,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_542625",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          136.23046875,
+          206.54296875,
+          268.06640625,
+          327.1484375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.004275064449757338,
+          "inside_MAE": 0.008668489754199982,
+          "outside_MAE": 0.0035281768068671227,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0028197243809700012,
+          "inside_MAE": 0.0057611726224422455,
+          "outside_MAE": 0.0023196751717478037,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.003612290136516094,
+          "inside_MAE": 0.0060542733408510685,
+          "outside_MAE": 0.003197150304913521,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_98853",
+      "role": "train",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          256.34765625,
+          223.14453125,
+          384.765625,
+          419.921875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.013453257270157337,
+          "inside_MAE": 0.04243284463882446,
+          "outside_MAE": 0.0061387126334011555,
+          "target_update_fraction": 0.53125,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.009322370402514935,
+          "inside_MAE": 0.027011169120669365,
+          "outside_MAE": 0.004857657477259636,
+          "target_update_fraction": 0.625,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.01696118898689747,
+          "inside_MAE": 0.04708177596330643,
+          "outside_MAE": 0.00935865193605423,
+          "target_update_fraction": 0.75,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_351809",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          283.69140625,
+          398.4375,
+          374.0234375,
+          458.49609375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.0027454886585474014,
+          "inside_MAE": 0.012904444709420204,
+          "outside_MAE": 0.001896915608085692,
+          "target_update_fraction": 0.53125,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0035837236791849136,
+          "inside_MAE": 0.007866068743169308,
+          "outside_MAE": 0.0032260213047266006,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.005151915829628706,
+          "inside_MAE": 0.013913600705564022,
+          "outside_MAE": 0.004420056007802486,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_520181",
+      "role": "train",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          135.7421875,
+          211.42578125,
+          355.46875,
+          335.44921875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.005984791088849306,
+          "inside_MAE": 0.0066367629915475845,
+          "outside_MAE": 0.005807023961097002,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.005461183842271566,
+          "inside_MAE": 0.006114700343459845,
+          "outside_MAE": 0.005282995291054249,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.005490789655596018,
+          "inside_MAE": 0.005809054244309664,
+          "outside_MAE": 0.005404012277722359,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_189648",
+      "role": "train",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          349.609375,
+          2.44140625,
+          500.0,
+          117.67578125
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.011874258518218994,
+          "inside_MAE": 0.03099944442510605,
+          "outside_MAE": 0.00952256191521883,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.007177194580435753,
+          "inside_MAE": 0.019603095948696136,
+          "outside_MAE": 0.005649263970553875,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.006483692675828934,
+          "inside_MAE": 0.019168751314282417,
+          "outside_MAE": 0.004923895467072725,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_503793",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          255.37109375,
+          146.484375,
+          332.51953125,
+          210.9375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.00731416093185544,
+          "inside_MAE": 0.032934244722127914,
+          "outside_MAE": 0.005296217277646065,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.002837037667632103,
+          "inside_MAE": 0.009923593141138554,
+          "outside_MAE": 0.0022788711357861757,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.004254512023180723,
+          "inside_MAE": 0.012343072332441807,
+          "outside_MAE": 0.003617423353716731,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_208882",
+      "role": "train",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          328.61328125,
+          96.19140625,
+          500.0,
+          500.0
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.5
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.022908203303813934,
+          "inside_MAE": 0.019179563969373703,
+          "outside_MAE": 0.024961568415164948,
+          "target_update_fraction": 0.6875,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.02048839069902897,
+          "inside_MAE": 0.0168882068246603,
+          "outside_MAE": 0.02247101254761219,
+          "target_update_fraction": 0.75,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.02048839069902897,
+          "inside_MAE": 0.0168882068246603,
+          "outside_MAE": 0.02247101254761219,
+          "target_update_fraction": 0.75,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_306593",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          116.2109375,
+          79.1015625,
+          310.05859375,
+          237.79296875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.009294694289565086,
+          "inside_MAE": 0.030893974006175995,
+          "outside_MAE": 0.0028227781876921654,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.004181364551186562,
+          "inside_MAE": 0.01039508543908596,
+          "outside_MAE": 0.002319511491805315,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.004507317673414946,
+          "inside_MAE": 0.011135008186101913,
+          "outside_MAE": 0.0025214250199496746,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_90139",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          220.703125,
+          143.5546875,
+          456.0546875,
+          462.40234375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.5
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.014800281263887882,
+          "inside_MAE": 0.02310306765139103,
+          "outside_MAE": 0.007737170904874802,
+          "target_update_fraction": 0.6875,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.00524443993344903,
+          "inside_MAE": 0.006836162880063057,
+          "outside_MAE": 0.0038903739769011736,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.00524443993344903,
+          "inside_MAE": 0.006836162880063057,
+          "outside_MAE": 0.0038903739769011736,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_557855",
+      "role": "train",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          0.0,
+          187.98828125,
+          131.8359375,
+          310.546875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.01211738120764494,
+          "inside_MAE": 0.013322031125426292,
+          "outside_MAE": 0.01194885652512312,
+          "target_update_fraction": 0.53125,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.010012061335146427,
+          "inside_MAE": 0.012935019098222256,
+          "outside_MAE": 0.009603152982890606,
+          "target_update_fraction": 0.625,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.010272515937685966,
+          "inside_MAE": 0.012519564479589462,
+          "outside_MAE": 0.00995816383510828,
+          "target_update_fraction": 0.75,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_156301",
+      "role": "train",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          186.5234375,
+          104.98046875,
+          406.73828125,
+          294.43359375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.5
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.014350359328091145,
+          "inside_MAE": 0.030018145218491554,
+          "outside_MAE": 0.00797828659415245,
+          "target_update_fraction": 0.6875,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0069810631684958935,
+          "inside_MAE": 0.011525305919349194,
+          "outside_MAE": 0.00513292383402586,
+          "target_update_fraction": 0.75,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.0069810631684958935,
+          "inside_MAE": 0.011525305919349194,
+          "outside_MAE": 0.00513292383402586,
+          "target_update_fraction": 0.75,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_327155",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          53.22265625,
+          162.59765625,
+          132.32421875,
+          266.6015625
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.005004656966775656,
+          "inside_MAE": 0.026628300547599792,
+          "outside_MAE": 0.002688978100195527,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.00530817499384284,
+          "inside_MAE": 0.025613144040107727,
+          "outside_MAE": 0.003133713034912944,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.0043295156210660934,
+          "inside_MAE": 0.007329218089580536,
+          "outside_MAE": 0.004008276853710413,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_96984",
+      "role": "train",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          127.9296875,
+          170.41015625,
+          305.17578125,
+          328.61328125
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.005934007465839386,
+          "inside_MAE": 0.018949534744024277,
+          "outside_MAE": 0.0023636806290596724,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0031294154468923807,
+          "inside_MAE": 0.009701104834675789,
+          "outside_MAE": 0.0013267166214063764,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.0033451542258262634,
+          "inside_MAE": 0.009200993925333023,
+          "outside_MAE": 0.0017388219712302089,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_372317",
+      "role": "calibration",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          1.953125,
+          172.36328125,
+          437.01171875,
+          269.53125
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.5
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.019031664356589317,
+          "inside_MAE": 0.04299195483326912,
+          "outside_MAE": 0.008598114363849163,
+          "target_update_fraction": 0.6875,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.013821340166032314,
+          "inside_MAE": 0.028248054906725883,
+          "outside_MAE": 0.007539201062172651,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.013821340166032314,
+          "inside_MAE": 0.028248054906725883,
+          "outside_MAE": 0.007539201062172651,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_236484",
+      "role": "calibration",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          0.0,
+          168.9453125,
+          261.71875,
+          420.8984375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.5
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.0159189160913229,
+          "inside_MAE": 0.03880837559700012,
+          "outside_MAE": 0.0023587695322930813,
+          "target_update_fraction": 0.6875,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.013645834289491177,
+          "inside_MAE": 0.03367290273308754,
+          "outside_MAE": 0.0017814210150390863,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.013645834289491177,
+          "inside_MAE": 0.03367290273308754,
+          "outside_MAE": 0.0017814210150390863,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_45626",
+      "role": "calibration",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          269.53125,
+          272.94921875,
+          336.42578125,
+          339.84375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.006174417678266764,
+          "inside_MAE": 0.026317864656448364,
+          "outside_MAE": 0.0046813045628368855,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.003203105181455612,
+          "inside_MAE": 0.009855885058641434,
+          "outside_MAE": 0.0027099745348095894,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.004380120430141687,
+          "inside_MAE": 0.013539322651922703,
+          "outside_MAE": 0.0037012030370533466,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_181796",
+      "role": "calibration",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          158.69140625,
+          41.50390625,
+          298.828125,
+          144.04296875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.0061525702476501465,
+          "inside_MAE": 0.02436407096683979,
+          "outside_MAE": 0.003269841196015477,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.005110829137265682,
+          "inside_MAE": 0.016635116189718246,
+          "outside_MAE": 0.0032866299152374268,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.005520979408174753,
+          "inside_MAE": 0.011944841593503952,
+          "outside_MAE": 0.004504136275500059,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_399532",
+      "role": "calibration",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          125.9765625,
+          140.625,
+          312.5,
+          372.0703125
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.5
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.013163824565708637,
+          "inside_MAE": 0.02405579760670662,
+          "outside_MAE": 0.008561041206121445,
+          "target_update_fraction": 0.6875,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.010669023729860783,
+          "inside_MAE": 0.014858141541481018,
+          "outside_MAE": 0.008898765780031681,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.010669023729860783,
+          "inside_MAE": 0.014858141541481018,
+          "outside_MAE": 0.008898765780031681,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_108442",
+      "role": "calibration",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          46.875,
+          187.5,
+          190.91796875,
+          303.22265625
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.010398395359516144,
+          "inside_MAE": 0.007595525588840246,
+          "outside_MAE": 0.010894042439758778,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.009752514772117138,
+          "inside_MAE": 0.005767934489995241,
+          "outside_MAE": 0.010457131080329418,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.009406658820807934,
+          "inside_MAE": 0.006396313197910786,
+          "outside_MAE": 0.009938997216522694,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_385707",
+      "role": "calibration",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          114.74609375,
+          37.59765625,
+          183.10546875,
+          124.51171875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.00746527686715126,
+          "inside_MAE": 0.028514018282294273,
+          "outside_MAE": 0.00562465563416481,
+          "target_update_fraction": 0.53125,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0019137290073558688,
+          "inside_MAE": 0.0020985573064535856,
+          "outside_MAE": 0.0018975664861500263,
+          "target_update_fraction": 0.625,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.0015244564274325967,
+          "inside_MAE": 0.0013798665022477508,
+          "outside_MAE": 0.00153710029553622,
+          "target_update_fraction": 0.75,
+          "edit": false,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_302289",
+      "role": "calibration",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          9.765625,
+          33.203125,
+          245.1171875,
+          212.40234375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.5
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.007944447919726372,
+          "inside_MAE": 0.014200498349964619,
+          "outside_MAE": 0.005627022590488195,
+          "target_update_fraction": 0.6875,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.004021001514047384,
+          "inside_MAE": 0.005804216023534536,
+          "outside_MAE": 0.003360445611178875,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.004021001514047384,
+          "inside_MAE": 0.005804216023534536,
+          "outside_MAE": 0.003360445611178875,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_463844",
+      "role": "calibration",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          104.00390625,
+          276.85546875,
+          263.18359375,
+          423.828125
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.002702760510146618,
+          "inside_MAE": 0.0015337662771344185,
+          "outside_MAE": 0.002975414739921689,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0032632474321871996,
+          "inside_MAE": 0.003027831669896841,
+          "outside_MAE": 0.003318155650049448,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.004006440285593271,
+          "inside_MAE": 0.004186620004475117,
+          "outside_MAE": 0.003964416217058897,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_522229",
+      "role": "calibration",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          0.0,
+          82.51953125,
+          353.515625,
+          296.875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.5
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.011146829463541508,
+          "inside_MAE": 0.019804958254098892,
+          "outside_MAE": 0.0046101161278784275,
+          "target_update_fraction": 0.6875,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.006681194994598627,
+          "inside_MAE": 0.01084872242063284,
+          "outside_MAE": 0.003534795716404915,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.006681194994598627,
+          "inside_MAE": 0.01084872242063284,
+          "outside_MAE": 0.003534795716404915,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_445972",
+      "role": "calibration",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          125.48828125,
+          0.0,
+          302.24609375,
+          133.30078125
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.008492381311953068,
+          "inside_MAE": 0.028901971876621246,
+          "outside_MAE": 0.004613282158970833,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.006081738974899054,
+          "inside_MAE": 0.016999708488583565,
+          "outside_MAE": 0.004006642382591963,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.00785670056939125,
+          "inside_MAE": 0.019162340089678764,
+          "outside_MAE": 0.005707921925932169,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": false,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_343552",
+      "role": "calibration",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          111.81640625,
+          179.6875,
+          298.33984375,
+          303.7109375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.0034999276977032423,
+          "inside_MAE": 0.0060454122722148895,
+          "outside_MAE": 0.0029058894142508507,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.001724659581668675,
+          "inside_MAE": 0.0028378551360219717,
+          "outside_MAE": 0.0014648739015683532,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.0022683164570480585,
+          "inside_MAE": 0.0037177857011556625,
+          "outside_MAE": 0.0019300548592582345,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_286442",
+      "role": "calibration",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          211.42578125,
+          216.30859375,
+          336.9140625,
+          461.9140625
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.5
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.01923312433063984,
+          "inside_MAE": 0.055384255945682526,
+          "outside_MAE": 0.00809252355247736,
+          "target_update_fraction": 0.6875,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.010905511677265167,
+          "inside_MAE": 0.030854307115077972,
+          "outside_MAE": 0.004757943097501993,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.010905511677265167,
+          "inside_MAE": 0.030854307115077972,
+          "outside_MAE": 0.004757943097501993,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_352264",
+      "role": "calibration",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          20.01953125,
+          91.30859375,
+          500.0,
+          313.4765625
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.75
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.013753949664533138,
+          "inside_MAE": 0.016013478860259056,
+          "outside_MAE": 0.010718835517764091,
+          "target_update_fraction": 0.84375,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.0053562805987894535,
+          "inside_MAE": 0.005669834092259407,
+          "outside_MAE": 0.004935101605951786,
+          "target_update_fraction": 0.875,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.0053562805987894535,
+          "inside_MAE": 0.005669834092259407,
+          "outside_MAE": 0.004935101605951786,
+          "target_update_fraction": 0.875,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_196699",
+      "role": "calibration",
+      "base_F_joint": false,
+      "online_geometry": {
+        "bbox": [
+          106.93359375,
+          196.77734375,
+          278.80859375,
+          349.609375
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.004929126240313053,
+          "inside_MAE": 0.0142856789752841,
+          "outside_MAE": 0.00251047033816576,
+          "target_update_fraction": 0.53125,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.00325968861579895,
+          "inside_MAE": 0.008533790707588196,
+          "outside_MAE": 0.0018963406328111887,
+          "target_update_fraction": 0.625,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.0037708571180701256,
+          "inside_MAE": 0.008244301192462444,
+          "outside_MAE": 0.00261447811499238,
+          "target_update_fraction": 0.75,
+          "edit": false,
+          "preservation": true,
+          "joint": false,
+          "uncertain": false
+        }
+      }
+    },
+    {
+      "case_id": "expand_train_47893",
+      "role": "calibration",
+      "base_F_joint": true,
+      "online_geometry": {
+        "bbox": [
+          269.53125,
+          306.15234375,
+          369.140625,
+          404.296875
+        ],
+        "source_wh": [
+          500,
+          500
+        ],
+        "effective_local_fraction": 0.25
+      },
+      "actions": {
+        "B": {
+          "reference_MAE": 0.010100011713802814,
+          "inside_MAE": 0.037311822175979614,
+          "outside_MAE": 0.006849543657153845,
+          "target_update_fraction": 0.53125,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "R25": {
+          "reference_MAE": 0.003347241086885333,
+          "inside_MAE": 0.008679676800966263,
+          "outside_MAE": 0.002710278145968914,
+          "target_update_fraction": 0.625,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        },
+        "C": {
+          "reference_MAE": 0.009221469983458519,
+          "inside_MAE": 0.015063030645251274,
+          "outside_MAE": 0.008523691445589066,
+          "target_update_fraction": 0.75,
+          "edit": true,
+          "preservation": true,
+          "joint": true,
+          "uncertain": false
+        }
+      }
+    }
+  ]
+}

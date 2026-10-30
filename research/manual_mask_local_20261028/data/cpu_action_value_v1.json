@@ -1,0 +1,12 @@
+{
+  "exit_code": 0,
+  "tests": 3,
+  "log": "notes/cpu_action_value_v1.log",
+  "code_sha256": {
+    "action_value_head.py": "3665152284edefa371cc37ac351e0d2253f43a2e4bbe47b43d009159712f14a2",
+    "test_action_value_head.py": "9069673626ce25b9323aab78111c768243b5716940b18aca0bdcf028fa19db29",
+    "context_refresh.py": "fdb160eb561f32bb688c3ac3648532024d6f6d4de478a78595b5ef5bd5265a5d",
+    "legacy_local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1"
+  },
+  "tiny_forward_entries": "not instrumented"
+}

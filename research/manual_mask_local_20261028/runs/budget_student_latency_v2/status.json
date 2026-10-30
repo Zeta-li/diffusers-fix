@@ -1,0 +1,13 @@
+{
+  "phase": "complete_analysis_pending",
+  "active": {
+    "index": 99,
+    "phase": "paired",
+    "case_id": "local_train_210597_redcushion",
+    "arm": "F",
+    "repeat": 2
+  },
+  "invoked_dit": 800,
+  "completed_dit": 800,
+  "successful_requests": 100
+}

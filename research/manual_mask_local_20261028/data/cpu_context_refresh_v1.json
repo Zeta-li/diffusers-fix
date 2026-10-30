@@ -1,0 +1,23 @@
+{
+  "exit_code": 0,
+  "tests": 3,
+  "code_sha256": {
+    "context_refresh.py": "fdb160eb561f32bb688c3ac3648532024d6f6d4de478a78595b5ef5bd5265a5d",
+    "run_context_closed.py": "e7e030d33bafc224ebe066803b3641a7a1441c68f0042da97534318c81f43e57",
+    "test_context_refresh.py": "732c57de3a147a1674f745bd16c91831f5ec2d03309f8f78fece9f69a4af863b",
+    "refresh_supervision.py": "b223b9e1fafe2853b0b7613c8ed0541d7912f315c1c263c486e49de5dc8abe83",
+    "legacy_local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "legacy_refresh_policy.py": "0b319fbbb05c8dff0880e75634cca524211dd8b4fce4e65006ebde7f990adfcf",
+    "free_region.py": "4dbfbb1f20146bcc8bb20dfaf1de71eed4da25fe8806f827a945547e032c0d51",
+    "run_free_pilot.py": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8",
+    "run_s1.py": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81"
+  },
+  "log_remote": "notes/cpu_context_refresh_v1.log",
+  "contracts": [
+    "zero-addition bitwise FIX32 FP32/BF16",
+    "fresh KV and independently tracked retained velocity",
+    "native Euler all tokens and equal budget",
+    "exception cleanup"
+  ],
+  "tiny_forward_calls": "not separately instrumented"
+}

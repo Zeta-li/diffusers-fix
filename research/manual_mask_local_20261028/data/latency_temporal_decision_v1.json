@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-10-28T18:44:54.745750+08:00",
+  "status": "DIAGNOSTIC_COMPLETE_GO_TEMPORAL_SUPERVISION_PILOT_NOT_DEPLOYMENT",
+  "work_package_A": "COMPLETE_400_DIT",
+  "work_package_B": "COMPLETE_256_DIT",
+  "gates": {
+    "execution_audit": true,
+    "oracle_gain_at_least2pct": true,
+    "dominant_winner_at_most75pct": true,
+    "no_obvious_new_severe_failures": true
+  },
+  "actual_requests": 82,
+  "actual_dit": 656,
+  "model_execution_failures": 0,
+  "profiler_postprocessing_slow_but_completed": true,
+  "interrupt_sent": false,
+  "recovery_attempt_executed": false,
+  "strict_task_passes": "5/8 all arms; nonblind assistant review",
+  "trained_policy_gain_established": false,
+  "new_training_updates": 0,
+  "new_RL_updates": 0,
+  "test64_opened": false,
+  "old_localdev16_decision": "UNCHANGED_NO_GO",
+  "next": "Build source-disjoint supervised temporal-selection pilot with fixed best-rule comparator; first two full steps supply online features; preserve all baseline failures and measure incremental quality separately; no direct PPO expansion.",
+  "deployment_quality_passed": false
+}

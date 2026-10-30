@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-28T18:50:44.525822+08:00",
+  "GPU": "NVIDIA L20Y (user confirms H800)",
+  "gpu_memory_MiB": 0,
+  "gpu_utilization_pct": 0,
+  "compute_processes": [],
+  "git_head": "4222cd5955b8033842748a7d676a5d180ab4c22d",
+  "git_status": "?? research/manual_mask_local_20261028/",
+  "commit": false,
+  "push": false
+}

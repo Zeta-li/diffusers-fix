@@ -1,0 +1,874 @@
+{
+  "frozen_at": "2026-10-30T06:47:56.581337+00:00",
+  "candidate": "LOCAL128 frozen weights with B/B50/C routing",
+  "expanded_checkpoint": "runs/budget_expansion_train_v1/checkpoints/student_inference.pt",
+  "expanded_checkpoint_sha256": "216794f27aacf696af7835612234dcdf04cb7dcc6dbfbc9ecffcfa3ef55332f7",
+  "cases": [
+    {
+      "case_id": "expand_train_372317",
+      "source_group_id": "372317",
+      "role": "calibration",
+      "image": "inputs/budget_expansion_v1/372317/source.original",
+      "source_sha256": "1d916b01537921c44eb790b10e1344a93111b412f72c85c3c7c30f15907e2ce6",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        1.953125,
+        172.36328125,
+        437.01171875,
+        269.53125
+      ],
+      "prompt": "put stickers on the bus. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "put stickers on the bus",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true,
+      "signature": {
+        "raw_sha256": "1d916b01537921c44eb790b10e1344a93111b412f72c85c3c7c30f15907e2ce6",
+        "rgb_sha256": "2a7f73a865834465387e8a137311a6da6d415f13b32470abc2fa2b47f29f661b",
+        "width": 500,
+        "height": 500,
+        "average_hash": "fc3c000000ffffff",
+        "difference_hash": "c0f0b496c36f8000"
+      },
+      "official_split": "train"
+    },
+    {
+      "case_id": "expand_train_236484",
+      "source_group_id": "236484",
+      "role": "calibration",
+      "image": "inputs/budget_expansion_v1/236484/source.original",
+      "source_sha256": "1a7996e4fd4d214645435ee551bf297965c385725b2378fa2d91608b6288f127",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        0.0,
+        168.9453125,
+        261.71875,
+        420.8984375
+      ],
+      "prompt": "erase the bananas and add pig safes. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "erase the bananas and add pig safes",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true,
+      "signature": {
+        "raw_sha256": "1a7996e4fd4d214645435ee551bf297965c385725b2378fa2d91608b6288f127",
+        "rgb_sha256": "10701766284505911590a8d52f3596073b38acd90ae7caefce69609542b2986e",
+        "width": 500,
+        "height": 500,
+        "average_hash": "06878eecfff60000",
+        "difference_hash": "5e3e5cc9cda8e5fe"
+      },
+      "official_split": "train"
+    },
+    {
+      "case_id": "expand_train_45626",
+      "source_group_id": "45626",
+      "role": "calibration",
+      "image": "inputs/budget_expansion_v1/45626/source.original",
+      "source_sha256": "a0d4b3843e1520e1272bb594692ab470800f412eade1919d5080e96e534d6ab3",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        269.53125,
+        272.94921875,
+        336.42578125,
+        339.84375
+      ],
+      "prompt": "Replace only the catcher's helmet with a cowboy hat. Preserve the catcher's face and uniform. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "let a player wear a cowboy hat",
+      "prompt_source_only_refinement": true,
+      "annotation_mask_used_only_as_bbox_hint": true,
+      "signature": {
+        "raw_sha256": "a0d4b3843e1520e1272bb594692ab470800f412eade1919d5080e96e534d6ab3",
+        "rgb_sha256": "55a4ae0933cff7a9194295c34fb315330fbbd269e68e63645dfd0f986836e3d4",
+        "width": 500,
+        "height": 500,
+        "average_hash": "3faeff10911b0100",
+        "difference_hash": "6a4ab57527732b2d"
+      },
+      "official_split": "train"
+    },
+    {
+      "case_id": "expand_train_181796",
+      "source_group_id": "181796",
+      "role": "calibration",
+      "image": "inputs/budget_expansion_v1/181796/source.original",
+      "source_sha256": "872dd0d7a286cd9752944bd500a08c66713a260522172d59ce9ab961e8a0157f",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        158.69140625,
+        41.50390625,
+        298.828125,
+        144.04296875
+      ],
+      "prompt": "Change the cup of wine to orange juice. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "Change the cup of wine to orange juice.",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true,
+      "signature": {
+        "raw_sha256": "872dd0d7a286cd9752944bd500a08c66713a260522172d59ce9ab961e8a0157f",
+        "rgb_sha256": "b0b929e46f81c9312dfb03e19ba5f43447214c78143230ae1f3619ea0de5eb07",
+        "width": 500,
+        "height": 500,
+        "average_hash": "7f6ffefbf070180c",
+        "difference_hash": "d2ca88f2a6a4f2c8"
+      },
+      "official_split": "train"
+    },
+    {
+      "case_id": "expand_train_399532",
+      "source_group_id": "399532",
+      "role": "calibration",
+      "image": "inputs/budget_expansion_v1/399532/source.original",
+      "source_sha256": "e7027b6fe4788bc1573389d92124f3f742d17661fc19199dbee7129817644f8c",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        125.9765625,
+        140.625,
+        312.5,
+        372.0703125
+      ],
+      "prompt": "put the ball on a tee. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "put the ball on a tee",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true,
+      "signature": {
+        "raw_sha256": "e7027b6fe4788bc1573389d92124f3f742d17661fc19199dbee7129817644f8c",
+        "rgb_sha256": "688998e73c401266385f184bca2f10e212fc3638f703a672dabe41d665adde92",
+        "width": 500,
+        "height": 500,
+        "average_hash": "9123277333c7cf8d",
+        "difference_hash": "67cfcee5a68f9d3b"
+      },
+      "official_split": "train"
+    },
+    {
+      "case_id": "expand_train_108442",
+      "source_group_id": "108442",
+      "role": "calibration",
+      "image": "inputs/budget_expansion_v1/108442/source.original",
+      "source_sha256": "34da66969d66f80f47a4cdaef2d34cc4798faad70dd8e7d266258861f5eb8874",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        46.875,
+        187.5,
+        190.91796875,
+        303.22265625
+      ],
+      "prompt": "Could we put a dog next to the zebra?. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "Could we put a dog next to the zebra?",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true,
+      "signature": {
+        "raw_sha256": "34da66969d66f80f47a4cdaef2d34cc4798faad70dd8e7d266258861f5eb8874",
+        "rgb_sha256": "5357bc1827c9e04f2ae41a3684ef1da6ee66d187fe38c13f1e0b3174a6adc5ae",
+        "width": 500,
+        "height": 500,
+        "average_hash": "7f47a7f0f072161e",
+        "difference_hash": "c68d6f66c4c4f6b4"
+      },
+      "official_split": "train"
+    },
+    {
+      "case_id": "expand_train_385707",
+      "source_group_id": "385707",
+      "role": "calibration",
+      "image": "inputs/budget_expansion_v1/385707/source.original",
+      "source_sha256": "12bdffa5ee967f7687dffde804a2770617278ccd7abafb1297c9d1f2784cbd46",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        114.74609375,
+        37.59765625,
+        183.10546875,
+        124.51171875
+      ],
+      "prompt": "What if the bottle is closed?. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "What if the bottle is closed?",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true,
+      "signature": {
+        "raw_sha256": "12bdffa5ee967f7687dffde804a2770617278ccd7abafb1297c9d1f2784cbd46",
+        "rgb_sha256": "cc72612514f036ab7e181a1443c1ce1388954636e00080446d5f26cc0c652c11",
+        "width": 500,
+        "height": 500,
+        "average_hash": "60c3d3dfdfd19b8f",
+        "difference_hash": "c6a2a23492b33230"
+      },
+      "official_split": "train"
+    },
+    {
+      "case_id": "expand_train_302289",
+      "source_group_id": "302289",
+      "role": "calibration",
+      "image": "inputs/budget_expansion_v1/302289/source.original",
+      "source_sha256": "a9e93e0afcbbd1e80c7deaea1b6bcc7fa9eda7204cbd26fe4521ea646d9b55af",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        9.765625,
+        33.203125,
+        245.1171875,
+        212.40234375
+      ],
+      "prompt": "let the computer have a red webpage. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+      "original_instruction": "let the computer have a red webpage",
+      "prompt_source_only_refinement": false,
+      "annotation_mask_used_only_as_bbox_hint": true,
+      "signature": {
+        "raw_sha256": "a9e93e0afcbbd1e80c7deaea1b6bcc7fa9eda7204cbd26fe4521ea646d9b55af",
+        "rgb_sha256": "b51aec5722667d17b9f6d9b9822e21b9d820dd4cb402d37d7149af8359414eb5",
+        "width": 500,
+        "height": 500,
+        "average_hash": "f8e2e3fe7ffcd080",
+        "difference_hash": "52464714c650200e"
+      },
+      "official_split": "train"
+    }
+  ],
+  "jobs": [
+    {
+      "case_id": "expand_train_372317",
+      "arm": "F",
+      "phase": "warmup",
+      "repeat": 0
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "B",
+      "phase": "warmup",
+      "repeat": 0
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "B50",
+      "phase": "warmup",
+      "repeat": 0
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "C",
+      "phase": "warmup",
+      "repeat": 0
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 1
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 2
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_372317",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_236484",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_45626",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_181796",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_399532",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_108442",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_385707",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "B",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "B50",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "C",
+      "phase": "measured",
+      "repeat": 3
+    },
+    {
+      "case_id": "expand_train_302289",
+      "arm": "F",
+      "phase": "measured",
+      "repeat": 3
+    }
+  ],
+  "noise_sha256": "2fdb96612e3eb7335105fab086c0f1d6af86b66c7241ef080479c1a7de83be79",
+  "evaluation_run": "runs/budget_sweep_v1",
+  "planned_DiT": 800,
+  "planned_requests": 100,
+  "code_sha256": {
+    "benchmark_budget_sweep.py": "eef50bbf336046a2260a39806f29db4eb2711fa548a265e996d0cb154a970546",
+    "budget_sweep_profiles.py": "f3b545dc3dd80119af19172f6f1038dccf481a93c6d938fa9b45e898bb902725",
+    "cache_aware_adapters.py": "3c3a37ffd8ba9d884a9555f26cf7e7b095d86a34fa9aabf8d0b45b34c4ce0702",
+    "trainable_budget_executor.py": "34dcd940d2f3594235726aaed989dd3fc54f4b52353c7fcd7bf3def32ff76d51",
+    "budget_cache_executor.py": "80a821bc1a80368a3e409cd3ec9b81a57d36e1666a72f1f7990dab237d45f195",
+    "run_free_pilot.py": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8",
+    "run_s1.py": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81",
+    "controlled_mask.py": "a8b95a5d4eb6d8fc1efa3d004e00d72c500a7b4d2cb4d04c828bbb892b192408",
+    "free_region.py": "4dbfbb1f20146bcc8bb20dfaf1de71eed4da25fe8806f827a945547e032c0d51"
+  },
+  "diagnostic_only": true,
+  "source_selection": "First8 of frozen Cal16 before sweep results; all arms retained regardless quality",
+  "timing_scope": "source image preloaded, all encoders/model/VAE GPU resident, clock includes planning and normal pipeline; excludes checkpoint loading and output IO",
+  "quality_status": "pending at freeze; report diagnostic timing with visual and fidelity results",
+  "CUDA_synchronization": "immediately before timer and after pipeline plus cache clear",
+  "CPU_background": "no simultaneous archive/compress/upload workloads during timing",
+  "test64_opened": false,
+  "RL_updates": 0,
+  "training_updates": 0
+}

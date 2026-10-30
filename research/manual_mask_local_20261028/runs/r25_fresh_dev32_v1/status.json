@@ -1,0 +1,14 @@
+{
+  "phase": "complete_analysis_pending",
+  "active": {
+    "case_id": "r25_fresh_dev_221427",
+    "arm": "R25"
+  },
+  "invoked_dit": 768,
+  "completed_dit": 768,
+  "successful_requests": 96,
+  "conditioning_only": 32,
+  "training_updates": 0,
+  "RL_updates": 0,
+  "test64_opened": false
+}

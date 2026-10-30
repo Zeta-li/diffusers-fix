@@ -1,0 +1,10 @@
+{
+  "status": "ARCHIVED_REMOTE",
+  "files": 829,
+  "raw_bytes": 1363151846,
+  "archive": "/tmp/budget_sweep_raw_v1.tar.gz",
+  "archive_bytes": 1109067316,
+  "archive_sha256": "1e0bec614fe9a6337406399101ce4e691c6744522a05b9e47cfee76a7f69ae55",
+  "manifest_sha256": "e268e58eec963502b9e4434f6b43da5bc614b8498e7959014092f971b2bfa2d9",
+  "local_full_raw_copy": false
+}

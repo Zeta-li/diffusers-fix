@@ -1,0 +1,14 @@
+{
+  "phase": "complete_analysis_pending",
+  "active": {
+    "case_id": "expand_dev_184384",
+    "arm": "LOCAL128"
+  },
+  "invoked_dit": 1024,
+  "completed_dit": 1024,
+  "successful_requests": 128,
+  "conditioning_only": 32,
+  "training_updates": 0,
+  "RL_updates": 0,
+  "test64_opened": false
+}

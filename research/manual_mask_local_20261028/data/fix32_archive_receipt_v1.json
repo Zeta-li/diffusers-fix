@@ -1,0 +1,9 @@
+{
+  "archive": "/tmp/fix32_supervision_results_20261028.tar.gz",
+  "bytes": 378809061,
+  "sha256": "8c16e2133542c8ce5bdd17858c9b7a1c183c2926e7a2ad1be93e0e90bf0c538c",
+  "files": 252,
+  "verified": true,
+  "raw_pt_included": true,
+  "all_five_attempts_included": true
+}

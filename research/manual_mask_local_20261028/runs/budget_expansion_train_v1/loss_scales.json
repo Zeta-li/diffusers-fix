@@ -1,0 +1,9 @@
+{
+  "scales": [
+    1.0674776886754576,
+    1.0912837614335404,
+    1.0913556809059475
+  ],
+  "inherited_from": "runs/budget_student_pilot_v1/checkpoints/student_inference025.pt",
+  "scope": "historical training sources only"
+}

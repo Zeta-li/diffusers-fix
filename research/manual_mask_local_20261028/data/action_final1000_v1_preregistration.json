@@ -1,0 +1,295 @@
+{
+  "phase": "FROZEN_BEFORE_GENERATION",
+  "created_at": "2026-10-28T15:56:54.485776+08:00",
+  "mode": "closed_validation",
+  "cases": [
+    {
+      "case_id": "free_475277",
+      "source_group_id": "475277",
+      "image": "inputs/free_train24/475277/source.original",
+      "source_sha256": "25d5adf8f7b040c67f72d7ff95172a312528a334d271c87499f2cdc6b64ecdf1",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        235,
+        10,
+        405,
+        195
+      ],
+      "prompt": "Add a single slender ivory unicorn horn growing upward from the center of the white horse forehead between its ears. Preserve the horse face, mane, fence and background.",
+      "role": "seen_holdout",
+      "task_type": "expansion",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "HEAD"
+        }
+      ],
+      "reference_run": "free_full20_v1",
+      "reference_F_run": "free_full20_v1",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        174,
+        0,
+        421,
+        211
+      ],
+      "controls": [
+        {
+          "sequence": "NN",
+          "run": "free_fixed32_v1",
+          "raw": "FIX32.pt",
+          "png": "FIX32.png"
+        },
+        {
+          "sequence": "CC",
+          "run": "context_closed_v1",
+          "raw": "CONTEXT64_raw.pt",
+          "png": "CONTEXT64.png"
+        },
+        {
+          "sequence": "FF",
+          "run": "context_closed_v1",
+          "raw": "FRESH64_raw.pt",
+          "png": "FRESH64.png"
+        }
+      ]
+    },
+    {
+      "case_id": "free_272738_p1",
+      "source_group_id": "272738",
+      "image": "inputs/free_train24/272738/source.original",
+      "source_sha256": "1e36f8cea50c5d001782da0cddae36f672bc79bfe545c202268679e1fde91c9f",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        225,
+        0,
+        365,
+        290
+      ],
+      "prompt": "Replace only the transparent stemmed glass in the upper center-right of the desk with one red ceramic mug with a handle, located where that glass stood. Preserve the rest of the desk.",
+      "role": "seen_holdout",
+      "task_type": "replace",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "HEAD"
+        }
+      ],
+      "original_case_id": "free_272738",
+      "reference_run": "object_selectivity_v1",
+      "reference_F_run": "object_selectivity_v1",
+      "reference_FIX32_run": "object_selectivity_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        193,
+        0,
+        397,
+        322
+      ],
+      "prompt_repair_previously_frozen": true,
+      "controls": [
+        {
+          "sequence": "NN",
+          "run": "object_selectivity_fixed32_v1",
+          "raw": "FIX32.pt",
+          "png": "FIX32.png"
+        },
+        {
+          "sequence": "CC",
+          "run": "context_closed_v1",
+          "raw": "CONTEXT64_raw.pt",
+          "png": "CONTEXT64.png"
+        },
+        {
+          "sequence": "FF",
+          "run": "context_closed_v1",
+          "raw": "FRESH64_raw.pt",
+          "png": "FRESH64.png"
+        }
+      ]
+    },
+    {
+      "case_id": "free_403221",
+      "source_group_id": "403221",
+      "image": "inputs/free_train24/403221/source.original",
+      "source_sha256": "1d28786a5939def64e26ecddd5ded9c24e429019173781b466176adcc12bfd3e",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        240,
+        180,
+        355,
+        310
+      ],
+      "prompt": "Change the collar around the foreground sheep neck to bright red. Preserve the sheep, its tags, and the mountain landscape.",
+      "role": "seen_holdout",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "HEAD"
+        }
+      ],
+      "reference_run": "free_full20_v1",
+      "reference_F_run": "free_full20_v1",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        224,
+        94,
+        383,
+        326
+      ],
+      "controls": [
+        {
+          "sequence": "NN",
+          "run": "free_fixed32_v1",
+          "raw": "FIX32.pt",
+          "png": "FIX32.png"
+        },
+        {
+          "sequence": "CC",
+          "run": "context_closed_v1",
+          "raw": "CONTEXT64_raw.pt",
+          "png": "CONTEXT64.png"
+        },
+        {
+          "sequence": "FF",
+          "run": "context_closed_v1",
+          "raw": "FRESH64_raw.pt",
+          "png": "FRESH64.png"
+        }
+      ]
+    },
+    {
+      "case_id": "free_374087",
+      "source_group_id": "374087",
+      "image": "inputs/free_train24/374087/source.original",
+      "source_sha256": "12ce8c3d48bc8085631f68ebf3698720125794fb86727930d25b90040e706dd2",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        25,
+        300,
+        280,
+        500
+      ],
+      "prompt": "Change the green bananas in the lower-left part of the box to ripe yellow bananas. Preserve their number, shape, and all other groceries.",
+      "role": "seen_holdout",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "HEAD"
+        }
+      ],
+      "reference_run": "free_full20_v1",
+      "reference_F_run": "free_full20_v1",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        9,
+        274,
+        296,
+        500
+      ],
+      "controls": [
+        {
+          "sequence": "NN",
+          "run": "free_fixed32_v1",
+          "raw": "FIX32.pt",
+          "png": "FIX32.png"
+        },
+        {
+          "sequence": "CC",
+          "run": "context_closed_v1",
+          "raw": "CONTEXT64_raw.pt",
+          "png": "CONTEXT64.png"
+        },
+        {
+          "sequence": "FF",
+          "run": "context_closed_v1",
+          "raw": "FRESH64_raw.pt",
+          "png": "FRESH64.png"
+        }
+      ]
+    }
+  ],
+  "planned_requests": 4,
+  "planned_dit": 32,
+  "code_sha256": {
+    "action_value_head.py": "3665152284edefa371cc37ac351e0d2253f43a2e4bbe47b43d009159712f14a2",
+    "test_action_value_head.py": "9069673626ce25b9323aab78111c768243b5716940b18aca0bdcf028fa19db29",
+    "run_action_tree.py": "23d4a056f5d107843b4c348b5ae6b20745d2fbb6e5a68c35294b95042d00813e",
+    "context_refresh.py": "fdb160eb561f32bb688c3ac3648532024d6f6d4de478a78595b5ef5bd5265a5d",
+    "refresh_supervision.py": "b223b9e1fafe2853b0b7613c8ed0541d7912f315c1c263c486e49de5dc8abe83",
+    "legacy_local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "legacy_refresh_policy.py": "0b319fbbb05c8dff0880e75634cca524211dd8b4fce4e65006ebde7f990adfcf",
+    "free_region.py": "4dbfbb1f20146bcc8bb20dfaf1de71eed4da25fe8806f827a945547e032c0d51",
+    "run_free_pilot.py": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8",
+    "run_s1.py": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81"
+  },
+  "cpu_receipt": "data/cpu_action_value_v1.json",
+  "decision_steps": [
+    3,
+    5
+  ],
+  "step_indexing": "zero_based",
+  "actions": [
+    "N",
+    "C",
+    "F"
+  ],
+  "extra_tokens_per_action": 64,
+  "features": "25 online state/geometry/age statistics; no source IDs, teacher, future output or action outcomes",
+  "labels": "terminal RGB MAE to frozen F; Q5 exact three-way terminal outcome; Q3 best remaining action in enumerated finite horizon; fitted optimal action values, closed-loop validation required",
+  "training": {
+    "fit_sources": 12,
+    "calibration_sources": 3,
+    "states_per_source": 4,
+    "architecture": "25-16-3 Tanh,467 parameters",
+    "seed": 20261028,
+    "optimizer": "AdamW",
+    "lr": 0.003,
+    "weight_decay": 0.01,
+    "updates": 1000,
+    "eval_interval": 50,
+    "loss": "MSE on percentage-point improvement relative to source NN final MAE; equal state/source weights",
+    "normalization": "fit only, std floor1e-4, clipped standardized input [-5,5]",
+    "selection": "minimum calibration mean relative terminal MAE from exact recorded tree rollout; checkpoints0,50,...1000; earliest tie",
+    "constant_control": "best fixed two-action sequence by fit mean relative final MAE, tie lexicographic; no probe outcomes"
+  },
+  "closed_development": {
+    "fit_and_calibration_HEAD_requests": 15,
+    "seen_source_holdout_HEAD_requests": 4,
+    "seen_holdout_constant_requests_max": 4,
+    "planned_dit_max": 184,
+    "continue_gate": "On4 seen holdout sources: HEAD mean MAE at least1% lower than CC and fit-selected constant; at least3/4 improve vsCC; worst increase<=10%; numeric4/4; no new semantic regressions. Not independent validation."
+  },
+  "teacher_calls": 0,
+  "new_full_reference_calls": 0,
+  "RL_updates": 0,
+  "net_latency_requests": 0,
+  "exclusions": "Six historical F failures are not new exclusions; training uses the already fixed12fit+3cal usable labels. Probe4 and newDev16 never enter fitting.",
+  "scope": "Bounded first training run. Do not increase epochs, change loss, or retune on probe after results. All newDev16/Test64 remain unopened.",
+  "checkpoint": "runs/action_weight_recovery_v1/final_step1000.pt",
+  "checkpoint_sha256": "2db2f09421d392ae1c5270324c799aef3f8fd5e59c682820ddd3544c060fea79",
+  "selected_update": 1000,
+  "selected_constant": "CC",
+  "parent_protocol": "data/action_closed_v1_preregistration.json",
+  "training_result_sha256": "5a3087b4ba8f12d89067f9dbd23290386e2548502902df5b677f311d6ca3a726",
+  "diagnostic_only": true,
+  "reason": "The frozen calibration selected initialization. Preserve that primary result; separately inspect the actual trained final1000 checkpoint without promotion or retuning.",
+  "budget_note": "Additional explicit4-request32-DiT diagnostic, not repurposed constant-control budget. No selection uses these outputs."
+}

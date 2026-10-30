@@ -1,0 +1,180 @@
+{
+  "created_at": "2026-10-28T18:52:04.680661+08:00",
+  "scope": "incremental final documents/derived analyses; raw generation separately verified by latency_temporal_raw_manifest_v1",
+  "raw_archive_sha256": "289545c8dea5b60435f58d501b2eb1585a42128cb2b1f9a6ee57fb3d0353b774",
+  "parent_manifest": "data/localdev16_artifact_manifest_v1.json",
+  "files": [
+    {
+      "path": "00_实施与实验记录.md",
+      "bytes": 18528,
+      "sha256": "a84d10d44057322e19294342e2ea9aa77bfceda6d954ac5fbb5bad8779153d45"
+    },
+    {
+      "path": "02_后续实验与执行计划.md",
+      "bytes": 27490,
+      "sha256": "0464d6914fd1ab9655e1645ef4944ce6db6200a10fa44256b22f6e03c86bced1"
+    },
+    {
+      "path": "10_当前瓶颈与下一轮纠偏方案.md",
+      "bytes": 9824,
+      "sha256": "044f7e5ef1b7456c2651383b02ebf90d6a576055f19c8e0eff1abe270a793adf"
+    },
+    {
+      "path": "11_诊断性净延迟与等预算时机实验.md",
+      "bytes": 16039,
+      "sha256": "b14c4bfc6b5c16d0da83a803f05b927dc48119cbece19df5861f63b93f24d471"
+    },
+    {
+      "path": "data/current_research_status.json",
+      "bytes": 5439,
+      "sha256": "47f6d84c531996c1698bc87f21e7f373a63782a5ab77551013b299a4dcd3d32c"
+    },
+    {
+      "path": "data/latency_temporal_audit_v1.json",
+      "bytes": 480,
+      "sha256": "2c8ac1f6858389925a784609fc45e7f4a36663eaba99e0fe2ddb7dbf86a9f676"
+    },
+    {
+      "path": "data/latency_temporal_decision_v1.json",
+      "bytes": 1107,
+      "sha256": "ac71bd5694fe2ea72096dce4b0bcb194d498c1cfbf8f23d3281b1d831a4de94d"
+    },
+    {
+      "path": "data/latency_temporal_final_environment_v1.json",
+      "bytes": 331,
+      "sha256": "3548d2e20a9b8abc8ee5d334c4ea540aac8d51dbf2dc121ff1bbfc6e3a21b574"
+    },
+    {
+      "path": "data/latency_temporal_launch_v1.json",
+      "bytes": 224,
+      "sha256": "f59ad4796625e6907bb2dfde9fc6590be6ffc8c0f6f28dde351603d4f35dbd4e"
+    },
+    {
+      "path": "data/latency_temporal_local_archive_check_v1.json",
+      "bytes": 197,
+      "sha256": "95574dd47dbbbcba4e6ed6b6f67d8fd30cf53e6b567c3749b56dbfec58fb316a"
+    },
+    {
+      "path": "data/latency_temporal_raw_manifest_v1.json",
+      "bytes": 61062,
+      "sha256": "94108dfcd9a425d32647e9defc13398d2433a60288c7c8823b84a237d412c137"
+    },
+    {
+      "path": "data/latency_temporal_secondary_analysis_v1.json",
+      "bytes": 767,
+      "sha256": "5d6c0974af2b3090637d052db4e4f7648fd856214e9d45732a5037f374f8e9f1"
+    },
+    {
+      "path": "data/latency_temporal_v1_preregistration.json",
+      "bytes": 11573368,
+      "sha256": "23d4c92431b84a1fc1317f21f1232b0f314e5b9eb00ee57eead5bba88f39e4c9"
+    },
+    {
+      "path": "data/latency_temporal_visual_review_v1.json",
+      "bytes": 7448,
+      "sha256": "2b2efd341209403088fa66f2f6688eacc5548663eb51d347e3955c7a9fbcfa81"
+    },
+    {
+      "path": "data/latency_temporal_visual_rubric_v1.json",
+      "bytes": 1734,
+      "sha256": "03d2c76e4f901b9e87d4a331d5c767770e1f2f8434bafa25d6669d2e12dccde0"
+    },
+    {
+      "path": "data/latency_visual_review_v1.json",
+      "bytes": 5837,
+      "sha256": "26c9770cee476b7617c132dd0f86ed05ef3e07df7d8246f031c26b3eae3fc770"
+    },
+    {
+      "path": "data/static_halo_opportunity_posthoc_v1.json",
+      "bytes": 5517,
+      "sha256": "e362cb10256ca04ebd88d60b95e61f748f2ca6563bfc9e1f402ced480b7ea9a5"
+    },
+    {
+      "path": "figures/latency_temporal_v1/latency_components.png",
+      "bytes": 41806,
+      "sha256": "8ca0f7541cccad17eaac2bf737b2788f9b641adf67f955bf298150a0dc73c05f"
+    },
+    {
+      "path": "figures/latency_temporal_v1/latency_paired.png",
+      "bytes": 66182,
+      "sha256": "6ed19076faa74afb8b257a98f53e9ea9789e24dfe02f7ec98846a9a58d70f64f"
+    },
+    {
+      "path": "figures/latency_temporal_v1/temporal_all8.png",
+      "bytes": 33665,
+      "sha256": "5debf001d56354610b20d5d9f6314155cf336a94ccd746c996990cf89e222f7c"
+    },
+    {
+      "path": "notes/current_external_reports/latency_temporal_0_研究总控_当前状态.md",
+      "bytes": 11932,
+      "sha256": "483b2a50b8619fcbdb24dbf8bdeee20a41c54fcbd77789227c3673705da181ae"
+    },
+    {
+      "path": "notes/current_external_reports/latency_temporal_1_局部图像编辑加速研究_阶段性总结报告.md",
+      "bytes": 163671,
+      "sha256": "6dd33e404490d03ba18d3e4e27aebf96dbe7bd65ea68d4e28a0acbf1ca2a2570"
+    },
+    {
+      "path": "notes/current_external_reports/latency_temporal_2_06_研究进度与八个月执行表.md",
+      "bytes": 21453,
+      "sha256": "0f53660858cc1d48a6db4bab1d855db9cb6593a825047160e959531087bcb16f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/secondary.json",
+      "bytes": 5667,
+      "sha256": "faeb4247a7e7cbc9c96fa36b87cc86d07ae1ec3652512d9fed2258430a52d284"
+    },
+    {
+      "path": "scripts/analyze_latency_overheads.py",
+      "bytes": 2883,
+      "sha256": "fc4f98ca783294a13e9459b3ecf776f65e1ea9ae77279a6fb05e8e897501c731"
+    },
+    {
+      "path": "scripts/analyze_latency_temporal.py",
+      "bytes": 9160,
+      "sha256": "7fb6ec78d106802df8beba42ee3d31598d7834c0e062cd950bcdfbf7424654bf"
+    },
+    {
+      "path": "scripts/analyze_static_halo_opportunity.py",
+      "bytes": 2871,
+      "sha256": "babc13583dac5ffa10df80bbd3bbd5f12ebc75c6675fed298561b308d5225183"
+    },
+    {
+      "path": "scripts/analyze_temporal_secondary.py",
+      "bytes": 4108,
+      "sha256": "5bfe8585089b747f523c42b4909bd28119a3918c73c1002be18c25e0b37748b8"
+    },
+    {
+      "path": "scripts/audit_latency_temporal.py",
+      "bytes": 5980,
+      "sha256": "4faeea39cfc4936920ff924fb91954b5edb9c9fe84c81d1b982322388fbca8be"
+    },
+    {
+      "path": "scripts/diagnostic_schedule.py",
+      "bytes": 2873,
+      "sha256": "2e2c85b289bda1ec3debb51d56dc6cc755d4a20bc2ba44ad3a44121e18afe658"
+    },
+    {
+      "path": "scripts/freeze_latency_temporal.py",
+      "bytes": 7078,
+      "sha256": "84dca9c89242dc967b3f29dc9acf7cd0efa910265dd9fb9eeb92fb224093850c"
+    },
+    {
+      "path": "scripts/render_latency_temporal_figures.py",
+      "bytes": 5116,
+      "sha256": "eff2ec972ba39b53421fdd05a36ba5cea162d737f5b3510ffcf0702fec1dbd9b"
+    },
+    {
+      "path": "scripts/run_latency_temporal.py",
+      "bytes": 14239,
+      "sha256": "ffe3bbb310fee4e779f8c2eb85f91ecf9061d191780b5983dc82fbb7ed72e7bf"
+    },
+    {
+      "path": "scripts/test_diagnostic_schedule.py",
+      "bytes": 3996,
+      "sha256": "b91c76508c19e5ca67cebefb21dd7fc051c837f0366daa6377d977873fd33605"
+    }
+  ],
+  "count": 34,
+  "bytes": 12138072
+}

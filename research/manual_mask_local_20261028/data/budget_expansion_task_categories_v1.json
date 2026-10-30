@@ -1,0 +1,988 @@
+{
+  "method": "deterministic keyword taxonomy for descriptive stratification only; no selection or reward use",
+  "records": [
+    {
+      "case_id": "expand_train_420478",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_139108",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_478067",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_410708",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_560266",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_563267",
+      "role": "train",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_train_288923",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_414492",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_365220",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_344857",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_522661",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_193664",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_104739",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_567825",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_257117",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_40966",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_337843",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_118997",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_227059",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_542625",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_98853",
+      "role": "train",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_train_351809",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_520181",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_189648",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_503793",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_208882",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_306593",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_90139",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_557855",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_156301",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_327155",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_96984",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_279331",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_182902",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_314294",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_534161",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_229753",
+      "role": "train",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_train_241963",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_62376",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_398569",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_522195",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_520063",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_457387",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_320081",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_233543",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_146004",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_548875",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_15485",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_309843",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_318677",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_72873",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_254911",
+      "role": "train",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_train_445248",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_113593",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_396420",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_502894",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_153462",
+      "role": "train",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_train_163951",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_450581",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_221216",
+      "role": "train",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_train_318311",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_142896",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_156125",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_436172",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_224807",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_205299",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_149817",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_16408",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_21217",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_478132",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_442009",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_353480",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_13473",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_347174",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_563758",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_490385",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_141756",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_515247",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_352316",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_319617",
+      "role": "train",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_train_344807",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_537553",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_426370",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_38477",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_488928",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_38999",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_293474",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_548561",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_73733",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_76588",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_552814",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_4282",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_485424",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_99245",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_576685",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_119815",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_343076",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_348669",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_390365",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_192575",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_227558",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_581205",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_139272",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_66085",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_110",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_376365",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_33297",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_281246",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_327713",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_9185",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_516396",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_453438",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_525101",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_59229",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_388654",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_484847",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_57363",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_201406",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_570259",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_247880",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_10175",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_467978",
+      "role": "train",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_304984",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_524725",
+      "role": "train",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_414156",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_7784",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_202827",
+      "role": "train",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_326028",
+      "role": "train",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_372317",
+      "role": "calibration",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_236484",
+      "role": "calibration",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_train_45626",
+      "role": "calibration",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_181796",
+      "role": "calibration",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_399532",
+      "role": "calibration",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_108442",
+      "role": "calibration",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_385707",
+      "role": "calibration",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_302289",
+      "role": "calibration",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_463844",
+      "role": "calibration",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_522229",
+      "role": "calibration",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_train_445972",
+      "role": "calibration",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_343552",
+      "role": "calibration",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_286442",
+      "role": "calibration",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_352264",
+      "role": "calibration",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_196699",
+      "role": "calibration",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_47893",
+      "role": "calibration",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_509149",
+      "role": "calibration",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_154644",
+      "role": "calibration",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_train_315434",
+      "role": "calibration",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_543513",
+      "role": "calibration",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_453972",
+      "role": "calibration",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_train_303144",
+      "role": "calibration",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_281564",
+      "role": "calibration",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_565303",
+      "role": "calibration",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_train_417825",
+      "role": "calibration",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_train_286720",
+      "role": "calibration",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_359925",
+      "role": "calibration",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_388434",
+      "role": "calibration",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_292365",
+      "role": "calibration",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_train_373712",
+      "role": "calibration",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_74256",
+      "role": "calibration",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_train_494572",
+      "role": "calibration",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_dev_45999",
+      "role": "independent_dev",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_dev_422328",
+      "role": "independent_dev",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_dev_182759",
+      "role": "independent_dev",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_dev_234956",
+      "role": "independent_dev",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_dev_102724",
+      "role": "independent_dev",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_dev_15653",
+      "role": "independent_dev",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_dev_515743",
+      "role": "independent_dev",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_dev_572804",
+      "role": "independent_dev",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_dev_308507",
+      "role": "independent_dev",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_dev_423391",
+      "role": "independent_dev",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_dev_393375",
+      "role": "independent_dev",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_dev_523394",
+      "role": "independent_dev",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_dev_229301",
+      "role": "independent_dev",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_dev_150812",
+      "role": "independent_dev",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_dev_376859",
+      "role": "independent_dev",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_dev_309",
+      "role": "independent_dev",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_dev_465825",
+      "role": "independent_dev",
+      "category": "removal"
+    },
+    {
+      "case_id": "expand_dev_34",
+      "role": "independent_dev",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_dev_178928",
+      "role": "independent_dev",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_dev_256884",
+      "role": "independent_dev",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_dev_142585",
+      "role": "independent_dev",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_dev_426040",
+      "role": "independent_dev",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_dev_458821",
+      "role": "independent_dev",
+      "category": "addition_attribute"
+    },
+    {
+      "case_id": "expand_dev_91839",
+      "role": "independent_dev",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_dev_403265",
+      "role": "independent_dev",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_dev_580685",
+      "role": "independent_dev",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_dev_39480",
+      "role": "independent_dev",
+      "category": "attribute_color"
+    },
+    {
+      "case_id": "expand_dev_96497",
+      "role": "independent_dev",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_dev_360871",
+      "role": "independent_dev",
+      "category": "other_local"
+    },
+    {
+      "case_id": "expand_dev_100081",
+      "role": "independent_dev",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_dev_337180",
+      "role": "independent_dev",
+      "category": "replacement"
+    },
+    {
+      "case_id": "expand_dev_184384",
+      "role": "independent_dev",
+      "category": "other_local"
+    }
+  ],
+  "counts": {
+    "train": {
+      "addition_attribute": 32,
+      "replacement": 18,
+      "other_local": 45,
+      "removal": 7,
+      "attribute_color": 26
+    },
+    "calibration": {
+      "addition_attribute": 12,
+      "removal": 4,
+      "other_local": 5,
+      "attribute_color": 9,
+      "replacement": 2
+    },
+    "independent_dev": {
+      "addition_attribute": 10,
+      "other_local": 10,
+      "removal": 2,
+      "replacement": 6,
+      "attribute_color": 4
+    }
+  }
+}

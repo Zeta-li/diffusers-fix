@@ -1,0 +1,503 @@
+{
+  "reviewer": "single assistant nonblind historical15; all60 image outputs inspected, baseline hashes identical to earlier run",
+  "summary": {
+    "F": {
+      "edit": 15,
+      "joint": 11
+    },
+    "ALL": {
+      "edit": 15,
+      "joint": 8
+    },
+    "PILOT": {
+      "edit": 15,
+      "joint": 9
+    },
+    "EXPAND": {
+      "edit": 15,
+      "joint": 11
+    }
+  },
+  "records": [
+    {
+      "case_id": "local_train_286770_goat",
+      "arm": "F",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_286770_goat",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_286770_goat",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_286770_goat",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "arm": "F",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "arm": "F",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Scene geometry and background substantially regenerated."
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Scene geometry and background substantially regenerated."
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Scene geometry and background substantially regenerated."
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Scene geometry and background substantially regenerated."
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "arm": "F",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Additional small player below original phone removed."
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Additional small player below original phone removed."
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Additional small player below original phone removed."
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Additional small player below original phone removed."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "arm": "F",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Cupcake wrapper texture/shape changed; EXPAND restores closer wrapper."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Cupcake wrapper texture/shape changed; EXPAND restores closer wrapper."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "arm": "F",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "arm": "F",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "arm": "F",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Other cushion changed too."
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Other cushion changed too."
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Other cushion changed too."
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Other cushion changed too."
+    },
+    {
+      "case_id": "free_414772",
+      "arm": "F",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_414772",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_414772",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_414772",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_557907",
+      "arm": "F",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_557907",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_557907",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_557907",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_275197",
+      "arm": "F",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_275197",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Towel narrows into pleated strip."
+    },
+    {
+      "case_id": "free_275197",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_275197",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_475277",
+      "arm": "F",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_475277",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Forehead mane and facial texture change; EXPAND restores them."
+    },
+    {
+      "case_id": "free_475277",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Forehead mane and facial texture change; EXPAND restores them."
+    },
+    {
+      "case_id": "free_475277",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_272738",
+      "arm": "F",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Other mug also changed to red."
+    },
+    {
+      "case_id": "free_272738",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Other mug also changed to red."
+    },
+    {
+      "case_id": "free_272738",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Other mug also changed to red."
+    },
+    {
+      "case_id": "free_272738",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": false,
+      "joint": false,
+      "note": "Other mug also changed to red."
+    },
+    {
+      "case_id": "free_403221",
+      "arm": "F",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_403221",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_403221",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_403221",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_374087",
+      "arm": "F",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_374087",
+      "arm": "ALL",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_374087",
+      "arm": "PILOT",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    },
+    {
+      "case_id": "free_374087",
+      "arm": "EXPAND",
+      "edit": true,
+      "preservation": true,
+      "joint": true,
+      "note": "Requested edit achieved; no obvious additional object or structural damage."
+    }
+  ]
+}

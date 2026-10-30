@@ -1,0 +1,28 @@
+{
+  "status": "DEVELOPMENT_CANDIDATE",
+  "candidate": "LORA_ONLY",
+  "weights": "runs/budget_student_pilot_v1/checkpoints/student_inference025.pt",
+  "weights_sha256": "ab56cf02a50a68e6b07e0e3b124afa468240589e970e1a8fdf2bc6b280099245",
+  "weights_bytes": 19169717,
+  "trained_jointly": true,
+  "spatial_enabled": false,
+  "adapter_rank": 8,
+  "adapter_FP32": true,
+  "adapter_merged": false,
+  "original_Lightning_fused": true,
+  "model": "original Qwen-Image-Edit",
+  "profile": "B",
+  "context_mode": "all",
+  "full_steps_one_based": [
+    1,
+    2,
+    8
+  ],
+  "steps": 8,
+  "cfg": 1,
+  "output_hard_mask": false,
+  "pixel_copy": false,
+  "validation_scope": "15historicaldevelopment,8timingsources",
+  "reproduction_driver": "scripts/benchmark_budget_student.py",
+  "reproduction_protocol": "data/budget_student_latency_v2_preregistration.json"
+}

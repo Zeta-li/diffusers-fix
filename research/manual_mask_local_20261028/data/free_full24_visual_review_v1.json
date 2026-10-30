@@ -1,0 +1,512 @@
+{
+  "review_type": "nonblind single-assistant visual assessment, uncertainty counts as failure",
+  "cases": [
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "role": "fit",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        135,
+        170,
+        250,
+        400
+      ],
+      "influence_bbox": [
+        119,
+        154,
+        266,
+        416
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "role": "fit",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        60,
+        75,
+        285,
+        260
+      ],
+      "influence_bbox": [
+        44,
+        59,
+        301,
+        276
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "source_group_id": "178810",
+      "role": "fit",
+      "usable_for_training": false,
+      "full_task_pass": false,
+      "target_bbox": [
+        155,
+        345,
+        230,
+        465
+      ],
+      "influence_bbox": [
+        139,
+        329,
+        246,
+        481
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Full reference globally redraws building, trees and pavement."
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "source_group_id": "429111",
+      "role": "fit",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        325,
+        150,
+        397,
+        285
+      ],
+      "influence_bbox": [
+        309,
+        104,
+        413,
+        301
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "role": "fit",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        210,
+        110,
+        465,
+        255
+      ],
+      "influence_bbox": [
+        194,
+        94,
+        481,
+        271
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "role": "fit",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        125,
+        205,
+        255,
+        247
+      ],
+      "influence_bbox": [
+        109,
+        189,
+        271,
+        263
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "source_group_id": "452168",
+      "role": "fit",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        110,
+        270,
+        375,
+        435
+      ],
+      "influence_bbox": [
+        94,
+        254,
+        391,
+        451
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "source_group_id": "210597",
+      "role": "fit",
+      "usable_for_training": false,
+      "full_task_pass": false,
+      "target_bbox": [
+        298,
+        284,
+        403,
+        326
+      ],
+      "influence_bbox": [
+        282,
+        268,
+        419,
+        342
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Both blue cushions turn red although only the right cushion is requested."
+    },
+    {
+      "case_id": "free_45237",
+      "source_group_id": "45237",
+      "role": "fit",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        230,
+        75,
+        385,
+        220
+      ],
+      "influence_bbox": [
+        79,
+        59,
+        466,
+        446
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "free_30836",
+      "source_group_id": "30836",
+      "role": "fit",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        0,
+        140,
+        170,
+        360
+      ],
+      "influence_bbox": [
+        0,
+        124,
+        196,
+        391
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "free_379048",
+      "source_group_id": "379048",
+      "role": "fit",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        95,
+        90,
+        475,
+        500
+      ],
+      "influence_bbox": [
+        79,
+        74,
+        491,
+        500
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "free_414772",
+      "source_group_id": "414772",
+      "role": "calibration",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        305,
+        235,
+        370,
+        375
+      ],
+      "influence_bbox": [
+        279,
+        219,
+        401,
+        391
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "free_519299",
+      "source_group_id": "519299",
+      "role": "fit",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        15,
+        20,
+        370,
+        385
+      ],
+      "influence_bbox": [
+        0,
+        4,
+        386,
+        401
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "free_514668",
+      "source_group_id": "514668",
+      "role": "fit",
+      "usable_for_training": false,
+      "full_task_pass": false,
+      "target_bbox": [
+        295,
+        215,
+        445,
+        500
+      ],
+      "influence_bbox": [
+        279,
+        199,
+        461,
+        500
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Color is changed but the edited cat turns its head and changes pose substantially."
+    },
+    {
+      "case_id": "free_363308",
+      "source_group_id": "363308",
+      "role": "fit",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        0,
+        0,
+        165,
+        160
+      ],
+      "influence_bbox": [
+        0,
+        0,
+        186,
+        181
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "free_546932",
+      "source_group_id": "546932",
+      "role": "fit",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        35,
+        55,
+        500,
+        500
+      ],
+      "influence_bbox": [
+        19,
+        39,
+        500,
+        500
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "free_475277",
+      "source_group_id": "475277",
+      "role": "internal_validation",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        190,
+        0,
+        270,
+        135
+      ],
+      "influence_bbox": [
+        174,
+        0,
+        421,
+        211
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "free_213020",
+      "source_group_id": "213020",
+      "role": "fit",
+      "usable_for_training": false,
+      "full_task_pass": false,
+      "target_bbox": [
+        360,
+        65,
+        500,
+        170
+      ],
+      "influence_bbox": [
+        344,
+        49,
+        500,
+        186
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Adds a red hat to the woman and alters the man hat; undesired second edit."
+    },
+    {
+      "case_id": "free_57395",
+      "source_group_id": "57395",
+      "role": "calibration",
+      "usable_for_training": false,
+      "full_task_pass": false,
+      "target_bbox": [
+        0,
+        180,
+        420,
+        465
+      ],
+      "influence_bbox": [
+        0,
+        164,
+        436,
+        481
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "White replacement has uncertain cauliflower anatomy and a strongly smooth synthetic appearance; conservatively exclude as a label."
+    },
+    {
+      "case_id": "free_557907",
+      "source_group_id": "557907",
+      "role": "calibration",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        205,
+        85,
+        495,
+        350
+      ],
+      "influence_bbox": [
+        189,
+        69,
+        500,
+        366
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "free_272738",
+      "source_group_id": "272738",
+      "role": "internal_validation",
+      "usable_for_training": false,
+      "full_task_pass": false,
+      "target_bbox": [
+        225,
+        0,
+        365,
+        290
+      ],
+      "influence_bbox": [
+        209,
+        0,
+        381,
+        306
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Also replaces the existing black mug, producing two red mugs; independent full-reference semantic failure."
+    },
+    {
+      "case_id": "free_275197",
+      "source_group_id": "275197",
+      "role": "calibration",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        0,
+        65,
+        80,
+        305
+      ],
+      "influence_bbox": [
+        0,
+        49,
+        96,
+        321
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "free_403221",
+      "source_group_id": "403221",
+      "role": "internal_validation",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        265,
+        110,
+        367,
+        265
+      ],
+      "influence_bbox": [
+        224,
+        94,
+        383,
+        326
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    },
+    {
+      "case_id": "free_374087",
+      "source_group_id": "374087",
+      "role": "internal_validation",
+      "usable_for_training": true,
+      "full_task_pass": true,
+      "target_bbox": [
+        25,
+        290,
+        280,
+        500
+      ],
+      "influence_bbox": [
+        9,
+        274,
+        296,
+        500
+      ],
+      "annotation": "AI visual review from source and complete F, approximate source-pixel boxes; old hint union target/contact plus16px; not human segmentation ground truth",
+      "note": "Target class/attribute and surrounding objects judged acceptable for this pilot; minor photometric/texture change not treated as exact pixel preservation."
+    }
+  ],
+  "passes": 18,
+  "total": 24,
+  "validation_passes": 3
+}

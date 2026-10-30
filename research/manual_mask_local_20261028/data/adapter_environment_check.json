@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "device": "cpu",
+  "dtype": "bfloat16",
+  "nonzero_lora_B": true,
+  "adapter_injection_and_safe_merge_completed": true,
+  "max_abs_bf16_merge_difference": 0.00390625,
+  "cpu_linear_forward_calls": 2,
+  "cpu_tiny_dit_calls": 0,
+  "real_weight_gpu_dit_calls": 0,
+  "packages": {
+    "torch": "2.9.1+cu129",
+    "peft": "0.21.2",
+    "torchao": "0.16.0",
+    "diffusers": "0.42.0.dev0"
+  }
+}

@@ -1,0 +1,774 @@
+{
+  "phase": "FROZEN_BEFORE_TIMING",
+  "supersedes_unexecuted": "budget_student_latency_v1_preregistration.json",
+  "created_at": "2026-10-30T04:08:55.447344+00:00",
+  "candidate": "LORA_ONLY",
+  "selection": "posthoc choose min calibration3 RGB_MAE among three inference ablations; no internal4 score used",
+  "calibration_values": {
+    "JOINT": 0.00865885786091288,
+    "VELOCITY_ONLY": 0.011227407027035952,
+    "LORA_ONLY": 0.008519201229015986
+  },
+  "source_scope": "same8seen diagnostics; no newTest/Dev",
+  "cases": [
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "image": "inputs/s1_train8/local_train_286770_goat/source.original",
+      "source_sha256": "75247dd935a0f86f1a6a799d66b5bd8c8f3f65c5d50cdda829c6c6129404463a",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        165,
+        180,
+        250,
+        395
+      ],
+      "prompt": "Replace only the leftmost lamb with a young goat of similar size in the same standing pose and position. Keep the other two sheep and the rest of the scene unchanged."
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "image": "inputs/s1_train8/local_train_486018_dog/source.original",
+      "source_sha256": "17d9d3e818058c897ed59d4b5b9e01ab7559c881f3f33b352f6ae7137a3900ae",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        75,
+        85,
+        275,
+        250
+      ],
+      "prompt": "Replace the black cat on the microwave with a small black Labrador retriever puppy with floppy hanging ears and a broad dog muzzle. Keep the puppy on top of the same microwave. Preserve the microwave and the rest of the room."
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "source_group_id": "178810",
+      "image": "inputs/s1_train8/local_train_178810_bollard/source.original",
+      "source_sha256": "840d713265c58ef1b6ead8f0804e1688f142b48cc136b75494933d3c9b9d3d00",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        155,
+        345,
+        230,
+        465
+      ],
+      "prompt": "Replace the fire hydrant with a short red cylindrical street bollard of similar height at the same ground position. Keep the wall, trees, pavement, and the rest of the scene unchanged."
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "source_group_id": "429111",
+      "image": "inputs/s1_train8/local_train_429111_remote/source.original",
+      "source_sha256": "88309e0d2e156a12d8bf79000db2e435625cacc16d5a372c5967e6f81142a67a",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        330,
+        120,
+        380,
+        210
+      ],
+      "prompt": "Replace only the red mobile phone on the right side of the desk with a red television remote control with a circular directional pad, power button, and volume rocker buttons, and no display screen. Keep the remote in the same area of the desk and preserve every other object."
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "image": "inputs/s1_train8/local_train_15953_chocolate/source.original",
+      "source_sha256": "dcdc856732161f84c3052750d4f0acaee67e91fbec25b58f3ffaecb9c16ed723",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        210,
+        110,
+        465,
+        255
+      ],
+      "prompt": "Change only the white frosting on top of the cupcake to chocolate-brown frosting. Preserve its spiral shape, the cupcake wrapper, the apple, the plate, and the rest of the image."
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "image": "inputs/s1_train8/local_train_26498_woodbat/source.original",
+      "source_sha256": "6007d94a612a0e6bc90ef659ac98e10770a0dd12272b7ee497dc72a949aca264",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        130,
+        208,
+        250,
+        245
+      ],
+      "prompt": "Make the baseball bat look like natural brown wood while preserving its exact position, length, and direction. Keep the player's hands, clothing, and the rest of the scene unchanged."
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "source_group_id": "452168",
+      "image": "inputs/s1_train8/local_train_452168_bluesign/source.original",
+      "source_sha256": "03c2682225df3e237686fb4fa548d376e5ff0385d88ac4a200d3031c91f8caac",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        115,
+        275,
+        370,
+        430
+      ],
+      "prompt": "Change only the black background of the sign to dark blue. Keep the white words NO BIRDS ALLOWED readable and preserve the surrounding scene."
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "source_group_id": "210597",
+      "image": "inputs/s1_train8/local_train_210597_redcushion/source.original",
+      "source_sha256": "25167d7069dc155c0ed1e3595d67e1036db0fa2aa8ce6e3e8acfc2dbb8d78a38",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        298,
+        284,
+        403,
+        326
+      ],
+      "prompt": "Change only the blue cushion lying flat on the right side of the sofa to red. Preserve its shape, texture, and position. Keep the other cushions and the rest of the room unchanged."
+    }
+  ],
+  "jobs": [
+    {
+      "phase": "warmup",
+      "case_id": "local_train_286770_goat",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "warmup",
+      "case_id": "local_train_286770_goat",
+      "arm": "ALL",
+      "repeat": 0
+    },
+    {
+      "phase": "warmup",
+      "case_id": "local_train_286770_goat",
+      "arm": "STUDENT",
+      "repeat": 0
+    },
+    {
+      "phase": "warmup",
+      "case_id": "local_train_286770_goat",
+      "arm": "FRESH_B",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "ALL",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "STUDENT",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "FRESH_B",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "ALL",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "STUDENT",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "FRESH_B",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "STUDENT",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "FRESH_B",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "ALL",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "FRESH_B",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "ALL",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "STUDENT",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "ALL",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "STUDENT",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "FRESH_B",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "ALL",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "STUDENT",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "FRESH_B",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "STUDENT",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "FRESH_B",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "ALL",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "FRESH_B",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "F",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "ALL",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "STUDENT",
+      "repeat": 0
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "ALL",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "STUDENT",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "FRESH_B",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "STUDENT",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "FRESH_B",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "ALL",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "FRESH_B",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "ALL",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "STUDENT",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "ALL",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "STUDENT",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "FRESH_B",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "ALL",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "STUDENT",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "FRESH_B",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "STUDENT",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "FRESH_B",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "ALL",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "FRESH_B",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "ALL",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "STUDENT",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "F",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "ALL",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "STUDENT",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "FRESH_B",
+      "repeat": 1
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "STUDENT",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "FRESH_B",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "F",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_286770_goat",
+      "arm": "ALL",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "FRESH_B",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "F",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "ALL",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_486018_dog",
+      "arm": "STUDENT",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "F",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "ALL",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "STUDENT",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_178810_bollard",
+      "arm": "FRESH_B",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "ALL",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "STUDENT",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "FRESH_B",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_429111_remote",
+      "arm": "F",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "STUDENT",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "FRESH_B",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "F",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_15953_chocolate",
+      "arm": "ALL",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "FRESH_B",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "F",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "ALL",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_26498_woodbat",
+      "arm": "STUDENT",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "F",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "ALL",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "STUDENT",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_452168_bluesign",
+      "arm": "FRESH_B",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "ALL",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "STUDENT",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "FRESH_B",
+      "repeat": 2
+    },
+    {
+      "phase": "paired",
+      "case_id": "local_train_210597_redcushion",
+      "arm": "F",
+      "repeat": 2
+    }
+  ],
+  "planned_DiT": 800,
+  "planned_requests": 100,
+  "repeats": 3,
+  "checkpoint": "runs/budget_student_pilot_v1/checkpoints/update025.pt",
+  "checkpoint_sha256": "e5816f2c74f9ef0080f1997e16435f3e0187b1f316a238c07408de7519484446",
+  "code_sha256": {
+    "benchmark_budget_student.py": "28458dd13a6ff0fd9907ae4f75e95844998eca0a29d4914dd282e2c994c61440",
+    "freeze_budget_student_latency_v2.py": "d284b8debc896ee03da7a84cff1cecb34235c8198a5f1e615ab1644a265e8344",
+    "cache_aware_adapters.py": "3c3a37ffd8ba9d884a9555f26cf7e7b095d86a34fa9aabf8d0b45b34c4ce0702",
+    "spatial_velocity_student.py": "bb5c57802cbf1f7a34e53402a2c6ab59a2de612e9a96afda0114fe7197b5219d",
+    "trainable_budget_executor.py": "34dcd940d2f3594235726aaed989dd3fc54f4b52353c7fcd7bf3def32ff76d51",
+    "budget_cache_executor.py": "80a821bc1a80368a3e409cd3ec9b81a57d36e1666a72f1f7990dab237d45f195",
+    "budget_profiles.py": "45898a0aa40427186b6267b0550e18d6457c4f6bfa0b19f5f2d8a25362d6dfc2",
+    "run_free_pilot.py": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8",
+    "run_s1.py": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81"
+  },
+  "execution": "all components GPU resident; native prompt/source encode; untiledVAE; unmergedFP32LoRA;onlineplan andcachelifecycle included",
+  "timing_scope": "synchronized full pipeline to PIL; excludes weights/inputI/O,serialization,hashchecks",
+  "quality_warning": "timing does not establish task quality; paired outputs must equal pilot candidate; preserve all quality findings",
+  "RL_updates": 0,
+  "test64_opened": false
+}

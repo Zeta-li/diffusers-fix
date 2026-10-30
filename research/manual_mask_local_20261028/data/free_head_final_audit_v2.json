@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "attempts": [
+    {
+      "attempt": "free_contract_v1",
+      "invoked": 8,
+      "completed": 8,
+      "successful_requests": 0,
+      "phase": "failed"
+    },
+    {
+      "attempt": "free_contract_v2",
+      "invoked": 104,
+      "completed": 104,
+      "successful_requests": 13,
+      "phase": "generation_complete_quality_pending"
+    },
+    {
+      "attempt": "free_full20_v1",
+      "invoked": 160,
+      "completed": 160,
+      "successful_requests": 20,
+      "phase": "generation_complete_quality_pending"
+    },
+    {
+      "attempt": "free_head_closed_v1",
+      "invoked": 320,
+      "completed": 320,
+      "successful_requests": 40,
+      "phase": "generation_complete_quality_pending"
+    },
+    {
+      "attempt": "free_fixed32_v1",
+      "invoked": 96,
+      "completed": 96,
+      "successful_requests": 12,
+      "phase": "generation_complete_quality_pending"
+    }
+  ],
+  "totals": {
+    "successful_requests": 85,
+    "invoked_dit": 688,
+    "completed_dit": 688
+  },
+  "closed_loop_cpu_recomputed_Euler_steps": 320,
+  "closed_loop_paired_sources": 12,
+  "additional_DiT": 0,
+  "training_updates": 1200,
+  "previous_audit_sha256": "7081df18b6f8922db17c60bf0d1c23f83b95e32a83519c517478e487a7935d86",
+  "fixed32_cpu_recomputed_Euler_steps": 96,
+  "total_cpu_recomputed_Euler_steps": 416,
+  "gpu_final_state": "0 MiB, 0 %",
+  "gpu_processes": ""
+}

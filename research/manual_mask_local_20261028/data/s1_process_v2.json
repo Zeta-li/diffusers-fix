@@ -1,0 +1,7 @@
+{
+  "pid": 5388,
+  "started_at": 1793161668.3783479,
+  "attempt": "s1_v2",
+  "replaces_zero_dit_failed_attempt": "s1_v1",
+  "repair": "isolated torchao0.16 and CPU nonzero LoRA injection/merge check PASS"
+}

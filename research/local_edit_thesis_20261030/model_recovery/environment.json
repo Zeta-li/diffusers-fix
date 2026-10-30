@@ -1,0 +1,39 @@
+{
+  "torch": "2.9.1+cu129",
+  "cuda": "12.9",
+  "user_confirmed_gpu": "H800",
+  "driver_gpu": "NVIDIA L20Y",
+  "capability": [
+    9,
+    0
+  ],
+  "packages": {
+    "diffusers": "0.42.0.dev0",
+    "transformers": "5.3.0",
+    "huggingface_hub": "1.33.0",
+    "peft": "0.21.2",
+    "torchao": "0.16.0",
+    "accelerate": "1.13.0",
+    "safetensors": "0.8.0",
+    "numpy": "2.5.2",
+    "Pillow": "12.2.0"
+  },
+  "git_head": "4222cd5955b8033842748a7d676a5d180ab4c22d",
+  "scheduler_config": {
+    "num_train_timesteps": 1000,
+    "shift": 1.0,
+    "use_dynamic_shifting": true,
+    "base_shift": 1.0986122886681098,
+    "max_shift": 1.0986122886681098,
+    "base_image_seq_len": 256,
+    "max_image_seq_len": 8192,
+    "invert_sigmas": false,
+    "shift_terminal": null,
+    "use_karras_sigmas": false,
+    "use_exponential_sigmas": false,
+    "use_beta_sigmas": false,
+    "time_shift_type": "exponential",
+    "stochastic_sampling": false
+  },
+  "transformer_sha256": "39df645130da4ad05521cb373f3bc0ce14c40d12d8065b72d5a0d9043355545d"
+}

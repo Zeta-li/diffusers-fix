@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "time": 1793161084.2991052,
+  "result": {
+    "suite": "controlled_MASK_FULL_CPU_tiny_real_native_pipeline",
+    "tests_run": 7,
+    "failures": 0,
+    "errors": 0,
+    "cpu_tiny_dit_calls_including_preflight_failed_forward_entries": 97,
+    "real_weight_gpu_dit_calls": 0,
+    "quality_or_latency_claim": false
+  },
+  "code_sha256": {
+    "controlled_mask.py": "a8b95a5d4eb6d8fc1efa3d004e00d72c500a7b4d2cb4d04c828bbb892b192408",
+    "test_controlled_mask.py": "d997b9ea9bab1be0b2e290a770c9e6770196eff6cc8addb862f0dc02007420f0"
+  }
+}

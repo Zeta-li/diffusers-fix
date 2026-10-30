@@ -1,0 +1,13 @@
+{
+  "torch": "2.9.1+cu129",
+  "cuda": "12.9",
+  "driver_gpu": "NVIDIA L20Y",
+  "user_confirmed_gpu": "H800",
+  "parameters": {
+    "lora": 4423680,
+    "spatial": 0,
+    "frozen": 20430401088
+  },
+  "training_encoders_on_cpu": true,
+  "inference_timing_claim": false
+}

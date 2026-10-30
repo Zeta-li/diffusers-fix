@@ -1,0 +1,161 @@
+{
+  "records": [
+    {
+      "source_group_id": "90192",
+      "source_sha256": "54c1b10765d64cdcb8f3e0f947850e2a107c0a5cdcb3d89cb117f6c5319d542a",
+      "exposure": "source_only_reviewed_reserve",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "407550",
+      "source_sha256": "69bdc8023efbed915b153fc19be129a14945ac8367ff1e08ae17f743377e8ebb",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "111376",
+      "source_sha256": "01f8565481cae0d1051b7e0dd165bafd9abab6434710a566d22238b3348cdcf9",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "31749",
+      "source_sha256": "25b83b173d5af555eefca79c8c550fa973390e0c679cdbe39f65bba653f5b5b9",
+      "exposure": "source_only_reviewed_reserve",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "139276",
+      "source_sha256": "b5704765556c0519da574c6df38bfa93a9d950c6c38e8780adcea49666d3907d",
+      "exposure": "source_only_reviewed_reserve",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "483587",
+      "source_sha256": "cfaf0c9eebc1be8798f7033d55cd1d256b0b3cf42d24803c2b5ff434cfa39942",
+      "exposure": "source_only_reviewed_reserve",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "158548",
+      "source_sha256": "79af99a0dfd5402f913a1699f24302bd47b6b964160b766e1bfb76788905f86f",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "491430",
+      "source_sha256": "4d86130fd0458b44e25470f7355002ee6ccec05c668c3e9e945e5ed20a96c887",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "193680",
+      "source_sha256": "c788e0749f981786a9539e4beb5c36c7345837ee37e1562d24522ead5b27e17b",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "134597",
+      "source_sha256": "e350f1d24c4b25f62ff21ad52415cf6c63808fff410f1b24bc33204dfa0be7b0",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "291861",
+      "source_sha256": "8ca6bede3c359b0675ee4548285d0242386183549e1d7a03e1808314f670f20c",
+      "exposure": "source_only_reviewed_reserve",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "311326",
+      "source_sha256": "ecd4af9c263dece933dff2ff4787da2d11acb0def32a23d06fe675f9dca11d71",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "194956",
+      "source_sha256": "b40cb16e120f8b4671cde4a45597274c6c75e16827e1c8eccdeb111fe9b9bc21",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "108871",
+      "source_sha256": "d22c77ff32926cb404af1fe29ff17350117884997be80e092a11fd638ab33c51",
+      "exposure": "source_only_reviewed_reserve",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "459272",
+      "source_sha256": "62f96a825770a8b1abf12848c9ffd668a1c9bcb965fa0311b9211e8baeab483d",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "317806",
+      "source_sha256": "e8eff96a80bc29d342061ea7f66577af03ec3df35ce8dee6bdf076820a0bcc62",
+      "exposure": "source_only_reviewed_reserve",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "543942",
+      "source_sha256": "4e9fe20c1084c03206266dd8a774d80ae9e07cf030e3725e3e2d59da2fe554e8",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "3131",
+      "source_sha256": "da1a6240b078ef595f2534fcbb75b37b103b71f461adc5241b8627b1d2906e1f",
+      "exposure": "source_only_reviewed_reserve",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "122927",
+      "source_sha256": "a37af680ea88785bed78f6efbcb6e3490f30ae0429308c359efe07788b40e570",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "102171",
+      "source_sha256": "80ab1795a4a832f8a1c2dee90d59bda6396a9caa984584617dad42c48a1d3ea3",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "57350",
+      "source_sha256": "a5dc8b9c695b7f6e5527b158c280516978f573d6435d4b827dbfed553ae8f083",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "178403",
+      "source_sha256": "f0b26b6305e4e1b595f750f7f6ada73f5c7e312df0953f06cea0660c905f1f37",
+      "exposure": "source_only_reviewed_reserve",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "362944",
+      "source_sha256": "a941b78fbf2b48f1fbbc68d245fa3f7b6dd93f18a077a14311ee16703cc3a6ae",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "259097",
+      "source_sha256": "017b84044fd28fbbd515a0d4913083e23c3332b22e18ded4cfdf779055085322",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "315319",
+      "source_sha256": "c1c7225143b6a7921ccf38528768ae674abc583673d3943cdf0ab63ea079aa22",
+      "exposure": "source_only_reviewed_reserve",
+      "must_exclude_from_future_truly_unseen_sources": true
+    },
+    {
+      "source_group_id": "359569",
+      "source_sha256": "f422a937e1afbab02d74cd8e1f4c532b814c59787e10fd514fda6cb26af00775",
+      "exposure": "generated_validation",
+      "must_exclude_from_future_truly_unseen_sources": true
+    }
+  ],
+  "test64_opened": false
+}

@@ -1,0 +1,9 @@
+{
+  "requests": 1557,
+  "complete_ranges": 1557,
+  "failed_ranges": 0,
+  "received_bytes": 11320369477,
+  "target_column_requested": false,
+  "test_shards_requested": false,
+  "selected_sources": 360
+}

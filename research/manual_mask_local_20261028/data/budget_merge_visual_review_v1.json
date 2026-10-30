@@ -1,0 +1,104 @@
+{
+  "reviewed_at": "2026-10-30T13:07:52.909604",
+  "reviewer": "single assistant nonblind; all15 panels reviewed",
+  "rubric": "budget_student_visual_rubric_v1.json",
+  "records": [
+    {
+      "case_id": "local_train_286770_goat",
+      "edit": true,
+      "preservation": true,
+      "note": "主要编辑及保持通过；未见新增明显严重错误"
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "edit": true,
+      "preservation": true,
+      "note": "主要编辑及保持通过；未见新增明显严重错误"
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "edit": true,
+      "preservation": false,
+      "note": "建筑、树木、地面重绘，基座共享失败"
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "edit": true,
+      "preservation": false,
+      "note": "遥控器遮去/删除下方播放器，基座共享失败"
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "edit": true,
+      "preservation": false,
+      "note": "蛋糕包装上缘和奶油螺旋形状重绘"
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "edit": true,
+      "preservation": true,
+      "note": "主要编辑及保持通过；未见新增明显严重错误"
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "edit": true,
+      "preservation": true,
+      "note": "主要编辑及保持通过；未见新增明显严重错误"
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "edit": true,
+      "preservation": false,
+      "note": "两个蓝靠垫同时变红，基座共享失败"
+    },
+    {
+      "case_id": "free_414772",
+      "edit": true,
+      "preservation": true,
+      "note": "主要编辑及保持通过；未见新增明显严重错误"
+    },
+    {
+      "case_id": "free_557907",
+      "edit": true,
+      "preservation": true,
+      "note": "主要编辑及保持通过；未见新增明显严重错误"
+    },
+    {
+      "case_id": "free_275197",
+      "edit": true,
+      "preservation": false,
+      "note": "合并后退回窄长褶皱毛巾，丢失未合并版的结构修复"
+    },
+    {
+      "case_id": "free_475277",
+      "edit": true,
+      "preservation": false,
+      "note": "马鬃与前额纹理重绘"
+    },
+    {
+      "case_id": "free_272738",
+      "edit": true,
+      "preservation": false,
+      "note": "其他杯子同时变红，基座共享失败"
+    },
+    {
+      "case_id": "free_403221",
+      "edit": true,
+      "preservation": true,
+      "note": "主要编辑及保持通过；未见新增明显严重错误"
+    },
+    {
+      "case_id": "free_374087",
+      "edit": true,
+      "preservation": true,
+      "note": "主要编辑及保持通过；未见新增明显严重错误"
+    }
+  ],
+  "edit_passes": 15,
+  "joint_passes": 8,
+  "unmerged_joint": 9,
+  "F_joint": 11,
+  "numeric_gate": false,
+  "visual_gate": false,
+  "decision": "retain unmerged LoRA"
+}

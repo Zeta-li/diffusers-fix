@@ -1,0 +1,19 @@
+{
+  "updated_tensors": 144,
+  "total_tensors": 144,
+  "delta_L2": 5.895957529324922,
+  "counts": {
+    "invoked_dit": 3239,
+    "completed_dit": 3239,
+    "teacher_dit": 640,
+    "prefix_dit": 1959,
+    "gradient_student_dit": 640,
+    "contract_dit": 0,
+    "evaluation_dit": 0,
+    "optimizer_updates": 128,
+    "backward_passes": 512,
+    "successful_requests": 0,
+    "conditioning_only": 175
+  },
+  "checkpoint_sha256": "216794f27aacf696af7835612234dcdf04cb7dcc6dbfbc9ecffcfa3ef55332f7"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "requests": 64,
+  "invoked_dit": 512,
+  "completed_dit": 512,
+  "offline_Euler_steps": 512,
+  "retained_velocity_events": 32,
+  "same_budget_pairs": 16,
+  "training_updates": 0,
+  "teacher_dit": 0,
+  "RL_updates": 0,
+  "net_latency_requests": 0
+}

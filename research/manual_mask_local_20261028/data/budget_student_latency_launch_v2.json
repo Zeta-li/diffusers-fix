@@ -1,0 +1,8 @@
+{
+  "pid": 358889,
+  "created_utc": "2026-10-30T04:09:36.025766+00:00",
+  "planned_DiT": 800,
+  "planned_requests": 100,
+  "candidate": "LORA_ONLY",
+  "v1_executed_DiT": 0
+}

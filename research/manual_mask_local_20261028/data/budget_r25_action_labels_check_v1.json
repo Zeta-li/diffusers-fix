@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "source_records": 48,
+  "action_records": 144,
+  "training_sources": 32,
+  "calibration_sources": 16,
+  "disjoint_roles": true,
+  "reference_and_semantic_labels_match": true,
+  "trained_policy": false,
+  "RL_updates": 0
+}

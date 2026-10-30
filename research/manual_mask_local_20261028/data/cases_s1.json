@@ -1,0 +1,1082 @@
+{
+  "schema_version": 1,
+  "created_date_local": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "status": "ASSETS_READY_RUNTIME_PROTOCOL_NOT_YET_FROZEN",
+  "purpose": "S0/S1 nonholdout_training_pilot: native full versus project native+poststepblend full. No local cache, fitting, RL, or net-latency claim.",
+  "dataset": "osunlp/MagicBrush",
+  "dataset_revision": "6c254560879df7851233ea0fd2ae2a62764d0ef2",
+  "split": "nonholdout_training_pilot_seen_sources",
+  "n_sources": 8,
+  "strata": {
+    "replace": 4,
+    "attribute": 4
+  },
+  "target_wh": [
+    1024,
+    1024
+  ],
+  "target_hw": [
+    1024,
+    1024
+  ],
+  "seed": 2026102201,
+  "source_group_isolation": "These eight source IDs stay in training/development; new instructions do not create new independent validation sources. Old Dev16 not used; Test64 sealed.",
+  "source_only_asset_creation": true,
+  "target_images_read": false,
+  "test_media_read": false,
+  "old_generated_outputs_read_for_asset_creation": false,
+  "pipeline_contract": {
+    "model": "Qwen/Qwen-Image-Edit",
+    "acceleration_lora": "original Qwen-Image-Edit matching8step Lightning LoRA; exact revision/fileSHA to freeze in runtime protocol",
+    "mask_implementation": "project_native_plus_poststep_source_latent_blend",
+    "not_unmodified_official_inpaint": true,
+    "mask_fusion": "After scheduler step, M_allow keeps predicted target latent, complement replaced by source VAE latent at next sigma using fixed same epsilon; final source region sigma0. Actual code/scheduler/layout must be audited before run.",
+    "image_inputs": "One complete source image; masks are control tensors, not extra reference-image token sequences.",
+    "final_rgb_hard_copy": false,
+    "runtime_code_hashes_frozen": false,
+    "explicit_noise_assets_created": false
+  },
+  "planned_budget": {
+    "arms": [
+      "NATIVE_FULL",
+      "NATIVE_POSTSTEP_BLEND_FULL"
+    ],
+    "source_count": 8,
+    "requests": 16,
+    "effective_steps_per_request": 8,
+    "planned_real_dit": 128,
+    "replacement_real_dit": 64,
+    "attribute_real_dit": 64,
+    "teacher_dit": 0,
+    "local_executor_dit_in_this_budget": 0,
+    "all_white_black_diagnostics_in_this_budget": 0,
+    "diagnostic_suggestion_additional_requests": 2,
+    "diagnostic_suggestion_additional_dit": 16,
+    "diagnostic_source_id": "15953",
+    "actual_generated_requests_this_asset_task": 0,
+    "actual_real_dit_this_asset_task": 0,
+    "failure_retry_warmup_extra_accounting": "All actual calls counted separately; nominal8steps must be confirmed by hooks."
+  },
+  "mask_coordinate_contract": {
+    "source_canvas_wh": [
+      500,
+      500
+    ],
+    "source_rectangles": "[x0,y0,x1,y1), exclusive right/bottom; binary L0/255",
+    "M_allow_rule": "Dilate M_user rectangle16sourcepixels each side then clip to source canvas. Frozen before new output.",
+    "target_canvas_wh": [
+      1024,
+      1024
+    ],
+    "target_mask_resize": "nearest and explicit binary; no crop/pad; runtime must record actual processor and packed layout",
+    "estimated_core_is_not_runtime_ground_truth": true,
+    "core_coverage_requirement": "C_t contains every actual processed/packed mask location with m>0. Runtime actual counts may differ from geometric estimates; do not assert estimate equality."
+  },
+  "source_only_contact_sheets": [
+    {
+      "path": "inputs/s1_train8/source_only_contact_01_04.png",
+      "sha256": "265c471318d56ca59e0d7e9e602813e26df786fc0f04e378f94c843e597632b8"
+    },
+    {
+      "path": "inputs/s1_train8/source_only_contact_05_08.png",
+      "sha256": "4304927a85964c2748410474f381f4ee51a2061a6a3c82ab0f9913b0c06db573"
+    }
+  ],
+  "proposal_path": "notes/pilot_protocol_proposal.md",
+  "proposal_seed_superseded": "Per-source seeds in proposal are superseded by shared historical seed2026102201 and explicit epsilon contract in this JSON.",
+  "cases": [
+    {
+      "case_id": "local_train_286770_goat",
+      "order": 1,
+      "task_type": "replace",
+      "img_id": "286770",
+      "original_img_id": "286770",
+      "normalized_source_group_id": "286770",
+      "role": "nonholdout_training_pilot",
+      "official_split": "train",
+      "source_subset": "previously_seen_new_train24",
+      "prompt": "Replace only the leftmost lamb with a young goat of similar size in the same standing pose and position. Keep the other two sheep and the rest of the scene unchanged.",
+      "seed": 2026102201,
+      "image": "inputs/s1_train8/local_train_286770_goat/source.original",
+      "source_image": "inputs/s1_train8/local_train_286770_goat/source.original",
+      "source_sha256": "75247dd935a0f86f1a6a799d66b5bd8c8f3f65c5d50cdda829c6c6129404463a",
+      "source_wh": [
+        500,
+        500
+      ],
+      "source_mode": "RGB",
+      "source_format": "PNG",
+      "target_wh": [
+        1024,
+        1024
+      ],
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "user_mask": "inputs/s1_train8/local_train_286770_goat/M_user.png",
+      "allow_mask": "inputs/s1_train8/local_train_286770_goat/M_allow.png",
+      "mask_image": "inputs/s1_train8/local_train_286770_goat/M_allow.png",
+      "user_mask_sha256": "4309817cfcd95b53b0994a04e728197d56b73197fc93a525488c9f3e5bacea7d",
+      "allow_mask_sha256": "aa92b3abebbcd69d323be8a2dc5c5cf9baf60510f74923a253a248810d169396",
+      "mask_encoding": "L uint8 binary; white255 editable/allowed, black0 preserved",
+      "mask_source_wh": [
+        500,
+        500
+      ],
+      "mask_coordinate_convention": "source pixel edges [x0,y0,x1,y1), right/bottom exclusive",
+      "M_user_bbox_xyxy_exclusive": [
+        165,
+        180,
+        250,
+        395
+      ],
+      "M_allow_bbox_xyxy_exclusive": [
+        149,
+        164,
+        266,
+        411
+      ],
+      "allow_dilation_source_pixels": 16,
+      "mask_white_pixels": {
+        "M_user": 18275,
+        "M_allow": 28899
+      },
+      "source_only_overlay": "inputs/s1_train8/local_train_286770_goat/source_only_overlay.png",
+      "source_only_overlay_sha256": "8fc4d71ca4a57b096d05c45b61c1762b4519b8d41cb786d2357f50465f0329e7",
+      "source_only_panel": "inputs/s1_train8/local_train_286770_goat/source_only_panel.png",
+      "source_only_panel_sha256": "9f3949c030cbabc3fc483f95b45d0dfbce610a4f597f4e1556bac8d41a8a975e",
+      "mask_processing_reference": {
+        "status": "source_assets_ready_runtime_processor_not_frozen",
+        "reference_only": true,
+        "reference_algorithm": "PIL L nearest resize from500x500 to1024x1024; any white pixel in16x16 tile selects tile",
+        "reference_target_nearest_bbox_xyxy_exclusive": [
+          305,
+          336,
+          545,
+          842
+        ],
+        "reference_target_nearest_token_bbox_xyxy_exclusive": [
+          19,
+          21,
+          35,
+          53
+        ],
+        "reference_target_nearest_core_tokens": 512,
+        "reference_target_nearest_core_fraction": 0.125,
+        "geometric_estimated_token_bbox_xyxy_exclusive": [
+          19,
+          20,
+          35,
+          53
+        ],
+        "geometric_estimated_core_tokens": 528,
+        "geometric_estimated_core_fraction": 0.12890625,
+        "not_a_runtime_equality_assertion": true,
+        "runtime_requirement": "Compute core from actual processed/packed fusion mask with support(m)>0; record hash/shape/layout and actual count. Geometric estimates and PIL reference may differ by rounding from pipeline nearest mask. Never fail merely because runtime count differs from estimate; verify coverage and freeze one coordinate contract before generation."
+      },
+      "provenance": {
+        "dataset": "osunlp/MagicBrush",
+        "dataset_revision": "6c254560879df7851233ea0fd2ae2a62764d0ef2",
+        "original_instruction": "change a baby lamb into a lion",
+        "new_instruction_authored_before_new_generation": true,
+        "new_instruction_is_official_target_ground_truth": false,
+        "turn_index": 1,
+        "source_metadata_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/attempts/source_only_v2_20261025/cases_new_train24.json",
+        "source_metadata_sha256": "1acc78dbc53ef13f830d6d98a907fd6bf7168501d37cff980bcf87a750f37ac1",
+        "source_original_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/inputs/new_train24/286770/source.original",
+        "source_preregistration_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/source_preregistration.json",
+        "source_preregistration_sha256": "fe1659e9c1c09e31ff9cc8469da51bf06a0f863e1dfdf2bfe1c1ed4984e9d170",
+        "shard_path": "data/train-00020-of-00051-0e4f76bd7de39d68.parquet",
+        "row_group": 4,
+        "row_in_group": 29,
+        "row_in_shard": 157,
+        "target_column_read_for_this_stage": false,
+        "test_media_read_for_this_stage": false,
+        "old_generated_outputs_read_for_asset_creation": false,
+        "selection_is_independent_holdout": false,
+        "license_attribution": "MagicBrush/OSU-NLP-Group; preserve existing dataset/source license and attribution evidence; no new original-image rights inference"
+      },
+      "runtime_contract": {
+        "native_arm": "NATIVE_FULL",
+        "mask_arm": "NATIVE_POSTSTEP_BLEND_FULL",
+        "implementation_intent": "Project native Qwen edit pipeline plus scheduler-poststep source-latent blend; not unmodified official QwenImageEditInpaintPipeline.",
+        "weight_revision_sha_runtime_pending": true,
+        "code_hash_runtime_pending": true,
+        "noise_contract": "Explicit epsilon shared across arms for this source. All sources and arms seed2026102201. Runtime creates and records epsilon path/hash and actual initial latent; assets do not claim epsilon exists.",
+        "effective_dit_steps": 8,
+        "guidance_scale": 1.0,
+        "final_rgb_hard_copy": false
+      }
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "order": 2,
+      "task_type": "replace",
+      "img_id": "486018",
+      "original_img_id": "486018",
+      "normalized_source_group_id": "486018",
+      "role": "nonholdout_training_pilot",
+      "official_split": "train",
+      "source_subset": "previously_seen_new_train24",
+      "prompt": "Replace the black cat standing on top of the microwave with a small black dog of similar size, standing in the same position and facing the same direction. Preserve the microwave and the rest of the room.",
+      "seed": 2026102201,
+      "image": "inputs/s1_train8/local_train_486018_dog/source.original",
+      "source_image": "inputs/s1_train8/local_train_486018_dog/source.original",
+      "source_sha256": "17d9d3e818058c897ed59d4b5b9e01ab7559c881f3f33b352f6ae7137a3900ae",
+      "source_wh": [
+        500,
+        500
+      ],
+      "source_mode": "RGB",
+      "source_format": "PNG",
+      "target_wh": [
+        1024,
+        1024
+      ],
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "user_mask": "inputs/s1_train8/local_train_486018_dog/M_user.png",
+      "allow_mask": "inputs/s1_train8/local_train_486018_dog/M_allow.png",
+      "mask_image": "inputs/s1_train8/local_train_486018_dog/M_allow.png",
+      "user_mask_sha256": "de1c968c037f2d10ecafd494a0b45c785bd620000e954b189f224b223a3700f0",
+      "allow_mask_sha256": "5206b5d256332d8e5cef18d385ee1dac83f9bb451d7a57b0f2e7af8428850024",
+      "mask_encoding": "L uint8 binary; white255 editable/allowed, black0 preserved",
+      "mask_source_wh": [
+        500,
+        500
+      ],
+      "mask_coordinate_convention": "source pixel edges [x0,y0,x1,y1), right/bottom exclusive",
+      "M_user_bbox_xyxy_exclusive": [
+        75,
+        85,
+        275,
+        250
+      ],
+      "M_allow_bbox_xyxy_exclusive": [
+        59,
+        69,
+        291,
+        266
+      ],
+      "allow_dilation_source_pixels": 16,
+      "mask_white_pixels": {
+        "M_user": 33000,
+        "M_allow": 45704
+      },
+      "source_only_overlay": "inputs/s1_train8/local_train_486018_dog/source_only_overlay.png",
+      "source_only_overlay_sha256": "79b65b86256a607bdb65fd0104d554552f3e2c3ecad4fd52145143bc58ded585",
+      "source_only_panel": "inputs/s1_train8/local_train_486018_dog/source_only_panel.png",
+      "source_only_panel_sha256": "66ae8f84acb5ed3df9eb0ff28deaa3a465bb6e5b80e8e1d2d8122688517fa0af",
+      "mask_processing_reference": {
+        "status": "source_assets_ready_runtime_processor_not_frozen",
+        "reference_only": true,
+        "reference_algorithm": "PIL L nearest resize from500x500 to1024x1024; any white pixel in16x16 tile selects tile",
+        "reference_target_nearest_bbox_xyxy_exclusive": [
+          121,
+          141,
+          596,
+          545
+        ],
+        "reference_target_nearest_token_bbox_xyxy_exclusive": [
+          7,
+          8,
+          38,
+          35
+        ],
+        "reference_target_nearest_core_tokens": 837,
+        "reference_target_nearest_core_fraction": 0.204345703125,
+        "geometric_estimated_token_bbox_xyxy_exclusive": [
+          7,
+          8,
+          38,
+          35
+        ],
+        "geometric_estimated_core_tokens": 837,
+        "geometric_estimated_core_fraction": 0.204345703125,
+        "not_a_runtime_equality_assertion": true,
+        "runtime_requirement": "Compute core from actual processed/packed fusion mask with support(m)>0; record hash/shape/layout and actual count. Geometric estimates and PIL reference may differ by rounding from pipeline nearest mask. Never fail merely because runtime count differs from estimate; verify coverage and freeze one coordinate contract before generation."
+      },
+      "provenance": {
+        "dataset": "osunlp/MagicBrush",
+        "dataset_revision": "6c254560879df7851233ea0fd2ae2a62764d0ef2",
+        "original_instruction": "Let's add a man next to the cat.",
+        "new_instruction_authored_before_new_generation": true,
+        "new_instruction_is_official_target_ground_truth": false,
+        "turn_index": 1,
+        "source_metadata_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/attempts/source_only_v2_20261025/cases_new_train24.json",
+        "source_metadata_sha256": "1acc78dbc53ef13f830d6d98a907fd6bf7168501d37cff980bcf87a750f37ac1",
+        "source_original_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/inputs/new_train24/486018/source.original",
+        "source_preregistration_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/source_preregistration.json",
+        "source_preregistration_sha256": "fe1659e9c1c09e31ff9cc8469da51bf06a0f863e1dfdf2bfe1c1ed4984e9d170",
+        "shard_path": "data/train-00021-of-00051-aea46908b3d257d7.parquet",
+        "row_group": 5,
+        "row_in_group": 1,
+        "row_in_shard": 161,
+        "target_column_read_for_this_stage": false,
+        "test_media_read_for_this_stage": false,
+        "old_generated_outputs_read_for_asset_creation": false,
+        "selection_is_independent_holdout": false,
+        "license_attribution": "MagicBrush/OSU-NLP-Group; preserve existing dataset/source license and attribution evidence; no new original-image rights inference"
+      },
+      "runtime_contract": {
+        "native_arm": "NATIVE_FULL",
+        "mask_arm": "NATIVE_POSTSTEP_BLEND_FULL",
+        "implementation_intent": "Project native Qwen edit pipeline plus scheduler-poststep source-latent blend; not unmodified official QwenImageEditInpaintPipeline.",
+        "weight_revision_sha_runtime_pending": true,
+        "code_hash_runtime_pending": true,
+        "noise_contract": "Explicit epsilon shared across arms for this source. All sources and arms seed2026102201. Runtime creates and records epsilon path/hash and actual initial latent; assets do not claim epsilon exists.",
+        "effective_dit_steps": 8,
+        "guidance_scale": 1.0,
+        "final_rgb_hard_copy": false
+      }
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "order": 3,
+      "task_type": "replace",
+      "img_id": "178810",
+      "original_img_id": "178810",
+      "normalized_source_group_id": "178810",
+      "role": "nonholdout_training_pilot",
+      "official_split": "train",
+      "source_subset": "previously_seen_new_train24",
+      "prompt": "Replace the fire hydrant with a short red cylindrical street bollard of similar height at the same ground position. Keep the wall, trees, pavement, and the rest of the scene unchanged.",
+      "seed": 2026102201,
+      "image": "inputs/s1_train8/local_train_178810_bollard/source.original",
+      "source_image": "inputs/s1_train8/local_train_178810_bollard/source.original",
+      "source_sha256": "840d713265c58ef1b6ead8f0804e1688f142b48cc136b75494933d3c9b9d3d00",
+      "source_wh": [
+        500,
+        500
+      ],
+      "source_mode": "RGB",
+      "source_format": "PNG",
+      "target_wh": [
+        1024,
+        1024
+      ],
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "user_mask": "inputs/s1_train8/local_train_178810_bollard/M_user.png",
+      "allow_mask": "inputs/s1_train8/local_train_178810_bollard/M_allow.png",
+      "mask_image": "inputs/s1_train8/local_train_178810_bollard/M_allow.png",
+      "user_mask_sha256": "a9304a44c0fd693e2878be650d6700ea228aaf4909cbdffc066c62fcf02b9834",
+      "allow_mask_sha256": "332b75a488452442d66801a9cdfa959afa639274200a20f4ceaf9c159bf93e35",
+      "mask_encoding": "L uint8 binary; white255 editable/allowed, black0 preserved",
+      "mask_source_wh": [
+        500,
+        500
+      ],
+      "mask_coordinate_convention": "source pixel edges [x0,y0,x1,y1), right/bottom exclusive",
+      "M_user_bbox_xyxy_exclusive": [
+        155,
+        345,
+        230,
+        465
+      ],
+      "M_allow_bbox_xyxy_exclusive": [
+        139,
+        329,
+        246,
+        481
+      ],
+      "allow_dilation_source_pixels": 16,
+      "mask_white_pixels": {
+        "M_user": 9000,
+        "M_allow": 16264
+      },
+      "source_only_overlay": "inputs/s1_train8/local_train_178810_bollard/source_only_overlay.png",
+      "source_only_overlay_sha256": "9297bffc4c57d58fea231b3bf4806d0277229ea0c1f8842df55fd9bda1ccfff7",
+      "source_only_panel": "inputs/s1_train8/local_train_178810_bollard/source_only_panel.png",
+      "source_only_panel_sha256": "4c52b38f0cc4bd015621771da0ad9d6fee5f5ba91c49663a4246cc5f61e01abe",
+      "mask_processing_reference": {
+        "status": "source_assets_ready_runtime_processor_not_frozen",
+        "reference_only": true,
+        "reference_algorithm": "PIL L nearest resize from500x500 to1024x1024; any white pixel in16x16 tile selects tile",
+        "reference_target_nearest_bbox_xyxy_exclusive": [
+          285,
+          674,
+          504,
+          985
+        ],
+        "reference_target_nearest_token_bbox_xyxy_exclusive": [
+          17,
+          42,
+          32,
+          62
+        ],
+        "reference_target_nearest_core_tokens": 300,
+        "reference_target_nearest_core_fraction": 0.0732421875,
+        "geometric_estimated_token_bbox_xyxy_exclusive": [
+          17,
+          42,
+          32,
+          62
+        ],
+        "geometric_estimated_core_tokens": 300,
+        "geometric_estimated_core_fraction": 0.0732421875,
+        "not_a_runtime_equality_assertion": true,
+        "runtime_requirement": "Compute core from actual processed/packed fusion mask with support(m)>0; record hash/shape/layout and actual count. Geometric estimates and PIL reference may differ by rounding from pipeline nearest mask. Never fail merely because runtime count differs from estimate; verify coverage and freeze one coordinate contract before generation."
+      },
+      "provenance": {
+        "dataset": "osunlp/MagicBrush",
+        "dataset_revision": "6c254560879df7851233ea0fd2ae2a62764d0ef2",
+        "original_instruction": "put a fireman in place of the hydrant",
+        "new_instruction_authored_before_new_generation": true,
+        "new_instruction_is_official_target_ground_truth": false,
+        "turn_index": 1,
+        "source_metadata_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/attempts/source_only_v2_20261025/cases_new_train24.json",
+        "source_metadata_sha256": "1acc78dbc53ef13f830d6d98a907fd6bf7168501d37cff980bcf87a750f37ac1",
+        "source_original_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/inputs/new_train24/178810/source.original",
+        "source_preregistration_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/source_preregistration.json",
+        "source_preregistration_sha256": "fe1659e9c1c09e31ff9cc8469da51bf06a0f863e1dfdf2bfe1c1ed4984e9d170",
+        "shard_path": "data/train-00033-of-00051-80e659de48bfed44.parquet",
+        "row_group": 3,
+        "row_in_group": 9,
+        "row_in_shard": 105,
+        "target_column_read_for_this_stage": false,
+        "test_media_read_for_this_stage": false,
+        "old_generated_outputs_read_for_asset_creation": false,
+        "selection_is_independent_holdout": false,
+        "license_attribution": "MagicBrush/OSU-NLP-Group; preserve existing dataset/source license and attribution evidence; no new original-image rights inference"
+      },
+      "runtime_contract": {
+        "native_arm": "NATIVE_FULL",
+        "mask_arm": "NATIVE_POSTSTEP_BLEND_FULL",
+        "implementation_intent": "Project native Qwen edit pipeline plus scheduler-poststep source-latent blend; not unmodified official QwenImageEditInpaintPipeline.",
+        "weight_revision_sha_runtime_pending": true,
+        "code_hash_runtime_pending": true,
+        "noise_contract": "Explicit epsilon shared across arms for this source. All sources and arms seed2026102201. Runtime creates and records epsilon path/hash and actual initial latent; assets do not claim epsilon exists.",
+        "effective_dit_steps": 8,
+        "guidance_scale": 1.0,
+        "final_rgb_hard_copy": false
+      }
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "order": 4,
+      "task_type": "replace",
+      "img_id": "429111",
+      "original_img_id": "429111",
+      "normalized_source_group_id": "429111",
+      "role": "nonholdout_training_pilot",
+      "official_split": "train",
+      "source_subset": "previously_seen_new_train24",
+      "prompt": "Replace the red mobile phone on the right side of the desk with a red television remote control of similar size and orientation. Keep all the other desk objects unchanged.",
+      "seed": 2026102201,
+      "image": "inputs/s1_train8/local_train_429111_remote/source.original",
+      "source_image": "inputs/s1_train8/local_train_429111_remote/source.original",
+      "source_sha256": "88309e0d2e156a12d8bf79000db2e435625cacc16d5a372c5967e6f81142a67a",
+      "source_wh": [
+        500,
+        500
+      ],
+      "source_mode": "RGB",
+      "source_format": "PNG",
+      "target_wh": [
+        1024,
+        1024
+      ],
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "user_mask": "inputs/s1_train8/local_train_429111_remote/M_user.png",
+      "allow_mask": "inputs/s1_train8/local_train_429111_remote/M_allow.png",
+      "mask_image": "inputs/s1_train8/local_train_429111_remote/M_allow.png",
+      "user_mask_sha256": "6e6bdf5f2219c709c1829ee81d47b0a8796bd63110b7160389aea0b1be4864ee",
+      "allow_mask_sha256": "b4274726615c4547ed1edc0ed9ae859dbb7266a19ef9d319db5790dd7f2f775c",
+      "mask_encoding": "L uint8 binary; white255 editable/allowed, black0 preserved",
+      "mask_source_wh": [
+        500,
+        500
+      ],
+      "mask_coordinate_convention": "source pixel edges [x0,y0,x1,y1), right/bottom exclusive",
+      "M_user_bbox_xyxy_exclusive": [
+        330,
+        120,
+        380,
+        210
+      ],
+      "M_allow_bbox_xyxy_exclusive": [
+        314,
+        104,
+        396,
+        226
+      ],
+      "allow_dilation_source_pixels": 16,
+      "mask_white_pixels": {
+        "M_user": 4500,
+        "M_allow": 10004
+      },
+      "source_only_overlay": "inputs/s1_train8/local_train_429111_remote/source_only_overlay.png",
+      "source_only_overlay_sha256": "eb38c12f69419df8b2cba89337a297b745d3f3678edb2d04d3774f9de8fbb073",
+      "source_only_panel": "inputs/s1_train8/local_train_429111_remote/source_only_panel.png",
+      "source_only_panel_sha256": "8fd885b2aad98e0e58175a627686f6a96a2640501f2e086d776c3550442f7178",
+      "mask_processing_reference": {
+        "status": "source_assets_ready_runtime_processor_not_frozen",
+        "reference_only": true,
+        "reference_algorithm": "PIL L nearest resize from500x500 to1024x1024; any white pixel in16x16 tile selects tile",
+        "reference_target_nearest_bbox_xyxy_exclusive": [
+          643,
+          213,
+          811,
+          463
+        ],
+        "reference_target_nearest_token_bbox_xyxy_exclusive": [
+          40,
+          13,
+          51,
+          29
+        ],
+        "reference_target_nearest_core_tokens": 176,
+        "reference_target_nearest_core_fraction": 0.04296875,
+        "geometric_estimated_token_bbox_xyxy_exclusive": [
+          40,
+          13,
+          51,
+          29
+        ],
+        "geometric_estimated_core_tokens": 176,
+        "geometric_estimated_core_fraction": 0.04296875,
+        "not_a_runtime_equality_assertion": true,
+        "runtime_requirement": "Compute core from actual processed/packed fusion mask with support(m)>0; record hash/shape/layout and actual count. Geometric estimates and PIL reference may differ by rounding from pipeline nearest mask. Never fail merely because runtime count differs from estimate; verify coverage and freeze one coordinate contract before generation."
+      },
+      "provenance": {
+        "dataset": "osunlp/MagicBrush",
+        "dataset_revision": "6c254560879df7851233ea0fd2ae2a62764d0ef2",
+        "original_instruction": "change the keyboard into a map",
+        "new_instruction_authored_before_new_generation": true,
+        "new_instruction_is_official_target_ground_truth": false,
+        "turn_index": 1,
+        "source_metadata_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/attempts/source_only_v2_20261025/cases_new_train24.json",
+        "source_metadata_sha256": "1acc78dbc53ef13f830d6d98a907fd6bf7168501d37cff980bcf87a750f37ac1",
+        "source_original_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/inputs/new_train24/429111/source.original",
+        "source_preregistration_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/source_preregistration.json",
+        "source_preregistration_sha256": "fe1659e9c1c09e31ff9cc8469da51bf06a0f863e1dfdf2bfe1c1ed4984e9d170",
+        "shard_path": "data/train-00006-of-00051-1601e4998b870515.parquet",
+        "row_group": 4,
+        "row_in_group": 0,
+        "row_in_shard": 128,
+        "target_column_read_for_this_stage": false,
+        "test_media_read_for_this_stage": false,
+        "old_generated_outputs_read_for_asset_creation": false,
+        "selection_is_independent_holdout": false,
+        "license_attribution": "MagicBrush/OSU-NLP-Group; preserve existing dataset/source license and attribution evidence; no new original-image rights inference"
+      },
+      "runtime_contract": {
+        "native_arm": "NATIVE_FULL",
+        "mask_arm": "NATIVE_POSTSTEP_BLEND_FULL",
+        "implementation_intent": "Project native Qwen edit pipeline plus scheduler-poststep source-latent blend; not unmodified official QwenImageEditInpaintPipeline.",
+        "weight_revision_sha_runtime_pending": true,
+        "code_hash_runtime_pending": true,
+        "noise_contract": "Explicit epsilon shared across arms for this source. All sources and arms seed2026102201. Runtime creates and records epsilon path/hash and actual initial latent; assets do not claim epsilon exists.",
+        "effective_dit_steps": 8,
+        "guidance_scale": 1.0,
+        "final_rgb_hard_copy": false
+      }
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "order": 5,
+      "task_type": "attribute",
+      "img_id": "15953",
+      "original_img_id": "15953",
+      "normalized_source_group_id": "15953",
+      "role": "nonholdout_training_pilot",
+      "official_split": "train",
+      "source_subset": "previously_seen_new_train24",
+      "prompt": "Change only the white frosting on top of the cupcake to chocolate-brown frosting. Preserve its spiral shape, the cupcake wrapper, the apple, the plate, and the rest of the image.",
+      "seed": 2026102201,
+      "image": "inputs/s1_train8/local_train_15953_chocolate/source.original",
+      "source_image": "inputs/s1_train8/local_train_15953_chocolate/source.original",
+      "source_sha256": "dcdc856732161f84c3052750d4f0acaee67e91fbec25b58f3ffaecb9c16ed723",
+      "source_wh": [
+        500,
+        500
+      ],
+      "source_mode": "RGB",
+      "source_format": "PNG",
+      "target_wh": [
+        1024,
+        1024
+      ],
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "user_mask": "inputs/s1_train8/local_train_15953_chocolate/M_user.png",
+      "allow_mask": "inputs/s1_train8/local_train_15953_chocolate/M_allow.png",
+      "mask_image": "inputs/s1_train8/local_train_15953_chocolate/M_allow.png",
+      "user_mask_sha256": "f881e8bd20760c9ef6b2ae55dbc5903e19c0172df2ac6be07dec661a81be1568",
+      "allow_mask_sha256": "ada9242eda627e1197350f427a129b66c601df497f7e58312b8ea1084563427a",
+      "mask_encoding": "L uint8 binary; white255 editable/allowed, black0 preserved",
+      "mask_source_wh": [
+        500,
+        500
+      ],
+      "mask_coordinate_convention": "source pixel edges [x0,y0,x1,y1), right/bottom exclusive",
+      "M_user_bbox_xyxy_exclusive": [
+        210,
+        110,
+        465,
+        255
+      ],
+      "M_allow_bbox_xyxy_exclusive": [
+        194,
+        94,
+        481,
+        271
+      ],
+      "allow_dilation_source_pixels": 16,
+      "mask_white_pixels": {
+        "M_user": 36975,
+        "M_allow": 50799
+      },
+      "source_only_overlay": "inputs/s1_train8/local_train_15953_chocolate/source_only_overlay.png",
+      "source_only_overlay_sha256": "f3911d7a9f97ae667532917212e3b21f32783a814cb21b82f9faea7f5b98abfa",
+      "source_only_panel": "inputs/s1_train8/local_train_15953_chocolate/source_only_panel.png",
+      "source_only_panel_sha256": "04f2f14f5ae284f6e55977e106e8b7ac863c0766f64a5be00439981c0ee2918d",
+      "mask_processing_reference": {
+        "status": "source_assets_ready_runtime_processor_not_frozen",
+        "reference_only": true,
+        "reference_algorithm": "PIL L nearest resize from500x500 to1024x1024; any white pixel in16x16 tile selects tile",
+        "reference_target_nearest_bbox_xyxy_exclusive": [
+          397,
+          193,
+          985,
+          555
+        ],
+        "reference_target_nearest_token_bbox_xyxy_exclusive": [
+          24,
+          12,
+          62,
+          35
+        ],
+        "reference_target_nearest_core_tokens": 874,
+        "reference_target_nearest_core_fraction": 0.21337890625,
+        "geometric_estimated_token_bbox_xyxy_exclusive": [
+          24,
+          12,
+          62,
+          35
+        ],
+        "geometric_estimated_core_tokens": 874,
+        "geometric_estimated_core_fraction": 0.21337890625,
+        "not_a_runtime_equality_assertion": true,
+        "runtime_requirement": "Compute core from actual processed/packed fusion mask with support(m)>0; record hash/shape/layout and actual count. Geometric estimates and PIL reference may differ by rounding from pipeline nearest mask. Never fail merely because runtime count differs from estimate; verify coverage and freeze one coordinate contract before generation."
+      },
+      "provenance": {
+        "dataset": "osunlp/MagicBrush",
+        "dataset_revision": "6c254560879df7851233ea0fd2ae2a62764d0ef2",
+        "original_instruction": "let the cupcake be topped with chocolate cream",
+        "new_instruction_authored_before_new_generation": true,
+        "new_instruction_is_official_target_ground_truth": false,
+        "turn_index": 1,
+        "source_metadata_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/attempts/source_only_v2_20261025/cases_new_train24.json",
+        "source_metadata_sha256": "1acc78dbc53ef13f830d6d98a907fd6bf7168501d37cff980bcf87a750f37ac1",
+        "source_original_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/inputs/new_train24/15953/source.original",
+        "source_preregistration_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/source_preregistration.json",
+        "source_preregistration_sha256": "fe1659e9c1c09e31ff9cc8469da51bf06a0f863e1dfdf2bfe1c1ed4984e9d170",
+        "shard_path": "data/train-00042-of-00051-494734a9b0704ee9.parquet",
+        "row_group": 2,
+        "row_in_group": 16,
+        "row_in_shard": 80,
+        "target_column_read_for_this_stage": false,
+        "test_media_read_for_this_stage": false,
+        "old_generated_outputs_read_for_asset_creation": false,
+        "selection_is_independent_holdout": false,
+        "license_attribution": "MagicBrush/OSU-NLP-Group; preserve existing dataset/source license and attribution evidence; no new original-image rights inference"
+      },
+      "runtime_contract": {
+        "native_arm": "NATIVE_FULL",
+        "mask_arm": "NATIVE_POSTSTEP_BLEND_FULL",
+        "implementation_intent": "Project native Qwen edit pipeline plus scheduler-poststep source-latent blend; not unmodified official QwenImageEditInpaintPipeline.",
+        "weight_revision_sha_runtime_pending": true,
+        "code_hash_runtime_pending": true,
+        "noise_contract": "Explicit epsilon shared across arms for this source. All sources and arms seed2026102201. Runtime creates and records epsilon path/hash and actual initial latent; assets do not claim epsilon exists.",
+        "effective_dit_steps": 8,
+        "guidance_scale": 1.0,
+        "final_rgb_hard_copy": false
+      }
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "order": 6,
+      "task_type": "attribute",
+      "img_id": "26498",
+      "original_img_id": "26498",
+      "normalized_source_group_id": "26498",
+      "role": "nonholdout_training_pilot",
+      "official_split": "train",
+      "source_subset": "previously_seen_new_train24",
+      "prompt": "Make the baseball bat look like natural brown wood while preserving its exact position, length, and direction. Keep the player's hands, clothing, and the rest of the scene unchanged.",
+      "seed": 2026102201,
+      "image": "inputs/s1_train8/local_train_26498_woodbat/source.original",
+      "source_image": "inputs/s1_train8/local_train_26498_woodbat/source.original",
+      "source_sha256": "6007d94a612a0e6bc90ef659ac98e10770a0dd12272b7ee497dc72a949aca264",
+      "source_wh": [
+        500,
+        500
+      ],
+      "source_mode": "RGB",
+      "source_format": "PNG",
+      "target_wh": [
+        1024,
+        1024
+      ],
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "user_mask": "inputs/s1_train8/local_train_26498_woodbat/M_user.png",
+      "allow_mask": "inputs/s1_train8/local_train_26498_woodbat/M_allow.png",
+      "mask_image": "inputs/s1_train8/local_train_26498_woodbat/M_allow.png",
+      "user_mask_sha256": "0265f283fb88732d3e8cd74701b186e94123218c824c1b9eb70003bcfe85eff2",
+      "allow_mask_sha256": "20fc22e7d23ad2930ae11bdba13a617a1051f07e4cc3d34048c6802bfef2d3fb",
+      "mask_encoding": "L uint8 binary; white255 editable/allowed, black0 preserved",
+      "mask_source_wh": [
+        500,
+        500
+      ],
+      "mask_coordinate_convention": "source pixel edges [x0,y0,x1,y1), right/bottom exclusive",
+      "M_user_bbox_xyxy_exclusive": [
+        130,
+        208,
+        250,
+        245
+      ],
+      "M_allow_bbox_xyxy_exclusive": [
+        114,
+        192,
+        266,
+        261
+      ],
+      "allow_dilation_source_pixels": 16,
+      "mask_white_pixels": {
+        "M_user": 4440,
+        "M_allow": 10488
+      },
+      "source_only_overlay": "inputs/s1_train8/local_train_26498_woodbat/source_only_overlay.png",
+      "source_only_overlay_sha256": "cc4904394761e8627e4f64ada34cc309d5563bb24a6257a2ff310cc4b8a1863d",
+      "source_only_panel": "inputs/s1_train8/local_train_26498_woodbat/source_only_panel.png",
+      "source_only_panel_sha256": "b6886d6741bb9c6520083c33ec4544ec37c360c610a8c1150fdbf1c3f5c6374f",
+      "mask_processing_reference": {
+        "status": "source_assets_ready_runtime_processor_not_frozen",
+        "reference_only": true,
+        "reference_algorithm": "PIL L nearest resize from500x500 to1024x1024; any white pixel in16x16 tile selects tile",
+        "reference_target_nearest_bbox_xyxy_exclusive": [
+          233,
+          393,
+          545,
+          535
+        ],
+        "reference_target_nearest_token_bbox_xyxy_exclusive": [
+          14,
+          24,
+          35,
+          34
+        ],
+        "reference_target_nearest_core_tokens": 210,
+        "reference_target_nearest_core_fraction": 0.05126953125,
+        "geometric_estimated_token_bbox_xyxy_exclusive": [
+          14,
+          24,
+          35,
+          34
+        ],
+        "geometric_estimated_core_tokens": 210,
+        "geometric_estimated_core_fraction": 0.05126953125,
+        "not_a_runtime_equality_assertion": true,
+        "runtime_requirement": "Compute core from actual processed/packed fusion mask with support(m)>0; record hash/shape/layout and actual count. Geometric estimates and PIL reference may differ by rounding from pipeline nearest mask. Never fail merely because runtime count differs from estimate; verify coverage and freeze one coordinate contract before generation."
+      },
+      "provenance": {
+        "dataset": "osunlp/MagicBrush",
+        "dataset_revision": "6c254560879df7851233ea0fd2ae2a62764d0ef2",
+        "original_instruction": "Make the bat wooden.",
+        "new_instruction_authored_before_new_generation": true,
+        "new_instruction_is_official_target_ground_truth": false,
+        "turn_index": 1,
+        "source_metadata_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/attempts/source_only_v2_20261025/cases_new_train24.json",
+        "source_metadata_sha256": "1acc78dbc53ef13f830d6d98a907fd6bf7168501d37cff980bcf87a750f37ac1",
+        "source_original_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/inputs/new_train24/26498/source.original",
+        "source_preregistration_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/source_preregistration.json",
+        "source_preregistration_sha256": "fe1659e9c1c09e31ff9cc8469da51bf06a0f863e1dfdf2bfe1c1ed4984e9d170",
+        "shard_path": "data/train-00028-of-00051-a864102cdd7e0dd0.parquet",
+        "row_group": 0,
+        "row_in_group": 14,
+        "row_in_shard": 14,
+        "target_column_read_for_this_stage": false,
+        "test_media_read_for_this_stage": false,
+        "old_generated_outputs_read_for_asset_creation": false,
+        "selection_is_independent_holdout": false,
+        "license_attribution": "MagicBrush/OSU-NLP-Group; preserve existing dataset/source license and attribution evidence; no new original-image rights inference"
+      },
+      "runtime_contract": {
+        "native_arm": "NATIVE_FULL",
+        "mask_arm": "NATIVE_POSTSTEP_BLEND_FULL",
+        "implementation_intent": "Project native Qwen edit pipeline plus scheduler-poststep source-latent blend; not unmodified official QwenImageEditInpaintPipeline.",
+        "weight_revision_sha_runtime_pending": true,
+        "code_hash_runtime_pending": true,
+        "noise_contract": "Explicit epsilon shared across arms for this source. All sources and arms seed2026102201. Runtime creates and records epsilon path/hash and actual initial latent; assets do not claim epsilon exists.",
+        "effective_dit_steps": 8,
+        "guidance_scale": 1.0,
+        "final_rgb_hard_copy": false
+      }
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "order": 7,
+      "task_type": "attribute",
+      "img_id": "452168",
+      "original_img_id": "452168",
+      "normalized_source_group_id": "452168",
+      "role": "nonholdout_training_pilot",
+      "official_split": "train",
+      "source_subset": "previously_seen_new_train24",
+      "prompt": "Change only the black background of the sign to dark blue. Keep the exact white words NO BIRDS ALLOWED, their shapes and positions, and the rest of the scene unchanged.",
+      "seed": 2026102201,
+      "image": "inputs/s1_train8/local_train_452168_bluesign/source.original",
+      "source_image": "inputs/s1_train8/local_train_452168_bluesign/source.original",
+      "source_sha256": "03c2682225df3e237686fb4fa548d376e5ff0385d88ac4a200d3031c91f8caac",
+      "source_wh": [
+        500,
+        500
+      ],
+      "source_mode": "RGB",
+      "source_format": "PNG",
+      "target_wh": [
+        1024,
+        1024
+      ],
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "user_mask": "inputs/s1_train8/local_train_452168_bluesign/M_user.png",
+      "allow_mask": "inputs/s1_train8/local_train_452168_bluesign/M_allow.png",
+      "mask_image": "inputs/s1_train8/local_train_452168_bluesign/M_allow.png",
+      "user_mask_sha256": "a08a34c21611937983a3684d4b158d19059892e954a36f4df951355375d26799",
+      "allow_mask_sha256": "41b48d059a27442692b86cf0aeb789d727ce73f8393535fa0bea7cf53b8f64fe",
+      "mask_encoding": "L uint8 binary; white255 editable/allowed, black0 preserved",
+      "mask_source_wh": [
+        500,
+        500
+      ],
+      "mask_coordinate_convention": "source pixel edges [x0,y0,x1,y1), right/bottom exclusive",
+      "M_user_bbox_xyxy_exclusive": [
+        115,
+        275,
+        370,
+        430
+      ],
+      "M_allow_bbox_xyxy_exclusive": [
+        99,
+        259,
+        386,
+        446
+      ],
+      "allow_dilation_source_pixels": 16,
+      "mask_white_pixels": {
+        "M_user": 39525,
+        "M_allow": 53669
+      },
+      "source_only_overlay": "inputs/s1_train8/local_train_452168_bluesign/source_only_overlay.png",
+      "source_only_overlay_sha256": "5224f859106feb05ccee400ec67f003280e497be9e3df799b122e798e21f35ab",
+      "source_only_panel": "inputs/s1_train8/local_train_452168_bluesign/source_only_panel.png",
+      "source_only_panel_sha256": "7bff9127f7f0d315041a0923ec3aec42dfeb914f8bebe1f248e48ecb30b4c29b",
+      "mask_processing_reference": {
+        "status": "source_assets_ready_runtime_processor_not_frozen",
+        "reference_only": true,
+        "reference_algorithm": "PIL L nearest resize from500x500 to1024x1024; any white pixel in16x16 tile selects tile",
+        "reference_target_nearest_bbox_xyxy_exclusive": [
+          203,
+          530,
+          791,
+          913
+        ],
+        "reference_target_nearest_token_bbox_xyxy_exclusive": [
+          12,
+          33,
+          50,
+          58
+        ],
+        "reference_target_nearest_core_tokens": 950,
+        "reference_target_nearest_core_fraction": 0.23193359375,
+        "geometric_estimated_token_bbox_xyxy_exclusive": [
+          12,
+          33,
+          50,
+          58
+        ],
+        "geometric_estimated_core_tokens": 950,
+        "geometric_estimated_core_fraction": 0.23193359375,
+        "not_a_runtime_equality_assertion": true,
+        "runtime_requirement": "Compute core from actual processed/packed fusion mask with support(m)>0; record hash/shape/layout and actual count. Geometric estimates and PIL reference may differ by rounding from pipeline nearest mask. Never fail merely because runtime count differs from estimate; verify coverage and freeze one coordinate contract before generation."
+      },
+      "provenance": {
+        "dataset": "osunlp/MagicBrush",
+        "dataset_revision": "6c254560879df7851233ea0fd2ae2a62764d0ef2",
+        "original_instruction": "change the sign to read No Parking",
+        "new_instruction_authored_before_new_generation": true,
+        "new_instruction_is_official_target_ground_truth": false,
+        "turn_index": 1,
+        "source_metadata_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/attempts/source_only_v2_20261025/cases_new_train24.json",
+        "source_metadata_sha256": "1acc78dbc53ef13f830d6d98a907fd6bf7168501d37cff980bcf87a750f37ac1",
+        "source_original_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/inputs/new_train24/452168/source.original",
+        "source_preregistration_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/source_preregistration.json",
+        "source_preregistration_sha256": "fe1659e9c1c09e31ff9cc8469da51bf06a0f863e1dfdf2bfe1c1ed4984e9d170",
+        "shard_path": "data/train-00047-of-00051-a99476a212efcb35.parquet",
+        "row_group": 3,
+        "row_in_group": 3,
+        "row_in_shard": 99,
+        "target_column_read_for_this_stage": false,
+        "test_media_read_for_this_stage": false,
+        "old_generated_outputs_read_for_asset_creation": false,
+        "selection_is_independent_holdout": false,
+        "license_attribution": "MagicBrush/OSU-NLP-Group; preserve existing dataset/source license and attribution evidence; no new original-image rights inference"
+      },
+      "runtime_contract": {
+        "native_arm": "NATIVE_FULL",
+        "mask_arm": "NATIVE_POSTSTEP_BLEND_FULL",
+        "implementation_intent": "Project native Qwen edit pipeline plus scheduler-poststep source-latent blend; not unmodified official QwenImageEditInpaintPipeline.",
+        "weight_revision_sha_runtime_pending": true,
+        "code_hash_runtime_pending": true,
+        "noise_contract": "Explicit epsilon shared across arms for this source. All sources and arms seed2026102201. Runtime creates and records epsilon path/hash and actual initial latent; assets do not claim epsilon exists.",
+        "effective_dit_steps": 8,
+        "guidance_scale": 1.0,
+        "final_rgb_hard_copy": false
+      }
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "order": 8,
+      "task_type": "attribute",
+      "img_id": "210597",
+      "original_img_id": "210597",
+      "normalized_source_group_id": "210597",
+      "role": "nonholdout_training_pilot",
+      "official_split": "train",
+      "source_subset": "previously_seen_new_train24",
+      "prompt": "Change only the blue cushion lying flat on the right side of the sofa to red. Preserve its shape, texture, and position. Keep the other cushions and the rest of the room unchanged.",
+      "seed": 2026102201,
+      "image": "inputs/s1_train8/local_train_210597_redcushion/source.original",
+      "source_image": "inputs/s1_train8/local_train_210597_redcushion/source.original",
+      "source_sha256": "25167d7069dc155c0ed1e3595d67e1036db0fa2aa8ce6e3e8acfc2dbb8d78a38",
+      "source_wh": [
+        500,
+        500
+      ],
+      "source_mode": "RGB",
+      "source_format": "PNG",
+      "target_wh": [
+        1024,
+        1024
+      ],
+      "target_hw": [
+        1024,
+        1024
+      ],
+      "user_mask": "inputs/s1_train8/local_train_210597_redcushion/M_user.png",
+      "allow_mask": "inputs/s1_train8/local_train_210597_redcushion/M_allow.png",
+      "mask_image": "inputs/s1_train8/local_train_210597_redcushion/M_allow.png",
+      "user_mask_sha256": "7da5687a8f5202f1ee26d3b2c5296b4697a1f3b7081bbc5675bc44ce46734156",
+      "allow_mask_sha256": "00c051bdd9a1e801b60bc40be07fc9bea7707bb87daa13b93e78898f1d0d853b",
+      "mask_encoding": "L uint8 binary; white255 editable/allowed, black0 preserved",
+      "mask_source_wh": [
+        500,
+        500
+      ],
+      "mask_coordinate_convention": "source pixel edges [x0,y0,x1,y1), right/bottom exclusive",
+      "M_user_bbox_xyxy_exclusive": [
+        298,
+        284,
+        403,
+        326
+      ],
+      "M_allow_bbox_xyxy_exclusive": [
+        282,
+        268,
+        419,
+        342
+      ],
+      "allow_dilation_source_pixels": 16,
+      "mask_white_pixels": {
+        "M_user": 4410,
+        "M_allow": 10138
+      },
+      "source_only_overlay": "inputs/s1_train8/local_train_210597_redcushion/source_only_overlay.png",
+      "source_only_overlay_sha256": "f71b6f662f73f7a8e0802f7b9af1f6779b67d807f0fbf6482a2188a7464c0de4",
+      "source_only_panel": "inputs/s1_train8/local_train_210597_redcushion/source_only_panel.png",
+      "source_only_panel_sha256": "45516b8fe11166832f9fe077b316462ce7325a11a4ce14bde5c92512aec6247e",
+      "mask_processing_reference": {
+        "status": "source_assets_ready_runtime_processor_not_frozen",
+        "reference_only": true,
+        "reference_algorithm": "PIL L nearest resize from500x500 to1024x1024; any white pixel in16x16 tile selects tile",
+        "reference_target_nearest_bbox_xyxy_exclusive": [
+          578,
+          549,
+          858,
+          700
+        ],
+        "reference_target_nearest_token_bbox_xyxy_exclusive": [
+          36,
+          34,
+          54,
+          44
+        ],
+        "reference_target_nearest_core_tokens": 180,
+        "reference_target_nearest_core_fraction": 0.0439453125,
+        "geometric_estimated_token_bbox_xyxy_exclusive": [
+          36,
+          34,
+          54,
+          44
+        ],
+        "geometric_estimated_core_tokens": 180,
+        "geometric_estimated_core_fraction": 0.0439453125,
+        "not_a_runtime_equality_assertion": true,
+        "runtime_requirement": "Compute core from actual processed/packed fusion mask with support(m)>0; record hash/shape/layout and actual count. Geometric estimates and PIL reference may differ by rounding from pipeline nearest mask. Never fail merely because runtime count differs from estimate; verify coverage and freeze one coordinate contract before generation."
+      },
+      "provenance": {
+        "dataset": "osunlp/MagicBrush",
+        "dataset_revision": "6c254560879df7851233ea0fd2ae2a62764d0ef2",
+        "original_instruction": "Have there be a pizza on the counter",
+        "new_instruction_authored_before_new_generation": true,
+        "new_instruction_is_official_target_ground_truth": false,
+        "turn_index": 1,
+        "source_metadata_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/attempts/source_only_v2_20261025/cases_new_train24.json",
+        "source_metadata_sha256": "1acc78dbc53ef13f830d6d98a907fd6bf7168501d37cff980bcf87a750f37ac1",
+        "source_original_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/inputs/new_train24/210597/source.original",
+        "source_preregistration_path_from_project_root": "新锚点校准与结构验证_20261023/data_d3_sources/source_preregistration.json",
+        "source_preregistration_sha256": "fe1659e9c1c09e31ff9cc8469da51bf06a0f863e1dfdf2bfe1c1ed4984e9d170",
+        "shard_path": "data/train-00036-of-00051-3c85ce9e4996c78b.parquet",
+        "row_group": 3,
+        "row_in_group": 27,
+        "row_in_shard": 123,
+        "target_column_read_for_this_stage": false,
+        "test_media_read_for_this_stage": false,
+        "old_generated_outputs_read_for_asset_creation": false,
+        "selection_is_independent_holdout": false,
+        "license_attribution": "MagicBrush/OSU-NLP-Group; preserve existing dataset/source license and attribution evidence; no new original-image rights inference"
+      },
+      "runtime_contract": {
+        "native_arm": "NATIVE_FULL",
+        "mask_arm": "NATIVE_POSTSTEP_BLEND_FULL",
+        "implementation_intent": "Project native Qwen edit pipeline plus scheduler-poststep source-latent blend; not unmodified official QwenImageEditInpaintPipeline.",
+        "weight_revision_sha_runtime_pending": true,
+        "code_hash_runtime_pending": true,
+        "noise_contract": "Explicit epsilon shared across arms for this source. All sources and arms seed2026102201. Runtime creates and records epsilon path/hash and actual initial latent; assets do not claim epsilon exists.",
+        "effective_dit_steps": 8,
+        "guidance_scale": 1.0,
+        "final_rgb_hard_copy": false
+      }
+    }
+  ]
+}

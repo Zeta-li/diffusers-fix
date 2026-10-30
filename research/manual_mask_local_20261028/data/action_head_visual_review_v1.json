@@ -1,0 +1,136 @@
+{
+  "reviewed_at": "2026-10-28T16:14:05.726168+08:00",
+  "reviewer": "Codex multimodal, nonblind, no independent human review",
+  "main_panels_viewed": [
+    "fit_0.jpg",
+    "fit_1.jpg",
+    "fit_2.jpg",
+    "calibration_0.jpg",
+    "seen_holdout_0.jpg"
+  ],
+  "final1000_panel_viewed": true,
+  "all19_selected_policy_outputs_reviewed": true,
+  "selected_policy_new_obvious_semantic_regressions": 0,
+  "fit_task_pass": 12,
+  "calibration_task_pass": 3,
+  "seen_holdout_task_pass": 4,
+  "final1000_seen_holdout_task_pass": 4,
+  "limitation": "Task-level review at panel resolution; small color/texture differences remain. No losslessness or perceptual-quality improvement established.",
+  "notes": [
+    {
+      "case_id": "local_train_286770_goat",
+      "role": "fit",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "role": "fit",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "role": "fit",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "role": "fit",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "role": "fit",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "role": "fit",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_45237",
+      "role": "fit",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_30836",
+      "role": "fit",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_379048",
+      "role": "fit",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_414772",
+      "role": "calibration",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_519299",
+      "role": "fit",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_363308",
+      "role": "fit",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_546932",
+      "role": "fit",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_557907",
+      "role": "calibration",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_275197",
+      "role": "calibration",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_475277",
+      "role": "seen_holdout",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_272738_p1",
+      "role": "seen_holdout",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_403221",
+      "role": "seen_holdout",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    },
+    {
+      "case_id": "free_374087",
+      "role": "seen_holdout",
+      "new_obvious_semantic_regression": false,
+      "observation": "目标类别/属性变化仍可辨认；未见相对固定对照新增明显误改、对象缺失或截断。"
+    }
+  ],
+  "final1000_note": "All4 outputs exactly equal archived CONTEXT64; inherited baseline limitations remain. Selected initialization is never called trained output."
+}

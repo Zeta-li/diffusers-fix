@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-30",
+  "status": "DESIGN_COMPLETE_NOT_GPU_EXECUTED",
+  "new_actual_requests": 0,
+  "new_actual_dit": 0,
+  "new_training_updates": 0,
+  "new_rl_updates": 0,
+  "historical_success_requests": 1695,
+  "historical_actual_dit": 15021,
+  "test64_status": "UNCHANGED_SEALED",
+  "proposal": "双路径预算蒸馏局部编辑",
+  "planned_profiles": [
+    {
+      "profile": "C",
+      "anchors_one_based": [
+        1,
+        2,
+        5,
+        8
+      ],
+      "requested_local_target_fraction": 0.5,
+      "mean_query_row_fraction": 0.6052631578947368,
+      "assumes_core_fits_requested_budget": true,
+      "is_latency_prediction": false
+    },
+    {
+      "profile": "B",
+      "anchors_one_based": [
+        1,
+        2,
+        8
+      ],
+      "requested_local_target_fraction": 0.25,
+      "mean_query_row_fraction": 0.4407894736842105,
+      "assumes_core_fits_requested_budget": true,
+      "is_latency_prediction": false
+    },
+    {
+      "profile": "S",
+      "anchors_one_based": [
+        1,
+        2
+      ],
+      "requested_local_target_fraction": 0.25,
+      "mean_query_row_fraction": 0.32894736842105265,
+      "assumes_core_fits_requested_budget": true,
+      "is_latency_prediction": false
+    }
+  ],
+  "artifact_scope": "Local design and planning updates; previous experimental delivery manifest is unchanged.",
+  "files": [
+    {
+      "path": "手工选区局部编辑_20261028/12_面向实际收益的双路径预算蒸馏方案_20261030.md",
+      "bytes": 21425,
+      "sha256": "6b97c2b52a1e9fe10c0f211950562694c8a1c64265bd856fed7851652599e602"
+    },
+    {
+      "path": "手工选区局部编辑_20261028/13_双路径预算蒸馏执行计划_20261030.md",
+      "bytes": 9611,
+      "sha256": "1dc8010f3c79a607381443b267ca8166e643512d782b89ee67f0b747dd034ad1"
+    },
+    {
+      "path": "手工选区局部编辑_20261028/scripts/budget_edit_cost_scenarios.py",
+      "bytes": 4591,
+      "sha256": "30d1632cbaa0403eaaff0d15ec6d19b8242471fc935d892a20b4735c934e78f3"
+    },
+    {
+      "path": "手工选区局部编辑_20261028/data/budget_edit_design_scenarios_v1.json",
+      "bytes": 3964,
+      "sha256": "360b6b7fa3a8f292e78bcab9a9416ed7cca8bf892d66b1c2d15d13154f4c5815"
+    },
+    {
+      "path": "研究总控_当前状态.md",
+      "bytes": 13345,
+      "sha256": "001b203ba993e64ffe668fc7bea233e2d7fd33dd3caa82593695ad13ff4e2845"
+    },
+    {
+      "path": "手工选区局部编辑_20261028/02_后续实验与执行计划.md",
+      "bytes": 28835,
+      "sha256": "96e811bc5a18e6a6f567349089430cbfdb7bc0a0ce13d335b867dc7f6b1ee0ac"
+    },
+    {
+      "path": "新锚点校准与结构验证_20261023/06_研究进度与八个月执行表.md",
+      "bytes": 22872,
+      "sha256": "6a4423754caf34cf2285a50c465f83ed00893a62510e75236639beaedc24a2af"
+    },
+    {
+      "path": "阶段研究报告_20261022/局部图像编辑加速研究_阶段性总结报告.md",
+      "bytes": 166329,
+      "sha256": "1a7a56f433216c3be03ed0388968f6db0bc43589609aebd1b614f92ad788a2c5"
+    }
+  ]
+}

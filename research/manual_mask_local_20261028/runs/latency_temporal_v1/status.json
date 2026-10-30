@@ -1,0 +1,13 @@
+{
+  "phase": "generation_complete_analysis_pending",
+  "updated_unix": 1793183608.5596037,
+  "invoked_dit": 656,
+  "completed_dit": 656,
+  "successful_requests": 82,
+  "warmup_requests": 2,
+  "latency_requests": 48,
+  "temporal_requests": 32,
+  "test64_opened": false,
+  "new_training_updates": 0,
+  "new_RL_updates": 0
+}

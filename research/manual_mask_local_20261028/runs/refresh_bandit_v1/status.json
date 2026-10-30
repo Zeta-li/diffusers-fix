@@ -1,0 +1,18 @@
+{
+  "phase": "complete_analysis_pending",
+  "active": {
+    "phase": "calibration",
+    "case_id": "expand_train_47893",
+    "policy": "RL"
+  },
+  "invoked_dit": 1280,
+  "completed_dit": 1280,
+  "successful_requests": 160,
+  "RL_episodes": 128,
+  "RL_updates": 16,
+  "calibration_requests": 32,
+  "supervised_checkpoint_sha256": "da8a58f34513716471741f181d7fdb9ec32a4992b3eb9b829ff2e836ecd8a699",
+  "RL_checkpoint_sha256": "18df09d3dd0bae8729220eca21548549679f54ae677a1a3716300999c454431e",
+  "calibration_tuned": false,
+  "test64_opened": false
+}

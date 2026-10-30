@@ -1,0 +1,275 @@
+{
+  "phase": "SOURCE_ONLY_DRAFT_NO_GENERATION",
+  "cases": [
+    {
+      "source_group_id": "158548",
+      "case_id": "localdev16_158548",
+      "task_type": "attribute",
+      "bbox": [
+        77,
+        240,
+        135,
+        330
+      ],
+      "evaluation_box": [
+        45,
+        208,
+        167,
+        362
+      ],
+      "prompt": "Change only the wool of the single foreground sheep to black. Preserve the sheep's face, pose and size, and keep the field, people and distant background unchanged."
+    },
+    {
+      "source_group_id": "194956",
+      "case_id": "localdev16_194956",
+      "task_type": "attribute",
+      "bbox": [
+        18,
+        208,
+        401,
+        273
+      ],
+      "evaluation_box": [
+        0,
+        176,
+        433,
+        305
+      ],
+      "prompt": "Change only the dark hull of the large model ocean liner in the center to blue. Preserve the white decks, yellow funnels, ship shape and all surrounding teddy bears."
+    },
+    {
+      "source_group_id": "491430",
+      "case_id": "localdev16_491430",
+      "task_type": "attribute",
+      "bbox": [
+        325,
+        0,
+        425,
+        180
+      ],
+      "evaluation_box": [
+        293,
+        0,
+        457,
+        212
+      ],
+      "prompt": "Change only the visible black sock above the rightmost shoe to plain white. Preserve the shoes, leg, tennis racket, ball and court."
+    },
+    {
+      "source_group_id": "259097",
+      "case_id": "localdev16_259097",
+      "task_type": "attribute",
+      "bbox": [
+        290,
+        228,
+        352,
+        332
+      ],
+      "evaluation_box": [
+        258,
+        196,
+        384,
+        364
+      ],
+      "prompt": "Change only the red shirt of the man throwing the frisbee to blue. Preserve his skin, pose and trousers, the frisbee, field and sky."
+    },
+    {
+      "source_group_id": "362944",
+      "case_id": "localdev16_362944",
+      "task_type": "attribute",
+      "bbox": [
+        0,
+        112,
+        306,
+        282
+      ],
+      "evaluation_box": [
+        0,
+        80,
+        338,
+        314
+      ],
+      "prompt": "Change the visible dark gray body paint of the parked Audi car to white. Preserve its windows, tires, shape and position, and keep the bicycle, repair sign and building unchanged."
+    },
+    {
+      "source_group_id": "459272",
+      "case_id": "localdev16_459272",
+      "task_type": "attribute",
+      "bbox": [
+        68,
+        245,
+        287,
+        500
+      ],
+      "evaluation_box": [
+        36,
+        213,
+        319,
+        500
+      ],
+      "prompt": "Change only the scarf worn around the foreground woman's neck to a scarf with red and blue stripes. Preserve its shape, her face, hair, coat, hands and phone, and the people behind her."
+    },
+    {
+      "source_group_id": "102171",
+      "case_id": "localdev16_102171",
+      "task_type": "attribute",
+      "bbox": [
+        55,
+        192,
+        251,
+        317
+      ],
+      "evaluation_box": [
+        23,
+        160,
+        283,
+        349
+      ],
+      "prompt": "Turn only the computer display screen solid black as if switched off. Preserve the white monitor frame and stand, the keyboard, phones, desk and wall."
+    },
+    {
+      "source_group_id": "543942",
+      "case_id": "localdev16_543942",
+      "task_type": "attribute",
+      "bbox": [
+        57,
+        390,
+        159,
+        500
+      ],
+      "evaluation_box": [
+        25,
+        358,
+        191,
+        500
+      ],
+      "prompt": "Change only the visible white toilet tank at the lower left to pale pink. Preserve its shape, the towels, sink, countertop, mirror and the rest of the bathroom."
+    },
+    {
+      "source_group_id": "193680",
+      "case_id": "localdev16_193680",
+      "task_type": "replace",
+      "bbox": [
+        0,
+        130,
+        385,
+        300
+      ],
+      "evaluation_box": [
+        0,
+        90,
+        425,
+        340
+      ],
+      "prompt": "Replace the sleeping orange cat on the red car with one sleeping red fox of similar size, curled on its side in the same position. Give it a pointed fox muzzle and orange fur with a white underside. Preserve the red car and background."
+    },
+    {
+      "source_group_id": "407550",
+      "case_id": "localdev16_407550",
+      "task_type": "replace",
+      "bbox": [
+        147,
+        205,
+        385,
+        392
+      ],
+      "evaluation_box": [
+        115,
+        173,
+        417,
+        424
+      ],
+      "prompt": "Replace only the baby carrots in the lower-middle blue compartment of the lunch tray with green broccoli florets filling the same compartment. Preserve the tray walls, the chicken, yellow fruit, almonds and fork."
+    },
+    {
+      "source_group_id": "311326",
+      "case_id": "localdev16_311326",
+      "task_type": "replace",
+      "bbox": [
+        210,
+        113,
+        384,
+        282
+      ],
+      "evaluation_box": [
+        178,
+        81,
+        416,
+        314
+      ],
+      "prompt": "Replace only the central blood-orange half, directly above the large lower-middle orange half, with half of a green apple, cut surface facing the camera. Keep it about the same size and position. Preserve all the surrounding orange halves and the background."
+    },
+    {
+      "source_group_id": "57350",
+      "case_id": "localdev16_57350",
+      "task_type": "expansion",
+      "bbox": [
+        75,
+        145,
+        135,
+        190
+      ],
+      "evaluation_box": [
+        40,
+        65,
+        175,
+        222
+      ],
+      "prompt": "Add one brown cowboy hat resting on top of the giraffe's head behind the zebras. The hat should have a clearly visible brim extending beyond the giraffe's head. Preserve the giraffe's face and neck, all zebras, grass and background."
+    },
+    {
+      "source_group_id": "134597",
+      "case_id": "localdev16_134597",
+      "task_type": "expansion",
+      "bbox": [
+        258,
+        78,
+        385,
+        247
+      ],
+      "evaluation_box": [
+        226,
+        0,
+        417,
+        279
+      ],
+      "prompt": "Add a tall red cone-shaped party hat with a white pom-pom resting on the black dog's head between its ears. Let the hat extend upward above the ears. Preserve the dog's face, body and running pose, the frisbee and background."
+    },
+    {
+      "source_group_id": "111376",
+      "case_id": "localdev16_111376",
+      "task_type": "expansion",
+      "bbox": [
+        18,
+        145,
+        250,
+        410
+      ],
+      "evaluation_box": [
+        0,
+        65,
+        290,
+        442
+      ],
+      "prompt": "Add one brown cowboy hat resting on top of the foreground black cow's head, with a broad brim extending past the head. Preserve the cow's face and body, the fence and background."
+    },
+    {
+      "source_group_id": "122927",
+      "case_id": "localdev16_122927",
+      "task_type": "expansion",
+      "bbox": [
+        50,
+        280,
+        286,
+        365
+      ],
+      "evaluation_box": [
+        0,
+        130,
+        320,
+        400
+      ],
+      "prompt": "Give the pheasant a much longer flowing tail that curves upward behind its body, fully inside the image. Keep the tail attached naturally at the same place. Preserve the bird's head, body, legs and the blurred background."
+    }
+  ]
+}

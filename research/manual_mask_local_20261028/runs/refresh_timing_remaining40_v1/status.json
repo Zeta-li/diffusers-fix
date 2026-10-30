@@ -1,0 +1,13 @@
+{
+  "phase": "complete_analysis_pending",
+  "active": {
+    "case_id": "expand_train_47893",
+    "arm": "R6"
+  },
+  "invoked_dit": 640,
+  "completed_dit": 640,
+  "successful_requests": 80,
+  "reused_requests": 120,
+  "training_updates": 0,
+  "RL_updates": 0
+}

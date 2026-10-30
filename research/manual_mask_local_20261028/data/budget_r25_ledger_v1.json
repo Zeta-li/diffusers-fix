@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-10-30T18:11:32.596118",
+  "base_project_requests": 2731,
+  "base_project_DiT": 27190,
+  "batches": [
+    {
+      "name": "budget_r25_v1",
+      "new_requests": 48,
+      "DiT": 384,
+      "reused_requests": 192
+    },
+    {
+      "name": "budget_r25_latency_v1",
+      "new_requests": 100,
+      "DiT": 800,
+      "warmups": 4
+    }
+  ],
+  "new_requests": 148,
+  "new_DiT": 1184,
+  "new_teacher_queries": 0,
+  "new_LoRA_updates": 0,
+  "new_RL_updates": 0,
+  "project_requests": 2879,
+  "project_DiT": 28374,
+  "project_dense_teacher": 1441,
+  "new_machine_requests": 1544,
+  "new_machine_DiT": 17117,
+  "free_region_GPU_DiT": 16925,
+  "LoRA_cumulative_updates": 153,
+  "cumulative_LoRA_fit_sources": 140,
+  "RL_note": "No new policy training or real RL episodes; only fixed budget evaluation and offline labels"
+}

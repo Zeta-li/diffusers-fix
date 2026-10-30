@@ -1,0 +1,10 @@
+{
+  "phase": "generation_complete_quality_pending",
+  "updated_unix": 1793171011.342995,
+  "invoked_dit": 192,
+  "completed_dit": 192,
+  "successful_requests": 24,
+  "case_id": "free_374087",
+  "arm": "CONTEXT64",
+  "step": 8
+}

@@ -1,0 +1,105 @@
+{
+  "phase": "FROZEN_BEFORE_GENERATION",
+  "created_at": "2026-10-28T12:40:54.601651+08:00",
+  "reference_attempt": "runs/s1_v2",
+  "reference_preregistration_sha256": "96bbc1769cd0c7f0cf3d773580452e03ebdfe928f784446b5390182c0390ed69",
+  "s1_decision_sha256": "c123ce33c4468e48f8818fc3ae3026a74d9fa9f7e64357f5452734156febff2a",
+  "planned_requests": 6,
+  "planned_dit": 48,
+  "steps": 8,
+  "cfg": 1,
+  "seed": 2026102201,
+  "teacher_dit": 0,
+  "local_dit": 0,
+  "training_updates": 0,
+  "rl_updates": 0,
+  "variants": [
+    {
+      "variant_id": "goat_ALLOW32",
+      "case_id": "local_train_286770_goat",
+      "prompt": "Replace only the leftmost lamb with a young goat of similar size in the same standing pose and position. Keep the other two sheep and the rest of the scene unchanged.",
+      "image": "inputs/s1_train8/local_train_286770_goat/source.original",
+      "source_sha256": "75247dd935a0f86f1a6a799d66b5bd8c8f3f65c5d50cdda829c6c6129404463a",
+      "mask_image": "inputs/s1_repair/286770_allow32.png",
+      "mask_sha256": "6d90f7bbae738b8f68c3b076a364e0fb946fa3fd406830097d84577f78aa1eb1",
+      "arm": "MASK_FULL",
+      "intervention": "Only M_allow margin16->32; unchanged original prompt/noise/source",
+      "allow_bbox_xyxy_exclusive": [
+        133,
+        148,
+        282,
+        427
+      ]
+    },
+    {
+      "variant_id": "goat_ALLOW48",
+      "case_id": "local_train_286770_goat",
+      "prompt": "Replace only the leftmost lamb with a young goat of similar size in the same standing pose and position. Keep the other two sheep and the rest of the scene unchanged.",
+      "image": "inputs/s1_train8/local_train_286770_goat/source.original",
+      "source_sha256": "75247dd935a0f86f1a6a799d66b5bd8c8f3f65c5d50cdda829c6c6129404463a",
+      "mask_image": "inputs/s1_repair/286770_allow48.png",
+      "mask_sha256": "c8a4905f7a6973d7997f15d2036ea8addddb8785c03335d87ebda2fae37b1fd2",
+      "arm": "MASK_FULL",
+      "intervention": "Only M_allow margin16->48; unchanged original prompt/noise/source",
+      "allow_bbox_xyxy_exclusive": [
+        117,
+        132,
+        298,
+        443
+      ]
+    },
+    {
+      "variant_id": "dog_specific_NATIVE",
+      "case_id": "local_train_486018_dog",
+      "prompt": "Replace the animal standing on the microwave with a small black Labrador retriever puppy. Give the puppy floppy hanging ears, a broad dog muzzle, and a black nose. Keep it standing in the same place and facing right at about the same size. Match the photograph's lighting and texture. Preserve the microwave and every other part of the room.",
+      "original_prompt": "Replace the black cat standing on top of the microwave with a small black dog of similar size, standing in the same position and facing the same direction. Preserve the microwave and the rest of the room.",
+      "image": "inputs/s1_train8/local_train_486018_dog/source.original",
+      "source_sha256": "17d9d3e818058c897ed59d4b5b9e01ab7559c881f3f33b352f6ae7137a3900ae",
+      "mask_image": "inputs/s1_train8/local_train_486018_dog/M_allow.png",
+      "mask_sha256": "5206b5d256332d8e5cef18d385ee1dac83f9bb451d7a57b0f2e7af8428850024",
+      "arm": "NATIVE_FULL",
+      "intervention": "Only prompt made category-discriminative; old margin16 retained; explicit noise/source unchanged"
+    },
+    {
+      "variant_id": "dog_specific_MASK",
+      "case_id": "local_train_486018_dog",
+      "prompt": "Replace the animal standing on the microwave with a small black Labrador retriever puppy. Give the puppy floppy hanging ears, a broad dog muzzle, and a black nose. Keep it standing in the same place and facing right at about the same size. Match the photograph's lighting and texture. Preserve the microwave and every other part of the room.",
+      "original_prompt": "Replace the black cat standing on top of the microwave with a small black dog of similar size, standing in the same position and facing the same direction. Preserve the microwave and the rest of the room.",
+      "image": "inputs/s1_train8/local_train_486018_dog/source.original",
+      "source_sha256": "17d9d3e818058c897ed59d4b5b9e01ab7559c881f3f33b352f6ae7137a3900ae",
+      "mask_image": "inputs/s1_train8/local_train_486018_dog/M_allow.png",
+      "mask_sha256": "5206b5d256332d8e5cef18d385ee1dac83f9bb451d7a57b0f2e7af8428850024",
+      "arm": "MASK_FULL",
+      "intervention": "Only prompt made category-discriminative; old margin16 retained; explicit noise/source unchanged"
+    },
+    {
+      "variant_id": "remote_specific_NATIVE",
+      "case_id": "local_train_429111_remote",
+      "prompt": "Replace only the red device on the right side of the desk with a red television remote control. The remote has a large circular directional pad, a power button, and two long volume and channel rocker buttons. Its upper surface is covered with buttons instead of a display screen. Keep its size, location and orientation, and preserve every other object on the desk.",
+      "original_prompt": "Replace the red mobile phone on the right side of the desk with a red television remote control of similar size and orientation. Keep all the other desk objects unchanged.",
+      "image": "inputs/s1_train8/local_train_429111_remote/source.original",
+      "source_sha256": "88309e0d2e156a12d8bf79000db2e435625cacc16d5a372c5967e6f81142a67a",
+      "mask_image": "inputs/s1_train8/local_train_429111_remote/M_allow.png",
+      "mask_sha256": "b4274726615c4547ed1edc0ed9ae859dbb7266a19ef9d319db5790dd7f2f775c",
+      "arm": "NATIVE_FULL",
+      "intervention": "Only prompt made category-discriminative; old margin16 retained; explicit noise/source unchanged"
+    },
+    {
+      "variant_id": "remote_specific_MASK",
+      "case_id": "local_train_429111_remote",
+      "prompt": "Replace only the red device on the right side of the desk with a red television remote control. The remote has a large circular directional pad, a power button, and two long volume and channel rocker buttons. Its upper surface is covered with buttons instead of a display screen. Keep its size, location and orientation, and preserve every other object on the desk.",
+      "original_prompt": "Replace the red mobile phone on the right side of the desk with a red television remote control of similar size and orientation. Keep all the other desk objects unchanged.",
+      "image": "inputs/s1_train8/local_train_429111_remote/source.original",
+      "source_sha256": "88309e0d2e156a12d8bf79000db2e435625cacc16d5a372c5967e6f81142a67a",
+      "mask_image": "inputs/s1_train8/local_train_429111_remote/M_allow.png",
+      "mask_sha256": "b4274726615c4547ed1edc0ed9ae859dbb7266a19ef9d319db5790dd7f2f775c",
+      "arm": "MASK_FULL",
+      "intervention": "Only prompt made category-discriminative; old margin16 retained; explicit noise/source unchanged"
+    }
+  ],
+  "purpose": "Post-failure training-only mechanism diagnosis; original8-source failure remains unchanged. Compare mask permission versus target description separately.",
+  "qualification": "Not S2, not a heldout pass; same source groups. No changing prompts/masks after this freeze. Goat M_allow differs, so this is not the equal-token compute-expansion experiment.",
+  "comparison_region_for_goat": "Common fixed allow48 envelope plus original user region and full image; do not redefine success by each smaller mask alone.",
+  "quality": "Conservative visual diagnosis of complete horn/ear, dog muzzle/floppy ears, remote buttons without display; no automatic GO_S2 from this six-run diagnostic.",
+  "failure_policy": "Stop first runtime error; preserve every invoked/completed call and outputs; no silent retry"
+}

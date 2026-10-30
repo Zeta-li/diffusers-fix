@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-30",
+  "status": "DESIGN_SCENARIOS_NOT_GPU_MEASUREMENTS",
+  "new_requests": 0,
+  "new_dit_forwards": 0,
+  "new_training_updates": 0,
+  "new_rl_updates": 0,
+  "inputs": {
+    "runs/latency_temporal_v1/analysis/latency.json": "756db4cb623794555a206b873060edcfe6dc3badb9df606e451f834bdef89c61",
+    "runs/latency_temporal_v1/analysis/overheads.json": "d655ce4ca49e6ab33e667bb21b12e7dace366c20029269507e8f56d7198b9272"
+  },
+  "measured": {
+    "F_seconds": 6.9883919968269765,
+    "FIX32_seconds": 6.36434289207682,
+    "F_dit_seconds": 3.6294206047058104,
+    "FIX32_query_row_fraction": 0.8014664746318362
+  },
+  "derived_baseline_residual_seconds": 3.358971392121166,
+  "decomposition_limitation": "Aggregate wall-clock minus aggregated CUDA interval; approximate Amdahl design input.",
+  "illustrative_geometry": {
+    "target_tokens": 4096,
+    "condition_tokens": 4096,
+    "text_tokens_assumed_not_measured": 1536,
+    "layers": 60,
+    "hidden_width": 3072
+  },
+  "profiles": [
+    {
+      "profile": "C",
+      "anchors_one_based": [
+        1,
+        2,
+        5,
+        8
+      ],
+      "requested_local_target_fraction": 0.5,
+      "mean_query_row_fraction": 0.6052631578947368,
+      "assumes_core_fits_requested_budget": true,
+      "is_latency_prediction": false
+    },
+    {
+      "profile": "B",
+      "anchors_one_based": [
+        1,
+        2,
+        8
+      ],
+      "requested_local_target_fraction": 0.25,
+      "mean_query_row_fraction": 0.4407894736842105,
+      "assumes_core_fits_requested_budget": true,
+      "is_latency_prediction": false
+    },
+    {
+      "profile": "S",
+      "anchors_one_based": [
+        1,
+        2
+      ],
+      "requested_local_target_fraction": 0.25,
+      "mean_query_row_fraction": 0.32894736842105265,
+      "assumes_core_fits_requested_budget": true,
+      "is_latency_prediction": false
+    }
+  ],
+  "raw_context_kv_GiB": 6.6796875,
+  "lora_parameters_if_geometry_matches": 4423680,
+  "latency_scenarios": [
+    {
+      "assumed_dit_time_fraction": 0.55,
+      "assumed_shared_seconds": 3.358971392121166,
+      "assumed_student_extra_seconds": 0.05,
+      "scenario_total_seconds": 5.405152724709362,
+      "scenario_speedup_vs_archived_F": 1.2929129578300207,
+      "scenario_speedup_vs_equally_optimized_F": 1.2929129578300207
+    },
+    {
+      "assumed_dit_time_fraction": 0.45,
+      "assumed_shared_seconds": 3.358971392121166,
+      "assumed_student_extra_seconds": 0.05,
+      "scenario_total_seconds": 5.042210664238781,
+      "scenario_speedup_vs_archived_F": 1.3859777907319961,
+      "scenario_speedup_vs_equally_optimized_F": 1.3859777907319961
+    },
+    {
+      "assumed_dit_time_fraction": 0.35,
+      "assumed_shared_seconds": 3.358971392121166,
+      "assumed_student_extra_seconds": 0.05,
+      "scenario_total_seconds": 4.679268603768199,
+      "scenario_speedup_vs_archived_F": 1.493479556014213,
+      "scenario_speedup_vs_equally_optimized_F": 1.493479556014213
+    },
+    {
+      "assumed_dit_time_fraction": 0.45,
+      "assumed_shared_seconds": 2.2,
+      "assumed_student_extra_seconds": 0.05,
+      "scenario_total_seconds": 3.8832392721176148,
+      "scenario_speedup_vs_archived_F": 1.7996295121459396,
+      "scenario_speedup_vs_equally_optimized_F": 1.5011747142552205
+    }
+  ],
+  "preflight_dit_budget": {
+    "contracts": 32,
+    "vae_check": 32,
+    "main": 256,
+    "repeat": 32,
+    "warmup": 48,
+    "total": 400
+  },
+  "training_forward_budget": {
+    "optimizer_updates": 1000,
+    "microbatches": 4000,
+    "student_gradient_window_forwards": 5000,
+    "teacher_window_forwards": 5000,
+    "student_prefix_forwards_upper_bound": 28000,
+    "initial_full_teacher_reference_forwards": 4096,
+    "listed_forward_total_upper_bound": 42096,
+    "excludes": [
+      "additional full-student consistency calls",
+      "calibration generation",
+      "export validation",
+      "backward compute",
+      "quality evaluator compute"
+    ]
+  }
+}

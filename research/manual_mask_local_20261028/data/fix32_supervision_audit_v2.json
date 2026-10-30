@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "time_unix": 1793169431.113547,
+  "invoked_dit": 260,
+  "completed_dit": 260,
+  "successful_requests": 23,
+  "offline_Euler_steps": 184,
+  "same_state_labels_verified": 28,
+  "counterfactuals_verified": 48,
+  "equal_budget_counterfactuals_verified": 32,
+  "control_counterfactuals_verified": 16,
+  "teacher_dit": 28,
+  "counterfactual_dit": 48,
+  "prior_FIX32_student_eight_state_equivalence_requests": 8,
+  "new_training_updates": 0,
+  "new_RL_updates": 0,
+  "new_net_latency_requests": 0,
+  "script_sha256": "6a9e782c7c862e22ec9634ee76afa7d12e5cbdba52d25d3702b3578d24cadf83",
+  "CPU_GPU_float_reduction_tolerance": {
+    "rtol": 2e-06,
+    "atol": 1e-10
+  },
+  "first_audit_failure": "CPU/GPU FP32 reductions were incorrectly required bitwise; failure log retained; no new DiT"
+}

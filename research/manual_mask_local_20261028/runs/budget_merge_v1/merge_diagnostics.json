@@ -1,0 +1,438 @@
+{
+  "layers": [
+    {
+      "name": "transformer_blocks.0.attn.to_out.0",
+      "delta_squared": 0.020207587629556656,
+      "rounding_error_squared": 0.006834542844444513,
+      "changed_fraction": 0.31537288427352905
+    },
+    {
+      "name": "transformer_blocks.1.attn.to_out.0",
+      "delta_squared": 0.006673569791018963,
+      "rounding_error_squared": 0.0056150006130337715,
+      "changed_fraction": 0.05592738464474678
+    },
+    {
+      "name": "transformer_blocks.2.attn.to_out.0",
+      "delta_squared": 0.0034453165717422962,
+      "rounding_error_squared": 0.0030423812568187714,
+      "changed_fraction": 0.044610023498535156
+    },
+    {
+      "name": "transformer_blocks.3.attn.to_out.0",
+      "delta_squared": 0.004495325498282909,
+      "rounding_error_squared": 0.0036862094420939684,
+      "changed_fraction": 0.05256769433617592
+    },
+    {
+      "name": "transformer_blocks.4.attn.to_out.0",
+      "delta_squared": 0.0041732992976903915,
+      "rounding_error_squared": 0.003569937776774168,
+      "changed_fraction": 0.0504286028444767
+    },
+    {
+      "name": "transformer_blocks.4.img_mlp.net.2",
+      "delta_squared": 0.002573949284851551,
+      "rounding_error_squared": 0.002422815654426813,
+      "changed_fraction": 0.02382797747850418
+    },
+    {
+      "name": "transformer_blocks.5.attn.to_out.0",
+      "delta_squared": 0.003925991710275412,
+      "rounding_error_squared": 0.003448509145528078,
+      "changed_fraction": 0.04894087091088295
+    },
+    {
+      "name": "transformer_blocks.6.attn.to_out.0",
+      "delta_squared": 0.003742092987522483,
+      "rounding_error_squared": 0.0032216855324804783,
+      "changed_fraction": 0.05024570971727371
+    },
+    {
+      "name": "transformer_blocks.7.attn.to_out.0",
+      "delta_squared": 0.003381243906915188,
+      "rounding_error_squared": 0.003052768763154745,
+      "changed_fraction": 0.04669931158423424
+    },
+    {
+      "name": "transformer_blocks.8.attn.to_out.0",
+      "delta_squared": 0.003328286809846759,
+      "rounding_error_squared": 0.002993599511682987,
+      "changed_fraction": 0.048625629395246506
+    },
+    {
+      "name": "transformer_blocks.9.attn.to_out.0",
+      "delta_squared": 0.003024763660505414,
+      "rounding_error_squared": 0.002783732023090124,
+      "changed_fraction": 0.0451168492436409
+    },
+    {
+      "name": "transformer_blocks.9.img_mlp.net.2",
+      "delta_squared": 0.002163955243304372,
+      "rounding_error_squared": 0.002074426505714655,
+      "changed_fraction": 0.02260110154747963
+    },
+    {
+      "name": "transformer_blocks.10.attn.to_out.0",
+      "delta_squared": 0.0029252455569803715,
+      "rounding_error_squared": 0.002647459041327238,
+      "changed_fraction": 0.04794926196336746
+    },
+    {
+      "name": "transformer_blocks.11.attn.to_out.0",
+      "delta_squared": 0.003283544909209013,
+      "rounding_error_squared": 0.002960790414363146,
+      "changed_fraction": 0.0494113489985466
+    },
+    {
+      "name": "transformer_blocks.12.attn.to_out.0",
+      "delta_squared": 0.0032774631399661303,
+      "rounding_error_squared": 0.002935841679573059,
+      "changed_fraction": 0.050165072083473206
+    },
+    {
+      "name": "transformer_blocks.13.attn.to_out.0",
+      "delta_squared": 0.00294400192797184,
+      "rounding_error_squared": 0.002696695737540722,
+      "changed_fraction": 0.04724767431616783
+    },
+    {
+      "name": "transformer_blocks.14.attn.to_out.0",
+      "delta_squared": 0.0032500759698450565,
+      "rounding_error_squared": 0.0029221028089523315,
+      "changed_fraction": 0.0495639368891716
+    },
+    {
+      "name": "transformer_blocks.14.img_mlp.net.2",
+      "delta_squared": 0.0026799016632139683,
+      "rounding_error_squared": 0.00255888095125556,
+      "changed_fraction": 0.024860462173819542
+    },
+    {
+      "name": "transformer_blocks.15.attn.to_out.0",
+      "delta_squared": 0.00356531934812665,
+      "rounding_error_squared": 0.0031590918079018593,
+      "changed_fraction": 0.05317327752709389
+    },
+    {
+      "name": "transformer_blocks.16.attn.to_out.0",
+      "delta_squared": 0.0033356216736137867,
+      "rounding_error_squared": 0.0030448357574641705,
+      "changed_fraction": 0.048590660095214844
+    },
+    {
+      "name": "transformer_blocks.17.attn.to_out.0",
+      "delta_squared": 0.00330941379070282,
+      "rounding_error_squared": 0.003038884373381734,
+      "changed_fraction": 0.04949071630835533
+    },
+    {
+      "name": "transformer_blocks.18.attn.to_out.0",
+      "delta_squared": 0.004442153498530388,
+      "rounding_error_squared": 0.003699781373143196,
+      "changed_fraction": 0.060743968933820724
+    },
+    {
+      "name": "transformer_blocks.19.attn.to_out.0",
+      "delta_squared": 0.0033811023458838463,
+      "rounding_error_squared": 0.0030847331508994102,
+      "changed_fraction": 0.04981401190161705
+    },
+    {
+      "name": "transformer_blocks.19.img_mlp.net.2",
+      "delta_squared": 0.0036106277257204056,
+      "rounding_error_squared": 0.0033765584230422974,
+      "changed_fraction": 0.03069904074072838
+    },
+    {
+      "name": "transformer_blocks.20.attn.to_out.0",
+      "delta_squared": 0.004158949013799429,
+      "rounding_error_squared": 0.003523451741784811,
+      "changed_fraction": 0.05773957446217537
+    },
+    {
+      "name": "transformer_blocks.21.attn.to_out.0",
+      "delta_squared": 0.004481182899326086,
+      "rounding_error_squared": 0.0036873025819659233,
+      "changed_fraction": 0.0621761754155159
+    },
+    {
+      "name": "transformer_blocks.22.attn.to_out.0",
+      "delta_squared": 0.005330443382263184,
+      "rounding_error_squared": 0.004321384243667126,
+      "changed_fraction": 0.06028302386403084
+    },
+    {
+      "name": "transformer_blocks.23.attn.to_out.0",
+      "delta_squared": 0.005531621165573597,
+      "rounding_error_squared": 0.004354959353804588,
+      "changed_fraction": 0.0661696344614029
+    },
+    {
+      "name": "transformer_blocks.24.attn.to_out.0",
+      "delta_squared": 0.005147117655724287,
+      "rounding_error_squared": 0.004291525110602379,
+      "changed_fraction": 0.0628160908818245
+    },
+    {
+      "name": "transformer_blocks.24.img_mlp.net.2",
+      "delta_squared": 0.005264958366751671,
+      "rounding_error_squared": 0.00462753139436245,
+      "changed_fraction": 0.03748006373643875
+    },
+    {
+      "name": "transformer_blocks.25.attn.to_out.0",
+      "delta_squared": 0.004980904050171375,
+      "rounding_error_squared": 0.0041356319561600685,
+      "changed_fraction": 0.06253126263618469
+    },
+    {
+      "name": "transformer_blocks.26.attn.to_out.0",
+      "delta_squared": 0.00507589615881443,
+      "rounding_error_squared": 0.0042880536057055,
+      "changed_fraction": 0.062206268310546875
+    },
+    {
+      "name": "transformer_blocks.27.attn.to_out.0",
+      "delta_squared": 0.0051917750388383865,
+      "rounding_error_squared": 0.004376925062388182,
+      "changed_fraction": 0.06389406323432922
+    },
+    {
+      "name": "transformer_blocks.28.attn.to_out.0",
+      "delta_squared": 0.005385966040194035,
+      "rounding_error_squared": 0.00454260129481554,
+      "changed_fraction": 0.06642956286668777
+    },
+    {
+      "name": "transformer_blocks.29.attn.to_out.0",
+      "delta_squared": 0.006326405331492424,
+      "rounding_error_squared": 0.005260670557618141,
+      "changed_fraction": 0.0673125609755516
+    },
+    {
+      "name": "transformer_blocks.29.img_mlp.net.2",
+      "delta_squared": 0.005815290380269289,
+      "rounding_error_squared": 0.005289373453706503,
+      "changed_fraction": 0.03870029002428055
+    },
+    {
+      "name": "transformer_blocks.30.attn.to_out.0",
+      "delta_squared": 0.006961519829928875,
+      "rounding_error_squared": 0.005735435988754034,
+      "changed_fraction": 0.07192198187112808
+    },
+    {
+      "name": "transformer_blocks.31.attn.to_out.0",
+      "delta_squared": 0.006965396460145712,
+      "rounding_error_squared": 0.005779034458100796,
+      "changed_fraction": 0.07135465741157532
+    },
+    {
+      "name": "transformer_blocks.32.attn.to_out.0",
+      "delta_squared": 0.007740547880530357,
+      "rounding_error_squared": 0.006430614739656448,
+      "changed_fraction": 0.07323763519525528
+    },
+    {
+      "name": "transformer_blocks.33.attn.to_out.0",
+      "delta_squared": 0.008066646754741669,
+      "rounding_error_squared": 0.006709769833832979,
+      "changed_fraction": 0.07744460552930832
+    },
+    {
+      "name": "transformer_blocks.34.attn.to_out.0",
+      "delta_squared": 0.00720693776383996,
+      "rounding_error_squared": 0.006208738312125206,
+      "changed_fraction": 0.07192696630954742
+    },
+    {
+      "name": "transformer_blocks.34.img_mlp.net.2",
+      "delta_squared": 0.010568015277385712,
+      "rounding_error_squared": 0.009370741434395313,
+      "changed_fraction": 0.051870930939912796
+    },
+    {
+      "name": "transformer_blocks.35.attn.to_out.0",
+      "delta_squared": 0.0072920192033052444,
+      "rounding_error_squared": 0.006334276404231787,
+      "changed_fraction": 0.07313982397317886
+    },
+    {
+      "name": "transformer_blocks.36.attn.to_out.0",
+      "delta_squared": 0.008941881358623505,
+      "rounding_error_squared": 0.0076812636107206345,
+      "changed_fraction": 0.07941511273384094
+    },
+    {
+      "name": "transformer_blocks.37.attn.to_out.0",
+      "delta_squared": 0.008694054558873177,
+      "rounding_error_squared": 0.007507638540118933,
+      "changed_fraction": 0.07552984356880188
+    },
+    {
+      "name": "transformer_blocks.38.attn.to_out.0",
+      "delta_squared": 0.010845203883945942,
+      "rounding_error_squared": 0.009052595123648643,
+      "changed_fraction": 0.08572493493556976
+    },
+    {
+      "name": "transformer_blocks.39.attn.to_out.0",
+      "delta_squared": 0.009302303194999695,
+      "rounding_error_squared": 0.007923887111246586,
+      "changed_fraction": 0.0815930888056755
+    },
+    {
+      "name": "transformer_blocks.39.img_mlp.net.2",
+      "delta_squared": 0.022083880379796028,
+      "rounding_error_squared": 0.018555529415607452,
+      "changed_fraction": 0.07240412384271622
+    },
+    {
+      "name": "transformer_blocks.40.attn.to_out.0",
+      "delta_squared": 0.01301428023725748,
+      "rounding_error_squared": 0.010342581197619438,
+      "changed_fraction": 0.0971587523818016
+    },
+    {
+      "name": "transformer_blocks.41.attn.to_out.0",
+      "delta_squared": 0.01459643617272377,
+      "rounding_error_squared": 0.01158527098596096,
+      "changed_fraction": 0.09999264776706696
+    },
+    {
+      "name": "transformer_blocks.42.attn.to_out.0",
+      "delta_squared": 0.011467596516013145,
+      "rounding_error_squared": 0.009468026459217072,
+      "changed_fraction": 0.08991580456495285
+    },
+    {
+      "name": "transformer_blocks.43.attn.to_out.0",
+      "delta_squared": 0.013708695769309998,
+      "rounding_error_squared": 0.011141249909996986,
+      "changed_fraction": 0.09641223400831223
+    },
+    {
+      "name": "transformer_blocks.44.attn.to_out.0",
+      "delta_squared": 0.016724150627851486,
+      "rounding_error_squared": 0.013084093108773232,
+      "changed_fraction": 0.1022457554936409
+    },
+    {
+      "name": "transformer_blocks.44.img_mlp.net.2",
+      "delta_squared": 0.026757650077342987,
+      "rounding_error_squared": 0.022585859522223473,
+      "changed_fraction": 0.07187999784946442
+    },
+    {
+      "name": "transformer_blocks.45.attn.to_out.0",
+      "delta_squared": 0.016704026609659195,
+      "rounding_error_squared": 0.013220511376857758,
+      "changed_fraction": 0.09769704937934875
+    },
+    {
+      "name": "transformer_blocks.46.attn.to_out.0",
+      "delta_squared": 0.017524132505059242,
+      "rounding_error_squared": 0.013848157599568367,
+      "changed_fraction": 0.10281149297952652
+    },
+    {
+      "name": "transformer_blocks.47.attn.to_out.0",
+      "delta_squared": 0.0184211153537035,
+      "rounding_error_squared": 0.014420632272958755,
+      "changed_fraction": 0.11029921472072601
+    },
+    {
+      "name": "transformer_blocks.48.attn.to_out.0",
+      "delta_squared": 0.01858656480908394,
+      "rounding_error_squared": 0.014575313776731491,
+      "changed_fraction": 0.11439524590969086
+    },
+    {
+      "name": "transformer_blocks.49.attn.to_out.0",
+      "delta_squared": 0.022374264895915985,
+      "rounding_error_squared": 0.017093319445848465,
+      "changed_fraction": 0.12265364080667496
+    },
+    {
+      "name": "transformer_blocks.49.img_mlp.net.2",
+      "delta_squared": 0.035533368587493896,
+      "rounding_error_squared": 0.0290987566113472,
+      "changed_fraction": 0.09130650013685226
+    },
+    {
+      "name": "transformer_blocks.50.attn.to_out.0",
+      "delta_squared": 0.02279197797179222,
+      "rounding_error_squared": 0.017451275140047073,
+      "changed_fraction": 0.11638450622558594
+    },
+    {
+      "name": "transformer_blocks.51.attn.to_out.0",
+      "delta_squared": 0.02866625413298607,
+      "rounding_error_squared": 0.021574974060058594,
+      "changed_fraction": 0.12693214416503906
+    },
+    {
+      "name": "transformer_blocks.52.attn.to_out.0",
+      "delta_squared": 0.02814515307545662,
+      "rounding_error_squared": 0.02132641151547432,
+      "changed_fraction": 0.1232418492436409
+    },
+    {
+      "name": "transformer_blocks.53.attn.to_out.0",
+      "delta_squared": 0.027989864349365234,
+      "rounding_error_squared": 0.020598821341991425,
+      "changed_fraction": 0.13562308251857758
+    },
+    {
+      "name": "transformer_blocks.54.attn.to_out.0",
+      "delta_squared": 0.02224878780543804,
+      "rounding_error_squared": 0.017142999917268753,
+      "changed_fraction": 0.12504906952381134
+    },
+    {
+      "name": "transformer_blocks.54.img_mlp.net.2",
+      "delta_squared": 0.04422106593847275,
+      "rounding_error_squared": 0.03551197424530983,
+      "changed_fraction": 0.1069713681936264
+    },
+    {
+      "name": "transformer_blocks.55.attn.to_out.0",
+      "delta_squared": 0.03271304816007614,
+      "rounding_error_squared": 0.02379516512155533,
+      "changed_fraction": 0.14288394153118134
+    },
+    {
+      "name": "transformer_blocks.56.attn.to_out.0",
+      "delta_squared": 0.03356897830963135,
+      "rounding_error_squared": 0.024153880774974823,
+      "changed_fraction": 0.14769798517227173
+    },
+    {
+      "name": "transformer_blocks.57.attn.to_out.0",
+      "delta_squared": 0.03890642523765564,
+      "rounding_error_squared": 0.02633504755795002,
+      "changed_fraction": 0.177652046084404
+    },
+    {
+      "name": "transformer_blocks.58.attn.to_out.0",
+      "delta_squared": 0.039112742990255356,
+      "rounding_error_squared": 0.026735402643680573,
+      "changed_fraction": 0.17942312359809875
+    },
+    {
+      "name": "transformer_blocks.59.attn.to_out.0",
+      "delta_squared": 0.012385832145810127,
+      "rounding_error_squared": 0.007395446300506592,
+      "changed_fraction": 0.15683980286121368
+    },
+    {
+      "name": "transformer_blocks.59.img_mlp.net.2",
+      "delta_squared": 0.0012364669237285852,
+      "rounding_error_squared": 0.0009730227175168693,
+      "changed_fraction": 0.029780758544802666
+    }
+  ],
+  "swap_scaffolding_GiB": 3.796875,
+  "inference_precision": "base and merged weights BF16; unmerged adapter matmuls FP32"
+}

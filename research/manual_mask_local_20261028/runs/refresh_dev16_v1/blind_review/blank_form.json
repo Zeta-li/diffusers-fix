@@ -1,0 +1,162 @@
+[
+  {
+    "case_id": "refresh_dev_29324",
+    "source_instruction": "Remove the surfboards. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_270186",
+    "source_instruction": "Let's add a monitor on the wall. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_520480",
+    "source_instruction": "Have there be a basket of fruit on the counter. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_140043",
+    "source_instruction": "Let the jam be changed to strawberry one. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_86582",
+    "source_instruction": "a parakeet should be sitting on the knit item. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_204837",
+    "source_instruction": "Have one of the children be blowing bubbles. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_102625",
+    "source_instruction": "let there be a game show on TV. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_509416",
+    "source_instruction": "Let the drink be replaced by a glass of milk. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_10546",
+    "source_instruction": "Add a turtle. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_581668",
+    "source_instruction": "Add cookies to the tray. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_371643",
+    "source_instruction": "let the fruit be sliced bananas. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_395040",
+    "source_instruction": "What if the man was standing?. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_341070",
+    "source_instruction": "Let the faucet be turned on. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_80932",
+    "source_instruction": "Make the glass of water a to go cup. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_267300",
+    "source_instruction": "Put popcorn in the plate. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  },
+  {
+    "case_id": "refresh_dev_468505",
+    "source_instruction": "Replace all the food with a big pizza. Preserve all other objects and the surrounding scene. Keep changes local to the requested object or attribute.",
+    "scores": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    }
+  }
+]

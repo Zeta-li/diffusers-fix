@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-10-28T18:08:07.445991+08:00",
+  "status": "WRITTEN_BEFORE_NEW_OUTPUT_VISUAL_INSPECTION",
+  "review_type": "single assistant nonblind qualitative review; no human blind-study claim",
+  "rule": "For every arm judge intended target and instruction, identity/structure, and explicit preservation; uncertainty counts as failure. Separate inherited F failures from new local regressions. Do not drop failed cases.",
+  "severe_new_error": "new missing object or major part, severe anatomical/topological break, clipping/truncation attributable to local method relative to F",
+  "cases": {
+    "286770": "Only leftmost lamb becomes a young goat; other two sheep and scene retained.",
+    "486018": "Black cat becomes recognizable black Labrador puppy with floppy ears and broad muzzle; microwave and room retained.",
+    "178810": "Hydrant becomes short red cylindrical bollard at same position; building, trees and pavement retained.",
+    "429111": "Only right red phone becomes red remote, with navigation pad, power/volume controls and no display; all other objects retained.",
+    "15953": "Only white frosting becomes chocolate brown; spiral, wrapper, apple and plate retained.",
+    "26498": "Bat changes to natural brown wood; hands, clothing, exact position, length and direction retained.",
+    "452168": "Only black sign background becomes dark blue; NO BIRDS ALLOWED remains readable; surrounding scene retained.",
+    "210597": "Only flat right blue cushion becomes red; all other cushions and room retained."
+  },
+  "numeric_evaluation": "Frozen whole-image and fixed old influence-box MAE; not a semantic truth label",
+  "subset": "Prespecified historical F-pass subset, not selected from new review"
+}

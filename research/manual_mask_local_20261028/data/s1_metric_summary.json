@@ -1,0 +1,15 @@
+{
+  "NATIVE_FULL": {
+    "mae_vs_source_all": 0.06172414807712331,
+    "mae_vs_source_outside": 0.04492414860034387,
+    "mae_vs_source_boundary32": 0.04476046131608568,
+    "mae_vs_source_recon_outside": 0.043282401185522505
+  },
+  "MASK_FULL": {
+    "mae_vs_source_all": 0.026264584142398212,
+    "mae_vs_source_outside": 0.005526298687240603,
+    "mae_vs_source_boundary32": 0.010107169532377235,
+    "mae_vs_source_recon_outside": 0.00011040090857002354
+  },
+  "meaning": "Full-compute pipeline effects; background improvement from enforced source trajectory is not inference acceleration, nor semantic correctness."
+}

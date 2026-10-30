@@ -1,0 +1,208 @@
+{
+  "frozen_at": "2026-10-30T10:38:04.412255+00:00",
+  "status": "SOURCE_ONLY_REVIEW_FROZEN",
+  "generated_outputs_seen": false,
+  "reviewer": "assistant visual source-only review, not human consensus",
+  "source_pages": [
+    "source_page00.jpg",
+    "source_page01.jpg",
+    "source_page02.jpg"
+  ],
+  "rows": [
+    {
+      "img_id": "357903",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "177824",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "125106",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "393226",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "428304",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "393243",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "544519",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "563122",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "145741",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "381199",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "357865",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "289514",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "219590",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "177572",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "221427",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "29324",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "270186",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "520480",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "140043",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "86582",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "204837",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "102625",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "509416",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "10546",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "581668",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "371643",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "395040",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "341070",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "417814",
+      "eligible": false,
+      "reason": "background floor material change outside fixed compact-object scope"
+    },
+    {
+      "img_id": "80932",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "267300",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "468505",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "329847",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "496215",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    },
+    {
+      "img_id": "142985",
+      "eligible": true,
+      "reason": "compact_local_object_or_attribute; source target and bbox coherent"
+    }
+  ],
+  "selected_new15": [
+    "357903",
+    "177824",
+    "125106",
+    "393226",
+    "428304",
+    "393243",
+    "544519",
+    "563122",
+    "145741",
+    "381199",
+    "357865",
+    "289514",
+    "219590",
+    "177572",
+    "221427"
+  ],
+  "selection": "first 15 visually eligible in previously frozen parent rank",
+  "prompt_changes": [],
+  "test_media_opened": false
+}

@@ -1,0 +1,7 @@
+{
+  "pid": 52807,
+  "started_unix": 1793181650.188843,
+  "log": "/workspace/diffusers-fix/research/manual_mask_local_20261028/notes/latency_temporal_v1_driver.log",
+  "attempt": "latency_temporal_v1",
+  "planned_dit": 656
+}

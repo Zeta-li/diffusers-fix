@@ -1,0 +1,256 @@
+{
+  "created_at": "2026-10-28T18:44:54.718822+08:00",
+  "review_type": "single assistant nonblind; all8 five-column panels actually viewed; no independent human assessment",
+  "cases": [
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "main_edit_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "preservation_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "strict_joint_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "new_obvious_severe_failure_vs_F": {
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "note": "Leftmost sheep becomes recognizable horned goat; other two sheep remain. F/FIX32 differ in fine body shading, no obvious new semantic failure.",
+      "panel": "runs/latency_temporal_v1/analysis/panels/local_train_286770_goat.png"
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "main_edit_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "preservation_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "strict_joint_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "new_obvious_severe_failure_vs_F": {
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "note": "Recognizable black puppy with hanging ears on the microwave; room retained. Small numerical changes, no obvious added structure failure.",
+      "panel": "runs/latency_temporal_v1/analysis/panels/local_train_486018_dog.png"
+    },
+    {
+      "case_id": "local_train_178810_bollard",
+      "source_group_id": "178810",
+      "main_edit_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "preservation_pass": {
+        "F": false,
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "strict_joint_pass": {
+        "F": false,
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "new_obvious_severe_failure_vs_F": {
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "note": "Red bollard created, but F and FIX32 substantially redraw building, tree crowns and pavement. Local variants also differ in background appearance; inherited broad-edit failure remains.",
+      "panel": "runs/latency_temporal_v1/analysis/panels/local_train_178810_bollard.png"
+    },
+    {
+      "case_id": "local_train_429111_remote",
+      "source_group_id": "429111",
+      "main_edit_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "preservation_pass": {
+        "F": false,
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "strict_joint_pass": {
+        "F": false,
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "new_obvious_severe_failure_vs_F": {
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "note": "Red remote is recognizable, but its enlarged footprint makes the white player directly below the original red phone no longer visible. F and FIX32 both violate preserve-every-other-object. This was overlooked by the historical coarse pass grade.",
+      "panel": "runs/latency_temporal_v1/analysis/panels/local_train_429111_remote.png"
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "main_edit_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "preservation_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "strict_joint_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "new_obvious_severe_failure_vs_F": {
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "note": "Chocolate-brown spiral frosting created; wrapper, apple and plate retained within qualitative tolerance; not pixel-identical preservation.",
+      "panel": "runs/latency_temporal_v1/analysis/panels/local_train_15953_chocolate.png"
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "main_edit_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "preservation_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "strict_joint_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "new_obvious_severe_failure_vs_F": {
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "note": "Bat becomes brown wood with overall position and direction retained; hands, clothing and scene remain.",
+      "panel": "runs/latency_temporal_v1/analysis/panels/local_train_26498_woodbat.png"
+    },
+    {
+      "case_id": "local_train_452168_bluesign",
+      "source_group_id": "452168",
+      "main_edit_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "preservation_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "strict_joint_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "new_obvious_severe_failure_vs_F": {
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "note": "Sign becomes dark blue and NO BIRDS ALLOWED remains readable; surroundings largely retained.",
+      "panel": "runs/latency_temporal_v1/analysis/panels/local_train_452168_bluesign.png"
+    },
+    {
+      "case_id": "local_train_210597_redcushion",
+      "source_group_id": "210597",
+      "main_edit_pass": {
+        "F": true,
+        "EARLY": true,
+        "MIDDLE": true,
+        "LATE": true
+      },
+      "preservation_pass": {
+        "F": false,
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "strict_joint_pass": {
+        "F": false,
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "new_obvious_severe_failure_vs_F": {
+        "EARLY": false,
+        "MIDDLE": false,
+        "LATE": false
+      },
+      "note": "Both blue cushions become red although only the flat right cushion was requested. Shared by F and FIX32.",
+      "panel": "runs/latency_temporal_v1/analysis/panels/local_train_210597_redcushion.png"
+    }
+  ],
+  "main_edit_passes": {
+    "F": 8,
+    "EARLY": 8,
+    "MIDDLE": 8,
+    "LATE": 8
+  },
+  "strict_joint_passes": {
+    "F": 5,
+    "EARLY": 5,
+    "MIDDLE": 5,
+    "LATE": 5
+  },
+  "new_obvious_severe_failures": {
+    "EARLY": 0,
+    "MIDDLE": 0,
+    "LATE": 0
+  },
+  "historical_grade_revision": "429111 historical coarse pass revised to strict preservation failure in this new review; historical record remains unchanged; predeclared historical-pass subgroup still has6 and is not called current quality-valid subgroup"
+}

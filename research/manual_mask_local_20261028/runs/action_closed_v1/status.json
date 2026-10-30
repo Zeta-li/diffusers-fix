@@ -1,0 +1,10 @@
+{
+  "phase": "complete_quality_pending",
+  "updated_unix": 1793174365.7829046,
+  "invoked_dit": 152,
+  "completed_dit": 152,
+  "successful_requests": 19,
+  "case_id": "free_374087",
+  "arm": "HEAD",
+  "step": 8
+}

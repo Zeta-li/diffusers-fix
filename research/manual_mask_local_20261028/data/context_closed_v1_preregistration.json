@@ -1,0 +1,524 @@
+{
+  "phase": "FROZEN_BEFORE_GENERATION",
+  "created_at": "2026-10-28T14:57:31.443166+08:00",
+  "purpose": "Decision batch: closed-loop deployable context/velocity decoupling versus fixed32 and same-extra-compute fresh velocity; stop this sparse-refresh patch family if no stable gain",
+  "cases": [
+    {
+      "case_id": "local_train_286770_goat",
+      "source_group_id": "286770",
+      "image": "inputs/s1_train8/local_train_286770_goat/source.original",
+      "source_sha256": "75247dd935a0f86f1a6a799d66b5bd8c8f3f65c5d50cdda829c6c6129404463a",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        165,
+        180,
+        250,
+        395
+      ],
+      "prompt": "Replace only the leftmost lamb with a young goat of similar size in the same standing pose and position. Keep the other two sheep and the rest of the scene unchanged.",
+      "role": "fit",
+      "task_type": "replace",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "FRESH64",
+          "preserve_extra_velocity": false
+        },
+        {
+          "name": "CONTEXT64",
+          "preserve_extra_velocity": true
+        }
+      ],
+      "reference_run": "free_contract_v2",
+      "reference_F_run": "free_contract_v2",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        119,
+        154,
+        266,
+        416
+      ]
+    },
+    {
+      "case_id": "local_train_486018_dog",
+      "source_group_id": "486018",
+      "image": "inputs/s1_train8/local_train_486018_dog/source.original",
+      "source_sha256": "17d9d3e818058c897ed59d4b5b9e01ab7559c881f3f33b352f6ae7137a3900ae",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        75,
+        85,
+        275,
+        250
+      ],
+      "prompt": "Replace the black cat on the microwave with a small black Labrador retriever puppy with floppy hanging ears and a broad dog muzzle. Keep the puppy on top of the same microwave. Preserve the microwave and the rest of the room.",
+      "role": "fit",
+      "task_type": "replace",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "FRESH64",
+          "preserve_extra_velocity": false
+        },
+        {
+          "name": "CONTEXT64",
+          "preserve_extra_velocity": true
+        }
+      ],
+      "reference_run": "free_contract_v2",
+      "reference_F_run": "free_contract_v2",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        44,
+        59,
+        301,
+        276
+      ]
+    },
+    {
+      "case_id": "local_train_15953_chocolate",
+      "source_group_id": "15953",
+      "image": "inputs/s1_train8/local_train_15953_chocolate/source.original",
+      "source_sha256": "dcdc856732161f84c3052750d4f0acaee67e91fbec25b58f3ffaecb9c16ed723",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        210,
+        110,
+        465,
+        255
+      ],
+      "prompt": "Change only the white frosting on top of the cupcake to chocolate-brown frosting. Preserve its spiral shape, the cupcake wrapper, the apple, the plate, and the rest of the image.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "FRESH64",
+          "preserve_extra_velocity": false
+        },
+        {
+          "name": "CONTEXT64",
+          "preserve_extra_velocity": true
+        }
+      ],
+      "reference_run": "free_contract_v2",
+      "reference_F_run": "free_contract_v2",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        194,
+        94,
+        481,
+        271
+      ]
+    },
+    {
+      "case_id": "local_train_26498_woodbat",
+      "source_group_id": "26498",
+      "image": "inputs/s1_train8/local_train_26498_woodbat/source.original",
+      "source_sha256": "6007d94a612a0e6bc90ef659ac98e10770a0dd12272b7ee497dc72a949aca264",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        130,
+        208,
+        250,
+        245
+      ],
+      "prompt": "Make the baseball bat look like natural brown wood while preserving its exact position, length, and direction. Keep the player's hands, clothing, and the rest of the scene unchanged.",
+      "role": "fit",
+      "task_type": "attribute",
+      "source_origin": "existing_S1_seen_development",
+      "arms": [
+        {
+          "name": "FRESH64",
+          "preserve_extra_velocity": false
+        },
+        {
+          "name": "CONTEXT64",
+          "preserve_extra_velocity": true
+        }
+      ],
+      "reference_run": "free_contract_v2",
+      "reference_F_run": "free_contract_v2",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        109,
+        189,
+        271,
+        263
+      ]
+    },
+    {
+      "case_id": "free_414772",
+      "source_group_id": "414772",
+      "image": "inputs/free_train24/414772/source.original",
+      "source_sha256": "977d1578a3df1b240773b92884e28c91a25efd2ff794c6cb469250f2eaf52293",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        295,
+        310,
+        385,
+        375
+      ],
+      "prompt": "Replace the roast chicken near the right side of the dining table with a small upright pineapple with green leaves. Keep it on the same platter and preserve the dining room and other table objects.",
+      "role": "calibration",
+      "task_type": "expansion",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "FRESH64",
+          "preserve_extra_velocity": false
+        },
+        {
+          "name": "CONTEXT64",
+          "preserve_extra_velocity": true
+        }
+      ],
+      "reference_run": "free_full20_v1",
+      "reference_F_run": "free_full20_v1",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        279,
+        219,
+        401,
+        391
+      ]
+    },
+    {
+      "case_id": "free_475277",
+      "source_group_id": "475277",
+      "image": "inputs/free_train24/475277/source.original",
+      "source_sha256": "25d5adf8f7b040c67f72d7ff95172a312528a334d271c87499f2cdc6b64ecdf1",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        235,
+        10,
+        405,
+        195
+      ],
+      "prompt": "Add a single slender ivory unicorn horn growing upward from the center of the white horse forehead between its ears. Preserve the horse face, mane, fence and background.",
+      "role": "internal_validation",
+      "task_type": "expansion",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "FRESH64",
+          "preserve_extra_velocity": false
+        },
+        {
+          "name": "CONTEXT64",
+          "preserve_extra_velocity": true
+        }
+      ],
+      "reference_run": "free_full20_v1",
+      "reference_F_run": "free_full20_v1",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        174,
+        0,
+        421,
+        211
+      ]
+    },
+    {
+      "case_id": "free_57395",
+      "source_group_id": "57395",
+      "image": "inputs/free_train24/57395/source.original",
+      "source_sha256": "31be003210c46ae636d41427e6cfafd27fc688492e57c70f84a495d3775158aa",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        0,
+        180,
+        420,
+        465
+      ],
+      "prompt": "Replace the green broccoli on the blue plate with white cauliflower florets. Preserve the other food and the plate.",
+      "role": "calibration",
+      "task_type": "replace",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "FRESH64",
+          "preserve_extra_velocity": false
+        },
+        {
+          "name": "CONTEXT64",
+          "preserve_extra_velocity": true
+        }
+      ],
+      "reference_run": "free_full20_v1",
+      "reference_F_run": "free_full20_v1",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": false,
+      "evaluation_box": [
+        0,
+        164,
+        436,
+        481
+      ]
+    },
+    {
+      "case_id": "free_557907",
+      "source_group_id": "557907",
+      "image": "inputs/free_train24/557907/source.original",
+      "source_sha256": "7770ab7747057afccf8b2de51aecdae7d2190b6b660acd8161b060b272400a66",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        205,
+        85,
+        495,
+        350
+      ],
+      "prompt": "Change only the wool of the foreground sheep on the right from white to black. Preserve the other sheep, their poses and the grassy field.",
+      "role": "calibration",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "FRESH64",
+          "preserve_extra_velocity": false
+        },
+        {
+          "name": "CONTEXT64",
+          "preserve_extra_velocity": true
+        }
+      ],
+      "reference_run": "free_full20_v1",
+      "reference_F_run": "free_full20_v1",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        189,
+        69,
+        500,
+        366
+      ]
+    },
+    {
+      "case_id": "free_272738_p1",
+      "source_group_id": "272738",
+      "image": "inputs/free_train24/272738/source.original",
+      "source_sha256": "1e36f8cea50c5d001782da0cddae36f672bc79bfe545c202268679e1fde91c9f",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        225,
+        0,
+        365,
+        290
+      ],
+      "prompt": "Replace only the transparent stemmed glass in the upper center-right of the desk with one red ceramic mug with a handle, located where that glass stood. Preserve the rest of the desk.",
+      "role": "seen_development_object_selection",
+      "task_type": "replace",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "FRESH64",
+          "preserve_extra_velocity": false
+        },
+        {
+          "name": "CONTEXT64",
+          "preserve_extra_velocity": true
+        }
+      ],
+      "original_case_id": "free_272738",
+      "reference_run": "object_selectivity_v1",
+      "reference_F_run": "object_selectivity_v1",
+      "reference_FIX32_run": "object_selectivity_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        193,
+        0,
+        397,
+        322
+      ],
+      "prompt_repair_previously_frozen": true
+    },
+    {
+      "case_id": "free_275197",
+      "source_group_id": "275197",
+      "image": "inputs/free_train24/275197/source.original",
+      "source_sha256": "bbb32db23e8e803bbedfe0b640d4a1a865f8d06a3874e98dd761076bf1a6dafb",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        0,
+        65,
+        80,
+        305
+      ],
+      "prompt": "Change only the hanging white kitchen towel on the left to blue. Preserve its shape and position, the sink and all other kitchen objects.",
+      "role": "calibration",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "FRESH64",
+          "preserve_extra_velocity": false
+        },
+        {
+          "name": "CONTEXT64",
+          "preserve_extra_velocity": true
+        }
+      ],
+      "reference_run": "free_full20_v1",
+      "reference_F_run": "free_full20_v1",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        0,
+        49,
+        96,
+        321
+      ]
+    },
+    {
+      "case_id": "free_403221",
+      "source_group_id": "403221",
+      "image": "inputs/free_train24/403221/source.original",
+      "source_sha256": "1d28786a5939def64e26ecddd5ded9c24e429019173781b466176adcc12bfd3e",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        240,
+        180,
+        355,
+        310
+      ],
+      "prompt": "Change the collar around the foreground sheep neck to bright red. Preserve the sheep, its tags, and the mountain landscape.",
+      "role": "internal_validation",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "FRESH64",
+          "preserve_extra_velocity": false
+        },
+        {
+          "name": "CONTEXT64",
+          "preserve_extra_velocity": true
+        }
+      ],
+      "reference_run": "free_full20_v1",
+      "reference_F_run": "free_full20_v1",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        224,
+        94,
+        383,
+        326
+      ]
+    },
+    {
+      "case_id": "free_374087",
+      "source_group_id": "374087",
+      "image": "inputs/free_train24/374087/source.original",
+      "source_sha256": "12ce8c3d48bc8085631f68ebf3698720125794fb86727930d25b90040e706dd2",
+      "source_wh": [
+        500,
+        500
+      ],
+      "bbox": [
+        25,
+        300,
+        280,
+        500
+      ],
+      "prompt": "Change the green bananas in the lower-left part of the box to ripe yellow bananas. Preserve their number, shape, and all other groceries.",
+      "role": "internal_validation",
+      "task_type": "attribute",
+      "source_origin": "previous_research_train24_source_only_for_new_task",
+      "arms": [
+        {
+          "name": "FRESH64",
+          "preserve_extra_velocity": false
+        },
+        {
+          "name": "CONTEXT64",
+          "preserve_extra_velocity": true
+        }
+      ],
+      "reference_run": "free_full20_v1",
+      "reference_F_run": "free_full20_v1",
+      "reference_FIX32_run": "free_fixed32_v1",
+      "baseline_semantic_pass": true,
+      "evaluation_box": [
+        9,
+        274,
+        296,
+        500
+      ]
+    }
+  ],
+  "planned_requests": 24,
+  "planned_dit": 192,
+  "extra_tokens": 64,
+  "refresh_steps": [
+    3,
+    5
+  ],
+  "step_indexing": "zero_based",
+  "code_sha256": {
+    "context_refresh.py": "fdb160eb561f32bb688c3ac3648532024d6f6d4de478a78595b5ef5bd5265a5d",
+    "run_context_closed.py": "e7e030d33bafc224ebe066803b3641a7a1441c68f0042da97534318c81f43e57",
+    "test_context_refresh.py": "732c57de3a147a1674f745bd16c91831f5ec2d03309f8f78fece9f69a4af863b",
+    "refresh_supervision.py": "b223b9e1fafe2853b0b7613c8ed0541d7912f315c1c263c486e49de5dc8abe83",
+    "legacy_local_executor.py": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1",
+    "legacy_refresh_policy.py": "0b319fbbb05c8dff0880e75634cca524211dd8b4fce4e65006ebde7f990adfcf",
+    "free_region.py": "4dbfbb1f20146bcc8bb20dfaf1de71eed4da25fe8806f827a945547e032c0d51",
+    "run_free_pilot.py": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8",
+    "run_s1.py": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81"
+  },
+  "cpu_receipt": "data/cpu_context_refresh_v1.json",
+  "teacher_dit": 0,
+  "training_updates": 0,
+  "RL_updates": 0,
+  "net_latency_requests": 0,
+  "source_scope": "All12 previously compared development sources retained; cup uses already frozen successful P1 with archived F/FIX32. Not independent validation. Cauliflower baseline uncertainty remains in denominator.",
+  "quality_gate": {
+    "primary": "CONTEXT64 versus archived FIX32 on all12",
+    "minimum_improved_sources": 8,
+    "minimum_relative_mean_MAE_reduction": 0.02,
+    "max_per_source_relative_MAE_increase": 0.1,
+    "new_semantic_regressions_max": 0,
+    "original_absolute_quality_gate_unchanged": true
+  },
+  "cost_note": "FRESH64 and CONTEXT64 have identical per-step recomputation budgets. Each adds128 target-token updates per image versus FIX32; no zero-cost claim.",
+  "stopping_rule": "If frozen relative gate fails, stop further tuning/label expansion/training/RL for this sparse background-refresh patch family; preserve as negative result and reassess central method before new GPU batch."
+}

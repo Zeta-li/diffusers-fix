@@ -1,0 +1,721 @@
+{
+  "files": [
+    {
+      "path": "runs/budget_merge_v1/analysis/free_272738.jpg",
+      "size": 264353,
+      "sha256": "0fe7a4a3a59e66d533df8cc6291e0488553adf87aa83bd5d4f0a5df4532b6844"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/free_275197.jpg",
+      "size": 212478,
+      "sha256": "95ae54d9b41eabf8d64640f92d49f32557426959e214677c1ead63d462090439"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/free_374087.jpg",
+      "size": 272248,
+      "sha256": "1293c0577241ebab5251355b0fc3b839fd6f572e9c5e2911fd95b8961adba7df"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/free_403221.jpg",
+      "size": 267874,
+      "sha256": "d7299db6983b8b2ce99d562baf23dd9af6f23dd1456fd9a2ecf736a85aa89e79"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/free_414772.jpg",
+      "size": 299265,
+      "sha256": "f698937d61f2e7afb52d02e0946c46bc4e9b754ce865ca6350ba7de18b1fef18"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/free_475277.jpg",
+      "size": 216982,
+      "sha256": "a3c8dac31675d78624bb0b506579788f64f57c9c1ec6485326250cb32f48708a"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/free_557907.jpg",
+      "size": 335495,
+      "sha256": "04446c535658a79161c6eafaea1d5b320f3cecf7831dbaa69bf8d85c3a1b6e5a"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/local_train_15953_chocolate.jpg",
+      "size": 232124,
+      "sha256": "36cf3d2d801890b8ad0c2a1be06a55539bf7dd2a7bb245dddbfd7f175ea3ed64"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/local_train_178810_bollard.jpg",
+      "size": 277273,
+      "sha256": "15997dd289f4c6e3c3384cb08d4ab1b8c43e1bd480454677206c63ff618034af"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/local_train_210597_redcushion.jpg",
+      "size": 229876,
+      "sha256": "855e438e029e9fad2f9a80623e3f9fd7faf9cff05b20212b959f6922afcbf652"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/local_train_26498_woodbat.jpg",
+      "size": 252783,
+      "sha256": "46732e0b77d4058a12e699ee8a08eea01bce28b7146b21646f24242e66c24e30"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/local_train_286770_goat.jpg",
+      "size": 200609,
+      "sha256": "b6eedefa5f76b76df49d5b4e692f36e65553084eece5035c1d6c8742317bdf1f"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/local_train_429111_remote.jpg",
+      "size": 300233,
+      "sha256": "3a3b3f374219cf0184db280248940677eec01227dbc1329d25917cd46eff3986"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/local_train_452168_bluesign.jpg",
+      "size": 231916,
+      "sha256": "256c41ccc651acc7766fbf60aa5ebe508f3ed82fdef55e033468ab75eb3f929b"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/local_train_486018_dog.jpg",
+      "size": 167736,
+      "sha256": "51b68f1f5e96825bd57852ec8994bd9b488b6e07cd628548445d52d88b1d385f"
+    },
+    {
+      "path": "runs/budget_merge_v1/analysis/results.json",
+      "size": 4654,
+      "sha256": "7a5146a22ab19769d97f3db10892b5e4fb52e9317b1503e21677e3057789bb3f"
+    },
+    {
+      "path": "runs/budget_merge_v1/code_snapshot/benchmark_merged_student.py",
+      "size": 6186,
+      "sha256": "89b0594d6166da6a413ef92a0f4052f1c1318e29b591ec3583b435b1e12eedfb"
+    },
+    {
+      "path": "runs/budget_merge_v1/code_snapshot/budget_cache_executor.py",
+      "size": 10537,
+      "sha256": "80a821bc1a80368a3e409cd3ec9b81a57d36e1666a72f1f7990dab237d45f195"
+    },
+    {
+      "path": "runs/budget_merge_v1/code_snapshot/budget_profiles.py",
+      "size": 3716,
+      "sha256": "45898a0aa40427186b6267b0550e18d6457c4f6bfa0b19f5f2d8a25362d6dfc2"
+    },
+    {
+      "path": "runs/budget_merge_v1/code_snapshot/cache_aware_adapters.py",
+      "size": 3002,
+      "sha256": "3c3a37ffd8ba9d884a9555f26cf7e7b095d86a34fa9aabf8d0b45b34c4ce0702"
+    },
+    {
+      "path": "runs/budget_merge_v1/code_snapshot/run_free_pilot.py",
+      "size": 14399,
+      "sha256": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8"
+    },
+    {
+      "path": "runs/budget_merge_v1/code_snapshot/run_s1.py",
+      "size": 14906,
+      "sha256": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81"
+    },
+    {
+      "path": "runs/budget_merge_v1/code_snapshot/trainable_budget_executor.py",
+      "size": 8924,
+      "sha256": "34dcd940d2f3594235726aaed989dd3fc54f4b52353c7fcd7bf3def32ff76d51"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_272738/MERGED_quality_only_r0.json",
+      "size": 343,
+      "sha256": "fc5430cae122197299ea19d605178dd8a19f31bcddcf0027109679c711f312f9"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_272738/MERGED_quality_only_r0.png",
+      "size": 1282214,
+      "sha256": "3c689a426f29a89d5f940daaafc040baea38ca43f8b17377f71ab6e86bca8c98"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_275197/MERGED_quality_only_r0.json",
+      "size": 344,
+      "sha256": "89113539dbeb775cd12a9ac6248215f018b1510cdbd3cb3898c1e781ce522444"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_275197/MERGED_quality_only_r0.png",
+      "size": 1153910,
+      "sha256": "61e0f257dc4074cba88ee56e2d28e2af2d93fced37a6867d1c14ef60a15f47ed"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_374087/MERGED_quality_only_r0.json",
+      "size": 342,
+      "sha256": "d06da334809e78d0ecf068caff152b329a5d67264965c11ae757b379bab5646e"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_374087/MERGED_quality_only_r0.png",
+      "size": 1395097,
+      "sha256": "64eda6e2a44fa858f30e2e52ea846baa51c91d9c48f76b943fbda7117f11fd49"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_403221/MERGED_quality_only_r0.json",
+      "size": 344,
+      "sha256": "b0118fb7d07360ab5a8c2db99bceade1dd9e992b4003e833be086c57e10fc3e9"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_403221/MERGED_quality_only_r0.png",
+      "size": 1522944,
+      "sha256": "9d663fb69b10eee80e8726bc54c1865f5d740f28e22486694687a1fc38e1e77f"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_414772/MERGED_quality_only_r0.json",
+      "size": 344,
+      "sha256": "32287e41280123e196713394b52a7560c0aa2dfd9e72787a1e7c35b0b8eb6e1e"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_414772/MERGED_quality_only_r0.png",
+      "size": 1383888,
+      "sha256": "98c9a4cdc91a13530a8fe3259e6bb85d598789891ad1ea45dc59dc0134812029"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_475277/MERGED_quality_only_r0.json",
+      "size": 344,
+      "sha256": "d0fb8814c075eb29692765649a0e59c725f8641bb231ad0d1b24b9aab11f1db1"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_475277/MERGED_quality_only_r0.png",
+      "size": 1217182,
+      "sha256": "5f4f2bb82844a0109ff9ec297f8e377e26ce083a20839f1fe806023960d17841"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_557907/MERGED_quality_only_r0.json",
+      "size": 344,
+      "sha256": "6a87b7660fcc4ac550896c50ebfb94d43fac59b1aa7ae1049356bc1bac3e675d"
+    },
+    {
+      "path": "runs/budget_merge_v1/free_557907/MERGED_quality_only_r0.png",
+      "size": 1830091,
+      "sha256": "91baf258c998dad4c13e3890e1f34d4098340f48434dc889fe194cb20fcbc28f"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_15953_chocolate/F_paired_r0.json",
+      "size": 348,
+      "sha256": "cd324e9f1683cb74bad4bf63b11756b96ef651a996c09e9721265f8058676714"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_15953_chocolate/F_paired_r0.png",
+      "size": 1251811,
+      "sha256": "fb3f76a4ba9d2048b228de9defc35de86c62ea27ddd36fb5a3baa9cf53c04b30"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_15953_chocolate/F_paired_r1.json",
+      "size": 348,
+      "sha256": "c2a671beeb354e9c6f66ebad742a3a4a2914d77f2d3e0d03ca5d1939f446446c"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_15953_chocolate/F_paired_r1.png",
+      "size": 1251811,
+      "sha256": "fb3f76a4ba9d2048b228de9defc35de86c62ea27ddd36fb5a3baa9cf53c04b30"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_15953_chocolate/MERGED_paired_r0.json",
+      "size": 354,
+      "sha256": "b77ff66dfebecce73dc158e7ba47d4bb2d5b42a727d1e83307acce961285aadb"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_15953_chocolate/MERGED_paired_r0.png",
+      "size": 1272707,
+      "sha256": "21d7249681e07e2994f9df830acb61dca4394a99d4d8839d3930e227bd075821"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_15953_chocolate/MERGED_paired_r1.json",
+      "size": 354,
+      "sha256": "7eae3070c6a8712503fc1371f5918b4267b037e06547710ccbdfa944df8a48c6"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_15953_chocolate/MERGED_paired_r1.png",
+      "size": 1272707,
+      "sha256": "21d7249681e07e2994f9df830acb61dca4394a99d4d8839d3930e227bd075821"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_15953_chocolate/UNMERGED_paired_r0.json",
+      "size": 355,
+      "sha256": "216eaea5964d622cdf77757a57d917ca6f007274f9bfa899c6b1ec8c33fa0519"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_15953_chocolate/UNMERGED_paired_r0.png",
+      "size": 1272521,
+      "sha256": "f8bd33acbfaa1dfa042055affad0b96d62e19e3dee53d07d60ddb4113e512cfe"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_15953_chocolate/UNMERGED_paired_r1.json",
+      "size": 355,
+      "sha256": "c3162c92495bc70f83fc8f37a5a511cfed615c340a5a1e3f543ee0c610e332f0"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_15953_chocolate/UNMERGED_paired_r1.png",
+      "size": 1272521,
+      "sha256": "f8bd33acbfaa1dfa042055affad0b96d62e19e3dee53d07d60ddb4113e512cfe"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_178810_bollard/F_paired_r0.json",
+      "size": 346,
+      "sha256": "96272b6267571bc41445cbc5fd286237cb483f8f3799a866e691cd748e9dd138"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_178810_bollard/F_paired_r0.png",
+      "size": 2001970,
+      "sha256": "634cbd529a0520b75d65ed7df32006038e672feefa83b94735cd32824d16d6bd"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_178810_bollard/F_paired_r1.json",
+      "size": 347,
+      "sha256": "deae0500a3976c4f31ecc60c69015eccd9e3788b0cc04fe844adde5cd8b628c5"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_178810_bollard/F_paired_r1.png",
+      "size": 2001970,
+      "sha256": "634cbd529a0520b75d65ed7df32006038e672feefa83b94735cd32824d16d6bd"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_178810_bollard/MERGED_paired_r0.json",
+      "size": 350,
+      "sha256": "4b42632d27756037a765ce6fd8522ba4fc88f69deddd100b0ce017b5c218bad1"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_178810_bollard/MERGED_paired_r0.png",
+      "size": 2009288,
+      "sha256": "7bfad174df4b96b6b61e14ded75befd3f244f0b458977e9a776efc56219fba4a"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_178810_bollard/MERGED_paired_r1.json",
+      "size": 353,
+      "sha256": "3d6613eff321f62eb7346d22f7b77cd59a2b3ad403bd631b07bbc9e04356ce02"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_178810_bollard/MERGED_paired_r1.png",
+      "size": 2009288,
+      "sha256": "7bfad174df4b96b6b61e14ded75befd3f244f0b458977e9a776efc56219fba4a"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_178810_bollard/UNMERGED_paired_r0.json",
+      "size": 352,
+      "sha256": "52266de089e3b9572811f1824301c8652b84a430e8941ee8e333eab2717d6288"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_178810_bollard/UNMERGED_paired_r0.png",
+      "size": 2009323,
+      "sha256": "e7eacf3584137237b7fd316d58352ca82b395d9f86dcfb534b3c64ec8d861848"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_178810_bollard/UNMERGED_paired_r1.json",
+      "size": 355,
+      "sha256": "655ad63e58f695c93701d6f0b65372f63a4bea3ee479afe9cc3bcdd5f01c51f4"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_178810_bollard/UNMERGED_paired_r1.png",
+      "size": 2009323,
+      "sha256": "e7eacf3584137237b7fd316d58352ca82b395d9f86dcfb534b3c64ec8d861848"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_210597_redcushion/F_paired_r0.json",
+      "size": 350,
+      "sha256": "43951bdd7db46dc3ad3012366ef4f9bd96495c829c8a85953f09f6796736b227"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_210597_redcushion/F_paired_r0.png",
+      "size": 1160823,
+      "sha256": "0b5f9ff60112d50601bcce40471733c1db5b68a3f5372eeea2f5340ab56120af"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_210597_redcushion/F_paired_r1.json",
+      "size": 349,
+      "sha256": "004e0a08f62058a31237bafdd9feda911c13f53c6c5aadd4ebd149d295ed506d"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_210597_redcushion/F_paired_r1.png",
+      "size": 1160823,
+      "sha256": "0b5f9ff60112d50601bcce40471733c1db5b68a3f5372eeea2f5340ab56120af"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_210597_redcushion/MERGED_paired_r0.json",
+      "size": 356,
+      "sha256": "02c24e067e15920692eae95c4c15c18a216a02862269c58052930e09a943a93f"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_210597_redcushion/MERGED_paired_r0.png",
+      "size": 1166531,
+      "sha256": "a01e46db964455b3aa8e6f0d9e34bed2d65778aa9615e463c19fe94ab4bcb4ea"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_210597_redcushion/MERGED_paired_r1.json",
+      "size": 355,
+      "sha256": "5abc44932523e5e6fe4fa8b068494ef9946634e28878d7e32c7dc8de972ba509"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_210597_redcushion/MERGED_paired_r1.png",
+      "size": 1166531,
+      "sha256": "a01e46db964455b3aa8e6f0d9e34bed2d65778aa9615e463c19fe94ab4bcb4ea"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_210597_redcushion/UNMERGED_paired_r0.json",
+      "size": 358,
+      "sha256": "ec369e18e159e0ffb54e3c7725efa4f2b74ec3e0a6f7f6a54fd486e041000196"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_210597_redcushion/UNMERGED_paired_r0.png",
+      "size": 1165596,
+      "sha256": "0a6076ff0d97968aa98627b983b0dd801b7da0f8875a9179ec47f721c3a953db"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_210597_redcushion/UNMERGED_paired_r1.json",
+      "size": 358,
+      "sha256": "688c71a2d635e9b129a1da04f8f0c19c009a2862eb1661b10c88ce2c6c6d455a"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_210597_redcushion/UNMERGED_paired_r1.png",
+      "size": 1165596,
+      "sha256": "0a6076ff0d97968aa98627b983b0dd801b7da0f8875a9179ec47f721c3a953db"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_26498_woodbat/F_paired_r0.json",
+      "size": 346,
+      "sha256": "4c17b23cfe83bfe091ea9096c03947225a3b091698aa0d1f5787b34d4c586daa"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_26498_woodbat/F_paired_r0.png",
+      "size": 1294215,
+      "sha256": "843c05208dfc64860f40f47ecb235d95d2c0a2ec90c928d4c435bf3ee83566a3"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_26498_woodbat/F_paired_r1.json",
+      "size": 346,
+      "sha256": "be24526d98f14f129d28022ccce542e372a8bd642e9a48a8046b49f2b87e781a"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_26498_woodbat/F_paired_r1.png",
+      "size": 1294215,
+      "sha256": "843c05208dfc64860f40f47ecb235d95d2c0a2ec90c928d4c435bf3ee83566a3"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_26498_woodbat/MERGED_paired_r0.json",
+      "size": 351,
+      "sha256": "b6246331185345fe7bf5f83a9140174a123fa34767bb8d04626c23e2c3197e7b"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_26498_woodbat/MERGED_paired_r0.png",
+      "size": 1298894,
+      "sha256": "44acb678b43001520016a5c277b7dd62fead037f4331f6ab59a6846f105491da"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_26498_woodbat/MERGED_paired_r1.json",
+      "size": 352,
+      "sha256": "9bc37072c5e16ae8ffa573ffa5bc608592c6eef701e29a8c55094c88227bbc95"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_26498_woodbat/MERGED_paired_r1.png",
+      "size": 1298894,
+      "sha256": "44acb678b43001520016a5c277b7dd62fead037f4331f6ab59a6846f105491da"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_26498_woodbat/UNMERGED_paired_r0.json",
+      "size": 354,
+      "sha256": "5e6655e3094499d520594c1f2506abd9249c369c94e214ef0869e9038f25ab15"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_26498_woodbat/UNMERGED_paired_r0.png",
+      "size": 1298023,
+      "sha256": "b7798dd3be0ac0351ef3d6a8b73a12bd942aef2a5fc2ace4f6e5f2f436afe0db"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_26498_woodbat/UNMERGED_paired_r1.json",
+      "size": 354,
+      "sha256": "1d83cdc51eff128a7ec41dcee22200d6dcc625f3e8719865ed5b36af4f6f4aee"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_26498_woodbat/UNMERGED_paired_r1.png",
+      "size": 1298023,
+      "sha256": "b7798dd3be0ac0351ef3d6a8b73a12bd942aef2a5fc2ace4f6e5f2f436afe0db"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/F_paired_r0.json",
+      "size": 341,
+      "sha256": "2c5fd493ec342812a87a4cc9f39fe488a3b0e8e97c93b7679873bb4835df7735"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/F_paired_r0.png",
+      "size": 1085908,
+      "sha256": "b785cadf525a3074e0f8cf937be28b216d7a5ddb23da7340c0e57650cd4529b6"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/F_paired_r1.json",
+      "size": 344,
+      "sha256": "55277cd00dc6994958fd7202b64c881c5857c88e97a469de4e85f9e56706900a"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/F_paired_r1.png",
+      "size": 1085908,
+      "sha256": "b785cadf525a3074e0f8cf937be28b216d7a5ddb23da7340c0e57650cd4529b6"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/F_warmup_r0.json",
+      "size": 339,
+      "sha256": "1a32c04edcec8d3692424223f333213c99b0b0bdb7449ea2fd167d482b25050b"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/F_warmup_r0.png",
+      "size": 1085908,
+      "sha256": "b785cadf525a3074e0f8cf937be28b216d7a5ddb23da7340c0e57650cd4529b6"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/MERGED_paired_r0.json",
+      "size": 346,
+      "sha256": "320750618f716c5bb8226d840b5bb2bdc4773b4ff3a50d3c0e3252acf53a3908"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/MERGED_paired_r0.png",
+      "size": 1088051,
+      "sha256": "aa2b6e9f34a5ae458f8526e5f2df5441bcdbc8bb24751f91998e100e7f71f127"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/MERGED_paired_r1.json",
+      "size": 350,
+      "sha256": "8eab780caff5de6fb6633c96406c9af200e4a99146d3257c5e81bfd5dfcd489d"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/MERGED_paired_r1.png",
+      "size": 1088051,
+      "sha256": "aa2b6e9f34a5ae458f8526e5f2df5441bcdbc8bb24751f91998e100e7f71f127"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/MERGED_warmup_r0.json",
+      "size": 347,
+      "sha256": "67723e1e781fb93803f0b3f8cb8db34e5777d787be10321c1afdd0b88d1d88e5"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/MERGED_warmup_r0.png",
+      "size": 1088051,
+      "sha256": "aa2b6e9f34a5ae458f8526e5f2df5441bcdbc8bb24751f91998e100e7f71f127"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/UNMERGED_paired_r0.json",
+      "size": 349,
+      "sha256": "77ed9fd9e0e56f97f174436db1c4e438d4ed957be1304299fe6e452090b3bb5b"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/UNMERGED_paired_r0.png",
+      "size": 1087162,
+      "sha256": "6a829597a60819ad708b6a8413d068c919a0a8565c9f614f2732d5c234594fd6"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/UNMERGED_paired_r1.json",
+      "size": 351,
+      "sha256": "a5e3e3a81b86dad98b531e034cdd289a87fa1601f3139f9347a216d2610bffa4"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/UNMERGED_paired_r1.png",
+      "size": 1087162,
+      "sha256": "6a829597a60819ad708b6a8413d068c919a0a8565c9f614f2732d5c234594fd6"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/UNMERGED_warmup_r0.json",
+      "size": 349,
+      "sha256": "d01adcc13d19d37b759d58411dae5cf9139d04366923f77229a67b8e96095c69"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_286770_goat/UNMERGED_warmup_r0.png",
+      "size": 1087162,
+      "sha256": "6a829597a60819ad708b6a8413d068c919a0a8565c9f614f2732d5c234594fd6"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_429111_remote/F_paired_r0.json",
+      "size": 346,
+      "sha256": "2ed11d5a0af7ac9838372a56d7386ac1b0237a394012a0c33271136de1e7df72"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_429111_remote/F_paired_r0.png",
+      "size": 1358855,
+      "sha256": "3b32417f80edea3507af5f4571fb2c3d7ac48f5c3da895351446cd298f534d70"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_429111_remote/F_paired_r1.json",
+      "size": 347,
+      "sha256": "80544205d647ed77ef34ad7ef7b4eecd5162c9f02b0d0ed67816fa838a4a192e"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_429111_remote/F_paired_r1.png",
+      "size": 1358855,
+      "sha256": "3b32417f80edea3507af5f4571fb2c3d7ac48f5c3da895351446cd298f534d70"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_429111_remote/MERGED_paired_r0.json",
+      "size": 351,
+      "sha256": "f54ede663021ced23c1c93999ae5f80a2aa40067c590fc3f3297d888f6bce653"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_429111_remote/MERGED_paired_r0.png",
+      "size": 1364002,
+      "sha256": "d2aacd7aebafc2f058fe5391ac404edc28f533fef58e1d10fa8ec9156d584ea6"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_429111_remote/MERGED_paired_r1.json",
+      "size": 352,
+      "sha256": "aeec8ffcf48d65da426f35fceb477c8fb337a06828656e5cbd2aea27cb058510"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_429111_remote/MERGED_paired_r1.png",
+      "size": 1364002,
+      "sha256": "d2aacd7aebafc2f058fe5391ac404edc28f533fef58e1d10fa8ec9156d584ea6"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_429111_remote/UNMERGED_paired_r0.json",
+      "size": 351,
+      "sha256": "4f1a708fca963f599dcf10ca1731ea2c0a8bc2f41190240796a159c2f8ae0dfa"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_429111_remote/UNMERGED_paired_r0.png",
+      "size": 1362692,
+      "sha256": "e55f8961949ad35dbe02ea74e3d96f4855e4cc6045088ab944615787f4bb5132"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_429111_remote/UNMERGED_paired_r1.json",
+      "size": 353,
+      "sha256": "321bb6141ce3332f6392e057332517bd43d5b71b7f85a8338f6851484f347a1c"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_429111_remote/UNMERGED_paired_r1.png",
+      "size": 1362692,
+      "sha256": "e55f8961949ad35dbe02ea74e3d96f4855e4cc6045088ab944615787f4bb5132"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_452168_bluesign/F_paired_r0.json",
+      "size": 348,
+      "sha256": "7eea985c745acfa38399531d5fd070b7b2868c1d67262fac7b89b1f18ca901ac"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_452168_bluesign/F_paired_r0.png",
+      "size": 1100944,
+      "sha256": "584984351c5ececebb13e57f41bc14059a5579c0a7e85bdea2c74c67cb8cd65d"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_452168_bluesign/F_paired_r1.json",
+      "size": 348,
+      "sha256": "dcf39e567756913727e74102097c326e9e563a1ca8f946d8d11ec6837463abcc"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_452168_bluesign/F_paired_r1.png",
+      "size": 1100944,
+      "sha256": "584984351c5ececebb13e57f41bc14059a5579c0a7e85bdea2c74c67cb8cd65d"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_452168_bluesign/MERGED_paired_r0.json",
+      "size": 353,
+      "sha256": "0553e7e30e612415cf31d639005509ca76490569b0c8a5bf4747a9bba10558ff"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_452168_bluesign/MERGED_paired_r0.png",
+      "size": 1116156,
+      "sha256": "ba2308f711033f9ae99e723be7d24e304ca7f4ba7334ebc9380dc5049971a468"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_452168_bluesign/MERGED_paired_r1.json",
+      "size": 353,
+      "sha256": "b8bcd710e93ead359e49191d9e20b995e86527609eaec5d7718eb864bc62071c"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_452168_bluesign/MERGED_paired_r1.png",
+      "size": 1116156,
+      "sha256": "ba2308f711033f9ae99e723be7d24e304ca7f4ba7334ebc9380dc5049971a468"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_452168_bluesign/UNMERGED_paired_r0.json",
+      "size": 355,
+      "sha256": "48f3e3f65df094c4990ced445c8aff2352e1668bd13705333625de648a257598"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_452168_bluesign/UNMERGED_paired_r0.png",
+      "size": 1114003,
+      "sha256": "042c420eccca324fb5986b49fb69cf6de14f17d341ff1d762305384971616d01"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_452168_bluesign/UNMERGED_paired_r1.json",
+      "size": 356,
+      "sha256": "073afc4a59b3f234b273a007410f4520ae65175f2c127dea523f3e3a2ba1a05b"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_452168_bluesign/UNMERGED_paired_r1.png",
+      "size": 1114003,
+      "sha256": "042c420eccca324fb5986b49fb69cf6de14f17d341ff1d762305384971616d01"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_486018_dog/F_paired_r0.json",
+      "size": 340,
+      "sha256": "43711a1860ddf9c49be142a67f4e8fec3e8fbc5be2ce9ddc066e1aab512418a1"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_486018_dog/F_paired_r0.png",
+      "size": 934932,
+      "sha256": "eda2ca98c858317141e99ee94d07d9c500ef5d64daea9c3aaeee77e03df2c4b9"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_486018_dog/F_paired_r1.json",
+      "size": 343,
+      "sha256": "201270f6d75969b98405bdffbb1e65dd334d98c9c4614d260bca515c532261d4"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_486018_dog/F_paired_r1.png",
+      "size": 934932,
+      "sha256": "eda2ca98c858317141e99ee94d07d9c500ef5d64daea9c3aaeee77e03df2c4b9"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_486018_dog/MERGED_paired_r0.json",
+      "size": 346,
+      "sha256": "b677d2e0adfc305ea49c2861f330c48ccc35b30ee463044038c7c443dfcf79cf"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_486018_dog/MERGED_paired_r0.png",
+      "size": 931129,
+      "sha256": "2546f7a90737a27aa2ab62b6b79cb00245f450386139fea89c3cc186602e1918"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_486018_dog/MERGED_paired_r1.json",
+      "size": 349,
+      "sha256": "b7d012d6ed1b88217c8347238e6b5b18d7a89a2126ae7fe7f241f0eec9d0c16d"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_486018_dog/MERGED_paired_r1.png",
+      "size": 931129,
+      "sha256": "2546f7a90737a27aa2ab62b6b79cb00245f450386139fea89c3cc186602e1918"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_486018_dog/UNMERGED_paired_r0.json",
+      "size": 347,
+      "sha256": "15c34a8e107004dd0f418e4b63e65f53c8266172ceb3335a62d2d8a76d955993"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_486018_dog/UNMERGED_paired_r0.png",
+      "size": 930899,
+      "sha256": "3ed48968d9ce2a874eabfa7a52a3907c4e732a41d0ac72fb4bbd426bd6e27687"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_486018_dog/UNMERGED_paired_r1.json",
+      "size": 349,
+      "sha256": "463410ed81934b0d98547af5c6ff2ed5c5d0ce02c5ec89e9e311dfc39020e5c9"
+    },
+    {
+      "path": "runs/budget_merge_v1/local_train_486018_dog/UNMERGED_paired_r1.png",
+      "size": 930899,
+      "sha256": "3ed48968d9ce2a874eabfa7a52a3907c4e732a41d0ac72fb4bbd426bd6e27687"
+    },
+    {
+      "path": "runs/budget_merge_v1/merge_diagnostics.json",
+      "size": 15314,
+      "sha256": "cca748f7a751d1a371ac9ef9e6f23f4611dacf61e0d28fa034c3bdd1e7d4ea29"
+    },
+    {
+      "path": "runs/budget_merge_v1/preregistration.json",
+      "size": 17179,
+      "sha256": "2f9d5a11533726663067e3e78c6a55d82adbeb463d943c709249a7a274f649fa"
+    },
+    {
+      "path": "runs/budget_merge_v1/records.jsonl",
+      "size": 18978,
+      "sha256": "1dacdadc5a85c013b232ab9de4f4f967c121918efca36fd6837fd429370a3e44"
+    },
+    {
+      "path": "runs/budget_merge_v1/status.json",
+      "size": 250,
+      "sha256": "5d6a450ab8cb13bd7e1e56668f2f9baa80ac18d380302ffd9f733ca24e01c6c5"
+    }
+  ],
+  "count": 143,
+  "bytes": 78298861
+}

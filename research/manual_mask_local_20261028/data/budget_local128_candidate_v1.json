@@ -1,0 +1,31 @@
+{
+  "name": "LOCAL128",
+  "base": "Qwen-Image-Edit",
+  "steps": 8,
+  "cfg": 1,
+  "checkpoint": "runs/budget_expansion_train_v1/checkpoints/student_inference.pt",
+  "checkpoint_sha256": "216794f27aacf696af7835612234dcdf04cb7dcc6dbfbc9ecffcfa3ef55332f7",
+  "plan_profile": "B",
+  "lora_enabled_steps_one_based": [
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "lora_disabled_full_anchor_steps_one_based": [
+    1,
+    2,
+    8
+  ],
+  "unmerged": true,
+  "spatial_head": false,
+  "hard_mask": false,
+  "pixel_copy": false,
+  "trained_sources_cumulative": 140,
+  "LoRA_optimizer_updates_cumulative": 153,
+  "quality": "Dev32 19/32 strict joint versus F21/32; strict extra-failure gate failed",
+  "inference": "scripts/evaluate_budget_development.py",
+  "full_pipeline": "scripts/benchmark_expanded_student.py",
+  "diagnostic_net_speedup": 1.73392124481934
+}

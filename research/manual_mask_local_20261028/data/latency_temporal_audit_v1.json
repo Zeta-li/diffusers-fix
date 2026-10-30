@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "requests": 82,
+  "actual_dit": 656,
+  "warmup_dit": 16,
+  "eligible_timing_dit": 384,
+  "temporal_dit": 256,
+  "CPU_Euler_recomputed_steps": 272,
+  "temporal_anchor_pairs": 24,
+  "equal_budget_and_token_multiset_sources": 8,
+  "archived_final_pairs": 50,
+  "raw_outputs": 82,
+  "frozen_code_files": 11,
+  "protocol_sha256": "23d4c92431b84a1fc1317f21f1232b0f314e5b9eb00ee57eead5bba88f39e4c9",
+  "GPU_or_model_calls_in_audit": 0,
+  "test64_opened": false
+}

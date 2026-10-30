@@ -1,0 +1,45 @@
+{
+  "status": "LOCAL_CORE_WEIGHTS_VERIFIED",
+  "created_at": "2026-10-30T14:14:37.042704+00:00",
+  "files": [
+    {
+      "file": "LOCAL128_student.pt",
+      "source": "runs/budget_expansion_train_v1/checkpoints/student_inference.pt",
+      "sha256": "216794f27aacf696af7835612234dcdf04cb7dcc6dbfbc9ecffcfa3ef55332f7",
+      "bytes": 17743355
+    },
+    {
+      "file": "SUP_refresh_head.pt",
+      "source": "runs/refresh_policy_v1/checkpoints/supervised.pt",
+      "sha256": "da8a58f34513716471741f181d7fdb9ec32a4992b3eb9b829ff2e836ecd8a699",
+      "bytes": 4347
+    },
+    {
+      "file": "RL_bandit_head.pt",
+      "source": "runs/refresh_bandit_v1/checkpoints/bandit.pt",
+      "sha256": "18df09d3dd0bae8729220eca21548549679f54ae677a1a3716300999c454431e",
+      "bytes": 4179
+    },
+    {
+      "file": "explicit_noise.pt",
+      "source": "runs/s1_v2/explicit_noise.pt",
+      "sha256": "2fdb96612e3eb7335105fab086c0f1d6af86b66c7241ef080479c1a7de83be79",
+      "bytes": 525914
+    }
+  ],
+  "base_model": {
+    "repo": "Qwen/Qwen-Image-Edit",
+    "revision": "ac7f9318f633fc4b5778c59367c8128225f1e3de",
+    "included": false
+  },
+  "lightning": {
+    "repo": "lightx2v/Qwen-Image-Lightning",
+    "revision": "d468c534b360e0754c6bf9e38ed49e1e09cd2e2a",
+    "file": "Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors",
+    "sha256": "36ee4ff860856559b9c581eaa69414900488f3de8be2f2448586daec77e201b9",
+    "included": false
+  },
+  "default": "LOCAL128 + R25, student enabled only on local steps;Lightning always enabled",
+  "optional": "SUP; RL retained for ablation, not promoted",
+  "native_SGLang_tested": false
+}

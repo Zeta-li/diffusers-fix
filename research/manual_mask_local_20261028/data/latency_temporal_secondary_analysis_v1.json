@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-28T18:10:20.844843+08:00",
+  "status": "SECONDARY_ANALYSIS_DEFINED_AFTER_PRIMARY_FREEZE_BEFORE_VIEWING_TEMPORAL_RESULTS",
+  "matched_source_ids": [
+    "15953",
+    "26498",
+    "286770",
+    "486018"
+  ],
+  "n": 4,
+  "analysis": "Compare temporal oracle under exact FIX32 budget with saved fixed-halo oracle under no-more-than-per-source FIX32 target updates, only intersection of sources having all historical FIX16/32/48 outputs. Recompute integer RGB MAE against exactly reproduced F. No new GPU calls.",
+  "limitations": "Only four already-seen sources; unequal action-set cardinality, FIX16 may use less computation, no universal claim that time scheduling beats arbitrary spatial selection; not part of primary continuation gate."
+}

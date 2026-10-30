@@ -1,0 +1,1497 @@
+{
+  "created_unix": 1793183751.4466674,
+  "files": [
+    {
+      "path": "runs/latency_temporal_v1/analysis/latency.json",
+      "bytes": 103333,
+      "sha256": "756db4cb623794555a206b873060edcfe6dc3badb9df606e451f834bdef89c61"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/latency_panels/local_train_15953_chocolate.png",
+      "bytes": 1126084,
+      "sha256": "b7fff4faf8542789340c1ac266fdef2b30bbd1c4364446bddf0870cd1677a5a3"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/latency_panels/local_train_178810_bollard.png",
+      "bytes": 1575053,
+      "sha256": "47948929d28500342c7314919ff8eb02e4be11b22a703c146439d7451f35f484"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/latency_panels/local_train_210597_redcushion.png",
+      "bytes": 1071630,
+      "sha256": "5dbce03338c65a55bd12c50c7ff1b554538393ad4af62d3857c70ff0b8bf2222"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/latency_panels/local_train_26498_woodbat.png",
+      "bytes": 1237530,
+      "sha256": "e7bde2d33bacddf5e26f26a7ec56f45328804ec943ded6b8589c3dc01fd79b78"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/latency_panels/local_train_286770_goat.png",
+      "bytes": 1025716,
+      "sha256": "c7ac22c088e3ba53c544abfc4e73c36681d27b2d836249045fccb20ae4e56dd6"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/latency_panels/local_train_429111_remote.png",
+      "bytes": 1294516,
+      "sha256": "71572745f0ab682092320c2c47b5129493f6bc31e5aa33782a00a8666588fe53"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/latency_panels/local_train_452168_bluesign.png",
+      "bytes": 1044388,
+      "sha256": "d76bc78e7178ca941945f479005011d519a105328208aed0598b8d40bf3f3228"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/latency_panels/local_train_486018_dog.png",
+      "bytes": 859631,
+      "sha256": "1777f14b977041124ed57f9e17084d6c79e0ee4413d9814e75de8cea014c5d4a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/overheads.json",
+      "bytes": 3314,
+      "sha256": "d655ce4ca49e6ab33e667bb21b12e7dace366c20029269507e8f56d7198b9272"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/panels/local_train_15953_chocolate.png",
+      "bytes": 1174825,
+      "sha256": "474988c2c754be7336cecfde3c339f4374e0fa46595b922101112383ae30f672"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/panels/local_train_178810_bollard.png",
+      "bytes": 1569464,
+      "sha256": "5fb7f1ed184511d526efc993b30cafba5e23f44a3f54b58bee124384cc744e6b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/panels/local_train_210597_redcushion.png",
+      "bytes": 1130056,
+      "sha256": "ef86cc3c68466d4bb5c7384805acf6667b896b6f28a1f60372b2e855ead749f4"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/panels/local_train_26498_woodbat.png",
+      "bytes": 1278960,
+      "sha256": "39615e33c31ac9a291fd8aa1151f5caf0b05170da71c3ba61c5a317e9dc844fc"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/panels/local_train_286770_goat.png",
+      "bytes": 1080380,
+      "sha256": "e6c5f8acea54acd98da00d3fb5b465f30885bf5e55a22aa761213748b4b17eda"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/panels/local_train_429111_remote.png",
+      "bytes": 1354580,
+      "sha256": "0e753719f0d2c780077afd1d54a9014ecd35c88313f2199476b897c914a7fb49"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/panels/local_train_452168_bluesign.png",
+      "bytes": 1100570,
+      "sha256": "c8d65823dd1548111f2b24cfd873da58b274064b4b787e7e0bb8b68c7c515390"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/panels/local_train_486018_dog.png",
+      "bytes": 916731,
+      "sha256": "e6fa8d31c688e72f6b06d5bcdce924a79a3b741ca1dac338e1a80fc2d5204979"
+    },
+    {
+      "path": "runs/latency_temporal_v1/analysis/temporal.json",
+      "bytes": 18913,
+      "sha256": "3ab0951b8a5836e5654e5dd1ca702b2e85a0d9cdd5717f1631fa320490643c17"
+    },
+    {
+      "path": "runs/latency_temporal_v1/code_snapshot/controlled_mask.py",
+      "bytes": 19753,
+      "sha256": "a8b95a5d4eb6d8fc1efa3d004e00d72c500a7b4d2cb4d04c828bbb892b192408"
+    },
+    {
+      "path": "runs/latency_temporal_v1/code_snapshot/diagnostic_schedule.py",
+      "bytes": 2873,
+      "sha256": "2e2c85b289bda1ec3debb51d56dc6cc755d4a20bc2ba44ad3a44121e18afe658"
+    },
+    {
+      "path": "runs/latency_temporal_v1/code_snapshot/free_region.py",
+      "bytes": 16723,
+      "sha256": "4dbfbb1f20146bcc8bb20dfaf1de71eed4da25fe8806f827a945547e032c0d51"
+    },
+    {
+      "path": "runs/latency_temporal_v1/code_snapshot/freeze_latency_temporal.py",
+      "bytes": 7078,
+      "sha256": "84dca9c89242dc967b3f29dc9acf7cd0efa910265dd9fb9eeb92fb224093850c"
+    },
+    {
+      "path": "runs/latency_temporal_v1/code_snapshot/legacy_local_executor.py",
+      "bytes": 10401,
+      "sha256": "f771a2f0467fd03250302aac7e90a35a7b7c43b120c0297ebc7293bf1e9673a1"
+    },
+    {
+      "path": "runs/latency_temporal_v1/code_snapshot/legacy_refresh_policy.py",
+      "bytes": 16110,
+      "sha256": "0b319fbbb05c8dff0880e75634cca524211dd8b4fce4e65006ebde7f990adfcf"
+    },
+    {
+      "path": "runs/latency_temporal_v1/code_snapshot/local_mask_bridge.py",
+      "bytes": 8135,
+      "sha256": "0c78df2866540005bb762c3d9946f70f806a6f5cb98b6d2c7b0331e07facbd2f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/code_snapshot/run_free_pilot.py",
+      "bytes": 14399,
+      "sha256": "7e68c8e1abeed9e234d246bce55e194416b7d7957565a40ed224a287268a12d8"
+    },
+    {
+      "path": "runs/latency_temporal_v1/code_snapshot/run_latency_temporal.py",
+      "bytes": 14239,
+      "sha256": "ffe3bbb310fee4e779f8c2eb85f91ecf9061d191780b5983dc82fbb7ed72e7bf"
+    },
+    {
+      "path": "runs/latency_temporal_v1/code_snapshot/run_s1.py",
+      "bytes": 14906,
+      "sha256": "896f971a15651c086e9ea0a81369a50425c2e8885f662a029f605b1b8dd60e81"
+    },
+    {
+      "path": "runs/latency_temporal_v1/code_snapshot/test_diagnostic_schedule.py",
+      "bytes": 3996,
+      "sha256": "b91c76508c19e5ca67cebefb21dd7fc051c837f0366daa6377d977873fd33605"
+    },
+    {
+      "path": "runs/latency_temporal_v1/environment.json",
+      "bytes": 1017,
+      "sha256": "ff3990c7e7ec5e86bbb49b1c9b9c35547ce8c0743ae6995f1b32784b79ff98cc"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/FIX32_r0.json",
+      "bytes": 834944,
+      "sha256": "62ee11492b6a68c63caa61a920a463bd083c7c035c0a8ada5fef13baac992f89"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/FIX32_r0.png",
+      "bytes": 1257836,
+      "sha256": "497a477ac6e87ecca78b46f7dc93186a0429f5b4d93f3f773fcee0eb1341548a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/FIX32_r0.pt",
+      "bytes": 525936,
+      "sha256": "ba13ed8d1641992481e987fe9280014b361f0085c410383d9a5b4e8053b1715a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/FIX32_r1.json",
+      "bytes": 835010,
+      "sha256": "dd04eecea7181a180e125a290fadebc64fac98174b4c576868abfdf3e3de7447"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/FIX32_r1.png",
+      "bytes": 1257836,
+      "sha256": "497a477ac6e87ecca78b46f7dc93186a0429f5b4d93f3f773fcee0eb1341548a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/FIX32_r1.pt",
+      "bytes": 525936,
+      "sha256": "32240416cb5efe6bf7ea6ee339f67d8a4c9a9051dca370a335458e8ac1ac1907"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/FIX32_r2.json",
+      "bytes": 835009,
+      "sha256": "7287ef9913d6e028f62456b083d35f97b5664b3d70ce0f2b960e6f4715285d2e"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/FIX32_r2.png",
+      "bytes": 1257836,
+      "sha256": "497a477ac6e87ecca78b46f7dc93186a0429f5b4d93f3f773fcee0eb1341548a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/FIX32_r2.pt",
+      "bytes": 525936,
+      "sha256": "27dbf9cda0c901b4982c516fbcfc110182d1284364d63aa5c9c9c8c60fb1baa1"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/F_r0.json",
+      "bytes": 1212,
+      "sha256": "dc80c1733baf84acf9a1e854f58432c1ff4d61bcbbac57279b005e3a63a1aa9b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/F_r0.png",
+      "bytes": 1250500,
+      "sha256": "79906c663a88c09322dc4ae8c849f3ca1b3a833c0e816c798c85806eeb3c6b68"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/F_r0.pt",
+      "bytes": 525844,
+      "sha256": "64a1faecc9680343cabf61d64ab06c6800d1dd994577239bdccf2d87f46875f2"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/F_r1.json",
+      "bytes": 1287,
+      "sha256": "72f595bcf036bf5b3604c6daa6cc98fa966dd1089e05628af646549a33e0032f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/F_r1.png",
+      "bytes": 1250500,
+      "sha256": "79906c663a88c09322dc4ae8c849f3ca1b3a833c0e816c798c85806eeb3c6b68"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/F_r1.pt",
+      "bytes": 525844,
+      "sha256": "c264d41148200d775df8994b66bd18cdde1ee35240da497ee9d74f529ea950d7"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/F_r2.json",
+      "bytes": 1283,
+      "sha256": "cb33b44c81eaebc5adf191f2c8557688b91e56aaa4f020b04519e89b36c5c3ff"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/F_r2.png",
+      "bytes": 1250500,
+      "sha256": "79906c663a88c09322dc4ae8c849f3ca1b3a833c0e816c798c85806eeb3c6b68"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_15953_chocolate/F_r2.pt",
+      "bytes": 525844,
+      "sha256": "112b62b9d540be458b7505f50dfc51a1b56a4f66e1f9de9e1d8880f0ae73942b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/FIX32_r0.json",
+      "bytes": 676753,
+      "sha256": "44c589a54538b7083b4df5fd067f3f7d4e69671c6a88327438b6429a7cff77ec"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/FIX32_r0.png",
+      "bytes": 1984642,
+      "sha256": "e5357e207eee5f04bcab3f1755396ae9a73bc599a75899634db1a971a8a057fa"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/FIX32_r0.pt",
+      "bytes": 525936,
+      "sha256": "52597abd542c1cec98f0d04fe3fc8e6b4e2cec0d9c8ea207f9ab33f50a10908f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/FIX32_r1.json",
+      "bytes": 676827,
+      "sha256": "af6b35794278057dc93700375d9fa99f83eee5edfa1dcb1a82c3146e3f12a397"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/FIX32_r1.png",
+      "bytes": 1984642,
+      "sha256": "e5357e207eee5f04bcab3f1755396ae9a73bc599a75899634db1a971a8a057fa"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/FIX32_r1.pt",
+      "bytes": 525936,
+      "sha256": "f3055c7b69d827449ad039dd83b351d2b46d62b018264b55e784ba8c4d41e651"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/FIX32_r2.json",
+      "bytes": 676829,
+      "sha256": "99c13da1c83ea88d7180531558787ef762af7b9fe9974c87aa42b65d1a5adb9c"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/FIX32_r2.png",
+      "bytes": 1984642,
+      "sha256": "e5357e207eee5f04bcab3f1755396ae9a73bc599a75899634db1a971a8a057fa"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/FIX32_r2.pt",
+      "bytes": 525936,
+      "sha256": "a18d98bde0b093784a26fefdacd0d710491d509752cae4a3d2078b3c08eb4947"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/F_r0.json",
+      "bytes": 1218,
+      "sha256": "7df96435bdb50f9c5d1aa0b67fef6a52b909acc2a931081646261fb1b51f7cf9"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/F_r0.png",
+      "bytes": 1970532,
+      "sha256": "28742d8a7a1ff001c41737f5b9851daa74524f78f1504143a51409ed8f9e4b0b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/F_r0.pt",
+      "bytes": 525844,
+      "sha256": "2b301d0332169b6737dc7405b8d988d143b448199163da83e246dc80f562b4d6"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/F_r1.json",
+      "bytes": 1286,
+      "sha256": "c3426000092137e381ccdd661b88114b574547b4000f91e5669c9ad778da21be"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/F_r1.png",
+      "bytes": 1970532,
+      "sha256": "28742d8a7a1ff001c41737f5b9851daa74524f78f1504143a51409ed8f9e4b0b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/F_r1.pt",
+      "bytes": 525844,
+      "sha256": "b4655c1c13eeff6c51daf35899db408dd4dbb1170428c4b7db642ec3a72afb08"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/F_r2.json",
+      "bytes": 1276,
+      "sha256": "1a3caf707fe9af9617816c7e007855594f32072a27b463d26d367ddec7a40b71"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/F_r2.png",
+      "bytes": 1970532,
+      "sha256": "28742d8a7a1ff001c41737f5b9851daa74524f78f1504143a51409ed8f9e4b0b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_178810_bollard/F_r2.pt",
+      "bytes": 525844,
+      "sha256": "f7dfdd87b371bf3e7f547ef96e12294dfae1d74e2e5b482314cceee963653e51"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/FIX32_r0.json",
+      "bytes": 644454,
+      "sha256": "c529e35e8f7d2d7860b22103f066c7ff2f67f58c669856668fc0e54507ef007b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/FIX32_r0.png",
+      "bytes": 1165381,
+      "sha256": "46c420e35768355a61efc066ae4a9afe34f7fc9590c71c12bf6a744ba0b44263"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/FIX32_r0.pt",
+      "bytes": 525936,
+      "sha256": "2fd6a5ddb52879d922468d5e90904b0e088806de6952478cec940f540aca8ea8"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/FIX32_r1.json",
+      "bytes": 644515,
+      "sha256": "1ad35e04a6d974cbeb62c5cc464b6098e6029eaccf5fc48c1a93cd837cafdc32"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/FIX32_r1.png",
+      "bytes": 1165381,
+      "sha256": "46c420e35768355a61efc066ae4a9afe34f7fc9590c71c12bf6a744ba0b44263"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/FIX32_r1.pt",
+      "bytes": 525936,
+      "sha256": "f3a539f653ec9042e22e002936a684fbd5ae0fe9b0982d3bc478732ae08647ac"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/FIX32_r2.json",
+      "bytes": 644527,
+      "sha256": "258b243a85db2fe0ae9b1132519ef7045c7149da083f045b3f3c9e1b2e8340c7"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/FIX32_r2.png",
+      "bytes": 1165381,
+      "sha256": "46c420e35768355a61efc066ae4a9afe34f7fc9590c71c12bf6a744ba0b44263"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/FIX32_r2.pt",
+      "bytes": 525936,
+      "sha256": "6e84ca23fdf7e98bb1abdba106cb7c98beb716b1213304376f37ef1f13f5d052"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/F_r0.json",
+      "bytes": 1219,
+      "sha256": "810f68ecd5041eac0558bd5ed2acfcb67159ba74ff75e9fe0375688842fb74df"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/F_r0.png",
+      "bytes": 1161608,
+      "sha256": "11e950fe5e95ead3e307f69bd5c95d23eb7361e846c6f69f1729eb8813154a86"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/F_r0.pt",
+      "bytes": 525844,
+      "sha256": "d361f930e14052c40218c6e3c35f7ad72fe1adabb202ad26e09a93e4098a8050"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/F_r1.json",
+      "bytes": 1287,
+      "sha256": "b7768a22dfd092375253b0fed83bdd4232b1aa935fb5ffb68b2971af35143c0f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/F_r1.png",
+      "bytes": 1161608,
+      "sha256": "11e950fe5e95ead3e307f69bd5c95d23eb7361e846c6f69f1729eb8813154a86"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/F_r1.pt",
+      "bytes": 525844,
+      "sha256": "e557599703535fe2c148789910aaa34ed45aeee7ecb7f2345984851861399ad7"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/F_r2.json",
+      "bytes": 1288,
+      "sha256": "657132d1c2b18c7ec99dda2b308ff1546f29a5e611b564b93cb598dcb1ae7186"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/F_r2.png",
+      "bytes": 1161608,
+      "sha256": "11e950fe5e95ead3e307f69bd5c95d23eb7361e846c6f69f1729eb8813154a86"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_210597_redcushion/F_r2.pt",
+      "bytes": 525844,
+      "sha256": "38062ae5eda1702b985fa6c052980380200dd229b196d326a9a2f41a4221cdb1"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/FIX32_r0.json",
+      "bytes": 653419,
+      "sha256": "974a5f882ea7224661699651073de7dc59f25247d56ebfdfaeb6ffcac1e4eccc"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/FIX32_r0.png",
+      "bytes": 1298244,
+      "sha256": "1d7aa5c84f69abc5b2dfde567c0e3e1d7008345186b0cd0b6e805a69d4998042"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/FIX32_r0.pt",
+      "bytes": 525936,
+      "sha256": "160c3d72a080d7683ce91f8abe68f9b9437d9b8c4de946c57cde36962ce454cb"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/FIX32_r1.json",
+      "bytes": 653470,
+      "sha256": "4c9e4c8f9be825efd6678505495c2de8502c11c9ad2095ff8b4169871999b42b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/FIX32_r1.png",
+      "bytes": 1298244,
+      "sha256": "1d7aa5c84f69abc5b2dfde567c0e3e1d7008345186b0cd0b6e805a69d4998042"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/FIX32_r1.pt",
+      "bytes": 525936,
+      "sha256": "0fd79620c6ae216d10d09e15b53aac06e67f5bc937f17a7170ca218379d862a8"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/FIX32_r2.json",
+      "bytes": 653481,
+      "sha256": "c8625a998620588703ce35b252a6503871b57daffb600b02194a45befe891fa5"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/FIX32_r2.png",
+      "bytes": 1298244,
+      "sha256": "1d7aa5c84f69abc5b2dfde567c0e3e1d7008345186b0cd0b6e805a69d4998042"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/FIX32_r2.pt",
+      "bytes": 525936,
+      "sha256": "c521345de84a498b8447e6857f91db5178961b6bbab260398cada3299e1aeae5"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/F_r0.json",
+      "bytes": 1218,
+      "sha256": "330c556040ef30b35703f7933bdeff504fbf87c753bf800381686ada1aade56f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/F_r0.png",
+      "bytes": 1294024,
+      "sha256": "fe501a401d151b16835d1e2d66abdbfccef02b0aac60e1da649694818168bdd9"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/F_r0.pt",
+      "bytes": 525844,
+      "sha256": "50c3996723f371f1c1a288f64a44197e372585e4e1fe0dc2b8b3e15e4025d498"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/F_r1.json",
+      "bytes": 1284,
+      "sha256": "0506644b1ab9c22024d1ac1ef8884ea97e8035091b50eba763588d72efe45313"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/F_r1.png",
+      "bytes": 1294024,
+      "sha256": "fe501a401d151b16835d1e2d66abdbfccef02b0aac60e1da649694818168bdd9"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/F_r1.pt",
+      "bytes": 525844,
+      "sha256": "4b1d5fae5475c9d20a9f8f3526f4881c38a622d586a624689a7584f23bf8ddff"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/F_r2.json",
+      "bytes": 1280,
+      "sha256": "385a486457e9d82d565206f82a7a0365ce6ea560b09efddfb10284412b1daa32"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/F_r2.png",
+      "bytes": 1294024,
+      "sha256": "fe501a401d151b16835d1e2d66abdbfccef02b0aac60e1da649694818168bdd9"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_26498_woodbat/F_r2.pt",
+      "bytes": 525844,
+      "sha256": "aee4156af6b244741ada9d2743eaefc88d022386fcbaa21a4f2d5597ab900195"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/FIX32_r0.json",
+      "bytes": 740651,
+      "sha256": "089a05fbe28d8e4720be24ded684a12ab66424951a79e9d9e88254f59d87fb29"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/FIX32_r0.png",
+      "bytes": 1089278,
+      "sha256": "5f6ac2ca888afa1f92b66d65bd2fbb4f8218ea1c38e1075451e211ce731ec2a4"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/FIX32_r0.pt",
+      "bytes": 525936,
+      "sha256": "fa75fd3ee40b388b638759a86bf3aba6d3661984565efddd0b668b343eaf482f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/FIX32_r1.json",
+      "bytes": 740653,
+      "sha256": "6ef6cd9a7d9b5ec9cf4134270a8568d1128d0955254b11fa166a9101db14f27c"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/FIX32_r1.png",
+      "bytes": 1089278,
+      "sha256": "5f6ac2ca888afa1f92b66d65bd2fbb4f8218ea1c38e1075451e211ce731ec2a4"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/FIX32_r1.pt",
+      "bytes": 525936,
+      "sha256": "bff00b68c305521657724628ca39ff24c6b4ed1b47bdd7ac7739f4cec3421525"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/FIX32_r2.json",
+      "bytes": 740656,
+      "sha256": "4d7655a62fa86ab2b2aa8eb1148359cdc639ce005d065e22afbd03b1b1c1c8e2"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/FIX32_r2.png",
+      "bytes": 1089278,
+      "sha256": "5f6ac2ca888afa1f92b66d65bd2fbb4f8218ea1c38e1075451e211ce731ec2a4"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/FIX32_r2.pt",
+      "bytes": 525936,
+      "sha256": "1cb23241a99accf909a31d0da4387a025c2f25648c45c63786cd5442615dc696"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/F_r0.json",
+      "bytes": 1278,
+      "sha256": "e75753e76c84aee050e12ed8e0acbaa49b50019a02483c61f7f3c2574be5de3f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/F_r0.png",
+      "bytes": 1084779,
+      "sha256": "d6cbdb25b0715659914308bbc395326c80e1065442ffb880bb618ad6b467e7c8"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/F_r0.pt",
+      "bytes": 525844,
+      "sha256": "38392a74d491ea7304b50358068b05cf4b7f822fb431112cb3f0ba7b62827728"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/F_r1.json",
+      "bytes": 1279,
+      "sha256": "e14ca6d94d07cea2948dab24067452da670a363a5b9acd12388c8dcb0a63606f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/F_r1.png",
+      "bytes": 1084779,
+      "sha256": "d6cbdb25b0715659914308bbc395326c80e1065442ffb880bb618ad6b467e7c8"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/F_r1.pt",
+      "bytes": 525844,
+      "sha256": "1f52ae52fdedf6fab092d236c1e6239e6c3abb5a6e84512d0292b5ea3aaedb37"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/F_r2.json",
+      "bytes": 1281,
+      "sha256": "3a9521d91ba4eb283cbe86059768b91be8ecdbeadd9a747ebe295ecc5c54c8dd"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/F_r2.png",
+      "bytes": 1084779,
+      "sha256": "d6cbdb25b0715659914308bbc395326c80e1065442ffb880bb618ad6b467e7c8"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_286770_goat/F_r2.pt",
+      "bytes": 525844,
+      "sha256": "d37e679db5f0e5ce7e1b3d3f92e693dd7dd6e5106be979a6f1184bb33c1553cf"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/FIX32_r0.json",
+      "bytes": 641934,
+      "sha256": "c97cf383c28c7e840a34d77a86ea63fe91253cd80870f75fb6ca32a177a830fb"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/FIX32_r0.png",
+      "bytes": 1359717,
+      "sha256": "48ba0c7e9856abc722bfbeaff3341d836d214ad32cd0ccafa4882e2b509ad20b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/FIX32_r0.pt",
+      "bytes": 525936,
+      "sha256": "010f0b559010dd7e4b30cb0253f4fa73e6d9a53588ce3b2c2565b21290553172"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/FIX32_r1.json",
+      "bytes": 642002,
+      "sha256": "29acce61728c260c77482b2430855e5f321691257de9ed748938e6170a0c4b4b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/FIX32_r1.png",
+      "bytes": 1359717,
+      "sha256": "48ba0c7e9856abc722bfbeaff3341d836d214ad32cd0ccafa4882e2b509ad20b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/FIX32_r1.pt",
+      "bytes": 525936,
+      "sha256": "6d45e553b476f984dc0ee02f01fc6e55532ca85821c5f40335f7fc03f25f3535"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/FIX32_r2.json",
+      "bytes": 641994,
+      "sha256": "279906e7cfe66a8e19fc20ae4e548d6ed79ad6126465dd4fd85e8206a06d62c3"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/FIX32_r2.png",
+      "bytes": 1359717,
+      "sha256": "48ba0c7e9856abc722bfbeaff3341d836d214ad32cd0ccafa4882e2b509ad20b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/FIX32_r2.pt",
+      "bytes": 525936,
+      "sha256": "57981778e6a660e5fee5028adb77e2adbae4dbe16a5403baf91dc2fd2115c511"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/F_r0.json",
+      "bytes": 1210,
+      "sha256": "26201f78689ffa31bd265479f495916adf99368b93d1f06ede65c200ddf4e143"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/F_r0.png",
+      "bytes": 1359760,
+      "sha256": "06a06fece6fa69e0fc691c37b56f46d168191cf3124872970bacc8d163936a7e"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/F_r0.pt",
+      "bytes": 525844,
+      "sha256": "2ab4ce40d0c3ba9f559a2e2664d218e2b9d70a9c224726d58225997b843d62df"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/F_r1.json",
+      "bytes": 1278,
+      "sha256": "9527a33e090ab9708a8ffd69358b4ec96e2e75383bd5577900763b7469cb0c68"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/F_r1.png",
+      "bytes": 1359760,
+      "sha256": "06a06fece6fa69e0fc691c37b56f46d168191cf3124872970bacc8d163936a7e"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/F_r1.pt",
+      "bytes": 525844,
+      "sha256": "a1bd744ac73139719972480c5c703d47dc4f9f44708e1d3a2234937a55567320"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/F_r2.json",
+      "bytes": 1285,
+      "sha256": "c825ba094fa86138fdc16ceb096addbab70a8fd36cda47199f69bb232c12ea3f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/F_r2.png",
+      "bytes": 1359760,
+      "sha256": "06a06fece6fa69e0fc691c37b56f46d168191cf3124872970bacc8d163936a7e"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_429111_remote/F_r2.pt",
+      "bytes": 525844,
+      "sha256": "fccff5115ecb97be224c432b90236d3490c5b7fb87612440aeb83bfff7fea895"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/FIX32_r0.json",
+      "bytes": 851478,
+      "sha256": "3564ebe99e884800a79f803a02ceb066cf96abfbdfb566e8f8317e61405e3b21"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/FIX32_r0.png",
+      "bytes": 1113379,
+      "sha256": "672492fe11f70dd5c0bab1d1ce5b787f6f0706a5fa2520d8b034161ffecea810"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/FIX32_r0.pt",
+      "bytes": 525936,
+      "sha256": "924f33ae271f90e84ff2f33232b3ecb969bd283dc336a95f61503013fc0a85df"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/FIX32_r1.json",
+      "bytes": 851557,
+      "sha256": "4eba41215d5e1958d9d571457dcf698a793b00fddf9856fff939233b859097ea"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/FIX32_r1.png",
+      "bytes": 1113379,
+      "sha256": "672492fe11f70dd5c0bab1d1ce5b787f6f0706a5fa2520d8b034161ffecea810"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/FIX32_r1.pt",
+      "bytes": 525936,
+      "sha256": "1f570ba7190a03597ded286b8139f9dfecb635b75c9239654d7c949f4c224350"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/FIX32_r2.json",
+      "bytes": 851557,
+      "sha256": "288d52057ccb35e7cf6a6b45e1ee6d5865301094d9a87f0f52f3869c9451e7c7"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/FIX32_r2.png",
+      "bytes": 1113379,
+      "sha256": "672492fe11f70dd5c0bab1d1ce5b787f6f0706a5fa2520d8b034161ffecea810"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/FIX32_r2.pt",
+      "bytes": 525936,
+      "sha256": "cbaafc7d55f1f95799684c3f32d85375b6db0c4bbb9c7a9b23dc3de8d6b400b1"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/F_r0.json",
+      "bytes": 1221,
+      "sha256": "ef067d79257c5f97334ea42c5446ef86cec5959dd70accae6451fec0d5c7d299"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/F_r0.png",
+      "bytes": 1106196,
+      "sha256": "d213b82dd6b5620ef7919acab705daa8e2f84d1acd6d95482d66600c985a24dd"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/F_r0.pt",
+      "bytes": 525844,
+      "sha256": "0f6927f0fcef94f9f0b41758f3bd0e1ae19f6d677b448adfd755207293922c31"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/F_r1.json",
+      "bytes": 1285,
+      "sha256": "fe9ff339a6c1ad19ec89232855d684a8fb3d76ef2ed7e9724c48a51754644f8e"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/F_r1.png",
+      "bytes": 1106196,
+      "sha256": "d213b82dd6b5620ef7919acab705daa8e2f84d1acd6d95482d66600c985a24dd"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/F_r1.pt",
+      "bytes": 525844,
+      "sha256": "ba4b94a953289822d4f47743f436e60dc156ddb097cb13e975f8e6f6e6cdac6a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/F_r2.json",
+      "bytes": 1282,
+      "sha256": "6492dda0e7f01146a8a25ae0fcb6b88446774177f721e07e957a7aab60904617"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/F_r2.png",
+      "bytes": 1106196,
+      "sha256": "d213b82dd6b5620ef7919acab705daa8e2f84d1acd6d95482d66600c985a24dd"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_452168_bluesign/F_r2.pt",
+      "bytes": 525844,
+      "sha256": "34f656d7ca931ff5d78bfeb56ba3a7a5440cbcd8a6a973c3d1fbb018c2603239"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/FIX32_r0.json",
+      "bytes": 815652,
+      "sha256": "f4f052f25d37c36e3ffc5a7cd97d95751c565fd5765b29ca07934b0a2e7235dc"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/FIX32_r0.png",
+      "bytes": 935209,
+      "sha256": "a4e40bf6c79253bf80938b70bc9dccd0b3082a9b0d6ae300e8a9f19a9e5460fe"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/FIX32_r0.pt",
+      "bytes": 525936,
+      "sha256": "3dd2eaed1df260103ab7c55e2c4cfec4518ef4be5de2412efed95d52ce97533b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/FIX32_r1.json",
+      "bytes": 815726,
+      "sha256": "22859e8da1ac4dc52595045f090571beb5f66307bb4ea2544ab7527fb7d0914e"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/FIX32_r1.png",
+      "bytes": 935209,
+      "sha256": "a4e40bf6c79253bf80938b70bc9dccd0b3082a9b0d6ae300e8a9f19a9e5460fe"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/FIX32_r1.pt",
+      "bytes": 525936,
+      "sha256": "78e66104c9124e402aa231d0977f8173db8367a75b9443e5a9af8c48ebf105cc"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/FIX32_r2.json",
+      "bytes": 815719,
+      "sha256": "a089b3daeb06b31305248d55aa07812c8a2a2f1cfc965a86b372e988496aba94"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/FIX32_r2.png",
+      "bytes": 935209,
+      "sha256": "a4e40bf6c79253bf80938b70bc9dccd0b3082a9b0d6ae300e8a9f19a9e5460fe"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/FIX32_r2.pt",
+      "bytes": 525936,
+      "sha256": "ff0b585670f9fff52be6482066f45f48c0db794e8ee7b439da53ce12007440fd"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/F_r0.json",
+      "bytes": 1213,
+      "sha256": "4922a568628c1b163de828a60334d631ebbaa8a400c6e1826b6f0df8cd522ab3"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/F_r0.png",
+      "bytes": 937038,
+      "sha256": "5ff96d2a24fca27b308aaa493c5615d99c66fab127e03e16319905559bd7381a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/F_r0.pt",
+      "bytes": 525844,
+      "sha256": "0ee1e3fa9826d03c9ae195c4fcfaa20ac0a5a5214001239d33e333b3edb17af4"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/F_r1.json",
+      "bytes": 1281,
+      "sha256": "2a328d80fb68a949bc59c93fd426aadb4ea44c366e95c2a863437a3d5ec5bd02"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/F_r1.png",
+      "bytes": 937038,
+      "sha256": "5ff96d2a24fca27b308aaa493c5615d99c66fab127e03e16319905559bd7381a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/F_r1.pt",
+      "bytes": 525844,
+      "sha256": "7682902236f2cc14a6833ab8cf60bb32405b49a7734c925a49446ed3bd0848d2"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/F_r2.json",
+      "bytes": 1278,
+      "sha256": "a084248fbb19329a85593bd9100233653299138132fcea5d3ada2d9f26822c12"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/F_r2.png",
+      "bytes": 937038,
+      "sha256": "5ff96d2a24fca27b308aaa493c5615d99c66fab127e03e16319905559bd7381a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/latency/local_train_486018_dog/F_r2.pt",
+      "bytes": 525844,
+      "sha256": "c4923c843277f8c8e9471215e313aabac91ede08140548f2afac74be8d3b61c8"
+    },
+    {
+      "path": "runs/latency_temporal_v1/preregistration.json",
+      "bytes": 11573368,
+      "sha256": "23d4c92431b84a1fc1317f21f1232b0f314e5b9eb00ee57eead5bba88f39e4c9"
+    },
+    {
+      "path": "runs/latency_temporal_v1/runs.jsonl",
+      "bytes": 95090,
+      "sha256": "4e2a2ffa9b07bd7c764329d066cfe2a09c7ab88af37a3f5680bdb864062afb56"
+    },
+    {
+      "path": "runs/latency_temporal_v1/status.json",
+      "bytes": 322,
+      "sha256": "90a3fe7a532dc4a797d322aafa10afac11f02e8306009e69da3e2992ffdb6bbd"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_15953_chocolate/EARLY_r0.json",
+      "bytes": 835376,
+      "sha256": "3c74648b1b9c022deb841ceb1302e691e2eea575e1ecbe26b8bfa14c27c87ab7"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_15953_chocolate/EARLY_r0.png",
+      "bytes": 1257836,
+      "sha256": "497a477ac6e87ecca78b46f7dc93186a0429f5b4d93f3f773fcee0eb1341548a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_15953_chocolate/EARLY_r0.pt",
+      "bytes": 9968001,
+      "sha256": "b301afe6cd605d459c58896c148299d31607045e9c228852544a15fb0c935260"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_15953_chocolate/F_r0.json",
+      "bytes": 1581,
+      "sha256": "e2f8af26ee132d9928f40a99c3f8b0e936a9725ba506fff78aedd94e5561a8a6"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_15953_chocolate/F_r0.png",
+      "bytes": 1250500,
+      "sha256": "79906c663a88c09322dc4ae8c849f3ca1b3a833c0e816c798c85806eeb3c6b68"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_15953_chocolate/F_r0.pt",
+      "bytes": 9966681,
+      "sha256": "2e71ce8d5ab8e9a5a1bb57c12fcedd3755b322141475d492107cb0a3539054ed"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_15953_chocolate/LATE_r0.json",
+      "bytes": 835235,
+      "sha256": "41dad9b24b44149b1dd0665517ec55699f838035a47de4c5317fe7b4551ea06f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_15953_chocolate/LATE_r0.png",
+      "bytes": 1260985,
+      "sha256": "323813c663beeefa154f630a0011b717a528e2f9899e9ca8387bcb7f6fd4fd16"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_15953_chocolate/LATE_r0.pt",
+      "bytes": 9967399,
+      "sha256": "9206809821765dc969279f0ac44ae2da09c0a746f387c9c56ca4102dcd9b487b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_15953_chocolate/MIDDLE_r0.json",
+      "bytes": 835282,
+      "sha256": "683cb04d330b10007a5f44705d3fa3ba42f48445f1cd7b9309c84a12ec94886b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_15953_chocolate/MIDDLE_r0.png",
+      "bytes": 1259191,
+      "sha256": "0bbc5759fcb9873b273ec35e19ab707a29ddbe3268272252626562e1877ee820"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_15953_chocolate/MIDDLE_r0.pt",
+      "bytes": 9968027,
+      "sha256": "cafa3504789643ae37b557c098af4123c3d9bdc108a6545b1d5f143681686a5e"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_178810_bollard/EARLY_r0.json",
+      "bytes": 677194,
+      "sha256": "f23655852dd9cfc9f6eb5bba7d1829f8ad5eff1eeaf480bc23ab7f416e5e61c6"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_178810_bollard/EARLY_r0.png",
+      "bytes": 1984642,
+      "sha256": "e5357e207eee5f04bcab3f1755396ae9a73bc599a75899634db1a971a8a057fa"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_178810_bollard/EARLY_r0.pt",
+      "bytes": 9968001,
+      "sha256": "5b4a58f4e932079ffd68451422d279c214c47268e9746fcb48bea3066436bd35"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_178810_bollard/F_r0.json",
+      "bytes": 1578,
+      "sha256": "1838a81bf7d87bdff7ba8812f6633ec08ff4caebac37d50eaa2f74fba3b7f88f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_178810_bollard/F_r0.png",
+      "bytes": 1970532,
+      "sha256": "28742d8a7a1ff001c41737f5b9851daa74524f78f1504143a51409ed8f9e4b0b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_178810_bollard/F_r0.pt",
+      "bytes": 9966681,
+      "sha256": "304b72268495460e66aa6f8a8ac3fb20fcc491d70b79d027f74eabfd1aeb6412"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_178810_bollard/LATE_r0.json",
+      "bytes": 677086,
+      "sha256": "19f2dc91ce5460c195dfde62c03047512a247115301bdcae5fa6716e5820865c"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_178810_bollard/LATE_r0.png",
+      "bytes": 1996731,
+      "sha256": "183603a90ad51540149085935b468911520204523778b2db45f99c5bfe7249ff"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_178810_bollard/LATE_r0.pt",
+      "bytes": 9967399,
+      "sha256": "a702e662e587f9dea8775f8878b6532b1ed37b2fb99c43e2a01cfb1559c83027"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_178810_bollard/MIDDLE_r0.json",
+      "bytes": 677140,
+      "sha256": "dd988856d0067b808d6caf07699019e02a8c5c985809a770704e739e3dda1c7b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_178810_bollard/MIDDLE_r0.png",
+      "bytes": 2000734,
+      "sha256": "83411fe06b0402380465bee01b033c301f9ce4eeaa6f2f679c5a0c0a8c412ce1"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_178810_bollard/MIDDLE_r0.pt",
+      "bytes": 9968027,
+      "sha256": "62978b7fa67a9dc3996f88228c887bea07c321853b02f1cf13e6078977addf16"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_210597_redcushion/EARLY_r0.json",
+      "bytes": 644889,
+      "sha256": "5cb85d208eade393dbb2e9b1f111286c0dff4051b03857b4f706f53f6305ba5d"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_210597_redcushion/EARLY_r0.png",
+      "bytes": 1165381,
+      "sha256": "46c420e35768355a61efc066ae4a9afe34f7fc9590c71c12bf6a744ba0b44263"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_210597_redcushion/EARLY_r0.pt",
+      "bytes": 9968001,
+      "sha256": "1fe9176c1146c55bb009abbde5feeac5a55e254a84bbf3a0a51b90d99313859c"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_210597_redcushion/F_r0.json",
+      "bytes": 1578,
+      "sha256": "9f9769d94b6f5b79377133c21e8833e68f74b68d851b26a1dffb938a44fe8be7"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_210597_redcushion/F_r0.png",
+      "bytes": 1161608,
+      "sha256": "11e950fe5e95ead3e307f69bd5c95d23eb7361e846c6f69f1729eb8813154a86"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_210597_redcushion/F_r0.pt",
+      "bytes": 9966681,
+      "sha256": "ca809af6aee34b018e0ac9a0d7b615e1c58795f850bbaf369e34cb9d70b60fb1"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_210597_redcushion/LATE_r0.json",
+      "bytes": 644778,
+      "sha256": "06c0b548fe66e9eda95abdc1c000793b301d1463407a7730196f72e8db777655"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_210597_redcushion/LATE_r0.png",
+      "bytes": 1167008,
+      "sha256": "fee286ac238cb50230c2199c15efbda322cceb14543e0cca2fade2d8125b14c1"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_210597_redcushion/LATE_r0.pt",
+      "bytes": 9967399,
+      "sha256": "251b03832f39e2309d1fc252a3cf7d4aaeeeb17820b5137980872fcc6729a3a8"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_210597_redcushion/MIDDLE_r0.json",
+      "bytes": 644839,
+      "sha256": "c2b7a24f7c71ad2991bd46e1b0ecbcf6da8ad4c7fa63a63a1423537e815404c9"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_210597_redcushion/MIDDLE_r0.png",
+      "bytes": 1167916,
+      "sha256": "c9fdd786e641a6b225d2c6db84df2b827c13a5cb02d8c444c5d8b80604b177b0"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_210597_redcushion/MIDDLE_r0.pt",
+      "bytes": 9968027,
+      "sha256": "780e3af1f41d43eb35e278daa1c8aeead29fd255786dfe6e3de237d96645fb83"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_26498_woodbat/EARLY_r0.json",
+      "bytes": 653851,
+      "sha256": "fbce490903511e80678f2673f35fe84fb21c07372e6b858539c42e27bbf690a2"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_26498_woodbat/EARLY_r0.png",
+      "bytes": 1298244,
+      "sha256": "1d7aa5c84f69abc5b2dfde567c0e3e1d7008345186b0cd0b6e805a69d4998042"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_26498_woodbat/EARLY_r0.pt",
+      "bytes": 9968001,
+      "sha256": "772b74f043eba407352fb6a898fb692e719852afeb723dc12e899eff5bab4b94"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_26498_woodbat/F_r0.json",
+      "bytes": 1568,
+      "sha256": "c4a0f9fab3238917dd8c50d3b3c023df2941451d6e1a1c3187728a477ade3af5"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_26498_woodbat/F_r0.png",
+      "bytes": 1294024,
+      "sha256": "fe501a401d151b16835d1e2d66abdbfccef02b0aac60e1da649694818168bdd9"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_26498_woodbat/F_r0.pt",
+      "bytes": 9966681,
+      "sha256": "5128f397a6d3c86abb0c1cef0b46b2a86cf998144a650b88356d0af4b316e7d1"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_26498_woodbat/LATE_r0.json",
+      "bytes": 653708,
+      "sha256": "57497b4c7525f90c7a2375c7e5924ba249f7aba0564d508e332d847d5768e056"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_26498_woodbat/LATE_r0.png",
+      "bytes": 1298494,
+      "sha256": "62b107d936582800d0baa1acab1e4be921dda55d44f3ca7be203b3df86c5ff33"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_26498_woodbat/LATE_r0.pt",
+      "bytes": 9967399,
+      "sha256": "3b742832d8f975bffa8cb56d3acdf1488caaf64c866cae7de1896f72da7a8670"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_26498_woodbat/MIDDLE_r0.json",
+      "bytes": 653755,
+      "sha256": "8902faffbbe419427a142103151625a636df03f8498105c5918abdc2990ac87e"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_26498_woodbat/MIDDLE_r0.png",
+      "bytes": 1300103,
+      "sha256": "6a69cd94adc3bea8fba8e917447dd8535886c933ff986f3034eafcc2cf28e82b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_26498_woodbat/MIDDLE_r0.pt",
+      "bytes": 9968027,
+      "sha256": "8b2f0c7e916efc0ecd41df183a2aea256264e7e4f1da82b67a2405b9183b7378"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/EARLY_r0.json",
+      "bytes": 741022,
+      "sha256": "8f663160beae9a6cea230face41abda4ee28307c29d8a1119dcb42677177c92f"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/EARLY_r0.png",
+      "bytes": 1089278,
+      "sha256": "5f6ac2ca888afa1f92b66d65bd2fbb4f8218ea1c38e1075451e211ce731ec2a4"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/EARLY_r0.pt",
+      "bytes": 9968001,
+      "sha256": "6df09dd36f35d171fc1d5b585509608c5b2d63f3ef2ad27caccd99b5decdebef"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/EARLY_r0_operator_profile.json",
+      "bytes": 110823,
+      "sha256": "97a30ec0a44bdb7f09f724eb215ee8f854767d92d8009aeeffae5fe47d382b99"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/F_r0.json",
+      "bytes": 1576,
+      "sha256": "369a22d58bf8280ef04bde016cd78ad9a6314ba7b6444c2b25ec9c89d576bfd4"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/F_r0.png",
+      "bytes": 1084779,
+      "sha256": "d6cbdb25b0715659914308bbc395326c80e1065442ffb880bb618ad6b467e7c8"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/F_r0.pt",
+      "bytes": 9966681,
+      "sha256": "da074f4a0f6dc5495e86a901967e6d1213c10710fea6b687c92171279c4724b2"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/F_r0_operator_profile.json",
+      "bytes": 107288,
+      "sha256": "2d34374b586811ab36e848dcc2a0312d39e26387405c4aff185ae466a477bfd3"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/LATE_r0.json",
+      "bytes": 740877,
+      "sha256": "2707a0abb7931d4b9ec32077683993f61d43fb344939497971c39acf1e770133"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/LATE_r0.png",
+      "bytes": 1090433,
+      "sha256": "560083e6838b7681b04cd0583904752cc16d4985f8cd4cbc923ce029076cc5ab"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/LATE_r0.pt",
+      "bytes": 9967399,
+      "sha256": "ce31094e66c77504889036b9f71d32c7945cb0485ed936c446213ce75cdb47f2"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/MIDDLE_r0.json",
+      "bytes": 740926,
+      "sha256": "4f315019de00b7d2f6811dfa541a29d2438ac0a601ae4bdd2b60ab2030c16211"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/MIDDLE_r0.png",
+      "bytes": 1090741,
+      "sha256": "297213d40c2a8b7af725e8728ebb821e2ebca3d3c51a1426f643d426ad92e89a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_286770_goat/MIDDLE_r0.pt",
+      "bytes": 9968027,
+      "sha256": "a27d384b6b4c8025c5507c7d935c2a6c36acf3473d4f0c6c1d0b45c8bb230b6a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_429111_remote/EARLY_r0.json",
+      "bytes": 642368,
+      "sha256": "9a73d06b5a95f687ae24c9f7f4d81434b630af6ad24d4949e75d62f721c43f2d"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_429111_remote/EARLY_r0.png",
+      "bytes": 1359717,
+      "sha256": "48ba0c7e9856abc722bfbeaff3341d836d214ad32cd0ccafa4882e2b509ad20b"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_429111_remote/EARLY_r0.pt",
+      "bytes": 9968001,
+      "sha256": "ef3ac5272e331b4b2733172a7450d5febf9168e732cafc625bcb021b6062be8a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_429111_remote/F_r0.json",
+      "bytes": 1578,
+      "sha256": "8e541313edfae4b90c78528d4136bfea70b40162489cf798b378c0db744b450c"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_429111_remote/F_r0.png",
+      "bytes": 1359760,
+      "sha256": "06a06fece6fa69e0fc691c37b56f46d168191cf3124872970bacc8d163936a7e"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_429111_remote/F_r0.pt",
+      "bytes": 9966681,
+      "sha256": "ff950cbb6390bc9b71aede0ba189680893a4313d0b672043c490fd86ff8aa0a9"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_429111_remote/LATE_r0.json",
+      "bytes": 642260,
+      "sha256": "3475111c4865768b271937cd723408ab0f4a3587de273ac60309249013bd3776"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_429111_remote/LATE_r0.png",
+      "bytes": 1361672,
+      "sha256": "42c7bdf45add74bfd66f3a462fd7db84ef392280050550da6d195491f8d33d48"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_429111_remote/LATE_r0.pt",
+      "bytes": 9967399,
+      "sha256": "b4ac507fd87f8db5b1e972a850310a29fca2960904182f3ce504fce6634543c6"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_429111_remote/MIDDLE_r0.json",
+      "bytes": 642308,
+      "sha256": "fe7cf32108a52055f58961328516ee8143b333a5ce9c4c753a9a2ff3f052731a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_429111_remote/MIDDLE_r0.png",
+      "bytes": 1363194,
+      "sha256": "b5df53964a32ce18294886edd4854281fa9890d517d5c4e3b70c90b3ed756cb8"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_429111_remote/MIDDLE_r0.pt",
+      "bytes": 9968027,
+      "sha256": "7963d5a595da7959836b1f57513637dc9ec5e6694e2f22f65de6493c37224b4e"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_452168_bluesign/EARLY_r0.json",
+      "bytes": 851922,
+      "sha256": "9e1851cab46d9f3717bf229126fef965fc63f23856925af843f5489e3e961258"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_452168_bluesign/EARLY_r0.png",
+      "bytes": 1113379,
+      "sha256": "672492fe11f70dd5c0bab1d1ce5b787f6f0706a5fa2520d8b034161ffecea810"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_452168_bluesign/EARLY_r0.pt",
+      "bytes": 9968001,
+      "sha256": "4c403a65e99e9befa641520516004858a57ca0068c5d079b2530769d830ecff5"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_452168_bluesign/F_r0.json",
+      "bytes": 1575,
+      "sha256": "0cba9da31538e7a14037bdbf9649635fad099647284c36827eeb328a9fcc05dd"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_452168_bluesign/F_r0.png",
+      "bytes": 1106196,
+      "sha256": "d213b82dd6b5620ef7919acab705daa8e2f84d1acd6d95482d66600c985a24dd"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_452168_bluesign/F_r0.pt",
+      "bytes": 9966681,
+      "sha256": "36d8e6abe126c29e390c7b9e2574d17f2e55e1bea0740e0f546507017c05ef98"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_452168_bluesign/LATE_r0.json",
+      "bytes": 851815,
+      "sha256": "7fcb0c83f5663fe11a4b3e2f6dce85bdaf84fe542063cc2720c9fb4d67bfa6e5"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_452168_bluesign/LATE_r0.png",
+      "bytes": 1113286,
+      "sha256": "81221fc0d95afcbb830e4f3397e21b920da77df1b0fb8dca75d69d450e31ad9d"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_452168_bluesign/LATE_r0.pt",
+      "bytes": 9967399,
+      "sha256": "5fcafb8fd35a474cd11b1426b0e74b6701b163c132c0ea09da836e76fc78c0b9"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_452168_bluesign/MIDDLE_r0.json",
+      "bytes": 851862,
+      "sha256": "a99a805436d23f735171f0d7bc3864a982ddcd8329df8a8b5a8ea93af27525d6"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_452168_bluesign/MIDDLE_r0.png",
+      "bytes": 1114224,
+      "sha256": "3e4c007347546d7109147a87172a48315e2c96248762494c25f65b3229c1b694"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_452168_bluesign/MIDDLE_r0.pt",
+      "bytes": 9968027,
+      "sha256": "b7dc23e20702b374c52b36a4b885ea34257d62f59838f6832b9143f53ff3fde6"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_486018_dog/EARLY_r0.json",
+      "bytes": 816082,
+      "sha256": "4776114bd3d3e73f3e6088e054b08c144367d3b80f2e247c62858dac94ac2da3"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_486018_dog/EARLY_r0.png",
+      "bytes": 935209,
+      "sha256": "a4e40bf6c79253bf80938b70bc9dccd0b3082a9b0d6ae300e8a9f19a9e5460fe"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_486018_dog/EARLY_r0.pt",
+      "bytes": 9968001,
+      "sha256": "0890ecf6e932907ae40c1621972c1e5afd9ed86ebcc2835081a58811fa879e33"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_486018_dog/F_r0.json",
+      "bytes": 1575,
+      "sha256": "658b0103ddd8cae133e65de674a0fdbd03eff9c714bf219c6204085525b03ab5"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_486018_dog/F_r0.png",
+      "bytes": 937038,
+      "sha256": "5ff96d2a24fca27b308aaa493c5615d99c66fab127e03e16319905559bd7381a"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_486018_dog/F_r0.pt",
+      "bytes": 9966681,
+      "sha256": "5e6526478bd115ab4282af763bc81519b4fa5f24905ee2cfbf75f8c233761167"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_486018_dog/LATE_r0.json",
+      "bytes": 815944,
+      "sha256": "ac1de1585f311407da46ef5e5d319d74b546fe69a1417f821e0f4d90083aa351"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_486018_dog/LATE_r0.png",
+      "bytes": 934800,
+      "sha256": "0b403c619ffb3da6c7f1f9d5bbadc4bd58a00a7ee85ebdb1dcf64987e2fd2144"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_486018_dog/LATE_r0.pt",
+      "bytes": 9967399,
+      "sha256": "bb78355bf46f591c46499eba85c8ae79f8ff201bbabb24a2437e9d3f18999e85"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_486018_dog/MIDDLE_r0.json",
+      "bytes": 816000,
+      "sha256": "e806673978beabd7751f5095d3256588a93672328f47f88b482982be9d2e8caf"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_486018_dog/MIDDLE_r0.png",
+      "bytes": 939265,
+      "sha256": "40d7b99069e88cb0f1d1b4209fd09bbe56b1b03f6a80523b88d1950a37157ca5"
+    },
+    {
+      "path": "runs/latency_temporal_v1/temporal/local_train_486018_dog/MIDDLE_r0.pt",
+      "bytes": 9968027,
+      "sha256": "9da631fa8a20509c6bb6e419f53ecd8344705221bdb97ecbdcc25050a46f21bf"
+    },
+    {
+      "path": "runs/latency_temporal_v1/warmup/local_train_286770_goat/FIX32_r0.json",
+      "bytes": 740857,
+      "sha256": "3970a673fd547a9a7fff049c195732312759ed3b4708140e9a2c969dd77315c0"
+    },
+    {
+      "path": "runs/latency_temporal_v1/warmup/local_train_286770_goat/FIX32_r0.png",
+      "bytes": 1089278,
+      "sha256": "5f6ac2ca888afa1f92b66d65bd2fbb4f8218ea1c38e1075451e211ce731ec2a4"
+    },
+    {
+      "path": "runs/latency_temporal_v1/warmup/local_train_286770_goat/FIX32_r0.pt",
+      "bytes": 9968001,
+      "sha256": "40aaa81763792f0bd930c8f94d2be0d082f9e278387496ccfff8c59ce4e1a6e5"
+    },
+    {
+      "path": "runs/latency_temporal_v1/warmup/local_train_286770_goat/F_r0.json",
+      "bytes": 1476,
+      "sha256": "8f0bf7ff10c59edafb0fdf9c82340d858327bc19eefc38c4f58eb43feff5e13e"
+    },
+    {
+      "path": "runs/latency_temporal_v1/warmup/local_train_286770_goat/F_r0.png",
+      "bytes": 1084779,
+      "sha256": "d6cbdb25b0715659914308bbc395326c80e1065442ffb880bb618ad6b467e7c8"
+    },
+    {
+      "path": "runs/latency_temporal_v1/warmup/local_train_286770_goat/F_r0.pt",
+      "bytes": 9966681,
+      "sha256": "da074f4a0f6dc5495e86a901967e6d1213c10710fea6b687c92171279c4724b2"
+    },
+    {
+      "path": "data/latency_temporal_v1_preregistration.json",
+      "bytes": 11573368,
+      "sha256": "23d4c92431b84a1fc1317f21f1232b0f314e5b9eb00ee57eead5bba88f39e4c9"
+    },
+    {
+      "path": "data/latency_temporal_launch_v1.json",
+      "bytes": 224,
+      "sha256": "f59ad4796625e6907bb2dfde9fc6590be6ffc8c0f6f28dde351603d4f35dbd4e"
+    },
+    {
+      "path": "data/cpu_latency_temporal_v1.json",
+      "bytes": 428,
+      "sha256": "8700645bf3ea8aa736c9d4b37fb3de5bbf3dc2c0bef40201da953a2b25056ad3"
+    },
+    {
+      "path": "data/latency_temporal_audit_v1.json",
+      "bytes": 480,
+      "sha256": "2c8ac1f6858389925a784609fc45e7f4a36663eaba99e0fe2ddb7dbf86a9f676"
+    },
+    {
+      "path": "notes/latency_temporal_v1_driver.log",
+      "bytes": 22258,
+      "sha256": "184fd7204c3d66158a0344d1799fa0f37bcb0b01383a5fc696cadea76d8f8360"
+    },
+    {
+      "path": "notes/cpu_latency_temporal_v1.log",
+      "bytes": 3481,
+      "sha256": "fa1948e62dfe5e5c6159b8c3e7a989c2791aea3187602cae8f49e630aaf507ea"
+    },
+    {
+      "path": "notes/latency_temporal_analysis_v1.log",
+      "bytes": 4402,
+      "sha256": "6818e752aab37c70fd050f7f4c4158bf4e82c39de6a8877fe444622b2f44c8c7"
+    },
+    {
+      "path": "notes/latency_temporal_audit_v1.log",
+      "bytes": 480,
+      "sha256": "2c8ac1f6858389925a784609fc45e7f4a36663eaba99e0fe2ddb7dbf86a9f676"
+    },
+    {
+      "path": "notes/latency_overheads_v1.log",
+      "bytes": 3314,
+      "sha256": "d655ce4ca49e6ab33e667bb21b12e7dace366c20029269507e8f56d7198b9272"
+    },
+    {
+      "path": "scripts/diagnostic_schedule.py",
+      "bytes": 2873,
+      "sha256": "2e2c85b289bda1ec3debb51d56dc6cc755d4a20bc2ba44ad3a44121e18afe658"
+    },
+    {
+      "path": "scripts/test_diagnostic_schedule.py",
+      "bytes": 3996,
+      "sha256": "b91c76508c19e5ca67cebefb21dd7fc051c837f0366daa6377d977873fd33605"
+    },
+    {
+      "path": "scripts/freeze_latency_temporal.py",
+      "bytes": 7078,
+      "sha256": "84dca9c89242dc967b3f29dc9acf7cd0efa910265dd9fb9eeb92fb224093850c"
+    },
+    {
+      "path": "scripts/run_latency_temporal.py",
+      "bytes": 14239,
+      "sha256": "ffe3bbb310fee4e779f8c2eb85f91ecf9061d191780b5983dc82fbb7ed72e7bf"
+    },
+    {
+      "path": "scripts/analyze_latency_temporal.py",
+      "bytes": 9160,
+      "sha256": "7fb6ec78d106802df8beba42ee3d31598d7834c0e062cd950bcdfbf7424654bf"
+    },
+    {
+      "path": "scripts/audit_latency_temporal.py",
+      "bytes": 5980,
+      "sha256": "4faeea39cfc4936920ff924fb91954b5edb9c9fe84c81d1b982322388fbca8be"
+    },
+    {
+      "path": "scripts/analyze_latency_overheads.py",
+      "bytes": 2883,
+      "sha256": "fc4f98ca783294a13e9459b3ecf776f65e1ea9ae77279a6fb05e8e897501c731"
+    }
+  ],
+  "count": 298,
+  "bytes": 546831018
+}

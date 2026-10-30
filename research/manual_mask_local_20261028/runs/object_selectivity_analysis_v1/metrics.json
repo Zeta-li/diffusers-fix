@@ -1,0 +1,100 @@
+{
+  "rows": [
+    {
+      "case_id": "free_272738_p1",
+      "seed_index": 1,
+      "mae_vs_F": 0.006511220708489418,
+      "outside_fixed32_box_mae_vs_F": 0.00361566711217165,
+      "numeric_pass": true,
+      "evaluation_box_source_xyxy": [
+        193,
+        0,
+        397,
+        322
+      ],
+      "first_two_states_bitwise_F": true,
+      "target_token_fraction": 0.593505859375
+    },
+    {
+      "case_id": "free_272738_p1",
+      "seed_index": 2,
+      "mae_vs_F": 0.01018886175006628,
+      "outside_fixed32_box_mae_vs_F": 0.007639359217137098,
+      "numeric_pass": true,
+      "evaluation_box_source_xyxy": [
+        193,
+        0,
+        397,
+        322
+      ],
+      "first_two_states_bitwise_F": true,
+      "target_token_fraction": 0.593505859375
+    },
+    {
+      "case_id": "local_train_210597_redcushion_p2",
+      "seed_index": 1,
+      "mae_vs_F": 0.002285309135913849,
+      "outside_fixed32_box_mae_vs_F": 0.0021702100057154894,
+      "numeric_pass": true,
+      "evaluation_box_source_xyxy": [
+        266,
+        252,
+        435,
+        358
+      ],
+      "first_two_states_bitwise_F": true,
+      "target_token_fraction": 0.47979736328125
+    },
+    {
+      "case_id": "local_train_210597_redcushion_p2",
+      "seed_index": 2,
+      "mae_vs_F": 0.006203193683177233,
+      "outside_fixed32_box_mae_vs_F": 0.006346404552459717,
+      "numeric_pass": true,
+      "evaluation_box_source_xyxy": [
+        266,
+        252,
+        435,
+        358
+      ],
+      "first_two_states_bitwise_F": true,
+      "target_token_fraction": 0.47979736328125
+    },
+    {
+      "case_id": "free_213020_p1",
+      "seed_index": 1,
+      "mae_vs_F": 0.005269450601190329,
+      "outside_fixed32_box_mae_vs_F": 0.0049306470900774,
+      "numeric_pass": true,
+      "evaluation_box_source_xyxy": [
+        328,
+        33,
+        500,
+        202
+      ],
+      "first_two_states_bitwise_F": true,
+      "target_token_fraction": 0.50726318359375
+    },
+    {
+      "case_id": "free_213020_p1",
+      "seed_index": 2,
+      "mae_vs_F": 0.009234649129211903,
+      "outside_fixed32_box_mae_vs_F": 0.006927551236003637,
+      "numeric_pass": true,
+      "evaluation_box_source_xyxy": [
+        328,
+        33,
+        500,
+        202
+      ],
+      "first_two_states_bitwise_F": true,
+      "target_token_fraction": 0.50726318359375
+    }
+  ],
+  "numeric_passes": 6,
+  "n": 6,
+  "mean_mae_vs_F": 0.006615447501341502,
+  "semantic_review_pending": true,
+  "independent_new_sources": false,
+  "net_latency_measured": false
+}

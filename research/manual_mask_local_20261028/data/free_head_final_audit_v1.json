@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "attempts": [
+    {
+      "attempt": "free_contract_v1",
+      "invoked": 8,
+      "completed": 8,
+      "successful_requests": 0,
+      "phase": "failed"
+    },
+    {
+      "attempt": "free_contract_v2",
+      "invoked": 104,
+      "completed": 104,
+      "successful_requests": 13,
+      "phase": "generation_complete_quality_pending"
+    },
+    {
+      "attempt": "free_full20_v1",
+      "invoked": 160,
+      "completed": 160,
+      "successful_requests": 20,
+      "phase": "generation_complete_quality_pending"
+    },
+    {
+      "attempt": "free_head_closed_v1",
+      "invoked": 320,
+      "completed": 320,
+      "successful_requests": 40,
+      "phase": "generation_complete_quality_pending"
+    }
+  ],
+  "totals": {
+    "successful_requests": 73,
+    "invoked_dit": 592,
+    "completed_dit": 592
+  },
+  "closed_loop_cpu_recomputed_Euler_steps": 320,
+  "closed_loop_paired_sources": 12,
+  "additional_DiT": 0,
+  "training_updates": 1200
+}
